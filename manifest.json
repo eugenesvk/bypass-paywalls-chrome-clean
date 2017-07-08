@@ -1,0 +1,29 @@
+{
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"applications": {
+	  "gecko": {
+	    "id": "iamadamdev@hotmail.com"
+	  }
+	},
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+	      "128": "bypass.png"
+	    }
+	},
+	"description": "Bypass News Sites' Paywalls",
+	"icons": {
+		"128": "bypass.png"
+	},
+	"manifest_version": 2,
+	"name": "Bypass Paywalls",
+	"short_name": "Bypass Paywall",
+	"options_ui": {
+		"page": "options.html"
+	},
+
+	"permissions": [ "cookies", "<all_urls>", "storage", "webRequest", "webRequestBlocking"],
+	"version": "1.0.8"
+}
