@@ -1,4 +1,5 @@
 Updates--
+2017-09-14 v1.09: Added back Barron's, added Het Financieele Dagblad (fd.nl), added Le Temps (letemps.ch), added Haaretz (haaretz.co.il)
 2017-06-15 v1.08: Added browser_action icon, removed Barron's, fixed Financial Times (ft.com), added options link to popup
 2017-05-14: Ported to Firefox
 2017-04-16: Added MIT Technology Review (technologyreview.com), NRC (nrc.nl), The Courier Mail (couriermail.com.au).
@@ -19,9 +20,12 @@ Daily Press (dailypress.com)
 The Economist (economist.com)
 Financial Times (ft.com)
 Glassdoor (glassdoor.com)
+Haaretz (haaretz.co.il)
 Hartford Courant (courant.com)
 Harvard Business Review (hbr.org)
+Het Financieele Dagblad (fd.nl)
 Inc.com (inc.com)
+Le Temps (letemps.ch)
 Los Angeles Times (latimes.com)
 Medscape (medscape.com)
 MIT Technology Review (technologyreview.com)
