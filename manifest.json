@@ -11,7 +11,11 @@
 		"default_popup": "popup.html",
 		"default_icon": {
 	      "128": "bypass.png"
-	    }
+	    },
+	    "theme_icons": [{
+	    "light": "bypass-dark.png",
+	    "dark": "bypass.png",
+	    "size": 128 }]
 	},
 	"description": "Bypass News Sites' Paywalls",
 	"icons": {
@@ -24,5 +28,5 @@
 		"page": "options.html"
 	},
 	"permissions": [ "cookies", "<all_urls>", "storage", "webRequest", "webRequestBlocking"],
-	"version": "1.1.0"
+	"version": "1.2.0"
 }

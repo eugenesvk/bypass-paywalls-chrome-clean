@@ -1,4 +1,5 @@
 Updates--
+2018-04-05 v1.2.0: Added dark theme icon (thanks to Geoffrey De Belie), added Corriere Della Sera (corriere.it), added Dagens Nyheter (dn.se), fixed The Age (theage.com.au)
 2018-01-30 v1.1.0: Added Medium (medium.com), added The Boston Globe (bostonglobe.com), added The Mercury News (mercurynews.com), removed The Australian (theaustralian.com.au), removed The Courier Mail (couriermail.com.au), removed The Telegraph (telegraph.co.uk)
 2017-09-14 v1.09: Added back Barron's, added Het Financieele Dagblad (fd.nl), added Le Temps (letemps.ch), added Haaretz (haaretz.co.il)
 2017-06-15 v1.08: Added browser_action icon, removed Barron's, fixed Financial Times (ft.com), added options link to popup
@@ -16,7 +17,9 @@ Baltimore Sun (baltimoresun.com)
 Barron's (barrons.com)
 Crain's Chicago Business (chicagobusiness.com)
 Chicago Tribune (chicagotribune.com)
+Corriere Della Sera (corriere.it)
 Daily Press (dailypress.com)
+Dagens Nyheter (dn.se)
 The Economist (economist.com)
 Financial Times (ft.com)
 Glassdoor (glassdoor.com)
