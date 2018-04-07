@@ -2,7 +2,7 @@
 
 ## [Install from the official Firefox Add-ons site](https://addons.mozilla.org/en-US/firefox/addon/bypasspaywalls/)
 
-Bypass the following sites' paywalls with this extension:
+### Bypass the following sites' paywalls with this extension:
 
 The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
