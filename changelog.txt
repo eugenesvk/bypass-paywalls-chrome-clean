@@ -1,5 +1,6 @@
 Updates--
 
+2018-05-20 v1.2.6: Added TheMarker (themarker.com)
 2018-05-12 v1.2.5: Fixed Boston Globe (bostonglobe.com)
 2018-05-10 v1.2.4: Fixed redirect issue
 2018-05-05 v1.2.3: Added Bloomberg (bloomberg.com)
@@ -49,6 +50,7 @@ The Nation (thenation.com)
 The New York Times (nytimes.com)
 The New Yorker (newyorker.com)
 OrlandoSentinel (orlandosentinel.com)
+TheMarker (themarker.com)
 Quora (quora.com)
 SunSentinel (sun-sentinel.com)
 The Seattle Times (seattletimes.com)
