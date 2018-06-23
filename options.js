@@ -25,6 +25,7 @@ var defaultSites = {
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'The Boston Globe': 'bostonglobe.com',
+  'The Globe and Mail': 'theglobeandmail.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
@@ -38,6 +39,7 @@ var defaultSites = {
   'The Sydney Morning Herald': 'smh.com.au',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Vanity Fair': 'vanityfair.com',
   'Wired': 'wired.com'
 };
 
