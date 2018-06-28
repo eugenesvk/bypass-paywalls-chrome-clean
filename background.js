@@ -57,11 +57,11 @@ const allow_cookies = [
 'ft.com',
 'letemps.ch',
 'fd.nl',
-'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
-'bostonglobe.com'
+'bostonglobe.com',
+'washingtonpost.com'
 ]
 
 // Removes cookies after page load
@@ -70,11 +70,11 @@ const remove_cookies = [
 'ft.com',
 'letemps.ch',
 'fd.nl',
-'bostonglobe.com',
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
-'bostonglobe.com'
+'bostonglobe.com',
+'washingtonpost.com'
 ]
 
 function setDefaultOptions() {
