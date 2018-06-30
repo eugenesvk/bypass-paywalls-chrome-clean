@@ -25,6 +25,7 @@ var defaultSites = {
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'The Boston Globe': 'bostonglobe.com',
+  'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',

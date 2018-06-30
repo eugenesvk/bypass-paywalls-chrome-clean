@@ -2,20 +2,29 @@
 	"background": {
 		"scripts": ["background.js"]
 	},
+	"content_scripts": [
+		{
+			"matches": ["*://*.bizjournals.com/*"],
+			"js": ["contentScript.js"]
+		}
+	],
 	"applications": {
-	  "gecko": {
-	    "id": "iamadamdev@hotmail.com"
-	  }
+		"gecko": {
+			"id": "iamadamdev@hotmail.com"
+		}
 	},
 	"browser_action": {
 		"default_popup": "popup.html",
 		"default_icon": {
-	      "128": "bypass.png"
-	    },
-	    "theme_icons": [{
-	    "light": "bypass-dark.png",
-	    "dark": "bypass.png",
-	    "size": 128 }]
+			"128": "bypass.png"
+		},
+		"theme_icons": [
+			{
+				"light": "bypass-dark.png",
+				"dark": "bypass.png",
+				"size": 128
+			}
+		]
 	},
 	"description": "Bypass News Sites' Paywalls",
 	"icons": {
@@ -27,6 +36,12 @@
 	"options_ui": {
 		"page": "options.html"
 	},
-	"permissions": [ "cookies", "<all_urls>", "storage", "webRequest", "webRequestBlocking"],
-	"version": "1.2.9"
+	"permissions": [
+		"cookies",
+		"<all_urls>",
+		"storage",
+		"webRequest",
+		"webRequestBlocking"
+	],
+	"version": "1.2.10"
 }
