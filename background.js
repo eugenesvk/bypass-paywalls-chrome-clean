@@ -10,11 +10,13 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Dagens Nyheter': 'dn.se',
+  'Denver Post': 'denverpost.com',
   'The Economist': 'economist.com',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
+  'Hacked': 'hacked.com',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Het Financieele Dagblad': 'fd.nl',
@@ -62,7 +64,9 @@ const allow_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'washingtonpost.com'
+'washingtonpost.com',
+'denverpost.com',
+'hacked.com'
 ]
 
 // Removes cookies after page load
@@ -75,7 +79,9 @@ const remove_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'washingtonpost.com'
+'washingtonpost.com',
+'denverpost.com',
+'hacked.com'
 ]
 
 function setDefaultOptions() {
@@ -83,7 +89,6 @@ function setDefaultOptions() {
     sites: defaultSites
   }, function() {
     browser.runtime.openOptionsPage();
-    // browser.tabs.create({ 'url': 'browser://extensions/?options=' + browser.runtime.id });
   });
 }
 
