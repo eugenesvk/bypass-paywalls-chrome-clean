@@ -39,6 +39,7 @@ OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
 TheMarker (themarker.com)\
+The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
@@ -47,4 +48,5 @@ Vanity Fair (vanityfair.com)\
 Wired (wired.com)
 
 ### Troubleshooting
+
 If WSJ stops working try removing all wsj.com site cookies.
