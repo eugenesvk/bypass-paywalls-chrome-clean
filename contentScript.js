@@ -1,4 +1,4 @@
-if (window.location.href.indexOf("bizjournals.com") > -1) {
+if (window.location.href.indexOf("bizjournals.com") !== -1) {
   const hiddenStory = document.getElementsByClassName(
     "js-pre-chunks__story-body"
   );
@@ -11,5 +11,12 @@ if (window.location.href.indexOf("bizjournals.com") > -1) {
   );
   if (payWallMessage && payWallMessage.length>0 ) {
     payWallMessage[0].style.display = "none";
+  }
+} else if (window.location.href.indexOf("businessinsider.com") !== -1) {
+  const paywall = document.getElementsByClassName(
+    "tp-modal"
+  );
+  while (paywall.length > 0) {
+    paywall[0].parentNode.removeChild(paywall[0]);
   }
 }

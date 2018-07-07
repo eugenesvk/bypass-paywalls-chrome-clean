@@ -1,5 +1,6 @@
 Updates--
 
+2018-07-07 v1.3.1: Added Business Insider (businessinsider.com)
 2018-07-04 v1.3.0: Added The Denver Post (denverpost.com, note: need to turn off uBlock for this site), added Hacked (hacked.com)
 2018-06-20 v1.2.10: Added The Business Journals (bizjournals.com)
 2018-06-27 v1.2.9: Fixed The Washington Post (washingtonpost.com)
