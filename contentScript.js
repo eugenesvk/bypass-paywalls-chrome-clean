@@ -1,3 +1,4 @@
+window.localStorage.clear();
 if (window.location.href.indexOf("bizjournals.com") !== -1) {
   const hiddenStory = document.getElementsByClassName(
     "js-pre-chunks__story-body"

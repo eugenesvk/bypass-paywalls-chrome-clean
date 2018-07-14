@@ -65,7 +65,6 @@ const allow_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'washingtonpost.com',
 'denverpost.com',
 'hacked.com'
 ]
@@ -80,7 +79,6 @@ const remove_cookies = [
 'theage.com.au',
 'economist.com',
 'bostonglobe.com',
-'washingtonpost.com',
 'denverpost.com',
 'hacked.com'
 ]
