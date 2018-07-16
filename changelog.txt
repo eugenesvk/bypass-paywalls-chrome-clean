@@ -1,6 +1,7 @@
 Updates--
 
-2018-07-14 v1.3.2: Add back clearing of localStorage in contentScript.js (fixes wapo.com)
+2018-07-14 v1.3.3: Add back clearing of localStorage in contentScript.js (fixes wapo.com for U.S. users)
+2018-07-08 v1.3.2: Fixed Haaretz (haaretz.co.il)
 2018-07-07 v1.3.1: Added Business Insider (businessinsider.com)
 2018-07-04 v1.3.0: Added The Denver Post (denverpost.com, note: need to turn off uBlock for this site), added Hacked (hacked.com)
 2018-06-20 v1.2.10: Added The Business Journals (bizjournals.com)
