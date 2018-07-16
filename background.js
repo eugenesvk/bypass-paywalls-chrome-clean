@@ -6,6 +6,7 @@ var defaultSites = {
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
   'Business Insider': 'businessinsider.com',
+  'Caixin': 'caixinglobal.com',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
@@ -37,6 +38,7 @@ var defaultSites = {
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
+  'Orange County Register': 'ocregister.com',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
@@ -66,7 +68,8 @@ const allow_cookies = [
 'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'hacked.com'
+'hacked.com',
+'ocregister.com'
 ]
 
 // Removes cookies after page load
@@ -80,7 +83,8 @@ const remove_cookies = [
 'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'hacked.com'
+'hacked.com',
+'ocregister.com'
 ]
 
 function setDefaultOptions() {

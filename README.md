@@ -8,6 +8,7 @@ The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
+Caixin (caixinglobal.com)\
 Crain's Chicago Business (chicagobusiness.com)\
 Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\
@@ -37,6 +38,7 @@ The Morning Call (mcall.com)\
 The Nation (thenation.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
+OC Register (ocregister.com)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
