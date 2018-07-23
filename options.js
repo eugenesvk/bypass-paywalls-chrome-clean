@@ -26,6 +26,7 @@ var defaultSites = {
   'Medium': 'medium.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
+  'New Statesman': 'newstatesman.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'The Boston Globe': 'bostonglobe.com',
