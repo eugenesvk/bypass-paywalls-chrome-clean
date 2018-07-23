@@ -39,6 +39,7 @@ var defaultSites = {
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
+  'The Spectator': 'spectator.co.uk',
   'Orange County Register': 'ocregister.com',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',
@@ -71,7 +72,8 @@ const allow_cookies = [
 'denverpost.com',
 'hacked.com',
 'ocregister.com',
-'newstatesman.com'
+'newstatesman.com',
+'spectator.co.uk'
 ]
 
 // Removes cookies after page load
@@ -87,7 +89,8 @@ const remove_cookies = [
 'denverpost.com',
 'hacked.com',
 'ocregister.com',
-'newstatesman.com'
+'newstatesman.com',
+'spectator.co.uk'
 ]
 
 function setDefaultOptions() {

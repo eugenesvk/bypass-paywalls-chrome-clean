@@ -37,6 +37,7 @@ var defaultSites = {
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
+  'The Spectator': 'spectator.co.uk',
   'Orange County Register': 'ocregister.com',
   'OrlandoSentinel': 'orlandosentinel.com',
   'Quora': 'quora.com',

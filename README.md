@@ -39,6 +39,7 @@ The Morning Call (mcall.com)\
 The Nation (thenation.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
+The Spectator (spectator.co.uk)\
 OC Register (ocregister.com)\
 OrlandoSentinel (orlandosentinel.com)\
 Quora (quora.com)\
