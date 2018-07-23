@@ -50,10 +50,12 @@ The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
+Towards Data Science (towardsdatascience.com)\
 Vanity Fair (vanityfair.com)\
 Wired (wired.com)
 
 ### Troubleshooting
 
-If WSJ stops working try removing all wsj.com site cookies.\
-For The Denver Post turn off uBlock.
+-If WSJ stops working try removing all wsj.com site cookies.\
+-For The Denver Post turn off uBlock.\
+-If a site doesn't work trying turning off uBlock and refreshing.

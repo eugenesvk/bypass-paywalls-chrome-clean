@@ -49,6 +49,7 @@ var defaultSites = {
   'The Sydney Morning Herald': 'smh.com.au',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
+  'Towards Data Science': 'towardsdatascience.com',
   'Vanity Fair': 'vanityfair.com',
   'Wired': 'wired.com'
 };
@@ -73,7 +74,9 @@ const allow_cookies = [
 'hacked.com',
 'ocregister.com',
 'newstatesman.com',
-'spectator.co.uk'
+'spectator.co.uk',
+'towardsdatascience.com',
+'medium.com'
 ]
 
 // Removes cookies after page load
@@ -90,7 +93,9 @@ const remove_cookies = [
 'hacked.com',
 'ocregister.com',
 'newstatesman.com',
-'spectator.co.uk'
+'spectator.co.uk',
+'towardsdatascience.com',
+'medium.com'
 ]
 
 function setDefaultOptions() {
