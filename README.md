@@ -48,6 +48,7 @@ TheMarker (themarker.com)\
 The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
+The Toronto Star (thestar.com)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
 Towards Data Science (towardsdatascience.com)\
