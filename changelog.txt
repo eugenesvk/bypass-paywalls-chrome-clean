@@ -1,5 +1,6 @@
 Updates--
 
+2018-08-31 v1.3.8: Added thestar.com
 2018-07-22 v1.3.7: Added towardsdatascience.com, fixed medium.com
 2018-07-22 v1.3.6: Added spectator.co.uk
 2018-07-22 v1.3.5: Added newstatesman.com
