@@ -34,6 +34,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
+  'The Japan Times': 'japantimes.co.jp',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
