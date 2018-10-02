@@ -14,6 +14,7 @@ var defaultSites = {
   'Dagens Nyheter': 'dn.se',
   'Denver Post': 'denverpost.com',
   'The Economist': 'economist.com',
+  'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Glassdoor': 'glassdoor.com',
   'Haaretz': 'haaretz.co.il',
@@ -31,6 +32,7 @@ var defaultSites = {
   'New Statesman': 'newstatesman.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
+  'The Advocate': 'theadvocate.com.au',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
@@ -53,9 +55,7 @@ var defaultSites = {
   'The Wall Street Journal': 'wsj.com',
   'Towards Data Science': 'towardsdatascience.com',
   'Vanity Fair': 'vanityfair.com',
-  'Wired': 'wired.com',
-  'The Advocate': 'theadvocate.com.au',
-  'Examiner': 'examiner.com.au'
+  'Wired': 'wired.com'
 };
 
 const restrictions = {
