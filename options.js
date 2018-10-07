@@ -9,7 +9,6 @@ var defaultSites = {
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
-  'Dagens Nyheter': 'dn.se',
   'Denver Post': 'denverpost.com',
   'The Economist': 'economist.com',
   'Examiner': 'examiner.com.au',
@@ -74,7 +73,7 @@ function save_options() {
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
-    // status.textContent = 'Options saved.';
+     status.textContent = 'Options saved.';
     setTimeout(function() {
       // status.textContent = '';
       window.close();

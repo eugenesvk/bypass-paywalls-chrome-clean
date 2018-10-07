@@ -11,7 +11,6 @@ var defaultSites = {
   'Chicago Tribune': 'chicagotribune.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
-  'Dagens Nyheter': 'dn.se',
   'Denver Post': 'denverpost.com',
   'The Economist': 'economist.com',
   'Examiner': 'examiner.com.au',
@@ -82,7 +81,8 @@ const allow_cookies = [
 'towardsdatascience.com',
 'medium.com',
 'theadvocate.com.au',
-'examiner.com.au' 
+'examiner.com.au',
+'thestar.com'
 ]
 
 // Removes cookies after page load
@@ -103,7 +103,8 @@ const remove_cookies = [
 'towardsdatascience.com',
 'medium.com',
 'theadvocate.com.au',
-'examiner.com.au'  
+'examiner.com.au',
+'thestar.com'
 ]
 
 function setDefaultOptions() {

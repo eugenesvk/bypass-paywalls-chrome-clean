@@ -13,7 +13,6 @@ Crain's Chicago Business (chicagobusiness.com)\
 Chicago Tribune (chicagotribune.com)\
 Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
-Dagens Nyheter (dn.se)\
 Denver Post (denverpost.com)\
 The Economist (economist.com)\
 Examiner (examiner.com.au)\
@@ -62,4 +61,4 @@ Wired (wired.com)
 
 -If WSJ stops working try removing all wsj.com site cookies.\
 -For The Denver Post turn off uBlock.\
--If a site doesn't work trying turning off uBlock and refreshing.
+-If a site doesn't work try turning off uBlock and refreshing.
