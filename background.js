@@ -117,7 +117,8 @@ function setDefaultOptions() {
 
 const blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
-/thenation\.com\/.+\/paywall-script\.php/
+/thenation\.com\/.+\/paywall-script\.php/,
+/haaretz\.co\.il\/htz\/js\/inter\.js/
 ];
 
 var enabledSites = [];
