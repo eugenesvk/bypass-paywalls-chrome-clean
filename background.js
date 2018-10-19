@@ -88,6 +88,7 @@ const allow_cookies = [
 // Removes cookies after page load
 const remove_cookies = [
 'asia.nikkei.com',
+'nytimes.com',
 'ft.com',
 'letemps.ch',
 'fd.nl',
@@ -255,7 +256,16 @@ browser.webRequest.onCompleted.addListener(function(details) {
     }
     browser.cookies.getAll({domain: domainVar}, function(cookies) {
       for (var i=0; i<cookies.length; i++) {
-        browser.cookies.remove({url: cookies[i].secure ? "https://" : "http://" + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+        var cookie = {
+          url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path,
+          name: cookies[i].name,
+          storeId: cookies[i].storeId
+        };
+        if (cookies[i].firstPartyDomain !== undefined) {
+          cookie.firstPartyDomain = cookies[i].firstPartyDomain;
+        }
+        console.log("cookie="+cookie.url);
+        browser.cookies.remove(cookie);
       }
     });
   }
