@@ -7,8 +7,9 @@ var defaultSites = {
   'Bloomberg': 'bloomberg.com',
   'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
-  'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Chicago Tribune': 'chicagotribune.com',
+  'Central Western Daily': 'centralwesterndaily.com.au',
+  'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Denver Post': 'denverpost.com',
@@ -35,6 +36,7 @@ var defaultSites = {
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
+  'The Herald': 'theherald.com.au',
   'The Japan Times': 'japantimes.co.jp',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
@@ -105,7 +107,9 @@ const remove_cookies = [
 'medium.com',
 'theadvocate.com.au',
 'examiner.com.au',
-'thestar.com'
+'thestar.com',
+'centralwesterndaily.com.au',
+'theherald.com.au'
 ]
 
 function setDefaultOptions() {

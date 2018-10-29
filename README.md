@@ -9,8 +9,9 @@ Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
 Caixin (caixinglobal.com)\
-Crain's Chicago Business (chicagobusiness.com)\
+Central Western Daily (centralwesterndaily.com.au)\
 Chicago Tribune (chicagotribune.com)\
+Crain's Chicago Business (chicagobusiness.com)\
 Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
 Denver Post (denverpost.com)\
@@ -35,6 +36,7 @@ NRC (nrc.nl)\
 The Advocate (theadvocate.com.au)\
 The Boston Globe (bostonglobe.com)\
 The Globe and Mail (theglobeandmail.com)\
+The Herald (theherald.com.au)\
 The Japan Times (japantimes.co.jp)\
 The Mercury News (mercurynews.com)\
 The Morning Call (mcall.com)\
