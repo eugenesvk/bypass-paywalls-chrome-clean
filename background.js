@@ -16,8 +16,8 @@ var defaultSites = {
   'The Economist': 'economist.com',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
+  'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
-  'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
   'Hacked': 'hacked.com',
   'Hartford Courant': 'courant.com',
@@ -111,7 +111,10 @@ const remove_cookies = [
 'examiner.com.au',
 'thestar.com',
 'centralwesterndaily.com.au',
-'theherald.com.au'
+'theherald.com.au',
+'foreignpolicy.com',
+'wsj.com',
+'glassdoor.com'
 ]
 
 function setDefaultOptions() {
@@ -270,7 +273,6 @@ browser.webRequest.onCompleted.addListener(function(details) {
         if (cookies[i].firstPartyDomain !== undefined) {
           cookie.firstPartyDomain = cookies[i].firstPartyDomain;
         }
-        console.log("cookie="+cookie.url);
         browser.cookies.remove(cookie);
       }
     });

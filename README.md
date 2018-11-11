@@ -18,8 +18,9 @@ Denver Post (denverpost.com)\
 The Economist (economist.com)\
 Examiner (examiner.com.au)\
 Financial Times (ft.com)\
+Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
-Haaretz (haaretz.co.il / haaretz.com)\
+Haaretz English (haaretz.com)\
 Hacked (hacked.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
@@ -63,6 +64,5 @@ Wired (wired.com)
 
 ### Troubleshooting
 
--If WSJ stops working try removing all wsj.com site cookies.\
 -For The Denver Post turn off uBlock.\
 -If a site doesn't work try turning off uBlock and refreshing.
