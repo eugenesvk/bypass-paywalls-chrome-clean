@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## Unfortunately Mozilla has removed this add-on from their store. Please reach out to them and tell them to bring it back: https://wiki.mozilla.org/Add-ons#Getting_in_touch
+## [Download and install v1.4.2 by clicking here](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.2/bypass-paywalls-firefox-v142.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 
