@@ -172,10 +172,6 @@ browser.runtime.onInstalled.addListener(function (details) {
 
 
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
-    return { cancel: true };
-  }
-
   var isEnabled = enabledSites.some(function(enabledSite) {
 
     var useSite = details.url.indexOf("." + enabledSite) !== -1;
@@ -190,6 +186,10 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   if (!isEnabled) {
     return;
+  }
+
+  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
+    return { cancel: true };
   }
 
   var requestHeaders = details.requestHeaders;
