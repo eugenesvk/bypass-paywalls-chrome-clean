@@ -18,6 +18,7 @@ var defaultSites = {
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
   'Glassdoor': 'glassdoor.com',
+  'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
   'Hacked': 'hacked.com',
   'Hartford Courant': 'courant.com',

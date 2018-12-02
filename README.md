@@ -20,7 +20,7 @@ Examiner (examiner.com.au)\
 Financial Times (ft.com)\
 Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
-Haaretz English (haaretz.com)\
+Haaretz (haaretz.co.il / haaretz.com)\
 Hacked (hacked.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
