@@ -4,7 +4,7 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.haaretz.co.il/*"],
+			"matches": ["*://*.bizjournals.com/*", "*://*.businessinsider.com/*", "*://*.haaretz.co.il/*", "*://*.repubblica.it/*"],
 			"js": ["contentScript.js"]
 		}
 	],
@@ -43,5 +43,5 @@
 		"webRequest",
 		"webRequestBlocking"
 	],
-	"version": "1.4.4"
+	"version": "1.4.5"
 }
