@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.5/bypass_paywalls-1.4.5-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.6/bypass_paywalls-1.4.6-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 
@@ -42,6 +42,7 @@ Palo Alto Online (paloaltoonline.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
 The Advocate (theadvocate.com.au)\
+The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
 The Globe and Mail (theglobeandmail.com)\
 The Herald (theherald.com.au)\

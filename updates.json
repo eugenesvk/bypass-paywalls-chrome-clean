@@ -4,7 +4,9 @@
     "bypasspaywalls@bypasspaywalls.weebly.com": {
       "updates": [
         { "version": "1.4.5",
-            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.5/bypass_paywalls-1.4.5-an+fx.xpi" }
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.5/bypass_paywalls-1.4.5-an+fx.xpi" },
+        { "version": "1.4.6",
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.6/bypass_paywalls-1.4.6-an+fx.xpi" }
         ]
     }
   }

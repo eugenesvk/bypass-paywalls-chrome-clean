@@ -39,6 +39,7 @@ var defaultSites = {
   'Quora': 'quora.com',
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
+  'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Globe and Mail': 'theglobeandmail.com',
