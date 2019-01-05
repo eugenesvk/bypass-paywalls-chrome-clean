@@ -7,6 +7,7 @@ var defaultSites = {
   'Bloomberg': 'bloomberg.com',
   'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
+  'Chemical & Engineering News': 'cen.acs.org',
   'Chicago Tribune': 'chicagotribune.com',
   'Central Western Daily': 'centralwesterndaily.com.au',
   'Crain\'s Chicago Business': 'chicagobusiness.com',
@@ -53,6 +54,7 @@ var defaultSites = {
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
+  'The News-Gazette': 'news-gazette.com',
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
@@ -117,7 +119,8 @@ const remove_cookies = [
 'theherald.com.au',
 'foreignpolicy.com',
 'wsj.com',
-'glassdoor.com'
+'glassdoor.com',
+'cen.acs.org'
 ]
 
 function setDefaultOptions() {

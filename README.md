@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.6/bypass_paywalls-1.4.6-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.7/bypass_paywalls-1.4.7-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 
@@ -9,6 +9,7 @@ Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
 Caixin (caixinglobal.com)\
+Chemical & Engineering News (cen.acs.org)\
 Central Western Daily (centralwesterndaily.com.au)\
 Chicago Tribune (chicagotribune.com)\
 Crain's Chicago Business (chicagobusiness.com)\
@@ -53,6 +54,7 @@ The Morning Call (mcall.com)\
 The Nation (thenation.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
+The News-Gazette (news-gazette.com)\
 The Spectator (spectator.co.uk)\
 The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\
@@ -70,6 +72,6 @@ Wired (wired.com)
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 ### Troubleshooting
-
--For The Denver Post turn off uBlock.\
--If a site doesn't work try turning off uBlock and refreshing.
+* This add-on works best along with [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+* For The Denver Post turn off uBlock.
+* If a site doesn't work try turning off uBlock and refreshing.
