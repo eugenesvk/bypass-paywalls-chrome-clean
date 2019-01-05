@@ -75,3 +75,6 @@ Wired (wired.com)
 * This add-on works best along with [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
 * For The Denver Post turn off uBlock.
 * If a site doesn't work try turning off uBlock and refreshing.
+
+### License
+Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-firefox/blob/master/LICENSE).
