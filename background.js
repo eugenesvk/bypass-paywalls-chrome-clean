@@ -91,7 +91,8 @@ const allow_cookies = [
 'medium.com',
 'theadvocate.com.au',
 'examiner.com.au',
-'thestar.com'
+'thestar.com',
+'washingtonpost.com'
 ]
 
 // Removes cookies after page load
