@@ -35,9 +35,13 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
   }
 
   if (location.href.includes("/ws/detail/")) {
-    const paywall = document.querySelector('.paywall[amp-access-hide]');
+    const paywall = document.querySelector('.paywall[subscriptions-section="content"]');
     if (paywall) {
-      paywall.removeAttribute('amp-access-hide');
+      paywall.removeAttribute('subscriptions-section');
+      const preview = document.querySelector('div[subscriptions-section="content-not-granted"]');
+      if (preview) {
+        preview.remove();
+      }
     }
   }
 }
