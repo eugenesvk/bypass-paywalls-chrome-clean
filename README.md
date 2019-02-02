@@ -1,6 +1,8 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.7/bypass_paywalls-1.4.7-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.8/bypass_paywalls-1.4.8-an+fx.xpi)
+
+### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
 
 ### Bypass the following sites' paywalls with this extension:
 
@@ -16,6 +18,7 @@ Crain's Chicago Business (chicagobusiness.com)\
 Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
 Denver Post (denverpost.com)\
+De Tijd (tijd.be)\
 The Economist (economist.com)\
 Examiner (examiner.com.au)\
 Financial Times (ft.com)\
@@ -27,6 +30,7 @@ Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Het Financieele Dagblad (fd.nl)\
 Inc.com (inc.com)\
+Irish Times (irishtimes.com)\
 La Repubblica (repubblica.it)\
 Le Temps (letemps.ch)\
 Los Angeles Times (latimes.com)\
@@ -55,6 +59,7 @@ The Nation (thenation.com)\
 The New York Times (nytimes.com)\
 The New Yorker (newyorker.com)\
 The News-Gazette (news-gazette.com)\
+The Saturday Paper (thesaturdaypaper.com.au)\
 The Spectator (spectator.co.uk)\
 The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\

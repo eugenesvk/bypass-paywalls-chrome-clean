@@ -14,6 +14,7 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Denver Post': 'denverpost.com',
+  'De Tijd': 'tijd.be',
   'The Economist': 'economist.com',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
@@ -26,6 +27,7 @@ var defaultSites = {
   'Harvard Business Review': 'hbr.org',
   'Het Financieele Dagblad': 'fd.nl',
   'Inc.com': 'inc.com',
+  'Irish Times': 'irishtimes.com',
   'La Repubblica': 'repubblica.it',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
@@ -55,6 +57,7 @@ var defaultSites = {
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The News-Gazette': 'news-gazette.com',
+  'The Saturday Paper': 'thesaturdaypaper.com.au',
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
@@ -92,7 +95,9 @@ const allow_cookies = [
 'theadvocate.com.au',
 'examiner.com.au',
 'thestar.com',
-'washingtonpost.com'
+'washingtonpost.com',
+'irishtimes.com'
+
 ]
 
 // Removes cookies after page load
@@ -121,7 +126,8 @@ const remove_cookies = [
 'foreignpolicy.com',
 'wsj.com',
 'glassdoor.com',
-'cen.acs.org'
+'cen.acs.org',
+'irishtimes.com'
 ]
 
 function setDefaultOptions() {
