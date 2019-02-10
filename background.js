@@ -36,6 +36,7 @@ var defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'New Statesman': 'newstatesman.com',
+  'Newsrep': 'thenewsrep.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'Orange County Register': 'ocregister.com',
@@ -82,7 +83,6 @@ const allow_cookies = [
 'letemps.ch',
 'fd.nl',
 'mercurynews.com',
-'theage.com.au',
 'economist.com',
 'bostonglobe.com',
 'denverpost.com',
@@ -96,8 +96,8 @@ const allow_cookies = [
 'examiner.com.au',
 'thestar.com',
 'washingtonpost.com',
-'irishtimes.com'
-
+'irishtimes.com',
+'hbr.org',
 ]
 
 // Removes cookies after page load
@@ -127,7 +127,9 @@ const remove_cookies = [
 'wsj.com',
 'glassdoor.com',
 'cen.acs.org',
-'irishtimes.com'
+'irishtimes.com',
+'hbr.org',
+'thenewsrep.com',
 ]
 
 function setDefaultOptions() {
@@ -157,7 +159,6 @@ browser.storage.sync.get({
   });
 });
 
-
 // Listen for changes to options
 browser.storage.onChanged.addListener(function(changes, namespace) {
   var key;
@@ -172,7 +173,6 @@ browser.storage.onChanged.addListener(function(changes, namespace) {
   }
 });
 
-
 // Set and show default options on install
 browser.runtime.onInstalled.addListener(function (details) {
   if (details.reason == "install") {
@@ -182,21 +182,31 @@ browser.runtime.onInstalled.addListener(function (details) {
   }
 });
 
+// WSJ bypass
+browser.webRequest.onBeforeSendHeaders.addListener(function (details) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+    return;
+  }
+
+  var param;
+  var updatedUrl;
+
+  param = getParameterByName("mod", details.url);
+
+  if (param === null) {
+    updatedUrl = stripQueryStringAndHashFromPath(details.url);
+    updatedUrl += "?mod=rsswn";
+  } else {
+    updatedUrl = details.url.replace(param, "rsswn");
+  }
+  return { redirectUrl: updatedUrl};
+},
+{urls:["*://*.wsj.com/*"], types:["main_frame"]},
+["blocking"]
+);
 
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  var isEnabled = enabledSites.some(function(enabledSite) {
-
-    var useSite = details.url.indexOf("." + enabledSite) !== -1;
-
-    if (enabledSite in restrictions) {
-      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
-    }
-
-    return useSite;
-
-  });
-
-  if (!isEnabled) {
+  if (!isSiteEnabled(details)) {
     return;
   }
 
@@ -293,3 +303,28 @@ browser.webRequest.onCompleted.addListener(function(details) {
 }, {
   urls: ["<all_urls>"]
 });
+
+function isSiteEnabled(details) {
+  var isEnabled = enabledSites.some(function(enabledSite) {
+    var useSite = details.url.indexOf("." + enabledSite) !== -1;
+    if (enabledSite in restrictions) {
+      return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
+    }
+    return useSite;
+  });
+  return isEnabled;
+}
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+  results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function stripQueryStringAndHashFromPath(url) {
+  return url.split("?")[0].split("#")[0];
+}

@@ -1,6 +1,8 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.8/bypass_paywalls-1.4.8-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.9/bypass_paywalls-1.4.9-an+fx.xpi)
+
+### 2019-02-10: WSJ bypass fixed!
 
 ### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
 
@@ -39,6 +41,7 @@ Medscape (medscape.com)\
 MIT Technology Review (technologyreview.com)\
 Mountain View Voice (mv-voice.com)\
 New Statesman (newstatesman.com)\
+Newsrep (thenewsrep.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
 Orange County Register (ocregister.com)\
@@ -77,7 +80,7 @@ Wired (wired.com)
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 ### Troubleshooting
-* This add-on works best along with [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+* This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * For The Denver Post turn off uBlock.
 * If a site doesn't work try turning off uBlock and refreshing.
 

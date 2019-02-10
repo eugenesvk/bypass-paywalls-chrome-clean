@@ -34,6 +34,7 @@ var defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'New Statesman': 'newstatesman.com',
+  'Newsrep': 'thenewsrep.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'Orange County Register': 'ocregister.com',
