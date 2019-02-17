@@ -220,18 +220,22 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var setReferer = false;
 
   // if referer exists, set it to google
-  requestHeaders = requestHeaders.map(function(requestHeader) {
+  requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {
-      if (details.url.indexOf("wsj.com") !== -1) {
-       requestHeader.value = 'https://www.facebook.com/';
-     } else {
-       requestHeader.value = 'https://www.google.com/';
-     }
+      if (details.url.indexOf("cooking.nytimes.com/api/v1/users/bootstrap") !== -1) {
+        // this fixes images not being loaded on cooking.nytimes.com main page
+        // referrer has to be *nytimes.com otherwise returns 403
+        requestHeader.value = 'https://cooking.nytimes.com';
+      } else if (details.url.indexOf("wsj.com") !== -1) {
+        requestHeader.value = 'https://www.facebook.com/';
+      } else {
+        requestHeader.value = 'https://www.google.com/';
+      }
 
-     setReferer = true;
-   }
-   return requestHeader;
- });
+      setReferer = true;
+    }
+    return requestHeader;
+  });
 
   // otherwise add it
   if (!setReferer) {
