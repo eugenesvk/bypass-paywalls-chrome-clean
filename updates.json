@@ -12,7 +12,9 @@
         { "version": "1.4.8",
             "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.8/bypass_paywalls-1.4.8-an+fx.xpi" },
         { "version": "1.4.9",
-            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.9/bypass_paywalls-1.4.9-an+fx.xpi" }
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.9/bypass_paywalls-1.4.9-an+fx.xpi" },
+        { "version": "1.5.0",
+            "update_link": "https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.0/bypass_paywalls-1.5.0-an+fx.xpi" }
         ]
     }
   }

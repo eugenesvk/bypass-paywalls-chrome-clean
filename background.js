@@ -36,6 +36,7 @@ var defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'New Statesman': 'newstatesman.com',
+  'New York Magazine': 'nymag.com',
   'Newsrep': 'thenewsrep.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
@@ -98,6 +99,7 @@ const allow_cookies = [
 'washingtonpost.com',
 'irishtimes.com',
 'hbr.org',
+'nymag.com',
 ]
 
 // Removes cookies after page load
@@ -130,6 +132,8 @@ const remove_cookies = [
 'irishtimes.com',
 'hbr.org',
 'thenewsrep.com',
+'washingtonpost.com',
+'nymag.com',
 ]
 
 function setDefaultOptions() {

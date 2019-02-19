@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.4.9/bypass_paywalls-1.4.9-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.0/bypass_paywalls-1.5.0-an+fx.xpi)
 
 ### 2019-02-10: WSJ bypass fixed!
 
@@ -41,6 +41,7 @@ Medscape (medscape.com)\
 MIT Technology Review (technologyreview.com)\
 Mountain View Voice (mv-voice.com)\
 New Statesman (newstatesman.com)\
+New York Magazine (nymag.com)\
 Newsrep (thenewsrep.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
