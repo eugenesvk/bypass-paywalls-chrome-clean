@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.0/bypass_paywalls-1.5.0-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.1/bypass_paywalls-1.5.1-an+fx.xpi)
 
 ### 2019-02-10: WSJ bypass fixed!
 
@@ -42,7 +42,6 @@ MIT Technology Review (technologyreview.com)\
 Mountain View Voice (mv-voice.com)\
 New Statesman (newstatesman.com)\
 New York Magazine (nymag.com)\
-Newsrep (thenewsrep.com)\
 Nikkei Asian Review (asia.nikkei.com)\
 NRC (nrc.nl)\
 Orange County Register (ocregister.com)\
@@ -76,6 +75,7 @@ Vanity Fair (vanityfair.com)\
 Wired (wired.com)
 
 ### New site requests:
+Only large or major sites will be considered. No small sites or local newspapers.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new Private window (Ctrl+Shift+P) and paste the article title into Google.
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.

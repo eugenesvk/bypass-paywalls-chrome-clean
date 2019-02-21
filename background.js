@@ -37,7 +37,6 @@ var defaultSites = {
   'Mountain View Voice': 'mv-voice.com',
   'New Statesman': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
-  'Newsrep': 'thenewsrep.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
   'NRC': 'nrc.nl',
   'Orange County Register': 'ocregister.com',
@@ -230,7 +229,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (details.url.indexOf("wsj.com") !== -1) {
+      } else if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
