@@ -30,7 +30,6 @@ Haaretz (haaretz.co.il / haaretz.com)\
 Hacked (hacked.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
-Het Financieele Dagblad (fd.nl)\
 Inc.com (inc.com)\
 Irish Times (irishtimes.com)\
 La Repubblica (repubblica.it)\
