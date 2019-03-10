@@ -48,6 +48,7 @@ Orlando Sentinel (orlandosentinel.com)\
 Palo Alto Online (paloaltoonline.com)\
 Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
+Tech in Asia (techinasia.com)\
 The Advocate (theadvocate.com.au)\
 The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
