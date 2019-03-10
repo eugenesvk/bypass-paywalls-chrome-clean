@@ -26,6 +26,7 @@ var defaultSites = {
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
+  'Investors Chronicle': 'investorschronicle.co.uk',
   'Irish Times': 'irishtimes.com',
   'La Repubblica': 'repubblica.it',
   'Le Temps': 'letemps.ch',

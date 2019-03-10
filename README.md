@@ -31,6 +31,7 @@ Hacked (hacked.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
+Investors Chronicle (investorschronicle.co.uk)\
 Irish Times (irishtimes.com)\
 La Repubblica (repubblica.it)\
 Le Temps (letemps.ch)\
@@ -79,6 +80,8 @@ Only large or major sites will be considered. No small sites or local newspapers
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new Private window (Ctrl+Shift+P) and paste the article title into Google.
 3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
+
+Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
 * This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
