@@ -1,5 +1,4 @@
 var defaultSites = {
-  'The Age': 'theage.com.au',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -46,6 +45,8 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'The Advocate': 'theadvocate.com.au',
+  'The Age': 'theage.com.au',
+  'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
@@ -63,6 +64,8 @@ var defaultSites = {
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Telegraph': 'telegraph.co.uk',
+  'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',

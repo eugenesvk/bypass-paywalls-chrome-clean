@@ -1,7 +1,6 @@
 'use strict';
 
 var defaultSites = {
-  'The Age': 'theage.com.au',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -48,6 +47,8 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'The Advocate': 'theadvocate.com.au',
+  'The Age': 'theage.com.au',
+  'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
@@ -65,6 +66,7 @@ var defaultSites = {
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
@@ -155,6 +157,9 @@ const blockedRegexes = [
 /haaretz\.co\.il\/htz\/js\/inter\.js/
 ];
 
+const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+
 var enabledSites = [];
 
 // Get the enabled sites
@@ -225,6 +230,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
 
+  var useUserAgentMobile = false;
   var setReferer = false;
 
   // if referer exists, set it to google
@@ -239,9 +245,12 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
       } else {
         requestHeader.value = 'https://www.google.com/';
       }
-
       setReferer = true;
     }
+    if (requestHeader.name === 'User-Agent') {
+      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile");
+    }
+
     return requestHeader;
   });
 
@@ -258,8 +267,20 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
         value: 'https://www.google.com/'
       });
     }
-
   }
+
+  // override User-Agent except on medium.com
+  if (details.url.indexOf("medium.com") === -1) {
+    requestHeaders.push({
+      "name": "User-Agent",
+      "value": useUserAgentMobile ? userAgentMobile : userAgentDesktop
+    })
+  }
+
+  requestHeaders.push({
+    "name": "X-Forwarded-For",
+    "value": "66.249.66.1"
+  })
 
   // remove cookies before page load
   requestHeaders = requestHeaders.map(function(requestHeader) {

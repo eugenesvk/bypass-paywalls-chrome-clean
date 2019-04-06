@@ -1,14 +1,9 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.1/bypass_paywalls-1.5.1-an+fx.xpi)
-
-### 2019-02-10: WSJ bypass fixed!
-
-### 2019-02-02: The Wall Street Journal (wsj.com) bypass is currently not working. WSJ seems to have changed their algorithm.
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.2/bypass_paywalls-1.5.2-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 
-The Age (theage.com.au)\
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
@@ -53,6 +48,8 @@ Quora (quora.com)\
 SunSentinel (sun-sentinel.com)\
 Tech in Asia (techinasia.com)\
 The Advocate (theadvocate.com.au)\
+The Age (theage.com.au)\
+The Australian (theaustralian.com.au)\
 The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
 The Globe and Mail (theglobeandmail.com)\
@@ -70,6 +67,8 @@ The Spectator (spectator.co.uk)\
 The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
+The Telegraph (telegraph.co.uk)\
+The Times (thetimes.co.uk)\
 The Toronto Star (thestar.com)\
 The Washington Post (washingtonpost.com)\
 The Wall Street Journal (wsj.com)\
