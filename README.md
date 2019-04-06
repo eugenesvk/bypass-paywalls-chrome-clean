@@ -21,13 +21,14 @@ Corriere Della Sera (corriere.it)\
 Daily Press (dailypress.com)\
 Denver Post (denverpost.com)\
 De Tijd (tijd.be)\
+de Volkskrant (volkskrant.nl)\
 The Economist (economist.com)\
 Examiner (examiner.com.au)\
 Financial Times (ft.com)\
 Foreign Policy (foreignpolicy.com)\
 Glassdoor (glassdoor.com)\
 Haaretz (haaretz.co.il / haaretz.com)\
-Hacked (hacked.com)\
+Handelsblatt (handelsblatt.com)\
 Hartford Courant (courant.com)\
 Harvard Business Review (hbr.org)\
 Inc.com (inc.com)\
@@ -40,6 +41,7 @@ Medium (medium.com)\
 Medscape (medscape.com)\
 MIT Technology Review (technologyreview.com)\
 Mountain View Voice (mv-voice.com)\
+National Post (nationalpost.com)\
 New Statesman (newstatesman.com)\
 New York Magazine (nymag.com)\
 Nikkei Asian Review (asia.nikkei.com)\
