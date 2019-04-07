@@ -103,6 +103,7 @@ const allow_cookies = [
 'irishtimes.com',
 'hbr.org',
 'nymag.com',
+'theaustralian.com.au',
 ]
 
 // Removes cookies after page load
