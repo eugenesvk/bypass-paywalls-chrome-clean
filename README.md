@@ -1,6 +1,6 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.3/bypass_paywalls-1.5.3-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.4/bypass_paywalls-1.5.4-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 

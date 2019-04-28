@@ -270,8 +270,8 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
     }
   }
 
-  // override User-Agent except on medium.com
-  if (details.url.indexOf("medium.com") === -1) {
+  // override User-Agent except on medium.com and thesaturdaypaper.com.au
+  if (details.url.indexOf("medium.com") === -1 && details.url.indexOf("thesaturdaypaper.com.au") === -1) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": useUserAgentMobile ? userAgentMobile : userAgentDesktop
