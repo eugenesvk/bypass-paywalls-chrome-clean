@@ -143,6 +143,13 @@ const remove_cookies = [
 'handelsblatt.com',
 ]
 
+// Override User-Agent with Googlebot
+const use_google_bot = [
+'theaustralian.com.au',
+'telegraph.co.uk',
+'thetimes.co.uk',
+]
+
 function setDefaultOptions() {
   browser.storage.sync.set({
     sites: defaultSites
@@ -150,7 +157,6 @@ function setDefaultOptions() {
     browser.runtime.openOptionsPage();
   });
 }
-
 
 const blockedRegexes = [
 /.+:\/\/.+\.tribdss\.com\//,
@@ -188,7 +194,7 @@ browser.storage.onChanged.addListener(function(changes, namespace) {
 });
 
 // Set and show default options on install
-browser.runtime.onInstalled.addListener(function (details) {
+browser.runtime.onInstalled.addListener(function(details) {
   if (details.reason == "install") {
     setDefaultOptions();
   } else if (details.reason == "update") {
@@ -197,7 +203,7 @@ browser.runtime.onInstalled.addListener(function (details) {
 });
 
 // WSJ bypass
-browser.webRequest.onBeforeSendHeaders.addListener(function (details) {
+browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
     return;
   }
@@ -235,7 +241,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var setReferer = false;
 
   // if referer exists, set it to google
-  requestHeaders = requestHeaders.map(function (requestHeader) {
+  requestHeaders = requestHeaders.map(function(requestHeader) {
     if (requestHeader.name === 'Referer') {
       if (details.url.indexOf("cooking.nytimes.com/api/v1/users/bootstrap") !== -1) {
         // this fixes images not being loaded on cooking.nytimes.com main page
@@ -270,18 +276,21 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
     }
   }
 
-  // override User-Agent except on medium.com and thesaturdaypaper.com.au
-  if (details.url.indexOf("medium.com") === -1 && details.url.indexOf("thesaturdaypaper.com.au") === -1) {
+  // override User-Agent to use Googlebot
+  var useGoogleBot = use_google_bot.filter(function(item) {
+    return typeof item == 'string' && details.url.indexOf(item) > -1;            
+  }).length > 0;
+
+  if (useGoogleBot) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": useUserAgentMobile ? userAgentMobile : userAgentDesktop
     })
+    requestHeaders.push({
+      "name": "X-Forwarded-For",
+      "value": "66.249.66.1"
+    })
   }
-
-  requestHeaders.push({
-    "name": "X-Forwarded-For",
-    "value": "66.249.66.1"
-  })
 
   // remove cookies before page load
   requestHeaders = requestHeaders.map(function(requestHeader) {
