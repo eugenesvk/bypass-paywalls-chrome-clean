@@ -52,6 +52,7 @@ var defaultSites = {
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
+  'The Diplomat': 'thediplomat.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
   'The Japan Times': 'japantimes.co.jp',
@@ -141,6 +142,7 @@ const remove_cookies = [
 'nationalpost.com',
 'volkskrant.nl',
 'handelsblatt.com',
+'thediplomat.com',
 ]
 
 // Override User-Agent with Googlebot

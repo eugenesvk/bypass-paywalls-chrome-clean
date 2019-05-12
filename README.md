@@ -52,6 +52,7 @@ The Age (theage.com.au)\
 The Australian (theaustralian.com.au)\
 The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
+The Diplomat (thediplomat.com)\
 The Globe and Mail (theglobeandmail.com)\
 The Herald (theherald.com.au)\
 The Japan Times (japantimes.co.jp)\
