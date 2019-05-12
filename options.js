@@ -50,7 +50,7 @@ var defaultSites = {
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
-  'The Globe and Mail': 'theglobeandmail.com',
+  'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',

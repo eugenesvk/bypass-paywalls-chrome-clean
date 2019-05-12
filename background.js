@@ -225,6 +225,20 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 ["blocking"]
 );
 
+// Disable javascript for these sites
+chrome.webRequest.onBeforeRequest.addListener(function(details) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+    return;
+  }
+  return {cancel: true}; 
+  },
+  {
+    urls: ["*://*.theglobeandmail.com/*"],
+    types: ["script"]
+  },
+  ["blocking"]
+);
+
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!isSiteEnabled(details)) {
     return;
