@@ -1,12 +1,13 @@
 # Bypass Paywalls for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.4/bypass_paywalls-1.5.4-an+fx.xpi)
+## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.5/bypass_paywalls-1.5.5-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension:
 
 Baltimore Sun (baltimoresun.com)\
 Barron's (barrons.com)\
 Bloomberg (bloomberg.com)\
+Business Insider (businessinsider.com)\
 Caixin (caixinglobal.com)\
 Chemical & Engineering News (cen.acs.org)\
 Central Western Daily (centralwesterndaily.com.au)\
@@ -52,6 +53,7 @@ The Age (theage.com.au)\
 The Australian (theaustralian.com.au)\
 The Australian Financial Review (afr.com)\
 The Boston Globe (bostonglobe.com)\
+The Business Journals (bizjournals.com)\
 The Diplomat (thediplomat.com)\
 The Globe and Mail (theglobeandmail.com)\
 The Herald (theherald.com.au)\
@@ -65,7 +67,6 @@ The New Yorker (newyorker.com)\
 The News-Gazette (news-gazette.com)\
 The Saturday Paper (thesaturdaypaper.com.au)\
 The Spectator (spectator.co.uk)\
-The Business Journals (bizjournals.com)\
 The Seattle Times (seattletimes.com)\
 The Sydney Morning Herald (smh.com.au)\
 The Telegraph (telegraph.co.uk)\
@@ -87,8 +88,13 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
 ### Troubleshooting
 * This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
-* For The Denver Post turn off uBlock.
 * If a site doesn't work try turning off uBlock and refreshing.
+
+### Pull Requesets
+* PRs are welcome.
+
+### Show your support
+* I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
 Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-firefox/blob/master/LICENSE).
