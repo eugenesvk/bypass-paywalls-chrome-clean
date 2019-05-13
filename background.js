@@ -235,7 +235,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true}; 
   },
   {
-    urls: ["*://*.theglobeandmail.com/*"],
+    urls: ["*://*.theglobeandmail.com/*", "*://*.economist.com/*"],
     types: ["script"]
   },
   ["blocking"]

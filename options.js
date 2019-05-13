@@ -13,7 +13,7 @@ var defaultSites = {
   'Denver Post': 'denverpost.com',
   'De Tijd': 'tijd.be',
   'de Volkskrant': 'volkskrant.nl',
-  'The Economist': 'economist.com',
+  'The Economist (javascript disabled)': 'economist.com',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
