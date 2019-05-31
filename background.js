@@ -150,6 +150,7 @@ const use_google_bot = [
 'theaustralian.com.au',
 'telegraph.co.uk',
 'thetimes.co.uk',
+'barrons.com',
 ]
 
 function setDefaultOptions() {
