@@ -4,79 +4,80 @@
 
 ### Bypass the following sites' paywalls with this extension:
 
-Baltimore Sun (baltimoresun.com)\
-Barron's (barrons.com)\
-Bloomberg (bloomberg.com)\
-Business Insider (businessinsider.com)\
-Caixin (caixinglobal.com)\
-Chemical & Engineering News (cen.acs.org)\
-Central Western Daily (centralwesterndaily.com.au)\
-Chicago Tribune (chicagotribune.com)\
-Crain's Chicago Business (chicagobusiness.com)\
-Corriere Della Sera (corriere.it)\
-Daily Press (dailypress.com)\
-Denver Post (denverpost.com)\
-De Tijd (tijd.be)\
-de Volkskrant (volkskrant.nl)\
-The Economist (economist.com)\
-Examiner (examiner.com.au)\
-Financial Times (ft.com)\
-Foreign Policy (foreignpolicy.com)\
-Glassdoor (glassdoor.com)\
-Haaretz (haaretz.co.il / haaretz.com)\
-Handelsblatt (handelsblatt.com)\
-Hartford Courant (courant.com)\
-Harvard Business Review (hbr.org)\
-Inc.com (inc.com)\
-Investors Chronicle (investorschronicle.co.uk)\
-Irish Times (irishtimes.com)\
-La Repubblica (repubblica.it)\
-Le Temps (letemps.ch)\
-Los Angeles Times (latimes.com)\
-Medium (medium.com)\
-Medscape (medscape.com)\
-MIT Technology Review (technologyreview.com)\
-Mountain View Voice (mv-voice.com)\
-National Post (nationalpost.com)\
-New Statesman (newstatesman.com)\
-New York Magazine (nymag.com)\
-Nikkei Asian Review (asia.nikkei.com)\
-NRC (nrc.nl)\
-Orange County Register (ocregister.com)\
-Orlando Sentinel (orlandosentinel.com)\
-Palo Alto Online (paloaltoonline.com)\
-Quora (quora.com)\
-SunSentinel (sun-sentinel.com)\
-Tech in Asia (techinasia.com)\
-The Advocate (theadvocate.com.au)\
-The Age (theage.com.au)\
-The Australian (theaustralian.com.au)\
-The Australian Financial Review (afr.com)\
-The Boston Globe (bostonglobe.com)\
-The Business Journals (bizjournals.com)\
-The Diplomat (thediplomat.com)\
-The Globe and Mail (theglobeandmail.com)\
-The Herald (theherald.com.au)\
-The Japan Times (japantimes.co.jp)\
-TheMarker (themarker.com)\
-The Mercury News (mercurynews.com)\
-The Morning Call (mcall.com)\
-The Nation (thenation.com)\
-The New York Times (nytimes.com)\
-The New Yorker (newyorker.com)\
-The News-Gazette (news-gazette.com)\
-The Saturday Paper (thesaturdaypaper.com.au)\
-The Spectator (spectator.co.uk)\
-The Seattle Times (seattletimes.com)\
-The Sydney Morning Herald (smh.com.au)\
-The Telegraph (telegraph.co.uk)\
-The Times (thetimes.co.uk)\
-The Toronto Star (thestar.com)\
-The Washington Post (washingtonpost.com)\
-The Wall Street Journal (wsj.com)\
-Towards Data Science (towardsdatascience.com)\
-Vanity Fair (vanityfair.com)\
-Wired (wired.com)
+[Baltimore Sun](https://www.baltimoresun.com)\
+[Barron's](https://www.barrons.com)\
+[Bloomberg](https://www.bloomberg.com)\
+[Business Insider](https://www.businessinsider.com)\
+[Caixin](https://www.caixinglobal.com)\
+[Chemical & Engineering News](https://cen.acs.org)\
+[Central Western Daily](https://www.centralwesterndaily.com.au)\
+[Chicago Tribune](https://www.chicagotribune.com)\
+[Crain's Chicago Business](https://www.chicagobusiness.com)\
+[Corriere Della Sera](https://www.corriere.it)\
+[Daily Press](https://www.dailypress.com)\
+[Denver Post](https://www.denverpost.com)\
+[De Tijd](https://www.tijd.be)\
+[de Volkskrant](https://www.volkskrant.nl)\
+[The Economist](https://www.economist.com)\
+[Examiner](https://www.examiner.com.au)\
+[Financial Times](https://www.ft.com)\
+[Foreign Policy](https://www.foreignpolicy.com)\
+[Glassdoor](https://www.glassdoor.com)\
+[Haaretz.co.il](https://www.haaretz.co.il)\
+[Haaretz.com](https://www.haaretz.com)\
+[Handelsblatt](https://www.handelsblatt.com)\
+[Hartford Courant](https://www.courant.com)\
+[Harvard Business Review](https://www.hbr.org)\
+[Inc.com](https://www.inc.com)\
+[Investors Chronicle](https://www.investorschronicle.co.uk)\
+[Irish Times](https://www.irishtimes.com)\
+[La Repubblica](https://www.repubblica.it)\
+[Le Temps](https://www.letemps.ch)\
+[Los Angeles Times](https://www.latimes.com)\
+[Medium](https://www.medium.com)\
+[Medscape](https://www.medscape.com)\
+[MIT Technology Review](https://www.technologyreview.com)\
+[Mountain View Voice](https://www.mv-voice.com)\
+[National Post](https://www.nationalpost.com)\
+[New Statesman](https://www.newstatesman.com)\
+[New York Magazine](https://www.nymag.com)\
+[Nikkei Asian Review](https://asia.nikkei.com)\
+[NRC](https://www.nrc.nl)\
+[Orange County Register](https://www.ocregister.com)\
+[Orlando Sentinel](https://www.orlandosentinel.com)\
+[Palo Alto Online](https://www.paloaltoonline.com)\
+[Quora](https://www.quora.com)\
+[SunSentinel](https://www.sun-sentinel.com)\
+[Tech in Asia](https://www.techinasia.com)\
+[The Advocate](https://www.theadvocate.com.au)\
+[The Age](https://www.theage.com.au)\
+[The Australian](https://www.theaustralian.com.au)\
+[The Australian Financial Review](https://www.afr.com)\
+[The Boston Globe](https://www.bostonglobe.com)\
+[The Business Journals](https://www.bizjournals.com)\
+[The Diplomat](https://www.thediplomat.com)\
+[The Globe and Mail](https://www.theglobeandmail.com)\
+[The Herald](https://www.theherald.com.au)\
+[The Japan Times](https://www.japantimes.co.jp)\
+[TheMarker](https://www.themarker.com)\
+[The Mercury News](https://www.mercurynews.com)\
+[The Morning Call](https://www.mcall.com)\
+[The Nation](https://www.thenation.com)\
+[The New York Times](https://www.nytimes.com)\
+[The New Yorker](https://www.newyorker.com)\
+[The News-Gazette](https://www.news-gazette.com)\
+[The Saturday Paper](https://www.thesaturdaypaper.com.au)\
+[The Spectator](https://www.spectator.co.uk)\
+[The Seattle Times](https://www.seattletimes.com)\
+[The Sydney Morning Herald](https://www.smh.com.au)\
+[The Telegraph](https://www.telegraph.co.uk)\
+[The Times](https://www.thetimes.co.uk)\
+[The Toronto Star](https://www.thestar.com)\
+[The Washington Post](https://www.washingtonpost.com)\
+[The Wall Street Journal](https://www.wsj.com)\
+[Towards Data Science](https://www.towardsdatascience.com)\
+[Vanity Fair](https://www.vanityfair.com)\
+[Wired](https://www.wired.com)
 
 ### New site requests:
 Only large or major sites will be considered. No small sites or local newspapers.
