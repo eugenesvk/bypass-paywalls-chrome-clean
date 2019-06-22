@@ -2,7 +2,7 @@
 
 ## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.5.5/bypass_paywalls-1.5.5-an+fx.xpi)
 
-### Bypass the following sites' paywalls with this extension:
+### Bypass the following sites' paywalls with this extension
 
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
@@ -79,7 +79,14 @@
 [Vanity Fair](https://www.vanityfair.com)\
 [Wired](https://www.wired.com)
 
-### New site requests:
+### Sites with limited number of free articles
+The free article limit can normally be bypassed by removing cookies for the site.
+
+Install [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/).
+
+When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
+
+### New site requests
 Only large or major sites will be considered. No small sites or local newspapers.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new Private window (Ctrl+Shift+P) and paste the article title into Google.

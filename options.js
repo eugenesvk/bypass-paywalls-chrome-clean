@@ -67,7 +67,7 @@ var defaultSites = {
   'The Sydney Morning Herald': 'smh.com.au',
   'The Telegraph': 'telegraph.co.uk',
   'The Times': 'thetimes.co.uk',
-  'The Toronto Star': 'thestar.com',
+  'The Toronto Star (javascript disabled)': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
   'Towards Data Science': 'towardsdatascience.com',
