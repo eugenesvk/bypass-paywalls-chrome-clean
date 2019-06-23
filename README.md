@@ -82,7 +82,7 @@
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
 
-Install my [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
+Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
 
 When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 

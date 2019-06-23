@@ -56,4 +56,10 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
       document.querySelector('.gdpr-consent-container .consent-page:not(.hide) .continue-btn.button.accept-consent').click();
     }
   }
+} else if (window.location.href.indexOf("wsj.com") !== -1) {
+  if (location.href.includes('/articles/')) {
+    setTimeout(function() { 
+      document.querySelector('.close-btn').click();
+    }, 2000);
+  }
 }
