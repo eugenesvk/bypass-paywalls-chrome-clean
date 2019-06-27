@@ -29,6 +29,23 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
   if (msg) {
     msg.style['display'] = 'none';
   }
+} else if (window.location.href.indexOf("nzherald.co.nz") !== -1) {
+  const paywall = document.getElementById(
+    "article-content"
+  );
+    if (paywall) {
+      paywall.classList.remove('premium-content');
+      paywall.classList.add('full-content');
+      var paras = paywall.querySelectorAll("p, span, h2, div");
+	  var delClass = "";
+	  for (var i = paras.length; i--;) {
+	    if (delClass == "") {
+		  delClass = paras[i].className;
+		}
+        paras[i].classList.remove(delClass);
+        paras[i].removeAttribute('style');
+      }
+    }
 } else if (location.hostname.endsWith('rep.repubblica.it')) {
   if (location.href.includes("/pwa/")) {
     location.href = location.href.replace("/pwa/", "/ws/detail/");
