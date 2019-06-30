@@ -30,7 +30,6 @@
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
 [Investors Chronicle](https://www.investorschronicle.co.uk)\
-[Irish Times](https://www.irishtimes.com)\
 [La Repubblica](https://www.repubblica.it)\
 [Le Temps](https://www.letemps.ch)\
 [Los Angeles Times](https://www.latimes.com)\
