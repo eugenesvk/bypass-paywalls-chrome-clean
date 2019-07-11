@@ -44,6 +44,7 @@ var defaultSites = {
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
   'Quora': 'quora.com',
+  'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
   'Tech in Asia': 'techinasia.com',
   'The Advocate': 'theadvocate.com.au',
