@@ -33,19 +33,25 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
   const paywall = document.getElementById(
     "article-content"
   );
-    if (paywall) {
-      paywall.classList.remove('premium-content');
-      paywall.classList.add('full-content');
-      var paras = paywall.querySelectorAll("p, span, h2, div");
-	  var delClass = "";
-	  for (var i = paras.length; i--;) {
-	    if (delClass == "") {
-		  delClass = paras[i].className;
-		}
-        paras[i].classList.remove(delClass);
-        paras[i].removeAttribute('style');
+  if (paywall) {
+    paywall.classList.remove('premium-content');
+    paywall.classList.add('full-content');
+    var paras = paywall.querySelectorAll("p, span, h2, div");
+    var delClass = "";
+    for (var i = 0; i < paras.length; i++) {
+      if (paras[i].nodeName == 'P' || paras[i].nodeName == 'SPAN') {
+        paras[i].classList.remove("ellipsis");
+        if (delClass == "" && paras[i].className != "") {
+          delClass = paras[i].className;
+        } else {
+            if (delClass != "") {
+              paras[i].classList.remove(delClass);
+            }
+        }
       }
+      paras[i].removeAttribute('style');
     }
+  }
 } else if (location.hostname.endsWith('rep.repubblica.it')) {
   if (location.href.includes("/pwa/")) {
     location.href = location.href.replace("/pwa/", "/ws/detail/");
