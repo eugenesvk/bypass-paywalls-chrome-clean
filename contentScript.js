@@ -69,7 +69,7 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
   }
 } else if (window.location.href.indexOf("wsj.com") !== -1) {
   if (location.href.includes('/articles/')) {
-    setTimeout(function() { 
+    setTimeout(function() {
       document.querySelector('.close-btn').click();
     }, 2000);
   }
@@ -86,6 +86,6 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 
         document.querySelector('.gdpr-consent-container .consent-page:not(.hide) .continue-btn.button.accept-consent').click();
       }
-    }, 300); // Delay (in milliseconds) 
+    }, 300); // Delay (in milliseconds)
   }
 }
