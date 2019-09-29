@@ -33,7 +33,7 @@ var defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'National Post': 'nationalpost.com',
-  'New Statesman': 'newstatesman.com',
+  'New Statesman (javascript disabled)': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
   'New Zealand Herald': 'nzherald.co.nz',
   'Nikkei Asian Review': 'asia.nikkei.com',
