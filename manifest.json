@@ -119,7 +119,8 @@
     "*://*.towardsdatascience.com/*",
     "*://*.vanityfair.com/*",
     "*://*.wired.com/*",
-    "*://*.thediplomat.com/*"
+    "*://*.thediplomat.com/*",
+    "*://*.theatlantic.com/*"
   ],
   "version": "1.5.9"
 }

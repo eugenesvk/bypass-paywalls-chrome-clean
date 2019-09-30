@@ -48,6 +48,7 @@ var defaultSites = {
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
+  'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
   'The Boston Globe': 'bostonglobe.com',
@@ -142,6 +143,7 @@ const remove_cookies = [
 'handelsblatt.com',
 'thediplomat.com',
 'latimes.com',
+'theatlantic.com',
 ]
 
 // Override User-Agent with Googlebot

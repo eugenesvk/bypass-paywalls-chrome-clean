@@ -51,6 +51,7 @@
 [SunSentinel](https://www.sun-sentinel.com)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
+[The Atlantic](https://www.theatlantic.com)\
 [The Australian](https://www.theaustralian.com.au)\
 [The Australian Financial Review](https://www.afr.com)\
 [The Boston Globe](https://www.bostonglobe.com)\
