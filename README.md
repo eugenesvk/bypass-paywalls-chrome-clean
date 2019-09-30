@@ -49,7 +49,6 @@
 [Quora](https://www.quora.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
-[Tech in Asia](https://www.techinasia.com)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
 [The Australian](https://www.theaustralian.com.au)\

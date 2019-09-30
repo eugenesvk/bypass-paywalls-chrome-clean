@@ -44,7 +44,6 @@ var defaultSites = {
   'Quora': 'quora.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
-  'Tech in Asia': 'techinasia.com',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
