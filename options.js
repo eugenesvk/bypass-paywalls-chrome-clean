@@ -48,6 +48,7 @@ var defaultSites = {
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
+  'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',

@@ -50,6 +50,7 @@ var defaultSites = {
   'The Age': 'theage.com.au',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review': 'afr.com',
+  'The Boston Globe': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail': 'theglobeandmail.com',
@@ -88,6 +89,7 @@ const allow_cookies = [
 'letemps.ch',
 'mercurynews.com',
 'economist.com',
+'bostonglobe.com',
 'denverpost.com',
 'hacked.com',
 'ocregister.com',
@@ -114,6 +116,7 @@ const remove_cookies = [
 'mercurynews.com',
 'theage.com.au',
 'economist.com',
+'bostonglobe.com',
 'denverpost.com',
 'hacked.com',
 'ocregister.com',
@@ -232,7 +235,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true};
   },
   {
-    urls: ["*://*.theglobeandmail.com/*", "*://*.economist.com/*", "*://*.thestar.com/*", "*://*.newstatesman.com/*"],
+    urls: ["*://*.theglobeandmail.com/*", "*://*.economist.com/*", "*://*.thestar.com/*", "*://*.newstatesman.com/*", "*://*.bostonglobe.com/*"],
     types: ["script"]
   },
   ["blocking"]
