@@ -41,6 +41,7 @@ var defaultSites = {
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
+  'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',

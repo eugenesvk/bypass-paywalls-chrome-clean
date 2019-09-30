@@ -43,6 +43,7 @@ var defaultSites = {
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
+  'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
@@ -145,6 +146,7 @@ const remove_cookies = [
 'latimes.com',
 'theatlantic.com',
 'chicagobusiness.com',
+'qz.com',
 ]
 
 // Override User-Agent with Googlebot

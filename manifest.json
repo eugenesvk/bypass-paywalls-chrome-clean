@@ -120,7 +120,8 @@
     "*://*.vanityfair.com/*",
     "*://*.wired.com/*",
     "*://*.thediplomat.com/*",
-    "*://*.theatlantic.com/*"
+    "*://*.theatlantic.com/*",
+    "*://*.qz.com/*"
   ],
   "version": "1.5.9"
 }

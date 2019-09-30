@@ -46,6 +46,7 @@
 [Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
 [Palo Alto Online](https://www.paloaltoonline.com)\
+[Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
