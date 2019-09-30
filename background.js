@@ -141,6 +141,7 @@ const remove_cookies = [
 'volkskrant.nl',
 'handelsblatt.com',
 'thediplomat.com',
+'latimes.com',
 ]
 
 // Override User-Agent with Googlebot

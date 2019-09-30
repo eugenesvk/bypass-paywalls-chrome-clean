@@ -91,7 +91,6 @@
     "*://*.paloaltoonline.com/*",
     "*://*.quora.com/*",
     "*://*.sun-sentinel.com/*",
-    "*://*.techinasia.com/*",
     "*://*.theadvocate.com.au/*",
     "*://*.theage.com.au/*",
     "*://*.theaustralian.com.au/*",
@@ -122,5 +121,5 @@
     "*://*.wired.com/*",
     "*://*.thediplomat.com/*"
   ],
-  "version": "1.5.8"
+  "version": "1.5.9"
 }
