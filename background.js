@@ -103,6 +103,7 @@ const allow_cookies = [
 'hbr.org',
 'nymag.com',
 'theaustralian.com.au',
+'volkskrant.nl',
 ]
 
 // Removes cookies after page load
