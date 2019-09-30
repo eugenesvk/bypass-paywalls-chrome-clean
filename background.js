@@ -144,6 +144,7 @@ const remove_cookies = [
 'thediplomat.com',
 'latimes.com',
 'theatlantic.com',
+'chicagobusiness.com',
 ]
 
 // Override User-Agent with Googlebot
