@@ -7,6 +7,7 @@
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
+[Bloomberg Quint]('https://www.bloombergquint.com)\
 [Business Insider](https://www.businessinsider.com)\
 [Caixin](https://www.caixinglobal.com)\
 [Chemical & Engineering News](https://cen.acs.org)\

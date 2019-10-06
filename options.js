@@ -2,6 +2,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
   'Chemical & Engineering News': 'cen.acs.org',
