@@ -89,3 +89,15 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
     }, 300); // Delay (in milliseconds)
   }
 }
+
+if (window.location.href.indexOf("bloombergquint.com") !== -1) {
+	const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
+	const paywall = document.getElementById('paywallDmp');
+	removeDOMElement(articlesLeftModal,	paywall);
+}
+
+function removeDOMElement(...elements) {
+	for (let element of elements) {
+		if (element) element.remove();
+	}
+}
