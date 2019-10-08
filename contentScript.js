@@ -89,3 +89,25 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
     }, 300); // Delay (in milliseconds)
   }
 }
+
+if (window.location.href.indexOf("medium.com") !== -1) {
+	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
+	const DOMElementsToTextDiv = contains('div', bottomMessageText);
+
+
+	if(DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+}
+
+function removeDOMElement(...elements) {
+	for (let element of elements) {
+		if (element) element.remove();
+	}
+}
+
+function contains(selector, text) {
+	let elements = document.querySelectorAll(selector);
+
+	return Array.prototype.filter.call(elements, function(element){
+		return RegExp(text).test(element.textContent);
+	});
+}
