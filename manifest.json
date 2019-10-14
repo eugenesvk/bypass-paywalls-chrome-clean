@@ -8,7 +8,15 @@
         "*://*.bizjournals.com/*",
         "*://*.businessinsider.com/*",
         "*://*.haaretz.co.il/*",
-        "*://*.repubblica.it/*"
+        "*://*.nzherald.co.nz/*",
+        "*://*.repubblica.it/*",
+		"*://*.washingtonpost.com/*",
+		"*://*.wsj.com/*",
+		"*://*.ed.nl/*",
+		"*://*.parool.nl/*",
+		"*://*.telegraaf.nl/*",
+		"*://*.trouw.nl/*",
+		"*://*.volkskrant.nl/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -121,7 +129,14 @@
     "*://*.wired.com/*",
     "*://*.thediplomat.com/*",
     "*://*.theatlantic.com/*",
-    "*://*.qz.com/*"
+    "*://*.qz.com/*",
+    "*://*.ad.nl/*",
+    "*://*.ed.nl/*",
+    "*://*.groene.nl/*",
+    "*://*.parool.nl/*",
+    "*://*.telegraaf.nl/*",
+    "*://*.trouw.nl/*",
+    "*://*.vn.nl/*"
   ],
   "version": "1.5.9"
 }

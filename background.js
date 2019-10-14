@@ -1,6 +1,7 @@
 'use strict';
 
 var defaultSites = {
+  'Algemeen Dagblad': 'ad.nl',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -14,8 +15,10 @@ var defaultSites = {
   'Daily Press': 'dailypress.com',
   'Denver Post': 'denverpost.com',
   'De Tijd': 'tijd.be',
+  'De Groene Amsterdammer': 'groene.nl',
   'de Volkskrant': 'volkskrant.nl',
   'The Economist': 'economist.com',
+  'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
@@ -43,9 +46,11 @@ var defaultSites = {
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
+  'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'Statista': 'statista.com',
+  'Telegraaf': 'telegraaf.nl',
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
@@ -74,7 +79,9 @@ var defaultSites = {
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
   'Towards Data Science': 'towardsdatascience.com',
+  'Trouw': 'trouw.nl',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com'
 };
 
@@ -106,7 +113,13 @@ const allow_cookies = [
 'hbr.org',
 'nymag.com',
 'theaustralian.com.au',
-'volkskrant.nl',
+'ad.nl',
+'ed.nl',
+'parool.nl',
+'telegraaf.nl',
+'trouw.nl',
+'vn.nl',
+'volkskrant.nl'
 ]
 
 // Removes cookies after page load
@@ -140,13 +153,16 @@ const remove_cookies = [
 'washingtonpost.com',
 'nymag.com',
 'nationalpost.com',
-'volkskrant.nl',
 'handelsblatt.com',
 'thediplomat.com',
 'latimes.com',
 'theatlantic.com',
 'chicagobusiness.com',
 'qz.com',
+'ad.nl',
+'ed.nl',
+'telegraaf.nl',
+'vn.nl'
 ]
 
 // Override User-Agent with Googlebot

@@ -88,4 +88,27 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
       }
     }, 300); // Delay (in milliseconds)
   }
+} else if (window.location.href.indexOf('telegraaf.nl') !== -1) {
+	const paywall = document.getElementById('TEMPRORARY_METERING_ID');
+	if (paywall) {
+		window.location.reload(1);
+	}
+} else if (window.location.href.indexOf('ed.nl') !== -1) {
+	const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
+	if (paywall) {
+		paywall.remove();
+		paywall = null;
+	}
+} else if (window.location.href.indexOf("parool.nl") !== -1 ||	window.location.href.indexOf("trouw.nl") !== -1 || 	window.location.href.indexOf("volkskrant.nl") !== -1) {
+	document.addEventListener('DOMContentLoaded', () => {
+		const paywall = document.querySelector('div[data-temptation-position="ARTICLE_BOTTOM"]');
+		const hidden_section = document.querySelector('div[data-temptation-position="ARTICLE_INLINE"]');
+		removeDOMElement(paywall, hidden_section);
+	});
+}
+
+function removeDOMElement(...elements) {
+	for (let element of elements) {
+		if (element) element.remove();
+	}
 }
