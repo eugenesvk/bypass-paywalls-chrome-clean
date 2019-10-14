@@ -228,7 +228,7 @@ browser.runtime.onInstalled.addListener(function(details) {
 
 // WSJ bypass
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1 || details.url.indexOf("/print-edition/") !== -1) {
     return;
   }
 
