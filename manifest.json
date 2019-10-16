@@ -10,13 +10,13 @@
         "*://*.haaretz.co.il/*",
         "*://*.nzherald.co.nz/*",
         "*://*.repubblica.it/*",
-	"*://*.washingtonpost.com/*",
-	"*://*.wsj.com/*",
-	"*://*.ed.nl/*",
-	"*://*.parool.nl/*",
-	"*://*.telegraaf.nl/*",
-	"*://*.trouw.nl/*",
-	"*://*.volkskrant.nl/*"
+		"*://*.washingtonpost.com/*",
+		"*://*.ed.nl/*",
+		"*://*.parool.nl/*",
+		"*://*.telegraaf.nl/*",
+		"*://*.trouw.nl/*",
+		"*://*.volkskrant.nl/*",
+		"*://*.bloomberg.com/*"
       ],
       "js": ["contentScript.js"]
     }
