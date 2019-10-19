@@ -118,7 +118,7 @@ if (window.location.href.indexOf("parool.nl") !== -1 ||	window.location.href.ind
 	});
 }
 
-function removeDOMElement(...elements) {
+function removeDOMElement(elements) {
 	for (let element of elements) {
 		if (element) element.remove();
 	}
