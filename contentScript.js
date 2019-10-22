@@ -73,7 +73,7 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 			const close_button = document.querySelector('.close-btn');
 			if (close_button)
 				close_button.click();
-		}, 300);
+		}, 2000);
 	}
 } else if (window.location.href.indexOf("washingtonpost.com") !== -1) {
 	if (location.href.includes('/gdpr-consent/')) {
