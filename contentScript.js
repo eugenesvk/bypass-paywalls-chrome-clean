@@ -69,11 +69,18 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 	}
 } else if (window.location.href.indexOf("wsj.com") !== -1) {
 	if (location.href.includes('/articles/')) {
+		document.addEventListener('DOMContentLoaded', () => {
+			const paywall = document.getElementById('cx-scrim');
+			const candybar = document.getElementById('cx-candybar');
+			removeDOMElement(paywall, candybar);
+		});
+		/**
 		setTimeout(function () {
 			const close_button = document.querySelector('.close-btn');
 			if (close_button)
 				close_button.click();
 		}, 2000);
+		**/
 	}
 } else if (window.location.href.indexOf("washingtonpost.com") !== -1) {
 	if (location.href.includes('/gdpr-consent/')) {
