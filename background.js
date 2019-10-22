@@ -74,6 +74,7 @@ var defaultSites = {
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Telegraph': 'telegraph.co.uk',
   'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
