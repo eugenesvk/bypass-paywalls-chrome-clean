@@ -29,6 +29,7 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
+  'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',

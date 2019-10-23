@@ -5,18 +5,19 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.bizjournals.com/*",
-        "*://*.businessinsider.com/*",
-        "*://*.haaretz.co.il/*",
-        "*://*.nzherald.co.nz/*",
-        "*://*.repubblica.it/*",
-		"*://*.washingtonpost.com/*",
+		"*://*.bizjournals.com/*",
+		"*://*.bloomberg.com/*",
+		"*://*.businessinsider.com/*",
 		"*://*.ed.nl/*",
+		"*://*.haaretz.co.il/*",
+		"*://*.lemonde.fr/*",		
+		"*://*.nzherald.co.nz/*",
 		"*://*.parool.nl/*",
+		"*://*.repubblica.it/*",
 		"*://*.telegraaf.nl/*",
 		"*://*.trouw.nl/*",
 		"*://*.volkskrant.nl/*",
-		"*://*.bloomberg.com/*"
+		"*://*.washingtonpost.com/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -136,7 +137,8 @@
     "*://*.parool.nl/*",
     "*://*.telegraaf.nl/*",
     "*://*.trouw.nl/*",
-    "*://*.vn.nl/*"
+    "*://*.vn.nl/*",
+    "*://*.lemonde.fr/*"
   ],
   "version": "1.5.9"
 }
