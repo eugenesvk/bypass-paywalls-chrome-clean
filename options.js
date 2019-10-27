@@ -1,4 +1,5 @@
 var defaultSites = {
+  'Algemeen Dagblad': 'ad.nl', 
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -11,9 +12,11 @@ var defaultSites = {
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
   'Denver Post': 'denverpost.com',
+  'De Groene Amsterdammer': 'groene.nl',
   'De Tijd': 'tijd.be',
   'de Volkskrant': 'volkskrant.nl',
   'The Economist (javascript disabled)': 'economist.com',
+  'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
@@ -26,6 +29,7 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
+  'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -41,10 +45,12 @@ var defaultSites = {
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
+  'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
+  'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Atlantic': 'theatlantic.com',
@@ -73,7 +79,9 @@ var defaultSites = {
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
   'Towards Data Science': 'towardsdatascience.com',
+  'Trouw': 'trouw.nl',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com'
 };
 

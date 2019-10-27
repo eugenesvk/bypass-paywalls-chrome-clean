@@ -4,6 +4,7 @@
 
 ### Bypass the following sites' paywalls with this extension
 
+[Algemeen Dagblad](https://www.ad.nl)\
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
@@ -16,9 +17,11 @@
 [Corriere Della Sera](https://www.corriere.it)\
 [Daily Press](https://www.dailypress.com)\
 [Denver Post](https://www.denverpost.com)\
+[De Groene Amsterdammer](https://www.groene.nl)\
 [De Tijd](https://www.tijd.be)\
 [de Volkskrant](https://www.volkskrant.nl)\
 [The Economist](https://www.economist.com)\
+[Eindhovens Dagblad](https://ed.nl)\
 [Examiner](https://www.examiner.com.au)\
 [Financial Times](https://www.ft.com)\
 [Foreign Policy](https://www.foreignpolicy.com)\
@@ -31,6 +34,7 @@
 [Inc.com](https://www.inc.com)\
 [Investors Chronicle](https://www.investorschronicle.co.uk)\
 [La Repubblica](https://www.repubblica.it)\
+[Le Monde](https://www.lemonde.fr)\
 [Le Temps](https://www.letemps.ch)\
 [Los Angeles Times](https://www.latimes.com)\
 [Medium](https://www.medium.com)\
@@ -46,10 +50,12 @@
 [Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
 [Palo Alto Online](https://www.paloaltoonline.com)\
+[Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
+[Telegraaf](https://telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
 [The Atlantic](https://www.theatlantic.com)\
@@ -78,7 +84,9 @@
 [The Washington Post](https://www.washingtonpost.com)\
 [The Wall Street Journal](https://www.wsj.com)\
 [Towards Data Science](https://www.towardsdatascience.com)\
+[Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
+[Vrij Nederland](https://www.vn.nl)\
 [Wired](https://www.wired.com)
 
 ### Sites with limited number of free articles

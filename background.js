@@ -1,6 +1,7 @@
 'use strict';
 
 var defaultSites = {
+  'Algemeen Dagblad': 'ad.nl',
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
@@ -14,8 +15,10 @@ var defaultSites = {
   'Daily Press': 'dailypress.com',
   'Denver Post': 'denverpost.com',
   'De Tijd': 'tijd.be',
+  'De Groene Amsterdammer': 'groene.nl',
   'de Volkskrant': 'volkskrant.nl',
   'The Economist': 'economist.com',
+  'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',
   'Foreign Policy': 'foreignpolicy.com',
@@ -28,6 +31,7 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
+  'Le Monde': 'lemonde.fr',  
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -43,9 +47,11 @@ var defaultSites = {
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',
   'Palo Alto Online': 'paloaltoonline.com',
+  'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
   'Statista': 'statista.com',
+  'Telegraaf': 'telegraaf.nl',
   'SunSentinel': 'sun-sentinel.com',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
@@ -69,12 +75,15 @@ var defaultSites = {
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
   'The Sydney Morning Herald': 'smh.com.au',
+  'The Telegraph': 'telegraph.co.uk',  
   'The Times': 'thetimes.co.uk',
   'The Toronto Star': 'thestar.com',
   'The Washington Post': 'washingtonpost.com',
   'The Wall Street Journal': 'wsj.com',
   'Towards Data Science': 'towardsdatascience.com',
+  'Trouw': 'trouw.nl',
   'Vanity Fair': 'vanityfair.com',
+  'Vrij Nederland': 'vn.nl',
   'Wired': 'wired.com'
 };
 
@@ -84,77 +93,89 @@ const restrictions = {
 
 // Don't remove cookies before page load
 const allow_cookies = [
+'ad.nl',
 'asia.nikkei.com',
-'nytimes.com',
-'wsj.com',
-'ft.com',
-'letemps.ch',
-'mercurynews.com',
-'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'hacked.com',
-'ocregister.com',
-'newstatesman.com',
-'spectator.co.uk',
-'towardsdatascience.com',
-'medium.com',
-'theadvocate.com.au',
+'economist.com',
+'ed.nl',
 'examiner.com.au',
-'thestar.com',
-'washingtonpost.com',
+'ft.com',
+'hacked.com',
 'hbr.org',
+'lemonde.fr',
+'letemps.ch',
+'medium.com',
+'mercurynews.com',
+'newstatesman.com',
 'nymag.com',
+'nytimes.com',
+'ocregister.com',
+'parool.nl',
+'qz.com',
+'spectator.co.uk',
+'telegraaf.nl',
+'theadvocate.com.au',
 'theaustralian.com.au',
+'thestar.com',
+'towardsdatascience.com',
+'trouw.nl',
+'vn.nl',
 'volkskrant.nl',
+'washingtonpost.com',
+'wsj.com',
 ]
 
 // Removes cookies after page load
 const remove_cookies = [
+'ad.nl',
 'asia.nikkei.com',
-'nytimes.com',
-'ft.com',
-'letemps.ch',
-'mercurynews.com',
-'theage.com.au',
-'economist.com',
 'bostonglobe.com',
 'denverpost.com',
-'hacked.com',
-'ocregister.com',
-'newstatesman.com',
-'spectator.co.uk',
-'towardsdatascience.com',
-'medium.com',
-'theadvocate.com.au',
+'economist.com',
+'ed.nl',
 'examiner.com.au',
-'thestar.com',
-'centralwesterndaily.com.au',
-'theherald.com.au',
-'foreignpolicy.com',
-'wsj.com',
-'glassdoor.com',
-'cen.acs.org',
+'ft.com',
+'hacked.com',
 'hbr.org',
-'thenewsrep.com',
-'washingtonpost.com',
+'letemps.ch',
+'medium.com',
+'mercurynews.com',
+'newstatesman.com',
 'nymag.com',
-'nationalpost.com',
-'volkskrant.nl',
-'handelsblatt.com',
-'thediplomat.com',
-'latimes.com',
-'theatlantic.com',
-'chicagobusiness.com',
+'nytimes.com',
+'ocregister.com',
 'qz.com',
+'spectator.co.uk',
+'telegraaf.nl',
+'theadvocate.com.au',
+'thestar.com',
+'towardsdatascience.com',
+'vn.nl',
+'washingtonpost.com',
+'wsj.com',
 ]
+
+// select specific cookie(s) to hold from remove_cookies domains
+const remove_cookies_select_hold = {
+	'.nrc.nl': ['nmt_closed_cookiebar'],
+	'.washingtonpost.com': ['wp_gdpr'],
+	'.wsj.com': ['wsjregion']
+}
+
+// select only specific cookie(s) to drop from remove_cookies domains
+const remove_cookies_select_drop = {
+	'www.nrc.nl': ['counter']
+}
 
 // Override User-Agent with Googlebot
 const use_google_bot = [
-'theaustralian.com.au',
-'telegraph.co.uk',
-'thetimes.co.uk',
 'barrons.com',
+'nytimes.com',
+'telegraph.co.uk',
+'theaustralian.com.au',
+'thetimes.co.uk',
+'wsj.com',
 ]
 
 function setDefaultOptions() {
@@ -210,9 +231,10 @@ browser.runtime.onInstalled.addListener(function(details) {
   }
 });
 
+/**
 // WSJ bypass
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
+  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1 || details.url.indexOf("/print-edition/") !== -1) {
     return;
   }
 
@@ -232,6 +254,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 {urls:["*://*.wsj.com/*"], types:["main_frame"]},
 ["blocking"]
 );
+**/
 
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
@@ -361,6 +384,17 @@ browser.webRequest.onCompleted.addListener(function(details) {
         if (cookies[i].firstPartyDomain !== undefined) {
           cookie.firstPartyDomain = cookies[i].firstPartyDomain;
         }
+
+		var cookie_domain = cookies[i].domain;
+		// hold specific cookie(s) from remove_cookies domains
+		if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
+			continue; // don't remove specific cookie
+		}
+		// drop only specific cookie(s) from remove_cookies domains
+		if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
+			continue; // only remove specific cookie
+		}
+
         browser.cookies.remove(cookie);
       }
     });
