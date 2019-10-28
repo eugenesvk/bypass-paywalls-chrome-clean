@@ -61,6 +61,7 @@
 [The Atlantic](https://www.theatlantic.com)\
 [The Australian](https://www.theaustralian.com.au)\
 [The Australian Financial Review](https://www.afr.com)\
+[The Mercury Tasmania](https://www.themercury.com.au)\
 [The Boston Globe](https://www.bostonglobe.com)\
 [The Business Journals](https://www.bizjournals.com)\
 [The Diplomat](https://www.thediplomat.com)\

@@ -56,6 +56,7 @@ var defaultSites = {
   'The Atlantic': 'theatlantic.com',
   'The Australian': 'theaustralian.com.au',
   'The Australian Financial Review (javascript disabled)': 'afr.com',
+  'The Mercury Tasmania': 'themercury.com.au',
   'The Boston Globe (javascript disabled)': 'bostonglobe.com',
   'The Business Journals': 'bizjournals.com',
   'The Diplomat': 'thediplomat.com',
