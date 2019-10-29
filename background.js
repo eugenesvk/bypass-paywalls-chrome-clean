@@ -180,6 +180,7 @@ const remove_cookies_select_drop = {
 const use_google_bot = [
 'barrons.com',
 'nytimes.com',
+'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
 'thetimes.co.uk',
