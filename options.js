@@ -48,6 +48,7 @@ var defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'Scientific American': 'scientificamerican.com',
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
   'Telegraaf': 'telegraaf.nl',

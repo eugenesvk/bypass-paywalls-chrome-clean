@@ -53,6 +53,7 @@
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
+[Scientific American](https://scientificamerican.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
 [Telegraaf](https://telegraaf.nl)\
