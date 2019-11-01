@@ -61,7 +61,6 @@
 [The Atlantic](https://www.theatlantic.com)\
 [The Australian](https://www.theaustralian.com.au)\
 [The Australian Financial Review](https://www.afr.com)\
-[The Mercury Tasmania](https://www.themercury.com.au)\
 [The Boston Globe](https://www.bostonglobe.com)\
 [The Business Journals](https://www.bizjournals.com)\
 [The Diplomat](https://www.thediplomat.com)\
@@ -70,6 +69,7 @@
 [The Japan Times](https://www.japantimes.co.jp)\
 [TheMarker](https://www.themarker.com)\
 [The Mercury News](https://www.mercurynews.com)\
+[The Mercury Tasmania](https://www.themercury.com.au)\
 [The Morning Call](https://www.mcall.com)\
 [The Nation](https://www.thenation.com)\
 [The New York Times](https://www.nytimes.com)\
