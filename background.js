@@ -31,7 +31,7 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
-  'Le Monde': 'lemonde.fr',  
+  'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -182,6 +182,7 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
+'lemonde.fr',
 'nytimes.com',
 'quora.com',
 'telegraph.co.uk',
