@@ -62,6 +62,7 @@ var defaultSites = {
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
+  'The Hindu': 'thehindu.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',

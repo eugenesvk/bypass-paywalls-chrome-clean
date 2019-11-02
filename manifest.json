@@ -139,7 +139,8 @@
     "*://*.trouw.nl/*",
     "*://*.vn.nl/*",
     "*://*.lemonde.fr/*",
-	"*://*.scientificamerican.com/*"
+	"*://*.scientificamerican.com/*",
+	"*://*.thehindu.com/*"
   ],
   "version": "1.6.0"
 }

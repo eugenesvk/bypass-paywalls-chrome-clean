@@ -67,6 +67,7 @@
 [The Diplomat](https://www.thediplomat.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
 [The Herald](https://www.theherald.com.au)\
+[The Hindu](https://www.thehindu.com)\
 [The Japan Times](https://www.japantimes.co.jp)\
 [TheMarker](https://www.themarker.com)\
 [The Mercury News](https://www.mercurynews.com)\
