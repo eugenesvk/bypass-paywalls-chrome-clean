@@ -34,6 +34,8 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 		"article-content"
 	);
 	if (paywall) {
+		const premium = document.getElementByClass('premium-sub');
+		removeDOMElement(premium);
 		paywall.classList.remove('premium-content');
 		paywall.classList.add('full-content');
 		removeClassesByPrefix(paywall, 'QUnW');
