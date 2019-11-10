@@ -106,6 +106,12 @@ if (window.location.href.indexOf("medium.com") !== -1) {
 	if(DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
 }
 
+if (window.location.href.indexOf("bloombergquint.com") !== -1) {
+	const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
+	const paywall = document.getElementById('paywallDmp');
+	removeDOMElement(articlesLeftModal,	paywall);
+}
+
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
 	const paywall = document.getElementById('paywall-banner');
 	removeDOMElement(paywall);
