@@ -106,8 +106,10 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 }
 
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
-	const paywall = document.getElementById('paywall-banner');
-	removeDOMElement(paywall);
+    document.addEventListener('DOMContentLoaded', () => {
+        const paywall = document.getElementById('paywall-banner');
+        removeDOMElement(paywall);
+    });
 }
 
 if (window.location.href.indexOf('telegraaf.nl') !== -1) {

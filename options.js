@@ -49,6 +49,7 @@ var defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'Scientific American': 'scientificamerican.com',  
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
   'Telegraaf': 'telegraaf.nl',
@@ -62,6 +63,7 @@ var defaultSites = {
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
+  'The Hindu': 'thehindu.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -131,7 +133,7 @@ function renderOptions() {
       inputEl.type = 'checkbox';
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
-      inputEl.checked = key in sites;
+      inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
       labelEl.appendChild(document.createTextNode(' '+key));
