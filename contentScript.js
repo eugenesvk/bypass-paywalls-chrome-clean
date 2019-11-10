@@ -103,7 +103,7 @@ if (window.location.href.indexOf("medium.com") !== -1) {
 	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
 	const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
 
-	if(DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+	if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
 }
 
 if (window.location.href.indexOf("bloombergquint.com") !== -1) {
