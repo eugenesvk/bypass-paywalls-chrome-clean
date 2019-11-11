@@ -138,7 +138,9 @@
     "*://*.telegraaf.nl/*",
     "*://*.trouw.nl/*",
     "*://*.vn.nl/*",
-    "*://*.lemonde.fr/*"
+    "*://*.lemonde.fr/*",
+	"*://*.scientificamerican.com/*",
+	"*://*.thehindu.com/*"
   ],
   "version": "1.6.0"
 }

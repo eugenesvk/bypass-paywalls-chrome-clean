@@ -91,9 +91,24 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 	}
 }
 
+if (window.location.href.indexOf("medium.com") !== -1) {
+	const bottomMessageText = 'Get one more story in your member preview when you sign up. It’s free.';
+	const DOMElementsToTextDiv = pageContains('div', bottomMessageText);
+
+	if (DOMElementsToTextDiv[2]) removeDOMElement(DOMElementsToTextDiv[2]);
+}
+
+if (window.location.href.indexOf("bloombergquint.com") !== -1) {
+	const articlesLeftModal = document.getElementsByClassName('paywall-meter-module__story-paywall-container__1UgCE')[0];
+	const paywall = document.getElementById('paywallDmp');
+	removeDOMElement(articlesLeftModal,	paywall);
+}
+
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
-	const paywall = document.getElementById('paywall-banner');
-	removeDOMElement(paywall);
+    document.addEventListener('DOMContentLoaded', () => {
+        const paywall = document.getElementById('paywall-banner');
+        removeDOMElement(paywall);
+    });
 }
 
 if (window.location.href.indexOf('telegraaf.nl') !== -1) {
@@ -150,4 +165,12 @@ function removeClassesByPrefix(el, prefix)
             el.classList.remove(el.classList[i]);
         }
     }
+
+function pageContains(selector, text) {
+	let elements = document.querySelectorAll(selector);
+
+	return Array.prototype.filter.call(elements, function(element){
+		return RegExp(text).test(element.textContent);
+	});
+
 }

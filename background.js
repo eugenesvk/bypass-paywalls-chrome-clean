@@ -5,6 +5,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
   'Chemical & Engineering News': 'cen.acs.org',
@@ -31,7 +32,7 @@ var defaultSites = {
   'Inc.com': 'inc.com',
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
-  'Le Monde': 'lemonde.fr',  
+  'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
@@ -50,9 +51,10 @@ var defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'Scientific American': 'scientificamerican.com',
   'Statista': 'statista.com',
-  'Telegraaf': 'telegraaf.nl',
   'SunSentinel': 'sun-sentinel.com',
+  'Telegraaf': 'telegraaf.nl',
   'The Advocate': 'theadvocate.com.au',
   'The Age': 'theage.com.au',
   'The Atlantic': 'theatlantic.com',
@@ -63,6 +65,7 @@ var defaultSites = {
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
+  'The Hindu': 'thehindu.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -115,6 +118,7 @@ const allow_cookies = [
 'ocregister.com',
 'parool.nl',
 'qz.com',
+'scientificamerican.com',
 'spectator.co.uk',
 'telegraaf.nl',
 'theadvocate.com.au',
@@ -152,6 +156,7 @@ const remove_cookies = [
 'nytimes.com',
 'ocregister.com',
 'qz.com',
+'scientificamerican.com',
 'spectator.co.uk',
 'telegraaf.nl',
 'theadvocate.com.au',
@@ -162,6 +167,7 @@ const remove_cookies = [
 'vn.nl',
 'washingtonpost.com',
 'wsj.com',
+'bloombergquint.com'
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
@@ -179,6 +185,7 @@ const remove_cookies_select_drop = {
 // Override User-Agent with Googlebot
 const use_google_bot = [
 'barrons.com',
+'lemonde.fr',
 'nytimes.com',
 'quora.com',
 'telegraph.co.uk',
