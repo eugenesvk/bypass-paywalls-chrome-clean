@@ -160,6 +160,22 @@ if (window.location.href.indexOf('lemonde.fr') !== -1) {
     });
 }
 
+if (window.location.href.indexOf("nytimes.com") !== -1) {
+    const preview_button = document.querySelector('.css-3s1ce0');
+        if (preview_button)
+            preview_button.click();
+}
+
+if (window.location.href.indexOf("caixinglobal.com") !== -1) {
+	const appContent = document.getElementById('appContent');
+	if (appContent) {
+		const p_hidden = document.querySelectorAll('p:not([style="display:block;"]');
+		for (var i = 0; i < p_hidden.length; i++) {
+			p_hidden[i].setAttribute('style', 'display:block;');
+		}
+	}
+}
+
 function removeDOMElement(...elements) {
 	for (let element of elements) {
 		if (element) element.remove();
