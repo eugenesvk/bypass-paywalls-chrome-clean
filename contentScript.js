@@ -120,10 +120,12 @@ if (window.location.href.indexOf("bloomberg.com") !== -1) {
 }
 
 if (window.location.href.indexOf('telegraaf.nl') !== -1) {
-	const paywall = document.getElementById('TEMPRORARY_METERING_ID');
-	if (paywall) {
-		window.location.reload(1);
-	}
+	setTimeout(function () {
+		const paywall = document.getElementById('TEMPRORARY_METERING_ID');
+		if (paywall) {
+			window.location.reload(true);
+		}
+	}, 500); // Delay (in milliseconds)
 }
 
 if (window.location.href.indexOf('ed.nl') !== -1) {
