@@ -114,6 +114,9 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
+		const fence = document.querySelector('.fence-body');
+		if (fence)
+			fence.classList.remove('fence-body');
         const paywall = document.getElementById('paywall-banner');
         removeDOMElement(paywall);
     });
