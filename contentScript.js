@@ -37,7 +37,7 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 		paywall.classList.remove('premium-content');
 		paywall.classList.add('full-content');
 		removeClassesByPrefix(paywall, 'QUnW');
-		var paras = paywall.querySelectorAll("p, span, h2, div");
+		let paras = paywall.querySelectorAll("p, span, h2, div");
 		for (var i = paras.length -1; i > -1; i--) {
 			removeClassesByPrefix(paras[i], 'QUnW');
 			paras[i].classList.remove("ellipsis");
