@@ -160,7 +160,7 @@ function removeDOMElement(...elements) {
 
 function removeClassesByPrefix(el, prefix)
 {
-    for(var i = el.classList.length - 1; i >= 0; i--) {
+    for (let i = el.classList.length - 1; i >= 0; i--) {
         if(el.classList[i].startsWith(prefix)) {
             el.classList.remove(el.classList[i]);
         }
