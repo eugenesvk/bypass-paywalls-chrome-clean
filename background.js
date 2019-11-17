@@ -177,22 +177,17 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'.nrc.nl': ['nmt_closed_cookiebar'],
-	'.washingtonpost.com': ['wp_gdpr'],
-	'.wsj.com': ['wsjregion']
+	'nrc.nl': ['nmt_closed_cookiebar'],
+	'washingtonpost.com': ['wp_gdpr'],
+	'wsj.com': ['wsjregion']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
-	'.ad.nl': ['temptationTrackingId'],
-	'.www.ad.nl': ['none'],
-	'www.ad.nl': ['none'],
-	'.demorgen.be': ['TID_ID'],
-	'www.demorgen.be': ['none'],
-	'.ed.nl': ['temptationTrackingId'],
-	'.www.ed.nl': ['none'],
-	'www.ed.nl': ['none'],
-	'www.nrc.nl': ['counter']
+	'ad.nl': ['temptationTrackingId'],
+	'demorgen.be': ['TID_ID'],
+	'ed.nl': ['temptationTrackingId'],
+	'nrc.nl': ['counter']
 }
 
 // Override User-Agent with Googlebot
@@ -415,12 +410,13 @@ browser.webRequest.onCompleted.addListener(function(details) {
         }
 
 		var cookie_domain = cookies[i].domain;
+		var rc_domain = cookie_domain.replace(/^(\.?www\.|\.)/, '');
 		// hold specific cookie(s) from remove_cookies domains
-		if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
+		if ((rc_domain in remove_cookies_select_hold) && remove_cookies_select_hold[rc_domain].includes(cookies[i].name)){
 			continue; // don't remove specific cookie
 		}
 		// drop only specific cookie(s) from remove_cookies domains
-		if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
+		if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))){
 			continue; // only remove specific cookie
 		}
 
