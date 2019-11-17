@@ -12,6 +12,7 @@ var defaultSites = {
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
+  'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'De Groene Amsterdammer': 'groene.nl',
   'De Tijd': 'tijd.be',

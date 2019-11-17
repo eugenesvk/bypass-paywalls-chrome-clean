@@ -17,6 +17,7 @@
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
 [Corriere Della Sera](https://www.corriere.it)\
 [Daily Press](https://www.dailypress.com)\
+[DeMorgen](https://demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [De Groene Amsterdammer](https://www.groene.nl)\
 [De Tijd](https://www.tijd.be)\
