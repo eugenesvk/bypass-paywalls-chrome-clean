@@ -36,19 +36,11 @@ if (window.location.href.indexOf("bizjournals.com") !== -1) {
 	if (paywall) {
 		paywall.classList.remove('premium-content');
 		paywall.classList.add('full-content');
-		var paras = paywall.querySelectorAll("p, span, h2, div");
-		var delClass = "";
-		for (var i = 0; i < paras.length; i++) {
-			if (paras[i].nodeName == 'P' || paras[i].nodeName == 'SPAN') {
-				paras[i].classList.remove("ellipsis");
-				if (delClass == "" && paras[i].className != "") {
-					delClass = paras[i].className;
-				} else {
-					if (delClass != "") {
-						paras[i].classList.remove(delClass);
-					}
-				}
-			}
+		removeClassesByPrefix(paywall, 'QUnW');
+		let paras = paywall.querySelectorAll("p, span, h2, div");
+		for (let i = paras.length - 1; i > -1; i--) {
+			removeClassesByPrefix(paras[i], 'QUnW');
+			paras[i].classList.remove("ellipsis");
 			paras[i].removeAttribute('style');
 		}
 	}
@@ -182,10 +174,19 @@ function removeDOMElement(...elements) {
 	}
 }
 
+function removeClassesByPrefix(el, prefix)
+{
+    for (let i = el.classList.length - 1; i >= 0; i--) {
+        if(el.classList[i].startsWith(prefix)) {
+            el.classList.remove(el.classList[i]);
+        }
+    }
+
 function pageContains(selector, text) {
 	let elements = document.querySelectorAll(selector);
 
 	return Array.prototype.filter.call(elements, function(element){
 		return RegExp(text).test(element.textContent);
 	});
+
 }
