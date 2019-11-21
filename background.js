@@ -192,6 +192,7 @@ const use_google_bot = [
 'theaustralian.com.au',
 'thetimes.co.uk',
 'wsj.com',
+'haaretz.co.il',
 ]
 
 function setDefaultOptions() {
