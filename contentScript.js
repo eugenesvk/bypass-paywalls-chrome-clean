@@ -174,13 +174,13 @@ function removeDOMElement(...elements) {
 	}
 }
 
-function removeClassesByPrefix(el, prefix)
-{
+function removeClassesByPrefix(el, prefix) {
     for (let i = el.classList.length - 1; i >= 0; i--) {
-        if(el.classList[i].startsWith(prefix)) {
-            el.classList.remove(el.classList[i]);
+        if(el.classList[i].startsWith(prefix)) 
+	    el.classList.remove(el.classList[i]);
         }
-    }
+     }
+}
 
 function pageContains(selector, text) {
 	let elements = document.querySelectorAll(selector);
