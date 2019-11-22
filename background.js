@@ -69,6 +69,7 @@ var defaultSites = {
   'The Hindu': 'thehindu.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
+  'The Mercury Tasmania': 'themercury.com.au',
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
@@ -128,6 +129,7 @@ const allow_cookies = [
 'theatlantic.com',
 'theaustralian.com.au',
 'thediplomat.com',
+'themercury.com.au',
 'thestar.com',
 'towardsdatascience.com',
 'trouw.nl',
@@ -198,6 +200,7 @@ const use_google_bot = [
 'quora.com',
 'telegraph.co.uk',
 'theaustralian.com.au',
+'themercury.com.au',
 'thetimes.co.uk',
 'wsj.com',
 ]
