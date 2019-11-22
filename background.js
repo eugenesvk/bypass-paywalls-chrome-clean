@@ -203,6 +203,7 @@ const use_google_bot = [
 'themercury.com.au',
 'thetimes.co.uk',
 'wsj.com',
+'haaretz.co.il',
 ]
 
 function setDefaultOptions() {
