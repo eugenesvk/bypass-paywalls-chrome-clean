@@ -8,9 +8,12 @@
 		"*://*.bizjournals.com/*",
 		"*://*.bloomberg.com/*",
 		"*://*.businessinsider.com/*",
+		"*://*.caixinglobal.com/*",
+		"*://*.ad.nl/*",
 		"*://*.ed.nl/*",
 		"*://*.haaretz.co.il/*",
 		"*://*.lemonde.fr/*",		
+		"*://*.nytimes.com/*",		
 		"*://*.nzherald.co.nz/*",
 		"*://*.parool.nl/*",
 		"*://*.repubblica.it/*",
@@ -139,7 +142,10 @@
     "*://*.telegraaf.nl/*",
     "*://*.trouw.nl/*",
     "*://*.vn.nl/*",
-    "*://*.lemonde.fr/*"
+    "*://*.lemonde.fr/*",
+	"*://*.scientificamerican.com/*",
+	"*://*.thehindu.com/*",
+	"*://*.demorgen.be/*"
   ],
   "version": "1.6.0"
 }

@@ -3,6 +3,7 @@ var defaultSites = {
   'Baltimore Sun': 'baltimoresun.com',
   'Barron\'s': 'barrons.com',
   'Bloomberg': 'bloomberg.com',
+  'Bloomberg Quint': 'bloombergquint.com',
   'Business Insider': 'businessinsider.com',
   'Caixin': 'caixinglobal.com',
   'Chemical & Engineering News': 'cen.acs.org',
@@ -11,6 +12,7 @@ var defaultSites = {
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
+  'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'De Groene Amsterdammer': 'groene.nl',
   'De Tijd': 'tijd.be',
@@ -48,6 +50,7 @@ var defaultSites = {
   'Parool': 'parool.nl',
   'Quartz': 'qz.com',
   'Quora': 'quora.com',
+  'Scientific American': 'scientificamerican.com',  
   'Statista': 'statista.com',
   'SunSentinel': 'sun-sentinel.com',
   'Telegraaf': 'telegraaf.nl',
@@ -61,6 +64,7 @@ var defaultSites = {
   'The Diplomat': 'thediplomat.com',
   'The Globe and Mail (javascript disabled)': 'theglobeandmail.com',
   'The Herald': 'theherald.com.au',
+  'The Hindu': 'thehindu.com',
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
@@ -131,7 +135,7 @@ function renderOptions() {
       inputEl.type = 'checkbox';
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
-      inputEl.checked = key in sites;
+      inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
 
       labelEl.appendChild(inputEl);
       labelEl.appendChild(document.createTextNode(' '+key));

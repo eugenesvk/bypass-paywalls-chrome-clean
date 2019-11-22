@@ -8,6 +8,7 @@
 [Baltimore Sun](https://www.baltimoresun.com)\
 [Barron's](https://www.barrons.com)\
 [Bloomberg](https://www.bloomberg.com)\
+[Bloomberg Quint](https://www.bloombergquint.com)\
 [Business Insider](https://www.businessinsider.com)\
 [Caixin](https://www.caixinglobal.com)\
 [Chemical & Engineering News](https://cen.acs.org)\
@@ -16,6 +17,7 @@
 [Crain's Chicago Business](https://www.chicagobusiness.com)\
 [Corriere Della Sera](https://www.corriere.it)\
 [Daily Press](https://www.dailypress.com)\
+[DeMorgen](https://demorgen.be)\
 [Denver Post](https://www.denverpost.com)\
 [De Groene Amsterdammer](https://www.groene.nl)\
 [De Tijd](https://www.tijd.be)\
@@ -53,6 +55,7 @@
 [Parool](https://www.parool.nl)\
 [Quartz](https://qz.com)\
 [Quora](https://www.quora.com)\
+[Scientific American](https://scientificamerican.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
 [Telegraaf](https://telegraaf.nl)\
@@ -66,6 +69,7 @@
 [The Diplomat](https://www.thediplomat.com)\
 [The Globe and Mail](https://www.theglobeandmail.com)\
 [The Herald](https://www.theherald.com.au)\
+[The Hindu](https://www.thehindu.com)\
 [The Japan Times](https://www.japantimes.co.jp)\
 [TheMarker](https://www.themarker.com)\
 [The Mercury News](https://www.mercurynews.com)\
