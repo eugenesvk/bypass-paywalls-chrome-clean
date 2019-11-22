@@ -106,6 +106,7 @@
     "*://*.theadvocate.com.au/*",
     "*://*.theage.com.au/*",
     "*://*.theaustralian.com.au/*",
+    "*://*.themercury.com.au/*",
     "*://*.afr.com/*",
     "*://*.bostonglobe.com/*",
     "*://*.bizjournals.com/*",
@@ -146,5 +147,5 @@
 	"*://*.thehindu.com/*",
 	"*://*.demorgen.be/*"
   ],
-  "version": "1.6.0"
+  "version": "1.6.1"
 }

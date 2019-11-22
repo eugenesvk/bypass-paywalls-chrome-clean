@@ -73,6 +73,7 @@
 [The Japan Times](https://www.japantimes.co.jp)\
 [TheMarker](https://www.themarker.com)\
 [The Mercury News](https://www.mercurynews.com)\
+[The Mercury Tasmania](https://www.themercury.com.au)\
 [The Morning Call](https://www.mcall.com)\
 [The Nation](https://www.thenation.com)\
 [The New York Times](https://www.nytimes.com)\

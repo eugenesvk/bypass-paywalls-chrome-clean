@@ -68,6 +68,7 @@ var defaultSites = {
   'The Japan Times': 'japantimes.co.jp',
   'TheMarker': 'themarker.com',
   'The Mercury News': 'mercurynews.com',
+  'The Mercury Tasmania': 'themercury.com.au',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
   'The New York Times': 'nytimes.com',
