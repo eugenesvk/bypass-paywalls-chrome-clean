@@ -106,24 +106,27 @@ if (window.location.href.indexOf("bloombergquint.com") !== -1) {
 
 if (window.location.href.indexOf("bloomberg.com") !== -1) {
     document.addEventListener('DOMContentLoaded', () => {
+		const fence = document.querySelector('.fence-body');
+		if (fence){
+			fence.classList.remove('fence-body');
+		}
         const paywall = document.getElementById('paywall-banner');
         removeDOMElement(paywall);
     });
 }
 
 if (window.location.href.indexOf('telegraaf.nl') !== -1) {
-	const paywall = document.getElementById('TEMPRORARY_METERING_ID');
-	if (paywall) {
-		window.location.reload(1);
-	}
+	setTimeout(function () {
+		const paywall = document.getElementById('TEMPRORARY_METERING_ID');
+		if (paywall) {
+			window.location.reload(true);
+		}
+	}, 1000); // Delay (in milliseconds)
 }
 
-if (window.location.href.indexOf('ed.nl') !== -1) {
-	const paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
-	if (paywall) {
-		paywall.remove();
-		paywall = null;
-	}
+if (window.location.href.indexOf('ad.nl') !== -1 || window.location.href.indexOf('ed.nl') !== -1) {
+	let paywall = document.querySelector('.article__component.article__component--paywall-module-notification');
+	removeDOMElement(paywall);
 }
 
 if (window.location.href.indexOf("parool.nl") !== -1 ||	window.location.href.indexOf("trouw.nl") !== -1 || 	window.location.href.indexOf("volkskrant.nl") !== -1) {

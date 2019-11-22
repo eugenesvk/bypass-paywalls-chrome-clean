@@ -9,6 +9,7 @@
 		"*://*.bloomberg.com/*",
 		"*://*.businessinsider.com/*",
 		"*://*.caixinglobal.com/*",
+		"*://*.ad.nl/*",
 		"*://*.ed.nl/*",
 		"*://*.haaretz.co.il/*",
 		"*://*.lemonde.fr/*",		
@@ -142,7 +143,8 @@
     "*://*.vn.nl/*",
     "*://*.lemonde.fr/*",
 	"*://*.scientificamerican.com/*",
-	"*://*.thehindu.com/*"
+	"*://*.thehindu.com/*",
+	"*://*.demorgen.be/*"
   ],
   "version": "1.6.0"
 }

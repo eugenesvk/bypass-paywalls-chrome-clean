@@ -14,6 +14,7 @@ var defaultSites = {
   'Crain\'s Chicago Business': 'chicagobusiness.com',
   'Corriere Della Sera': 'corriere.it',
   'Daily Press': 'dailypress.com',
+  'DeMorgen': 'demorgen.be',
   'Denver Post': 'denverpost.com',
   'De Tijd': 'tijd.be',
   'De Groene Amsterdammer': 'groene.nl',
@@ -101,6 +102,7 @@ const allow_cookies = [
 'bostonglobe.com',
 'cen.acs.org',
 'chicagobusiness.com',
+'demorgen.be',
 'denverpost.com',
 'economist.com',
 'ed.nl',
@@ -123,6 +125,7 @@ const allow_cookies = [
 'telegraaf.nl',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'theaustralian.com.au',
 'thediplomat.com',
 'thestar.com',
@@ -141,6 +144,7 @@ const remove_cookies = [
 'bostonglobe.com',
 'cen.acs.org',
 'chicagobusiness.com',
+'demorgen.be',
 'denverpost.com',
 'economist.com',
 'ed.nl',
@@ -161,6 +165,7 @@ const remove_cookies = [
 'telegraaf.nl',
 'theadvocate.com.au',
 'theage.com.au',
+'theatlantic.com',
 'thediplomat.com',
 'thestar.com',
 'towardsdatascience.com',
@@ -172,14 +177,17 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'.nrc.nl': ['nmt_closed_cookiebar'],
-	'.washingtonpost.com': ['wp_gdpr'],
-	'.wsj.com': ['wsjregion']
+	'nrc.nl': ['nmt_closed_cookiebar'],
+	'washingtonpost.com': ['wp_gdpr'],
+	'wsj.com': ['wsjregion']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
-	'www.nrc.nl': ['counter']
+	'ad.nl': ['temptationTrackingId'],
+	'demorgen.be': ['TID_ID'],
+	'ed.nl': ['temptationTrackingId'],
+	'nrc.nl': ['counter']
 }
 
 // Override User-Agent with Googlebot
@@ -402,12 +410,13 @@ browser.webRequest.onCompleted.addListener(function(details) {
         }
 
 		var cookie_domain = cookies[i].domain;
+		var rc_domain = cookie_domain.replace(/^(\.?www\.|\.)/, '');
 		// hold specific cookie(s) from remove_cookies domains
-		if ((cookie_domain in remove_cookies_select_hold) && remove_cookies_select_hold[cookie_domain].includes(cookies[i].name)){
+		if ((rc_domain in remove_cookies_select_hold) && remove_cookies_select_hold[rc_domain].includes(cookies[i].name)){
 			continue; // don't remove specific cookie
 		}
 		// drop only specific cookie(s) from remove_cookies domains
-		if ((cookie_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[cookie_domain].includes(cookies[i].name))){
+		if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))){
 			continue; // only remove specific cookie
 		}
 
