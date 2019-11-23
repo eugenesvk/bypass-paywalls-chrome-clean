@@ -5,22 +5,22 @@
   "content_scripts": [
     {
       "matches": [
-		"*://*.bizjournals.com/*",
-		"*://*.bloomberg.com/*",
-		"*://*.businessinsider.com/*",
-		"*://*.caixinglobal.com/*",
-		"*://*.ad.nl/*",
-		"*://*.ed.nl/*",
-		"*://*.haaretz.co.il/*",
-		"*://*.lemonde.fr/*",		
-		"*://*.nytimes.com/*",		
-		"*://*.nzherald.co.nz/*",
-		"*://*.parool.nl/*",
-		"*://*.repubblica.it/*",
-		"*://*.telegraaf.nl/*",
-		"*://*.trouw.nl/*",
-		"*://*.volkskrant.nl/*",
-		"*://*.washingtonpost.com/*"
+    "*://*.bizjournals.com/*",
+    "*://*.bloomberg.com/*",
+    "*://*.businessinsider.com/*",
+    "*://*.caixinglobal.com/*",
+    "*://*.ad.nl/*",
+    "*://*.ed.nl/*",
+    "*://*.haaretz.co.il/*",
+    "*://*.lemonde.fr/*",   
+    "*://*.nytimes.com/*",    
+    "*://*.nzherald.co.nz/*",
+    "*://*.parool.nl/*",
+    "*://*.repubblica.it/*",
+    "*://*.telegraaf.nl/*",
+    "*://*.trouw.nl/*",
+    "*://*.volkskrant.nl/*",
+    "*://*.washingtonpost.com/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -143,9 +143,9 @@
     "*://*.trouw.nl/*",
     "*://*.vn.nl/*",
     "*://*.lemonde.fr/*",
-	"*://*.scientificamerican.com/*",
-	"*://*.thehindu.com/*",
-	"*://*.demorgen.be/*"
+    "*://*.scientificamerican.com/*",
+    "*://*.thehindu.com/*",
+    "*://*.demorgen.be/*"
   ],
-  "version": "1.6.1"
+  "version": "1.6.2"
 }
