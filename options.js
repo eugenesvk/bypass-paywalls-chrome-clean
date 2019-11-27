@@ -17,7 +17,7 @@ var defaultSites = {
   'De Groene Amsterdammer': 'groene.nl',
   'De Tijd': 'tijd.be',
   'de Volkskrant': 'volkskrant.nl',
-  'The Economist (javascript disabled)': 'economist.com',
+  'The Economist': 'economist.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
   'Financial Times': 'ft.com',

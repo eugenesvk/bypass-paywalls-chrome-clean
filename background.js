@@ -179,7 +179,6 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'nrc.nl': ['nmt_closed_cookiebar'],
 	'washingtonpost.com': ['wp_gdpr'],
 	'wsj.com': ['wsjregion']
 }
@@ -214,12 +213,14 @@ function setDefaultOptions() {
   });
 }
 
-const blockedRegexes = [
-/.+:\/\/.+\.tribdss\.com\//,
-/thenation\.com\/.+\/paywall-script\.php/,
-/haaretz\.co\.il\/htz\/js\/inter\.js/,
-/nzherald\.co\.nz\/.+\/headjs\/.+\.js/
-];
+// to block external script also add domain to manifest.json (permissions)
+const blockedRegexes = {
+'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
+'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
+'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
+'economist.com': /.+\.tinypass\.com\/.+/
+};
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
 const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
@@ -259,31 +260,6 @@ browser.runtime.onInstalled.addListener(function(details) {
   }
 });
 
-/**
-// WSJ bypass
-browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1 || details.url.indexOf("/print-edition/") !== -1) {
-    return;
-  }
-
-  var param;
-  var updatedUrl;
-
-  param = getParameterByName("mod", details.url);
-
-  if (param === null) {
-    updatedUrl = stripQueryStringAndHashFromPath(details.url);
-    updatedUrl += "?mod=rsswn";
-  } else {
-    updatedUrl = details.url.replace(param, "rsswn");
-  }
-  return { redirectUrl: updatedUrl};
-},
-{urls:["*://*.wsj.com/*"], types:["main_frame"]},
-["blocking"]
-);
-**/
-
 // Disable javascript for these sites
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   if (!isSiteEnabled(details) || details.url.indexOf("mod=rsswn") !== -1) {
@@ -292,24 +268,38 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true};
   },
   {
-    urls: ["*://*.theglobeandmail.com/*", "*://*.economist.com/*", "*://*.thestar.com/*", "*://*.newstatesman.com/*", "*://*.bostonglobe.com/*", "*://*.afr.com/*"],
+    urls: ["*://*.theglobeandmail.com/*", "*://*.thestar.com/*", "*://*.newstatesman.com/*", "*://*.bostonglobe.com/*", "*://*.afr.com/*"],
     types: ["script"]
   },
   ["blocking"]
 );
 
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
+  var requestHeaders = details.requestHeaders;
+
+  var header_referer = '';
+  for (var n in requestHeaders) {
+	  if (requestHeaders[n].name.toLowerCase() == 'referer') {
+		  header_referer = requestHeaders[n].value;
+		  continue;
+	  }
+  }
+  
+  // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
+  for (var domain in blockedRegexes) {
+	  if (isSiteEnabled({url: '.'+ domain}) && details.url.match(blockedRegexes[domain])) {
+			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1) {
+				return { cancel: true };
+			}
+	  }
+  }
+
   if (!isSiteEnabled(details)) {
     return;
   }
 
-  if (blockedRegexes.some(function(regex) { return regex.test(details.url); })) {
-    return { cancel: true };
-  }
-
-  var requestHeaders = details.requestHeaders;
   var tabId = details.tabId;
-
+  
   var useUserAgentMobile = false;
   var setReferer = false;
 
@@ -423,7 +413,6 @@ browser.webRequest.onCompleted.addListener(function(details) {
 		if ((rc_domain in remove_cookies_select_drop) && !(remove_cookies_select_drop[rc_domain].includes(cookies[i].name))){
 			continue; // only remove specific cookie
 		}
-
         browser.cookies.remove(cookie);
       }
     });

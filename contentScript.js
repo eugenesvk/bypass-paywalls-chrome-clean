@@ -171,6 +171,11 @@ if (window.location.href.indexOf("caixinglobal.com") !== -1) {
     }
 }
 
+if (window.location.href.indexOf("economist.com") !== -1) {
+  const wrapper = document.getElementById('bottom-page-wrapper');
+  removeDOMElement(wrapper);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element) element.remove();

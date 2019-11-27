@@ -20,7 +20,8 @@
     "*://*.telegraaf.nl/*",
     "*://*.trouw.nl/*",
     "*://*.volkskrant.nl/*",
-    "*://*.washingtonpost.com/*"
+    "*://*.washingtonpost.com/*",
+	"*://*.economist.com/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -145,7 +146,8 @@
     "*://*.lemonde.fr/*",
     "*://*.scientificamerican.com/*",
     "*://*.thehindu.com/*",
-    "*://*.demorgen.be/*"
+    "*://*.demorgen.be/*",
+	"*://*.tinypass.com/*"
   ],
   "version": "1.6.2"
 }
