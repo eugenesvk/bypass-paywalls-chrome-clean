@@ -35,6 +35,7 @@ var defaultSites = {
   'La Repubblica': 'repubblica.it',
   'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
+  'London Review of Books': 'lrb.co.uk',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Medscape': 'medscape.com',
@@ -219,7 +220,8 @@ const blockedRegexes = {
 'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
 'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
-'economist.com': /.+\.tinypass\.com\/.+/
+'economist.com': /.+\.tinypass\.com\/.+/,
+'lrb.co.uk': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"

@@ -33,6 +33,7 @@ var defaultSites = {
   'La Repubblica': 'repubblica.it',
   'Le Monde': 'lemonde.fr',
   'Le Temps': 'letemps.ch',
+  'London Review of Books': 'lrb.co.uk',
   'Los Angeles Times': 'latimes.com',
   'Medium': 'medium.com',
   'Medscape': 'medscape.com',
