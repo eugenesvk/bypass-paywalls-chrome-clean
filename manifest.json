@@ -147,7 +147,8 @@
     "*://*.scientificamerican.com/*",
     "*://*.thehindu.com/*",
     "*://*.demorgen.be/*",
-	"*://*.tinypass.com/*"
+	"*://*.tinypass.com/*",
+	"*://*.lrb.co.uk/*"
   ],
   "version": "1.6.2"
 }
