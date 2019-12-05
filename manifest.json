@@ -21,7 +21,8 @@
     "*://*.trouw.nl/*",
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
-	"*://*.economist.com/*"
+    "*://*.economist.com/*",
+    "*://*.the-tls.co.uk/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -147,8 +148,9 @@
     "*://*.scientificamerican.com/*",
     "*://*.thehindu.com/*",
     "*://*.demorgen.be/*",
-	"*://*.tinypass.com/*",
-	"*://*.lrb.co.uk/*"
+    "*://*.tinypass.com/*",
+    "*://*.lrb.co.uk/*",
+    "*://*.the-tls.co.uk/*"
   ],
   "version": "1.6.2"
 }

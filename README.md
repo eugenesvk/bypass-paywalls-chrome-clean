@@ -89,6 +89,7 @@
 [The Toronto Star](https://www.thestar.com)\
 [The Washington Post](https://www.washingtonpost.com)\
 [The Wall Street Journal](https://www.wsj.com)\
+[Times Literary Supplement](https://www.the-tls.co.uk)\
 [Towards Data Science](https://www.towardsdatascience.com)\
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\
