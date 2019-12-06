@@ -189,6 +189,7 @@ const remove_cookies_select_hold = {
 const remove_cookies_select_drop = {
 	'ad.nl': ['temptationTrackingId'],
 	'demorgen.be': ['TID_ID'],
+	'economist.com': ['rvuuid'],
 	'ed.nl': ['temptationTrackingId'],
 	'nrc.nl': ['counter']
 }
