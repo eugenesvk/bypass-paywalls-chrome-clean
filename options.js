@@ -26,6 +26,7 @@ var defaultSites = {
   'Haaretz': 'haaretz.co.il',
   'Haaretz English': 'haaretz.com',
   'Handelsblatt': 'handelsblatt.com',
+  'Harper\'s Magazine': 'harpers.org',
   'Hartford Courant': 'courant.com',
   'Harvard Business Review': 'hbr.org',
   'Inc.com': 'inc.com',
