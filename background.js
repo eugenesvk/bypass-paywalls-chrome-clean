@@ -204,6 +204,8 @@ const use_google_bot = [
 'thetimes.co.uk',
 'wsj.com',
 'haaretz.co.il',
+'haaretz.com',
+'themarker.com',
 ]
 
 function setDefaultOptions() {
