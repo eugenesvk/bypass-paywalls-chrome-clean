@@ -22,7 +22,8 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.economist.com/*",
-    "*://*.the-tls.co.uk/*"
+    "*://*.the-tls.co.uk/*",
+    "*://*.harpers.org/*"
       ],
       "js": ["contentScript.js"]
     }
