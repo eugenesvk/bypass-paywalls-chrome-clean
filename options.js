@@ -45,6 +45,7 @@ var defaultSites = {
   'New York Magazine': 'nymag.com',
   'New Zealand Herald': 'nzherald.co.nz',
   'Nikkei Asian Review': 'asia.nikkei.com',
+  'NK News': 'nknews.org',
   'NRC': 'nrc.nl',
   'Orange County Register': 'ocregister.com',
   'Orlando Sentinel': 'orlandosentinel.com',

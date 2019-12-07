@@ -151,7 +151,8 @@
     "*://*.tinypass.com/*",
     "*://*.lrb.co.uk/*",
     "*://*.the-tls.co.uk/*",
-    "*://*.harpers.org/*"
+    "*://*.harpers.org/*",
+    "*://*.nknews.org/*"
   ],
   "version": "1.6.2"
 }

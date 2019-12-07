@@ -39,7 +39,7 @@
 [La Repubblica](https://www.repubblica.it)\
 [Le Monde](https://www.lemonde.fr)\
 [Le Temps](https://www.letemps.ch)\
-[London Review of Books] (https://lrb.co.uk)\
+[London Review of Books](https://lrb.co.uk)\
 [Los Angeles Times](https://www.latimes.com)\
 [Medium](https://www.medium.com)\
 [Medscape](https://www.medscape.com)\
@@ -50,6 +50,7 @@
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Nikkei Asian Review](https://asia.nikkei.com)\
+[NK News](https://www.nknews.org)\
 [NRC](https://www.nrc.nl)\
 [Orange County Register](https://www.ocregister.com)\
 [Orlando Sentinel](https://www.orlandosentinel.com)\
@@ -100,7 +101,7 @@
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*
 
-Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
+Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on. Please rate it 5 stars if you find it useful.
 
 When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 

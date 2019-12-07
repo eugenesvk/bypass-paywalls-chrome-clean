@@ -46,6 +46,7 @@ var defaultSites = {
   'New Statesman': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
   'Nikkei Asian Review': 'asia.nikkei.com',
+  'NK News': 'nknews.org',
   'NRC': 'nrc.nl',
   'New Zealand Herald': 'nzherald.co.nz',
   'Orange County Register': 'ocregister.com',
@@ -212,6 +213,7 @@ const use_google_bot = [
 'haaretz.co.il',
 'haaretz.com',
 'themarker.com',
+'nknews.org',
 ]
 
 function setDefaultOptions() {
@@ -451,8 +453,4 @@ function getParameterByName(name, url) {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-
-function stripQueryStringAndHashFromPath(url) {
-  return url.split("?")[0].split("#")[0];
 }
