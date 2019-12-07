@@ -31,6 +31,7 @@
 [Haaretz.co.il](https://www.haaretz.co.il)\
 [Haaretz.com](https://www.haaretz.com)\
 [Handelsblatt](https://www.handelsblatt.com)\
+[Harper's Magazine](https://harpers.org)\
 [Hartford Courant](https://www.courant.com)\
 [Harvard Business Review](https://www.hbr.org)\
 [Inc.com](https://www.inc.com)\
@@ -38,6 +39,7 @@
 [La Repubblica](https://www.repubblica.it)\
 [Le Monde](https://www.lemonde.fr)\
 [Le Temps](https://www.letemps.ch)\
+[London Review of Books] (https://lrb.co.uk)\
 [Los Angeles Times](https://www.latimes.com)\
 [Medium](https://www.medium.com)\
 [Medscape](https://www.medscape.com)\
@@ -88,6 +90,7 @@
 [The Toronto Star](https://www.thestar.com)\
 [The Washington Post](https://www.washingtonpost.com)\
 [The Wall Street Journal](https://www.wsj.com)\
+[Times Literary Supplement](https://www.the-tls.co.uk)\
 [Towards Data Science](https://www.towardsdatascience.com)\
 [Trouw](https://www.trouw.nl)\
 [Vanity Fair](https://www.vanityfair.com)\

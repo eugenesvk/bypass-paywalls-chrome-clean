@@ -1,4 +1,11 @@
-window.localStorage.clear();
+var arr_localstorage_hold = ['economist.com'];
+var localstorage_hold = arr_localstorage_hold.some(function(url) {
+    return window.location.href.indexOf(url) !== -1;
+});
+
+if (!localstorage_hold){
+    window.localStorage.clear();
+}
 if (window.location.href.indexOf("bizjournals.com") !== -1) {
     const hiddenStory = document.getElementsByClassName(
         "js-pre-chunks__story-body"
@@ -169,6 +176,24 @@ if (window.location.href.indexOf("caixinglobal.com") !== -1) {
             p_hidden[i].setAttribute('style', 'display:block;');
         }
     }
+}
+
+if (window.location.href.indexOf("economist.com") !== -1) {
+    document.addEventListener('DOMContentLoaded', () => {
+		const wrapper = document.getElementById('bottom-page-wrapper');
+		removeDOMElement(wrapper);
+		setTimeout(function () {
+			const paywall = document.querySelector('.layout-article-regwall');;
+			if (paywall) {
+				window.location.reload(true);
+			}
+		}, 600); // Delay (in milliseconds)
+	});
+}
+
+if (window.location.href.indexOf("the-tls.co.uk") !== -1) {
+        const paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
+        removeDOMElement(paywall);
 }
 
 function removeDOMElement(...elements) {
