@@ -22,8 +22,7 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.economist.com/*",
-    "*://*.the-tls.co.uk/*",
-    "*://*.harpers.org/*"
+    "*://*.the-tls.co.uk/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -151,7 +150,8 @@
     "*://*.demorgen.be/*",
     "*://*.tinypass.com/*",
     "*://*.lrb.co.uk/*",
-    "*://*.the-tls.co.uk/*"
+    "*://*.the-tls.co.uk/*",
+    "*://*.harpers.org/*"
   ],
   "version": "1.6.2"
 }
