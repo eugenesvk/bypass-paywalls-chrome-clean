@@ -214,6 +214,7 @@ const use_google_bot = [
 'haaretz.com',
 'themarker.com',
 'nknews.org',
+'prime.economictimes.indiatimes.com'
 ]
 
 function setDefaultOptions() {
