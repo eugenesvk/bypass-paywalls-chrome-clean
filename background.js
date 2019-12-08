@@ -93,7 +93,7 @@ var defaultSites = {
   'Trouw': 'trouw.nl',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
 };
 
 const restrictions = {
@@ -148,6 +148,7 @@ const allow_cookies = [
 const remove_cookies = [
 'ad.nl',
 'asia.nikkei.com',
+'bloombergquint.com',
 'bostonglobe.com',
 'cen.acs.org',
 'chicagobusiness.com',
@@ -178,15 +179,12 @@ const remove_cookies = [
 'thestar.com',
 'towardsdatascience.com',
 'vn.nl',
-'washingtonpost.com',
-'wsj.com',
-'bloombergquint.com'
+'washingtonpost.com'
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr'],
-	'wsj.com': ['wsjregion']
+	'washingtonpost.com': ['wp_gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
