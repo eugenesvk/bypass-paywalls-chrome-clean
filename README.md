@@ -82,6 +82,7 @@
 [The New York Times](https://www.nytimes.com)\
 [The New Yorker](https://www.newyorker.com)\
 [The News-Gazette](https://www.news-gazette.com)\
+[The Philadelphia Inquirer](https://inquirer.com)\
 [The Saturday Paper](https://www.thesaturdaypaper.com.au)\
 [The Spectator](https://www.spectator.co.uk)\
 [The Seattle Times](https://www.seattletimes.com)\

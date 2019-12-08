@@ -79,6 +79,7 @@ var defaultSites = {
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The News-Gazette': 'news-gazette.com',
+  'The Philadelphia Inquirer': 'inquirer.com',
   'The Saturday Paper': 'thesaturdaypaper.com.au',
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
@@ -231,7 +232,8 @@ const blockedRegexes = {
 'economist.com': /.+\.tinypass\.com\/.+/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
-'foreignpolicy.com': /.+\.tinypass\.com\/.+/
+'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
+'inquirer.com': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"

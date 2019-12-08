@@ -152,7 +152,8 @@
     "*://*.lrb.co.uk/*",
     "*://*.the-tls.co.uk/*",
     "*://*.harpers.org/*",
-    "*://*.nknews.org/*"
+    "*://*.nknews.org/*",
+    "*://*.inquirer.com/*"
   ],
   "version": "1.6.2"
 }
