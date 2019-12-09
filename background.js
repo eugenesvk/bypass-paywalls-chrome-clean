@@ -19,6 +19,7 @@ var defaultSites = {
   'De Tijd': 'tijd.be',
   'De Groene Amsterdammer': 'groene.nl',
   'de Volkskrant': 'volkskrant.nl',
+  'ET Prime': 'prime.economictimes.indiatimes.com',
   'The Economist': 'economist.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',
@@ -214,6 +215,7 @@ const use_google_bot = [
 'haaretz.com',
 'themarker.com',
 'nknews.org',
+'prime.economictimes.indiatimes.com'
 ]
 
 function setDefaultOptions() {

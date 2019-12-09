@@ -17,6 +17,7 @@ var defaultSites = {
   'De Groene Amsterdammer': 'groene.nl',
   'De Tijd': 'tijd.be',
   'de Volkskrant': 'volkskrant.nl',
+  'ET Prime': 'prime.economictimes.indiatimes.com',
   'The Economist': 'economist.com',
   'Eindhovens Dagblad': 'ed.nl',
   'Examiner': 'examiner.com.au',

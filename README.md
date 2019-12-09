@@ -22,6 +22,7 @@
 [De Groene Amsterdammer](https://www.groene.nl)\
 [De Tijd](https://www.tijd.be)\
 [de Volkskrant](https://www.volkskrant.nl)\
+[ET Prime](https://prime.economictimes.indiatimes.com/)\
 [The Economist](https://www.economist.com)\
 [Eindhovens Dagblad](https://ed.nl)\
 [Examiner](https://www.examiner.com.au)\
