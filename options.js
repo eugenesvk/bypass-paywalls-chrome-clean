@@ -78,6 +78,7 @@ var defaultSites = {
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The News-Gazette': 'news-gazette.com',
+  'The Philadelphia Inquirer': 'inquirer.com',
   'The Saturday Paper': 'thesaturdaypaper.com.au',
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',

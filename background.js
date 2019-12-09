@@ -80,6 +80,7 @@ var defaultSites = {
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The News-Gazette': 'news-gazette.com',
+  'The Philadelphia Inquirer': 'inquirer.com',
   'The Saturday Paper': 'thesaturdaypaper.com.au',
   'The Spectator': 'spectator.co.uk',
   'The Seattle Times': 'seattletimes.com',
@@ -94,7 +95,7 @@ var defaultSites = {
   'Trouw': 'trouw.nl',
   'Vanity Fair': 'vanityfair.com',
   'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com'
+  'Wired': 'wired.com',
 };
 
 const restrictions = {
@@ -149,6 +150,7 @@ const allow_cookies = [
 const remove_cookies = [
 'ad.nl',
 'asia.nikkei.com',
+'bloombergquint.com',
 'bostonglobe.com',
 'cen.acs.org',
 'chicagobusiness.com',
@@ -179,15 +181,12 @@ const remove_cookies = [
 'thestar.com',
 'towardsdatascience.com',
 'vn.nl',
-'washingtonpost.com',
-'wsj.com',
-'bloombergquint.com'
+'washingtonpost.com'
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr'],
-	'wsj.com': ['wsjregion']
+	'washingtonpost.com': ['wp_gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
@@ -234,7 +233,9 @@ const blockedRegexes = {
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
 'economist.com': /.+\.tinypass\.com\/.+/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
-'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/
+'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
+'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
+'inquirer.com': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
