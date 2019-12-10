@@ -6,6 +6,7 @@ var localstorage_hold = arr_localstorage_hold.some(function(url) {
 if (!localstorage_hold){
     window.localStorage.clear();
 }
+
 if (window.location.href.indexOf("bizjournals.com") !== -1) {
     const hiddenStory = document.getElementsByClassName(
         "js-pre-chunks__story-body"
@@ -194,6 +195,18 @@ if (window.location.href.indexOf("economist.com") !== -1) {
 if (window.location.href.indexOf("the-tls.co.uk") !== -1) {
         const paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
         removeDOMElement(paywall);
+}
+
+if (window.location.href.indexOf("leparisien.fr") !== -1) {
+        window.removeEventListener('scroll', this.scrollListener);
+        const paywall = document.querySelector('.relative.piano-paywall.below_nav.sticky');
+        removeDOMElement(paywall);
+        setTimeout(function () {
+            var content = document.getElementsByClassName('content');
+            for (var i = 0; i < content.length; i++) {
+                content[i].removeAttribute("style");
+            }
+        }, 300); // Delay (in milliseconds)
 }
 
 function removeDOMElement(...elements) {
