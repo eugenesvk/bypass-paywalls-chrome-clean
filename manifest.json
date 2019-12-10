@@ -153,7 +153,8 @@
     "*://*.the-tls.co.uk/*",
     "*://*.harpers.org/*",
     "*://*.nknews.org/*",
-    "*://*.inquirer.com/*"
+    "*://*.inquirer.com/*",
+    "*://*.indiatimes.com/*"
   ],
   "version": "1.6.2"
 }
