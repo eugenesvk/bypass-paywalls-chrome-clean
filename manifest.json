@@ -22,7 +22,8 @@
     "*://*.volkskrant.nl/*",
     "*://*.washingtonpost.com/*",
     "*://*.economist.com/*",
-    "*://*.the-tls.co.uk/*"
+    "*://*.the-tls.co.uk/*",
+    "*://*.leparisien.fr/*"
       ],
       "js": ["contentScript.js"]
     }
@@ -154,7 +155,8 @@
     "*://*.harpers.org/*",
     "*://*.nknews.org/*",
     "*://*.inquirer.com/*",
-    "*://*.indiatimes.com/*"
+    "*://*.indiatimes.com/*",
+    "*://*.leparisien.fr/*"
   ],
   "version": "1.6.2"
 }

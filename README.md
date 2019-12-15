@@ -39,6 +39,7 @@
 [Investors Chronicle](https://www.investorschronicle.co.uk)\
 [La Repubblica](https://www.repubblica.it)\
 [Le Monde](https://www.lemonde.fr)\
+[Le Parisien](http://www.leparisien.fr)\
 [Le Temps](https://www.letemps.ch)\
 [London Review of Books](https://lrb.co.uk)\
 [Los Angeles Times](https://www.latimes.com)\

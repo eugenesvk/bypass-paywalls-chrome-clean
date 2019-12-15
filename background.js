@@ -36,6 +36,7 @@ var defaultSites = {
   'Investors Chronicle': 'investorschronicle.co.uk',
   'La Repubblica': 'repubblica.it',
   'Le Monde': 'lemonde.fr',
+  'Le Parisien': 'leparisien.fr',
   'Le Temps': 'letemps.ch',
   'London Review of Books': 'lrb.co.uk',
   'Los Angeles Times': 'latimes.com',
@@ -99,7 +100,8 @@ var defaultSites = {
 };
 
 const restrictions = {
-  'barrons.com': 'barrons.com/articles'
+  'barrons.com': 'barrons.com/articles',
+  'wsj.com': 'wsj.com/articles'
 }
 
 // Don't remove cookies before page load
@@ -186,7 +188,8 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr']
+	'washingtonpost.com': ['wp_gdpr'],
+	'qz.com': ['gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
@@ -235,7 +238,8 @@ const blockedRegexes = {
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
 'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
-'inquirer.com': /.+\.tinypass\.com\/.+/
+'inquirer.com': /.+\.tinypass\.com\/.+/,
+'spectator.co.uk': /.+\.tinypass\.com\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -303,8 +307,13 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
   for (var domain in blockedRegexes) {
-	  if (isSiteEnabled({url: '.'+ domain}) && details.url.match(blockedRegexes[domain])) {
+	  if ((isSiteEnabled({url: '.'+ domain}) || isSiteEnabled({url: header_referer})) && details.url.match(blockedRegexes[domain])) {
 			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1) {
+				// allow BG paywall-script to set cookies in homepage/sections (else no article-text)
+				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/' 
+						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
+					break;
+				}
 				return { cancel: true };
 			}
 	  }
@@ -439,7 +448,7 @@ browser.webRequest.onCompleted.addListener(function(details) {
 
 function isSiteEnabled(details) {
   var isEnabled = enabledSites.some(function(enabledSite) {
-    var useSite = details.url.indexOf("." + enabledSite) !== -1;
+    var useSite = (details.url.indexOf("." + enabledSite) !== -1 || details.url.indexOf("/" + enabledSite) !== -1);
     if (enabledSite in restrictions) {
       return useSite && details.url.indexOf(restrictions[enabledSite]) !== -1;
     }
