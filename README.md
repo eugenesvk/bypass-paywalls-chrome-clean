@@ -1,6 +1,6 @@
-# Bypass Paywalls for Firefox
+# Bypass Paywalls Clean for Firefox
 
-## [Download and install the latest version](https://github.com/iamadamdev/bypass-paywalls-firefox/releases/download/v1.6.3/bypass_paywalls-1.6.3-an+fx.xpi)
+## [Download and install the latest version](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.3.3/bypass_paywalls_clean-1.6.3.3-an+fx.xpi)
 
 ### Bypass the following sites' paywalls with this extension
 
@@ -119,7 +119,7 @@ _*May not always succeed_
 Only large or major sites will be considered. No small sites or local newspapers.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new Private window (Ctrl+Shift+P) and paste the article title into Google.
-3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/iamadamdev/bypass-paywalls-firefox/issues/new) to add the site, otherwise my extension cannot bypass it either.
+3. Click on the same article from the Google search results page. If it loads without a paywall you can [submit a request](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/issues/new) to add the site, otherwise my extension cannot bypass it either.
 
 Usually premium articles cannot be bypassed as they are behind a hard paywall.
 
@@ -134,4 +134,4 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
-Bypass Paywalls is [MIT-licensed](https://github.com/iamadamdev/bypass-paywalls-firefox/blob/master/LICENSE).
+Bypass Paywalls is [MIT-licensed](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/blob/master/LICENSE).

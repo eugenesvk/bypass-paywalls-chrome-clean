@@ -44,8 +44,8 @@
   ],
   "applications": {
     "gecko": {
-      "id": "bypasspaywalls@bypasspaywalls.weebly.com",
-      "update_url": "https://raw.githubusercontent.com/iamadamdev/bypass-paywalls-firefox/master/updates.json"
+      "id": "magnolia@12.34",
+      "update_url": "https://raw.githubusercontent.com/magnolia1234/bypass-paywalls-firefox-clean/master/updates.json"
     }
   },
   "browser_action": {
@@ -66,7 +66,7 @@
     "128": "bypass.png"
   },
   "manifest_version": 2,
-  "name": "Bypass Paywalls",
+  "name": "Bypass Paywalls Clean",
   "short_name": "Bypass Paywall",
   "options_ui": {
     "page": "options.html"
@@ -179,5 +179,5 @@
     "*://*.bloombergquint.com/*",
     "*://*.statista.com/*"
   ],
-  "version": "1.6.3"
+  "version": "1.6.3.3"
 }
