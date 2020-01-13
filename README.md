@@ -50,7 +50,6 @@
 [MIT Technology Review](https://www.technologyreview.com)\
 [Mountain View Voice](https://www.mv-voice.com)\
 [National Post](https://www.nationalpost.com)\
-[New Statesman](https://www.newstatesman.com)\
 [New York Magazine](https://www.nymag.com)\
 [New Zealand Herald](https://www.nzherald.co.nz)\
 [Newcastle Herald](https://www.newcastleherald.com.au)\
@@ -86,6 +85,7 @@
 [The Mercury Tasmania](https://www.themercury.com.au)\
 [The Morning Call](https://www.mcall.com)\
 [The Nation](https://www.thenation.com)\
+[The New Statesman](https://www.newstatesman.com)\
 [The New York Times](https://www.nytimes.com)\
 [The New Yorker](https://www.newyorker.com)\
 [The News-Gazette](https://www.news-gazette.com)\

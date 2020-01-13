@@ -326,6 +326,11 @@ if (window.location.href.indexOf("hbr.org") !== -1) {
     removeDOMElement(popup);
 }
 
+if (window.location.href.indexOf("newstatesman.com") !== -1) {
+    const tns_modal_wrapper = document.querySelector('.tns-modal-wrapper');
+    removeDOMElement(tns_modal_wrapper);
+}
+
 function removeDOMElement(...elements) {
     for (let element of elements) {
         if (element) element.remove();

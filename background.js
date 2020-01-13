@@ -46,7 +46,6 @@ var defaultSites = {
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
   'National Post': 'nationalpost.com',
-  'New Statesman': 'newstatesman.com',
   'New York Magazine': 'nymag.com',
   'New Zealand Herald': 'nzherald.co.nz',
   'Newcastle Herald': 'newcastleherald.com.au',
@@ -84,6 +83,7 @@ var defaultSites = {
   'The Mercury News': 'mercurynews.com',
   'The Morning Call': 'mcall.com',
   'The Nation': 'thenation.com',
+  'The New Statesman': 'newstatesman.com',
   'The New York Times': 'nytimes.com',
   'The New Yorker': 'newyorker.com',
   'The News-Gazette': 'news-gazette.com',
@@ -210,8 +210,9 @@ const remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
-	'washingtonpost.com': ['wp_gdpr'],
-	'qz.com': ['gdpr']
+	'newstatesman.com': ['STYXKEY_nsversion'],
+	'qz.com': ['gdpr'],
+	'washingtonpost.com': ['wp_gdpr']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
@@ -317,7 +318,7 @@ browser.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true};
   },
   {
-    urls: ["*://*.newstatesman.com/*"],
+    urls: [],
     types: ["script"]
   },
   ["blocking"]
