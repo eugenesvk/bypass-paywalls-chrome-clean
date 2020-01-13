@@ -213,9 +213,11 @@ if (window.location.href.indexOf("nrc.nl") !== -1) {
 }
 
 if (window.location.href.indexOf("theathletic.com") !== -1) {
-    const banner = document.querySelector('.border-bottom-cc');
+    const landing_banner = document.querySelector('.logged-out-landing-banner');
+    const sample_banner = document.querySelector('.main-sample-banner');
+    const bottom_banner = document.querySelector('.border-bottom-cc');
     const subscribe = document.querySelector('.subscribe-ad-text');
-    removeDOMElement(banner, subscribe);
+    removeDOMElement(landing_banner, sample_banner, bottom_banner, subscribe);
 }
 
 if (window.location.href.indexOf("techinasia.com") !== -1) {
