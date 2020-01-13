@@ -5,6 +5,8 @@
       "updates": [
         { "version": "1.6.3.3",
             "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.3.3/bypass_paywalls_clean-1.6.3.3-an+fx.xpi" }
+        { "version": "1.6.3.4",
+            "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.3.4/bypass_paywalls_clean-1.6.3.4-an+fx.xpi" }
         ]
     }
   }
