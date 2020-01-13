@@ -41,7 +41,7 @@ var defaultSites = {
   'Les Echos': 'lesechos.fr', 
   'London Review of Books': 'lrb.co.uk',
   'Los Angeles Times': 'latimes.com',
-  'Medium': 'medium.com',
+  'Medium (all sites)': 'medium.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
@@ -333,6 +333,16 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 		  continue;
 	  }
   }
+
+  // remove cookies for sites medium platform (mainfest.json needs in permissions: <all_urls>)
+  if (isSiteEnabled({url: '.medium.com'}) && details.url.indexOf('cdn-client.medium.com') !== -1 && header_referer.indexOf('.medium.com') === -1) {
+		var domainVar = new URL(header_referer).hostname;
+		browser.cookies.getAll({domain: domainVar}, function(cookies) {
+			for (var i=0; i<cookies.length; i++) {
+				browser.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+			}
+	    });
+  }
   
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
   for (var domain in blockedRegexes) {
@@ -367,7 +377,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (details.url.indexOf("wsj.com") !== -1 || details.url.indexOf("ft.com") !== -1) {
+      } else if (details.url.indexOf("ft.com") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -383,7 +393,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.indexOf("wsj.com") !== -1) {
+    if (details.url.indexOf("ft.com") !== -1) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'

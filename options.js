@@ -39,7 +39,7 @@ var defaultSites = {
   'Les Echos (free articles only)': 'lesechos.fr', 
   'London Review of Books': 'lrb.co.uk',
   'Los Angeles Times': 'latimes.com',
-  'Medium': 'medium.com',
+  'Medium (all sites)': 'medium.com',
   'Medscape': 'medscape.com',
   'MIT Technology Review': 'technologyreview.com',
   'Mountain View Voice': 'mv-voice.com',
