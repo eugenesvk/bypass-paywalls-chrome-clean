@@ -1,8 +1,21 @@
 # Bypass Paywalls Clean for Firefox
 
-## [Download and install the latest version](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.3.3/bypass_paywalls_clean-1.6.3.3-an+fx.xpi)
+* [Installation](#installation)
+* [List of supported websites](#list-of-supported-websites)
+* [Sites with limited number of free articles](#sites-with-limited-number-of-free-articles)
+* [New site requests](#new-site-requests)
+* [Troubleshooting](#troubleshooting)
+* [Changelog](#changelog)
+* [Pull Requests](#pull-requests)
+* [Show your support](#show-your-support)
+* [License](#license)
 
-### Bypass the following sites' paywalls with this extension
+### Installation
+ [Download and install the latest version](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.3.4/bypass_paywalls_clean-1.6.3.4-an+fx.xpi)\
+ Or first visit the [releases page](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases).\
+ Install add-on by downloading xpi-file (assets).
+
+### List of supported websites
 
 [Algemeen Dagblad](https://www.ad.nl)\
 [Baltimore Sun](https://www.baltimoresun.com)\
@@ -66,7 +79,7 @@
 [Scribd](http://scribd.com)\
 [Statista](https://www.statista.com)\
 [SunSentinel](https://www.sun-sentinel.com)\
-[Tech in Asia]:(https://www.techinasia.com)\
+[Tech in Asia](https://www.techinasia.com)\
 [Telegraaf](https://telegraaf.nl)\
 [The Advocate](https://www.theadvocate.com.au)\
 [The Age](https://www.theage.com.au)\
@@ -127,6 +140,9 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 * This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work try turning off uBlock and refreshing.
 
+### Changelog
+* Visit the [releases page](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases).
+
 ### Pull Requests
 * PRs are welcome.
 
@@ -134,4 +150,4 @@ Usually premium articles cannot be bypassed as they are behind a hard paywall.
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
-Bypass Paywalls is [MIT-licensed](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/blob/master/LICENSE).
+Bypass Paywalls Clean is [MIT-licensed](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/blob/master/LICENSE).

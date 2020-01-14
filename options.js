@@ -1,106 +1,5 @@
-var defaultSites = {
-  'Algemeen Dagblad': 'ad.nl', 
-  'Baltimore Sun': 'baltimoresun.com',
-  'Barron\'s': 'barrons.com',
-  'Bloomberg': 'bloomberg.com',
-  'Bloomberg Quint (free articles only)': 'bloombergquint.com',
-  'Business Insider': 'businessinsider.com',
-  'Caixin Global': 'caixinglobal.com',
-  'Chemical & Engineering News': 'cen.acs.org',
-  'Chicago Tribune': 'chicagotribune.com',
-  'Central Western Daily': 'centralwesterndaily.com.au',
-  'Crain\'s Chicago Business': 'chicagobusiness.com',
-  'Corriere Della Sera': 'corriere.it',
-  'Daily Press': 'dailypress.com',
-  'DeMorgen': 'demorgen.be',
-  'Denver Post': 'denverpost.com',
-  'De Groene Amsterdammer': 'groene.nl',
-  'De Tijd': 'tijd.be',
-  'de Volkskrant': 'volkskrant.nl',
-  'ET Prime': 'prime.economictimes.indiatimes.com',
-  'The Economist': 'economist.com',
-  'Eindhovens Dagblad': 'ed.nl',
-  'Financial Times': 'ft.com',
-  'Foreign Policy': 'foreignpolicy.com',
-  'Glassdoor': 'glassdoor.com',
-  'Haaretz': 'haaretz.co.il',
-  'Haaretz English': 'haaretz.com',
-  'Handelsblatt': 'handelsblatt.com',
-  'Harper\'s Magazine': 'harpers.org',
-  'Hartford Courant': 'courant.com',
-  'Harvard Business Review': 'hbr.org',
-  'Inc.com': 'inc.com',
-  'Investors Chronicle': 'investorschronicle.co.uk',
-  'L\'Echo': 'lecho.be',
-  'La Repubblica': 'repubblica.it',
-  'Le Monde': 'lemonde.fr',
-  'Le Parisien': 'leparisien.fr',
-  'Le Temps': 'letemps.ch',
-  'Les Echos (free articles only)': 'lesechos.fr', 
-  'London Review of Books': 'lrb.co.uk',
-  'Los Angeles Times': 'latimes.com',
-  'Medium (all sites)': 'medium.com',
-  'Medscape': 'medscape.com',
-  'MIT Technology Review': 'technologyreview.com',
-  'Mountain View Voice': 'mv-voice.com',
-  'National Post': 'nationalpost.com',
-  'New York Magazine': 'nymag.com',
-  'New Zealand Herald': 'nzherald.co.nz',
-  'Newcastle Herald': 'newcastleherald.com.au',
-  'Nikkei Asian Review': 'asia.nikkei.com',
-  'NK News': 'nknews.org',
-  'NRC': 'nrc.nl',
-  'Orange County Register': 'ocregister.com',
-  'Orlando Sentinel': 'orlandosentinel.com',
-  'Palo Alto Online': 'paloaltoonline.com',
-  'Parool': 'parool.nl',
-  'Quartz': 'qz.com',
-  'Quora': 'quora.com',
-  'Scientific American (free articles only)': 'scientificamerican.com',  
-  'Scribd (documents only)': 'scribd.com',
-  'Statista': 'statista.com',
-  'SunSentinel': 'sun-sentinel.com',
-  'Tech in Asia': 'techinasia.com',
-  'Telegraaf': 'telegraaf.nl',
-  'The Advocate': 'theadvocate.com.au',
-  'The Age': 'theage.com.au',
-  'The Athletic': 'theathletic.com',
-  'The Atlantic': 'theatlantic.com',
-  'The Australian': 'theaustralian.com.au',
-  'The Australian Financial Review': 'afr.com',
-  'The Boston Globe': 'bostonglobe.com',
-  'The Business Journals': 'bizjournals.com',
-  'The Diplomat': 'thediplomat.com',
-  'The Examiner (free articles only)': 'examiner.com.au',
-  'The Globe and Mail': 'theglobeandmail.com',
-  'The Hindu': 'thehindu.com',
-  'The Japan Times': 'japantimes.co.jp',
-  'TheMarker': 'themarker.com',
-  'The Mercury News': 'mercurynews.com',
-  'The Mercury Tasmania': 'themercury.com.au',
-  'The Morning Call': 'mcall.com',
-  'The Nation': 'thenation.com',
-  'The New Statesman': 'newstatesman.com',
-  'The New York Times': 'nytimes.com',
-  'The New Yorker': 'newyorker.com',
-  'The News-Gazette': 'news-gazette.com',
-  'The Philadelphia Inquirer': 'inquirer.com',
-  'The Saturday Paper': 'thesaturdaypaper.com.au',
-  'The Spectator': 'spectator.co.uk',
-  'The Seattle Times': 'seattletimes.com',
-  'The Sydney Morning Herald': 'smh.com.au',
-  'The Telegraph': 'telegraph.co.uk',
-  'The Times': 'thetimes.co.uk',
-  'The Toronto Star': 'thestar.com',
-  'The Washington Post': 'washingtonpost.com',
-  'The Wall Street Journal': 'wsj.com',
-  'Times Literary Supplement': 'the-tls.co.uk',
-  'Towards Data Science': 'towardsdatascience.com',
-  'Trouw': 'trouw.nl',
-  'Vanity Fair': 'vanityfair.com',
-  'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com'
-};
+// defaultSites are loaded from sites(_custom).json at installation extension (and are saved to local storage)
+var defaultSites = {};
 
 // Saves options to browser.storage
 function save_options() {
@@ -128,9 +27,35 @@ function save_options() {
   });
 }
 
+//Fetch sites.json & sites_custom.json
+function renderOptions() {
+	const url_sites = browser.runtime.getURL('sites.json');
+	fetch(url_sites)
+		.then(response => { 
+			if (response.ok) { 
+				response.json().then(json => {
+					var defaultSites_merge = {...defaultSites, ...json}; 
+					defaultSites = defaultSites_merge;
+					// add custom sites
+					const url_sites_custom = 'https://raw.githubusercontent.com/magnolia1234/bypass-paywalls-firefox-clean/master/sites_custom.json';
+					fetch(url_sites_custom)
+						.then(response => {
+							if (response.ok) {
+								response.json().then(json => {
+									var defaultSites_merge = {...defaultSites, ...json}; 
+									defaultSites = defaultSites_merge;
+									renderOptions_default();
+								})
+							} else { renderOptions_default(); }
+						} );
+				})
+			} else { renderOptions_default(); }
+		} );
+}
+
 // Restores checkbox input states using the preferences
 // stored in browser.storage.
-function renderOptions() {
+function renderOptions_default() {
   browser.storage.sync.get({
     sites: {}
   }, function(items) {
@@ -148,8 +73,9 @@ function renderOptions() {
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
       inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
-
-      labelEl.appendChild(inputEl);
+      if (value !=='') {
+        labelEl.appendChild(inputEl);
+      }
       labelEl.appendChild(document.createTextNode(' '+key));
       sitesEl.appendChild(labelEl);
     }
@@ -174,4 +100,3 @@ document.addEventListener('DOMContentLoaded', renderOptions);
 document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('select-all').addEventListener('click', selectAll);
 document.getElementById('select-none').addEventListener('click', selectNone);
-

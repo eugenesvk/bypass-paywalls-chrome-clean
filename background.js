@@ -1,109 +1,8 @@
 'use strict';
 
-var defaultSites = {
-  'Algemeen Dagblad': 'ad.nl',
-  'Baltimore Sun': 'baltimoresun.com',
-  'Barron\'s': 'barrons.com',
-  'Bloomberg': 'bloomberg.com',
-  'Bloomberg Quint': 'bloombergquint.com',
-  'Business Insider': 'businessinsider.com',
-  'Caixin Global': 'caixinglobal.com',
-  'Chemical & Engineering News': 'cen.acs.org',
-  'Chicago Tribune': 'chicagotribune.com',
-  'Central Western Daily': 'centralwesterndaily.com.au',
-  'Crain\'s Chicago Business': 'chicagobusiness.com',
-  'Corriere Della Sera': 'corriere.it',
-  'Daily Press': 'dailypress.com',
-  'DeMorgen': 'demorgen.be',
-  'Denver Post': 'denverpost.com',
-  'De Tijd': 'tijd.be',
-  'De Groene Amsterdammer': 'groene.nl',
-  'de Volkskrant': 'volkskrant.nl',
-  'ET Prime': 'prime.economictimes.indiatimes.com',
-  'The Economist': 'economist.com',
-  'Eindhovens Dagblad': 'ed.nl',
-  'Financial Times': 'ft.com',
-  'Foreign Policy': 'foreignpolicy.com',
-  'Glassdoor': 'glassdoor.com',
-  'Haaretz': 'haaretz.co.il',
-  'Haaretz English': 'haaretz.com',
-  'Handelsblatt': 'handelsblatt.com',
-  'Harper\'s Magazine': 'harpers.org',
-  'Hartford Courant': 'courant.com',
-  'Harvard Business Review': 'hbr.org',
-  'Inc.com': 'inc.com',
-  'Investors Chronicle': 'investorschronicle.co.uk',
-  'L\'Echo': 'lecho.be',
-  'La Repubblica': 'repubblica.it',
-  'Le Monde': 'lemonde.fr',
-  'Le Parisien': 'leparisien.fr',
-  'Le Temps': 'letemps.ch',
-  'Les Echos': 'lesechos.fr', 
-  'London Review of Books': 'lrb.co.uk',
-  'Los Angeles Times': 'latimes.com',
-  'Medium (all sites)': 'medium.com',
-  'Medscape': 'medscape.com',
-  'MIT Technology Review': 'technologyreview.com',
-  'Mountain View Voice': 'mv-voice.com',
-  'National Post': 'nationalpost.com',
-  'New York Magazine': 'nymag.com',
-  'New Zealand Herald': 'nzherald.co.nz',
-  'Newcastle Herald': 'newcastleherald.com.au',
-  'Nikkei Asian Review': 'asia.nikkei.com',
-  'NK News': 'nknews.org',
-  'NRC': 'nrc.nl',
-  'Orange County Register': 'ocregister.com',
-  'Orlando Sentinel': 'orlandosentinel.com',
-  'Palo Alto Online': 'paloaltoonline.com',
-  'Parool': 'parool.nl',
-  'Quartz': 'qz.com',
-  'Quora': 'quora.com',
-  'Scientific American': 'scientificamerican.com',
-  'Scribd': 'scribd.com',
-  'Statista': 'statista.com',
-  'SunSentinel': 'sun-sentinel.com',
-  'Tech in Asia': 'techinasia.com',
-  'Telegraaf': 'telegraaf.nl',
-  'The Advocate': 'theadvocate.com.au',
-  'The Age': 'theage.com.au',
-  'The Athletic': 'theathletic.com',
-  'The Atlantic': 'theatlantic.com',
-  'The Australian': 'theaustralian.com.au',
-  'The Australian Financial Review': 'afr.com',
-  'The Boston Globe': 'bostonglobe.com',
-  'The Business Journals': 'bizjournals.com',
-  'The Diplomat': 'thediplomat.com',
-  'The Examiner': 'examiner.com.au',
-  'The Globe and Mail': 'theglobeandmail.com',
-  'The Herald': 'theherald.com.au',
-  'The Hindu': 'thehindu.com',
-  'The Japan Times': 'japantimes.co.jp',
-  'TheMarker': 'themarker.com',
-  'The Mercury Tasmania': 'themercury.com.au',
-  'The Mercury News': 'mercurynews.com',
-  'The Morning Call': 'mcall.com',
-  'The Nation': 'thenation.com',
-  'The New Statesman': 'newstatesman.com',
-  'The New York Times': 'nytimes.com',
-  'The New Yorker': 'newyorker.com',
-  'The News-Gazette': 'news-gazette.com',
-  'The Philadelphia Inquirer': 'inquirer.com',
-  'The Saturday Paper': 'thesaturdaypaper.com.au',
-  'The Spectator': 'spectator.co.uk',
-  'The Seattle Times': 'seattletimes.com',
-  'The Sydney Morning Herald': 'smh.com.au',
-  'The Telegraph': 'telegraph.co.uk',  
-  'The Times': 'thetimes.co.uk',
-  'The Toronto Star': 'thestar.com',
-  'The Washington Post': 'washingtonpost.com',
-  'The Wall Street Journal': 'wsj.com',
-  'Times Literary Supplement': 'the-tls.co.uk',
-  'Towards Data Science': 'towardsdatascience.com',
-  'Trouw': 'trouw.nl',
-  'Vanity Fair': 'vanityfair.com',
-  'Vrij Nederland': 'vn.nl',
-  'Wired': 'wired.com',
-};
+// Cookies from this list are blocked by default (obsolete)
+// defaultSites are loaded from sites(_custom).json at installation extension
+var defaultSites = {};
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
@@ -113,99 +12,32 @@ const restrictions = {
 
 // Don't remove cookies before page load
 const allow_cookies = [
-'ad.nl',
-'asia.nikkei.com',
 'barrons.com',
-'bostonglobe.com',
-'caixinglobal.com',
-'cen.acs.org',
-'chicagobusiness.com',
-'demorgen.be',
-'denverpost.com',
-'economist.com',
-'ed.nl',
-'examiner.com.au',
-'ft.com',
 'haaretz.co.il',
 'haaretz.com',
-'hacked.com',
 'handelsblatt.com',
-'harpers.org',
-'hbr.org',
-'lecho.be',
 'lemonde.fr',
-'lesechos.fr',
-'letemps.ch',
-'medium.com',
-'mercurynews.com',
-'newstatesman.com',
-'nymag.com',
+'nknews.org',
 'nytimes.com',
-'ocregister.com',
 'parool.nl',
+'prime.economictimes.indiatimes.com',
 'quora.com',
-'qz.com',
-'scientificamerican.com',
 'scribd.com',
-'spectator.co.uk',
-'telegraaf.nl',
+'techinasia.com',
 'telegraph.co.uk',
-'theadvocate.com.au',
-'theage.com.au',
 'theathletic.com',
-'theatlantic.com',
 'theaustralian.com.au',
-'thediplomat.com',
 'themarker.com',
 'themercury.com.au',
-'thestar.com',
 'thetimes.co.uk',
-'towardsdatascience.com',
 'trouw.nl',
-'vn.nl',
 'volkskrant.nl',
-'washingtonpost.com',
 'wsj.com',
 ]
 
 // Removes cookies after page load
-const remove_cookies = [
-'ad.nl',
-'asia.nikkei.com',
-'bloombergquint.com',
-'bostonglobe.com',
-'caixinglobal.com',
-'cen.acs.org',
-'chicagobusiness.com',
-'demorgen.be',
-'denverpost.com',
-'economist.com',
-'ed.nl',
-'examiner.com.au',
-'ft.com',
-'hacked.com',
-'harpers.org',
-'hbr.org',
-'lecho.be',
-'lesechos.fr',
-'letemps.ch',
-'medium.com',
-'mercurynews.com',
-'newstatesman.com',
-'nymag.com',
-'ocregister.com',
-'qz.com',
-'scientificamerican.com',
-'spectator.co.uk',
-'telegraaf.nl',
-'theadvocate.com.au',
-'theage.com.au',
-'theatlantic.com',
-'thediplomat.com',
-'thestar.com',
-'towardsdatascience.com',
-'vn.nl',
-'washingtonpost.com',
+// remove_cookies are completed with domains of sites(_custom).json (default allow/remove_cookies)
+var remove_cookies = [
 ]
 
 // select specific cookie(s) to hold from remove_cookies domains
@@ -287,6 +119,25 @@ browser.storage.sync.get({
   });
 });
 
+var loadSites = [];
+
+// Load the sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
+browser.storage.sync.get({
+  sites: {}
+}, function(items) {
+  var sites = items.sites;
+  loadSites = Object.keys(items.sites).map(function(key) {
+    return items.sites[key];
+  });
+  for (var domainIndex in loadSites) {
+    var domainVar = loadSites[domainIndex];
+    if (!allow_cookies.includes(domainVar) && !remove_cookies.includes(domainVar)) {
+      allow_cookies.push(domainVar);
+	  remove_cookies.push(domainVar);
+	}
+  }
+});
+
 // Listen for changes to options
 browser.storage.onChanged.addListener(function(changes, namespace) {
   var key;
@@ -302,9 +153,30 @@ browser.storage.onChanged.addListener(function(changes, namespace) {
 });
 
 // Set and show default options on install
-browser.runtime.onInstalled.addListener(function(details) {
+browser.runtime.onInstalled.addListener(function (details) {
   if (details.reason == "install") {
-    setDefaultOptions();
+	const url_sites = browser.runtime.getURL('sites.json');
+	fetch(url_sites)
+		.then(response => {
+			if (response.ok) {
+				response.json().then(json => {
+					var defaultSites_merge = {...defaultSites, ...json};
+					defaultSites = defaultSites_merge;
+					// add custom sites
+					const url_sites_custom = 'https://raw.githubusercontent.com/magnolia1234/bypass-paywalls-firefox-clean/master/sites_custom.json';
+					fetch(url_sites_custom)
+						.then(response => {
+							if (response.ok) {
+								response.json().then(json => {
+									var defaultSites_merge = {...defaultSites, ...json};
+									defaultSites = defaultSites_merge;
+									setDefaultOptions();
+								})
+							} else { setDefaultOptions(); }
+						} );
+				})
+			} else { setDefaultOptions(); }
+		} );
   } else if (details.reason == "update") {
     // User updated extension
   }
@@ -318,7 +190,7 @@ browser.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true};
   },
   {
-    urls: [],
+    urls: ["*://*.tinypass.com/*", "*://*.poool.fr/*", "*://*.piano.io/*"],
     types: ["script"]
   },
   ["blocking"]
