@@ -73,7 +73,7 @@ function renderOptions_default() {
       inputEl.dataset.key = key;
       inputEl.dataset.value = value;
       inputEl.checked = (key in sites) || (key.replace(/\s\(.*\)/, '') in sites);
-      if (value !=='') {
+      if (value !=='###') {
         labelEl.appendChild(inputEl);
       }
       labelEl.appendChild(document.createTextNode(' '+key));

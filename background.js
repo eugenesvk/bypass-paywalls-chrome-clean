@@ -1,3 +1,5 @@
+/* Please respect alphabetical order when adding a site in any list */
+
 'use strict';
 
 // Cookies from this list are blocked by default (obsolete)
@@ -84,24 +86,23 @@ function setDefaultOptions() {
   });
 }
 
-// to block external script also add domain to manifest.json (permissions)
 const blockedRegexes = {
-'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
-'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
-'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
-'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
-'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
-'lrb.co.uk': /.+\.tinypass\.com\/.+/,
-'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
-'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
-'inquirer.com': /.+\.tinypass\.com\/.+/,
-'spectator.co.uk': /.+\.tinypass\.com\/.+/,
-'newcastleherald.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
 'afr.com': /afr\.com\/assets\/vendorsReactRedux_client.+\.js/,
-'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
+'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
+'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
+'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
+'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
+'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'inquirer.com': /.+\.tinypass\.com\/.+/,
 'leparisien.fr': /.+\.tinypass\.com\/.+/,
 'lesechos.fr': /.+\.tinypass\.com\/.+/,
-'nytimes.com': /(.+meter-svc\.nytimes\.com\/meter\.js.+|.+mwcm\.nyt\.com\/.+\.js)/
+'lrb.co.uk': /.+\.tinypass\.com\/.+/,
+'newcastleherald.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
+'nytimes.com': /(.+meter-svc\.nytimes\.com\/meter\.js.+|.+mwcm\.nyt\.com\/.+\.js)/,
+'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
+'spectator.co.uk': /.+\.tinypass\.com\/.+/,
+'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
+'thenation.com': /thenation\.com\/.+\/paywall-script\.php/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -109,28 +110,17 @@ const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; 
 
 var enabledSites = [];
 
-// Get the enabled sites
-browser.storage.sync.get({
+// Get the enabled sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
+chrome.storage.sync.get({
   sites: {}
 }, function(items) {
   var sites = items.sites;
   enabledSites = Object.keys(items.sites).map(function(key) {
     return items.sites[key];
   });
-});
-
-var loadSites = [];
-
-// Load the sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
-browser.storage.sync.get({
-  sites: {}
-}, function(items) {
-  var sites = items.sites;
-  loadSites = Object.keys(items.sites).map(function(key) {
-    return items.sites[key];
-  });
-  for (var domainIndex in loadSites) {
-    var domainVar = loadSites[domainIndex];
+  enabledSites = enabledSites.filter(function(el) { return (el !== '###'); });
+  for (var domainIndex in enabledSites) {
+    var domainVar = enabledSites[domainIndex];
     if (!allow_cookies.includes(domainVar) && !remove_cookies.includes(domainVar)) {
       allow_cookies.push(domainVar);
 	  remove_cookies.push(domainVar);
