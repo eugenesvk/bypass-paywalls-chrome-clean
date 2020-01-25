@@ -19,6 +19,7 @@ const allow_cookies = [
 'haaretz.com',
 'handelsblatt.com',
 'lemonde.fr',
+'lrb.co.uk',
 'nknews.org',
 'nytimes.com',
 'parool.nl',
@@ -111,7 +112,7 @@ const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; 
 var enabledSites = [];
 
 // Get the enabled sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
-chrome.storage.sync.get({
+browser.storage.sync.get({
   sites: {}
 }, function(items) {
   var sites = items.sites;
