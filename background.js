@@ -13,14 +13,27 @@ const restrictions = {
 }
 
 // Don't remove cookies before page load
-const allow_cookies = [
+// allow_cookies are completed with domains in sites(_custom).json (default allow/remove_cookies)
+var allow_cookies = [
+'adelaidenow.com.au',
 'barrons.com',
+'bostonglobe.com',
+'cairnspost.com.au',
+'couriermail.com.au',
+'dailytelegraph.com.au',
+'dn.se',
+'folha.uol.com.br',
+'goldcoastbulletin.com.au',
 'haaretz.co.il',
 'haaretz.com',
 'handelsblatt.com',
+'heraldsun.com.au',
+'kleinezeitung.at',
 'lemonde.fr',
 'lrb.co.uk',
+'mexiconewsdaily.com',
 'nknews.org',
+'ntnews.com.au',
 'nytimes.com',
 'parool.nl',
 'prime.economictimes.indiatimes.com',
@@ -28,13 +41,16 @@ const allow_cookies = [
 'scribd.com',
 'techinasia.com',
 'telegraph.co.uk',
+'the-american-interest.com',
 'theathletic.com',
 'theaustralian.com.au',
 'themarker.com',
 'themercury.com.au',
 'thetimes.co.uk',
+'townsvillebulletin.com.au',
 'trouw.nl',
 'volkskrant.nl',
+'weeklytimesnow.com.au',
 'wsj.com',
 ]
 
@@ -53,21 +69,32 @@ const remove_cookies_select_hold = {
 // select only specific cookie(s) to drop from remove_cookies domains
 const remove_cookies_select_drop = {
 	'ad.nl': ['temptationTrackingId'],
-	'bostonglobe.com': ['FMPaywall'],
+								  
 	'caixinglobal.com': ['CAIXINGLB_LOGIN_UUID'],
 	'demorgen.be': ['TID_ID'],
+	'dn.se': ['randomSplusId'],
 	'ed.nl': ['temptationTrackingId'],
-	'nrc.nl': ['counter']
+	'nrc.nl': ['counter'],
+	'theatlantic.com': ['articleViews']
 }
 
 // Override User-Agent with Googlebot
 const use_google_bot = [
+'adelaidenow.com.au',
 'barrons.com',
+'cairnspost.com.au',
+'couriermail.com.au',
+'dailytelegraph.com.au',
+'dn.se',
+'goldcoastbulletin.com.au',
 'haaretz.co.il',
 'haaretz.com',
 'handelsblatt.com',
+'heraldsun.com.au',
 'lemonde.fr',
+'mexiconewsdaily.com',
 'nknews.org',
+'ntnews.com.au',
 'prime.economictimes.indiatimes.com',
 'quora.com',
 'telegraph.co.uk',
@@ -76,34 +103,43 @@ const use_google_bot = [
 'themarker.com',
 'themercury.com.au',
 'thetimes.co.uk',
+'townsvillebulletin.com.au',
+'weeklytimesnow.com.au',
 'wsj.com',
 ]
-
-function setDefaultOptions() {
-  browser.storage.sync.set({
-    sites: defaultSites
-  }, function() {
-    browser.runtime.openOptionsPage();
-  });
-}
-
-const blockedRegexes = {
+// block paywall-scripts individually
+var blockedRegexes = {
+'adweek.com': /.+\.lightboxcdn\.com\/.+/,
 'afr.com': /afr\.com\/assets\/vendorsReactRedux_client.+\.js/,
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
+'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
+'challenges.fr': /.+\.poool\.fr\/.+/,
+'chicagobusiness.com': /.+\.tinypass\.com\/.+/,
 'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
+'digiday.com': /.+\.tinypass\.com\/.+/,
 'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
+'elpais.com': /.+\.epimg\.net\/js\/.+\/noticia\.min\.js/,
+'exame.abril.com.br': /.+\.tinypass\.com\/.+/,
+'folha.uol.com.br': /.+\.folha\.uol\.com\.br\/paywall\/js\/.+\/publicidade\.ads\.js/,
+'globo.com': /.+\.tinypass\.com\/.+/,
 'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
+'fortune.com':  /.+\.tinypass\.com\/.+/,
 'haaretz.co.il': /haaretz\.co\.il\/htz\/js\/inter\.js/,
+'haaretz.com': /haaretz\.com\/hdc\/web\/js\/minified\/header-scripts-int.js.+/,
 'inquirer.com': /.+\.tinypass\.com\/.+/,
+'lastampa.it': /.+\.repstatic\.it\/minify\/sites\/lastampa\/.+\/config\.cache\.php\?name=social_js/,
+'lejdd.fr': /.+\.swisspay\.ch\/.+/,
 'leparisien.fr': /.+\.tinypass\.com\/.+/,
 'lesechos.fr': /.+\.tinypass\.com\/.+/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
 'newcastleherald.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
-'nytimes.com': /(.+meter-svc\.nytimes\.com\/meter\.js.+|.+mwcm\.nyt\.com\/.+\.js)/,
+'nytimes.com': /(.+meter-svc\.nytimes\.com\/meter\.js.+|.+mwcm\.nyt\.com\/.+\.js)/,																		   
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
+'sloanreview.mit.edu': /.+\.tinypass\.com\/.+/,
 'spectator.co.uk': /.+\.tinypass\.com\/.+/,
 'theglobeandmail.com': /theglobeandmail\.com\/pb\/resources\/scripts\/build\/chunk-bootstraps\/.+\.js/,
-'thenation.com': /thenation\.com\/.+\/paywall-script\.php/
+'thenation.com': /thenation\.com\/.+\/paywall-script\.php/,
+'valeursactuelles.com': /.+\.poool\.fr\/.+/
 };
 
 const userAgentDesktop = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -111,6 +147,13 @@ const userAgentMobile = "Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible ; 
 
 var enabledSites = [];
 
+function setDefaultOptions() {
+  browser.storage.sync.set({
+    sites: defaultSites
+  }, function() {
+    browser.runtime.openOptionsPage();
+  });
+}					  
 // Get the enabled sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
 browser.storage.sync.get({
   sites: {}
@@ -173,7 +216,7 @@ browser.runtime.onInstalled.addListener(function (details) {
   }
 });
 
-// Disable javascript for these sites
+// Disable javascript for these sites/general paywall-scripts
 browser.webRequest.onBeforeRequest.addListener(function(details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -181,7 +224,7 @@ browser.webRequest.onBeforeRequest.addListener(function(details) {
   return {cancel: true};
   },
   {
-    urls: ["*://*.tinypass.com/*", "*://*.poool.fr/*", "*://*.piano.io/*"],
+    urls: ["*://*.tinypass.com/*", "*://*.poool.fr/*", "*://*.piano.io/*", "*://*.outbrain.com/*"],
     types: ["script"]
   },
   ["blocking"]
@@ -208,6 +251,20 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	    });
   }
   
+  // remove cookies for regional ADR sites of ad.nl (mainfest.json needs in permissions: <all_urls>)
+  if (isSiteEnabled({url: '.ad.nl'})) {
+	const ad_region_domains = ['bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];
+	var domainVar = new URL(details.url).hostname.replace('www.', '');
+	if (ad_region_domains.includes(domainVar)) {
+		browser.cookies.getAll({domain: domainVar}, function(cookies) {
+			for (var i=0; i<cookies.length; i++) {
+				if (remove_cookies_select_drop['ad.nl'].includes(cookies[i].name)){
+					browser.cookies.remove({url: (cookies[i].secure ? "https://" : "http://") + cookies[i].domain + cookies[i].path, name: cookies[i].name});
+				}
+			}
+		});
+	}
+  }																									
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
   for (var domain in blockedRegexes) {
 	  if ((isSiteEnabled({url: '.'+ domain}) || isSiteEnabled({url: header_referer})) && details.url.match(blockedRegexes[domain])) {
@@ -215,6 +272,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 				// allow BG paywall-script to set cookies in homepage/sections (else no article-text)
 				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/' 
 						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
+					browser.webRequest.handlerBehaviorChanged(function () {});														  
 					break;
 				} else if (header_referer.indexOf('theglobeandmail.com') !== -1 && !(header_referer.indexOf('/article-') !== -1)) {
 					browser.webRequest.handlerBehaviorChanged(function () {});
@@ -241,7 +299,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
         // this fixes images not being loaded on cooking.nytimes.com main page
         // referrer has to be *nytimes.com otherwise returns 403
         requestHeader.value = 'https://cooking.nytimes.com';
-      } else if (details.url.indexOf("ft.com") !== -1) {
+      } else if (details.url.indexOf("ft.com") !== -1 || details.url.indexOf("kleinezeitung.at") !== -1) {
         requestHeader.value = 'https://www.facebook.com/';
       } else {
         requestHeader.value = 'https://www.google.com/';
@@ -257,7 +315,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // otherwise add it
   if (!setReferer) {
-    if (details.url.indexOf("ft.com") !== -1) {
+      if (details.url.indexOf("ft.com") !== -1 || details.url.indexOf("kleinezeitung.at") !== -1) {
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.facebook.com/'
@@ -372,3 +430,7 @@ function getParameterByName(name, url) {
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+function stripQueryStringAndHashFromPath(url) {
+  return url.split("?")[0].split("#")[0];
+}											   
