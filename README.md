@@ -54,7 +54,8 @@
 [Scientific American](https://www.scientificamerican.com)*
 ##### Blogs
 [Medium](https://www.medium.com) (all sites) -
-[SofRep](https://sofrep.com)
+[SofRep](https://sofrep.com) -
+[The Daily Beast](https://www.thedailybeast.com)
 
 ##### Local US news
 [Baltimore Sun](baltimoresun.com) -
