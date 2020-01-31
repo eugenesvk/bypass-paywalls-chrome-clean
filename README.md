@@ -171,6 +171,7 @@
 
 #### East Asia
 [Caixin Global](https://www.caixinglobal.com) -
+[Harvard Business Review Taiwan](https://www.hbrtaiwan.com) -
 [Nikkei Asian Review](https://asia.nikkei.com) -
 [NK News](https://www.nknews.org) -
 [Tech in Asia](https://www.techinasia.com) -
