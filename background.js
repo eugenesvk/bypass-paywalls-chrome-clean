@@ -32,6 +32,7 @@ var allow_cookies = [
 'lemonde.fr',
 'lrb.co.uk',
 'mexiconewsdaily.com',
+'nationalreview.com',
 'nknews.org',
 'ntnews.com.au',
 'nytimes.com',

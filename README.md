@@ -21,6 +21,7 @@
 [First Things](https://www.firstthings.com) -
 [Foreign Policy](https://www.foreignpolicy.com) -
 [Harper's Magazine](https://harpers.org) -
+[National Review](https://www.nationalreview.com) -
 [The American Interest](https://www.the-american-interest.com) -
 [The Atlantic](https://www.theatlantic.com) -
 [The Christian Science Monitor](https://www.csmonitor.com) -
