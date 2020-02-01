@@ -140,6 +140,7 @@ var blockedRegexes = {
 'newcastleherald.com.au': /.+cdn-au\.piano\.io\/api\/tinypass.+\.js/,
 'nytimes.com': /(.+meter-svc\.nytimes\.com\/meter\.js.+|.+mwcm\.nyt\.com\/.+\.js)/,																		   
 'nzherald.co.nz': /nzherald\.co\.nz\/.+\/headjs\/.+\.js/,
+'repubblica.it': /scripts\.repubblica\.it\/pw\/pw\.js.+/,
 'sloanreview.mit.edu': /.+\.tinypass\.com\/.+/,
 'spectator.co.uk': /.+\.tinypass\.com\/.+/,
 'thedailybeast.com': /.+\.tinypass\.com\/.+/,
