@@ -160,6 +160,7 @@
 [De Morgen](https://www.demorgen.be) -
 [De Tijd](https://www.tijd.be) -
 [Groene Amsterdammer](https://www.groene.nl) -
+[Het Financieel Dagblad](https://fd.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
