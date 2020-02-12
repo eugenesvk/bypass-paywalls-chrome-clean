@@ -157,10 +157,12 @@
 [PZC](https://www.pzc.nl) -
 [Stentor](https://www.destentor.nl) -
 [Tubantia](https://tubantia.nl)\
+[Dagblad van het Noorden](https://www.dvhn.nl) -
 [De Morgen](https://www.demorgen.be) -
 [De Tijd](https://www.tijd.be) -
 [Groene Amsterdammer](https://www.groene.nl) -
 [Het Financieel Dagblad](https://fd.nl) -
+[Leeuwarder Courant](https://www.lc.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
@@ -237,6 +239,7 @@ You can submit a request for a new website [here](https://github.com/magnolia123
 ### Troubleshooting
 * This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work try turning off uBlock and refreshing.
+* Make sure the (new) site is checked under Options.
 
 ### Changelog
 * Visit the [releases page](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases).
