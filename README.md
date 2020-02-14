@@ -112,7 +112,8 @@
 [The Spectator Australia](https://www.spectator.com.au) -
 [The Sydney Morning Herald](https://www.smh.com.au) –
 [The Weekly Times](https://www.weeklytimesnow.com.au) –
-[Townsville Bulletin](https://www.townsvillebulletin.com.au)
+[Townsville Bulletin](https://www.townsvillebulletin.com.au) -
+[WAtoday](https://www.watoday.com.au)
 
 #### Canada
 [National Post](https://www.nationalpost.com) -
@@ -239,6 +240,7 @@ You can submit a request for a new website [here](https://github.com/magnolia123
 ### Troubleshooting
 * This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work try turning off uBlock and refreshing.
+* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
 * Make sure the (new) site is checked under Options.
 
 ### Changelog
