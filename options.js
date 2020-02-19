@@ -25,6 +25,9 @@ function save_options() {
       window.close();
     }, 500);
   });
+
+  // Refresh the current tab
+  browser.tabs.reload({bypassCache: true});
 }
 
 //Fetch sites.json & sites_custom.json
