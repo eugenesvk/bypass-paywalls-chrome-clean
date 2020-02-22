@@ -9,7 +9,7 @@ if (!localstorage_hold){
 
 // Content workarounds/domain
 if (location.hostname.endsWith('rep.repubblica.it')) {
-    if (location.href.includes('/pwa/')) {
+     if (location.href.includes('/pwa/')) {
         location.href = location.href.replace('/pwa/', '/ws/detail/');
     }
     if (location.href.includes('/ws/detail/')) {
@@ -411,6 +411,11 @@ if (window.location.href.indexOf("lc.nl") !== -1 || window.location.href.indexOf
         if (preview && window.location.href.indexOf("harvest_referrer") === -1)
             location.href = location.href + '?harvest_referrer=https%3A%2F%2Fnos.nl%2Fplus.html';
     });
+}
+
+if (window.location.href.indexOf("newyorker.com") !== -1) {
+    const paywall_bar = document.querySelector('.paywall-bar');
+    removeDOMElement(paywall_bar);
 }
 
 // General Functions
