@@ -9,7 +9,7 @@ if (!localstorage_hold){
 
 // Content workarounds/domain
 if (location.hostname.endsWith('rep.repubblica.it')) {
-     if (location.href.includes('/pwa/')) {
+    if (location.href.includes('/pwa/')) {
         location.href = location.href.replace('/pwa/', '/ws/detail/');
     }
     if (location.href.includes('/ws/detail/')) {
@@ -400,8 +400,8 @@ if (window.location.href.indexOf("cen.acs.org") !== -1) {
 
 if (window.location.href.indexOf("lesechos.fr") !== -1) {
     const ad_block = document.querySelectorAll('.jzxvkd-1');
-    for (let i=0; i < ad_block.length; i++) {
-      ad_block[i].remove();
+    for (let i = 0; i < ad_block.length; i++) {
+        ad_block[i].setAttribute('style', 'display:none');
     }
 }
 
