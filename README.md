@@ -5,7 +5,7 @@
 * [Sites with limited number of free articles](#sites-with-limited-number-of-free-articles)
 * [New site requests](#new-site-requests)
 * [Troubleshooting](#troubleshooting)
-* [Changelog](#changelog)
+* [Changelog-releases](#changelog-releases)
 * [Pull Requests](#pull-requests)
 * [Show your support](#show-your-support)
 * [License](#license)
@@ -251,7 +251,7 @@ You can submit a request for a new website [here](https://github.com/magnolia123
 * If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
 * Make sure the (new) site is checked under Options.
 
-### Changelog
+### Changelog-releases
 * Visit the [releases page](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases).
 
 ### Pull Requests
