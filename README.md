@@ -170,6 +170,7 @@
 [De Tijd](https://www.tijd.be) -
 [Groene Amsterdammer](https://www.groene.nl) -
 [Het Financieel Dagblad](https://fd.nl) -
+[Humo.be]{https://www.humo.be} -
 [Leeuwarder Courant](https://www.lc.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -

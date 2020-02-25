@@ -32,6 +32,7 @@ var allow_cookies = [
 'haaretz.com',
 'handelsblatt.com',
 'heraldsun.com.au',
+'humo.be',
 'kleinezeitung.at',
 'lemonde.fr',
 'lc.nl',
