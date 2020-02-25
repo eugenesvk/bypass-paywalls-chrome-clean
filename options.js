@@ -1,5 +1,5 @@
-// defaultSites are loaded from sites(_custom).json at installation extension (and are saved to local storage)
-var defaultSites = {};
+// defaultSites are loaded from sites.js at installation extension (and are saved to local storage)
+// var defaultSites = {};
 
 // Saves options to browser.storage
 function save_options() {
@@ -30,35 +30,9 @@ function save_options() {
   browser.tabs.reload({bypassCache: true});
 }
 
-//Fetch sites.json & sites_custom.json
-function renderOptions() {
-	const url_sites = browser.runtime.getURL('sites.json');
-	fetch(url_sites)
-		.then(response => { 
-			if (response.ok) { 
-				response.json().then(json => {
-					var defaultSites_merge = {...defaultSites, ...json}; 
-					defaultSites = defaultSites_merge;
-					// add custom sites
-					const url_sites_custom = 'https://raw.githubusercontent.com/magnolia1234/bypass-paywalls-firefox-clean/master/sites_custom.json';
-					fetch(url_sites_custom)
-						.then(response => {
-							if (response.ok) {
-								response.json().then(json => {
-									var defaultSites_merge = {...defaultSites, ...json}; 
-									defaultSites = defaultSites_merge;
-									renderOptions_default();
-								})
-							} else { renderOptions_default(); }
-						} );
-				})
-			} else { renderOptions_default(); }
-		} );
-}
-
 // Restores checkbox input states using the preferences
 // stored in browser.storage.
-function renderOptions_default() {
+function renderOptions() {
   browser.storage.sync.get({
     sites: {}
   }, function(items) {
