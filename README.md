@@ -45,6 +45,7 @@
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Modern Healthcare](https://www.modernhealthcare.com) -
 [Quartz](https://qz.com) -
+[Seeking Alpha](https://seekingalpha.com) -
 [The Business Journals](https://www.bizjournals.com) -
 [The Wall Street Journal](https://www.wsj.com)
 ##### Sports
@@ -170,7 +171,7 @@
 [De Tijd](https://www.tijd.be) -
 [Groene Amsterdammer](https://www.groene.nl) -
 [Het Financieel Dagblad](https://fd.nl) -
-[Humo.be]{https://www.humo.be} -
+[Humo.be](https://www.humo.be) -
 [Leeuwarder Courant](https://www.lc.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
