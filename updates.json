@@ -3,10 +3,10 @@
   "addons": {
     "magnolia@12.34": {
       "updates": [
-        { "version": "1.6.4.3",
-            "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.4.3/bypass_paywalls_clean-1.6.4.3-an+fx.xpi" },
         { "version": "1.6.4.4",
-            "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.4.4/bypass_paywalls_clean-1.6.4.4-an+fx.xpi" }
+            "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.4.4/bypass_paywalls_clean-1.6.4.4-an+fx.xpi" },
+        { "version": "1.6.6.1",
+            "update_link": "https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.6.1/bypass_paywalls_clean-1.6.6.1-an+fx.xpi" }
         ]
     }
   }
