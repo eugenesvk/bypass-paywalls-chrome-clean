@@ -1,12 +1,12 @@
 
-// Saves options to chrome.storage
+// Saves options to browser.storage
 function save_options() {
     var gh_url = document.getElementById('bypass_sites').value;
     var textareaEl = document.querySelector('#bypass_sites textarea');
     var sites_custom = {};
     if (textareaEl.value !== '')
         var sites_custom = JSON.parse(textareaEl.value);
-    chrome.storage.sync.set({
+    browser.storage.sync.set({
         sites_custom: sites_custom
     }, function () {
         // Update status to let user know custom sites were saved.
@@ -20,7 +20,7 @@ function save_options() {
     });
 }
 
-// Add custom site to chrome.storage
+// Add custom site to browser.storage
 function add_options() {
     var gh_url = document.getElementById('add_site').value;
     var inputEls = document.querySelectorAll('#add_site input');
@@ -46,7 +46,7 @@ function add_options() {
         sites_custom[title]['domain'] = sites_custom[title]['domain'].replace('www.', '');
 
     // add new site to local storage
-    chrome.storage.sync.get({
+    browser.storage.sync.get({
         sites_custom: {}
     }, function (items) {
         var sites_custom_old = items.sites_custom;
@@ -55,7 +55,7 @@ function add_options() {
             sites_custom_old[key] = sites_custom[key];
         }
 
-        chrome.storage.sync.set({
+        browser.storage.sync.set({
             sites_custom: sites_custom_old
         }, function () {
             // Update status to let user know new custom site was added.
@@ -71,7 +71,7 @@ function add_options() {
     });
 }
 
-// Delete custom site to chrome.storage
+// Delete custom site to browser.storage
 function delete_options() {
     var gh_url = document.getElementById('custom_sites').value;
     var selectEl = document.querySelector('#custom_sites select');
@@ -79,13 +79,13 @@ function delete_options() {
     var remove_key = selectEl.value;
 
     // delete site from local storage
-    chrome.storage.sync.get({
+    browser.storage.sync.get({
         sites_custom: {}
     }, function (items) {
         var sites_custom_old = items.sites_custom;
         delete sites_custom_old[remove_key];
 
-        chrome.storage.sync.set({
+        browser.storage.sync.set({
             sites_custom: sites_custom_old
         }, function () {
             // Update status to let user know custom site was deleted.
@@ -101,9 +101,9 @@ function delete_options() {
     });
 }
 
-// Restores checkbox input states using the preferences stored in chrome.storage.
+// Restores checkbox input states using the preferences stored in browser.storage.
 function renderOptions() {
-    chrome.storage.sync.get({
+    browser.storage.sync.get({
         sites_custom: {}
     }, function (items) {
         var sites_custom = items.sites_custom;
