@@ -36,6 +36,7 @@
     "cookies",
     "<all_urls>",
     "storage",
+    "tabs",
     "webRequest",
     "webRequestBlocking"
   ],

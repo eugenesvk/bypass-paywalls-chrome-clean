@@ -455,6 +455,27 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   urls: ['<all_urls>']
 }, ['blocking', 'requestHeaders']);
 
+browser.tabs.onUpdated.addListener(updateBadge);
+browser.tabs.onActivated.addListener(updateBadge);
+
+function updateBadge() {
+    browser.tabs.query({
+        active: true,
+        currentWindow: true
+    }, function (arrayOfTabs) {
+        var activeTab = arrayOfTabs[0];
+        if (!activeTab)
+            return;
+        var textB = getTextB(activeTab.url);
+        browser.browserAction.setBadgeBackgroundColor({color: "red"});
+        browser.browserAction.setBadgeText({text: textB});
+    });
+}
+
+function getTextB(currentUrl) {
+    return currentUrl && isSiteEnabled({url: currentUrl}) ? 'ON' : '';
+}
+
 // remove cookies after page load
 browser.webRequest.onCompleted.addListener(function(details) {
   for (var domainIndex in remove_cookies) {
