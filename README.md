@@ -184,6 +184,7 @@
 ##### Spain
 [El País](https://elpais.com)
 ##### Sweden
+[Aftonbladet](https://www.aftonbladet.se) -
 [Dagens Nyheter](https://www.dn.se)
 
 #### East Asia
