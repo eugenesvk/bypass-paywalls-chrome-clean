@@ -27,7 +27,14 @@ function save_options() {
   });
 
   // Refresh the current tab
-  browser.tabs.reload({bypassCache: true});
+  browser.tabs.query({
+      active: true,
+      currentWindow: true
+  }, function (tabs) {
+      browser.tabs.update(tabs[0].id, {
+          url: tabs[0].url
+      });
+  });
 }
 
 // Restores checkbox input states using the preferences stored in browser.storage.
