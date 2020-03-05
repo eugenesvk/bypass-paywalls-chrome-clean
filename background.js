@@ -122,6 +122,7 @@ const use_google_bot_default = [
 ];
 var use_google_bot_custom = [];
 var use_google_bot = use_google_bot_default.concat(use_google_bot_custom);
+
 // block paywall-scripts individually
 var blockedRegexes = {
 'adweek.com': /.+\.lightboxcdn\.com\/.+/,
@@ -312,6 +313,8 @@ browser.webRequest.onBeforeRequest.addListener(function(details) {
 },
     ["blocking"]);
 
+// list of regional ad.nl sites
+const ad_region_domains = ['bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];
 browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var requestHeaders = details.requestHeaders;
 
@@ -335,7 +338,6 @@ browser.webRequest.onBeforeSendHeaders.addListener(function(details) {
   
   // remove cookies for regional ADR sites of ad.nl (mainfest.json needs in permissions: <all_urls>)
   if (isSiteEnabled({url: '.ad.nl'})) {
-	const ad_region_domains = ['bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];
 	var domainVar = new URL(details.url).hostname.replace('www.', '');
 	if (ad_region_domains.includes(domainVar)) {
 		browser.cookies.getAll({domain: domainVar}, function(cookies) {
@@ -475,7 +477,13 @@ function updateBadge() {
 }
 
 function getTextB(currentUrl) {
-    return currentUrl && isSiteEnabled({url: currentUrl}) ? 'ON' : '';
+    // check regional ad.nl site
+    let is_adr_site = false;
+    if (currentUrl && isSiteEnabled({url: '.ad.nl'})) {
+        let domainVar = new URL(currentUrl).hostname.replace('www.', '');
+        is_adr_site = ad_region_domains.includes(domainVar);
+    }
+    return currentUrl && (isSiteEnabled({url: currentUrl}) || is_adr_site) ? 'ON' : '';
 }
 
 // remove cookies after page load
