@@ -19,7 +19,7 @@ function save_options() {
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
-     status.textContent = 'Options saved.';
+    status.textContent = 'Options saved.';
     setTimeout(function() {
       status.textContent = '';
       window.close();
@@ -31,9 +31,11 @@ function save_options() {
       active: true,
       currentWindow: true
   }, function (tabs) {
+      if (tabs[0].url.indexOf("http") !== -1) {
       browser.tabs.update(tabs[0].id, {
           url: tabs[0].url
       });
+      }
   });
 }
 
