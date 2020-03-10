@@ -136,6 +136,7 @@
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
 [London Review of Books](https://www.lrb.co.uk) -
+[The Athletic UK](https://theathletic.com) -
 [The Economist](https://www.economist.com) -
 [The Irish Times](https://www.irishtimes.com)* -
 [The New Statesman](https://www.newstatesman.com) -
@@ -157,6 +158,7 @@
 [Kleine Zeitung](https://www.kleinezeitung.at)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
+[Il Messaggero](https://www.ilmessaggero.it) -
 [La Repubblica](https://www.repubblica.it) -
 [La Stampa](https://www.lastampa.it)
 ##### Netherlands/Flanders
