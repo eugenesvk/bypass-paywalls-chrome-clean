@@ -21,7 +21,6 @@ var allow_cookies = [
 'bostonglobe.com',
 'cairnspost.com.au',
 'clarin.com',
-'corriere.it',
 'couriermail.com.au',
 'dailytelegraph.com.au',
 'dn.se',
@@ -122,7 +121,7 @@ const use_google_bot_default = [
 ];
 var use_google_bot_custom = [];
 var use_google_bot = use_google_bot_default.concat(use_google_bot_custom);
-//_paywall\.sjs
+
 // block paywall-scripts individually
 var blockedRegexes = {
 'adweek.com': /.+\.lightboxcdn\.com\/.+/,
@@ -134,7 +133,7 @@ var blockedRegexes = {
 'challenges.fr': /.+\.poool\.fr\/.+/,
 'chicagobusiness.com': /.+\.tinypass\.com\/.+/,
 'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
-'corriere.it': /(.+\.rcsobjects\.it\/rcs_cpmt\/.+\/corriere_ct\.js|.+\.corriereobjects\.it\/.+\/libs\/js\/_paywall\.sjs)/,
+'corriere.it': /(\.rcsobjects\.it\/rcs_cpmt\/|\.rcsobjects\.it\/rcs_tracking-service\/|\.corriereobjects\.it\/.+\/js\/_paywall\.sjs|\.corriereobjects\.it\/.*\/js\/tracking\/)/,
 'digiday.com': /.+\.tinypass\.com\/.+/,
 'economist.com': /(.+\.tinypass\.com\/.+|economist\.com\/_next\/static\/runtime\/main.+\.js)/,
 'elmercurio.com': /merreader\.emol\.cl\/assets\/js\/vendor\/modal\.js/,
