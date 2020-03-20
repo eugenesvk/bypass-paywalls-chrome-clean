@@ -63,7 +63,6 @@ var allow_cookies = [
 'volkskrant.nl',
 'weeklytimesnow.com.au',
 'worldpoliticsreview.com',
-'wsj.com',
 ]
 
 // Removes cookies after page load
@@ -75,7 +74,8 @@ var remove_cookies = [
 const remove_cookies_select_hold = {
 	'newstatesman.com': ['STYXKEY_nsversion'],
 	'qz.com': ['gdpr'],
-	'washingtonpost.com': ['wp_gdpr']
+	'washingtonpost.com': ['wp_gdpr'],
+	'wsj.com': ['wsjregion']
 }
 
 // select only specific cookie(s) to drop from remove_cookies domains
