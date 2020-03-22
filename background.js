@@ -17,7 +17,6 @@ const restrictions = {
 var allow_cookies = [
 'adelaidenow.com.au',
 'aftonbladet.se',
-'barrons.com',
 'bostonglobe.com',
 'cairnspost.com.au',
 'clarin.com',
@@ -72,6 +71,7 @@ var remove_cookies = [
 
 // select specific cookie(s) to hold from remove_cookies domains
 const remove_cookies_select_hold = {
+	'barrons.com': ['wsjregion'],
 	'newstatesman.com': ['STYXKEY_nsversion'],
 	'qz.com': ['gdpr'],
 	'washingtonpost.com': ['wp_gdpr'],
