@@ -156,6 +156,7 @@ var blockedRegexes = {
 'lejdd.fr': /.+\.swisspay\.ch\/.+/,
 'leparisien.fr': /.+\.tinypass\.com\/.+/,
 'lesechos.fr': /.+\.tinypass\.com\/.+/,
+'lopinion.fr': /.+\.poool\.fr\/.+/,
 'lrb.co.uk': /.+\.tinypass\.com\/.+/,
 'modernhealthcare.com': /.+\.tinypass\.com\/.+/,
 'nationalreview.com': /.+\.blueconic\.net\/.+/,
