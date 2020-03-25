@@ -1,7 +1,7 @@
 // defaultSites are loaded from sites.js at installation extension (and are saved to local storage)
 // var defaultSites = {};
 
-// Saves options to browser.storage
+// Saves options to ext_api.storage
 function save_options() {
   var gh_url = document.getElementById('bypass_sites').value;
   var inputEls = document.querySelectorAll('#bypass_sites input');
@@ -14,7 +14,7 @@ function save_options() {
     return memo;
   }, {});
 
-  browser.storage.sync.set({
+  ext_api.storage.sync.set({
     sites: sites
   }, function() {
     // Update status to let user know options were saved.
@@ -27,22 +27,21 @@ function save_options() {
   });
 
   // Refresh the current tab
-  browser.tabs.query({
+  ext_api.tabs.query({
       active: true,
       currentWindow: true
   }, function (tabs) {
-      if (tabs[0].url.indexOf("http") !== -1) {
-      browser.tabs.update(tabs[0].id, {
+      if (tabs[0].url && tabs[0].url.indexOf("http") !== -1) {
+      ext_api.tabs.update(tabs[0].id, {
           url: tabs[0].url
       });
       }
   });
 }
 
-// Restores checkbox input states using the preferences stored in browser.storage.
-
+// Restores checkbox input states using the preferences stored in ext_api.storage.
 function renderOptions() {
-  browser.storage.sync.get({
+  ext_api.storage.sync.get({
     sites: {}, sites_custom: {}
   }, function(items) {
     var sites = items.sites;
