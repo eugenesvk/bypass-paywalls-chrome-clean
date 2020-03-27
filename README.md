@@ -205,7 +205,6 @@
 
 #### India
 [Bloomberg Quint](https://www.bloombergquint.com)* -
-[ET Prime](https://prime.economictimes.indiatimes.com) -
 [The Hindu](https://www.thehindu.com)
 
 #### Israel

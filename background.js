@@ -9,7 +9,6 @@ var ext_api = chrome || browser;
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
-  'prime.economictimes.indiatimes.com': /.+prime\.economictimes\.indiatimes\.com\/news\/[0-9]{8}\/.+/,
   'wsj.com': /(.+wsj\.com\/articles\/.+|.+blogs\.wsj\.com\/.+)/
 }
 
@@ -46,7 +45,6 @@ var allow_cookies = [
 'ntnews.com.au',
 'nytimes.com',
 'parool.nl',
-'prime.economictimes.indiatimes.com',
 'quora.com',
 'scribd.com',
 'seekingalpha.com',
@@ -110,7 +108,6 @@ const use_google_bot_default = [
 'lemonde.fr',
 'mexiconewsdaily.com',
 'ntnews.com.au',
-'prime.economictimes.indiatimes.com',
 'quora.com',
 'seekingalpha.com',
 'telegraph.co.uk',
@@ -190,7 +187,7 @@ function setDefaultOptions() {
   }, function() {
     ext_api.runtime.openOptionsPage();
   });
-}					  
+}
 
 // Get the enabled sites (from local storage) & add to allow/remove_cookies (if not already in one of these arrays)
 // Add googlebot- and block_javascript-settings for custom sites
@@ -307,9 +304,9 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 
 var block_js_default = ["*://*.tinypass.com/*", "*://*.poool.fr/*", "*://*.piano.io/*", "*://*.outbrain.com/*"];
 var block_js_custom = [];
-var block_js = block_js_default.concat(block_js_custom);			
+var block_js = block_js_default.concat(block_js_custom);
 // Disable javascript for these sites/general paywall-scripts
-ext_api.webRequest.onBeforeRequest.addListener(function(details) {
+ext_api.webRequest.onBeforeRequest.addListener(function (details) {
     if (!isSiteEnabled(details)) {
         return;
     }
@@ -348,7 +345,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 			}
 	    });
   }
-  
+
   // remove cookies for regional ADR sites of ad.nl (mainfest.json needs in permissions: <all_urls>)
   if (isSiteEnabled({url: '.ad.nl'})) {
 	var domainVar = new URL(details.url).hostname.replace('www.', '');
@@ -368,9 +365,9 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 	  if ((isSiteEnabled({url: '.'+ domain}) || isSiteEnabled({url: header_referer})) && details.url.match(blockedRegexes[domain])) {
 			if (details.url.indexOf(domain) !== -1 || header_referer.indexOf(domain) !== -1) {
 				// allow BG paywall-script to set cookies in homepage/sections (else no article-text)
-				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/' 
+				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/'
 						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
-					ext_api.webRequest.handlerBehaviorChanged(function () {});														  
+					ext_api.webRequest.handlerBehaviorChanged(function () {});
 					break;
 				} else if (header_referer.indexOf('theglobeandmail.com') !== -1 && !(header_referer.indexOf('/article-') !== -1)) {
 					ext_api.webRequest.handlerBehaviorChanged(function () {});
@@ -386,12 +383,12 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   }
 
   var tabId = details.tabId;
-  
+
   var useUserAgentMobile = false;
   var setReferer = false;
 
   // if referer exists, set it to google
-  requestHeaders = requestHeaders.map(function(requestHeader) {
+  requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {
       if (details.url.indexOf("cooking.nytimes.com/api/v1/users/bootstrap") !== -1) {
         // this fixes images not being loaded on cooking.nytimes.com main page
