@@ -84,6 +84,7 @@ var defaultSites =
   "Mountain View Voice": "mv-voice.com",
   "National Post": "nationalpost.com",
   "National Review": "nationalreview.com",
+  "Neue Zürcher Zeitung": "nzz.ch",
   "New York Magazine": "nymag.com",
   "New Zealand Herald": "nzherald.co.nz",
   "Newcastle Herald": "newcastleherald.com.au",
