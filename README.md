@@ -206,6 +206,7 @@
 
 #### India
 [Bloomberg Quint](https://www.bloombergquint.com)* -
+[LiveMint](https://www.livemint.com) -
 [The Hindu](https://www.thehindu.com)
 
 #### Israel
