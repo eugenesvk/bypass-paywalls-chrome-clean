@@ -14,6 +14,7 @@
 ### Installation
  [Download and install the latest version](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases/download/v1.6.9.1/bypass_paywalls_clean-1.6.9.1-an+fx.xpi)\
  Or first visit the [releases page](https://github.com/magnolia1234/bypass-paywalls-firefox-clean/releases).\
+ Here you can also find a limited permissions version (custom sites not working though).\
  Install add-on by downloading xpi-file (assets).
 
 ### List of supported websites
@@ -227,6 +228,8 @@
 [La Tercera](https://www.latercera.com)
 ##### Mexico
 [Mexico News Daily](https://mexiconewsdaily.com)
+##### Peru
+[El Comercio](https://elcomercio.pe)
 
 #### Encyclopedia/Book library/Knowledge base
 [Encyclopedia Britannica](https://www.britannica.com) -
