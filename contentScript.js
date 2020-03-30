@@ -475,6 +475,20 @@ else if (matchDomain('ladepeche.fr')) {
     });
 }
 
+else if (matchDomain('challenges.fr')) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const hidden_image = document.querySelectorAll('img.lazyload');
+        for (let i = 0; i < hidden_image.length; i++) {
+            var src = hidden_image[i].src;
+            if (src.includes("/placeholders/") || src === '') {
+                var data_src = hidden_image[i].getAttribute("data-src");
+                if (data_src)
+                    hidden_image[i].setAttribute('src', data_src);
+            }
+        }
+    });
+}
+
 // General Functions
 function removeDOMElement(...elements) {
     for (let element of elements) {

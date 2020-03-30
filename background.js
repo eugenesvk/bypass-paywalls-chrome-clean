@@ -133,7 +133,7 @@ var blockedRegexes = {
 'bloomberg.com': /.+\.tinypass\.com\/.+/,
 'bostonglobe.com': /meter\.bostonglobe\.com\/js\/.+/,
 'businessinsider.com': /(.+\.tinypass\.com\/.+|cdn\.onesignal\.com\/sdks\/.+\.js)/,
-'challenges.fr': /.+\.poool\.fr\/.+/,
+'challenges.fr': /(.+\.challenges\.fr\/js\/|.+\.poool\.fr\/.+)/,
 'chicagobusiness.com': /.+\.tinypass\.com\/.+/,
 'chicagotribune.com': /.+:\/\/.+\.tribdss\.com\//,
 'corriere.it': /(\.rcsobjects\.it\/rcs_cpmt\/|\.rcsobjects\.it\/rcs_tracking-service\/|\.corriereobjects\.it\/.+\/js\/_paywall\.sjs|\.corriereobjects\.it\/.*\/js\/tracking\/|\.userzoom\.com\/files\/js\/|\.lp4\.io\/app\/)/,
@@ -379,10 +379,13 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 				// allow BG paywall-script to set cookies in homepage/sections (else no article-text)
 				if (details.url.indexOf('meter.bostonglobe.com/js/') !== -1 && (header_referer === 'https://www.bostonglobe.com/'
 						|| header_referer.indexOf('/?p1=BGHeader_') !== -1  || header_referer.indexOf('/?p1=BGMenu_') !== -1)) {
-					ext_api.webRequest.handlerBehaviorChanged(function () {});
+					ext_api.webRequest.handlerBehaviorChanged();
 					break;
 				} else if (header_referer.indexOf('theglobeandmail.com') !== -1 && !(header_referer.indexOf('/article-') !== -1)) {
-					ext_api.webRequest.handlerBehaviorChanged(function () {});
+					ext_api.webRequest.handlerBehaviorChanged();
+					break;
+				} else if (header_referer.indexOf('challenges.fr') !== -1 && (!(header_referer.indexOf('_') !== -1) || (header_referer.indexOf('/videos/') !== -1))) {
+					ext_api.webRequest.handlerBehaviorChanged();
 					break;
 				}
 				return { cancel: true };
