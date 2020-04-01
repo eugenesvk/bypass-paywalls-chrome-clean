@@ -9,6 +9,7 @@ var ext_api = chrome || browser;
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
+  'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'wsj.com': /(.+wsj\.com\/articles\/.+|.+blogs\.wsj\.com\/.+)/
 }
 
