@@ -9,6 +9,8 @@ var ext_api = chrome || browser;
 
 const restrictions = {
   'barrons.com': /.+barrons\.com\/articles\/.+/,
+  'elcomercio.pe': /.+\/elcomercio.pe\/.+((\w)+(\-)+){3,}.+/,
+  'gestion.pe': /.+\/gestion.pe\/.+((\w)+(\-)+){3,}.+/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'wsj.com': /(.+wsj\.com\/articles\/.+|.+blogs\.wsj\.com\/.+)/
 }
@@ -29,6 +31,7 @@ var allow_cookies = [
 'elmercurio.com',
 'fd.nl',
 'folha.uol.com.br',
+'gestion.pe',
 'goldcoastbulletin.com.au',
 'haaretz.co.il',
 'haaretz.com',
@@ -145,6 +148,7 @@ var blockedRegexes = {
 'elpais.com': /.+\.epimg\.net\/js\/.+\/noticia\.min\.js/,
 'exame.abril.com.br': /.+\.tinypass\.com\/.+/,
 'folha.uol.com.br': /.+\.folha\.uol\.com\.br\/paywall\/js\/.+\/publicidade\.ads\.js/,
+'gestion.pe': /gestion\.pe\/pf\/dist\/template\/gestion-noticia\/default.js/,
 'globo.com': /.+\.tinypass\.com\/.+/,
 'foreignpolicy.com': /.+\.tinypass\.com\/.+/,
 'fortune.com':  /.+\.tinypass\.com\/.+/,
