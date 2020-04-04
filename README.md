@@ -165,7 +165,8 @@
 [Corriere Della Sera](https://www.corriere.it) -
 [Il Messaggero](https://www.ilmessaggero.it) -
 [La Repubblica](https://www.repubblica.it) -
-[La Stampa](https://www.lastampa.it)
+[La Stampa](https://www.lastampa.it) -
+[Le Scienze](https://www.lescienze.it)
 ##### Netherlands/Flanders
 [Algemeen Dagblad](https://www.ad.nl) and regional ADR sites like
 [BN DeStem](https://www.bndestem.nl) -
