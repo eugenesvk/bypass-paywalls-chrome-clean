@@ -60,6 +60,14 @@
 [Towards Data Science](https://www.towardsdatascience.com) -
 [Wired](https://www.wired.com) -
 [Scientific American](https://www.scientificamerican.com)*
+#### Encyclopedia/Book library/Knowledge base
+[Encyclopedia Britannica](https://www.britannica.com) -
+[Glassdoor](https://www.glassdoor.com) -
+[Loeb Classical Library](https://www.loebclassics.com) -
+[Philosophy Now](https://philosophynow.org) -
+[Quora](https://www.quora.com) -
+[Scribd](http://www.scribd.com) -
+[Statista](https://www.statista.com)
 ##### Blogs
 [Medium](https://www.medium.com) (all sites) -
 [SofRep](https://sofrep.com) -
@@ -238,14 +246,6 @@
 ##### Peru
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)
-
-#### Encyclopedia/Book library/Knowledge base
-[Encyclopedia Britannica](https://www.britannica.com) -
-[Glassdoor](https://www.glassdoor.com) -
-[Loeb Classical Library](https://www.loebclassics.com) -
-[Quora](https://www.quora.com) -
-[Scribd](http://www.scribd.com) -
-[Statista](https://www.statista.com)
 
 _*free articles only._
 
