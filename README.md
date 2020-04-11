@@ -66,7 +66,7 @@
 [The Daily Beast](https://www.thedailybeast.com)*
 
 ##### Local US news
-[Baltimore Sun](baltimoresun.com) -
+[Baltimore Sun](https://www.baltimoresun.com) -
 [Crain's Chicago Business](https://www.chicagobusiness.com) -
 [Chicago Tribune](https://www.chicagotribune.com) -
 [Daily Press](https://www.dailypress.com) -
@@ -104,11 +104,10 @@
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [Newcastle Herald](https://www.newcastleherald.com.au) -
 [Northern Territory News](https://www.ntnews.com.au) –
-[The Advertiser](https://www.adelaidenow.com.au) –
+[The Advertiser/AdelaideNow](https://www.adelaidenow.com.au) –
 [The Advocate](https://www.theadvocate.com.au) -
 [The Age](https://www.theage.com.au) -
 [The Australian](https://www.theaustralian.com.au) -
-[The Australian Financial Review](https://www.afr.com) -
 [The Border Mail](https://www.bordermail.com.au) -
 [The Canberra Times](https://www.canberratimes.com.au) -
 [The Courier](https://www.thecourier.com.au) -
@@ -126,6 +125,11 @@
 [The Weekly Times](https://www.weeklytimesnow.com.au) –
 [Townsville Bulletin](https://www.townsvillebulletin.com.au) -
 [WAtoday](https://www.watoday.com.au)
+
+##### > Financial
+[Eureka Report](https://www.eurekareport.com.au) -
+[Intelligent Investor](https://www.intelligentinvestor.com.au) -
+[The Australian Financial Review](https://www.afr.com)
 
 #### Canada
 [National Post](https://www.nationalpost.com) -
