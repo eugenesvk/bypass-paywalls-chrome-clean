@@ -137,6 +137,7 @@
 ##### > Financial
 [Eureka Report](https://www.eurekareport.com.au) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
+[Switzer Report](https://switzersuperreport.com.au) -
 [The Australian Financial Review](https://www.afr.com)
 
 #### Canada
