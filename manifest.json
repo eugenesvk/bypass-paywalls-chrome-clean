@@ -6,7 +6,7 @@
     "applications": {
         "gecko": {
             "id": "magnolia@12.34",
-            "update_url": "https://raw.githubusercontent.com/magnolia1234/bypass-paywalls-firefox-clean/master/updates.json"
+            "update_url": "https://raw.githubusercontent.com/magnolia1234-new/bypass-paywalls-firefox-clean/master/updates.json"
         }
     },
     "browser_action": {
@@ -39,5 +39,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.7.0.2"
+    "version": "1.7.0.3"
 }
