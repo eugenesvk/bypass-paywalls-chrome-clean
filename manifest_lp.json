@@ -17,7 +17,7 @@
     "applications": {
         "gecko": {
             "id": "magnolia_limited_permissions@12.34",
-            "update_url": "https://raw.githubusercontent.com/magnolia1234-new/bypass-paywalls-firefox-clean/master/updates_lp.json"
+            "update_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/updates_lp.json"
         }
     },
     "browser_action": {

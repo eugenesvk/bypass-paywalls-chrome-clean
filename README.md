@@ -12,8 +12,7 @@
 * [License](#license)
 
 ### Installation
- [Download and install the latest version](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/releases/download/v1.7.0.4/bypass_paywalls_clean-1.7.0.4-an+fx.xpi)
- Or first visit the [releases page](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/releases).
+ [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)
  Here you can also find a limited permissions version (custom sites not working though).
  Install add-on by downloading xpi-file (assets).
 
@@ -260,7 +259,7 @@ When coming across a paywall click the cookie icon to remove the cookies then re
 _*May not always succeed_
 
 ### New site requests
-You can submit a request for a new website [here](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/issues/new). Please read the following instructions and share your results for a quicker process. Remember to check the [previous requests](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/issues?q=is%3Aissue+label%3Aenhancement) before asking for a new website.
+You can submit a request for a new website [here](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/issues?status=new&status=open). Please read the following instructions and share your results for a quicker process. Remember to check the [previous requests](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/issues) before asking for a new website.
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.
 2. Open up a new incognito window (Ctrl+Shift+N) and paste the article title into Google.
 3. Click on the same article from the Google search results page. Or you can:
@@ -279,8 +278,8 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
 * Make sure the (new) site is checked under Options.
 
-### Changelog-releases
-* Visit the [releases page](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/releases).
+### Changelog
+* Visit the [changelog page](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/changelog.txt).
 
 ### Pull Requests
 * PRs are welcome.
@@ -289,4 +288,4 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * I am not asking for donations or anything like that, all I ask is that you star this repo.
 
 ### License
-Bypass Paywalls Clean is [MIT-licensed](https://github.com/magnolia1234-new/bypass-paywalls-firefox-clean/blob/master/LICENSE).
+Bypass Paywalls Clean is [MIT-licensed](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/LICENSE).
