@@ -12,7 +12,7 @@
 * [License](#license)
 
 ### Installation
- [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)
+ [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/bypass_paywalls_clean-1.7.0.5.xpi)
  Here you can also find a limited permissions version (custom sites not working though).
  Install add-on by downloading xpi-file (assets).
 
