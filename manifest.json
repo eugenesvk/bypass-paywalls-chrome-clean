@@ -6,7 +6,7 @@
     "applications": {
         "gecko": {
             "id": "magnolia@12.34",
-            "update_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/updates.json"
+            "update_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/updates.json"
         }
     },
     "browser_action": {
