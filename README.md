@@ -12,7 +12,7 @@
 * [License](#license)
 
 ### Installation
- [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/bypass_paywalls_clean-1.7.0.5.xpi)
+ [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)
  Here you can also find a limited permissions version (custom sites not working though).
  Install add-on by downloading xpi-file (assets).
 
@@ -278,8 +278,10 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
 * Make sure the (new) site is checked under Options.
 
-### Changelog
+### Changelog-releases
 * Visit the [changelog page](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/changelog.txt).
+* Or check the [commits](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/commits).
+* [Download the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)
 
 ### Pull Requests
 * PRs are welcome.
