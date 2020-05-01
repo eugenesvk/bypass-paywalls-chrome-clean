@@ -477,6 +477,7 @@ else if (matchDomain('challenges.fr')) {
         if (hidden_par) {
             hidden_par.removeAttribute('style');
         }
+		if (typeof browser === 'object'){
         const hidden_image = document.querySelectorAll('img.lazyload');
         for (let i = 0; i < hidden_image.length; i++) {
             var src = hidden_image[i].src;
@@ -486,6 +487,7 @@ else if (matchDomain('challenges.fr')) {
                     hidden_image[i].setAttribute('src', data_src);
             }
         }
+		}
     });
 }
 
@@ -580,11 +582,14 @@ function removeDOMElement(...elements) {
     }
 }
 
-function matchDomain(domains) {
-    var hostname = window.location.hostname;
+function matchDomain(domains, hostname) {
+    var matched_domain = false;
+    if (!hostname)
+        hostname = window.location.hostname;
     if (typeof domains === 'string')
         domains = [domains];
-    return domains.some(domain => hostname === domain || hostname.endsWith('.' + domain));
+    domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matched_domain = domain));
+    return matched_domain;
 }
 
 function removeClassesByPrefix(el, prefix) {
