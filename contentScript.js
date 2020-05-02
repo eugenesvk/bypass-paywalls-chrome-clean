@@ -505,21 +505,14 @@ else if (matchDomain('ladepeche.fr')) {
 
 else if (matchDomain('challenges.fr')) {
     document.addEventListener('DOMContentLoaded', () => {
-        const hidden_par = document.querySelector('.corps[style="display:none"]');
-        if (hidden_par) {
-            hidden_par.removeAttribute('style');
-        }
-		if (typeof browser === 'object'){
-        const hidden_image = document.querySelectorAll('img.lazyload');
-        for (let i = 0; i < hidden_image.length; i++) {
-            var src = hidden_image[i].src;
-            if (src.includes("/placeholders/") || src === '') {
-                var data_src = hidden_image[i].getAttribute("data-src");
-                if (data_src)
-                    hidden_image[i].setAttribute('src', data_src);
-            }
-        }
-		}
+        const amorce = document.querySelector('.user-paying-amorce');
+        if (amorce)
+            amorce.setAttribute('style', 'display:none !important');
+        const content = document.querySelector('.user-paying-content');
+        if (content)
+            content.setAttribute('style', 'display: block !important');
+        const paywall = document.querySelector('.temp-paywall');
+        removeDOMElement(paywall);
     });
 }
 
