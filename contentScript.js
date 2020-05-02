@@ -447,7 +447,7 @@ else if (matchDomain("lesechos.fr")) {
                 const contentNode = document.createElement('div');
                 contentNode.innerHTML = article;
                 contentNode.className = paywallNode.className;
-                paywallNode.parentNode?.insertBefore(contentNode, paywallNode);
+                paywallNode.parentNode.insertBefore(contentNode, paywallNode);
                 removeDOMElement(paywallNode);
                 const paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
                 if (paywallLastChildNode) {
