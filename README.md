@@ -164,6 +164,7 @@ Install add-on by downloading xpi-file.
 [L'Opinion](https://www.lopinion.fr) –
 [La Dépêche](https://www.ladepeche.fr) –
 [Le Journal du Dimanche](https://lejdd.fr) –
+[Le Journal du Net](https://www.journaldunet.com) -
 [Le Parisien](https://www.leparisien.fr) -
 [Les Échos](https://www.lesechos.fr) -
 [Libération](https://www.liberation.fr)* –
