@@ -33,6 +33,7 @@
         ]
     },
     "description": "Bypass News Sites' Paywalls",
+	"homepage_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean",
     "icons": {
         "128": "bypass.png"
     },
@@ -264,5 +265,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.7.1.0"
+    "version": "1.7.2.0"
 }
