@@ -1,6 +1,13 @@
 
 Changelog Bypass Paywalls Clean - Firefox
 
+* v1.7.3.0 (2020-05-24)
+Add ilManifesto.it
+Fix-update Gestion.pe/ElComercio.pe
+Fix-update Haaretz.com (anti-adblocker)
+Fix-update LeJdD.fr
+Limit contentScript on external content
+
 * v1.7.2.0 (2020-05-17)
 Add Globes (Israel)
 Fix-update Challenges.fr (proper)
@@ -27,7 +34,7 @@ BitBucket transfer
 
 * v1.7.0.4 (2020-04-26)
 Add Frankfurter Allgemeine (Faz.net)
-Fix-update Gestión.pe/ElComercio.pe
+Fix-update Gestion.pe/ElComercio.pe
 Fix-update ilMessaggero.it
 Fix-update WSJ (lift restrictions)
 
