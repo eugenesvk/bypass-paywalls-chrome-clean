@@ -205,6 +205,7 @@ Install add-on by downloading xpi-file.
 [Volkskrant](https://www.volkskrant.nl) -
 [Vrij Nederland](https://www.vn.nl)
 ##### Spain
+[El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com)
 ##### Sweden
 [Aftonbladet](https://www.aftonbladet.se) -
