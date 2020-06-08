@@ -3,17 +3,6 @@
         "scripts": ["sites.js", "background.js"]
     },
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "content_scripts": [{
-            "matches": [
-                "*://*.bloomberg.com/*",
-                "*://*.economist.com/*",
-                "*://*.nytimes.com/*",
-                "*://*.theathletic.com/*",
-                "*://*.washingtonpost.com/*"
-            ],
-            "js": ["contentScript.js"]
-        }
-    ],
     "applications": {
         "gecko": {
             "id": "magnolia_limited_permissions@12.34",
@@ -123,6 +112,7 @@
         "*://*.ilmanifesto.it/*",
         "*://*.ilmessaggero.it/*",
         "*://*.inc.com/*",
+        "*://*.independent.ie/*",
         "*://*.inquirer.com/*",
         "*://*.intelligentinvestor.com.au/*",
         "*://*.irishtimes.com/*",
@@ -244,7 +234,9 @@
         "*://*.ampproject.org/*",
         "*://*.cedsdigital.it/*",
         "*://*.corriereobjects.it/*",
+        "*://*.emol.cl/*",
         "*://*.epimg.net/*",
+        "*://*.flip-pay.com/*",
         "*://*.htmedia.in/*",
         "*://*.lightboxcdn.com/*",
         "*://*.lp4.io/*",
@@ -254,7 +246,6 @@
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*",
         "*://*.viralize.tv/*",
-        "*://merreader.emol.cl/*",
         "*://*.bndestem.nl/*",
         "*://*.bd.nl/*",
         "*://*.ed.nl/*",
