@@ -207,6 +207,8 @@ Install add-on by downloading xpi-file.
 [Trouw](https://www.trouw.nl) -
 [Volkskrant](https://www.volkskrant.nl) -
 [Vrij Nederland](https://www.vn.nl)
+##### Russia
+[Republic.ru](https://republic.ru)
 ##### Spain
 [El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com)
