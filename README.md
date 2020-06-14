@@ -55,6 +55,7 @@ Install add-on by downloading xpi-file.
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
 [Dark Reading](https://www.darkreading.com) -
+[Discover Magazine](https://www.discovermagazine.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
 [Towards Data Science](https://www.towardsdatascience.com) -
 [Wired](https://www.wired.com) -
