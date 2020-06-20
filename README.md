@@ -17,11 +17,11 @@ Here you can also find a limited permissions version (custom sites will not be w
 Install add-on by downloading xpi-file.
 
 ### List of supported websites
-#### United States of America
 ##### World news
 [First Things](https://www.firstthings.com) -
 [Foreign Policy](https://www.foreignpolicy.com) -
 [Harper's Magazine](https://harpers.org) -
+[Inkl](https://www.inkl.com) -
 [National Review](https://www.nationalreview.com) -
 [The American Interest](https://www.the-american-interest.com) -
 [The Atlantic](https://www.theatlantic.com) -
@@ -75,7 +75,7 @@ Install add-on by downloading xpi-file.
 [SofRep](https://sofrep.com) -
 [The Daily Beast](https://www.thedailybeast.com)*
 
-##### Local US news
+##### Local USA news
 [Baltimore Sun](https://www.baltimoresun.com) -
 [Crain's Chicago Business](https://www.chicagobusiness.com) -
 [Chicago Tribune](https://www.chicagotribune.com) -
