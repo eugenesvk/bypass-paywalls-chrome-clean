@@ -177,8 +177,7 @@ Install add-on by downloading xpi-file.
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 ##### Germany/Austria
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
-[Handelsblatt](https://www.handelsblatt.com) -
-[Kleine Zeitung](https://www.kleinezeitung.at)
+[Handelsblatt](https://www.handelsblatt.com)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
 [Il Manifesto](https://ilmanifesto.it) -
