@@ -181,6 +181,7 @@ Install add-on by downloading xpi-file.
 [Handelsblatt](https://www.handelsblatt.com)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
+[Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Manifesto](https://ilmanifesto.it) -
 [Il Messaggero](https://www.ilmessaggero.it) -
 [La Repubblica](https://www.repubblica.it) -
