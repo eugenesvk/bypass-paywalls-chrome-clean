@@ -214,6 +214,7 @@ Install add-on by downloading xpi-file.
 ##### Russia
 [Republic.ru](https://republic.ru)
 ##### Spain
+[ABC](https://www.abc.es) -
 [El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com)
 ##### Sweden
