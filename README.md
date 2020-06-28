@@ -46,7 +46,7 @@ Install add-on by downloading xpi-file.
 [Inc.com](https://www.inc.com) -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Modern Healthcare](https://www.modernhealthcare.com) -
-[Quartz](https://qz.com) -
+[Quartz](https://qz.com)* -
 [Seeking Alpha](https://seekingalpha.com) -
 [The Business Journals](https://www.bizjournals.com) -
 [The Wall Street Journal](https://www.wsj.com)
