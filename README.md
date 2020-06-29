@@ -21,6 +21,7 @@ Install add-on by downloading xpi-file.
 [Harper's Magazine](https://harpers.org) -
 [Inkl](https://www.inkl.com) -
 [National Review](https://www.nationalreview.com) -
+[Newsweek](https://www.newsweek.com) -
 [The American Interest](https://www.the-american-interest.com) -
 [The Atlantic](https://www.theatlantic.com) -
 [The Christian Science Monitor](https://www.csmonitor.com) -
