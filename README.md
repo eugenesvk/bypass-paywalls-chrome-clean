@@ -152,6 +152,7 @@ Install add-on by downloading xpi-file.
 
 #### Europe
 ##### United Kingdom/Ireland
+[Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
 [Irish Independent](https://www.independent.ie) -
@@ -267,11 +268,11 @@ Install add-on by downloading xpi-file.
 _*free articles only._
 
 ### Sites with limited number of free articles
-The free article limit can normally be bypassed by removing cookies for the site.*
+The free article limit can normally be bypassed by removing cookies for the site.*  
+1. Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
+2. When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
-Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on. Please rate it 5 stars if you find it useful.
-
-When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
+If removing the cookies works you can also add the site as a custom site.
 
 _*May not always succeed_
 
