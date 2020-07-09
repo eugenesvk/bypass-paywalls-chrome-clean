@@ -107,6 +107,7 @@ Install add-on by downloading xpi-file.
 
 #### Australia/New Zealand
 
+[Brisbane Times](https://www.brisbanetimes.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [The Age](https://www.theage.com.au) -
 [The Australian Financial Review](https://www.afr.com) -
