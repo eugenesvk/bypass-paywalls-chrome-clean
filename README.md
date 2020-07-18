@@ -168,7 +168,7 @@ Install add-on by downloading xpi-file.
 [London Review of Books](https://www.lrb.co.uk) -
 [The Athletic UK](https://theathletic.com) -
 [The Economist](https://www.economist.com) -
-[The Irish Times](https://www.irishtimes.com)* -
+[The Irish Times](https://www.irishtimes.com) -
 [The New Statesman](https://www.newstatesman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
