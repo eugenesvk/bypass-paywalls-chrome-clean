@@ -190,7 +190,8 @@ Install add-on by downloading xpi-file.
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 ##### Germany/Austria
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
-[Handelsblatt](https://www.handelsblatt.com)
+[Handelsblatt](https://www.handelsblatt.com) -
+[Süddeutsche Zeitung](https://www.sueddeutsche.de)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
