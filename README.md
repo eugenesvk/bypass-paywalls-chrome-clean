@@ -270,6 +270,7 @@ Install add-on by downloading xpi-file.
 [Valor Econômico](https://valor.globo.com)*
 ##### Chile
 [El Mercurio](https://digital.elmercurio.com) -
+[La Segunda](https://digital.lasegunda.com) -
 [La Tercera](https://www.latercera.com)
 ##### Mexico
 [Mexico News Daily](https://mexiconewsdaily.com)
