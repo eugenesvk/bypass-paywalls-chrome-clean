@@ -176,6 +176,7 @@ Install add-on by downloading xpi-file.
 [The Times Literary Supplement](https://www.the-tls.co.uk)
 ##### France/Wallonia
 [Challenges](https://www.challenges.fr) –
+[Charlie Hebdo](https://charliehebdo.fr) -
 [L'Écho](https://lecho.be) -
 [L'Opinion](https://www.lopinion.fr) –
 [La Dépêche](https://www.ladepeche.fr) –
@@ -280,7 +281,7 @@ _*free articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.*  
-1. Install the [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/) Add-on.
+1. Install the add-on [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/).
 2. When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
 If removing the cookies works you can also add the site as a custom site.
