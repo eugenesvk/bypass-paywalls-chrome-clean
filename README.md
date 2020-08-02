@@ -219,6 +219,7 @@ Install add-on by downloading xpi-file.
 [Humo.be](https://www.humo.be) -
 [Knack.be](https://www.knack.be) -
 [Leeuwarder Courant](https://www.lc.nl) -
+[Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
