@@ -12,7 +12,9 @@
 ### Installation
 [Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)  
 Here you can also find a limited permissions version (custom sites will not be working though).  
-Install add-on by downloading xpi-file.
+Install add-on by downloading xpi-file.  
+On Android this add-on only works with Firefox 68 (Fennec); Firefox 79 (Fenix) only supports 9 add-ons (for now).  
+So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 
 ### List of supported websites
 ##### World news
