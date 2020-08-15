@@ -153,6 +153,20 @@ Install add-on by downloading xpi-file.
 [The Standard](https://www.standard.net.au) -
 [Western Advocate](https://www.westernadvocate.com.au)
 
+#### > Australian Provincial Newspapers
+[Bundaberg News Mail](https://www.news-mail.com.au) -
+[Fraser Coast Chronicle](https://www.frasercoastchronicle.com.au) -
+[Gladstone Observer](https://www.gladstoneobserver.com.au) -
+[Grafton Daily Examiner](https://www.dailyexaminer.com.au) -
+[Mackay Daily Mercury](https://www.dailymercury.com.au) -
+[Rockhampton Morning Bulletin](https://www.themorningbulletin.com.au) -
+[Sunshine Coast Daily](https://www.sunshinecoastdaily.com.au) -
+[The Gympie Times](https://www.gympietimes.com.au) -
+[The Northern Star](https://www.northernstar.com.au) -
+[The Queensland Times](https://www.qt.com.au) -
+[Toowoomba Chronicle](https://www.thechronicle.com.au) -
+[Warwick Daily News](https://www.warwickdailynews.com.au)
+
 #### Canada
 [Le Devoir](https://www.ledevoir.com) -
 [National Post](https://www.nationalpost.com) -
