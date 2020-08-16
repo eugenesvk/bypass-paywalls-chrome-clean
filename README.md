@@ -311,22 +311,25 @@ You can submit a request for a new website [here](https://bitbucket.org/magnolia
 Please read the following instructions and share your results for a quicker process.  
 Remember to check the [previous requests](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/issues) before asking for a new website.  
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.  
-2. Open up a new incognito window (Ctrl+Shift+N) and paste the article title into Google.  
+2. Open up a new incognito window (Ctrl+Shift+P) and paste the article title into Google.  
 3. Click on the same article from the Google search results page. Or you can:  
-4. Disable javascript on the website by clicking the button right icon </> on the uBlock panel.  
+4. Disable javascript on the website by clicking the button right icon </> on the uBlock Origin panel.  
 5. Refresh the page.
 
 ### Add custom site
 Add your own custom site (also for testing).  
 Check 'Options'-link in popup-menu and go to custom sites.  
-By default sites' cookies are removed after page loads (to bypass article limit).  
+Make sure the (new) site is checked under Options.  
+By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
 Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s)/external sources.
 
 ### Troubleshooting
-* This add-on works best alongside [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
+* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * If a site doesn't work try turning off uBlock and refreshing.
-* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
 * Make sure the (new) site is checked under Options.
+* You will be logged out for most of the sites you have checked.
+* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
+
 
 ### Changelog-releases
 * Visit the [changelog page](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/changelog.txt).
