@@ -216,7 +216,8 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Il Messaggero](https://www.ilmessaggero.it) -
 [La Repubblica](https://www.repubblica.it) -
 [La Stampa](https://www.lastampa.it) -
-[Le Scienze](https://www.lescienze.it)
+[Le Scienze](https://www.lescienze.it) -
+[LimesOnline (it/en)](https://www.limesonline.com)
 ##### Netherlands/Flanders
 [Algemeen Dagblad](https://www.ad.nl) and regional ADR sites like
 [BN DeStem](https://www.bndestem.nl) -
