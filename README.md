@@ -289,6 +289,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Valor Econômico](https://valor.globo.com)*
 ##### Chile
 [El Mercurio](https://digital.elmercurio.com) -
+[El Mercurio de Valparaíso](https://www.mercuriovalpo.cl) -
 [La Segunda](https://digital.lasegunda.com) -
 [La Tercera](https://www.latercera.com)
 ##### Mexico
