@@ -55,6 +55,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [The Athletic](https://theathletic.com)
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
+[Chronicle of Higher Education](https://www.chronicle.com) -
 [Dark Reading](https://www.darkreading.com) -
 [Discover Magazine](https://www.discovermagazine.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
@@ -288,6 +289,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [O Globo](https://oglobo.globo.com) –
 [Valor Econômico](https://valor.globo.com)*
 ##### Chile
+[Diario Financiero](https://www.df.cl) -
 [El Mercurio](https://digital.elmercurio.com) -
 [El Mercurio de Valparaíso](https://www.mercuriovalpo.cl) -
 [La Segunda](https://digital.lasegunda.com) -
