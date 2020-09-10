@@ -51,8 +51,6 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Seeking Alpha](https://seekingalpha.com) -
 [The Business Journals](https://www.bizjournals.com) -
 [The Wall Street Journal](https://www.wsj.com)
-##### Sports
-[The Athletic](https://theathletic.com)
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
 [Chronicle of Higher Education](https://www.chronicle.com) -
@@ -184,7 +182,6 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Financial Times](https://www.ft.com) -
 [Irish Independent](https://www.independent.ie) -
 [London Review of Books](https://www.lrb.co.uk) -
-[The Athletic UK](https://theathletic.com) -
 [The Economist](https://www.economist.com) -
 [The Irish Times](https://www.irishtimes.com) -
 [The New Statesman](https://www.newstatesman.com) -
