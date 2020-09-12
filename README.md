@@ -259,6 +259,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw) -
 [Harvard Business Review Taiwan](https://www.hbrtaiwan.com) -
 [Nikkei Asian Review](https://asia.nikkei.com) -
+[NK News](https://www.nknews.org)* -
 [South China Morning Post](https://www.scmp.com) -
 [Tech in Asia](https://www.techinasia.com) -
 [The Diplomat](https://www.thediplomat.com) -
