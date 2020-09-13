@@ -72,8 +72,9 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Scribd](http://www.scribd.com) -
 [Slader](https://www.slader.com) -
 [Statista](https://www.statista.com)
-##### Blogs
+##### Magazines/Blogs
 [Atavist Magazine](https://magazine.atavist.com) -
+[Commentary Magazine](https://www.commentarymagazine.com) -
 [Medium](https://www.medium.com) (all sites) -
 [SofRep](https://sofrep.com) -
 [The Daily Beast](https://www.thedailybeast.com)*
