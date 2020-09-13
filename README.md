@@ -135,8 +135,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 ##### > Financial
 
 [Eureka Report](https://www.eurekareport.com.au) -
-[Intelligent Investor](https://www.intelligentinvestor.com.au) -
-[Switzer Report](https://switzersuperreport.com.au)
+[Intelligent Investor](https://www.intelligentinvestor.com.au)
 
 ##### > Australian Community Media
 [Bendigo Advertiser](https://www.bendigoadvertiser.com.au) -
