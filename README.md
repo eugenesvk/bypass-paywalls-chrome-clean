@@ -96,6 +96,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Pittsburgh Post Gazette](https://post-gazette.com) -
 [San Diego Union Tribune](https://sandiegouniontribune.com) -
 [San Francisco Chronicle](https://www.sfchronicle.com) -
+[Star Tribune](https://www.startribune.com) -
 [SunSentinel](https://www.sun-sentinel.com) -
 [The Boston Globe](https://www.bostonglobe.com) -
 [The Denver Post](https://www.denverpost.com) -
