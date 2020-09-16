@@ -1,6 +1,6 @@
 {
     "background": {
-		"scripts": ["sites.js", "bpc_count_daily_users.js", "background.js"]
+        "scripts": ["sites.js", "bpc_count_daily_users.js", "background.js"]
     },
     "content_security_policy": "script-src 'self'; object-src 'self'",
     "applications": {
@@ -21,8 +21,8 @@
             }
         ]
     },
-    "description": "Bypass News Sites' Paywalls",
-	"homepage_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean",
+    "description": "Bypass Paywalls of news sites",
+    "homepage_url": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean",
     "icons": {
         "128": "bypass.png"
     },
@@ -57,6 +57,7 @@
         "*://*.britannica.com/*",
         "*://*.business-standard.com/*",
         "*://*.businessinsider.com/*",
+        "*://*.businesstimes.com.sg/*",
         "*://*.cairnspost.com.au/*",
         "*://*.caixinglobal.com/*",
         "*://*.canberratimes.com.au/*",
@@ -307,5 +308,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.8.6.1"
+    "version": "1.8.6.2"
 }
