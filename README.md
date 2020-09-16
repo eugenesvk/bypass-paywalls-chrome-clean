@@ -211,6 +211,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Süddeutsche Zeitung](https://www.sueddeutsche.de)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
+[Domani](https://editorialedomani.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Manifesto](https://ilmanifesto.it) -
 [Il Messaggero](https://www.ilmessaggero.it) -
