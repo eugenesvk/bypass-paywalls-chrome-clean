@@ -17,6 +17,7 @@ On Android this add-on only works with Firefox 68 (Fennec); Firefox 79 (Fenix) o
 So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
 
 ### List of supported websites
+
 ##### World news
 [First Things](https://www.firstthings.com) -
 [Foreign Policy](https://www.foreignpolicy.com) -
@@ -32,8 +33,8 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [The New York Times](https://www.nytimes.com) -
 [The New Yorker](https://www.newyorker.com) -
 [The Washington Post](https://www.washingtonpost.com) -
-[Vanity Fair](https://www.vanityfair.com) -
 [World Politics Review](https://www.worldpoliticsreview.com)
+
 ##### Business
 [Adweek](https://www.adweek.com) -
 [American Affairs](https://americanaffairsjournal.org) -
@@ -51,6 +52,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Seeking Alpha](https://seekingalpha.com) -
 [The Business Journals](https://www.bizjournals.com) -
 [The Wall Street Journal](https://www.wsj.com)
+
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
 [Chronicle of Higher Education](https://www.chronicle.com) -
@@ -62,6 +64,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Towards Data Science](https://www.towardsdatascience.com) -
 [Wired](https://www.wired.com) -
 [Scientific American](https://www.scientificamerican.com)*
+
 #### Encyclopedia/Book library/Knowledge base
 [BBC History Extra](https://www.historyextra.com) -
 [Encyclopedia Britannica](https://www.britannica.com) -
@@ -72,12 +75,15 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Scribd](http://www.scribd.com) -
 [Slader](https://www.slader.com) -
 [Statista](https://www.statista.com)
+
 ##### Magazines/Blogs
 [Atavist Magazine](https://magazine.atavist.com) -
 [Commentary Magazine](https://www.commentarymagazine.com) -
 [Medium](https://www.medium.com) (all sites) -
 [SofRep](https://sofrep.com) -
-[The Daily Beast](https://www.thedailybeast.com)*
+[The Daily Beast](https://www.thedailybeast.com)* -
+[Vanity Fair](https://www.vanityfair.com) -
+[Variety](https://variety.com)
 
 ##### Local USA news
 [Baltimore Sun](https://www.baltimoresun.com) -
