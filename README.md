@@ -212,6 +212,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 ##### Germany/Austria
+[Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de)
