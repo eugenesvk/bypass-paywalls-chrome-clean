@@ -250,8 +250,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
 [Trouw](https://www.trouw.nl) -
-[Volkskrant](https://www.volkskrant.nl) -
-[Vrij Nederland](https://www.vn.nl)
+[Volkskrant](https://www.volkskrant.nl)
 ##### Russia
 [Republic.ru](https://republic.ru)
 ##### Spain
