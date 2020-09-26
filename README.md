@@ -50,6 +50,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Modern Healthcare](https://www.modernhealthcare.com) -
 [Quartz](https://qz.com)* -
 [Seeking Alpha](https://seekingalpha.com) -
+[Stock News](https://stocknews.com) -
 [The Business Journals](https://www.bizjournals.com) -
 [The Wall Street Journal](https://www.wsj.com)
 
