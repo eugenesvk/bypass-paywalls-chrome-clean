@@ -2,8 +2,8 @@
   "addons": {
     "magnolia@12.34": {
       "updates": [
-        { "version": "1.8.7.0",
-            "update_link": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/bypass_paywalls_clean-1.8.7.0.xpi" }
+        { "version": "1.8.8.0",
+            "update_link": "https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads/bypass_paywalls_clean-1.8.8.0.xpi" }
         ]
     }
   }
