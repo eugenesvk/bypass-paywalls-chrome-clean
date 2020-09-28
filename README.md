@@ -218,7 +218,8 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -
-[Süddeutsche Zeitung](https://www.sueddeutsche.de)
+[Süddeutsche Zeitung](https://www.sueddeutsche.de) -
+[Westdeutsche Allgemeine Zeitung](https://www.waz.de)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
 [Domani](https://editorialedomani.it) -
@@ -344,7 +345,7 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * If a site doesn't work try turning off uBlock and refreshing.
 * Make sure the (new) site is checked under Options.
 * You will be logged out for most of the sites you have checked.
-* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings.
+* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings (or use filter Easylist Cookies/[I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp) in uBlock Origin).
 
 
 ### Changelog-releases

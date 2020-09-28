@@ -263,6 +263,7 @@
         "*://*.warwickdailynews.com.au/*",
         "*://*.washingtonpost.com/*",
         "*://*.watoday.com.au/*",
+        "*://*.waz.de/*",
         "*://*.weeklytimesnow.com.au/*",
         "*://*.westernadvocate.com.au/*",
         "*://*.wired.com/*",
@@ -312,5 +313,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.8.8.0"
+    "version": "1.8.8.1"
 }
