@@ -342,7 +342,6 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 
 ### Troubleshooting
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
-* If a site doesn't work try turning off uBlock and refreshing.
 * Make sure the (new) site is checked under Options.
 * You will be logged out for most of the sites you have checked.
 * If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings (or use filter Easylist Cookies/[I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp) in uBlock Origin).
