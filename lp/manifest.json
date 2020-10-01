@@ -187,6 +187,7 @@
         "*://*.northerndailyleader.com.au/*",
         "*://*.northernstar.com.au/*",
         "*://*.nrc.nl/*",
+        "*://*.nrz.de/*",
         "*://*.ntnews.com.au/*",
         "*://*.nymag.com/*",
         "*://*.nytimes.com/*",
@@ -268,6 +269,8 @@
         "*://*.westernadvocate.com.au/*",
         "*://*.wired.com/*",
         "*://*.worldpoliticsreview.com/*",
+        "*://*.wp.de/*",
+        "*://*.wr.de/*",
         "*://*.wsj.com/*",
         "*://*.zeit.de/*",
         "*://*.blueconic.net/*",
@@ -313,5 +316,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.8.8.2"
+    "version": "1.8.8.3"
 }

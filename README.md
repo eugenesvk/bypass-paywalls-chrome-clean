@@ -218,8 +218,11 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -
+[Neue Ruhr Zeitung](https://www.nrz.de) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
-[Westdeutsche Allgemeine Zeitung](https://www.waz.de)
+[Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
+[Westfalenpost](https://www.wp.de) -
+[Westfälische Rundschau](https://www.wr.de)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
 [Domani](https://editorialedomani.it) -
