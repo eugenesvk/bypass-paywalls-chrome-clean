@@ -218,6 +218,8 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -
+[Hannoversche Allgemeine Zeitung](https://www.haz.de) -
+[Leipziger Volkszeitung](https://www.lvz.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -

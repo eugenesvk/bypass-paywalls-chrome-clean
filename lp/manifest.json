@@ -122,6 +122,7 @@
         "*://*.haaretz.com/*",
         "*://*.handelsblatt.com/*",
         "*://*.harpers.org/*",
+        "*://*.haz.de/*",
         "*://*.hbr.org/*",
         "*://*.hbrtaiwan.com/*",
         "*://*.heraldsun.com.au/*",
@@ -163,6 +164,7 @@
         "*://*.loebclassics.com/*",
         "*://*.lopinion.fr/*",
         "*://*.lrb.co.uk/*",
+        "*://*.lvz.de/*",
         "*://*.mcall.com/*",
         "*://*.medium.com/*",
         "*://*.mercuriovalpo.cl/*",
@@ -317,5 +319,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.8.8.4"
+    "version": "1.8.8.5"
 }
