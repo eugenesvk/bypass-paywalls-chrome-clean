@@ -349,8 +349,7 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
 * Make sure the (new) site is checked under Options.
 * You will be logged out for most of the sites you have checked.
-* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings (or use filter Easylist Cookies/[I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp) in uBlock Origin).
-
+* If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings (or add filter [Easylist Cookies](https://easylist-downloads.adblockplus.org/easylist-cookie.txt) | [I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp) to uBlock Origin).
 
 ### Changelog-releases
 * Visit the [changelog page](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/changelog.txt).
