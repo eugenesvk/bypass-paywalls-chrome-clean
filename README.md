@@ -279,7 +279,6 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [NK News](https://www.nknews.org)* -
 [South China Morning Post](https://www.scmp.com) -
 [Tech in Asia](https://www.techinasia.com) -
-[The Business Times](https://www.businesstimes.com.sg) -
 [The Diplomat](https://www.thediplomat.com) -
 [The Japan Times](https://www.japantimes.co.jp)
 
