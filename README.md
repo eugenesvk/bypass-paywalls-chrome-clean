@@ -83,6 +83,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [Commentary Magazine](https://www.commentarymagazine.com) -
 [Medium](https://www.medium.com) (all sites) -
 [Rolling Stone](https://www.rollingstone.com) -
+[Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [The Daily Beast](https://www.thedailybeast.com)* -
 [Vanity Fair](https://www.vanityfair.com) -
