@@ -747,15 +747,53 @@ ext_api.webRequest.onCompleted.addListener(function (details) {
     urls: ["<all_urls>"]
 });
 
+function clear_cookies() {
+    ext_api.tabs.query({
+        active: true,
+        currentWindow: true
+    }, function (tabs) {
+        if (tabs.length > 0 && tabs[0].url && tabs[0].url.indexOf("http") !== -1) {
+            ext_api.tabs.executeScript({
+                file: 'clearCookies.js',
+                runAt: 'document_start'
+            }, function (res) {
+                if (ext_api.runtime.lastError || res[0]) {
+                    return;
+                }
+            });
+            ext_api.tabs.update(tabs[0].id, {
+                url: tabs[0].url
+            });
+        }
+    });
+}
+
 ext_api.runtime.onMessage.addListener(function (message, sender) {
     // check storage for opt in
-    ext_api.storage.sync.get("optIn", function (result) {
-        // send message back to content script with value of opt in
-        ext_api.tabs.sendMessage(
-            sender.tab.id, {
-            "optIn": (true == result.optIn)
+    if (message.request === 'optin') {
+        ext_api.storage.sync.get("optIn", function (result) {
+            // send message back to content script with value of opt in
+            ext_api.tabs.sendMessage(
+                sender.tab.id, {
+                "optIn": (true == result.optIn)
+            });
         });
-    });
+    }
+    // clear cookies for domain
+    if (message.domain) {
+        var domainVar = message.domain.replace('www.', '');
+        ext_api.cookies.getAll({
+            domain: domainVar
+        }, function (cookies) {
+            for (let cookie of cookies) {
+                var cookie_domain = cookie.domain;
+                ext_api.cookies.remove({
+                    url: (cookie.secure ? "https://" : "http://") + cookie.domain + cookie.path,
+                    name: cookie.name
+                });
+            }
+        });
+    }
 });
 
 // show the tab if we haven't registered the user reacting to the prompt.
