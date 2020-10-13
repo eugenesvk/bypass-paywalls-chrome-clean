@@ -10,8 +10,9 @@
 * [License](#license)
 
 ### Installation
-[Download and install the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)  
-Here you can also find a limited permissions version (custom sites will not be working though).  
+You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean)  
+Or download and install the latest version from [BitBucket](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)  
+By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies for non-listed sites).  
 Install add-on by downloading xpi-file.  
 On Android this add-on only works with Firefox 68 (Fennec); Firefox 79 (Fenix) only supports 9 add-ons (for now).  
 So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
@@ -81,7 +82,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 ##### Magazines/Blogs
 [Atavist Magazine](https://magazine.atavist.com) -
 [Commentary Magazine](https://www.commentarymagazine.com) -
-[Medium](https://www.medium.com) (all sites) -
+[Medium](https://www.medium.com/topics) (all sites) -
 [Rolling Stone](https://www.rollingstone.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
@@ -322,7 +323,7 @@ _*free articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
-Click on the BPC-icon and then 'clear cookies' button in the popup.  
+Click on the BPC-icon and then 'clear cookies'-button in the popup.  
 For user with the limited permissions BPC-version this will only work for supported sites; for other sites use:
 1. Install the add-on [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/).
 2. When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
@@ -342,7 +343,8 @@ Remember to check the [previous requests](https://bitbucket.org/magnolia1234/byp
 ### Add custom site
 Add your own custom site (also for testing).  
 Check 'Options'-link in popup-menu and go to custom sites.  
-Make sure the (new) site is checked under Options.  
+* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies for non-listed sites).  
+Make sure the (new) site is checked under Options (or check on/off-buton). 
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
 Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s)/external sources.
 

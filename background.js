@@ -223,7 +223,7 @@ var blockedRegexes = {
 'scmp.com': /.+\.tinypass\.com\/.+/,
 'sfchronicle.com': /.+\.blueconic\.net\/.+/,
 'slate.com': /(cdn\.cxense\.com|.+\.tinypass\.com\/.+)/,
-'sloanreview.mit.edu': /(.+\.tinypass\.com\/.+|.+\.netdna-ssl\.com\/wp-content\/themes\/smr\/assets\/js\/libs\/welcome-ad\.js)/,
+'sloanreview.mit.edu': /(.+\.tinypass\.com\/.+|.+\/sloanreview\.mit\.edu\/.+\/welcome-ad\.js)/,
 'smh.com.au': /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
 'spectator.co.uk': /.+\.tinypass\.com\/.+/,
 'spectator.com.au': /.+\.tinypass\.com\/.+/,
@@ -797,8 +797,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
 });
 
 // show the tab if we haven't registered the user reacting to the prompt.
-ext_api.storage.sync.get("optInShown", function (result) {
-    if (!result.optInShown) {
+ext_api.storage.sync.get(["optInShown", "customShown"], function (result) {
+    if (!result.optInShown || !result.customShown) {
         ext_api.tabs.create({
             url: "optin/opt-in.html"
         });

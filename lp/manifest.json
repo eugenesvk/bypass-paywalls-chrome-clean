@@ -27,11 +27,16 @@
         "128": "bypass.png"
     },
     "manifest_version": 2,
-    "name": "Bypass Paywalls Clean (limited permissions)",
+    "name": "Bypass Paywalls Clean (lp - no more updates)",
     "short_name": "Bypass Paywall",
     "options_ui": {
+        "browser_style": true,
+        "open_in_tab": true,							  
         "page": "options.html"
     },
+    "optional_permissions": [
+        "<all_urls>"
+    ],
     "permissions": [
         "cookies",
         "*://*.abc.es/*",
@@ -318,5 +323,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.0.1"
+    "version": "1.9.0.2"
 }
