@@ -259,6 +259,7 @@
         "*://*.thesaturdaypaper.com.au/*",
         "*://*.thestar.com/*",
         "*://*.thetimes.co.uk/*",
+        "*://*.thewest.com.au/*",
         "*://*.tijd.be/*",
         "*://*.timeshighereducation.com/*",
         "*://*.towardsdatascience.com/*",
@@ -323,5 +324,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.0.2"
+    "version": "1.9.0.3"
 }

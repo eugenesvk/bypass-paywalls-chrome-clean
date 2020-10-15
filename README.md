@@ -221,6 +221,7 @@ So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
 [The Spectator Australia](https://www.spectator.com.au) -
 [The Sydney Morning Herald](https://www.smh.com.au) –
+[The West Australian (+ regional)](https://thewest.com.au) -
 [WAtoday](https://www.watoday.com.au)
 
 ##### > News Corp Australia
