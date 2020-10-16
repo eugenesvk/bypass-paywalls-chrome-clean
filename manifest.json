@@ -208,6 +208,7 @@
         "*://*.post-gazette.com/*",
         "*://*.qt.com.au/*",
         "*://*.quora.com/*",
+        "*://*.quotidiano.net/*",
         "*://*.qz.com/*",
         "*://*.repubblica.it/*",
         "*://*.republic.ru/*",
@@ -325,5 +326,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.0.4"
+    "version": "1.9.0.5"
 }
