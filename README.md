@@ -12,10 +12,10 @@
 ### Installation
 You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean)  
 Or download and install the latest version from [BitBucket](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)  
-By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies for non-listed sites).  
+By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites).  
 Install add-on by downloading xpi-file.  
 On Android this add-on only works with Firefox 68 (Fennec); Firefox 79 (Fenix) only supports 9 add-ons (for now).  
-So don't update to Firefox 79 or use F-droid's [Fennec-release](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)
+So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom add-on collection).
 
 ### List of supported websites
 
