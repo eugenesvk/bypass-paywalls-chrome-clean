@@ -31,6 +31,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [The Christian Science Monitor](https://www.csmonitor.com) -
 [The Nation](https://www.thenation.com) -
 [The New Republic](https://newrepublic.com) -
+[The New York Review of Books](https://www.nybooks.com) -
 [The New York Times](https://www.nytimes.com) -
 [The New Yorker](https://www.newyorker.com) -
 [The Washington Post](https://www.washingtonpost.com) -
