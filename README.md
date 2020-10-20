@@ -173,6 +173,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Manifesto](https://ilmanifesto.it) -
 [Il Messaggero](https://www.ilmessaggero.it) -
+[Il Resto del Carlino](https://www.ilrestodelcarlino.it) -
 [La Repubblica](https://www.repubblica.it) -
 [La Stampa](https://www.lastampa.it) -
 [Le Scienze](https://www.lescienze.it) -
