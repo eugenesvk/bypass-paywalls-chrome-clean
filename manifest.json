@@ -107,6 +107,7 @@
         "*://*.firstthings.com/*",
         "*://*.fnlondon.com/*",
         "*://*.folha.uol.com.br/*",
+        "*://*.foreignaffairs.com/*",
         "*://*.foreignpolicy.com/*",
         "*://*.fortune.com/*",
         "*://*.frasercoastchronicle.com.au/*",
@@ -332,5 +333,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.1.4"
+    "version": "1.9.1.5"
 }
