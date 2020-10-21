@@ -125,6 +125,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Le Devoir](https://www.ledevoir.com) -
 [National Post](https://www.nationalpost.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
+[The Logic](https://thelogic.co) -
 [The Toronto Star](https://www.thestar.com)
 
 #### Europe
