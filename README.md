@@ -265,8 +265,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [The Standard](https://www.standard.net.au) -
 [Western Advocate](https://www.westernadvocate.com.au)
 
-#### > Australian Provincial Newspapers (all)
-For example:  
+#### > Australian Provincial Newspapers
 [Bundaberg News Mail](https://www.news-mail.com.au) -
 [Fraser Coast Chronicle](https://www.frasercoastchronicle.com.au) -
 [Gladstone Observer](https://www.gladstoneobserver.com.au) -
