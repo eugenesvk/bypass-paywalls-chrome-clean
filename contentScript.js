@@ -1384,6 +1384,14 @@ else if (matchDomain("foreignaffairs.com")) {
         elem.classList.add('loaded');
 }
 
+else if (matchDomain("kurier.at")) {
+    let view_offer = document.querySelector('.view-offer');
+    removeDOMElement(view_offer);
+    let plus_content = document.querySelector('.plusContent');
+    if (plus_content)
+        plus_content.classList.remove('plusContent');
+}
+
 // General Functions
 function removeDOMElement(...elements) {
     for (let element of elements) {

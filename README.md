@@ -163,6 +163,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -
 [Hannoversche Allgemeine Zeitung](https://www.haz.de) -
+[Kurier.at](https://kurier.at) -
 [Leipziger Volkszeitung](https://www.lvz.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
