@@ -171,6 +171,7 @@
         "*://*.livemint.com/*",
         "*://*.loebclassics.com/*",
         "*://*.lopinion.fr/*",
+        "*://*.lorientlejour.com/*",
         "*://*.lrb.co.uk/*",
         "*://*.lvz.de/*",
         "*://*.mcall.com/*",
@@ -334,5 +335,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.1.7"
+    "version": "1.9.1.8"
 }

@@ -303,6 +303,9 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Haaretz.com](https://www.haaretz.com) -
 [The Marker](https://www.themarker.com)
 
+####Lebanon
+[L'Orient-Le Jour](https://www.lorientlejour.com)
+
 #### Latin America
 ##### Argentina
 [Clarín](https://www.clarin.com) -
