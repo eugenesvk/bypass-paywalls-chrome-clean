@@ -159,6 +159,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 ##### Germany/Austria
+[Deutsche Wirtschafts Nachrichten](https://deutsche-wirtschafts-nachrichten.de) -
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Handelsblatt](https://www.handelsblatt.com) -

@@ -87,6 +87,7 @@
         "*://*.dailytelegraph.com.au/*",
         "*://*.darkreading.com/*",
         "*://*.demorgen.be/*",
+        "*://*.deutsche-wirtschafts-nachrichten.de/*",
         "*://*.denverpost.com/*",
         "*://*.df.cl/*",
         "*://*.digiday.com/*",
@@ -336,5 +337,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.2.0"
+    "version": "1.9.2.1"
 }
