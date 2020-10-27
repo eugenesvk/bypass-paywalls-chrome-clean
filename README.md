@@ -170,7 +170,8 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
-[Westfälische Rundschau](https://www.wr.de)
+[Westfälische Rundschau](https://www.wr.de) -
+[WirtschaftsWoche](https://www.wiwo.de)
 ##### Italy
 [Corriere Della Sera](https://www.corriere.it) -
 [Domani](https://editorialedomani.it) -
