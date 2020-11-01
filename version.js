@@ -18,7 +18,10 @@ fetch(manifest_new)
                     versionString_new.appendChild(document.createTextNode(' * '));
                     var anchorEl = document.createElement('a');
                     anchorEl.text = 'New release v' + version_new;
-                    anchorEl.href = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads';
+                    if (manifestData.applications.gecko.id.includes('magnolia'))
+                        anchorEl.href = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads';
+                    else
+                        anchorEl.href = 'https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean';
                     anchorEl.target = '_blank';
                     versionString_new.appendChild(anchorEl);
                     if (manifestData.name.includes('(lp')) {
