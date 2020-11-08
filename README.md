@@ -49,7 +49,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Fortune](https://fortune.com) -
 [Harvard Business Review](https://www.hbr.org) -
 [Inc.com](https://www.inc.com) -
-[MarketWatch](https://www.marketwatch.com)* -
+[MarketWatch](https://www.marketwatch.com)\* -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Modern Healthcare](https://www.modernhealthcare.com) -
 [Quartz](https://qz.com)* -
@@ -85,7 +85,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 ##### Magazines/Blogs
 [Atavist Magazine](https://magazine.atavist.com) -
 [Commentary Magazine](https://www.commentarymagazine.com) -
-[Medium](https://www.medium.com/topics) (all sites) -
+[Medium](https://www.medium.com/topics) (for custom domains enable custom sites) -
 [Rolling Stone](https://www.rollingstone.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
