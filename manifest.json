@@ -100,6 +100,7 @@
         "*://*.elmundo.es/*",
         "*://*.elpais.com/*",
         "*://*.estadao.com.br/*",
+        "*://*.estrellavalpo.cl/*",
         "*://*.eurekareport.com.au/*",
         "*://*.exame.abril.com.br/*",
         "*://*.examiner.com.au/*",
@@ -341,5 +342,5 @@
         "webRequest",
         "webRequestBlocking"
     ],
-    "version": "1.9.4.3"
+    "version": "1.9.4.4"
 }

@@ -326,6 +326,7 @@ For example:
 [Diario Financiero](https://www.df.cl) -
 [El Mercurio](https://digital.elmercurio.com) -
 [El Mercurio de Valparaíso](https://www.mercuriovalpo.cl) -
+[La Estrella de Valparaíso](https://www.estrellavalpo.cl) -
 [La Segunda](https://digital.lasegunda.com) -
 [La Tercera](https://www.latercera.com)
 ##### Mexico
