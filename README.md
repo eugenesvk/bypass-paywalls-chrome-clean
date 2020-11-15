@@ -145,6 +145,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [The Times](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk)
 ##### France/Wallonia
+[Alternatives Economiques](https://www.alternatives-economiques.fr) -
 [Challenges](https://www.challenges.fr) –
 [Charlie Hebdo](https://charliehebdo.fr) -
 [L'Écho](https://lecho.be) -
