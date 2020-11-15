@@ -124,6 +124,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Winston-Salem Journal](https://www.journalnow.com)
 
 #### Canada
+[Financial Post](https://www.financialpost.com) -
 [Le Devoir](https://www.ledevoir.com) -
 [National Post](https://www.nationalpost.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
