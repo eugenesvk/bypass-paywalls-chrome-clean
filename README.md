@@ -170,6 +170,7 @@ So don't update to Firefox 79 or use Firefox Nightly (and load BPC from a custom
 [Kurier.at](https://kurier.at) -
 [Leipziger Volkszeitung](https://www.lvz.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
+[Sächsische Zeitung](https://www.saechsische.de) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
