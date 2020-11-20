@@ -4,8 +4,9 @@ var manifestData = ext_api.runtime.getManifest();
 var versionString = 'v' + manifestData.version;
 document.getElementById('version').innerText = versionString;
 
-const manifest_new = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/manifest.json';
-fetch(manifest_new)
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/manifest.json';
+fetch(proxyurl + manifest_new)
 .then(response => {
     if (response.ok) {
         response.json().then(json => {
@@ -20,7 +21,7 @@ fetch(manifest_new)
                     var anchorEl = document.createElement('a');
                     anchorEl.text = 'New release v' + version_new;
                     if (manifestData.applications.gecko.id.includes('magnolia'))
-                        anchorEl.href = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads';
+                        anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases';
                     else
                         anchorEl.href = 'https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean';
                     anchorEl.target = '_blank';
@@ -28,12 +29,12 @@ fetch(manifest_new)
                     versionString_new.appendChild(document.createTextNode(' *'));
                     if (manifestData.name.includes('(lp')) {
                         let par = document.createElement('p');
-                        par.innerHTML = "<strong>Limited permissions version is no longer updated (check BitBucket)</strong>";
+                        par.innerHTML = "<strong>Limited permissions version is no longer updated (check GitLab)</strong>";
                         versionString_new.appendChild(par);
                     }
                     if (!manifestData.name.includes('Clean')) {
                         let par = document.createElement('p');
-                        par.innerHTML = "<strong>You've installed a fake version of BPC (check BitBucket)</strong>";
+                        par.innerHTML = "<strong>You've installed a fake version of BPC (check GitLab)</strong>";
                         versionString_new.appendChild(par);
                     }
                 }

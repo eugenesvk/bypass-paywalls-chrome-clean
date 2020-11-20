@@ -11,7 +11,7 @@
 
 ### Installation
 You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean)  
-Or download and install the latest version from [BitBucket](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)  
+Or download and install the latest xpi-version from [GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)  
 By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites).  
 Install add-on by downloading xpi-file.  
 On Android this add-on only works with Firefox 68 (Fennec); Firefox 79 (Fenix) only supports 9 add-ons (for now).  
@@ -365,9 +365,9 @@ For user with the limited permissions BPC-version this will only work for suppor
 If removing the cookies works you can also add the site as a custom site.
 
 ### New site requests
-You can submit a request for a new website [here](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/issues?status=new&status=open).  
+You can submit a request for a new website [here](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues).  
 Please read the following instructions and share your results for a quicker process.  
-Remember to check the [previous requests](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/issues) before asking for a new website.  
+Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues) before asking for a new website.  
 1. Visit an article on the site you want to bypass the paywall for and copy the article title.  
 2. Open up a new incognito window (Ctrl+Shift+P) and paste the article title into Google.  
 3. Click on the same article from the Google search results page. Or you can:  
@@ -390,9 +390,9 @@ Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s
 * If you live in the EU, also consider installing the extension [I don't care about cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies) in order to remove cookie warnings (or add filter [Easylist Cookies](https://easylist-downloads.adblockplus.org/easylist-cookie.txt) | [I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp) to uBlock Origin).
 
 ### Changelog-releases
-* Visit the [changelog page](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/changelog.txt).
-* Or check the [commits](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/commits).
-* [Download the latest version](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/downloads)
+* Visit the [changelog page](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/changelog.txt).
+* Or check the [commits](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/commits/master/).
+* [Download the latest version](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)
 
 ### License
-Bypass Paywalls Clean is [MIT-licensed](https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/src/master/LICENSE).
+Bypass Paywalls Clean is [MIT-licensed](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/LICENSE).
