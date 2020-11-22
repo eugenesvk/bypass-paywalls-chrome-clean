@@ -347,7 +347,6 @@
         "*://*.htmedia.in/*",
         "*://*.jsdelivr.net/*",
         "*://*.lightboxcdn.com/*",
-        "*://*.lp4.io/*",
         "*://*.mppglobal.com/*",
         "*://*.nyt.com/*",
         "*://*.pasedigital.cl/*",
@@ -356,5 +355,5 @@
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "1.9.6.2"
+    "version": "1.9.6.3"
 }
