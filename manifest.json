@@ -114,6 +114,7 @@
         "*://*.elmundo.es/*",
         "*://*.elnortedecastilla.es/*",
         "*://*.elpais.com/*",
+        "*://*.elperiodico.com/*",
         "*://*.estadao.com.br/*",
         "*://*.estrellavalpo.cl/*",
         "*://*.eurekareport.com.au/*",
@@ -328,6 +329,7 @@
         "*://*.blueconic.net/*",
         "*://*.matheranalytics.com/*",
         "*://*.onecount.net/*",
+        "*://*.pelcro.com/*",
         "*://*.piano.io/*",
         "*://*.poool.fr/*",
         "*://*.qiota.com/*",
@@ -350,10 +352,9 @@
         "*://*.mppglobal.com/*",
         "*://*.nyt.com/*",
         "*://*.pasedigital.cl/*",
-        "*://*.pelcro.com/*",
         "*://*.rcsobjects.it/*",
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "1.9.6.3"
+    "version": "1.9.6.4"
 }
