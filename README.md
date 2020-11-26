@@ -159,6 +159,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [Charlie Hebdo](https://charliehebdo.fr) -
 [L'Écho](https://lecho.be) -
 [L'Opinion](https://www.lopinion.fr) –
+[La Croix](https://www.la-croix.com) -
 [La Dépêche](https://www.ladepeche.fr) –
 [Le Journal du Dimanche](https://lejdd.fr) –
 [Le Journal du Net](https://www.journaldunet.com) -
