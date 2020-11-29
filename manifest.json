@@ -277,6 +277,7 @@
         "*://*.sofrep.com/*",
         "*://*.spectator.co.uk/*",
         "*://*.spectator.com.au/*",
+        "*://*.spectator.us/*",
         "*://*.standard.net.au/*",
         "*://*.startribune.com/*",
         "*://*.statista.com/*",

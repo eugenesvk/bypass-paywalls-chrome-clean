@@ -39,6 +39,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [The New York Review of Books](https://www.nybooks.com) -
 [The New York Times](https://www.nytimes.com) -
 [The New Yorker](https://www.newyorker.com) -
+[The Spectator USA](https://spectator.us) -
 [The Washington Post](https://www.washingtonpost.com) -
 [World Politics Review](https://www.worldpoliticsreview.com)
 
