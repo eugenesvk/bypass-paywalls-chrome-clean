@@ -16,7 +16,9 @@ By default BPC has limited permissions, but you can opt-in to enable custom site
 
 #### Android
 On Android this add-on only works with Firefox 68 (Fennec); Firefox 79+ (Fenix) only supports 9 'recommended' add-ons (for now).  
-BPC add-on works fine in Firefox Nightly though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).
+BPC add-on works fine in Firefox Nightly (or IceRaven) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).  
+You can either make your own custom add-on collection or use the one used by [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser): [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)  
+Set custom add-ons account: 16201230 & collection: What-I-want-on-Fenix
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
