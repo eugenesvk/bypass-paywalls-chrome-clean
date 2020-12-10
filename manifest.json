@@ -44,6 +44,7 @@
         "webRequest",
         "webRequestBlocking",
         "*://*.abc.es/*",
+        "*://*.abendblatt.de/*",
         "*://*.ad.nl/*",
         "*://*.adelaidenow.com.au/*",
         "*://*.adweek.com/*",
@@ -67,6 +68,7 @@
         "*://*.bndestem.nl/*",
         "*://*.bordermail.com.au/*",
         "*://*.bostonglobe.com/*",
+        "*://*.braunschweiger-zeitung.de/*",
         "*://*.brisbanetimes.com.au/*",
         "*://*.britannica.com/*",
         "*://*.business-standard.com/*",
@@ -184,8 +186,8 @@
         "*://*.journaldunet.com/*",
         "*://*.journalnow.com/*",
         "*://*.kauppalehti.fi/*",
-        "*://*.knack.be/*",
         "*://*.kn-online.de/*",
+        "*://*.knack.be/*",
         "*://*.kurier.at/*",
         "*://*.la-croix.com/*",
         "*://*.labusinessjournal.com/*",
@@ -241,6 +243,7 @@
         "*://*.midilibre.fr/*",
         "*://*.mikrobitti.fi/*",
         "*://*.modernhealthcare.com/*",
+        "*://*.morgenpost.de/*",
         "*://*.mv-voice.com/*",
         "*://*.nationalgeographic.com/*",
         "*://*.nationalpost.com/*",
@@ -270,6 +273,7 @@
         "*://*.ocregister.com/*",
         "*://*.orlandosentinel.com/*",
         "*://*.ostsee-zeitung.de/*",
+        "*://*.otz.de/*",
         "*://*.paloaltoonline.com/*",
         "*://*.paris-normandie.fr/*",
         "*://*.parool.nl/*",
@@ -343,6 +347,7 @@
         "*://*.thestar.com/*",
         "*://*.thetimes.co.uk/*",
         "*://*.thewest.com.au/*",
+        "*://*.thueringer-allgemeine.de/*",
         "*://*.tijd.be/*",
         "*://*.timeshighereducation.com/*",
         "*://*.tivi.fi/*",
@@ -402,5 +407,5 @@
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "1.9.8.4"
+    "version": "1.9.8.5"
 }

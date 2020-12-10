@@ -18,9 +18,8 @@ fetch(proxyurl + manifest_new, { headers: { "Content-Type": "application/json", 
                 var version_len = (installType === 'development') ? 7 : 5;
                 var version_new = json['version'];
                 if (version_new.substring(0, version_len) > manifestData.version.substring(0, version_len)) {
-                    versionString_new.appendChild(document.createTextNode('* '));
                     anchorEl = document.createElement('a');
-                    anchorEl.text = 'New release v' + version_new;
+                    anchorEl.innerText = 'New release v' + version_new;
                     if (manifestData.applications.gecko.id.includes('magnolia')) {
                         if (installType === 'development')
                             anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean';
@@ -30,7 +29,6 @@ fetch(proxyurl + manifest_new, { headers: { "Content-Type": "application/json", 
                         anchorEl.href = 'https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean';
                     anchorEl.target = '_blank';
                     versionString_new.appendChild(anchorEl);
-                    versionString_new.appendChild(document.createTextNode(' *'));
                     if (manifestData.name.includes('(lp')) {
                         let par = document.createElement('p');
                         par.innerHTML = "Limited permissions version is no longer updated (check GitLab)";
