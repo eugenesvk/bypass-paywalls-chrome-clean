@@ -139,6 +139,9 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [The Toronto Star](https://www.thestar.com)
 
 #### Europe
+
+[EUobserver](https://euobserver.com)
+
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Financial News](https://www.fnlondon.com) -
