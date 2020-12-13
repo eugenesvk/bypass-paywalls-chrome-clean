@@ -194,7 +194,6 @@
         "*://*.la-croix.com/*",
         "*://*.labusinessjournal.com/*",
         "*://*.ladepeche.fr/*",
-        "*://*.ladepeche.fr/*",
         "*://*.lalsace.fr/*",
         "*://*.lanacion.com.ar/*",
         "*://*.lardennais.fr/*",
@@ -409,5 +408,5 @@
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "1.9.8.5"
+    "version": "1.9.9.0"
 }
