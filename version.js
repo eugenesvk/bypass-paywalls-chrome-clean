@@ -20,7 +20,7 @@ fetch(proxyurl + manifest_new, { headers: { "Content-Type": "application/json", 
                 if (version_new.substring(0, version_len) > manifestData.version.substring(0, version_len)) {
                     anchorEl = document.createElement('a');
                     anchorEl.innerText = 'New release v' + version_new;
-                    if (manifestData.applications.gecko.id.includes('magnolia')) {
+                    if (manifestData.applications && manifestData.applications.gecko.id.includes('magnolia')) {
                         if (installType === 'development')
                             anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean';
                         else
