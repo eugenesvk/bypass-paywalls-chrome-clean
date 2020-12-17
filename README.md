@@ -15,10 +15,11 @@ Or download and install the latest xpi-version from [GitLab](https://gitlab.com/
 By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). 
 
 #### Android
-On Android this add-on only works with Firefox 68 (Fennec); Firefox 79+ (Fenix) only supports 9 'recommended' add-ons (for now).  
-BPC add-on works fine in Firefox Nightly (or IceRaven) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).  
-You can either make your own custom add-on collection or take the one used by [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser): [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)  
-Set custom add-ons account: 16201230 & collection: What-I-want-on-Fenix
+On Android this add-on only works with Firefox 68 (Fennec); Firefox 79+ (Fenix) only supports 9 'recommended' add-ons (for now).\
+BPC add-on works fine in Firefox Nightly (or IceRaven) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
+For Firefox Nightly you have to make your own custom add-on collection (or use another that contains BPC). \
+[Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
+It has custom add-ons account: 16201230 & collection: What-I-want-on-Fenix, but somehow it's not working in Firefox Nightly.
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
@@ -211,7 +212,7 @@ Groupe Rossel sites (grouped in options) like
 [L'Aisne nouvelle](https://www.aisnenouvelle.fr) -
 [L'Ardennais](https://www.lardennais.fr) -
 [L'Est-Éclair](https://www.lest-eclair.fr) -
-[L'Union - L'Ardennais](https://www.lunion.fr) -
+[L'Union](https://www.lunion.fr) -
 [L'Écho](https://lecho.be) -
 [La Voix du Nord](https://www.lavoixdunord.fr) -
 [Le Courrier picard](https://www.courrier-picard.fr) -
