@@ -1,0 +1,10 @@
+{
+  "addons": {
+    "magnolia_limited_permissions@12.34": {
+      "updates": [
+        { "version": "1.9.9.2",
+            "update_link": "https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean_lp-1.9.9.2.xpi" }
+        ]
+    }
+  }
+}
