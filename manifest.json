@@ -263,6 +263,7 @@
         "*://*.nordeclair.fr/*",
         "*://*.northerndailyleader.com.au/*",
         "*://*.northernstar.com.au/*",
+        "*://*.nouvelobs.com/*",
         "*://*.nrc.nl/*",
         "*://*.nrpyrenees.fr/*",
         "*://*.nrz.de/*",
@@ -410,5 +411,5 @@
         "*://*.repstatic.it/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "2.0.0.0"
+    "version": "2.0.0.1"
 }
