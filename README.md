@@ -1,6 +1,7 @@
 # Bypass Paywalls Clean for Firefox
 
 * [Installation](#installation)
+* [Update](#update)
 * [List of supported websites](#list-of-supported-websites)
 * [Sites with limited number of free articles](#sites-with-limited-number-of-free-articles)
 * [New site requests](#new-site-requests)
