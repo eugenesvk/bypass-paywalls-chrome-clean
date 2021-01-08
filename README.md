@@ -141,8 +141,14 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [Le Devoir](https://www.ledevoir.com) -
 [National Post](https://www.nationalpost.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
-[The Logic](https://thelogic.co) -
-[The Toronto Star](https://www.thestar.com)
+[The Logic](https://thelogic.co)\
+[The Toronto Star](https://www.thestar.com) and regional TorStar sites (grouped in options) like
+[Niagara Falls Review](https://www.niagarafallsreview.ca) -
+[Peterborough Examiner](https://www.thepeterboroughexaminer.com) -
+[St. Catharines Standard](https://www.stcatharinesstandard.ca) -
+[The Hamilton Spectator](https://www.thespec.com) -
+[Waterloo Region Record](https://www.therecord.com) -
+[Welland Tribune](https://www.wellandtribune.ca)
 
 #### Europe
 
