@@ -116,7 +116,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [Los Angeles Times](https://www.latimes.com) -
 [Miami Herald](https://www.miamiherald.com) -
 [Mountain View Voice](https://www.mv-voice.com) -
-[New York Magazine](https://www.nymag.com) (& [Grub Street](https://www.grubstreet.com), [The Cut](https://www.thecut.com) & [Vulture](https://www.vulture.com)) -
+[New York Magazine](https://www.nymag.com) (+ [Curbed](https://www.curbed.com/), [Grub Street](https://www.grubstreet.com), [The Cut](https://www.thecut.com) & [Vulture](https://www.vulture.com)) -
 [Orange County Register](https://www.ocregister.com) -
 [Orlando Sentinel](https://www.orlandosentinel.com) -
 [Palo Alto Online](https://www.paloaltoonline.com) -
