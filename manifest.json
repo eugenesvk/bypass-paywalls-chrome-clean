@@ -373,6 +373,7 @@
         "*://*.townsvillebulletin.com.au/*",
         "*://*.trouw.nl/*",
         "*://*.tubantia.nl/*",
+        "*://*.usinenouvelle.com/*",
         "*://*.uusisuomi.fi/*",
         "*://*.valeursactuelles.com/*",
         "*://*.vanityfair.com/*",
@@ -427,5 +428,5 @@
         "*://*.stripe.com/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "2.0.3.3"
+    "version": "2.0.3.4"
 }
