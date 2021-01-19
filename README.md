@@ -20,11 +20,12 @@ By default BPC has limited permissions, but you can opt-in to enable custom site
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).
 
 #### Android
-On Android this add-on only works with Firefox 68 (Fennec); Firefox 79+ (Fenix) only supports 9 'recommended' add-ons (for now).\
-BPC add-on works fine in Firefox Nightly (or IceRaven) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
-For Firefox Nightly you have to make your own custom add-on collection (or use another that contains BPC). \
+On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports 9 'recommended' add-ons (for now).\
+BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix), [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/) or [IceRaven](https://github.com/fork-maintainers/iceraven-browser) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
+For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
 [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
-It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix, but somehow it's not working in Firefox Nightly.
+It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
+In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
@@ -320,6 +321,9 @@ Grouped in options:\
 [Trouw](https://www.trouw.nl) -
 [Volkskrant](https://www.volkskrant.nl)
 
+##### Portugal
+[Observador](https://observador.pt)
+
 ##### Russia
 [Republic.ru](https://republic.ru)
 
@@ -490,7 +494,7 @@ Check 'Options'-link in popup-menu and go to custom sites.
 Make sure the (new) site is checked under Options (or check on/off-button).  
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
 Also you can enable Googlebot user-agent or disable Javascript for (sub)domain(s)/external sources.\
-PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly or IceRaven).
+PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly, Fennec F-Droid or IceRaven).
 
 ### Add excluded site
 Add excluded sites/domains (for your subscriptions).\
