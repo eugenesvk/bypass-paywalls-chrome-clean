@@ -322,6 +322,7 @@ Grouped in options:\
 [Volkskrant](https://www.volkskrant.nl)
 
 ##### Portugal
+[Correio da Manhã](https://www.cmjornal.pt) -
 [Observador](https://observador.pt)
 
 ##### Russia
