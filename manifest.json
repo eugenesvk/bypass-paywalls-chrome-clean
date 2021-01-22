@@ -297,6 +297,7 @@
         "*://*.piqd.de/*",
         "*://*.portnews.com.au/*",
         "*://*.post-gazette.com/*",
+        "*://*.prospectmagazine.co.uk/*",
         "*://*.pzc.nl/*",
         "*://*.qt.com.au/*",
         "*://*.quora.com/*",
@@ -435,5 +436,5 @@
         "*://*.stripe.com/*",
         "*://*.userzoom.com/*"
     ],
-    "version": "2.0.4.4"
+    "version": "2.0.4.5"
 }
