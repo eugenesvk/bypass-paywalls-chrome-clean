@@ -104,6 +104,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [The Daily Beast](https://www.thedailybeast.com)* -
+[The Point Magazine](https://thepointmag.com) -
 [Vanity Fair](https://www.vanityfair.com) -
 [Variety](https://variety.com)
 
