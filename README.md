@@ -25,7 +25,8 @@ BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/de
 For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
 [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
 It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
-In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).
+In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).\
+PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly, Fennec F-Droid or IceRaven).
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
@@ -332,10 +333,12 @@ Grouped in options:\
 
 ##### Spain
 [ABC](https://www.abc.es) -
+[El Diario.es](https://www.eldiario.es) -
 [El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com) -
-[El Periódico](https://www.elperiodico.com) -
+[El Periódico de Catalunya](https://www.elperiodico.com) -
 [Expansión](https://www.expansion.com) -
+[La Nueva España](https://www.lne.es) -
 [La Vanguardia](https://www.lavanguardia.com)\
 Grouped in options:\
 Grupo Vocento (ABC) regional sites like
