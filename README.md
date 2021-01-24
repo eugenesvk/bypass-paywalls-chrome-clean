@@ -33,6 +33,8 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 
 ### List of supported websites
 
+_* free articles only._
+
 ##### World news
 [First Things](https://www.firstthings.com) -
 [Foreign Affairs](https://www.foreignaffairs.com) -
@@ -64,7 +66,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 [Fortune](https://fortune.com) -
 [Harvard Business Review](https://www.hbr.org) -
 [Inc.com](https://www.inc.com) -
-[MarketWatch](https://www.marketwatch.com)\* -
+[MarketWatch](https://www.marketwatch.com)\ -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Modern Healthcare](https://www.modernhealthcare.com) -
 [Quartz](https://qz.com)* -
@@ -473,7 +475,7 @@ For example:
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)
 
-_*free articles only._
+_* free articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
