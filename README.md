@@ -20,12 +20,15 @@ By default BPC has limited permissions, but you can opt-in to enable custom site
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).
 
 #### Android
-On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports 9 'recommended' add-ons (for now).\
+On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports a number of 'recommended' add-ons (for now).\
+Only from Firefox v85 you can install recommended add-ons via [AMO](https://addons.mozilla.org) - so no more need to add these to your custom add-on collection (see below).
+
 BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix), [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/) or [IceRaven](https://github.com/fork-maintainers/iceraven-browser) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
 For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
 [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
 It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
-In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).\
+In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).
+
 PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly, Fennec F-Droid or IceRaven).
 
 #### Chrome/Chromium
@@ -206,6 +209,7 @@ Alma Talent sites (grouped in options) like
 [Le Journal du Dimanche](https://lejdd.fr) –
 [Le Journal du Net](https://www.journaldunet.com) -
 [Le Parisien](https://www.leparisien.fr) -
+[Le Un](https://le1hebdo.fr) -
 [Les Échos](https://www.lesechos.fr) -
 [Libération](https://www.liberation.fr)* –
 [Paris Match](https://www.parismatch.com) -

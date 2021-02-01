@@ -221,6 +221,7 @@
         "*://*.lavoixdunord.fr/*",
         "*://*.lavozdigital.es/*",
         "*://*.lc.nl/*",
+        "*://*.le1hebdo.fr/*",
         "*://*.lecho.be/*",
         "*://*.ledauphine.com/*",
         "*://*.ledevoir.com/*",
@@ -446,5 +447,5 @@
         "*://*.userzoom.com/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.0.6.0"
+    "version": "2.0.6.1"
 }
