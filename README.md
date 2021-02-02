@@ -341,13 +341,17 @@ Grouped in options:\
 
 ##### Spain
 [ABC](https://www.abc.es) -
+[Diario de Ibiza](https://www.diariodeibiza.es) -
+[Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Confidencial](https://www.elconfidencial.com) -
 [El Diario.es](https://www.eldiario.es) -
 [El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com) -
 [El Periódico de Catalunya](https://www.elperiodico.com) -
 [Expansión](https://www.expansion.com) -
+[Faro de Vigo](https://www.farodevigo.es) -
 [La Nueva España](https://www.lne.es) -
+[La Provincia](https://www.laprovincia.es) -
 [La Vanguardia](https://www.lavanguardia.com)\
 Grouped in options:\
 Grupo Vocento (ABC) regional sites like
