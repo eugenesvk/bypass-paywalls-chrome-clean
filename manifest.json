@@ -43,6 +43,7 @@
         "tabs",
         "webRequest",
         "webRequestBlocking",
+        "*://*.aachener-nachrichten.de/*",
         "*://*.abc.es/*",
         "*://*.abendblatt.de/*",
         "*://*.ad.nl/*",
@@ -156,6 +157,7 @@
         "*://*.fresnobee.com/*",
         "*://*.ft.com/*",
         "*://*.ftm.nl/*",
+        "*://*.ga.de/*",
         "*://*.geelongadvertiser.com.au/*",
         "*://*.gelderlander.nl/*",
         "*://*.gelocal.it/*",
@@ -320,7 +322,9 @@
         "*://*.republic.ru/*",
         "*://*.republicain-lorrain.fr/*",
         "*://*.rollingstone.com/*",
+        "*://*.rp-online.de/*",
         "*://*.ruhrnachrichten.de/*",
+        "*://*.saarbruecker-zeitung.de/*",
         "*://*.sacbee.com/*",
         "*://*.saechsische.de/*",
         "*://*.sandiegouniontribune.com/*",
@@ -398,6 +402,7 @@
         "*://*.valeursactuelles.com/*",
         "*://*.vanityfair.com/*",
         "*://*.variety.com/*",
+        "*://*.volksfreund.de/*",
         "*://*.volkskrant.nl/*",
         "*://*.vosgesmatin.fr/*",
         "*://*.vulture.com/*",
@@ -451,5 +456,5 @@
         "*://*.userzoom.com/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.0.6.4"
+    "version": "2.0.6.5"
 }
