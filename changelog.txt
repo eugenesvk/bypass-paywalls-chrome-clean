@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Diario de Ibiza/Mallorca, Faro de Vigo & La Provincia (Spain)
+Add Law.com (free articles only)
 Add Le Un (France)
 Rheinische Post Mediengruppe (only plus if amp)
 Fix-update Madsack Mediengruppe (amp)
