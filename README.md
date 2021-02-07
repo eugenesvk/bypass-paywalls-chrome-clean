@@ -111,6 +111,7 @@ _* free articles only._
 [Rolling Stone](https://www.rollingstone.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
+[The Art Newspaper](https://www.theartnewspaper.com) -
 [The Daily Beast](https://www.thedailybeast.com)* -
 [The Point Magazine](https://thepointmag.com) -
 [Vanity Fair](https://www.vanityfair.com) -

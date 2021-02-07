@@ -367,6 +367,7 @@
         "*://*.the-tls.co.uk/*",
         "*://*.theadvocate.com.au/*",
         "*://*.theage.com.au/*",
+        "*://*.theartnewspaper.com/*",
         "*://*.theatlantic.com/*",
         "*://*.theaustralian.com.au/*",
         "*://*.thechronicle.com.au/*",
@@ -436,6 +437,7 @@
         "*://*.tinypass.com/*",
         "*://*.tribdss.com/*",
         "*://*.adobedtm.com/*",
+        "*://*.amazonaws.com/*",
         "*://*.apnarm.net.au/*",
         "*://*.bwbx.io/*",
         "*://*.cdn.arcpublishing.com/*",
@@ -457,5 +459,5 @@
         "*://*.userzoom.com/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.0.6.8"
+    "version": "2.0.6.9"
 }
