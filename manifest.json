@@ -394,6 +394,7 @@
         "*://*.thewest.com.au/*",
         "*://*.thueringer-allgemeine.de/*",
         "*://*.tijd.be/*",
+        "*://*.time.com/*",
         "*://*.timeshighereducation.com/*",
         "*://*.tivi.fi/*",
         "*://*.towardsdatascience.com/*",
@@ -460,5 +461,5 @@
         "*://*.userzoom.com/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.0.7.1"
+    "version": "2.0.7.2"
 }
