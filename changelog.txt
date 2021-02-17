@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix popup (update notification; GitLab CORS issue)
+Fix private window (cookies/popup)
 Update limit contentScript (add image/sub_frame)
 
 * v2.0.8.0 (2021-02-14)
