@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Schleswig-Holsteinischer Zeitungsverlag (Germany)
+Add Sports Illustrated
 Fix popup (update notification; GitLab CORS issue)
 Fix private window (cookies/popup)
 Update limit contentScript (add image/sub_frame)
