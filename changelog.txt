@@ -6,6 +6,7 @@ Add Daily Nation (Kenya)
 Add Houston Chronicle (USA)
 Add Schleswig-Holsteinischer Zeitungsverlag (Germany)
 Add Sports Illustrated
+Fix-update Groupe La Depeche
 Fix-update La Croix (timing)
 Grouping Repubblica.it sites (rules only)
 Fix popup (update notification; GitLab CORS issue)
