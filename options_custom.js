@@ -186,9 +186,6 @@ function edit_options() {
 
 // Restores checkbox input states using the preferences stored in ext_api.storage.
 function renderOptions() {
-//ext_api.runtime.sendMessage({request: 'defaultSites_domains'});
-//ext_api.runtime.onMessage.addListener(function (message, sender) {
-//if (message.defaultSites_domains) {
     ext_api.storage.local.get({
         sites_custom: {}
     }, function (items) {
@@ -256,8 +253,6 @@ function renderOptions() {
         for (var key in sites_custom) {
             optionEl = document.createElement('option');
             let domain = sites_custom[key]['domain'];
-//            let defaultSites_domains = message.defaultSites_domains;
-            let defaultSites_domains = Object.values(defaultSites);
             let isDefaultSite = defaultSites_domains.includes(domain);
             optionEl.text = isDefaultSite ? '*' : '';
             optionEl.text += key + ': ' + domain +
@@ -283,8 +278,6 @@ function renderOptions() {
             custom_enabled.innerText = 'NO';
         }
     });
-//}
-//});
 }
 
 document.addEventListener('DOMContentLoaded', renderOptions);
