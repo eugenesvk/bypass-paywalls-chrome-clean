@@ -288,7 +288,6 @@
         "*://*.newcastleherald.com.au/*",
         "*://*.newleftreview.org/*",
         "*://*.newrepublic.com/*",
-        "*://*.news-gazette.com/*",
         "*://*.news-mail.com.au/*",
         "*://*.newsobserver.com/*",
         "*://*.newstatesman.com/*",
@@ -306,6 +305,7 @@
         "*://*.nrz.de/*",
         "*://*.ntnews.com.au/*",
         "*://*.nybooks.com/*",
+        "*://*.nydailynews.com/*",
         "*://*.nymag.com/*",
         "*://*.nytimes.com/*",
         "*://*.nzherald.co.nz/*",
@@ -321,6 +321,7 @@
         "*://*.parool.nl/*",
         "*://*.petitbleu.fr/*",
         "*://*.philosophynow.org/*",
+        "*://*.pilotonline.com/*",
         "*://*.piqd.de/*",
         "*://*.portnews.com.au/*",
         "*://*.post-gazette.com/*",
@@ -476,5 +477,5 @@
         "*://*.userzoom.com/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.0.9.3"
+    "version": "2.0.9.4"
 }
