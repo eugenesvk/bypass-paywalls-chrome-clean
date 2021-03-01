@@ -58,6 +58,7 @@
         "*://*.arvopaperi.fi/*",
         "*://*.asia.nikkei.com/*",
         "*://*.atavist.com/*",
+        "*://*.atlantico.fr/*",
         "*://*.augsburger-allgemeine.de/*",
         "*://*.baltimoresun.com/*",
         "*://*.barrons.com/*",
@@ -481,5 +482,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.0.0"
+    "version": "2.1.0.1"
 }
