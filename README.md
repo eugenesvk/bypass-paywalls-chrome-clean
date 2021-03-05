@@ -29,7 +29,8 @@ For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you 
 It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
 In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).
 
-PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly, Fennec F-Droid or IceRaven).
+PS on Android: enabling custom sites isn't working (no optional permissions).\
+Then you need the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean-custom)
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
@@ -561,8 +562,10 @@ Check 'Options'-link in popup-menu and go to custom sites.
 \* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies for non-listed sites).  
 Make sure the (new) site is checked under Options (or check on/off-button).  
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
-Also you can enable Googlebot user-agent, disable Javascript for (sub)domain(s)/external sources and/or set the referer (to Facebook, Google or Twitter; ignored when Googlebot is set).\
-PS enabling custom sites (optional permissions) isn't working on Android (Firefox Nightly, Fennec F-Droid or IceRaven).
+Also you can enable Googlebot user-agent, disable Javascript for (sub)domain(s)/external sources and/or set the referer (to Facebook, Google or Twitter; ignored when Googlebot is set).
+
+PS on Android: enabling custom sites isn't working (no optional permissions).\
+Then you need the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean-custom)
 
 ### Add excluded site
 Add excluded sites/domains (for your subscriptions).\
