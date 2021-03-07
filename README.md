@@ -27,7 +27,8 @@ BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/de
 For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
 [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
 It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
-In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown (including this add-on).
+In IceRaven all add-ons are shown (with search option), but In Firefox Nightly and Fennec F-Droid only the first 50 add-ons are shown.\
+There you can use custom add-ons account: 15546469 & collection: Fenix.
 
 PS on Android: enabling custom sites isn't working (no optional permissions).\
 Then you need the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean-custom)
