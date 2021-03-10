@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix-update Gannett Group (identify on xhr only)
+Fix-update La Stampa
 
 *v2.1.1.2 (2021-03-09)
 Add Newsday (local USA)
