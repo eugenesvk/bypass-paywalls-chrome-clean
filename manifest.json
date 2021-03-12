@@ -418,6 +418,7 @@
         "*://*.time.com/*",
         "*://*.timeshighereducation.com/*",
         "*://*.tivi.fi/*",
+        "*://*.tlz.de/*",
         "*://*.towardsdatascience.com/*",
         "*://*.townsvillebulletin.com.au/*",
         "*://*.tri-cityherald.com/*",
@@ -485,5 +486,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.1.4"
+    "version": "2.1.1.5"
 }
