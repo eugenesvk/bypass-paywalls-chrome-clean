@@ -65,6 +65,7 @@
         "*://*.bd.nl/*",
         "*://*.belfasttelegraph.co.uk/*",
         "*://*.bendigoadvertiser.com.au/*",
+        "*://*.berliner-zeitung.de/*",
         "*://*.berlingske.dk/*",
         "*://*.bienpublic.com/*",
         "*://*.bizjournals.com/*",
@@ -490,5 +491,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.2.2"
+    "version": "2.1.2.3"
 }
