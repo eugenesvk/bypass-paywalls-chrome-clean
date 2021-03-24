@@ -582,6 +582,7 @@ You can also exclude a specific domain which is grouped in options.
 
 ### Troubleshooting
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
+* Add usefull custom filter [Fanboy's Enhanced Tracking List](https://www.fanboy.co.nz/enhancedstats.txt)
 * If a site doesn't work, try turning off uBlock and refreshing.
 * Make sure the (new) site is checked under Options.
 * You will be logged out for most of the sites you have checked.
