@@ -123,6 +123,7 @@ _* free articles only._
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Athletic](https://theathletic.com) -
 [The Daily Beast](https://www.thedailybeast.com)* -
+[The New Atlantis](https://www.thenewatlantis.com) -
 [The Point Magazine](https://thepointmag.com) -
 [Vanity Fair](https://www.vanityfair.com) -
 [Variety](https://variety.com) -
@@ -206,7 +207,7 @@ Tribune Publishing Company sites like
 [London Review of Books](https://www.lrb.co.uk) -
 [New Left Review](https://newleftreview.org) -
 [Prospect Magazine](https://www.prospectmagazine.co.uk) -
-[The Athletic UK](https://theathletic.com) -
+[The Athletic UK](https://theathletic.co.uk) -
 [The Economist](https://www.economist.com) -
 [The Irish Times](https://www.irishtimes.com) -
 [The New Statesman](https://www.newstatesman.com) -
