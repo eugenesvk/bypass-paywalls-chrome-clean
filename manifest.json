@@ -271,6 +271,7 @@
         "*://*.ln-online.de/*",
         "*://*.lne.es/*",
         "*://*.loebclassics.com/*",
+        "*://*.loeildelaphotographie.com/*",
         "*://*.lopinion.fr/*",
         "*://*.lorientlejour.com/*",
         "*://*.lrb.co.uk/*",
@@ -504,5 +505,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.8.3"
+    "version": "2.1.8.4"
 }
