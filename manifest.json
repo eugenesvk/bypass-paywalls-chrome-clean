@@ -129,6 +129,7 @@
         "*://*.dn.se/*",
         "*://*.dna.fr/*",
         "*://*.dvhn.nl/*",
+        "*://*.economictimes.indiatimes.com/*",
         "*://*.economist.com/*",
         "*://*.ed.nl/*",
         "*://*.editorialedomani.it/*",
@@ -508,5 +509,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.9.0"
+    "version": "2.1.9.1"
 }
