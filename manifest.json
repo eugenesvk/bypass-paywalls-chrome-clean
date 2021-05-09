@@ -58,6 +58,7 @@
         "*://*.apollo-magazine.com/*",
         "*://*.arvopaperi.fi/*",
         "*://*.asia.nikkei.com/*",
+        "*://*.asiatimes.com/*",
         "*://*.atavist.com/*",
         "*://*.atlantico.fr/*",
         "*://*.augsburger-allgemeine.de/*",
@@ -511,5 +512,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.1.9.5"
+    "version": "2.1.9.6"
 }
