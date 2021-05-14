@@ -241,6 +241,7 @@
         "*://*.lardennais.fr/*",
         "*://*.larioja.com/*",
         "*://*.lasegunda.com/*",
+        "*://*.lasprovincias.es/*",
         "*://*.lastampa.it/*",
         "*://*.latercera.com/*",
         "*://*.latimes.com/*",
@@ -514,5 +515,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.0.4"
+    "version": "2.2.0.5"
 }
