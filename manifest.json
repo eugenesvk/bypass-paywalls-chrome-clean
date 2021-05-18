@@ -286,6 +286,7 @@
         "*://*.marmai.fi/*",
         "*://*.maz-online.de/*",
         "*://*.mcall.com/*",
+        "*://*.medianama.com/*",
         "*://*.medium.com/*",
         "*://*.mediuutiset.fi/*",
         "*://*.mercuriovalpo.cl/*",
@@ -515,5 +516,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.1.0"
+    "version": "2.2.1.1"
 }
