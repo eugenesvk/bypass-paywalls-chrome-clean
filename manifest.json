@@ -300,7 +300,6 @@
         "*://*.modernhealthcare.com/*",
         "*://*.morgenpost.de/*",
         "*://*.mv-voice.com/*",
-        "*://*.mz-web.de/*",
         "*://*.nation.africa/*",
         "*://*.nationalgeographic.com/*",
         "*://*.nationalpost.com/*",
@@ -517,5 +516,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.1.4"
+    "version": "2.2.1.5"
 }
