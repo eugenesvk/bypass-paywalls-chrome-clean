@@ -466,6 +466,7 @@ Grupo Vocento (ABC) regional sites like
 [Northern Territory News](https://www.ntnews.com.au) -
 [The Advertiser/AdelaideNow](https://www.adelaidenow.com.au) -
 [The Australian](https://www.theaustralian.com.au) -
+[The Chronicle](https://www.thechronicle.com.au) -
 [The Courier-Mail](https://www.couriermail.com.au) -
 [The Daily Telegraph](https://www.dailytelegraph.com.au) -
 [The Mercury Tasmania](https://www.themercury.com.au) -
@@ -506,7 +507,6 @@ Grupo Vocento (ABC) regional sites like
 [The Gympie Times](https://www.gympietimes.com.au) -
 [The Northern Star](https://www.northernstar.com.au) -
 [The Queensland Times](https://www.qt.com.au) -
-[Toowoomba Chronicle](https://www.thechronicle.com.au) -
 [Warwick Daily News](https://www.warwickdailynews.com.au)
 * opt-in to custom sites for unlisted
 

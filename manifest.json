@@ -300,7 +300,6 @@
         "*://*.modernhealthcare.com/*",
         "*://*.morgenpost.de/*",
         "*://*.mv-voice.com/*",
-        "*://*.natgeofe.com/*",
         "*://*.nation.africa/*",
         "*://*.nationalgeographic.com/*",
         "*://*.nationalpost.com/*",
@@ -508,6 +507,7 @@
         "*://*.jsdelivr.net/*",
         "*://*.lightboxcdn.com/*",
         "*://*.loader-cdn.azureedge.net/*",
+        "*://*.natgeofe.com/*",
         "*://*.nyt.com/*",
         "*://*.pasedigital.cl/*",
         "*://*.rcsobjects.it/*",
@@ -517,5 +517,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.1.7"
+    "version": "2.2.1.8"
 }
