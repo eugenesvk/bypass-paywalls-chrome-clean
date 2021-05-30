@@ -46,6 +46,7 @@
         "*://*.360dx.com/*",							
         "*://*.abc.es/*",
         "*://*.abendblatt.de/*",
+        "*://*.abril.com.br/*",
         "*://*.ad.nl/*",
         "*://*.adelaidenow.com.au/*",
         "*://*.adweek.com/*",
@@ -519,5 +520,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.2.5"
+    "version": "2.2.2.6"
 }
