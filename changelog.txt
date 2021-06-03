@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix-update Modern Healthcare
 
 * v2.2.3.0 (2021-05-30)
 Add Grupo Abril (Brazil)
