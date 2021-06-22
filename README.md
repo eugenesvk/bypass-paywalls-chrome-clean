@@ -611,7 +611,7 @@ Check 'Options'-link in popup-menu and go to custom sites.
 
 Make sure the (new) site is checked under Options (or check on/off-button).  
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
-Also you can enable Googlebot user-agent, disable Javascript for (sub)domain(s)/external sources and/or set the referer (to Facebook, Google or Twitter; ignored when Googlebot is set).
+Also you can enable Googlebot/Bingbot user-agent, disable Javascript for (sub)domain(s)/external sources and/or set the referer (to Facebook, Google or Twitter; ignored when Googlebot is set).
 
 PS on Android: enabling custom sites isn't working (no optional permissions).\
 Then you need the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean-custom)
