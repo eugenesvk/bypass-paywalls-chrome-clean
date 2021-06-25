@@ -166,7 +166,6 @@
         "*://*.farodevigo.es/*",
         "*://*.faz.net/*",
         "*://*.fd.nl/*",
-        "*://*.finance.si/*",
         "*://*.financialpost.com/*",
         "*://*.firstthings.com/*",
         "*://*.fnlondon.com/*",
@@ -529,5 +528,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.2.6.2"
+    "version": "2.2.6.3"
 }
