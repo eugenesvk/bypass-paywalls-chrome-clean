@@ -244,6 +244,7 @@ Tribune Publishing Company sites like
 [Helsingin Sanomat](https://www.hs.fi)\
 Alma Talent sites (grouped in options) like
 [Arvopaperi](https://www.arvopaperi.fi) -
+[Iltalehti](https://www.iltalehti.fi/) -
 [Kauppalehti](https://www.kauppalehti.fi) -
 [Markkinointi & Mainonta](https://www.marmai.fi) -
 [Mediuutiset](https://www.mediuutiset.fi) -
