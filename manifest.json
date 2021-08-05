@@ -232,6 +232,7 @@
         "*://*.iltalehti.fi/*",
         "*://*.iltelegrafolivorno.it/*",
         "*://*.inc.com/*",
+        "*://*.inc42.com/*",
         "*://*.independent.ie/*",
         "*://*.infzm.com/*",
         "*://*.inkl.com/*",
@@ -540,5 +541,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.3.1.2"
+    "version": "2.3.1.3"
 }
