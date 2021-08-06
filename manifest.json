@@ -520,7 +520,6 @@
         "*://*.adobedtm.com/*",
         "*://*.amazonaws.com/*",
         "*://*.apnarm.net.au/*",
-        "*://*.bwbx.io/*",
         "*://*.cedsdigital.it/*",
         "*://*.corriereobjects.it/*",
         "*://*.eestatic.com/*",
@@ -541,5 +540,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.3.1.3"
+    "version": "2.3.1.4"
 }
