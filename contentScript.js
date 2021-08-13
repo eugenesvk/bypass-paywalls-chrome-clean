@@ -2110,6 +2110,16 @@ else if (matchDomain('jpost.com')) {
   removeDOMElement(...premium_banners);
 }
 
+else if (matchDomain('livelaw.in')) {
+  let paywall = document.querySelectorAll('div.restricted_message > div.story, div.restricted_message > div.row');
+  if (paywall) {
+    removeDOMElement(...paywall);
+    let paywall_content = document.querySelector('div.paywall-content.hide');
+    if (paywall_content)
+      paywall_content.classList.remove('hide');
+  }
+}
+
 else if (matchDomain('magazine.atavist.com')) {
   let bottom_notification = document.querySelector('div.bottom-notification');
   let overlay = document.querySelector('div.notification-overlay');
@@ -2515,7 +2525,7 @@ else if (matchDomain('thedailybeast.com')) {
       let json_text = json_script.innerText.includes('"sections":') ? json_script.innerText.split('"sections":')[1].split('},"')[0] : '';
       if (json_text) {
         let pars = json_text.split('"').filter(function (value) {
-            return (value.split('[').length < 2 && value.split(']').length < 2);
+            return (value.split('[').length < 3 && value.split(']').length < 3);
           });
         let mobile_doc = document.querySelector('div.Mobiledoc');
         if (mobile_doc) {
