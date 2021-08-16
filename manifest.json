@@ -146,6 +146,7 @@
         "*://*.dn.se/*",
         "*://*.dna.fr/*",
         "*://*.dvhn.nl/*",
+        "*://*.eastbaytimes.com/*",
         "*://*.economictimes.com/*",
         "*://*.economictimes.indiatimes.com/*",
         "*://*.economist.com/*",
@@ -369,6 +370,7 @@
         "*://*.paris-normandie.fr/*",
         "*://*.parismatch.com/*",
         "*://*.parool.nl/*",
+        "*://*.pe.com/*",
         "*://*.petitbleu.fr/*",
         "*://*.philosophynow.org/*",
         "*://*.pilotonline.com/*",
@@ -482,6 +484,7 @@
         "*://*.tri-cityherald.com/*",
         "*://*.trouw.nl/*",
         "*://*.tubantia.nl/*",
+        "*://*.twincities.com/*",
         "*://*.upstreamonline.com/*",
         "*://*.usatoday.com/*",
         "*://*.usinenouvelle.com/*",
@@ -548,5 +551,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.3.3.0"
+    "version": "2.3.3.1"
 }
