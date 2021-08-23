@@ -2,7 +2,7 @@
   "addons": {
     "magnolia@12.34": {
       "updates": [
-        { "version": "2.3.4.0",
+        { "version": "2.3.4.1",
             "update_link": "https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-2.3.4.0.xpi" }
         ]
     }
