@@ -78,6 +78,7 @@ _* free articles only._
 [Harvard Business Review](https://www.hbr.org) -
 [Inc.com](https://www.inc.com) -
 [Law.com](https://www.law.com)* -
+[Law360](https://www.law360.com)* -
 [MarketWatch](https://www.marketwatch.com) -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Modern Healthcare](https://www.modernhealthcare.com) -

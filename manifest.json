@@ -279,6 +279,8 @@
         "*://*.lavoixdunord.fr/*",
         "*://*.lavozdigital.es/*",
         "*://*.law.com/*",
+        "*://*.law360.com/*",
+        "*://*.law360news.com/*",
         "*://*.lc.nl/*",
         "*://*.lecho.be/*",
         "*://*.ledauphine.com/*",
@@ -553,5 +555,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.3.4.2"
+    "version": "2.3.4.3"
 }
