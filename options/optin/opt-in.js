@@ -75,4 +75,25 @@ window.addEventListener("load", function () {
             });
         });
     });
+
+    var counter_enabled = document.getElementById('counter-enabled');
+    ext_api.storage.local.get({counter: true}, function (result) {
+        counter_enabled.innerText = result.counter ? 'YES' : 'NO';
+    });
+
+    document.getElementById("counter-enable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "counter": true,
+            "optInShown": true
+        });
+        counter_enabled.innerText = 'YES';
+    });
+
+    document.getElementById("counter-disable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "counter": false,
+            "optInShown": true
+        });
+        counter_enabled.innerText = 'NO';
+    });
 });
