@@ -1,5 +1,9 @@
 # Bypass Paywalls Clean for Firefox
 
+Add-on allows you to read articles from (supported) sites that implement a paywall.  
+You can also add domains as custom site and try to bypass the paywall.  
+Weekly updates are released for fixes and new sites.
+
 * [Installation](#installation)
 * [Update](#update)
 * [List of supported websites](#list-of-supported-websites)
@@ -10,6 +14,7 @@
 * [Troubleshooting](#troubleshooting)
 * [Changelog-releases](#changelog-releases)
 * [License](#license)
+* [Disclaimer](#disclaimer)
 
 ### Installation
 You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean)\
@@ -666,3 +671,6 @@ You can also exclude a specific domain which is grouped in options.
 
 ### License
 Bypass Paywalls Clean is [MIT-licensed](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/LICENSE).
+
+### Disclaimer
+* This software is provided for educational purposes only and is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
