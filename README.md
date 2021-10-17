@@ -650,9 +650,10 @@ Add your own custom site (also for testing).
 Check 'Options'-link in popup-menu and go to custom sites.  
 \* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself.
 
-Make sure the (new) site is checked under Options (or check on/off-button).  
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
 Also you can enable Googlebot/Bingbot user-agent, disable Javascript for (sub)domain(s)/external sources and/or set the referer (to Facebook, Google or Twitter; ignored when Googlebot is set).
+
+[Example list of custom sites](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/custom/sites_custom.json) or [download list (json)](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/custom/sites_custom.json)
 
 PS on Android: enabling custom sites isn't working (no optional permissions).\
 Then you need the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean-custom)
