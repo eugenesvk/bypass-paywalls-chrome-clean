@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Repubblica sites (disable Googlebot)
 Fix Stratfor (forecasts)
 Fix The Athletic (timing)
 
