@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix Barron's (timing)
+Fix Il Fatto Quotidiano
 Fix Boston Globe (incognito mode)
 Fix Westfaelische Nachrichten & Westfalen-Blatt
 
