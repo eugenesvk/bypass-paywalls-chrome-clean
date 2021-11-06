@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Harvard Business Review China
 Add Mitteldeutsche Zeitung
 Fix ElMundo.es (amp)
 Fix Lee Enterprises Group
