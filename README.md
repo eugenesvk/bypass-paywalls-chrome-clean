@@ -22,7 +22,8 @@ Or download and install the latest xpi-version from [GitLab](https://gitlab.com/
 By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites).
 
 ### Update
-Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).
+Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
+You can also check for update of site rules at startup (opt-in).
 
 #### Android
 On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports a number of 'recommended' add-ons (for now).\
