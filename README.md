@@ -23,7 +23,8 @@ By default BPC has limited permissions, but you can opt-in to enable custom site
 
 ### Update
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
-You can also check for update of site rules at startup (opt-in).
+You can also check for update of site rules at startup (opt-in).\
+For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
 #### Android
 On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports a number of 'recommended' add-ons (for now).\
