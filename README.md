@@ -272,7 +272,7 @@ Grouped in options:\
 [The New Statesman](https://www.newstatesman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
-[The Times](https://www.thetimes.co.uk) -
+[The Times (link to archive.today)](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk)
 
 ##### Denmark
