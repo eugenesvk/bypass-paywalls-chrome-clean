@@ -271,6 +271,7 @@
         "*://*.kn-online.de/*",
         "*://*.knack.be/*",
         "*://*.krautreporter.de/*",
+        "*://*.ksta.de/*",
         "*://*.kurier.at/*",
         "*://*.la-croix.com/*",
         "*://*.labusinessjournal.com/*",
@@ -422,6 +423,7 @@
         "*://*.richmond.com/*",
         "*://*.rollingstone.com/*",
         "*://*.ruhrnachrichten.de/*",
+        "*://*.rundschau-online.de/*",
         "*://*.sacbee.com/*",
         "*://*.sandiegouniontribune.com/*",
         "*://*.science-et-vie.com/*",
@@ -582,5 +584,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.4.6.1"
+    "version": "2.4.6.2"
 }
