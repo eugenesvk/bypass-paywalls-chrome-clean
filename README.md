@@ -30,7 +30,7 @@ For new sites you also have to opt-in to custom sites/request permissions for ne
 On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports a number of 'recommended' add-ons (for now).\
 Only from Firefox v85 you can install recommended add-ons via [AMO](https://addons.mozilla.org) - so no more need to add these to your custom add-on collection (see below).
 
-BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix), [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/) or [IceRaven](https://github.com/fork-maintainers/iceraven-browser) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
+BPC add-on works fine in [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix), [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid) or [IceRaven](https://github.com/fork-maintainers/iceraven-browser) though (when you load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly)).\
 For Firefox Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
 [Iceraven (Fenix fork)](https://github.com/fork-maintainers/iceraven-browser) uses: [What I want on Fenix](https://addons.mozilla.org/en-US/firefox/collections/16201230/What-I-want-on-Fenix)\
 It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
@@ -44,7 +44,7 @@ Then you need the 'custom' add-on version (with access to all sites): [Bypass Pa
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
 
 #### Notes
-* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
+* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin).
 * You will be logged out for most of the sites you have checked.
 
 ### List of supported websites
@@ -170,7 +170,7 @@ Grouped in options:\
 [Los Angeles Business Journal](https://labusinessjournal.com) -
 [Los Angeles Times](https://www.latimes.com) -
 [Mountain View Voice](https://www.mv-voice.com) -
-[New York Magazine](https://www.nymag.com) (+ [Curbed](https://www.curbed.com/), [Grub Street](https://www.grubstreet.com), [The Cut](https://www.thecut.com) & [Vulture](https://www.vulture.com)) -
+[New York Magazine](https://www.nymag.com) (+ [Curbed](https://www.curbed.com), [Grub Street](https://www.grubstreet.com), [The Cut](https://www.thecut.com) & [Vulture](https://www.vulture.com)) -
 [Newsday](https://www.newsday.com) -
 [Palo Alto Online](https://www.paloaltoonline.com) -
 [Pittsburgh Post Gazette](https://www.post-gazette.com) -
@@ -199,7 +199,7 @@ Grouped in options:\
 [The Post-Standard](https://www.syracuse.com) -
 [The Republican](https://www.masslive.com)\
 *Gannett Group (local USA Today)* sites like (opt-in to custom sites for unlisted)\
-[Austin American-Statesman](https://www.statesman.com/) -
+[Austin American-Statesman](https://www.statesman.com) -
 [Detroit Free Press](https://www.freep.com) -
 [Milwaukee Journal Sentinel](https://www.jsonline.com) -
 [The Arizona Republic](https://www.azcentral.com) -
@@ -292,7 +292,7 @@ Grouped in options:\
 
 *Alma Talent* sites like\
 [Arvopaperi](https://www.arvopaperi.fi) -
-[Iltalehti (Firefox-only)](https://www.iltalehti.fi/) -
+[Iltalehti (Firefox-only)](https://www.iltalehti.fi) -
 [Kauppalehti](https://www.kauppalehti.fi) -
 [Markkinointi & Mainonta](https://www.marmai.fi) -
 [Mediuutiset](https://www.mediuutiset.fi) -
@@ -309,6 +309,7 @@ Grouped in options:\
 [Charlie Hebdo](https://charliehebdo.fr) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
+[L'Écho](https://lecho.be) -
 [L'Express](https://www.lexpress.fr) -
 [L'Obs](https://www.nouvelobs.com) -
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
@@ -354,7 +355,6 @@ Grouped in options:\
 [L'Ardennais](https://www.lardennais.fr) -
 [L'Est-Éclair](https://www.lest-eclair.fr) -
 [L'Union](https://www.lunion.fr) -
-[L'Écho](https://lecho.be) -
 [La Voix du Nord](https://www.lavoixdunord.fr) -
 [Le Courrier picard](https://www.courrier-picard.fr) -
 [Le Soir](https://www.lesoir.be) -
@@ -643,7 +643,7 @@ _* free articles only._
 The free article limit can normally be bypassed by removing cookies for the site.  
 Click on the BPC-icon and then 'clear cookies'-button in the popup.  
 For user with the limited permissions BPC-version this will only work for supported sites; for other sites use:
-1. Install the add-on [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover/).
+1. Install the add-on [Cookie Remover](https://addons.mozilla.org/en-US/firefox/addon/cookie-remover).
 2. When coming across a paywall click the cookie icon to remove the cookies then refresh the page.
 
 If removing the cookies works you can also add the site as a custom site.
@@ -676,7 +676,7 @@ Add excluded sites/domains (for your subscriptions).\
 You can also exclude a specific domain which is grouped in options.
 
 ### Troubleshooting
-* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/).
+* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin).
 * Add usefull custom filter [Fanboy's Enhanced Tracking List](https://www.fanboy.co.nz/enhancedstats.txt)
 * If a site doesn't work, try turning off uBlock and refreshing.
 * Make sure the (new) site is checked under Options.
@@ -687,7 +687,7 @@ You can also exclude a specific domain which is grouped in options.
 
 ### Changelog-releases
 * Visit the [changelog page](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/changelog.txt).
-* Or check the [commits](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/commits/master/).
+* Or check the [commits](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/commits/master).
 * [Download the latest version](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)
 
 ### License
