@@ -317,6 +317,7 @@ Grouped in options:\
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
 [L'Opinion](https://www.lopinion.fr) -
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
+[La Libre](https://www.lalibre.be) -
 [La Croix](https://www.la-croix.com) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
@@ -324,6 +325,7 @@ Grouped in options:\
 [Le Journal du Net](https://www.journaldunet.com) -
 [Le Parisien](https://www.leparisien.fr) -
 [Le Télégramme](https://www.letelegramme.fr) -
+[Le Vif](https://www.levif.be) -
 [Les Échos](https://www.lesechos.fr) -
 [Marianne](https://www.marianne.net) -
 [Paris Match](https://www.parismatch.com) -
