@@ -340,6 +340,7 @@
         "*://*.lrb.co.uk/*",
         "*://*.lunion.fr/*",
         "*://*.lvz.de/*",
+        "*://*.mainichi.jp/*",
         "*://*.marca.com/*",
         "*://*.marianne.net/*",
         "*://*.marketwatch.com/*",
@@ -606,5 +607,5 @@
         "*://*.wsj.net/*",
         "*://*.zephr.com/*"
     ],
-    "version": "2.5.1.0"
+    "version": "2.5.1.1"
 }
