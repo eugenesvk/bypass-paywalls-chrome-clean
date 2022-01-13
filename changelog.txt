@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Mainichi Shimbun (Japan)
 Fix Bloomberg (quotes)
+Update popup (domain to clear cookies)
 
 * v2.5.1.0 (2022-01-09)
 Add group Hearst Communications (local USA)

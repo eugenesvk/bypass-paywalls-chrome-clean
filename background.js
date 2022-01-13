@@ -214,8 +214,13 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (rule.hasOwnProperty('block_regex')) {
           if (rule.block_regex instanceof RegExp)
             blockedRegexes[domain] = rule.block_regex;
-          else
-            blockedRegexes[domain] = new RegExp(rule.block_regex.replace('{domain}', domain.replace(/\./g, '\\.').replace(/(^\/|\/$)/g, '')));
+          else {
+            try {
+              blockedRegexes[domain] = new RegExp(rule.block_regex.replace('{domain}', domain.replace(/\./g, '\\.').replace(/(^\/|\/$)/g, '')));
+            } catch (e) {
+              false;
+            }
+          }
         }
         if (rule.useragent) {
           switch (rule.useragent) {

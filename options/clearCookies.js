@@ -3,11 +3,25 @@ var ext_api = (typeof browser === 'object') ? browser : chrome;
 window.localStorage.clear();
 sessionStorage.clear();
 
-var cookie_domain = document.domain.replace(/^(www|amp(\d|html)?|m|wap)\./, '');
+var cookie_domain = getCookieDomain(document.domain);
+
 // send domain to background.js (to clear cookies)
 ext_api.runtime.sendMessage({
     domain: cookie_domain
 });
+
+function getCookieDomain(hostname) {
+  let domain = hostname;
+  let n = 0;
+  let parts = hostname.split('.');
+  let str = '_gd' + (new Date()).getTime();
+  while (n < (parts.length - 1) && document.cookie.indexOf(str + '=' + str) == -1) {
+    domain = parts.slice(-1 - (++n)).join('.');
+    document.cookie = str + "=" + str + ";domain=" + domain + ";";
+  }
+  document.cookie = str + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=" + domain + ";";
+  return domain;
+}
 
 var msg = "Cookies (and local storage) removed from " + cookie_domain;
 showMessage(msg, 2000);

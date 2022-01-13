@@ -41,7 +41,7 @@ ext_api.tabs.query({
 }, function (tabs) {
   if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
     let hostname = new URL(tabs[0].url).hostname;
-    cookie_domain = hostname.replace(/^(www|amp(\d|html)?|m|wap)\./, '');
+    cookie_domain = getCookiePermDomain(hostname);
   }
 });
 
@@ -59,6 +59,16 @@ document.getElementById("clear_cookies").addEventListener('click', function () {
 
 function closeButton() {
   window.close();
+}
+
+function getCookiePermDomain(hostname) {
+  let domain = hostname.replace(/^(www|amp(html)?|m|wap)(\d)?\./, '');
+  let domain_split = domain.split('.');
+  let num = 2;
+  if (domain_split.length > 2 && domain.match(/(\w){2,4}\.(\w){2}$/))
+    num = 3;
+  domain = domain_split.slice(-num).join('.');
+  return domain;
 }
 
 document.getElementById("button-close").addEventListener('click', closeButton);

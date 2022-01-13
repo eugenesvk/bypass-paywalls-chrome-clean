@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
             "optInShown": true,
             "customShown": true
         });
-        open(location).close();
+        window.close();
     });
 
     var custom_enabled = document.getElementById('custom-enabled');
