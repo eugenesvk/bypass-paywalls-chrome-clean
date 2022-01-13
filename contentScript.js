@@ -3290,7 +3290,7 @@ else if ((domain = matchDomain(usa_mcc_domains)) || document.querySelector('scri
   let url = window.location.href;
   if (url.includes('account.' + domain + '/paywall/')) {
     window.setTimeout(function () {
-      window.location.href = 'https://amp.' + domain + '/article' + url.split('resume=')[1].split('#')[0] + '.html';
+      window.location.href = 'https://amp.' + domain + '/article' + url.split('resume=')[1].split(/[#&]/)[0] + '.html';
     }, 500); // Delay (in milliseconds)
   } else if (url.includes('amp.' + domain + '/')) {
     amp_unhide_subscr_section();

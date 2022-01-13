@@ -5,6 +5,7 @@ Post-release
 Add Mainichi Shimbun (Japan)
 Remove De Tijd & L'Echo
 Fix Bloomberg (quotes)
+Fix McClatchy Group (amp-redirect & disable)
 Fix Prospect Magazine (timing)
 Fix Star Tribune (timing)
 Update popup (domain to clear cookies)
@@ -225,7 +226,7 @@ Fix The Daily Beast (proper/images)
 * v2.3.3.0 (2021-08-15)
 Add Live Law (India)
 Add Sanoma Media Finland (+ aamulehti.fi & regional/opt-in)
-Fix group McClatchy (unlisted sites)
+Fix McClatchy Group (unlisted sites)
 Fix MediaNama (modal)
 Fix The Athletic
 Fix The Daily Beast (members-only)
@@ -272,7 +273,7 @@ Fix WaPo (magazine)
 Add TradeWinds
 Fix Discover Magazine
 Fix Il Secolo XIX (amp-redirect)
-Fix Miami Herald (group McClatchy)
+Fix Miami Herald (McClatchy Group)
 Fix New Left Review (timing)
 Fix WaPo (disable Googlebot & fix amp/interactive)
 Maintenance contentScript (update sanitize html-input)
@@ -406,7 +407,7 @@ Add Aachener-Zeitung.de (RP-medien)
 Add Apollo Magazine
 Add NK News (not pro)
 Add Nordwest Zeitung (Germany)
-Fix group McClatchy (opt-in to custom sites for unlisted)
+Fix McClatchy Group (opt-in to custom sites for unlisted)
 Fix Wired (Googlebot)
 Fix WSJ (option to disable Googlebot; http error 500)
 
@@ -466,7 +467,7 @@ Update limit contentScript (add image/sub_frame)
 
 * v2.0.8.0 (2021-02-14)
 Add Augsburger-Allgemeine.de
-Add group McClatchy (USA)
+Add McClatchy Group (USA)
 Add Neue Osnabruecker Zeitung (Germany)
 Add Time Magazine
 Fix Cors Anywhere (link to allow access)
