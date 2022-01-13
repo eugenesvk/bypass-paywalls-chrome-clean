@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Mainichi Shimbun (Japan)
+Remove De Tijd & L'Echo
 Fix Bloomberg (quotes)
 Fix Prospect Magazine (timing)
 Fix Star Tribune (timing)

@@ -306,7 +306,6 @@
         "*://*.law360.com/*",
         "*://*.law360news.com/*",
         "*://*.lc.nl/*",
-        "*://*.lecho.be/*",
         "*://*.ledauphine.com/*",
         "*://*.ledevoir.com/*",
         "*://*.lehighvalleylive.com/*",
@@ -520,7 +519,6 @@
         "*://*.thewest.com.au/*",
         "*://*.thewrap.com/*",
         "*://*.thueringer-allgemeine.de/*",
-        "*://*.tijd.be/*",
         "*://*.time.com/*",
         "*://*.timeshighereducation.com/*",
         "*://*.timesofindia.com/*",
@@ -607,5 +605,5 @@
         "*://*.wsj.net/*",
         "*://*.zephr.com/*"
     ],
-    "version": "2.5.1.2"
+    "version": "2.5.1.3"
 }

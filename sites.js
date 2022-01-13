@@ -298,9 +298,6 @@ var defaultSites = {
   "Dark Reading": {
     domain: "darkreading.com"
   },
-  "De Tijd": {
-    domain: "tijd.be"
-  },
   "DealStreetAsia": {
     domain: "dealstreetasia.com",
     useragent: "bingbot"
@@ -791,9 +788,6 @@ var defaultSites = {
     domain: "kurier.at",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
-  },
-  "L'Écho": {
-    domain: "lecho.be"
   },
   "L'Équipe": {
     domain: "lequipe.fr",
