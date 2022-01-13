@@ -6,7 +6,7 @@
   },
   "Abqjournal.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.amazonaws\\.com\\/abq_pw_",
+    "block_regex": "\\.abqjournal\\.com\\/.+\\/abq-pw-manager\\.js",
     "domain": "abqjournal.com",
     "useragent": "googlebot"
   },

@@ -1340,7 +1340,8 @@ var defaultSites = {
   },
   "Star Tribune": {
     domain: "startribune.com",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.startribune\.com\/vendor\/js\//
   },
   "Statista": {
     domain: "statista.com",
@@ -1468,6 +1469,7 @@ var defaultSites = {
   },
   "The Economist": {
     domain: "economist.com",
+    allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "The Globe and Mail": {

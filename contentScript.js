@@ -1718,14 +1718,12 @@ if (matchDomain('independent.co.uk')) {
 
 else if (matchDomain('prospectmagazine.co.uk')) {
   let url = window.location.href;
-  document.addEventListener('DOMContentLoaded', () => {
-    let paywall = document.querySelector('div.paywall_overlay_blend, div.paywall');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
-      replaceDomElementExt(url_cache, true, false, 'main');
-    }
-  });
+  let paywall = document.querySelector('div.paywall_overlay_blend, div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    replaceDomElementExt(url_cache, true, false, 'main');
+  }
 }
 
 else if (matchDomain('spectator.co.uk')) {
@@ -2156,10 +2154,8 @@ else if (matchDomain(ca_torstar_domains)) {
 }
 
 else if (matchDomain('cen.acs.org')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    let meteredBar = document.querySelector('.meteredBar');
-    removeDOMElement(meteredBar);
-  });
+  let meteredBar = document.querySelector('.meteredBar');
+  removeDOMElement(meteredBar);
 }
 
 else if (matchDomain('chronicle.com')) {
@@ -2257,33 +2253,23 @@ else if (matchDomain('economictimes.indiatimes.com')) {
 }
 
 else if (matchDomain('economist.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    let subscribe = document.querySelector('.subscription-proposition');
-    let wrapper = document.getElementById('bottom-page-wrapper');
-    removeDOMElement(subscribe, wrapper);
-    let adverts = document.querySelectorAll('div.advert');
-    for (let advert of adverts)
-      advert.setAttribute('style', 'display:none');
-    window.setTimeout(function () {
-      let paywall = document.querySelector('.layout-article-regwall'); ;
-      if (paywall) {
-        window.location.reload(true);
-      }
-    }, 600); // Delay (in milliseconds)
-    let p_articles = document.querySelectorAll('p.article__body-text');
-    let href;
-    for (let p_article of p_articles) {
-      let e_anchors = document.querySelectorAll('a');
-      href = '';
-      for (let e_anchor of e_anchors) {
-        if (e_anchor.href) {
-          href = e_anchor.href;
-        } else {
-          e_anchor.href = href;
-        }
+  let subscribe = document.querySelector('.subscription-proposition');
+  let wrapper = document.getElementById('bottom-page-wrapper');
+  let adverts = document.querySelectorAll('div.advert');
+  removeDOMElement(subscribe, wrapper, ...adverts);
+  let p_articles = document.querySelectorAll('p.article__body-text');
+  let href;
+  for (let p_article of p_articles) {
+    let e_anchors = document.querySelectorAll('a');
+    href = '';
+    for (let e_anchor of e_anchors) {
+      if (e_anchor.href) {
+        href = e_anchor.href;
+      } else {
+        e_anchor.href = href;
       }
     }
-  });
+  }
 }
 
 else if (matchDomain('entrepreneur.com')) {
@@ -2838,13 +2824,8 @@ else if (matchDomain('staradvertiser.com')) {
 }
 
 else if (matchDomain('startribune.com')) {
-  document.addEventListener('DOMContentLoaded', () => {
-    let react_modal_portal = document.querySelectorAll('div.ReactModalPortal');
-    removeDOMElement(...react_modal_portal);
-    let body_modal = document.querySelector('body.ReactModal__Body--open');
-    if (body_modal)
-      body_modal.classList.remove('ReactModal__Body--open');
-  });
+  let ads = document.querySelectorAll('div.ad-placeholder');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('stocknews.com')) {

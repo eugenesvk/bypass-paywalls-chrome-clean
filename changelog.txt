@@ -4,6 +4,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Mainichi Shimbun (Japan)
 Fix Bloomberg (quotes)
+Fix Prospect Magazine (timing)
+Fix Star Tribune (timing)
 Update popup (domain to clear cookies)
 
 * v2.5.1.0 (2022-01-09)
