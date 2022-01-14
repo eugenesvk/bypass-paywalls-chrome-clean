@@ -627,6 +627,7 @@ var block_js = [
   "*://*.poool.fr/*",
   "*://*.qiota.com/*",
   "*://*.tribdss.com/*",
+  "*://*.zephr.com/zephr-browser/*",
   "*://cdn.ampproject.org/v*/amp-access-*.*js",
   "*://cdn.ampproject.org/v*/amp-subscriptions-*.*js",
   "*://cdn.tinypass.com/*",

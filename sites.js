@@ -1824,6 +1824,9 @@ var defaultSites = {
   "TribDss": {
     domain: "tribdss.com"
   },
+  "Zephr": {
+    domain: "zephr.com"
+  },
   "* BPC settings": {
     domain: "###"
   },
