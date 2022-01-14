@@ -2139,6 +2139,11 @@ else if (matchDomain('business-standard.com')) {
   }
 }
 
+else if (matchDomain('businessoffashion.com')) {
+  let ads = document.querySelectorAll('div[class^="default__AdsBlockWrapper"]');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain(ca_torstar_domains)) {
   window.setTimeout(function () {
     let meter_banner = document.querySelector('.c-article-meter-banner');

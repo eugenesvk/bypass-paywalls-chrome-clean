@@ -1433,7 +1433,7 @@ var defaultSites = {
   "The Business of Fashion": {
     domain: "businessoffashion.com",
     allow_cookies: 1,
-    block_regex: /\.businessoffashion\.com\/pf\/dist\/components\/combinations\/2\.chunk\.js/
+    block_regex: /\.businessoffashion\.com\/zephr\/feature-decisions/
   },
   "The Christian Science Monitor": {
     domain: "csmonitor.com"

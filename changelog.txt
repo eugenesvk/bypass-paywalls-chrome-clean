@@ -3,11 +3,12 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Mainichi Shimbun (Japan)
-Remove De Tijd & L'Echo
+Remove De Tijd & L'Echo (obsolete)
 Fix Bloomberg (quotes)
 Fix McClatchy Group (amp-redirect & disable)
 Fix Prospect Magazine (timing)
 Fix Star Tribune (timing)
+Fix The Business of Fashion
 Update popup (domain to clear cookies)
 
 * v2.5.1.0 (2022-01-09)

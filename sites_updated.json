@@ -9,6 +9,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.startribune\\.com\\/vendor\\/js\\/"
   },
+  "The Business of Fashion": {
+    "domain": "businessoffashion.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.businessoffashion\\.com\\/zephr\\/feature-decisions"
+  },
   "The Indian Express": {
     "domain": "indianexpress.com",
     "allow_cookies": 1,
