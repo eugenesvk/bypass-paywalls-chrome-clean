@@ -740,14 +740,26 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   // block script for additional Lee Enterprises sites (opt-in to custom sites)
   var usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
-  var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/central\.leetemplates\.com\//) && ['image'].includes(details.type) &&
-  !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
+  var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['image', 'script'].includes(details.type) &&
+    !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
   if (usa_lee_ent_domain) {
     let lee_ent_domain = urlHost(header_referer).replace(/^(www|m)\./, '');
     blockedRegexes[lee_ent_domain] = blockedRegexes['buffalonews.com'];
     usa_lee_ent_domains.push(lee_ent_domain);
     if (!enabledSites.includes(lee_ent_domain))
       enabledSites.push(lee_ent_domain);
+  }
+
+  // block script for TownNews sites (Blox CMS; opt-in to custom sites)
+  var usa_townnews_domains = [];
+  var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['image', 'script'].includes(details.type) &&
+    !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, 'townnews.com'), header_referer) && enabledSites.includes('###_usa_townnews'));
+  if (usa_townnews_domain) {
+    let townnews_domain = urlHost(header_referer).replace(/^(www|m)\./, '');
+    blockedRegexes[townnews_domain] = /\.com\/shared-content\/art\/tncms\/user\/user\.js/;
+    usa_townnews_domains.push(townnews_domain);
+    if (!enabledSites.includes(townnews_domain))
+      enabledSites.push(townnews_domain);
   }
 
   // block script for additional McClatchy sites (opt-in to custom sites)
@@ -780,13 +792,12 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var de_rnd_domain = (matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de', 'rnd.de']), header_referer) && enabledSites.includes('###_de_madsack'));
   if (de_rnd_domain) {
     let rnd_domain = urlHost(header_referer).replace(/^(www|m)\./, '');
-    if (!de_madsack_domains.includes(rnd_domain)) {
+    if (!allow_cookies.includes(rnd_domain))
       allow_cookies.push(rnd_domain);
-      blockedRegexes[rnd_domain] = blockedRegexes['haz.de'];
-      de_madsack_domains.push(rnd_domain);
-      if (!enabledSites.includes(rnd_domain))
-        enabledSites.push(rnd_domain);
-    }
+    blockedRegexes[rnd_domain] = blockedRegexes['haz.de'];
+    de_madsack_domains.push(rnd_domain);
+    if (!enabledSites.includes(rnd_domain))
+      enabledSites.push(rnd_domain);
   }
 
   // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
@@ -794,16 +805,15 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
   if (fi_sanoma_sndp_domain) {
     let sanoma_domain = urlHost(header_referer).replace(/^www\./, '');
-    if (!fi_sanoma_domains.includes(sanoma_domain)) {
+    if (!allow_cookies.includes(sanoma_domain))
       allow_cookies.push(sanoma_domain);
-      if (!use_google_bot.includes(sanoma_domain)) {
-        use_google_bot.push(sanoma_domain);
-        change_headers.push(sanoma_domain);
-      }
-      fi_sanoma_domains.push(sanoma_domain);
-      if (!enabledSites.includes(sanoma_domain))
-        enabledSites.push(sanoma_domain);
+    if (!use_google_bot.includes(sanoma_domain)) {
+      use_google_bot.push(sanoma_domain);
+      change_headers.push(sanoma_domain);
     }
+    fi_sanoma_domains.push(sanoma_domain);
+    if (!enabledSites.includes(sanoma_domain))
+      enabledSites.push(sanoma_domain);
   }
 
   // block external javascript for custom sites (optional)

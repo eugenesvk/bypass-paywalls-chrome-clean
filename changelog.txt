@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Mainichi Shimbun (Japan)
+Add TownNews sites (local USA; opt-in to custom sites)
 Remove De Tijd & L'Echo (obsolete)
 Fix Bloomberg (quotes)
 Fix McClatchy Group (amp-redirect & disable)

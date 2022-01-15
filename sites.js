@@ -171,7 +171,7 @@ var defaultSites = {
     domain: "historyextra.com",
     block_regex: /\.evolok\.net\//
   },
-  "Belfast Telegraph (opt-in)": {
+  "Belfast Telegraph (setCookie opt-in)": {
     domain: "belfasttelegraph.co.uk",
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
@@ -759,7 +759,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.internazionale\.it\/assets\/js\/main\.\d{2,}\.js/
   },
-  "Irish Independent (opt-in)": {
+  "Irish Independent (setCookie opt-in)": {
     domain: "independent.ie",
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
@@ -1666,6 +1666,9 @@ var defaultSites = {
     domain: "towardsdatascience.com",
     allow_cookies: 1,
     referer: "twitter"
+  },
+  "TownNews sites (Blox CMS)": {
+    domain: "###_usa_townnews"
   },
   "Tribune Publishing Company": {
     domain: "###_usa_tribune",

@@ -241,6 +241,7 @@ Grouped in options:\
 [The Denver Post](https://www.denverpost.com) -
 [The Mercury News](https://www.mercurynews.com) -
 [The Press-Enterprise](https://www.pe.com)\
+*TownNews sites (Blox CMS)* sites (opt-in to custom sites)\
 *Tribune Publishing Company* sites like\
 [Baltimore Sun](https://www.baltimoresun.com) -
 [Capital Gazette](https://www.capitalgazette.com) -
