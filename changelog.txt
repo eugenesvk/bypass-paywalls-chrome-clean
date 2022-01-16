@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.5.2.0 (2022-01-16)
 Add Mainichi Shimbun (Japan)
 Add TownNews sites (local USA; opt-in to custom sites)
 Remove Aachener Nachrichten/Zeitung (obsolete)
