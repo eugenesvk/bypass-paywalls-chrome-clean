@@ -11,6 +11,7 @@ Fix McClatchy Group (amp-redirect & disable)
 Fix Prospect Magazine (timing)
 Fix Star Tribune (timing)
 Fix The Business of Fashion
+Fix The Jerusalem Post
 Update block general paywall script (Zephr)
 Update popup (domain to clear cookies)
 

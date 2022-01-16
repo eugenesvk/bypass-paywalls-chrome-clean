@@ -1498,7 +1498,7 @@ var defaultSites = {
   "The Jerusalem Post": {
     domain: "jpost.com",
     allow_cookies: 1,
-    block_regex: /\.jpost\.com\/bundles\/js_article\?/
+    block_regex: /\.jpost\.com\/js\/js_article\.min\.js/
   },
   "The Logic": {
     domain: "thelogic.co"
