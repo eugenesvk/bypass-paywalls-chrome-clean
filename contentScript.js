@@ -30,7 +30,7 @@ var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com'
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'elespanol.com', 'estadao.com.br', 'fortune.com', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'nknews.org', 'ruhrnachrichten.de', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_media_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'elespanol.com', 'estadao.com.br', 'fortune.com', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'nknews.org', 'ruhrnachrichten.de', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_media_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -340,21 +340,7 @@ else {
 
 } else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net', 'handelsblatt.com'])) {//germany/austria/switzerland - ch
 
-if (matchDomain(['aachener-nachrichten.de', 'aachener-zeitung.de'])) {
-  let url = window.location.href;
-  if (url.includes('?output=amp')) {
-    amp_unhide_subscr_section('amp-ad, amp-embed');
-  } else {
-    let paywall = document.querySelector('.park-article-paywall, .text-blurred');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
-  }
-}
-
-else if (matchDomain('allgaeuer-zeitung.de')) {
+if (matchDomain('allgaeuer-zeitung.de')) {
   let url = window.location.href;
   if (!url.includes('?type=amp')) {
     let paywall = document.querySelector('p.nfy-text-blur');

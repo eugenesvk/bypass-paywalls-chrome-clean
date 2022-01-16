@@ -3,16 +3,6 @@ var defaultSites = {
     domain: "360dx.com",
     group_rule: "###_gr_usa_genomeweb_domains"
   },
-  "Aachener Nachrichten": {
-    domain: "aachener-nachrichten.de",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|analytics|subscriptions)-.+\.js/
-  },
-  "Aachener Zeitung": {
-    domain: "aachener-zeitung.de",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|analytics|subscriptions)-.+\.js/
-  },
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,

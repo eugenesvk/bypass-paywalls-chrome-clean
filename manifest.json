@@ -53,8 +53,6 @@
         "webRequest",
         "webRequestBlocking",
         "*://*.360dx.com/*",
-        "*://*.aachener-nachrichten.de/*",
-        "*://*.aachener-zeitung.de/*",
         "*://*.aamulehti.fi/*",
         "*://*.abc.es/*",
         "*://*.abendblatt.de/*",
@@ -605,5 +603,5 @@
         "*://*.wsj.net/*",
         "*://*.zephr.com/*"
     ],
-    "version": "2.5.1.6"
+    "version": "2.5.1.7"
 }
