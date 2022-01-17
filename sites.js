@@ -911,7 +911,7 @@ var defaultSites = {
       "tulsaworld.com"
     ],
     allow_cookies: 1,
-    block_regex: /(api\.bntech\.io\/js\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(api\.bntech\.io\/js\/|\.com\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "Leeuwarder Courant": {
     domain: "lc.nl",
@@ -938,7 +938,8 @@ var defaultSites = {
   },
   "LiveMint": {
     domain: "livemint.com",
-    block_regex: /(\.livemint\.com\/js\/localWorker\.js|analytics\.htmedia\.in\/analytics-js\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    allow_cookies: 1,
+    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "Loeb Classical Library": {
     domain: "loebclassics.com"
@@ -1426,7 +1427,8 @@ var defaultSites = {
     block_regex: /\.businessoffashion\.com\/zephr\/feature-decisions/
   },
   "The Christian Science Monitor": {
-    domain: "csmonitor.com"
+    domain: "csmonitor.com",
+    allow_cookies: 1
   },
   "The Daily Beast": {
     domain: "thedailybeast.com",
@@ -1544,7 +1546,7 @@ var defaultSites = {
   },
   "The New Yorker": {
     domain: "newyorker.com",
-    block_regex: /(\.newyorker\.com\/verso\/static\/presenter-articles.+\.js|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
+    group_rule: "###_gr_usa_conde_nast_domains"
   },
   "The Philadelphia Inquirer": {
     domain: "inquirer.com",
@@ -1581,6 +1583,7 @@ var defaultSites = {
   },
   "The Telegraph": {
     domain: "telegraph.co.uk",
+    allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js|\.telegraph\.co\.uk\/.+\/piano.+\.js|assets\.adobedtm\.com\/.+\.js)/
   },
   "The Times": {
@@ -1693,7 +1696,7 @@ var defaultSites = {
   },
   "Vanity Fair": {
     domain: "vanityfair.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+    group_rule: "###_gr_usa_conde_nast_domains"
   },
   "Variety": {
     domain: "variety.com",
@@ -1739,8 +1742,7 @@ var defaultSites = {
   },
   "Wired": {
     domain: "wired.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/,
-    useragent: "googlebot"
+    group_rule: "###_gr_usa_conde_nast_domains"
   },
   "World Politics Review": {
     domain: "worldpoliticsreview.com",
@@ -1766,6 +1768,12 @@ var defaultSites = {
     group_rule_domains: ["parool.nl", "trouw.nl", "volkskrant.nl", "humo.be", "demorgen.be"],
     remove_cookies_select_drop: ["TID_ID"],
     block_regex: "\\.{domain}\\/temptation\\/resolve"
+  },
+  "###_gr_usa_conde_nast_domains": {
+    group_rule_domains: ["newyorker.com", "vanityfair.com", "wired.com"],
+    remove_cookies_select_drop: ["pay_ent_smp"],
+    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    useragent: "googlebot"
   },
   "###_gr_usa_genomeweb_domains": {
     group_rule_domains: ["genomeweb.com", "360dx.com", "precisiononcologynews.com"],

@@ -587,7 +587,6 @@
         "*://*.flip-pay.com/*",
         "*://*.gannett-cdn.com/*",
         "*://*.hearstnp.com/*",
-        "*://*.htmedia.in/*",
         "*://*.jsdelivr.net/*",
         "*://*.lightboxcdn.com/*",
         "*://*.loader-cdn.azureedge.net/*",
@@ -603,5 +602,5 @@
         "*://*.wsj.net/*",
         "*://*.zephr.com/*"
     ],
-    "version": "2.5.2.0"
+    "version": "2.5.2.1"
 }

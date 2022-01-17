@@ -2625,26 +2625,12 @@ else if (matchDomain('newsday.com')) {
   }
 }
 
-
-else if (matchDomain('newyorker.com') && window.location.pathname.length > 1) {
+else if (matchDomain(['newyorker.com', 'vanityfair.com', 'wired.com'])) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_subscr_section('.ad');
   } else {
     let paywall_bar = document.querySelector('.paywall-bar');
     removeDOMElement(paywall_bar);
-    let invisible_assets = document.querySelectorAll('.responsive-asset--invisible');
-    for (let asset_invisible of invisible_assets)
-      asset_invisible.classList.remove('responsive-asset--invisible');
-    let overlays = document.querySelectorAll('.aspect-ratio--overlay-container, .asset-embed__asset-container');
-    let parser = new DOMParser();
-    for (let overlay of overlays) {
-      let noscript = overlay.querySelector('noscript');
-      if (noscript && noscript.innerHTML && dompurify_loaded) {
-        let html = parser.parseFromString(DOMPurify.sanitize(noscript.innerHTML), 'text/html');
-        overlay.appendChild(html.querySelector('img'));
-        removeDOMElement(noscript);
-      }
-    }
   }
 }
 
@@ -3195,12 +3181,6 @@ else if (matchDomain('usatoday.com')) {
   }
 }
 
-else if (matchDomain('vanityfair.com')) {
-  if (window.location.pathname.endsWith('/amp')) {
-    amp_unhide_subscr_section();
-  }
-}
-
 else if (matchDomain('velonews.com')) {
   let paywall = document.querySelector('div.o-membership-overlay');
   if (paywall) {
@@ -3236,13 +3216,6 @@ else if (matchDomain('washingtonpost.com')) {
     let leaderboard = document.querySelector('#leaderboard-wrapper');
     let adverts = document.querySelectorAll('div[data-qa$="-ad"]');
     removeDOMElement(leaderboard, ...adverts);    
-  }
-}
-
-else if (matchDomain('wired.com')) {
-  let url = window.location.href.split('?')[0];
-  if (url.endsWith('/amp')) {
-    amp_unhide_subscr_section();
   }
 }
 
