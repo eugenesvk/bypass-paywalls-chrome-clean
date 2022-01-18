@@ -6,7 +6,7 @@ var defaultSites = {
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/,
+    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/,
     useragent: "googlebot"
   },
   "Advance Local": {
@@ -77,6 +77,7 @@ var defaultSites = {
   },
   "American Banker": {
     domain: "americanbanker.com",
+    allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
   "Apollo Magazine": {
@@ -159,7 +160,8 @@ var defaultSites = {
   },
   "BBC History Extra": {
     domain: "historyextra.com",
-    block_regex: /\.evolok\.net\//
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "Belfast Telegraph (setCookie opt-in)": {
     domain: "belfasttelegraph.co.uk",
@@ -204,7 +206,8 @@ var defaultSites = {
   },
   "Challenges": {
     domain: "challenges.fr",
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js)/
+    allow_cookies: 1,
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "Charlie Hebdo": {
     domain: "charliehebdo.fr",
@@ -340,7 +343,7 @@ var defaultSites = {
   },
   "El Diario.es": {
     domain: "eldiario.es",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js/
   },
   "El Español": {
     domain: "elespanol.com",
@@ -369,17 +372,17 @@ var defaultSites = {
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
-    block_regex: /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/
+    block_regex: /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "El Periódico (de Catalunya)": {
     domain: "elperiodico.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
   },
   "Elle.fr": {
     domain: "elle.fr",
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "Encyclopedia Britannica": {
     domain: "britannica.com"
@@ -456,7 +459,7 @@ var defaultSites = {
   "Forbes": {
     domain: "forbes.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "Foreign Affairs": {
     domain: "foreignaffairs.com",
@@ -478,7 +481,7 @@ var defaultSites = {
   "Freie Presse": {
     domain: "freiepresse.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
   },
   "Funke Mediengruppe": {
     domain: "###_de_funke_medien",
@@ -624,7 +627,7 @@ var defaultSites = {
       "lne.es"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|analytics|consent)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|analytics)-.+\.js/
   },
   "Grupo Vocento (Spain, regional daily)": {
     domain: "###_es_grupo_vocento",
@@ -831,7 +834,7 @@ var defaultSites = {
   "La Nouvelle République du Centre-Ouest": {
     domain: "lanouvellerepublique.fr",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|consent)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
     useragent: "googlebot"
   },
   "La Nuova Sardegna": {
@@ -1046,6 +1049,7 @@ var defaultSites = {
   },
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
+    allow_cookies: 1,
     block_regex: /\.mexiconewsdaily\.com\/c\/assets\/pigeon\.js/
   },
   "MIT Sloan Management Review": {
