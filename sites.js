@@ -229,8 +229,7 @@ var defaultSites = {
   "Clarín": {
     domain: "clarin.com",
     allow_cookies: 1,
-    block_regex: /js\.matheranalytics\.com\//,
-    referer: "facebook"
+    block_regex: /\.clarin\.com\/commons\/js\/auth0\.js/
   },
   "Commentary Magazine": {
     domain: "commentary.org",
@@ -1588,7 +1587,7 @@ var defaultSites = {
   "The Telegraph": {
     domain: "telegraph.co.uk",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js|\.telegraph\.co\.uk\/.+\/piano.+\.js|assets\.adobedtm\.com\/.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "The Times": {
     domain: "thetimes.co.uk",

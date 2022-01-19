@@ -1,4 +1,9 @@
 {
+  "Clarín": {
+    "domain": "clarin.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.clarin\\.com\\/commons\\/js\\/auth0\\.js"
+  },
   "Mainichi Shimbun": {
     "domain": "mainichi.jp",
     "allow_cookies": 1,
@@ -13,11 +18,6 @@
     "domain": "businessoffashion.com",
     "allow_cookies": 1,
     "block_regex": "\\.businessoffashion\\.com\\/zephr\\/feature-decisions"
-  },
-  "The Indian Express": {
-    "domain": "indianexpress.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\/indianexpress\\.com\\/.+\\/indianexpress\\/js\\/(evolok\\/.+|min\\/premiumContent)\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
   },
   "The Jerusalem Post": {
     "domain": "jpost.com",

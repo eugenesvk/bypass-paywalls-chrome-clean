@@ -1800,7 +1800,7 @@ else if (matchDomain('thetimes.co.uk')) {
 else if (!matchDomain(['belfasttelegraph.co.uk', 'independent.ie']))
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -1808,6 +1808,11 @@ if (matchDomain('abril.com.br')) {
     let amp_ads = document.querySelectorAll('amp-ad, amp-embed');
     removeDOMElement(paywall, ...amp_ads);
   }
+}
+
+else if (matchDomain('clarin.com')) {
+  let ads = document.querySelectorAll('.ad-slot');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain(['elcomercio.pe', 'gestion.pe'])) {
