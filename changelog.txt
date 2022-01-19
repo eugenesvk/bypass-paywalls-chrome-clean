@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Asia Times
 Fix Challenges.fr
 Fix Clarin
 Fix The New Yorker (update)

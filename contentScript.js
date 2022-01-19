@@ -1975,7 +1975,14 @@ else if (matchDomain('asia.nikkei.com')) {
 }
 
 else if (matchDomain('asiatimes.com')) {
-  amp_unhide_access_hide('="story.ordered"', '="NOT story.ordered"', 'amp-ad, amp-consent, amp-embed');
+  if (!window.location.search.includes('?amp_markup=1')) {
+    let paywall = document.querySelector('div.woocommerce');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let url_amp = window.location.href.split('?')[0] + '?amp_markup=1';
+      replaceDomElementExt(url_amp, false, false, 'div.entry-content', '', 'article.ia2amp-article');
+    }
+  }
 }
 
 else if (matchDomain('barrons.com')) {
@@ -3361,7 +3368,7 @@ function matchDomain(domains, hostname = window.location.hostname) {
   return matched_domain;
 }
 
-function replaceDomElementExt(url, proxy, base64, selector, text_fail = '') {
+function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
   let proxyurl = proxy ? 'https://bpc2-cors-anywhere.herokuapp.com/' : '';
   fetch(proxyurl + url, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
   .then(response => {
@@ -3370,12 +3377,12 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '') {
       response.text().then(html => {
         if (base64) {
           html = decode_utf8(atob(html));
-          selector = 'body';
+          selector_source = 'body';
         }
         let parser = new DOMParser();
         let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout'], ADD_TAGS: ['amp-img']}), 'text/html');
         //console.log(DOMPurify.removed);
-        let article_new = doc.querySelector(selector);
+        let article_new = doc.querySelector(selector_source);
         if (article_new) {
           if (article && article.parentNode)
             article.parentNode.replaceChild(article_new, article);
