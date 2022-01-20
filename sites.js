@@ -1180,6 +1180,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
+  "Outside": {
+    domain: "outsideonline.com",
+    allow_cookies: 1,
+    block_regex: /\.outsideonline\.com\/.+\/scripts\/contentGate.+\.js/
+  },
   "Palo Alto Online": {
     domain: "paloaltoonline.com"
   },

@@ -407,6 +407,7 @@
         "*://*.orlandosentinel.com/*",
         "*://*.ostsee-zeitung.de/*",
         "*://*.otz.de/*",
+        "*://*.outsideonline.com/*",
         "*://*.paloaltoonline.com/*",
         "*://*.paris-normandie.fr/*",
         "*://*.parismatch.com/*",
@@ -602,5 +603,5 @@
         "*://*.wsj.net/*",
         "*://*.zephr.com/*"
     ],
-    "version": "2.5.2.4"
+    "version": "2.5.2.5"
 }

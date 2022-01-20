@@ -152,6 +152,7 @@ Grouped in options:\
 [First Things](https://www.firstthings.com) -
 [Medium](https://www.medium.com/topics) (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
+[Outside](https://www.outsideonline.com) -
 [Rolling Stone](https://www.rollingstone.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -

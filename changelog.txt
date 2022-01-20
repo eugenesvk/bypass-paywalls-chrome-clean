@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Huffingtonpost.it
+Add Outside
 Fix Asia Times
 Fix Challenges.fr
 Fix Clarin

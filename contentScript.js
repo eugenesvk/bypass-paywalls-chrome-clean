@@ -3198,12 +3198,12 @@ else if (matchDomain('usatoday.com')) {
   }
 }
 
-else if (matchDomain('velonews.com')) {
+else if (matchDomain(['velonews.com', 'outsideonline.com'])) {
   let paywall = document.querySelector('div.o-membership-overlay');
   if (paywall) {
-    let is_gated = document.querySelector('.is-gated');
-    if (is_gated)
-      is_gated.classList.remove('is-gated');
+    let is_gated = document.querySelectorAll('[class*="is-gated"]');
+    for (let elem of is_gated)
+      removeClassesByPrefix(elem, 'is-gated');
     removeDOMElement(paywall);
   }
 }
