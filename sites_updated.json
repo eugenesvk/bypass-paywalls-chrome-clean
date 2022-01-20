@@ -4,6 +4,10 @@
     "allow_cookies": 1,
     "block_regex": "\\.clarin\\.com\\/commons\\/js\\/auth0\\.js"
   },
+  "Huffingtonpost.it": {
+    "domain": "huffingtonpost.it",
+    "group_rule": "###_gr_it_repubblica_domains"
+  },
   "Mainichi Shimbun": {
     "domain": "mainichi.jp",
     "allow_cookies": 1,

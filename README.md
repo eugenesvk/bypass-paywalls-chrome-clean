@@ -432,6 +432,7 @@ Grouped in options:\
 [Corriere della Sera](https://www.corriere.it) -
 [Domani](https://editorialedomani.it) -
 [GElocal.it](https://quotidiani.gelocal.it) -
+[Huffingtonpost.it](https://www.huffingtonpost.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Manifesto](https://ilmanifesto.it) -

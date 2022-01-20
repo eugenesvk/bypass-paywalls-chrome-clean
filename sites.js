@@ -696,6 +696,10 @@ var defaultSites = {
     domain: "staradvertiser.com",
     allow_cookies: 1
   },
+  "Huffingtonpost.it": {
+    domain: "huffingtonpost.it",
+    group_rule: "###_gr_it_repubblica_domains"
+  },
   "Humo.be": {
     domain: "humo.be",
     group_rule: "###_gr_nl_pg_domains"
@@ -1762,7 +1766,7 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/
   },
   "###_gr_it_repubblica_domains": {
-    group_rule_domains: ["gelocal.it", "ilsecoloxix.it", "italian.tech", "lanuovasardegna.it", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
+    group_rule_domains: ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lanuovasardegna.it", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
     allow_cookies: 1,
     block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad|user-notification)-.+\.js)/,
     useragent: "googlebot"
