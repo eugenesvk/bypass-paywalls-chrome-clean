@@ -1,4 +1,26 @@
 {
+  "Australia News Corp": {
+    "domain": "###_au_news_corp",
+    "group": [
+      "adelaidenow.com.au",
+      "cairnspost.com.au",
+      "codesports.com.au",
+      "couriermail.com.au",
+      "dailytelegraph.com.au",
+      "geelongadvertiser.com.au",
+      "goldcoastbulletin.com.au",
+      "heraldsun.com.au",
+      "ntnews.com.au",
+      "theaustralian.com.au",
+      "thechronicle.com.au",
+      "themercury.com.au",
+      "townsvillebulletin.com.au",
+      "weeklytimesnow.com.au"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "block_regex": "(\\.com\\.au\\/remote\\/identity\\/rampart\\/latest\\/rampart\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
+  },
   "Clarín": {
     "domain": "clarin.com",
     "allow_cookies": 1,

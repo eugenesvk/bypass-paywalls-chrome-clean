@@ -128,7 +128,17 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     useragent: "googlebot",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+    exception: [{
+        domain: "adelaidenow.com.au",
+        allow_cookies: 1,
+        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+      }, {
+        domain: "cairnspost.com.au",
+        allow_cookies: 1,
+        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+      }
+    ]
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",

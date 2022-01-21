@@ -566,7 +566,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
-// theaustralian.com redirect subscribe to amp
+// theaustralian.com, adelaidenow.com.au, cairnspost.com.au redirect subscribe to amp
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions')) {
     return;
@@ -574,7 +574,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]).replace('www.', 'amp.');
   return { redirectUrl: updatedUrl };
 },
-{urls:["*://www.theaustralian.com.au/subscribe/*"], types:["main_frame"]},
+{urls:["*://www.theaustralian.com.au/subscribe/*", "*://www.adelaidenow.com.au/subscribe/*", "*://www.cairnspost.com.au/subscribe/*"], types:["main_frame"]},
 ["blocking"]
 );
 
