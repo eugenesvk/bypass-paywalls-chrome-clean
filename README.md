@@ -597,7 +597,7 @@ Grouped in options:\
 
 #### East Asia
 [Asia Times](https://asiatimes.com) -
-[CommonWealth Magazine Taiwan](https://www.cw.com.tw) -
+[CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -
 [DealStreetAsia](https://www.dealstreetasia.com) -
 [Harvard Business Review China](https://www.hbrchina.org) -
 [Harvard Business Review Taiwan](https://www.hbrtaiwan.com) -

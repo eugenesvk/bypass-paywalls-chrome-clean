@@ -21,7 +21,7 @@ var restrictions = {
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
-  'elpais.com': /(\/elpais\.com\/$|(static|imagenes(\.\w+)?)\.elpais\.com|\/(.+\.)?elpais\.com\/.+\.html)/,
+  'elpais.com': /(\/(.+\.)?elpais\.com\/.+\.html|(static|imagenes(\.\w+)?)\.elpais\.com)/,
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'foreignaffairs.com': /\.foreignaffairs\.com\/((articles|fa-caching|interviews|reviews|sites)\/)/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
@@ -39,6 +39,10 @@ var restrictions = {
 
 for (let domain of au_news_corp_domains)
   restrictions[domain] = new RegExp('^((?!todayspaper\\.' + domain.replace(/\./g, '\\.') + '\\/).)*$');
+if (typeof browser !== 'object') {
+  for (let domain of['elpais.com'])
+    restrictions[domain] = new RegExp('((\\/|\\.)' + domain.replace(/\./g, '\\.') + '\\/$|' + restrictions[domain].toString().replace(/(^\/|\/$)/g, '') + ')');
+}
 
 // Don't remove cookies before/after page load
 var allow_cookies = [];
@@ -598,7 +602,7 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://elviajero.elpais.com/*", "*://retina.elpais.com/*", "*://verne.elpais.com/*", "*://*.medianama.com/*"];
+var block_js_inline = ["*://*.medianama.com/*"];
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -686,7 +690,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         break;
       }
     }
-    var blocked_referer_domains = ['foreignaffairs.com', 'timeshighereducation.com'];
+    var blocked_referer_domains = ['elpais.com', 'foreignaffairs.com', 'timeshighereducation.com'];
     if (!header_referer && details.initiator) {
       header_referer = details.initiator;
       if (!blocked_referer && matchUrlDomain(blocked_referer_domains, details.url) && ['script', 'xmlhttprequest'].includes(details.type)) {

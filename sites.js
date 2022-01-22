@@ -245,7 +245,7 @@ var defaultSites = {
     domain: "commentary.org",
     block_regex: /\.commentary\.org\/.+\/js\/dg-locker-public\.js/
   },
-  "CommonWealth Magazine Taiwan": {
+  "CommonWealth Magazine Taiwan (free articles only)": {
     domain: "cw.com.tw"
   },
   "Correio da Manhã": {
