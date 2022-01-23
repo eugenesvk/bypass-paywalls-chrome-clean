@@ -2565,6 +2565,11 @@ else if (matchDomain('medianama.com')) {
     let modal = document.querySelector('div.modal');
     removeDOMElement(modal);
   }, 500); // Delay (in milliseconds)
+  function medianama_height(node) {
+    node.removeAttribute('style');
+  }
+  waitDOMAttribute('div.zox-post-body', 'DIV', 'style', medianama_height, true);
+  csDoneOnce = true;
 }
 
 else if (matchDomain('mexiconewsdaily.com')) {

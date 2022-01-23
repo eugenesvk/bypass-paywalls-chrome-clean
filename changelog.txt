@@ -9,6 +9,7 @@ Fix Cairns Post, Code Sports & The Advertiser
 Fix Challenges.fr
 Fix Clarin
 Fix El Pais (menu subdomains)
+Fix MediaNama (menu)
 Fix MIT Sloan Management Review (refresh)
 Fix The New Yorker (update)
 

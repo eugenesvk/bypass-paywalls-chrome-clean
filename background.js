@@ -25,7 +25,6 @@ var restrictions = {
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'foreignaffairs.com': /\.foreignaffairs\.com\/((articles|fa-caching|interviews|reviews|sites)\/)/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
-  'medianama.com': /\.medianama\.com\/((\d){4}\/(\d){2}|wp-content)\//,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
@@ -173,7 +172,7 @@ function set_rules(sites, sites_updated, sites_custom) {
       for (let domain of domains) {
         let custom_in_group = false;
         if (rule_default.hasOwnProperty('exception')) {
-          let exception_rule = rule_default.exception.filter(x => domain === x.domain);
+          let exception_rule = rule_default.exception.filter(x => domain === x.domain || (typeof x.domain !== 'string' && x.domain.includes(domain)));
           if (exception_rule.length > 0)
             rule = exception_rule[0];
           else
@@ -602,9 +601,9 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.medianama.com/*"];
+var block_js_inline = [];
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
+  if (block_js_inline.length === 0 || !isSiteEnabled(details)) {
     return;
   }
   var headers = details.responseHeaders;

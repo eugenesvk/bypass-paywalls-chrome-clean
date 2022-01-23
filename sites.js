@@ -128,15 +128,11 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     useragent: "googlebot",
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/,
     exception: [{
-        domain: "adelaidenow.com.au",
+        domain: ["adelaidenow.com.au", "cairnspost.com.au"],
         allow_cookies: 1,
-        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
-      }, {
-        domain: "cairnspost.com.au",
-        allow_cookies: 1,
-        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
       }
     ]
   },
