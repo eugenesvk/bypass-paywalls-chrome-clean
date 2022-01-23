@@ -3,6 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 
+* v2.5.3.1 (2022-01-23)
+Hotfix block inline script
+
 * v2.5.3.0 (2022-01-23)
 Add Huffingtonpost.it
 Add Outside

@@ -602,8 +602,9 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 
 // block inline script
 var block_js_inline = [];
+if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-  if (block_js_inline.length === 0 || !isSiteEnabled(details)) {
+  if (!isSiteEnabled(details)) {
     return;
   }
   var headers = details.responseHeaders;
