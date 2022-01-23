@@ -9,6 +9,7 @@ Fix Cairns Post, Code Sports & The Advertiser
 Fix Challenges.fr
 Fix Clarin
 Fix El Pais (menu subdomains)
+Fix MIT Sloan Management Review (refresh)
 Fix The New Yorker (update)
 
 * v2.5.2.0 (2022-01-16)

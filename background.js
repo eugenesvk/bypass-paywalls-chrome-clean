@@ -572,7 +572,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 
 // theaustralian.com, adelaidenow.com.au, cairnspost.com.au redirect subscribe to amp
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions')) {
+  if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !details.url.includes('dest=')) {
     return;
   }
   var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]).replace('www.', 'amp.');

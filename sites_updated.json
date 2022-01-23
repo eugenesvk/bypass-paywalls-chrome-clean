@@ -4,6 +4,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.clarin\\.com\\/commons\\/js\\/auth0\\.js"
   },
+  "Code Sports": {
+    "domain": "codesports.com.au",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "block_regex": "(\\.com\\.au\\/remote\\/identity\\/rampart\\/latest\\/rampart\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
+  },
   "Huffingtonpost.it": {
     "domain": "huffingtonpost.it",
     "group_rule": "###_gr_it_repubblica_domains"

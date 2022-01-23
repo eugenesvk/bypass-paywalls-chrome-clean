@@ -1915,7 +1915,7 @@ else if (matchDomain('valor.globo.com')) {
 else
   csDone = true;
 
-} else {//other (like com/org & not at/be/br/ch/cl/de/fr/es/ie/nl/pe/pt/uk))
+} else {//other (like com/org & not at/be/br/ch/cl/de/dk/fi/fr/es/ie/nl/no/pe/pt/se/uk))
 
 if (matchDomain(usa_adv_local_domains)) {
   let url = window.location.href;
@@ -2795,6 +2795,15 @@ else if (matchDomain('slate.com')) {
   let slate_roadblock = document.querySelector('.slate-roadblock');
   let ads = document.querySelectorAll('section[class*="-ad"]');
   removeDOMElement(slate_roadblock, ...ads);
+}
+
+else if (matchDomain('sloanreview.mit.edu')) {
+  let paywall = document.querySelector('div.paywall-blinder');
+  removeDOMElement(paywall);
+  if (paywall) {
+    ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+    csDoneOnce = true;
+  }
 }
 
 else if (matchDomain('sofrep.com')) {
