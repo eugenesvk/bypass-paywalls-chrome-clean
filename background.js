@@ -569,7 +569,8 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
-// theaustralian.com, adelaidenow.com.au, cairnspost.com.au redirect subscribe to amp
+// Australia News Corp redirect subscribe to amp
+var au_news_corp_subscr = au_news_corp_domains.map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !details.url.includes('dest=')) {
     return;
@@ -577,7 +578,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]).replace('www.', 'amp.');
   return { redirectUrl: updatedUrl };
 },
-{urls:["*://www.theaustralian.com.au/subscribe/*", "*://www.adelaidenow.com.au/subscribe/*", "*://www.cairnspost.com.au/subscribe/*"], types:["main_frame"]},
+{urls:au_news_corp_subscr, types:["main_frame"]},
 ["blocking"]
 );
 
@@ -885,7 +886,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var setReferer = false;
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
-    !(matchUrlDomain('theaustralian.com.au', details.url) && enabledSites.includes('#options_disable_gb_theaustralian')) &&
     !(matchUrlDomain('thetimes.co.uk', details.url) && !details.url.match(/\/epaper\.thetimes\.co\.uk\//)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 

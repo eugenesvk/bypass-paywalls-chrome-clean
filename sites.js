@@ -127,14 +127,7 @@ var defaultSites = {
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
-    useragent: "googlebot",
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/,
-    exception: [{
-        domain: ["adelaidenow.com.au", "cairnspost.com.au"],
-        allow_cookies: 1,
-        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
-      }
-    ]
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",
@@ -1863,9 +1856,6 @@ var defaultSites = {
   },
   "Barron's - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_barrons"
-  },
-  "The Australian - no Googlebot (http error 403)": {
-    domain: "#options_disable_gb_theaustralian"
   },
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
