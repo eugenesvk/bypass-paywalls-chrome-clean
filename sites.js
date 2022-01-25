@@ -1595,7 +1595,7 @@ var defaultSites = {
   "The Telegraph": {
     domain: "telegraph.co.uk",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "The Times": {
     domain: "thetimes.co.uk",

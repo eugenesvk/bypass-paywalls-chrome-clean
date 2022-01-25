@@ -39,5 +39,10 @@
     "domain": "jpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.jpost\\.com\\/js\\/js_article\\.min\\.js"
+  },
+  "The Telegraph": {
+    "domain": "telegraph.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|\\.telegraph\\.co\\.uk\\/martech\\/js\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
   }
 }

@@ -877,7 +877,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   let allow_ext_source = medium_custom_domain;
   let bpc_amp_site = false;
-  let au_swm_site = (header_referer && urlHost(header_referer).endsWith('com.au') && details.url.includes('https://images.thewest.com.au/'));
 
   if (isSiteEnabled({url: header_referer})) {
     let inkl_site = (matchUrlDomain('cdn.jsdelivr.net', details.url) && matchUrlDomain('inkl.com', header_referer));
@@ -893,7 +892,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     bpc_amp_site = matchUrlDomain('cdn.ampproject.org', details.url);
   }
 
-  if (!isSiteEnabled(details) && !allow_ext_source && !bpc_amp_site && !au_swm_site) {
+  if (!isSiteEnabled(details) && !allow_ext_source && !bpc_amp_site) {
     return;
   }
 
@@ -1000,7 +999,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
 
   if (tabId !== -1) {
     ext_api.tabs.get(tabId, function (currentTab) {
-      if (!ext_api.runtime.lastError && currentTab && (isSiteEnabled(currentTab) || medium_custom_domain || au_swm_site)) {
+      if (!ext_api.runtime.lastError && currentTab && (isSiteEnabled(currentTab) || medium_custom_domain)) {
         if (currentTab.url !== currentTabUrl) {
           csDone = false;
           currentTabUrl = currentTab.url;
