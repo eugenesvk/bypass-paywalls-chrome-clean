@@ -716,6 +716,56 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       enabledSites.push(mc_domain);
   }
 
+  let header_referer_hostname = urlHost(header_referer);
+  if (header_referer_hostname.endsWith('.com.au')) {
+  // enable regional The West Australian sites (opt-in to custom sites)
+  var au_thewest_domains = ['thewest.com.au'];
+  var au_thewest_domain = (details.url.startsWith('https://images.thewest.com.au/') && ['image'].includes(details.type) &&
+    !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
+  if (au_thewest_domain) {
+    let thewest_domain = urlHost(header_referer).replace(/^(www|edition)\./, '');
+    if (!allow_cookies.includes(thewest_domain))
+      allow_cookies.push(thewest_domain);
+    au_thewest_domains.push(thewest_domain);
+    if (!enabledSites.includes(thewest_domain))
+      enabledSites.push(thewest_domain);
+  }
+
+  } else if (header_referer_hostname.endsWith('.de')) {
+
+  // block script for additional Madsack/RND sites (opt-in to custom sites)
+  var de_madsack_domains = grouped_sites['###_de_madsack'];
+  var de_rnd_domain = (matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de', 'rnd.de']), header_referer) && enabledSites.includes('###_de_madsack'));
+  if (de_rnd_domain) {
+    let rnd_domain = urlHost(header_referer).replace(/^(www|m)\./, '');
+    if (!allow_cookies.includes(rnd_domain))
+      allow_cookies.push(rnd_domain);
+    blockedRegexes[rnd_domain] = blockedRegexes['haz.de'];
+    de_madsack_domains.push(rnd_domain);
+    if (!enabledSites.includes(rnd_domain))
+      enabledSites.push(rnd_domain);
+  }
+
+  } else if (header_referer_hostname.endsWith('.fi')) {
+
+  // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
+  var fi_sanoma_domains = grouped_sites['###_fi_sanoma'];
+  var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
+  if (fi_sanoma_sndp_domain) {
+    let sanoma_domain = urlHost(header_referer).replace(/^www\./, '');
+    if (!allow_cookies.includes(sanoma_domain))
+      allow_cookies.push(sanoma_domain);
+    if (!use_google_bot.includes(sanoma_domain)) {
+      use_google_bot.push(sanoma_domain);
+      change_headers.push(sanoma_domain);
+    }
+    fi_sanoma_domains.push(sanoma_domain);
+    if (!enabledSites.includes(sanoma_domain))
+      enabledSites.push(sanoma_domain);
+  }
+
+  } else if (header_referer_hostname.match(/\.(com|org)$/)) {
+
   // set googlebot-useragent for Gannett sites
   var usa_gannett_domains = grouped_sites['###_usa_gannett'];
   var usa_gannett_domain = (matchUrlDomain('gannett-cdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(usa_gannett_domains.concat(['usatoday.com']), header_referer) && enabledSites.includes('###_usa_gannett'));
@@ -792,33 +842,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       enabledSites.push(mng_domain);
   }
 
-  // block script for additional Madsack/RND sites (opt-in to custom sites)
-  var de_madsack_domains = grouped_sites['###_de_madsack'];
-  var de_rnd_domain = (matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de', 'rnd.de']), header_referer) && enabledSites.includes('###_de_madsack'));
-  if (de_rnd_domain) {
-    let rnd_domain = urlHost(header_referer).replace(/^(www|m)\./, '');
-    if (!allow_cookies.includes(rnd_domain))
-      allow_cookies.push(rnd_domain);
-    blockedRegexes[rnd_domain] = blockedRegexes['haz.de'];
-    de_madsack_domains.push(rnd_domain);
-    if (!enabledSites.includes(rnd_domain))
-      enabledSites.push(rnd_domain);
-  }
-
-  // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
-  var fi_sanoma_domains = grouped_sites['###_fi_sanoma'];
-  var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
-  if (fi_sanoma_sndp_domain) {
-    let sanoma_domain = urlHost(header_referer).replace(/^www\./, '');
-    if (!allow_cookies.includes(sanoma_domain))
-      allow_cookies.push(sanoma_domain);
-    if (!use_google_bot.includes(sanoma_domain)) {
-      use_google_bot.push(sanoma_domain);
-      change_headers.push(sanoma_domain);
-    }
-    fi_sanoma_domains.push(sanoma_domain);
-    if (!enabledSites.includes(sanoma_domain))
-      enabledSites.push(sanoma_domain);
   }
 
   // block external javascript for custom sites (optional)
@@ -854,7 +877,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   let allow_ext_source = medium_custom_domain;
   let bpc_amp_site = false;
-  let au_swm_site = (header_referer && urlHost(header_referer).endsWith('com.au') && details.url.includes('https://s.thewest.com.au/'));
+  let au_swm_site = (header_referer && urlHost(header_referer).endsWith('com.au') && details.url.includes('https://images.thewest.com.au/'));
 
   if (isSiteEnabled({url: header_referer})) {
     let inkl_site = (matchUrlDomain('cdn.jsdelivr.net', details.url) && matchUrlDomain('inkl.com', header_referer));

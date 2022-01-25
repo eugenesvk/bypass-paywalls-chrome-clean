@@ -218,8 +218,8 @@ else {
       }
     } else {
       // Australian Seven West Media
-      let swm_script = document.querySelector('script[src^="https://s.thewest.com.au"]');
-      if (matchDomain('thewest.com.au') || swm_script) {
+      let swm_image = document.querySelector('img[src^="https://images.thewest.com.au"]');
+      if (matchDomain('thewest.com.au') || swm_image) {
         window.setTimeout(function () {
           let breach_screen = document.querySelector('div[data-testid*="BreachScreen"]');
           if (breach_screen) {

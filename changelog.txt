@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix Australia News Corp (amp-redirect)
+Fix The West Australian (regional)
 
 * v2.5.3.1 (2022-01-23)
 Hotfix block inline script

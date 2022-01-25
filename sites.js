@@ -1630,7 +1630,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.washingtonpost\.com\/pwapiv2\/article/
   },
-  "The West Australian (+ regional)": {
+  "The West Australian (+ regional/opt-in to custom sites)": {
     domain: "thewest.com.au",
     allow_cookies: 1
   },

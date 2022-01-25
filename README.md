@@ -559,7 +559,7 @@ Grouped in options:\
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
 [The Spectator Australia](https://www.spectator.com.au) -
 [The Sydney Morning Herald](https://www.smh.com.au) -
-[The West Australian (+ regional)](https://thewest.com.au) -
+[The West Australian (+ regional/opt-in to custom sites)](https://thewest.com.au) -
 [WAtoday](https://www.watoday.com.au)
 
 Grouped in options:\
