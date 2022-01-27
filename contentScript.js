@@ -440,47 +440,51 @@ else if (matchDomain('faz.net')) {
       removeDOMElement(paywall);
       let url = new URL(window.location.href);
       let mUrl = new URL(url.pathname, 'https://m.faz.net/');
-      fetch(mUrl)
-      .then(response => {
-        if (response.ok) {
-          response.text().then(html => {
-            let parser = new DOMParser();
-            let doc = parser.parseFromString(html, 'text/html');
-            let json = doc.querySelector('script[id="schemaOrgJson"]');
-            if (json) {
-              let json_text = json.text.replace(/(\r|\n)/g, '');
-              let split1 = json_text.split('"ArticleBody": "');
-              let split2 = split1[1].split('","author":');
-              if (split2[0].includes('"'))
-                json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/"/g, '“') + '","author":' + split2[1];
-              try {
-                json_text = JSON.parse(json_text).ArticleBody;
-              } catch (err) {
-                console.log(err);
-                return;
+      try {
+        fetch(mUrl)
+        .then(response => {
+          if (response.ok) {
+            response.text().then(html => {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString(html, 'text/html');
+              let json = doc.querySelector('script[id="schemaOrgJson"]');
+              if (json) {
+                let json_text = json.text.replace(/(\r|\n)/g, '');
+                let split1 = json_text.split('"ArticleBody": "');
+                let split2 = split1[1].split('","author":');
+                if (split2[0].includes('"'))
+                  json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/"/g, '“') + '","author":' + split2[1];
+                try {
+                  json_text = JSON.parse(json_text).ArticleBody;
+                } catch (err) {
+                  console.log(err);
+                  return;
+                }
+                if (!json_text)
+                  return;
+                let article_text = document.querySelector('.art_txt.paywall,.atc-Text.js-atc-Text');
+                article_text.innerText = '';
+                json_text = breakText(json_text);
+                json_text.split("\n\n").forEach(
+                  (p_text) => {
+                  let elem;
+                  if (p_text.length < 80) {
+                    elem = document.createElement("h2");
+                    elem.setAttribute('class', 'atc-SubHeadline');
+                  } else {
+                    elem = document.createElement("p");
+                    elem.setAttribute('class', 'atc-TextParagraph');
+                  };
+                  elem.innerText = p_text;
+                  article_text.appendChild(elem);
+                });
               }
-              if (!json_text)
-                return;
-              let article_text = document.querySelector('.art_txt.paywall,.atc-Text.js-atc-Text');
-              article_text.innerText = '';
-              json_text = breakText(json_text);
-              json_text.split("\n\n").forEach(
-                (p_text) => {
-                let elem;
-                if (p_text.length < 80) {
-                  elem = document.createElement("h2");
-                  elem.setAttribute('class', 'atc-SubHeadline');
-                } else {
-                  elem = document.createElement("p");
-                  elem.setAttribute('class', 'atc-TextParagraph');
-                };
-                elem.innerText = p_text;
-                article_text.appendChild(elem);
-              });
-            }
-          })
-        }
-      });
+            })
+          }
+        });
+      } catch (err) {
+        console.log(err);
+      }
     }
     let lay_paysocial = document.querySelector('div.lay-PaySocial');
     removeDOMElement(lay_paysocial);
