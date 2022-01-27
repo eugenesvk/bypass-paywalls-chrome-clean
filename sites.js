@@ -1573,8 +1573,8 @@ var defaultSites = {
   },
   "The Seattle Times": {
     domain: "seattletimes.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
-    remove_cookies_select_hold: ["st_newsletter_splash_seen"]
+    allow_cookies: 1,
+    block_regex: /(\.seattletimes\.com\/wp-content\/.+\/st-(advertising|blocking)-bundle\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "The Spectator (UK)": {
     domain: "spectator.co.uk",

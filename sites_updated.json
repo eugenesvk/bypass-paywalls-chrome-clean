@@ -20,25 +20,10 @@
     "block_regex": "(scripts\\.repubblica\\.it\\/pw\\/pw\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|user-notification)-.+\\.js)",
     "useragent": "googlebot"
   },
-  "Mainichi Shimbun": {
-    "domain": "mainichi.jp",
+  "The Seattle Times": {
+    "domain": "seattletimes.com",
     "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Star Tribune": {
-    "domain": "startribune.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.startribune\\.com\\/vendor\\/js\\/"
-  },
-  "The Business of Fashion": {
-    "domain": "businessoffashion.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.businessoffashion\\.com\\/zephr\\/feature-decisions"
-  },
-  "The Jerusalem Post": {
-    "domain": "jpost.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.jpost\\.com\\/js\\/js_article\\.min\\.js"
+    "block_regex": "(\\.seattletimes\\.com\\/wp-content\\/.+\\/st-(advertising|blocking)-bundle\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
   },
   "The Telegraph": {
     "domain": "telegraph.co.uk",
