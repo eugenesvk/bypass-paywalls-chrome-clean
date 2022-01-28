@@ -25,6 +25,7 @@ var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 
 var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
+var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pe.com', 'twincities.com'];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
@@ -390,7 +391,7 @@ else if (matchDomain('cicero.de')) {
     let paywall = document.querySelector('.plenigo-paywall');
     if (paywall) {
       removeDOMElement(paywall);
-      let url_amp = url + '?amp';
+      let url_amp = url.split('?')[0] + '?amp';
       replaceDomElementExt(url_amp, false, false, '.field-name-field-cc-body');
     }
   } else {
@@ -3192,6 +3193,16 @@ else if (matchDomain(usa_craincomm_domains)) {
   removeDOMElement(...lazy_sources);
 }
 
+else if (matchDomain(usa_outside_mag_domains)) {
+  let paywall = document.querySelector('div.o-membership-overlay');
+  if (paywall) {
+    let is_gated = document.querySelectorAll('[class*="is-gated"]');
+    for (let elem of is_gated)
+      removeClassesByPrefix(elem, 'is-gated');
+    removeDOMElement(paywall);
+  }
+}
+
 else if (matchDomain(usa_tribune_domains)) {
   let overlay = document.querySelector('div#zephr-overlay');
   removeDOMElement(overlay);
@@ -3213,16 +3224,6 @@ else if (matchDomain('usatoday.com')) {
         article_next.appendChild(weblink);
       }
     }
-  }
-}
-
-else if (matchDomain(['velonews.com', 'outsideonline.com'])) {
-  let paywall = document.querySelector('div.o-membership-overlay');
-  if (paywall) {
-    let is_gated = document.querySelectorAll('[class*="is-gated"]');
-    for (let elem of is_gated)
-      removeClassesByPrefix(elem, 'is-gated');
-    removeDOMElement(paywall);
   }
 }
 

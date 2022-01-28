@@ -1179,10 +1179,25 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
-  "Outside": {
-    domain: "outsideonline.com",
+  "Outside magazines": {
+    domain: "###_usa_outside_mag",
+    group: [
+      "backpacker.com",
+      "betamtb.com",
+      "cleaneatingmag.com",
+      "climbing.com",
+      "outsideonline.com",
+      "oxygenmag.com",
+      "skimag.com",
+      "trailrunnermag.com",
+      "triathlete.com",
+      "vegetariantimes.com",
+      "velonews.com",
+      "womensrunning.com",
+      "yogajournal.com"
+    ],
     allow_cookies: 1,
-    block_regex: /\.outsideonline\.com\/.+\/scripts\/contentGate.+\.js/
+    block_regex: "\\.{domain}\\/.+\\/scripts\\/contentGate.+\\.js"
   },
   "Palo Alto Online": {
     domain: "paloaltoonline.com"
@@ -1713,11 +1728,6 @@ var defaultSites = {
     domain: "variety.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
-  },
-  "VeloNews": {
-    domain: "velonews.com",
-    allow_cookies: 1,
-    block_regex: /\.velonews\.com\/.+\/scripts\/contentGate.+\.js/
   },
   "VentureBeat": {
     domain: "venturebeat.com",

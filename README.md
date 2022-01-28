@@ -152,7 +152,6 @@ Grouped in options:\
 [First Things](https://www.firstthings.com) -
 [Medium](https://www.medium.com/topics) (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
-[Outside](https://www.outsideonline.com) -
 [Rolling Stone](https://www.rollingstone.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
@@ -165,8 +164,23 @@ Grouped in options:\
 [The Point Magazine](https://thepointmag.com) -
 [The Wrap](https://www.thewrap.com) -
 [Vanity Fair](https://www.vanityfair.com) -
-[Variety](https://variety.com) -
-[VeloNews](https://www.velonews.com)
+[Variety](https://variety.com)
+
+Grouped in options:\
+*Outside magazines* sites like:\
+[Backpacker](https://www.backpacker.com) -
+[Beta](https://www.betamtb.com) -
+[Clean Eating](https://www.cleaneatingmag.com) -
+[Climbing](https://www.climbing.com) -
+[Outside](https://www.outsideonline.com) -
+[Oxygen](https://www.oxygenmag.com) -
+[SKI](https://www.skimag.com) -
+[Trail Runner](https://www.trailrunnermag.com) -
+[Triathlete](https://www.triathlete.com) -
+[Vegetarian Times](https://www.vegetariantimes.com) -
+[VeloNews](https://www.velonews.com) -
+[Women's Running](https://www.womensrunning.com) -
+[Yoga Journal](https://www.yogajournal.com)
 
 ##### Local USA news
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
