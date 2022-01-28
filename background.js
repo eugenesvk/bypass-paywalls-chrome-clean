@@ -575,12 +575,19 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !details.url.includes('dest=')) {
     return;
   }
-  var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]).replace('www.', 'amp.');
-  return { redirectUrl: updatedUrl };
+  var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]);
+  if (matchUrlDomain('thechronicle.com.au', details.url))
+    updatedUrl += '?amp';
+  else
+    updatedUrl = updatedUrl.replace('www.', 'amp.');
+  return {
+    redirectUrl: updatedUrl
+  };
+}, {
+  urls: au_news_corp_subscr,
+  types: ["main_frame"]
 },
-{urls:au_news_corp_subscr, types:["main_frame"]},
-["blocking"]
-);
+  ["blocking"]);
 
 // fix nytimes x-frame-options (hidden iframe content)
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
