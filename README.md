@@ -645,9 +645,6 @@ Grouped in options:\
 [The Jerusalem Post](https://www.jpost.com) -
 [The Marker](https://www.themarker.com)
 
-#### Lebanon
-[L'Orient-Le Jour](https://www.lorientlejour.com)
-
 #### Latin America
 
 ##### Argentina

@@ -526,12 +526,15 @@ else if (matchDomain('handelsblatt.com')) {
 else if (matchDomain('krautreporter.de')) {
   let paywall = document.querySelector('.article-paywall');
   if (paywall) {
-    let paywall_divider = document.querySelector('.js-paywall-divider');
-    let steady_checkout = document.querySelector('#steady-checkout');
-    removeDOMElement(paywall, paywall_divider, steady_checkout);
-    let blurred = document.querySelectorAll('.blurred');
-    for (let elem of blurred)
-      elem.classList.remove('blurred', 'json-ld-paywall-marker', 'hidden@print');
+    removeDOMElement(paywall);
+    window.setTimeout(function () {
+      let paywall_divider = document.querySelector('.js-paywall-divider');
+      let steady_checkout = document.querySelector('#steady-checkout');
+      removeDOMElement(paywall_divider, steady_checkout);
+      let blurred = document.querySelectorAll('.blurred');
+      for (let elem of blurred)
+        elem.classList.remove('blurred', 'json-ld-paywall-marker', 'hidden@print');
+    }, 500); // Delay (in milliseconds)
   }
 }
 

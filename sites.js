@@ -809,9 +809,6 @@ var defaultSites = {
     domain: "lopinion.fr",
     block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
-  "L'Orient-Le Jour": {
-    domain: "lorientlejour.com"
-  },
   "L'Usine Nouvelle": {
     domain: "usinenouvelle.com",
     allow_cookies: 1,
@@ -879,7 +876,9 @@ var defaultSites = {
     referer: "twitter"
   },
   "Le Devoir": {
-    domain: "ledevoir.com"
+    domain: "ledevoir.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "Le Journal du Dimanche": {
     domain: "lejdd.fr",

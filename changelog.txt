@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add group Outside magazines
+Remove L'Orient-Le Jour (fix obsolete)
 Fix Australia News Corp (amp-redirect)
 Fix Faz.net (timing)
 Fix Grupo Prensa Iberica (Piano)
@@ -29,8 +30,8 @@ Fix The New Yorker (update)
 * v2.5.2.0 (2022-01-16)
 Add Mainichi Shimbun (Japan)
 Add TownNews sites (local USA; opt-in to custom sites)
-Remove Aachener Nachrichten/Zeitung (obsolete)
-Remove De Tijd & L'Echo (obsolete)
+Remove Aachener Nachrichten/Zeitung (fix obsolete)
+Remove De Tijd & L'Echo (fix obsolete)
 Fix Bloomberg (quotes)
 Fix McClatchy Group (amp-redirect & disable)
 Fix Prospect Magazine (timing)
@@ -86,7 +87,7 @@ Remove tabs-permission (amo - Firefox 86+)
 * v2.4.7.0 (2021-12-12)
 Add Koelner Stadt-Anzeiger & Koelnische Rundschau
 Add The (New Orleans) Advocate
-Remove Caixin Global (obsolete)
+Remove Caixin Global (fix obsolete)
 Fix Bloomberg (subscriber-only)
 Fix Bloomberg Quint (bq blue)
 Fix Inkl (images)
@@ -112,7 +113,7 @@ Fix Live Law (permission)
 Fix The Business of Fashion
 Fix The New Yorker (amp)
 Fix TheTimes.co.uk (only link to archive.today)
-Remove Saechsische Zeitung (obsolete)
+Remove Saechsische Zeitung (fix obsolete)
 Updated sites: check (options) & missing permission (badge)
 
 * v2.4.5.0 (2021-11-21)
@@ -136,7 +137,7 @@ Update group rules (post-release)
 * v2.4.3.0 (2021-11-07)
 Add Harvard Business Review China
 Add Mitteldeutsche Zeitung
-Remove Liberation.fr (obsolete)
+Remove Liberation.fr (fix obsolete)
 Fix ElMundo.es (amp)
 Fix Lee Enterprises Group
 Fix LesEchos.fr (json)
@@ -159,8 +160,8 @@ Fix The Athletic (timing)
 * v2.4.1.0 (2021-10-24)
 Add Elle.fr
 Add Marianne (France)
-Remove Irish Times (obsolete)
-Remove Sueddeutsche Zeitung (obsolete)
+Remove Irish Times (fix obsolete)
+Remove Sueddeutsche Zeitung (fix obsolete)
 Fix ABC.es (Evolok)
 Fix Bloomberg (charts)
 Fix Business Standard
@@ -178,7 +179,7 @@ Update custom sites (block regex for default sites)
 
 * v2.4.0.0 (2021-10-17)
 Add Westfaelische Nachrichten (Germany)
-Remove Australian Provincial Newspapers (obsolete)
+Remove Australian Provincial Newspapers (fix obsolete)
 Fix GElocal.it
 Fix National Review
 Fix Ruhr Nachrichten (amp)
@@ -198,8 +199,8 @@ Update block general paywall script (AzureEdge)
 * v2.3.8.0 (2021-10-03)
 Add NordLittoral.fr (Groupe Rossel)
 Add Westfalen-Blatt.de
-Remove Gazet van Antwerpen (obsolete)
-Remove Republic.ru (obsolete)
+Remove Gazet van Antwerpen (fix obsolete)
+Remove Republic.ru (fix obsolete)
 Fix Bloomberg (blur)
 Fix Boston Globe
 Fix El Periodico de Catalunya (amp)
@@ -223,7 +224,7 @@ Fix The Australian (option to disable Googlebot; http error 403)
 Fix WSJ & Barron's (amp)
 
 * v2.3.6.0 (2021-09-05)
-Remove WirtschaftsWoche (obsolete)
+Remove WirtschaftsWoche (fix obsolete)
 Fix Estadao.com.br
 Fix Gestion & El Comercio (Peru)
 Fix Handelsblatt (only non-premium articles)
@@ -247,7 +248,7 @@ Fix group Crain Communications
 Add Ad Age & Automotive News (group Crain Communications)
 Add MediaNews Group (local USA)
 Add The Intercept
-Remove Slader (obsolete)
+Remove Slader (fix obsolete)
 Fix group Mediahuis Nederland Regional
 Fix Medium (timing)
 Fix The Australian
@@ -274,7 +275,7 @@ Fix Telegraaf.nl
 Add Iltalehti.fi (Firefox-only)
 Add Marca (Spain)
 Grouping Quotidiano.net sites (Italy)
-Remove Le Un (obsolete)
+Remove Le Un (fix obsolete)
 Fix Australia Nine sites
 Fix Commentary Magazine (new domain)
 Fix Gestion & El Comercio (Peru)
@@ -319,13 +320,13 @@ Fix Quartz (link to archive.today)
 Maintenance contentScript (sanitize html-input)
 
 * v2.2.7.0 (2021-06-27)
-Remove Finance.si (obsolete)
+Remove Finance.si (fix obsolete)
 Fix blocked referer
 Update custom sites (set useragent Bingbot)
 
 * v2.2.6.0 (2021-06-20)
 Add group Mediahuis Nederland Regional
-Remove The Northern Star (obsolete)
+Remove The Northern Star (fix obsolete)
 Fix Atlantico.fr
 Fix Boston Globe (no opt-in)
 Fix Foreign Policy
@@ -359,7 +360,7 @@ Fix WaPo (comments)
 
 * v2.2.2.0 (2021-05-23)
 Add MediaNama (India)
-Remove Mitteldeutsche Zeitung (obsolete)
+Remove Mitteldeutsche Zeitung (fix obsolete)
 Fix Medium/Towards Data Science
 Fix National Geographic USA
 Fix Prensa Iberica
@@ -401,7 +402,7 @@ Add Il Giorno (Italy)
 Add L'Express (France)
 Add La Nazione (Italy)
 Add The Athletic
-Remove Rheinische Post Mediengruppe (obsolete)
+Remove Rheinische Post Mediengruppe (fix obsolete)
 Fix Madsack Mediengruppe (opt-in to custom sites for unlisted)
 Fix NyTeknik (images)
 Fix Repubblica.it
@@ -614,8 +615,8 @@ Add El Comercio, Ideal & La Voz de Cadiz (Spain)
 Add Esprit (France)
 Add Groupe Rossel (France/Belgium)
 Add The Spectator USA
-Remove Aftonbladet.se (obsolete)
-Remove NK News (obsolete)
+Remove Aftonbladet.se (fix obsolete)
+Remove NK News (fix obsolete)
 Fix Australia News Corp (amp/video-link)
 Fix CharlieHebdo.fr (captcha)
 Fix Discover Magazine
@@ -718,7 +719,7 @@ Option to clear cookies & local storage (of site)
 
 * v1.9.0.0 (2020-10-11)
 Add Slate
-Remove BusinessTimes.com.sg (obsolete)
+Remove BusinessTimes.com.sg (fix obsolete)
 Fix Australian Provincial Newspapers (now all)
 Fix Bloomberg (overlay)
 Fix Challenges.fr (timing)
@@ -746,7 +747,7 @@ Add Die Zeit (Germany)
 Add Rolling Stone
 Add StockNews.com
 Add Times Higher Education
-Remove Vrij Nederland (obsolete)
+Remove Vrij Nederland (fix obsolete)
 Fix National Review (amp for plus)
 Minor update opt-in UI
 
@@ -765,8 +766,8 @@ Fix contentScript in background tab
 * v1.8.5.0 (2020-09-13)
 Add Commentary Magazine
 Add NK News (free articles only)
-Remove Switzer Report (obsolete)
-Remove The Athletic (obsolete)
+Remove Switzer Report (fix obsolete)
+Remove The Athletic (fix obsolete)
 Fix Economist (layout)
 Fix Financial Times (layout)
 Fix Brisbane Times, Sydney Morning Herald, The Age & WAtoday
@@ -857,7 +858,7 @@ Fix WSJ (close Cxense-banner)
 Add Follow the Money (Ftm.nl)
 Add Inkl
 Add National Geographic USA
-Remove KleineZeitung.at (obsolete)
+Remove KleineZeitung.at (fix obsolete)
 Fix Barron's (amp for snippet)
 Fix Estadao.com.br
 Fix Inkl (Dive Deeper links)
@@ -925,7 +926,7 @@ Fix WSJ (lift restrictions)
 * v1.7.0.3 (2020-04-22)
 Add Philosophy Now
 Add Eureka Report, Intelligent Investor & Switzer Report (Australia)
-Remove LeMonde.fr (obsolete)
+Remove LeMonde.fr (fix obsolete)
 Maintenance Ad.nl (regional)
 Sort-button custom sites
 
@@ -946,7 +947,7 @@ Add L'Opinion.fr
 Add LiveMint (India)
 Add Neue Zuercher Zeitung
 Add The New Republic
-Remove ET Prime (obsolete)
+Remove ET Prime (fix obsolete)
 Fix Telegraaf.nl
 Fix blocking Javascript for new (custom)sites
 Maintenance contentScript.js
@@ -988,7 +989,7 @@ Update custom sites UI (delete site)
 
 * v1.6.6.2 (2020-03-02)
 Add The Port Macquarie News (Australia)
-Remove nknews.org (obsolete)
+Remove nknews.org (fix obsolete)
 
 * v1.6.6.1 (2020-02-28)
 Add Humo.be
