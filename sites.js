@@ -465,6 +465,7 @@ var defaultSites = {
   },
   "Foreign Policy": {
     domain: "foreignpolicy.com",
+    allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
   },
   "Fortune": {
@@ -625,7 +626,7 @@ var defaultSites = {
       "lne.es"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|analytics)-.+\.js/
+    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|analytics)-.+\.js)/
   },
   "Grupo Vocento (Spain, regional daily)": {
     domain: "###_es_grupo_vocento",

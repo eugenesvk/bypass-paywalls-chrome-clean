@@ -5,6 +5,7 @@ Post-release
 Add group Outside magazines
 Fix Australia News Corp (amp-redirect)
 Fix Faz.net (timing)
+Fix Grupo Prensa Iberica (Piano)
 Fix The Chronicle (amp-redirect)
 Fix The Seattle Times (update)
 Fix The Telegraph (modal)

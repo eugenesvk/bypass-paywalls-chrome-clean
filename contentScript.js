@@ -909,17 +909,9 @@ else if (matchDomain(es_epiberica_domains)) {
   let truncated = document.querySelector('div.article-body--truncated');
   if (truncated)
     truncated.classList.remove('article-body--truncated');
-  window.setTimeout(function () {
-    let paywall = document.querySelector('div.paywall');
-    removeDOMElement(paywall);
-  }, 500); // Delay (in milliseconds)
   if (window.location.href.includes('.amp.html')) {
     amp_unhide_access_hide('="NOT access"', '="access"');
     amp_unhide_access_hide('="FALSE"');
-  } else {
-    let div_hidden = document.querySelector('div.baldomero');
-    if (div_hidden)
-      div_hidden.classList.remove('baldomero');
   }
 }
 
