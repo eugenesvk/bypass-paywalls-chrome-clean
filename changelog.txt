@@ -11,6 +11,7 @@ Fix The Chronicle (amp-redirect)
 Fix The Seattle Times (update)
 Fix The Telegraph (modal)
 Fix The West Australian (regional)
+Update popup (no more version-check)
 
 * v2.5.3.1 (2022-01-23)
 Hotfix block inline script
