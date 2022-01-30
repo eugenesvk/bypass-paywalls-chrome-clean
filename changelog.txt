@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.5.4.0 (2022-01-30)
 Add group Outside magazines
 Remove L'Orient-Le Jour (fix obsolete)
 Fix Australia News Corp (amp-redirect)
