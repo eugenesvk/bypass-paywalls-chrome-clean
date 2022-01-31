@@ -855,7 +855,8 @@ var defaultSites = {
   },
   "La Tercera": {
     domain: "latercera.com",
-    block_regex: /(\.latercera\.com\/arc\/subs\/p\.js|cdn\.cxense\.com\/)/
+    allow_cookies: 1,
+    block_regex: /(\.latercera\.com\/arc\/subs\/p\.min\.js|cdn\.cxense\.com\/)/
   },
   "La Tribune": {
     domain: "latribune.fr",
@@ -886,7 +887,8 @@ var defaultSites = {
     block_regex: /\.poool\.fr\//
   },
   "Le Journal du Net": {
-    domain: "journaldunet.com"
+    domain: "journaldunet.com",
+    allow_cookies: 1
   },
   "Le Parisien": {
     domain: "leparisien.fr",
@@ -1061,7 +1063,8 @@ var defaultSites = {
   },
   "MIT Technology Review": {
     domain: "technologyreview.com",
-    block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.mjs)/
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.mjs)/
   },
   "Mitteldeutsche Zeitung": {
     domain: "mz.de",

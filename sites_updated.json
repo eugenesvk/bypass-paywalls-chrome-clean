@@ -30,6 +30,16 @@
     "domain": "huffingtonpost.it",
     "group_rule": "###_gr_it_repubblica_domains"
   },
+  "La Tercera": {
+    "domain": "latercera.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.latercera\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.cxense\\.com\\/)"
+  },
+  "MIT Technology Review": {
+    "domain": "technologyreview.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.mjs)"
+  },
   "###_gr_it_repubblica_domains": {
     "group_rule_domains": ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lanuovasardegna.it", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
     "allow_cookies": 1,

@@ -774,7 +774,7 @@ else if (matchDomain('nyteknik.se')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'lavanguardia.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain('abc.es')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -916,12 +916,6 @@ else if (matchDomain(es_epiberica_domains)) {
     amp_unhide_access_hide('="NOT access"', '="access"');
     amp_unhide_access_hide('="FALSE"');
   }
-}
-
-else if (matchDomain('lavanguardia.com')) {
-  let paywall = document.querySelector('[class*="ev-open-modal-paywall"]');
-  let infinite_loading = document.querySelector('#infinite-loading');
-  removeDOMElement(paywall, infinite_loading);
 }
 
 else if (matchDomain('observador.pt')) {
@@ -2517,7 +2511,7 @@ else if (matchDomain('law360.com')) {
 }
 
 else if (matchDomain('livelaw.in')) {
-  let paywall = document.querySelectorAll('div.restricted_message > div.story, div.restricted_message > div.row');
+  let paywall = document.querySelectorAll('div.restricted_message, div.subscribeNow');
   if (paywall.length) {
     removeDOMElement(...paywall);
     let paywall_content = document.querySelector('div.paywall-content.hide');
@@ -2925,23 +2919,6 @@ else if (matchDomain('techinasia.com')) {
   let splash_subscribe = document.querySelector('.splash-subscribe');
   let paywall_hard = document.querySelector('.paywall-hard');
   removeDOMElement(splash_subscribe, paywall_hard);
-}
-
-else if (matchDomain('technologyreview.com')) {
-  window.setTimeout(function () {
-    let body_obscured = document.querySelector('body[class*="body__obscureContent"]');
-    if (body_obscured)
-      removeClassesByPrefix(body_obscured, 'body__obscureContent');
-    let overlay = document.querySelector('div[class*="overlayFooter__wrapper"]');
-    if (overlay)
-      overlay.setAttribute('style', 'display:none');
-    let content_body_hidden = document.querySelector('div[class*="contentBody__contentHidden"]');
-    if (content_body_hidden)
-      removeClassesByPrefix(content_body_hidden, 'contentBody__contentHidden');
-    let content_body_overlay = document.querySelector('div[class*="contentBody__overlay"]');
-    if (content_body_overlay)
-      content_body_overlay.removeAttribute('class');
-  }, 500);
 }
 
 else if (matchDomain('the-american-interest.com')) {
