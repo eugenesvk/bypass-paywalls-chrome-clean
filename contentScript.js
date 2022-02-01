@@ -3025,11 +3025,6 @@ else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
   document.dispatchEvent(new CustomEvent('bpc_event', {}));
 }
 
-else if (matchDomain('thelogic.co')) {
-  let article_subscribe = document.querySelector('.article-subscribe');
-  removeDOMElement(article_subscribe);
-}
-
 else if (matchDomain('thenewatlantis.com')) {
   let article_gated = document.querySelector('.article-gated');
   if (article_gated)

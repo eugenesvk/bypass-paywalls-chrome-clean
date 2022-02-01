@@ -1533,9 +1533,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.jpost\.com\/js\/js_article\.min\.js/
   },
-  "The Logic": {
-    domain: "thelogic.co"
-  },
   "The Marker": {
     domain: "themarker.com",
     allow_cookies: 1,
