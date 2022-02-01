@@ -55,5 +55,9 @@
     "domain": "telegraph.co.uk",
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|\\.telegraph\\.co\\.uk\\/martech\\/js\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
+  },
+  "The Times Literary Supplement": {
+    "domain": "the-tls.co.uk",
+    "referer": "google"
   }
 }

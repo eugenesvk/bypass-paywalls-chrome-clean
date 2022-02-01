@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix La Tercera (js)
 Fix MIT Technology Review (TinyPass)
+Fix Times Literary Supplement (set referer Google)
 
 * v2.5.4.0 (2022-01-30)
 Add group Outside magazines

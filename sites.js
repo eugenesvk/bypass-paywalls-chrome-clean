@@ -913,6 +913,7 @@ var defaultSites = {
     domain: "###_usa_lee_ent",
     group: [
       "buffalonews.com",
+      "journalnow.com",
       "richmond.com",
       "tucson.com",
       "tulsaworld.com"
@@ -1240,8 +1241,8 @@ var defaultSites = {
   },
   "Quartz (free articles only)": {
     domain: "qz.com",
-    block_regex: /\.tinypass\.com\//,
-    remove_cookies_select_hold: ["gdpr"]
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "Quora": {
     domain: "quora.com",
@@ -1439,6 +1440,7 @@ var defaultSites = {
   },
   "The Australian Financial Review": {
     domain: "afr.com",
+    allow_cookies: 1,
     block_regex: /api\.afr\.com\/graphql\?query=.+PaywallRuleQuery/
   },
   "The Boston Globe": {
@@ -1547,6 +1549,7 @@ var defaultSites = {
   },
   "The Nation": {
     domain: "thenation.com",
+    allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "The New Atlantis": {
@@ -1579,7 +1582,8 @@ var defaultSites = {
   },
   "The Philadelphia Inquirer": {
     domain: "inquirer.com",
-    block_regex: /\.tinypass\.com\//
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|js\.matheranalytics\.com\/)/
   },
   "The Point Magazine": {
     domain: "thepointmag.com",
@@ -1621,7 +1625,8 @@ var defaultSites = {
     useragent: "googlebot"
   },
   "The Times Literary Supplement": {
-    domain: "the-tls.co.uk"
+    domain: "the-tls.co.uk",
+    referer: "google"
   },
   "The Toronto Star (+ local TorStar sites)": {
     domain: "###_ca_torstar",
@@ -1721,6 +1726,7 @@ var defaultSites = {
   },
   "Valeurs Actuelles": {
     domain: "valeursactuelles.com",
+    allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
   "Vanity Fair": {
@@ -1760,9 +1766,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/,
     useragent: "googlebot"
-  },
-  "Winston-Salem Journal": {
-    domain: "journalnow.com"
   },
   "Wired": {
     domain: "wired.com",

@@ -200,8 +200,7 @@ Grouped in options:\
 [The Dallas Morning News](https://www.dallasnews.com) -
 [The New Orleans Advocate/The Times-Picayune](https://www.nola.com) -
 [The Seattle Times](https://www.seattletimes.com) -
-[The Philadelphia Inquirer](https://www.inquirer.com) -
-[Winston-Salem Journal](https://www.journalnow.com)
+[The Philadelphia Inquirer](https://www.inquirer.com)
 
 [USA Today](https://www.usatoday.com)\
 Grouped in options:\
@@ -235,7 +234,8 @@ Grouped in options:\
 [Arizona Daily Star](https://tucson.com) -
 [Richmond Times-Dispatch](https://richmond.com) -
 [The Buffalo News](https://buffalonews.com) -
-[Tulsa World](https://tulsaworld.com)\
+[Tulsa World](https://tulsaworld.com) -
+[Winston-Salem Journal](https://www.journalnow.com)\
 *McClatchy Group* sites like (opt-in to custom sites for unlisted)\
 [Belleville News-Democrat](https://www.bnd.com) -
 [Fort Worth Star-Telegram](https://www.star-telegram.com) -
