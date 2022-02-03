@@ -48,8 +48,8 @@ if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
   }
 }
 
-function amp_iframes_replace(weblink = false) {
-  let amp_iframes = document.querySelectorAll('amp-iframe');
+function amp_iframes_replace(weblink = false, source = '') {
+  let amp_iframes = document.querySelectorAll('amp-iframe' + (source ? '[src*="'+ source + '"]' : ''));
   let elem;
   for (let amp_iframe of amp_iframes) {
     if (!weblink) {
@@ -61,18 +61,24 @@ function amp_iframes_replace(weblink = false) {
         width: 'auto',
         style: 'border: 0px;'
       });
+      amp_iframe.parentElement.insertBefore(elem, amp_iframe);
+      removeDOMElement(amp_iframe);
     } else {
-      elem = document.createElement('a');
-      elem.innerText = 'Video-link';
-      elem.setAttribute('href', amp_iframe.getAttribute('src'));
-      elem.setAttribute('target', '_blank');
+      let video_link = document.querySelector('a#bpc_video_link');
+      if (!video_link) {
+        amp_iframe.removeAttribute('class');
+        elem = document.createElement('a');
+        elem.id = 'bpc_video_link';
+        elem.innerText = 'Video-link';
+        elem.setAttribute('href', amp_iframe.getAttribute('src'));
+        elem.setAttribute('target', '_blank');
+        amp_iframe.parentElement.insertBefore(elem, amp_iframe);
+      }
     }
-    amp_iframe.parentElement.insertBefore(elem, amp_iframe);
-    removeDOMElement(amp_iframe);
   }
 }
 
-function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false) {
+function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
   let preview = document.querySelector('[subscriptions-section="content-not-granted"]');
   removeDOMElement(preview);
   let subscr_section = document.querySelectorAll('[subscriptions-section="content"]');
@@ -81,10 +87,10 @@ function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes 
   let amp_ads = document.querySelectorAll(amp_ads_sel);
   removeDOMElement(...amp_ads);
   if (replace_iframes)
-    amp_iframes_replace(amp_iframe_link);
+    amp_iframes_replace(amp_iframe_link, source);
 }
 
-function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false) {
+function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
   let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]');
   for (elem of access_hide)
     elem.removeAttribute('amp-access-hide');
@@ -95,7 +101,7 @@ function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_se
   let amp_ads = document.querySelectorAll(amp_ads_sel);
   removeDOMElement(...amp_ads);
   if (replace_iframes)
-    amp_iframes_replace(amp_iframe_link);
+    amp_iframes_replace(amp_iframe_link, source);
 }
 
 // custom sites: try to unhide text on amp-page
@@ -213,9 +219,11 @@ else {
       removeDOMElement(header_ads);
       let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
       if (window.location.hostname.startsWith('amp.')) {
-        amp_unhide_access_hide('="access AND subscriber"', '', amp_ads_sel, true, true);
+        amp_unhide_access_hide('="access AND subscriber"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
       } else if (window.location.href.includes('?amp')) {
-        amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '', amp_ads_sel, true, true);
+        amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
+        removeDOMElement(...amp_iframe_sizers)
       }
     } else {
       // Australian Seven West Media
@@ -2722,8 +2730,8 @@ else if (matchDomain('nytimes.com')) {
 }
 
 else if (matchDomain('quora.com')) {
-  let overlay = document.querySelector('div.qu-zIndex--inline_overlay');
-  removeDOMElement(overlay);
+  let overlays = document.querySelectorAll('div[class*="_overlay"]');
+  removeDOMElement(...overlays);
   let mask_image = document.querySelector('div.ePDXbR');
   if (mask_image)
     mask_image.classList.remove('ePDXbR');

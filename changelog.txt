@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Remove The Logic (fix obsolete)
+Fix Australia News Corp (video-still)
 Fix La Tercera (js)
 Fix MIT Technology Review (TinyPass)
 Fix Times Literary Supplement (set referer Google)
