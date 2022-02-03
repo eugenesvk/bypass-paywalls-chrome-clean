@@ -7,7 +7,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'inkl.com', 'nation.africa', 'nationalgeographic.com'];
+const cs_limit_except = ['elespanol.com', 'faz.net', 'inkl.com', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -915,7 +915,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var setReferer = false;
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
-    !(matchUrlDomain('thetimes.co.uk', details.url) && !details.url.match(/\/epaper\.thetimes\.co\.uk\//)) &&
+    !(matchUrlDomain('thetimes.co.uk', details.url) && !details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));

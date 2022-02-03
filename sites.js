@@ -149,7 +149,7 @@ var defaultSites = {
       "westernadvocate.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /cdn-au\.piano\.io\/api\/tinypass.+\.js/
+    block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|\.com\.au\/static\/.+\/js\/vendor\.js)/
   },
   "Barron's": {
     domain: "barrons.com",

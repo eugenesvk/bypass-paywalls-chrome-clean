@@ -1784,19 +1784,35 @@ else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
 }
 
 else if (matchDomain('thetimes.co.uk')) {
-  let block = document.querySelector('.subscription-block');
-  let adverts = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.responsiveweb-sc-1exejum-0');
-  removeDOMElement(block, ...adverts);
   let url = window.location.href;
-  let paywall = document.querySelector('div#paywall-portal-article-footer');
-  if (paywall && !url.includes('?shareToken=')) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('article[role="article"]');
-    if (article)
-      article.insertBefore(archiveLink(url), article.firstChild);
+  if (window.location.hostname !== 'epaper.thetimes.co.uk') {
+    let block = document.querySelector('.subscription-block');
+    let adverts = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.responsiveweb-sc-1exejum-0');
+    removeDOMElement(block, ...adverts);
+    let paywall = document.querySelector('div#paywall-portal-article-footer');
+    if (paywall && !url.includes('?shareToken=')) {
+      removeDOMElement(paywall);
+      let article = document.querySelector('article[role="article"]');
+      if (article)
+        article.insertBefore(archiveLink(url), article.firstChild);
+    }
+    let paywall_page = document.querySelector('div#paywall-portal-page-footer');
+    removeDOMElement(paywall_page);
+  } else {
+    if (url.includes('/textview')) {
+      function thetimes_link(node) {
+        let article = node.closest('article[aid]');
+        if (article)
+          node.href = 'article/' + article.getAttribute('aid');
+      }
+      waitDOMElement('article[aid] > div > div > a.readmore.dis[href="javascript:void(0)"]', 'A', thetimes_link, true);
+      csDoneOnce = true;
+    } else {
+      let pages = document.querySelectorAll('div.page-left, div.page-right');
+      for (let page of pages)
+        page.style.height = 'auto';
+    }
   }
-  let paywall_page = document.querySelector('div#paywall-portal-page-footer');
-  removeDOMElement(paywall_page);
 }
 
 else if (!matchDomain(['belfasttelegraph.co.uk', 'independent.ie']))
@@ -1845,7 +1861,7 @@ else if (matchDomain('elmercurio.com')) {
       elem.removeAttribute('style');
     let page_pdf_content = document.querySelector('div.page_pdf_content');
     let close_html = document.querySelector('div.close_html');
-    removeDOMElement(page_pdf_content, close_html)
+    removeDOMElement(page_pdf_content, close_html);
   }, 1000); // Delay (in milliseconds)
   window.setTimeout(function () {
     let cont_articlelight = document.querySelector('div.cont_articlelight');

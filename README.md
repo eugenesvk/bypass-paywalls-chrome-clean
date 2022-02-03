@@ -47,6 +47,7 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 #### Notes
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin).
 * You will be logged out for most of the sites you have checked.
+* Some sites need to redirect to an amp-page (add an exception in your amp2html add-on).
 
 ### List of supported websites
 
