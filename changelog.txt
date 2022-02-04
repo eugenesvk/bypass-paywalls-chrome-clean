@@ -8,6 +8,7 @@ Fix La Tercera (js)
 Fix MIT Technology Review (TinyPass)
 Fix TheTimes.co.uk (epaper)
 Fix Times Literary Supplement (set referer Google)
+Fix WaPo
 
 * v2.5.4.0 (2022-01-30)
 Add group Outside magazines

@@ -572,7 +572,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 // Australia News Corp redirect subscribe to amp
 var au_news_corp_subscr = au_news_corp_domains.map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !details.url.includes('dest=')) {
+  if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {
     return;
   }
   var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]);
@@ -913,14 +913,16 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 
   var useUserAgentMobile = false;
   var setReferer = false;
+
+if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'stylesheet'].includes(details.type)) {
+  var mobile = details.requestHeaders.filter(x => x.name.toLowerCase() === "user-agent" && x.value.toLowerCase().includes("mobile")).length;
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
-    !(matchUrlDomain('thetimes.co.uk', details.url) && !details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//)) &&
+    !(matchUrlDomain('thetimes.co.uk', details.url) && !(details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//) || mobile)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));
 
-if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'stylesheet'].includes(details.type)) {
   // if referer exists, set it
   requestHeaders = requestHeaders.map(function (requestHeader) {
     if (requestHeader.name === 'Referer') {

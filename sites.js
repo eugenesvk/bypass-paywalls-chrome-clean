@@ -1648,7 +1648,7 @@ var defaultSites = {
   "The Washington Post": {
     domain: "washingtonpost.com",
     allow_cookies: 1,
-    block_regex: /\.washingtonpost\.com\/pwapiv2\/article/
+    block_regex: /\.washingtonpost\.com\/tetro\/evaluate/
   },
   "The West Australian (+ regional/opt-in to custom sites)": {
     domain: "thewest.com.au",

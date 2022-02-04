@@ -218,13 +218,17 @@ else {
       let header_ads = document.querySelector('.header_ads-container');
       removeDOMElement(header_ads);
       let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
+      let comments;
       if (window.location.hostname.startsWith('amp.')) {
         amp_unhide_access_hide('="access AND subscriber"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        comments = document.querySelector('#story-comments, .comments-wrapper');
       } else if (window.location.href.includes('?amp')) {
         amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        comments = document.querySelector('#comments-load');
         let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
         removeDOMElement(...amp_iframe_sizers)
       }
+      removeDOMElement(comments);
     } else {
       // Australian Seven West Media
       let swm_image = document.querySelector('img[src^="https://images.thewest.com.au"]');
