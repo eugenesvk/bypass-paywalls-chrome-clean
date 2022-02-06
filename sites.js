@@ -51,7 +51,6 @@ var defaultSites = {
     domain: "###_fi_alma_talent",
     group: [
       "arvopaperi.fi",
-      "iltalehti.fi",
       "kauppalehti.fi",
       "marmai.fi",
       "mediuutiset.fi",

@@ -317,7 +317,6 @@ Grouped in options:\
 
 *Alma Talent* sites like\
 [Arvopaperi](https://www.arvopaperi.fi) -
-[Iltalehti (Firefox-only)](https://www.iltalehti.fi) -
 [Kauppalehti](https://www.kauppalehti.fi) -
 [Markkinointi & Mainonta](https://www.marmai.fi) -
 [Mediuutiset](https://www.mediuutiset.fi) -

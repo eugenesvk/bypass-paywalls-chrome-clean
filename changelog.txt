@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove Iltalehti.fi (fix obsolete)
 Remove The Logic (fix obsolete)
 Fix Australia News Corp (video-still)
 Fix La Tercera (js)
