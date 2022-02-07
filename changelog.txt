@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Update block general paywall script (limit NewsMemory)
 
 * v2.5.5.0 (2022-02-06)
 Remove Iltalehti.fi (fix obsolete)
