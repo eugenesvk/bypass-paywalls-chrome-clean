@@ -608,11 +608,12 @@
         "*://*.natgeofe.com/*",
         "*://*.nyt.com/*",
         "*://*.pasedigital.cl/*",
+        "*://*.prcdn.co/*",
         "*://*.repstatic.it/*",
         "*://*.rndtech.de/*",
         "*://*.sanoma-sndp.fi/*",
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.5.2"
+    "version": "2.5.5.3"
 }

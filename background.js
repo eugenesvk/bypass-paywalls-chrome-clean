@@ -885,21 +885,21 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   let allow_ext_source = medium_custom_domain;
   let bpc_amp_site = false;
 
-  if (isSiteEnabled({url: header_referer})) {
-    let inkl_site = (matchUrlDomain('cdn.jsdelivr.net', details.url) && matchUrlDomain('inkl.com', header_referer));
-    let cl_elmerc_site = (matchUrlDomain('emol.cl', details.url) && matchUrlDomain('elmercurio.com', header_referer));
-    let es_elesp_site = (matchUrlDomain('eestatic.com', details.url) && matchUrlDomain('elespanol.com', header_referer));
-    let it_repubblica_site = (matchUrlDomain(['repstatic.it'], details.url) && matchUrlDomain(it_repubblica_domains, header_referer));
-    let usa_law360_site = (matchUrlDomain('law360news.com', details.url) && matchUrlDomain('law360.com', header_referer));
-    let usa_mw_site = (matchUrlDomain('wsj.net', details.url) && matchUrlDomain('marketwatch.com', header_referer));
-    let usa_natgeo_site = (matchUrlDomain('natgeofe.com', details.url) && matchUrlDomain('nationalgeographic.com', header_referer));
-    let usa_today_site = (matchUrlDomain('gannett-cdn.com', details.url) && matchUrlDomain(['usatoday.com'], header_referer));
-    allow_ext_source = allow_ext_source || inkl_site || cl_elmerc_site || es_elesp_site || it_repubblica_site || usa_law360_site || usa_mw_site || usa_natgeo_site || usa_today_site;
-
+  if (isSiteEnabled({url: header_referer}) && ['script', 'image'].includes(details.type)) {
     bpc_amp_site = matchUrlDomain('cdn.ampproject.org', details.url);
+    allow_ext_source = allow_ext_source || bpc_amp_site ||
+      (matchUrlDomain('elespanol.com', header_referer) && matchUrlDomain('eestatic.com', details.url)) ||
+      (matchUrlDomain('elmercurio.com', header_referer) && matchUrlDomain('emol.cl', details.url)) ||
+      (matchUrlDomain('epaper.thetimes.co.uk', header_referer) && matchUrlDomain(['prcdn.co'], details.url)) ||
+      (matchUrlDomain('inkl.com', header_referer) && matchUrlDomain('cdn.jsdelivr.net', details.url)) ||
+      (matchUrlDomain('law360.com', header_referer) && matchUrlDomain('law360news.com', details.url)) ||
+      (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
+      (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
+      (matchUrlDomain('usatoday.com', header_referer) && matchUrlDomain('gannett-cdn.com', details.url)) ||
+      (matchUrlDomain(it_repubblica_domains, header_referer) && matchUrlDomain(['repstatic.it'], details.url));
   }
 
-  if (!isSiteEnabled(details) && !allow_ext_source && !bpc_amp_site) {
+  if (!isSiteEnabled(details) && !allow_ext_source) {
     return;
   }
 

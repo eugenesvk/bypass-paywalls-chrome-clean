@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Groupe Sud Ouest (France)
+Fix TheTimes.co.uk (epaper & archive)
 Update block general paywall script (limit NewsMemory)
 
 * v2.5.5.0 (2022-02-06)
