@@ -30,6 +30,18 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.mjs)"
   },
+  "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
+    "domain": "###_usa_nymag",
+    "group": [
+      "curbed.com",
+      "grubstreet.com",
+      "nymag.com",
+      "thecut.com",
+      "vulture.com"
+    ],
+    "remove_cookies_select_drop": ["nymcid", "first-nymcid"],
+    "block_regex": "fosse\\.nymag\\.com\\/fosse\\/.+\\/scripts\\/.+\\.js"
+  },
   "The Seattle Times": {
     "domain": "seattletimes.com",
     "allow_cookies": 1,

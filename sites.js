@@ -1128,7 +1128,7 @@ var defaultSites = {
       "thecut.com",
       "vulture.com"
     ],
-    remove_cookies_select_drop: ["nymcid"],
+    remove_cookies_select_drop: ["nymcid", "first-nymcid"],
     block_regex: /fosse\.nymag\.com\/fosse\/.+\/scripts\/.+\.js/
   },
   "New Zealand Herald": {

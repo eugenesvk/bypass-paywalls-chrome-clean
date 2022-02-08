@@ -855,7 +855,7 @@ else if (matchDomain('elpais.com')) {
   let url = window.location.href;
   let login_register = document.querySelector('.login_register');
   if (url.includes('.amp.html') || url.includes('?outputType=amp')) {
-    amp_unhide_access_hide('="success"', '="NOT success"');
+    amp_unhide_access_hide('="vip"', '="NOT vip"');
     removeDOMElement(login_register);
   } else {
     let counter = document.querySelector('#counterLayerDiv');
@@ -868,7 +868,7 @@ else if (matchDomain('elpais.com')) {
     }
   }
   let paywall_offer = document.querySelector('.paywallOffer');
-  let ctn_closed_article = document.querySelector('#ctn_closed_article');
+  let ctn_closed_article = document.querySelector('#ctn_closed_article, #ctn_freemium_article');
   removeDOMElement(paywall_offer, ctn_closed_article);
 }
 
