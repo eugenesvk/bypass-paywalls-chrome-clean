@@ -1283,7 +1283,7 @@ else if (matchDomain('science-et-vie.com')) {
   }
 }
 
-else if (matchDomain('sudouest.fr')) {
+else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenees.fr'])) {
   let url = window.location.href;
   let paywall = document.querySelector('.article-premium-footer');
   if (paywall) {

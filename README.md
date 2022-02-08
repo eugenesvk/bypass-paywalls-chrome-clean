@@ -354,7 +354,6 @@ Grouped in options:\
 [Paris Match](https://www.parismatch.com) -
 [Science & Vie](https://www.science-et-vie.com) -
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
-[Sud Ouest](https://www.sudouest.fr) -
 [Télérama](https://www.telerama.fr) -
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 
@@ -393,7 +392,11 @@ Grouped in options:\
 [Nord Éclair](https://www.nordeclair.fr) -
 [Nord Littoral](https://www.nordlittoral.fr) -
 [Paris Normandie](https://www.paris-normandie.fr) -
-[SudInfo](https://www.sudinfo.be)
+[SudInfo](https://www.sudinfo.be)\
+*Groupe Sud Ouest* sites like\
+[Charente libre](https://www.charentelibre.fr) -
+[La République des Pyrénées](https://www.larepubliquedespyrenees.fr) -
+[Sud Ouest](https://www.sudouest.fr)
 
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -

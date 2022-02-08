@@ -606,6 +606,15 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "Groupe Sud Ouest": {
+    domain: "###_fr_groupe_sud_ouest",
+    group: [
+      "sudouest.fr",
+      "charentelibre.fr",
+      "larepubliquedespyrenees.fr"
+    ],
+    allow_cookies: 1
+  },
   "Grupo Abril": {
     domain: "abril.com.br",
     allow_cookies: 1,
@@ -1374,10 +1383,6 @@ var defaultSites = {
     domain: "study.com",
     allow_cookies: 1
   },
-  "Sud Ouest": {
-    domain: "sudouest.fr",
-    allow_cookies: 1
-  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,
@@ -1926,6 +1931,7 @@ expandSiteRules(defaultSites);
 
 // grouped domains (background)
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
+var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
