@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Groupe Sud Ouest (France)
+Fix Australian Community Media (images)
 Fix New York Magazine sites (cookies)
 Fix TheTimes.co.uk (epaper & archive)
 Update block general paywall script (limit NewsMemory)

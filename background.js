@@ -576,7 +576,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
     return;
   }
   var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]);
-  if (matchUrlDomain('thechronicle.com.au', details.url))
+  if (!matchUrlDomain('theaustralian.com.au', details.url))
     updatedUrl += '?amp';
   else
     updatedUrl = updatedUrl.replace('www.', 'amp.');
