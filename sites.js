@@ -1337,8 +1337,7 @@ var defaultSites = {
   "Seeking Alpha": {
     domain: "seekingalpha.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org(\/.+)?\/v\d\/amp-(access|ad|loader)-.+\.js)/,
-    useragent: "googlebot"
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org(\/.+)?\/v\d\/amp-(access|ad|loader)-.+\.js)/
   },
   "Slate": {
     domain: "slate.com",

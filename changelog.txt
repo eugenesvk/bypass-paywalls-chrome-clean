@@ -6,6 +6,7 @@ Add Groupe Sud Ouest (France)
 Fix Australian Community Media (images)
 Fix Lequipe.fr & LesEchos.fr (refresh)
 Fix New York Magazine sites (cookies)
+Fix SeekingAlpha (captcha)
 Fix TheTimes.co.uk (epaper & archive)
 Update block general paywall script (limit NewsMemory)
 
