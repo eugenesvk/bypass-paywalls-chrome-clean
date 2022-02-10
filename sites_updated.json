@@ -21,6 +21,18 @@
     "allow_cookies": 1,
     "block_regex": "cdn-au\\.piano\\.io\\/api\\/tinypass.+\\.js"
   },
+  "Bon Appétit": {
+    "domain": "bonappetit.com",
+    "remove_cookies_select_drop": ["pay_ent_smp"],
+    "block_regex": "(journey\\.bonappetit\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    "useragent": "googlebot"
+  },
+  "GQ": {
+    "domain": "gq.com",
+    "remove_cookies_select_drop": ["pay_ent_smp"],
+    "block_regex": "(journey\\.gq\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    "useragent": "googlebot"
+  },
   "La Tercera": {
     "domain": "latercera.com",
     "allow_cookies": 1,
@@ -66,5 +78,16 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/evaluate"
+  },
+  "Vogue USA": {
+    "domain": "vogue.com",
+    "remove_cookies_select_drop": ["pay_ent_smp"],
+    "block_regex": "(journey\\.vogue\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    "useragent": "googlebot"
+  },
+  "Voguebusiness.com": {
+    "allow_cookies": 1,
+    "domain": "voguebusiness.com",
+    "useragent": "googlebot"
   }
 }

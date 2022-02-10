@@ -212,11 +212,6 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "toledoblade.com"
   },
-  "Voguebusiness.com": {
-    "allow_cookies": 1,
-    "domain": "voguebusiness.com",
-    "useragent": "googlebot"
-  },
   "Wz.de": {
     "allow_cookies": 1,
     "domain": "wz.de",

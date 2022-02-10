@@ -236,6 +236,13 @@ var defaultSites = {
   "CommonWealth Magazine Taiwan (free articles only)": {
     domain: "cw.com.tw"
   },
+  "Condé Nast magazines": {
+    domain: "###_usa_conde_nast",
+    group: ["bonappetit.com", "gq.com", "newyorker.com", "vanityfair.com", "vogue.com", "wired.com"],
+    remove_cookies_select_drop: ["pay_ent_smp"],
+    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    useragent: "googlebot"
+  },
   "Correio da Manhã": {
     domain: "cmjornal.pt",
     allow_cookies: 1,
@@ -1576,10 +1583,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(meter-svc\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js)/
   },
-  "The New Yorker": {
-    domain: "newyorker.com",
-    group_rule: "###_gr_usa_conde_nast_domains"
-  },
   "The Philadelphia Inquirer": {
     domain: "inquirer.com",
     allow_cookies: 1,
@@ -1729,10 +1732,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
-  "Vanity Fair": {
-    domain: "vanityfair.com",
-    group_rule: "###_gr_usa_conde_nast_domains"
-  },
   "Variety": {
     domain: "variety.com",
     allow_cookies: 1,
@@ -1742,6 +1741,11 @@ var defaultSites = {
     domain: "venturebeat.com",
     allow_cookies: 1,
     block_regex: /\.wallkit\.net\/js\//
+  },
+  "Vogue Business": {
+    allow_cookies: 1,
+    domain: "voguebusiness.com",
+    useragent: "googlebot"
   },
   "Volkskrant": {
     domain: "volkskrant.nl",
@@ -1767,10 +1771,6 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
-  "Wired": {
-    domain: "wired.com",
-    group_rule: "###_gr_usa_conde_nast_domains"
-  },
   "World Politics Review": {
     domain: "worldpoliticsreview.com",
     allow_cookies: 1,
@@ -1795,12 +1795,6 @@ var defaultSites = {
     group_rule_domains: ["parool.nl", "trouw.nl", "volkskrant.nl", "humo.be", "demorgen.be"],
     remove_cookies_select_drop: ["TID_ID"],
     block_regex: "\\.{domain}\\/temptation\\/resolve"
-  },
-  "###_gr_usa_conde_nast_domains": {
-    group_rule_domains: ["newyorker.com", "vanityfair.com", "wired.com"],
-    remove_cookies_select_drop: ["pay_ent_smp"],
-    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
-    useragent: "googlebot"
   },
   "###_gr_usa_genomeweb_domains": {
     group_rule_domains: ["genomeweb.com", "360dx.com", "precisiononcologynews.com"],

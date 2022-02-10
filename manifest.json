@@ -95,6 +95,7 @@
         "*://*.bloombergquint.com/*",
         "*://*.bnd.com/*",
         "*://*.bndestem.nl/*",
+        "*://*.bonappetit.com/*",
         "*://*.bordermail.com.au/*",
         "*://*.bostonglobe.com/*",
         "*://*.braunschweiger-zeitung.de/*",
@@ -221,6 +222,7 @@
         "*://*.globo.com/*",
         "*://*.goldcoastbulletin.com.au/*",
         "*://*.gooieneemlander.nl/*",
+        "*://*.gq.com/*",
         "*://*.griffithreview.com/*",
         "*://*.groene.nl/*",
         "*://*.grubstreet.com/*",
@@ -508,7 +510,6 @@
         "*://*.thehindu.com/*",
         "*://*.thehindubusinessline.com/*",
         "*://*.theintercept.com/*",
-        "*://*.thelogic.co/*",
         "*://*.themarker.com/*",
         "*://*.themarket.ch/*",
         "*://*.themercury.com.au/*",
@@ -555,6 +556,8 @@
         "*://*.velonews.com/*",
         "*://*.venturebeat.com/*",
         "*://*.vn.nl/*",
+        "*://*.vogue.com/*",
+        "*://*.voguebusiness.com/*",
         "*://*.volkskrant.nl/*",
         "*://*.vosgesmatin.fr/*",
         "*://*.vulture.com/*",
@@ -615,5 +618,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.5.3"
+    "version": "2.5.5.4"
 }
