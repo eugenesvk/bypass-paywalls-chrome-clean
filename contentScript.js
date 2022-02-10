@@ -1124,7 +1124,7 @@ else if (matchDomain('lequipe.fr')) {
         let json = json_script.textContent.split('articleObject:')[1].split(',articleType')[0];
         let url_nuxt = json_script.textContent.split('comment_count_url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
-          window.location.reload(true);
+          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
         let par_type = json.split('paragraphs:[')[1].split(',{__type:')[1].split(',')[0];
         if (par_type) {
           article.innerHTML = '';
@@ -1183,7 +1183,7 @@ else if (matchDomain('lesechos.fr') && window.location.href.match(/-\d{6,}/)) {
         let article = data_article.data.stripes[0].mainContent[0].data.description;
         let url_loaded = data_article.data.path;
         if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))
-          window.location.reload(true);
+          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
         let paywallNode = document.querySelector('.post-paywall');
         if (paywallNode) {
           let contentNode = document.createElement('div');
@@ -1204,7 +1204,7 @@ else if (matchDomain('lesechos.fr') && window.location.href.match(/-\d{6,}/)) {
         let styleElem = document.head.appendChild(document.createElement('style'));
         styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
       } catch (err) {
-        window.location.reload(true);
+        ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
       }
     }
   }, 500); // Delay (in milliseconds)
