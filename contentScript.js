@@ -1407,7 +1407,7 @@ else if (matchDomain('rep.repubblica.it')) {
   }
 }
 
-else if (domain = matchDomain(it_repubblica_domains)) {
+else if (matchDomain(it_repubblica_domains)) {
   let url = window.location.href.split('?')[0];
   if (!url.match(/\amp(\/)?$/)) {
     let premium = document.querySelector('#paywall, iframe#__limio_frame');
@@ -1432,9 +1432,8 @@ else if (domain = matchDomain(it_repubblica_domains)) {
     let ads = document.querySelectorAll('div[id^="adv"]');
     removeDOMElement(...ads);
   } else {
-    let paywall;
-    if (['lastampa.it', 'repubblica.it'].includes(domain)) {
-      paywall = document.querySelector('div[id^="paywall-banner"]');
+    if (matchDomain(['lastampa.it', 'www.repubblica.it'])) {
+      let paywall = document.querySelector('div[id^="paywall-banner"]');
       removeDOMElement(paywall);
       amp_unhide_subscr_section('amp-ad, amp-embed');
     } else {

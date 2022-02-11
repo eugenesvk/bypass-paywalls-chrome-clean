@@ -8,6 +8,7 @@ Fix Australian Community Media (images)
 Fix Lequipe.fr & LesEchos.fr (refresh)
 Fix New York Magazine sites (cookies)
 Fix NYTimes (game stats)
+Fix Espresso.repubblica.it (amp)
 Fix SeekingAlpha (captcha)
 Fix TheTimes.co.uk (epaper & archive)
 Update block general paywall script (limit NewsMemory)
@@ -1040,7 +1041,7 @@ Add Leeuwarder Courant & Dagblad van het Noorden (Netherlands)
 * v1.6.4.2 (2020-02-03)
 Add Fd.nl (Googlebot)
 Add Spectator.com.au & TheCourier.com.au
-Fix Repubblica.it - L'Espresso
+Fix Espresso.repubblica.it
 Fix TheAdvocate.com.au
 
 * v1.6.4.1 (2020-01-31)
