@@ -153,6 +153,7 @@
         "*://*.deutsche-wirtschafts-nachrichten.de/*",
         "*://*.df.cl/*",
         "*://*.di.se/*",
+        "*://*.diariocorreo.pe/*",
         "*://*.diariodeibiza.es/*",
         "*://*.diariodemallorca.es/*",
         "*://*.diariosur.es/*",
@@ -618,5 +619,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.5.4"
+    "version": "2.5.5.5"
 }

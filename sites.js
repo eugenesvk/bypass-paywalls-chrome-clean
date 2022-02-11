@@ -335,11 +335,6 @@ var defaultSites = {
     block_regex: /(\.editorialedomani\.it\/pelcro\.js|js\.pelcro\.com\/)/,
     useragent: "googlebot"
   },
-  "El Comercio": {
-    domain: "elcomercio.pe",
-    allow_cookies: 1,
-    block_regex: /\/elcomercio\.pe\/pf\/dist\/engine\/react\.js/
-  },
   "El Confidencial": {
     domain: "elconfidencial.com",
     allow_cookies: 1,
@@ -533,11 +528,6 @@ var defaultSites = {
     domain: "genomeweb.com",
     group_rule: "###_gr_usa_genomeweb_domains"
   },
-  "Gestión": {
-    domain: "gestion.pe",
-    allow_cookies: 1,
-    block_regex: /\/gestion\.pe\/pf\/dist\/engine\/react\.js/
-  },
   "Glassdoor": {
     domain: "glassdoor.com"
   },
@@ -626,6 +616,16 @@ var defaultSites = {
     domain: "abril.com.br",
     allow_cookies: 1,
     block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/js\/abril-paywall\.js|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+  },
+  "Grupo El Comercio": {
+    domain: "###_pe_grupo_elcomercio",
+    group: [
+      "diariocorreo.pe",
+      "elcomercio.pe",
+      "gestion.pe"
+    ],
+    allow_cookies: 1,
+    block_regex: "\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js"
   },
   "Grupo Prensa Ibérica": {
     domain: "###_es_epiberica",

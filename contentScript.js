@@ -20,6 +20,7 @@ var it_repubblica_domains = ['gelocal.it', 'ilsecoloxix.it', 'italian.tech', 'la
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var no_nhst_media_domains = ['intrafish.com', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
+var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_conde_nast_domains = ['bonappetit.com', 'gq.com' , 'newyorker.com', 'vanityfair.com', 'vogue.com', 'wired.com'];
@@ -1856,7 +1857,7 @@ else if (matchDomain('clarin.com')) {
   removeDOMElement(...ads);
 }
 
-else if (matchDomain(['elcomercio.pe', 'gestion.pe'])) {
+else if (matchDomain(pe_grupo_elcomercio_domains)) {
   let paywall = document.querySelector('.story-content__nota-premium');
   if (paywall) {
     paywall.classList.remove('story-content__nota-premium');
