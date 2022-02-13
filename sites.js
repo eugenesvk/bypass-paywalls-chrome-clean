@@ -335,6 +335,10 @@ var defaultSites = {
     block_regex: /(\.editorialedomani\.it\/pelcro\.js|js\.pelcro\.com\/)/,
     useragent: "googlebot"
   },
+  "Eastwest.eu": {
+    domain: "eastwest.eu",
+    allow_cookies: 1
+  },
   "El Confidencial": {
     domain: "elconfidencial.com",
     allow_cookies: 1,

@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Condé Nast magazines & Vogue Business
 Add Diario Correo (Grupo El Comercio)
+Add Eastwest (it/en)
 Add Groupe Sud Ouest (France)
 Fix Australian Community Media (images)
 Fix Lequipe.fr & LesEchos.fr (refresh)

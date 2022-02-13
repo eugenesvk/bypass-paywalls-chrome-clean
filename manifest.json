@@ -164,6 +164,7 @@
         "*://*.dna.fr/*",
         "*://*.dvhn.nl/*",
         "*://*.eastbaytimes.com/*",
+        "*://*.eastwest.eu/*",
         "*://*.economictimes.com/*",
         "*://*.economictimes.indiatimes.com/*",
         "*://*.economist.com/*",
@@ -619,5 +620,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.5.5"
+    "version": "2.5.5.6"
 }

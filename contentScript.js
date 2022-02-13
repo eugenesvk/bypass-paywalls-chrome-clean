@@ -1307,7 +1307,7 @@ else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenee
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.it') || matchDomain(['italian.tech', 'limesonline.com', 'quotidiano.net'])) {//italy
+} else if (window.location.hostname.endsWith('.it') || matchDomain(['eastwest.eu', 'italian.tech', 'limesonline.com', 'quotidiano.net'])) {//italy
 
 if (matchDomain('corriere.it')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -1319,6 +1319,17 @@ if (matchDomain('corriere.it')) {
         window.location.href = url.replace('_preview.shtml', '.shtml').split('?')[0];
       }, 500); // Delay (in milliseconds)
     }
+  }
+}
+
+else if (matchDomain('eastwest.eu')) {
+  let paywall = document.querySelector('.paywall');
+  if (paywall) {
+    paywall.removeAttribute('style');
+    paywall.classList.remove('paywall');
+    let intro = document.querySelectorAll('div#testo_articolo > p, div#testo_articolo > h3');
+    let offerta = document.querySelectorAll('div.offerta_abbonamenti');
+    removeDOMElement(...intro, ...offerta);
   }
 }
 

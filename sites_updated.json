@@ -38,6 +38,24 @@
       }
     ]
   },
+  "Eastwest.eu": {
+    "domain": "eastwest.eu",
+    "allow_cookies": 1,
+    "cs_code": [{
+        "cond": ".paywall",
+        "rm_attrib": "style",
+        "rm_class": "paywall",
+        "elems": [{
+            "cond": "div#testo_articolo > p, div#testo_articolo > h3",
+            "rm_elem": 1
+          }, {
+            "cond": "div.offerta_abbonamenti",
+            "rm_elem": 1
+          }
+        ]
+      }
+    ]
+  },
   "GQ": {
     "domain": "gq.com",
     "remove_cookies_select_drop": ["pay_ent_smp"],

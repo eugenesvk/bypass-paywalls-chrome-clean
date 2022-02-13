@@ -20,7 +20,7 @@ Weekly updates are released for fixes and new sites.
 You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean)\
 Latest add-on versions (2.4.8.0+) require a browser based on Firefox 86+ (else use the non-amo version below).\
 Or download and install the latest xpi-version from [GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
-By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites).
+ By default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` to ask for permission for current site).
 
 ### Update
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
@@ -452,6 +452,7 @@ Grouped in options:\
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -
 [Domani](https://editorialedomani.it) -
+[Eastwest](https://eastwest.eu) -
 [GElocal.it](https://quotidiani.gelocal.it) -
 [Huffingtonpost.it](https://www.huffingtonpost.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
@@ -495,7 +496,7 @@ Grouped in options:\
 [Vrij Nederland](https://www.nl.nl)
 
 Grouped in options:\
-Algemeen Dagblad Regional (ADR) sites like
+*Algemeen Dagblad Regional (ADR)* sites like
 [BN DeStem](https://www.bndestem.nl) -
 [Brabants Dagblad](https://www.bd.nl) -
 [Eindhovens Dagblad](https://www.ed.nl) -
@@ -700,8 +701,8 @@ Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass
 
 ### Add custom site
 Add your own custom site (also for testing).  
-Check 'Options'-link in popup-menu and go to custom sites.  
-\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself.
+Check 'Options'-link in popup-menu and go to custom sites.
+\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` to ask for permission for current site).
 
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
 Also you can enable Googlebot/Bingbot user-agent, set referer (to Facebook, Google or Twitter; ignored when Googlebot is set), set random ip-address, disable Javascript for (sub)domain(s) and/or external domains, block regular expression and/or unhide text on (or when paywall(selector) redirect to) amp-page.
