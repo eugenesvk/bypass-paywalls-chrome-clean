@@ -647,7 +647,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|analytics)-.+\.js)/
   },
-  "Grupo Vocento (Spain, regional daily)": {
+  "Grupo Vocento": {
     domain: "###_es_grupo_vocento",
     group: [
       "diariosur.es",
@@ -1626,7 +1626,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
-  "The Times": {
+  "The Times (UK)": {
     domain: "thetimes.co.uk",
     allow_cookies: 1,
     useragent: "googlebot"

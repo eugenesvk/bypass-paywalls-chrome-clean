@@ -1131,26 +1131,34 @@ else if (matchDomain('lequipe.fr')) {
         if (par_type) {
           article.innerHTML = '';
           let json_split = json.split('__type:' + par_type);
-          if (json_split.length < 5) {
-            par_type = json.split('content:"')[1].split('"},{__type:')[1].split(',')[0];
-            json_split = json.split('__type:' + par_type);
-          }
           let article_dom;
           let article_text = '';
           let parser = new DOMParser();
-          for (let par of json_split) {
-            par = par.split('}')[0];
-            if (par.includes(',content:')) {
-              let content = par.split(',content:')[1].split('",')[0];
-              let par_title = '';
-              if (par.includes(',title:'))
-                par_title = par.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
-              if (content) {
-                par = content.replace('class=', '');
-                if (par_title.length > 2)
-                  par = '<strong>' + par_title + '</strong><br><br>' + content;
-                par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/^\"|\"$/g, '');
-                article_text += '<p>' + par + '</p>';
+          for (let par_main of json_split) {
+            if (par_main.includes(',content:')) {
+              if (par_main.split(',content:"').length > 2) {
+                if (par_main.startsWith(',title:'))
+                  article_text += '<p><strong>' + par_main.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '') + '</strong></p>';
+                par_type = json.split('content:')[1].split('"},{__type:')[1].split(',')[0];
+                pars = par_main.split('__type:' + par_type);
+              } else {
+                pars = [par_main];
+              }
+              for (let par of pars) {
+                par = par.split('}')[0];
+                if (par.includes(',content:')) {
+                  let content = par.split(',content:')[1].split('",')[0];
+                  let par_title = '';
+                  if (par.includes(',title:'))
+                    par_title = par.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
+                  if (content) {
+                    par = content.replace('class=', '');
+                    if (par_title.length > 2)
+                      par = '<strong>' + par_title + '</strong><br><br>' + content;
+                    par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/^\"|\"$/g, '');
+                    article_text += '<p>' + par + '</p>';
+                  }
+                }
               }
             }
           }

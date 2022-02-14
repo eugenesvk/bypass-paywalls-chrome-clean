@@ -114,7 +114,7 @@
     "block_regex": "(journey\\.vogue\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
     "useragent": "googlebot"
   },
-  "Voguebusiness.com": {
+  "Vogue Business": {
     "allow_cookies": 1,
     "domain": "voguebusiness.com",
     "useragent": "googlebot"

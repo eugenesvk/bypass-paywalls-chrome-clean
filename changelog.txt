@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Lequipe.fr (json)
 
 * v2.5.6.0 (2022-02-13)
 Add Condé Nast magazines & Vogue Business
@@ -206,7 +207,7 @@ Update custom sites (block regex for default sites)
 
 * v2.4.0.0 (2021-10-17)
 Add Westfaelische Nachrichten (Germany)
-Remove Australian Provincial Newspapers (fix obsolete)
+Remove Australian Provincial Newspapers (obsolete)
 Fix GElocal.it
 Fix National Review
 Fix Ruhr Nachrichten (amp)
@@ -275,7 +276,7 @@ Fix group Crain Communications
 Add Ad Age & Automotive News (group Crain Communications)
 Add MediaNews Group (local USA)
 Add The Intercept
-Remove Slader (fix obsolete)
+Remove Slader (obsolete)
 Fix group Mediahuis Nederland Regional
 Fix Medium (timing)
 Fix The Australian
@@ -353,7 +354,7 @@ Update custom sites (set useragent Bingbot)
 
 * v2.2.6.0 (2021-06-20)
 Add group Mediahuis Nederland Regional
-Remove The Northern Star (fix obsolete)
+Remove The Northern Star (obsolete)
 Fix Atlantico.fr
 Fix Boston Globe (no opt-in)
 Fix Foreign Policy
