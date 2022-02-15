@@ -72,6 +72,12 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.mjs)"
   },
+  "Neue Osnabrücker Zeitung": {
+    "domain": "noz.de",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\\.js",
+    "amp_unhide": 1
+  },
   "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
     "domain": "###_usa_nymag",
     "group": [

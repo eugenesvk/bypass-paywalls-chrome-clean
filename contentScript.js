@@ -600,8 +600,7 @@ else if (matchDomain('mz.de')) {
 }
 
 else if (matchDomain(['noz.de', 'nwzonline.de', 'shz.de', 'svz.de'])) {
-  let url = window.location.href;
-  if (url.includes('?amp') || url.includes('-amp.html')) {
+  if (window.location.pathname.match(/(-amp\.html|\/amp)$/)) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, #flying-carpet-wrapper');
   } else {
     let paywall = document.querySelector('.paywall, .story--premium__container');
