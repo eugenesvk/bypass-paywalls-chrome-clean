@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix Lequipe.fr (json)
 Fix Neue Osnabrucker Zeitung (amp)
+Update block general paywall script (Pigeon)
 
 * v2.5.6.0 (2022-02-13)
 Add Condé Nast magazines & Vogue Business

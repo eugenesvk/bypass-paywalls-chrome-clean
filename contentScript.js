@@ -1130,14 +1130,18 @@ else if (matchDomain('lequipe.fr')) {
         if (par_type) {
           article.innerHTML = '';
           let json_split = json.split('__type:' + par_type);
+          json_split.shift();
           let article_dom;
           let article_text = '';
           let parser = new DOMParser();
+          let par_main_title = '';
           for (let par_main of json_split) {
             if (par_main.includes(',content:')) {
-              if (par_main.split(',content:"').length > 2) {
-                if (par_main.startsWith(',title:'))
-                  article_text += '<p><strong>' + par_main.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '') + '</strong></p>';
+              if (par_main.split(',content:"').filter(x => !x.startsWith('\\')).length > 2) {
+                if (par_main.startsWith(',title:')) {
+                  par_main_title = par_main.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
+                  article_text += '<p><strong>' + par_main_title + '</strong></p>';
+                }
                 par_type = json.split('content:')[1].split('"},{__type:')[1].split(',')[0];
                 pars = par_main.split('__type:' + par_type);
               } else {
@@ -1152,12 +1156,24 @@ else if (matchDomain('lequipe.fr')) {
                     par_title = par.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
                   if (content) {
                     par = content.replace('class=', '');
-                    if (par_title.length > 2)
+                    if (par_title.length > 2 && par_title !== par_main_title)
                       par = '<strong>' + par_title + '</strong><br><br>' + content;
                     par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/^\"|\"$/g, '');
                     article_text += '<p>' + par + '</p>';
                   }
                 }
+              }
+            }
+            par_main = par_main.split('}]')[0];
+            if (par_main.includes(',media:')) {
+              let media = par_main.split(',media:')[1].split('}}')[0] + '}';
+              if (media.includes('ratio:')) {
+                let ratio = media.split('ratio:')[1].split(',')[0].split('}')[0];
+                if (!parseInt(ratio))
+                  ratio = 1.5;
+                let url = media.split('url:"')[1].split('"')[0].replace(/\\u002F/g, '/').replace('{width}', '400').replace('{height}', parseInt(400 / ratio)).replace('{quality}', '75');
+                if (url)
+                  article_text += '<p><img src="' + url + '"</img></p>';
               }
             }
           }
@@ -2630,14 +2646,6 @@ else if (matchDomain('medianama.com')) {
   }
   waitDOMAttribute('div.zox-post-body', 'DIV', 'style', medianama_height, true);
   csDoneOnce = true;
-}
-
-else if (matchDomain('mexiconewsdaily.com')) {
-  window.setTimeout(function () {
-    let popup = document.querySelector('div.pigeon-widget-prompt');
-    let cpro_overlay = document.querySelector('.cpro-overlay');
-    removeDOMElement(popup, cpro_overlay);
-  }, 500); // Delay (in milliseconds)
 }
 
 else if (matchDomain('nation.africa')) {

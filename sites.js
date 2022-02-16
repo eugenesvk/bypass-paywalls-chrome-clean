@@ -1838,6 +1838,9 @@ var defaultSites = {
   "Piano.io": {
     domain: "piano.io"
   },
+  "Pigeon (WordPress plugin; opt-in to custom sites)": {
+    domain: "###_wp_pigeon"
+  },
   "Poool.fr": {
     domain: "poool.fr"
   },
