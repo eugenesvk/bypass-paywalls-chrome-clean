@@ -44,6 +44,9 @@ Then you need the 'custom' add-on version (with access to all sites): [Bypass Pa
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
 
+#### iOS/iPadOS
+Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
+
 #### Notes
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin).
 * You will be logged out for most of the sites you have checked.

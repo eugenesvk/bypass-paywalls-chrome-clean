@@ -62,16 +62,6 @@
     "block_regex": "(journey\\.gq\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
     "useragent": "googlebot"
   },
-  "La Tercera": {
-    "domain": "latercera.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.latercera\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.cxense\\.com\\/)"
-  },
-  "MIT Technology Review": {
-    "domain": "technologyreview.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.mjs)"
-  },
   "Neue Osnabrücker Zeitung": {
     "domain": "noz.de",
     "allow_cookies": 1,
@@ -94,20 +84,6 @@
     "domain": "seekingalpha.com",
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org(\\/.+)?\\/v\\d\\/amp-(access|ad|loader)-.+\\.js)"
-  },
-  "The Seattle Times": {
-    "domain": "seattletimes.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.seattletimes\\.com\\/wp-content\\/.+\\/st-(advertising|blocking)-bundle\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
-  },
-  "The Telegraph": {
-    "domain": "telegraph.co.uk",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|\\.telegraph\\.co\\.uk\\/martech\\/js\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
-  },
-  "The Times Literary Supplement": {
-    "domain": "the-tls.co.uk",
-    "referer": "google"
   },
   "The Washington Post": {
     "domain": "washingtonpost.com",
