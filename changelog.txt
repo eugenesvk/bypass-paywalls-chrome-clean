@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove Ruhr Nachrichten (fix obsolete)
 Fix Live Law
 Fix NewcastleHerald.com.au
 Fix Lequipe.fr (json)

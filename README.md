@@ -425,7 +425,6 @@ Grouped in options:\
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Piqd.de](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
-[Ruhr Nachrichten](https://www.ruhrnachrichten.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
 [Westfalen-Blatt](https://www.westfalen-blatt.de) -

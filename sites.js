@@ -1295,12 +1295,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
-  "Ruhr Nachrichten": {
-    domain: "ruhrnachrichten.de",
-    allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.(m)?js)/,
-    useragent: "googlebot"
-  },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
     block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/

@@ -445,7 +445,6 @@
         "*://*.rheinpfalz.de/*",
         "*://*.richmond.com/*",
         "*://*.rollingstone.com/*",
-        "*://*.ruhrnachrichten.de/*",
         "*://*.rundschau-online.de/*",
         "*://*.sacbee.com/*",
         "*://*.sandiegouniontribune.com/*",
@@ -620,5 +619,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.6.4"
+    "version": "2.5.6.5"
 }
