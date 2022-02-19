@@ -206,7 +206,7 @@ else {
       if (paywall) {
         paywall.removeAttribute('style');
         let url_src = window.location.href.replace('newcastleherald.com.au', 'canberratimes.com.au');
-        replaceDomElementExt(url_src, true, false, 'p[class^="Paragraph_wrapper__"]', '', 'div.article__body'); //'div#story-body'
+        replaceDomElementExt(url_src, true, false, 'p[class^="Paragraph_wrapper__"]', '', 'div.article__body');
       }
       let hidden_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
       for (let hidden_image of hidden_images)
@@ -2611,9 +2611,11 @@ else if (matchDomain('law360.com')) {
 }
 
 else if (matchDomain('livelaw.in')) {
-  let paywall = document.querySelectorAll('div.restricted_message, div.subscribeNow');
-  if (paywall.length) {
-    removeDOMElement(...paywall);
+  let paywall = document.querySelector('div.restricted_message');
+  if (paywall) {
+    let intro = paywall.querySelectorAll('div.story, div#subscription_paid_message');
+    removeDOMElement(...intro);
+    paywall.classList.remove('restricted_message');
     let paywall_content = document.querySelector('div.paywall-content.hide');
     if (paywall_content)
       paywall_content.classList.remove('hide');
