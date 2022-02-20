@@ -66,6 +66,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "eluniversal.com.mx"
   },
+  "Fnweb.de": {
+    "allow_cookies": 1,
+    "domain": "fnweb.de",
+    "useragent": "googlebot"
+  },
   "Gazette.com": {
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",
@@ -109,6 +114,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "mailplus.co.uk"
+  },
+  "Mannheimer-morgen.de": {
+    "allow_cookies": 1,
+    "domain": "mannheimer-morgen.de",
+    "useragent": "googlebot"
   },
   "Medpagetoday.com": {
     "domain": "medpagetoday.com"

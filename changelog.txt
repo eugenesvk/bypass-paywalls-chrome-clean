@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.5.7.0 (2022-02-20)
 Remove Ruhr Nachrichten (fix obsolete)
 Fix Live Law
 Fix NewcastleHerald.com.au
