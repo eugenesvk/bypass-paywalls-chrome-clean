@@ -1408,11 +1408,11 @@ else if (matchDomain(it_quotidiano_domains)) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_access_hide('="c.customGranted"', '="NOT c.customGranted"', 'amp-ad, amp-fx-flying-carpet');
   } else {
-    let detail_text_truncated = document.querySelector('div.detail-text--truncated');
-    let detail_page_paywall = document.querySelector('body.detail-page--paywall');
-    if (detail_page_paywall) {
-      removeDOMElement(detail_text_truncated);
-      detail_page_paywall.classList.remove('detail-page--paywall');
+    let paywall = document.querySelector('div[data-testid="paywall-container"]');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
     }
   }
 }

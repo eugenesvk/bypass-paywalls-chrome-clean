@@ -1,4 +1,5 @@
-var ext_api = chrome || browser;
+var ext_api = (typeof browser === 'object') ? browser : chrome;
+var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 
 var manifestData = ext_api.runtime.getManifest();
 var versionString = 'v' + manifestData.version;
@@ -20,9 +21,9 @@ function show_update(ext_version_new, check = true) {
         anchorEl.innerText = 'New release v' + ext_version_new;
         if (manifestData.applications && manifestData.applications.gecko.id.includes('magnolia')) {
           if (installType === 'development')
-            anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean';
+            anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean';
           else
-            anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases';
+            anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/releases';
         } else
           anchorEl.href = 'https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean';
         anchorEl.target = '_blank';
@@ -45,11 +46,10 @@ function show_update(ext_version_new, check = true) {
 
 function check_version_update(ext_version_new, popup) {
   if (!popup) {
-    const proxyurl = "https://bpc-cors-anywhere.herokuapp.com/";
-    //const manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/manifest.json';
-    const manifest_new = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/manifest.json';
-    //fetch(proxyurl + manifest_new, { headers: { "Content-Type": "application/json", "X-Requested-With": "XMLHttpRequest" } })
-    fetch(manifest_new)
+    let manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/raw/master/manifest.json';
+    //let manifest_new = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/manifest.json';
+    let proxyurl = 'https://bpc2-cors-anywhere.herokuapp.com/';
+    fetch(proxyurl + manifest_new, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
     .then(response => {
       if (response.ok) {
         response.json().then(json => {
