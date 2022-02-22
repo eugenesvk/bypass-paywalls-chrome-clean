@@ -192,6 +192,7 @@ function edit_options() {
     document.querySelector('input[data-key="block_regex"]').value = edit_site.block_regex ? edit_site.block_regex : '';
     document.querySelector('input[data-key="amp_unhide"]').checked = (edit_site.amp_unhide > 0);
     document.querySelector('input[data-key="amp_redirect"]').value = edit_site.amp_redirect ? edit_site.amp_redirect : '';
+    document.querySelector('input[data-key="ld_json"]').value = edit_site.ld_json ? edit_site.ld_json : '';
     document.querySelector('select[data-key="referer"]').selectedIndex = referer_options.indexOf(edit_site.referer);
     document.querySelector('select[data-key="random_ip"]').selectedIndex = random_ip_options.indexOf(edit_site.random_ip);
   });
@@ -251,16 +252,17 @@ function renderOptions() {
       'title': 0,
       'domain': 0,
       'allow_cookies': 1,
-      'block_javascript': 1,
+      'block_javascript (domain)': 1,
       'block_javascript_ext': 1,
       'block_regex': 0,
       'amp_unhide': 1,
-      'amp_redirect': 0
+      'amp_redirect': 0,
+      'ld_json': 0
     };
     for (var key in add_checkboxes) {
       labelEl = document.createElement('label');
       inputEl = document.createElement('input');
-      inputEl.dataset.key = key;
+      inputEl.dataset.key = key.split(' (')[0];
       labelEl.appendChild(inputEl);
       if (add_checkboxes[key]) {
         inputEl.type = 'checkbox';
@@ -270,7 +272,8 @@ function renderOptions() {
           title: 'Example',
           domain: 'example.com',
           block_regex: '\\.example\\.com\\/js\\/',
-          amp_redirect: 'div.paywall'
+          amp_redirect: 'div.paywall',
+          ld_json: 'div.paywall|div.article'
         };
         if (placeholders[key])
           inputEl.placeholder = placeholders[key];
@@ -288,7 +291,7 @@ function renderOptions() {
       labelEl = document.createElement('label');
       labelEl.appendChild(document.createTextNode(key + ' '));
       inputEl = document.createElement('select');
-      inputEl.dataset.key = key;
+      inputEl.dataset.key = key.split(' (')[0];
       labelEl.appendChild(inputEl);
       
       for (let elem of add_options[key]) {
@@ -325,7 +328,8 @@ function renderOptions() {
       (sites_custom[key]['referer'] ? ' | referer: ' + sites_custom[key]['referer'] : '') +
       (sites_custom[key]['random_ip'] ? ' | random_ip: ' + sites_custom[key]['random_ip'] : '') +
       (sites_custom[key]['amp_unhide'] > 0 ? ' | amp_unhide' : '') +
-      (sites_custom[key]['amp_redirect'] ? ' | amp_redirect' : '');
+      (sites_custom[key]['amp_redirect'] ? ' | amp_redirect' : '') +
+      (sites_custom[key]['ld_json'] ? ' | ld_json' : '');
       optionEl.value = key;
       selectEl.add(optionEl);
     }

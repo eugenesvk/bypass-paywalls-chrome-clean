@@ -1,104 +1,13 @@
 {
-  "Australian Community Media (daily)": {
-    "domain": "###_au_comm_media",
-    "group": [
-      "bendigoadvertiser.com.au",
-      "bordermail.com.au",
-      "canberratimes.com.au",
-      "centralwesterndaily.com.au",
-      "dailyadvertiser.com.au",
-      "dailyliberal.com.au",
-      "examiner.com.au",
-      "illawarramercury.com.au",
-      "newcastleherald.com.au",
-      "northerndailyleader.com.au",
-      "portnews.com.au",
-      "standard.net.au",
-      "theadvocate.com.au",
-      "thecourier.com.au",
-      "westernadvocate.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn-au\\.piano\\.io\\/api\\/tinypass.+\\.js"
-  },
-  "Bon Appétit": {
-    "domain": "bonappetit.com",
-    "remove_cookies_select_drop": ["pay_ent_smp"],
-    "block_regex": "(journey\\.bonappetit\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
-    "useragent": "googlebot"
-  },
-  "Diario Correo": {
-    "domain": "diariocorreo.pe",
-    "allow_cookies": 1,
-    "block_regex": "\\/diariocorreo\\.pe\\/pf\\/dist\\/engine\\/react\\.js",
-    "cs_code": [{
-        "cond": ".story-content__nota-premium",
-        "rm_attrib": "style",
-        "rm_class": "story-content__nota-premium"
-      }
-    ]
-  },
-  "Eastwest.eu": {
-    "domain": "eastwest.eu",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": ".paywall",
-        "rm_attrib": "style",
-        "rm_class": "paywall",
-        "elems": [{
-            "cond": "div#testo_articolo > p, div#testo_articolo > h3",
-            "rm_elem": 1
-          }, {
-            "cond": "div.offerta_abbonamenti",
-            "rm_elem": 1
-          }
-        ]
-      }
-    ]
-  },
-  "GQ": {
-    "domain": "gq.com",
-    "remove_cookies_select_drop": ["pay_ent_smp"],
-    "block_regex": "(journey\\.gq\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
-    "useragent": "googlebot"
-  },
   "Neue Osnabrücker Zeitung": {
     "domain": "noz.de",
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\\.js",
     "amp_unhide": 1
   },
-  "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
-    "domain": "###_usa_nymag",
-    "group": [
-      "curbed.com",
-      "grubstreet.com",
-      "nymag.com",
-      "thecut.com",
-      "vulture.com"
-    ],
-    "remove_cookies_select_drop": ["nymcid", "first-nymcid"],
-    "block_regex": "fosse\\.nymag\\.com\\/fosse\\/.+\\/scripts\\/.+\\.js"
-  },
-  "Seeking Alpha": {
-    "domain": "seekingalpha.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org(\\/.+)?\\/v\\d\\/amp-(access|ad|loader)-.+\\.js)"
-  },
   "The Washington Post": {
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/evaluate"
-  },
-  "Vogue USA": {
-    "domain": "vogue.com",
-    "remove_cookies_select_drop": ["pay_ent_smp"],
-    "block_regex": "(journey\\.vogue\\.com\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
-    "useragent": "googlebot"
-  },
-  "Vogue Business": {
-    "allow_cookies": 1,
-    "domain": "voguebusiness.com",
-    "useragent": "googlebot"
   }
 }

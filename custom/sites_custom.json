@@ -76,6 +76,11 @@
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "gazette.com"
   },
+  "Gplanet.co.il": {
+    "allow_cookies": 1,
+    "domain": "gplanet.co.il",
+    "ld_json": "div.subscription-form|div.content-inner"
+  },
   "Handelszeitung.ch": {
     "allow_cookies": 1,
     "domain": "handelszeitung.ch",

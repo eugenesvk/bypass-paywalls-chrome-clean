@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix update check (GitLab CORS issue or BitBucket http error 429)
+Update custom sites (load text from json)
 
 * v2.5.7.0 (2022-02-20)
 Remove Ruhr Nachrichten (fix obsolete)

@@ -54,7 +54,7 @@ Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypas
 
 ### List of supported websites
 
-_* free articles only._
+_* free/cached articles only._
 
 ##### World news
 [Foreign Affairs](https://www.foreignaffairs.com) -
@@ -606,7 +606,7 @@ Grouped in options:\
 [Central Western Daily](https://www.centralwesterndaily.com.au) -
 [Daily Liberal](https://www.dailyliberal.com.au) -
 [Illawarra Mercury](https://www.illawarramercury.com.au) -
-[Newcastle Herald](https://www.newcastleherald.com.au) -
+[Newcastle Herald](https://www.newcastleherald.com.au)* -
 [The Advocate](https://www.theadvocate.com.au) -
 [The Border Mail](https://www.bordermail.com.au) -
 [The Canberra Times](https://www.canberratimes.com.au) -
@@ -666,7 +666,7 @@ Grouped in options:\
 [Grupo Abril](https://grupoabril.com.br) -
 [O Estado de S. Paulo](https://estadao.com.br) -
 [O Globo](https://oglobo.globo.com) -
-[Valor Econômico](https://valor.globo.com)
+[Valor Econômico](https://valor.globo.com)*
 ##### Chile
 [Diario Financiero](https://www.df.cl) -
 [El Mercurio](https://digital.elmercurio.com) -
@@ -684,7 +684,7 @@ Grouped in options:\
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)
 
-_* free articles only._
+_* free/cached articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
@@ -707,7 +707,7 @@ Check 'Options'-link in popup-menu and go to custom sites.
 \* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` to ask for permission for current site).
 
 By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
-Also you can enable Googlebot/Bingbot user-agent, set referer (to Facebook, Google or Twitter; ignored when Googlebot is set), set random ip-address, disable Javascript for (sub)domain(s) and/or external domains, block regular expression and/or unhide text on (or when paywall(selector) redirect to) amp-page.
+Also you can enable Googlebot/Bingbot user-agent, set referer (to Facebook, Google or Twitter; ignored when Googlebot is set), set random ip-address, disable Javascript for (sub)domain(s) and/or external domains, block regular expression, unhide text on (or when paywall(selector) redirect to) amp-page and/or load text from json (paywall|article selector).
 
 [Example list of custom sites](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/custom/sites_custom.json) or [download list (json)](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/custom/sites_custom.json)
 

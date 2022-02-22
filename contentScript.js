@@ -38,10 +38,40 @@ if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
 
+var bg2csData;
+
+// custom/updated sites: load text from json
+if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
+  if (bg2csData.ld_json.includes('|')) {
+    let ld_json_split = bg2csData.ld_json.split('|');
+    let paywall_sel = ld_json_split[0];
+    let article_sel = ld_json_split[1];
+    let paywall = document.querySelector(paywall_sel);
+    if (paywall) {
+      removeDOMElement(paywall);
+      let scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      let json;
+      for (let script of scripts) {
+        if (script.innerText.includes('articleBody'))
+          json = script;
+      }
+      if (json) {
+        let json_text = JSON.parse(json.text).articleBody;
+        let content = document.querySelector(article_sel);
+        if (json_text && content) {
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          content.parentNode.replaceChild(content_new, content);
+        }
+      }
+    }
+  }
+}
+
 var div_bpc_done = document.querySelector('div#bpc_done');
 if (!div_bpc_done) {
 
-var bg2csData;
 // check for opt-in confirmation (from background.js)
 if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
   if (domain = matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
@@ -106,7 +136,7 @@ function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_se
     amp_iframes_replace(amp_iframe_link, source);
 }
 
-// custom sites: try to unhide text on amp-page
+// custom/updated sites: try to unhide text on amp-page
 if ((bg2csData !== undefined) && bg2csData.amp_unhide) {
   window.setTimeout(function () {
     let amp_page_hide = document.querySelector('script[src*="/amp-access-"], script[src*="/amp-subscriptions-"]');
@@ -118,7 +148,7 @@ if ((bg2csData !== undefined) && bg2csData.amp_unhide) {
   }, 100); // Delay (in milliseconds)
 }
 
-// updated sites: amp-redirect
+// custom/updated sites: amp-redirect
 if ((bg2csData !== undefined) && bg2csData.amp_redirect) {
   window.setTimeout(function () {
     let amp_script = document.querySelector('script[src^="https://cdn.ampproject.org/"]');
@@ -206,14 +236,14 @@ else {
       if (paywall) {
         paywall.removeAttribute('style');
         let url_src = window.location.href.replace('newcastleherald.com.au', 'canberratimes.com.au');
-        replaceDomElementExt(url_src, true, false, 'p[class^="Paragraph_wrapper__"]', '', 'div.article__body');
+        replaceDomElementExt(url_src, true, false, 'p[class^="Paragraph_wrapper__"]', 'BPC > text not available on other group site: ', 'div.article__body');
       }
       let hidden_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
       for (let hidden_image of hidden_images)
         hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
       let lead_image = document.querySelector('div#story-body img.w-full[src]');
       if (lead_image) {
-        let lead_src = lead_image.src.split('.jpg')[0];
+        let lead_src = lead_image.src.toLowerCase().split(/\.(png|jpg)/)[0];
         let body_image = document.querySelector('div.article__body img[src]');
         if (lead_src && body_image && body_image.src.includes(lead_src))
           removeDOMElement(body_image);

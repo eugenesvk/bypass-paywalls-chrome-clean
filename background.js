@@ -8,6 +8,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'inkl.com', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'lesechos.fr', 'marianne.net', 'newcastleherald.com.au', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -68,6 +69,8 @@ var amp_unhide;
 var amp_redirect;
 // code for contentScript
 var cs_code;
+// load text from json
+var ld_json;
 
 // custom: block javascript
 var block_js_custom = [];
@@ -88,6 +91,7 @@ function initSetRules() {
   amp_unhide = [];
   amp_redirect = {};
   cs_code = {};
+  ld_json = {};
   block_js_custom = [];
   block_js_custom_ext = [];
   blockedRegexes = {};
@@ -269,6 +273,11 @@ function set_rules(sites, sites_updated, sites_custom) {
           block_js_custom_ext.push(domain);
         if (rule.amp_unhide > 0)
           amp_unhide.push(domain);
+        if (rule.ld_json) {
+          ld_json[domain] = rule.ld_json;
+          if (!dompurify_sites.includes(domain))
+            dompurify_sites.push(domain);
+        }
       }
     }
   }
@@ -1016,7 +1025,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
         }
         if ((!['font', 'stylesheet'].includes(details.type) || matchUrlDomain(cs_limit_except, currentTabUrl)) && !csDone) {
           let lib_file = 'lib/empty.js';
-          if (matchUrlDomain(['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'lesechos.fr', 'marianne.net', 'newcastleherald.com.au', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains), currentTabUrl))
+          if (matchUrlDomain(dompurify_sites, currentTabUrl))
             lib_file = 'lib/purify.min.js';
           var bg2csData = {
             optin_setcookie: optin_setcookie,
@@ -1028,6 +1037,9 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
           let cs_code_domain = '';
           if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), currentTabUrl))
             bg2csData.cs_code = cs_code[cs_code_domain];
+          let ld_json_domain = '';
+          if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), currentTabUrl))
+            bg2csData.ld_json = ld_json[ld_json_domain];
           ext_api.tabs.executeScript(tabId, {
             code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
           }, function () {
