@@ -123,10 +123,8 @@ function setDefaultOptions() {
 }
 
 function check_sites_updated() {
-  let url = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/sites_updated.json';
-  //let url = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/sites_updated.json';
-  let proxyurl = 'https://bpc2-cors-anywhere.herokuapp.com/';
-  fetch(proxyurl + url, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
+  let sites_updated_json = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/sites_updated.json';
+  fetch(sites_updated_json)
   .then(response => {
     if (response.ok) {
       response.json().then(json => {
@@ -1131,10 +1129,8 @@ function updateBadge(activeTab) {
 
 var ext_version_new;
 function check_update() {
-  let url = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/raw/master/manifest.json';
-  //let url = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/manifest.json';
-  let proxyurl = 'https://bpc2-cors-anywhere.herokuapp.com/';
-  fetch(proxyurl + url, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
+  let manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/raw/master/manifest.json';
+  fetch(manifest_new)
   .then(response => {
     if (response.ok) {
       response.json().then(json => {

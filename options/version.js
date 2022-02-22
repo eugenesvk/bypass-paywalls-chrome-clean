@@ -47,9 +47,7 @@ function show_update(ext_version_new, check = true) {
 function check_version_update(ext_version_new, popup) {
   if (!popup) {
     let manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/raw/master/manifest.json';
-    //let manifest_new = 'https://bitbucket.org/magnolia1234/bypass-paywalls-firefox-clean/raw/master/manifest.json';
-    let proxyurl = 'https://bpc2-cors-anywhere.herokuapp.com/';
-    fetch(proxyurl + manifest_new, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
+    fetch(manifest_new)
     .then(response => {
       if (response.ok) {
         response.json().then(json => {
