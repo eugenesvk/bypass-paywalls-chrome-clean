@@ -152,8 +152,8 @@ var defaultSites = {
   },
   "Barron's": {
     domain: "barrons.com",
+    allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/.+|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
-    remove_cookies_select_hold: ["wsjregion"],
     useragent: "googlebot"
   },
   "BBC History Extra": {
@@ -434,6 +434,7 @@ var defaultSites = {
   },
   "Financial Times (not Chinese)": {
     domain: "ft.com",
+    allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
@@ -1645,8 +1646,8 @@ var defaultSites = {
   },
   "The Wall Street Journal": {
     domain: "wsj.com",
+    allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
-    remove_cookies_select_hold: ["wsjregion", "ResponsiveConditional_initialBreakpoint"],
     useragent: "googlebot"
   },
   "The Washington Post": {

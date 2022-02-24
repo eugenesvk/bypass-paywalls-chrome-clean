@@ -243,7 +243,7 @@ else {
         hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
       let lead_image = document.querySelector('div#story-body img.w-full[src]');
       if (lead_image) {
-        let lead_src = lead_image.src.toLowerCase().split(/\.(png|jpg)/)[0];
+        let lead_src = lead_image.src.split(/\.(png|jpg)/i)[0];
         let body_image = document.querySelector('div.article__body img[src]');
         if (lead_src && body_image && body_image.src.includes(lead_src))
           removeDOMElement(body_image);
@@ -682,7 +682,8 @@ else if (matchDomain(['westfalen-blatt.de', 'wn.de'])) {
     let paywall = document.querySelector('.fp-article-paywall');
     if (paywall) {
       removeDOMElement(paywall);
-      window.location.href = url.replace('.de/', '.de/amp/');
+      if (!url.includes('/fotos/'))
+        window.location.href = url.replace('.de/', '.de/amp/');
     }
   }
 }
