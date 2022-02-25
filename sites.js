@@ -427,11 +427,6 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
     useragent: "googlebot"
   },
-  "Financial Post": {
-    domain: "financialpost.com",
-    allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
-  },
   "Financial Times (not Chinese)": {
     domain: "ft.com",
     allow_cookies: 1,
@@ -1101,11 +1096,6 @@ var defaultSites = {
     block_regex: /\.blueconic\.net\//,
     random_ip: "eu"
   },
-  "National Post": {
-    domain: "nationalpost.com",
-    allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
-  },
   "National Review": {
     domain: "nationalreview.com",
     allow_cookies: 1,
@@ -1250,6 +1240,19 @@ var defaultSites = {
   "Política Exterior": {
     domain: "politicaexterior.com",
     allow_cookies: 1
+  },
+  "Postmedia Network": {
+    domain: "###_ca_postmedia",
+    group: [
+      "calgaryherald.com",
+      "financialpost.com",
+      "nationalpost.com",
+      "theprovince.com",
+      "torontosun.com",
+      "vancouversun.com"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "Precision Oncology News": {
     domain: "precisiononcologynews.com",

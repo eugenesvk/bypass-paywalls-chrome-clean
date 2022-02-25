@@ -33,11 +33,6 @@
   "Brainly.com": {
     "domain": "brainly.com"
   },
-  "Calgaryherald.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "domain": "calgaryherald.com"
-  },
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",

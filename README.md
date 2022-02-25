@@ -278,12 +278,20 @@ Grouped in options:\
 [The Virginian-Pilot](https://www.pilotonline.com)
 
 #### Canada
-[Financial Post](https://www.financialpost.com) -
 [Le Devoir](https://www.ledevoir.com) -
-[National Post](https://www.nationalpost.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
 [The Hill Times](https://www.hilltimes.com)\
-[The Toronto Star](https://www.thestar.com) and regional TorStar sites (grouped in options) like
+
+Grouped in options:\
+*Postmedia Network* sites like (opt-in to custom sites for unlisted)\
+[Calgary Herald](https://calgaryherald.com) -
+[Financial Post](https://www.financialpost.com) -
+[National Post](https://www.nationalpost.com) -
+[The Province](https://theprovince.com) -
+[Toronto Sun](https://torontosun.com) -
+[Vancouver Sun](https://vancouversun.com)\
+*TorStar* sites like\
+[The Toronto Star](https://www.thestar.com) and regional sites 
 [Niagara Falls Review](https://www.niagarafallsreview.ca) -
 [Peterborough Examiner](https://www.thepeterboroughexaminer.com) -
 [St. Catharines Standard](https://www.stcatharinesstandard.ca) -

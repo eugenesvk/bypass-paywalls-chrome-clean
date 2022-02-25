@@ -781,7 +781,20 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       enabledSites.push(sanoma_domain);
   }
 
-  } else if (header_referer_hostname.match(/\.(com|org)$/)) {
+  } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
+
+  // block TinyPass for Postmedia Network sites
+  var ca_postmedia_domains = grouped_sites['###_ca_postmedia'];
+  var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['image'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
+  if (ca_postmedia_domain) {
+    let pm_domain = urlHost(header_referer).replace(/^(www)\./, '');
+    if (!allow_cookies.includes(pm_domain))
+      allow_cookies.push(pm_domain);
+    blockedRegexes[pm_domain] = blockedRegexes['nationalpost.com'];
+    ca_postmedia_domains.push(pm_domain);
+    if (!enabledSites.includes(pm_domain))
+      enabledSites.push(pm_domain);
+  }
 
   // set googlebot-useragent for Gannett sites
   var usa_gannett_domains = grouped_sites['###_usa_gannett'];
