@@ -180,6 +180,7 @@ Grouped in options:\
 [Beta](https://www.betamtb.com) -
 [Clean Eating](https://www.cleaneatingmag.com) -
 [Climbing](https://www.climbing.com) -
+[Cycling Tips](https://cyclingtips.com) -
 [Outside](https://www.outsideonline.com) -
 [Oxygen](https://www.oxygenmag.com) -
 [SKI](https://www.skimag.com) -

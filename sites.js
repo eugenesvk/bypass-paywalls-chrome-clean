@@ -1200,6 +1200,7 @@ var defaultSites = {
       "betamtb.com",
       "cleaneatingmag.com",
       "climbing.com",
+      "cyclingtips.com",
       "outsideonline.com",
       "oxygenmag.com",
       "skimag.com",

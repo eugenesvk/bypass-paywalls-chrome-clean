@@ -27,7 +27,7 @@ var usa_conde_nast_domains = ['bonappetit.com', 'gq.com' , 'newyorker.com', 'van
 var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
-var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
+var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pe.com', 'twincities.com'];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
@@ -3286,6 +3286,10 @@ else if (matchDomain(usa_outside_mag_domains)) {
     for (let elem of is_gated)
       removeClassesByPrefix(elem, 'is-gated');
     removeDOMElement(paywall);
+  }
+  if (matchDomain('cyclingtips.com')) {
+    let ads = document.querySelectorAll('div[data-block-name="ads"], div#takeover');
+    removeDOMElement(...ads);
   }
 }
 

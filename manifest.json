@@ -140,6 +140,7 @@
         "*://*.csmonitor.com/*",
         "*://*.curbed.com/*",
         "*://*.cw.com.tw/*",
+        "*://*.cyclingtips.com/*",
         "*://*.dailyadvertiser.com.au/*",
         "*://*.dailyliberal.com.au/*",
         "*://*.dailypress.com/*",
@@ -625,5 +626,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.7.4"
+    "version": "2.5.7.5"
 }
