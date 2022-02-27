@@ -5,6 +5,7 @@ Post-release
 Add Cycling Tips
 Add Iltalehti.fi
 Add Postmedia Network (Canada)
+Remove NewcastleHerald.com.au (fix obsolete)
 Fix Westfalen-Blatt (gallery)
 Fix update check (GitLab CORS issue or BitBucket http error 429)
 Update custom sites (load text from json)

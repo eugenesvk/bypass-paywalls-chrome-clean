@@ -228,27 +228,9 @@ else if (domain = matchDomain(["brisbanetimes.com.au", "smh.com.au", "theage.com
 
 else {
   // Australian Community Media newspapers
-  let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'newcastleherald.com.au', 'northerndailyleader.com.au', 'portnews.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
+  let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'northerndailyleader.com.au', 'portnews.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
   let au_piano_script = document.querySelector('script[src="https://cdn-au.piano.io/api/tinypass.min.js"]');
   if (matchDomain(au_comm_media_domains) || au_piano_script) {
-    if (matchDomain('newcastleherald.com.au')) {
-      let paywall = document.querySelector('div[style^="-webkit-mask-image"]');
-      if (paywall) {
-        paywall.removeAttribute('style');
-        let url_src = window.location.href.replace('newcastleherald.com.au', 'canberratimes.com.au');
-        replaceDomElementExt(url_src, true, false, 'p[class^="Paragraph_wrapper__"]', 'BPC > text not available on other group site: ', 'div.article__body');
-      }
-      let hidden_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
-      for (let hidden_image of hidden_images)
-        hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
-      let lead_image = document.querySelector('div#story-body img.w-full[src]');
-      if (lead_image) {
-        let lead_src = lead_image.src.split(/\.(png|jpg)/i)[0];
-        let body_image = document.querySelector('div.article__body img[src]');
-        if (lead_src && body_image && body_image.src.includes(lead_src))
-          removeDOMElement(body_image);
-      }
-    }
     let subscribe_truncate = document.querySelector('.subscribe-truncate');
     if (subscribe_truncate)
       subscribe_truncate.classList.remove('subscribe-truncate');

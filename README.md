@@ -616,7 +616,6 @@ Grouped in options:\
 [Central Western Daily](https://www.centralwesterndaily.com.au) -
 [Daily Liberal](https://www.dailyliberal.com.au) -
 [Illawarra Mercury](https://www.illawarramercury.com.au) -
-[Newcastle Herald](https://www.newcastleherald.com.au)* -
 [The Advocate](https://www.theadvocate.com.au) -
 [The Border Mail](https://www.bordermail.com.au) -
 [The Canberra Times](https://www.canberratimes.com.au) -

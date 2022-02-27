@@ -140,7 +140,6 @@ var defaultSites = {
       "dailyliberal.com.au",
       "examiner.com.au",
       "illawarramercury.com.au",
-      "newcastleherald.com.au",
       "northerndailyleader.com.au",
       "portnews.com.au",
       "standard.net.au",
