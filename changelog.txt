@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.5.8.0 (2022-02-27)
 Add Cycling Tips
 Add Iltalehti.fi
 Add La Opinion de Murcia
