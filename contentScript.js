@@ -11,7 +11,7 @@ var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'm
 var es_epiberica_domains = ['diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicomediterraneo.com', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
-var fi_alma_talent_domains = ['arvopaperi.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
+var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
 var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', 'lalsace.fr', 'ledauphine.com', 'lejsl.com', 'leprogres.fr', 'republicain-lorrain.fr', 'vosgesmatin.fr'];
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
@@ -715,8 +715,133 @@ else
 } else if (window.location.hostname.match(/\.(dk|fi|no|se)$/)) {//denmark/finland/norway/sweden
 
 if (matchDomain(fi_alma_talent_domains)) {
-  let ads = document.querySelectorAll('div[class^="p2m385-"]');
+  let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container');
   removeDOMElement(...ads);
+  if (matchDomain('iltalehti.fi')) {
+    let paywall = document.querySelector('div.faded-text');
+    if (paywall) {
+      let scripts = document.querySelectorAll('script');
+      let json_script;
+      for (let script of scripts) {
+        if (script.innerText.includes('window.App=')) {
+          json_script = script;
+          break;
+        }
+      }
+      if (json_script) {
+        let json = json_script.innerHTML.split('window.App=')[1].split('</script')[0];
+        json = json.replace(/undefined/g, '"undefined"');
+        let json_article = JSON.parse(json).state.articles;
+        if (!Object.keys(json_article).length)
+          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+        if (Object.keys(json_article).length) {
+          paywall.remove();
+          let url_loaded = Object.keys(json_article)[0];
+          if (url_loaded && !window.location.pathname.includes(url_loaded))
+            ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+          let pars = Object.values(json_article)[0].items.body;
+          let content = document.querySelector('div.article-body');
+          if (content && pars) {
+            function ilta_par_text(items) {
+              let par_text = '';
+              for (let item of items) {
+                if (item.text)
+                  par_text += item.text;
+                else if (item.name)
+                  par_text += '<a href="/henkilot/' + item.name + '">' + item.name + '</a>';
+                else if (item.type === 'link')
+                  par_text += '<a href="' + item.url + '" target="_blank">' + item.items[0].text + '</a>';
+                else if (item.type) {
+                  let item_type = '<' + item.type[0] + '>';
+                  par_text += item.items.map(i => item_type + i.text + item_type.replace('<', '</')).join('');
+                } else if (item[0]) { //aside-list
+                  par_text += item[0].text;
+                }
+              }
+              return par_text;
+            }
+            function ilta_wrap_list(elem, par_text) {
+              if (par_text) {
+                elem += '<div class="article-bullets"><ul>';
+                elem += par_text;
+                elem += '</ul></div>';
+              }
+              return elem;
+            }
+            content.innerHTML = '';
+            let article_new = '';
+            for (let par of pars) {
+              let elem = '';
+              let par_text = '';
+              let par_ignore = false;
+              if (par.type === 'paragraph') {
+                par_text = ilta_par_text(par.items);
+                if (par_text)
+                  elem = '<p class="paragraph">' + par_text + '</p>';
+              } else if (par.type === 'subheadline') {
+                if (par.text)
+                  elem = '<h3 class="subheadline" style="margin:20px;">' + par.text + '</h3>';
+              } else if (par.type === 'aside') {
+                elem = '<div class="aside-container"><div class="aside">';
+                for (let item of par.items) {
+                  if (item.text || (item.type === 'paragraph' && item.items)) {
+                    if (par_text) {
+                      elem = ilta_wrap_list(elem, par_text);
+                      par_text = '';
+                    }
+                    if (item.text)
+                      elem += '<h3 class="subheadline" style="margin:20px;">' + item.text + '</h3>';
+                    else {
+                      let par_text_sub = ilta_par_text(item.items);
+                      if (par_text_sub)
+                        elem += '<p class="paragraph">' + par_text_sub + '</p>';
+                    }
+                  } else if (item.type === 'list') {
+                    let par_text_sub = ilta_par_text(item.items);
+                    if (par_text_sub) {
+                      par_text += '<li>';
+                      par_text += par_text_sub;
+                      par_text += '</li>';
+                    }
+                  }
+                }
+                if (par_text)
+                  elem = ilta_wrap_list(elem, par_text);
+                elem += '</div></div>';
+              } else if (par.type === 'blockquote') {
+                elem = '<p style="font-size: 1.2em; margin:20px;"><i>&quot;' + par.items.map(i => i.text).join('') + '&quot;</i></p>';
+              } else if (par.type === 'divider') {
+                elem = '<div class="article-divider"><div class="article-divider-content"></div></div>';
+              } else if (par.type.toLowerCase() === 'list') {
+                elem = '<div class="article-bullets"><ul>';
+                for (let item of par.items)
+                  elem += '<li>' + item.map(i => i.text).join('') + '</li>';
+                elem += '</ul></div>';
+              } else if (par.type === 'related-article') {
+                elem = '<div class="related-articles related-articles-within-text"><h3>Lue myös</h3><a href="/' + par.article.category.category_name + '/a/' + par.article.article_id + '">' + par.article.title + '</a></div>';
+              } else if (par.type === 'image') {
+                if (par.urls.default && par.properties.source) {
+                  let caption = par.properties.caption ? par.properties.caption : '';
+                  elem = '<p><div><div style="text-align: center;"><img src="' + par.urls.default + '" alt="' + caption + '"></div><div class="media-caption"><span class="caption-text">' + caption + '</span><span class="media-source">' + par.properties.source + '</span></div></div></p>';
+                }
+              } else if (par.type === 'embed') {
+                elem = ''; //par.embed_html;
+              } else if (par.type === 'advertisement') {
+                par_ignore = true;
+              }
+              if (elem)
+                article_new += elem;
+              else if (!par_ignore)
+                console.log(par);
+            }
+            let parser = new DOMParser();
+            let par_html = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
+            content.appendChild(par_html.querySelector('div'));
+          }
+        }
+      }
+    }
+  }
 }
 
 else if (matchDomain('hs.fi')) {
@@ -734,9 +859,10 @@ else if (matchDomain('hs.fi')) {
       let scripts = document.querySelectorAll('script');
       let json_script;
       for (let script of scripts) {
-        if (script.innerText.includes('window.__NUXT__='))
+        if (script.innerText.includes('window.__NUXT__=')) {
           json_script = script;
-        continue;
+          break;
+        }
       }
       let json_text;
       if (json_script.innerHTML.includes('paywallComponents:['))
@@ -747,7 +873,6 @@ else if (matchDomain('hs.fi')) {
         let type, value, slides, src, elem, img, caption, caption_text, par_html, par_text;
         let parser = new DOMParser();
         for (let par of pars) {
-			//console.log(par);
           elem = '';
           type = par.split(',')[0];
           if (['a', 'i'].includes(type)) { // text
@@ -770,6 +895,8 @@ else if (matchDomain('hs.fi')) {
               elem.innerText = value;
             }
           } else if (['e', 'h', 'y'].includes(type)) { // image
+            if (!par.includes('src:'))
+              continue;
             src = par.split('src:"')[1].split('",')[0];
             if (!src.startsWith('http'))
               src = 'https://arkku.mediadelivery.fi/img/468/' + src;

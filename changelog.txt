@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Cycling Tips
+Add Iltalehti.fi
 Add Postmedia Network (Canada)
 Fix Westfalen-Blatt (gallery)
 Fix update check (GitLab CORS issue or BitBucket http error 429)
