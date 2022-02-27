@@ -636,6 +636,7 @@ var defaultSites = {
       "elperiodicomediterraneo.com",
       "farodevigo.es",
       "informacion.es",
+      "laopiniondemurcia.es",
       "laprovincia.es",
       "levante-emv.com",
       "lne.es"

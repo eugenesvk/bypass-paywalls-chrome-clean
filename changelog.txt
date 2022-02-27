@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Cycling Tips
 Add Iltalehti.fi
+Add La Opinion de Murcia
 Add Postmedia Network (Canada)
 Remove NewcastleHerald.com.au (fix obsolete)
 Fix Westfalen-Blatt (gallery)
