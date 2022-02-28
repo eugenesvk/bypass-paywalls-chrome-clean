@@ -701,7 +701,7 @@ if (matchDomain(fi_alma_talent_domains)) {
   removeDOMElement(...ads);
   if (matchDomain('iltalehti.fi')) {
     let paywall = document.querySelector('div.faded-text');
-    if (paywall) {
+    if (paywall && dompurify_loaded) {
       let scripts = document.querySelectorAll('script');
       let json_script;
       for (let script of scripts) {
@@ -802,12 +802,13 @@ if (matchDomain(fi_alma_talent_domains)) {
               } else if (par.type === 'related-article') {
                 elem = '<div class="related-articles related-articles-within-text"><h3>Lue myös</h3><a href="/' + par.article.category.category_name + '/a/' + par.article.article_id + '">' + par.article.title + '</a></div>';
               } else if (par.type === 'image') {
-                if (par.urls.default && par.properties.source) {
+                if (par.urls.default) {
                   let caption = par.properties.caption ? par.properties.caption : '';
-                  elem = '<p><div><div style="text-align: center;"><img src="' + par.urls.default + '" alt="' + caption + '"></div><div class="media-caption"><span class="caption-text">' + caption + '</span><span class="media-source">' + par.properties.source + '</span></div></div></p>';
+                  let source = par.properties.source ? par.properties.source : '';
+                  elem = '<p><div><div style="text-align: center;"><img src="' + par.urls.default + '" alt="' + caption + '"></div><div class="media-caption"><span class="caption-text">' + caption + '</span><span class="media-source">' + source + '</span></div></div></p>';
                 }
               } else if (par.type === 'embed') {
-                elem = ''; //par.embed_html;
+                elem = par.embed_html;
               } else if (par.type === 'advertisement') {
                 par_ignore = true;
               }
@@ -817,7 +818,7 @@ if (matchDomain(fi_alma_talent_domains)) {
                 console.log(par);
             }
             let parser = new DOMParser();
-            let par_html = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
+            let par_html = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
             content.appendChild(par_html.querySelector('div'));
           }
         }

@@ -8,7 +8,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'inkl.com', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
-const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
