@@ -549,6 +549,7 @@ Grouped in options:\
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -
 [La Nueva España](https://www.lne.es) -
+[La Opinión de Málaga](https://www.laopiniondemalaga.es) -
 [La Opinión de Murcia](https://www.laopiniondemurcia.es) -
 [La Provincia](https://www.laprovincia.es) -
 [Levante-EMV](https://www.levante-emv.com)\

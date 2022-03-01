@@ -1,4 +1,19 @@
 {
+  "Financial Times (not Chinese)": {
+    "domain": "ft.com",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|subscriptions)-.+\\.js",
+    "useragent": "googlebot"
+  },
+  "La Opinión de Málaga": {
+    "domain": "laopiniondemalaga.es",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|analytics)-.+\\.js)"
+  },
+  "La Opinión de Murcia": {
+    "domain": "laopiniondemurcia.es",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|analytics)-.+\\.js)"
+  },
   "Neue Osnabrücker Zeitung": {
     "domain": "noz.de",
     "allow_cookies": 1,

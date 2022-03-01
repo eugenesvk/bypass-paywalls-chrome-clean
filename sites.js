@@ -429,7 +429,6 @@ var defaultSites = {
   },
   "Financial Times (not Chinese)": {
     domain: "ft.com",
-    allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
@@ -636,6 +635,7 @@ var defaultSites = {
       "elperiodicomediterraneo.com",
       "farodevigo.es",
       "informacion.es",
+      "laopiniondemalaga.es",
       "laopiniondemurcia.es",
       "laprovincia.es",
       "levante-emv.com",

@@ -299,6 +299,7 @@
         "*://*.lanazione.it/*",
         "*://*.lanouvellerepublique.fr/*",
         "*://*.lanuovasardegna.it/*",
+        "*://*.laopiniondemalaga.es/*",
         "*://*.laopiniondemurcia.es/*",
         "*://*.laprovincia.es/*",
         "*://*.lardennais.fr/*",
@@ -627,5 +628,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.8.1"
+    "version": "2.5.8.2"
 }

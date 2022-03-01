@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add La Opinion de Malaga
 Fix Iltalehti.fi (Youtube video/image no source)
 
 * v2.5.8.0 (2022-02-27)

@@ -8,7 +8,7 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de'];
-var es_epiberica_domains = ['diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicomediterraneo.com', 'farodevigo.es', 'informacion.es', 'laopiniondemurcia.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
+var es_epiberica_domains = ['diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicomediterraneo.com', 'farodevigo.es', 'informacion.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
@@ -661,10 +661,15 @@ else if (matchDomain(['westfalen-blatt.de', 'wn.de'])) {
   if (url.includes('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed, section[class^="fp-ad"]');
   } else {
-    let paywall = document.querySelector('.fp-article-paywall');
+    let paywall = document.querySelector('.fp-article-paywall-dialog, .fp-article-paywall');
     if (paywall) {
       removeDOMElement(paywall);
-      if (!url.includes('/fotos/'))
+      let gallery_no_amp = false;
+      if (matchDomain('westfalen-blatt.de')) {
+        let article_body = document.querySelector('.fp-article__body');
+        gallery_no_amp = url.includes('/fotos/') || (!article_body && document.querySelector('.fp-gallery-carousel'));
+      }
+      if (!gallery_no_amp)
         window.location.href = url.replace('.de/', '.de/amp/');
     }
   }
@@ -1081,6 +1086,9 @@ else if (matchDomain(es_epiberica_domains)) {
   if (window.location.href.includes('.amp.html')) {
     amp_unhide_access_hide('="NOT access"', '="access"');
     amp_unhide_access_hide('="FALSE"');
+  } else {
+	  let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.article-sidebar--sticky');
+	  removeDOMElement(...ads);
   }
 }
 
