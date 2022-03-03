@@ -1300,7 +1300,7 @@ else if (matchDomain('lequipe.fr')) {
             if (par_main.includes(',content:')) {
               if (par_main.split(',content:"').filter(x => !x.startsWith('\\')).length > 2) {
                 if (par_main.startsWith(',title:')) {
-                  par_main_title = par_main.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
+                  par_main_title = par_main.split(',title:')[1].split(',')[0].replace(/(^\"|\"$)/g, '');
                   article_text += '<p><strong>' + par_main_title + '</strong></p>';
                 }
                 par_type = json.split('content:')[1].split('"},{__type:')[1].split(',')[0];
@@ -1311,15 +1311,15 @@ else if (matchDomain('lequipe.fr')) {
               for (let par of pars) {
                 par = par.split('}')[0];
                 if (par.includes(',content:')) {
-                  let content = par.split(',content:')[1].split('",')[0];
+                  let content = par.split(',content:"')[1].split('",')[0];
                   let par_title = '';
                   if (par.includes(',title:'))
-                    par_title = par.split(',title:')[1].split(',')[0].replace(/^\"|\"$/g, '');
+                    par_title = par.split(',title:')[1].split(',')[0].replace(/(^\"|\"$)/g, '');
                   if (content) {
                     par = content.replace('class=', '');
                     if (par_title.length > 2 && par_title !== par_main_title)
                       par = '<strong>' + par_title + '</strong><br><br>' + content;
-                    par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/^\"|\"$/g, '');
+                    par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/(^\"|\"$)/g, '').replace(/\\t/g, '');
                     article_text += '<p>' + par + '</p>';
                   }
                 }

@@ -109,6 +109,7 @@
         "*://*.calgaryherald.com/*",
         "*://*.canberratimes.com.au/*",
         "*://*.capitalgazette.com/*",
+        "*://*.causeur.fr/*",
         "*://*.cen.acs.org/*",
         "*://*.centralwesterndaily.com.au/*",
         "*://*.centrepresseaveyron.fr/*",
@@ -628,5 +629,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.8.2"
+    "version": "2.5.8.3"
 }

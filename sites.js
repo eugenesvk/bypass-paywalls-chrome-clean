@@ -202,6 +202,11 @@ var defaultSites = {
     domain: "business-standard.com",
     allow_cookies: 1
   },
+  "Causeur": {
+    domain: "causeur.fr",
+    allow_cookies: 1,
+    block_regex: /\.qiota\.com\//
+  },
   "Challenges": {
     domain: "challenges.fr",
     allow_cookies: 1,
