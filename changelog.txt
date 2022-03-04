@@ -5,6 +5,7 @@ Post-release
 Add Causeur.fr
 Add La Opinion de Malaga
 Fix Iltalehti.fi (Youtube video/image no source)
+Fix Inkl
 
 * v2.5.8.0 (2022-02-27)
 Add Cycling Tips

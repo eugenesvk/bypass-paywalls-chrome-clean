@@ -2695,39 +2695,7 @@ else if (matchDomain('infzm.com')) {
 }
 
 else if (matchDomain('inkl.com')) {
-  let menu_btn = document.querySelector('div.left-buttons-container button.menu-btn');
-  if (!menu_btn) {
-    let article_container = document.querySelector('div.article-content-container');
-    if (article_container) {
-      article_container.setAttribute('style', 'overflow: visible; max-height: none;');
-      let figures = document.querySelectorAll('figure');
-      for (let figure of figures)
-        figure.setAttribute('style', 'display:block !important;');
-    }
-    let gradient_container = document.querySelector('div.gradient-container');
-    if (gradient_container)
-      gradient_container.setAttribute('style', 'height:auto;');
-  }
-  let what_is_inkl = document.querySelector('.what-is-inkl-container');
-  let signup = document.querySelector('.article-signup-container');
-  removeDOMElement(what_is_inkl, signup);
-  let dismiss_button = document.querySelector('div.dismiss-button-container button.btn');
-  if (dismiss_button)
-    dismiss_button.click();
-  let shared_banner = document.querySelector('div.shared-article-inline-banner');
-  removeDOMElement(shared_banner);
-  let dive_deeper_summary_bodies = document.querySelectorAll('div.dive-deeper-container div.summary-body');
-  if (dive_deeper_summary_bodies) {
-    for (let summary_body of dive_deeper_summary_bodies) {
-      if (!summary_body.querySelector('a')) {
-        let ng_click = summary_body.getAttribute('ng-click').replace("showArticle('", '').replace("')", '');
-        let weblink = document.createElement('a');
-        weblink.text = 'open';
-        weblink.href = 'https://www.inkl.com/news/' + ng_click;
-        summary_body.appendChild(weblink);
-      }
-    }
-  }
+  // plus code in contentScript_once.js
 }
 
 else if (matchDomain('jpost.com')) {

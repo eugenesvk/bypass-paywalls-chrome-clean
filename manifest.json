@@ -39,6 +39,7 @@
     ],
     "content_scripts": [{
         "matches": [
+            "*://*.inkl.com/*",
             "*://*.nationalgeographic.com/*",
             "*://*.nyteknik.se/*"
         ],
@@ -613,7 +614,6 @@
         "*://*.gannett-cdn.com/*",
         "*://*.gitlab.com/magnolia1234/*",
         "*://*.hearstnp.com/*",
-        "*://*.jsdelivr.net/*",
         "*://*.lightboxcdn.com/*",
         "*://*.loader-cdn.azureedge.net/*",
         "*://*.mcclatchy-wires.com/*",
@@ -629,5 +629,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.8.3"
+    "version": "2.5.8.4"
 }

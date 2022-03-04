@@ -7,7 +7,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'inkl.com', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
+const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
 const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
 var currentTabUrl = '';
 var csDone = false;
@@ -487,12 +487,14 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
-// inkl disable newsletter login
+// inkl bypass
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
   }
   var updatedUrl = details.url.replace(/etok=[\w]*&/, '');
+  if (details.url.includes('/signin?') && details.url.includes('redirect_to='))
+    updatedUrl = 'https://www.inkl.com' + decodeURIComponent(updatedUrl.split('redirect_to=')[1]);
   return { redirectUrl: updatedUrl };
 },
 {urls:["*://*.inkl.com/*"], types:["main_frame"]},
@@ -914,7 +916,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       (matchUrlDomain('elespanol.com', header_referer) && matchUrlDomain('eestatic.com', details.url)) ||
       (matchUrlDomain('elmercurio.com', header_referer) && matchUrlDomain('emol.cl', details.url)) ||
       (matchUrlDomain('epaper.thetimes.co.uk', header_referer) && matchUrlDomain(['prcdn.co'], details.url)) ||
-      (matchUrlDomain('inkl.com', header_referer) && matchUrlDomain('cdn.jsdelivr.net', details.url)) ||
       (matchUrlDomain('law360.com', header_referer) && matchUrlDomain('law360news.com', details.url)) ||
       (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
       (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
