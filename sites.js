@@ -1190,7 +1190,7 @@ var defaultSites = {
     domain: "estadao.com.br",
     block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad|fx-flying-carpet)-.+\.js)/
   },
-  "O Globo (& Valor Econômico)": {
+  "O Globo (& Valor Econômico; cached articles only)": {
     domain: "globo.com",
     block_regex: /\.tinypass\.com\//
   },
@@ -1305,6 +1305,11 @@ var defaultSites = {
     domain: "rollingstone.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+  },
+  "RugbyPass": {
+    domain: "rugbypass.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",

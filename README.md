@@ -159,6 +159,7 @@ Grouped in options:\
 [Medium](https://www.medium.com/topics) (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
 [Rolling Stone](https://www.rollingstone.com) -
+[RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [Sports Illustrated](https://www.si.com) -

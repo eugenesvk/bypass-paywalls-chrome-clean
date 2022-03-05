@@ -2943,6 +2943,18 @@ else if (matchDomain('qz.com')) {
   }
 }
 
+else if (matchDomain('rugbypass.com') && window.location.pathname.startsWith('/plus/')) {
+  let paywall = document.querySelector('.premium-fold-bottom');
+  if (paywall) {
+    paywall.classList.remove('premium-fold-bottom');
+    let offer = document.querySelector('.plus-article-offer');
+    removeDOMElement(offer);
+    let fade = document.querySelector('.fade');
+    if (fade)
+      fade.classList.remove('fade');
+  }
+}
+
 else if (matchDomain('science.org')) {
   let paywall = document.querySelector('div.alert-read-limit');
   removeDOMElement(paywall);
