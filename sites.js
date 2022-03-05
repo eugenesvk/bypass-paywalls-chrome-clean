@@ -774,7 +774,7 @@ var defaultSites = {
   "Internazionale.it": {
     domain: "internazionale.it",
     allow_cookies: 1,
-    block_regex: /\.internazionale\.it\/assets\/js\/main\.\d{2,}\.js/
+    block_regex: /\.internazionale\.it\/templates_js_ajax\.inc\.php/
   },
   "Irish Independent (setCookie opt-in)": {
     domain: "independent.ie",

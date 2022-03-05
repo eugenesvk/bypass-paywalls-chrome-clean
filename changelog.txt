@@ -7,6 +7,7 @@ Add La Opinion de Malaga
 Add RugbyPass
 Fix Iltalehti.fi (Youtube video/image no source)
 Fix Inkl
+Fix Internazionale.it (menu/images)
 
 * v2.5.8.0 (2022-02-27)
 Add Cycling Tips
