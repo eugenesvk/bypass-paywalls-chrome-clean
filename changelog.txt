@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.5.9.0 (2022-03-06)
 Add Causeur.fr
 Add India Today (magazine)
 Add La Opinion de Malaga

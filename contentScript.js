@@ -1087,8 +1087,8 @@ else if (matchDomain(es_epiberica_domains)) {
     amp_unhide_access_hide('="NOT access"', '="access"');
     amp_unhide_access_hide('="FALSE"');
   } else {
-	  let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.article-sidebar--sticky');
-	  removeDOMElement(...ads);
+    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.article-sidebar--sticky');
+    removeDOMElement(...ads);
   }
 }
 
