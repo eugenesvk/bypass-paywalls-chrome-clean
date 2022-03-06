@@ -269,6 +269,7 @@
         "*://*.independent.co.uk/*",
         "*://*.independent.ie/*",
         "*://*.indianexpress.com/*",
+        "*://*.indiatoday.in/*",
         "*://*.indystar.com/*",
         "*://*.informacion.es/*",
         "*://*.infzm.com/*",
@@ -630,5 +631,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.8.5"
+    "version": "2.5.8.6"
 }

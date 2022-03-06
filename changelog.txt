@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Causeur.fr
+Add India Today (magazine)
 Add La Opinion de Malaga
 Add RugbyPass
 Fix Iltalehti.fi (Youtube video/image no source)

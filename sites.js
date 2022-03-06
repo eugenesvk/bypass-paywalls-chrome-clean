@@ -763,6 +763,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics)-.+\.(m)?js)/
   },
+  "India Today": {
+    domain: "indiatoday.in",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|analytics)-.+\.js/
+  },
   "Inkl": {
     domain: "inkl.com"
   },

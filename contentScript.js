@@ -2026,11 +2026,11 @@ else if (matchDomain('thetimes.co.uk')) {
       let bottom_links = document.querySelectorAll('article > a[id^="athumb_"][article-id][href="javascript:void(0)"]');
       for (let elem of bottom_links)
         elem.href = 'article/' + elem.getAttribute('article-id');
-      } else {
-        let pages = document.querySelectorAll('div.page-left, div.page-right');
-        for (let page of pages)
-          page.style.height = 'auto';
-      }
+    } else {
+      let pages = document.querySelectorAll('div.page-left, div.page-right');
+      for (let page of pages)
+        page.style.height = 'auto';
+    }
   }
 }
 
@@ -2671,7 +2671,7 @@ else if (matchDomain('inc42.com')) {
 
 else if (matchDomain('indianexpress.com')) {
   if (window.location.pathname.endsWith('/lite/'))
-    amp_unhide_access_hide('="metering.result=\'ALLOW_ACCESS\'"', '', '.amp-ad, amp-embed');
+    amp_unhide_access_hide('="metering.result=\'ALLOW_ACCESS\'"', '', 'amp-ad, amp-embed');
   else {
     let paywall = document.querySelector('div#pcl-rest-content[style]');
     if (paywall)
@@ -2680,6 +2680,23 @@ else if (matchDomain('indianexpress.com')) {
     let ads = document.querySelectorAll('div[class^="adsbox"]');
     removeDOMElement(register, ...ads);
   }
+}
+
+else if (matchDomain('indiatoday.in')) {
+  if (window.location.pathname.match(/(\/amp)?\/magazine\//)) {
+    let url = window.location.href;
+    if (!url.includes('/amp/')) {
+      let paywall = document.querySelector('#csc-paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall && amphtml) {
+        removeDOMElement(paywall);
+        window.location.href = amphtml.href;
+      }
+    } else {
+      amp_unhide_access_hide('="granted"', '="NOT NOT granted"', 'amp-ad, amp-embed');
+    }
+  } else
+    csDoneOnce = true;
 }
 
 else if (matchDomain('infzm.com')) {
@@ -2943,16 +2960,19 @@ else if (matchDomain('qz.com')) {
   }
 }
 
-else if (matchDomain('rugbypass.com') && window.location.pathname.startsWith('/plus/')) {
-  let paywall = document.querySelector('.premium-fold-bottom');
-  if (paywall) {
-    paywall.classList.remove('premium-fold-bottom');
-    let offer = document.querySelector('.plus-article-offer');
-    removeDOMElement(offer);
-    let fade = document.querySelector('.fade');
-    if (fade)
-      fade.classList.remove('fade');
-  }
+else if (matchDomain('rugbypass.com')) {
+  if (window.location.pathname.startsWith('/plus/')) {
+    let paywall = document.querySelector('.premium-fold-bottom');
+    if (paywall) {
+      paywall.classList.remove('premium-fold-bottom');
+      let offer = document.querySelector('.plus-article-offer');
+      removeDOMElement(offer);
+      let fade = document.querySelector('.fade');
+      if (fade)
+        fade.classList.remove('fade');
+    }
+  } else
+    csDoneOnce = true;
 }
 
 else if (matchDomain('science.org')) {
