@@ -452,7 +452,7 @@ var defaultSites = {
       "blogfolha.uol.com.br"
     ],
     allow_cookies: 1,
-    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/.+\/publicidade\.ads\.js|paywall\.folha\.uol\.com\.br\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
   "Follow the Money (ftm.nl)": {
     domain: "ftm.nl",

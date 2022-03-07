@@ -3346,13 +3346,14 @@ else if (matchDomain(no_nhst_media_domains)) {
     window.setTimeout(function () {
       let paywall = document.querySelector('iframe#paywall-iframe');
       if (paywall && dompurify_loaded) {
+        let article = paywall.parentNode;
         removeDOMElement(paywall);
         fetch(url)
         .then(response => {
           if (response.ok) {
             response.text().then(html => {
               let split1 = html.split('window.__INITIAL_STATE__=')[1];
-              let state = split1.split('};')[0] + '}';
+              let state = (split1.split('};')[0] + '}').split('</script>')[0];
               if (state) {
                 let json = JSON.parse(state);
                 if (json) {
@@ -3360,10 +3361,9 @@ else if (matchDomain(no_nhst_media_domains)) {
                   let parser = new DOMParser();
                   let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_ATTR: ['itemprop'], ADD_TAGS: ['link']}) + '</div>', 'text/html');
                   let article_new = doc.querySelector('div');
-                  let article = document.querySelector('div.article-body-preview');
                   if (article_new) {
                     if (article)
-                      article.parentNode.replaceChild(article_new, article);
+                      article.appendChild(article_new);
                   }
                 }
               }
