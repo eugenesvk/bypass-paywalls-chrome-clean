@@ -33,6 +33,15 @@
     "allow_cookies": 1,
     "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|analytics)-.+\\.js)"
   },
+  "Les Échos": {
+    "domain": "lesechos.fr",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|analytics)-.+\\.js)",
+    "amp_redirect": {
+      "paywall": ".bloc-paywall"
+    },
+    "amp_unhide": 1
+  },
   "RugbyPass": {
     "domain": "rugbypass.com",
     "allow_cookies": 1,

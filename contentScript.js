@@ -33,7 +33,7 @@ var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com'
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'lanouvellerepublique.fr', 'nknews.org', 'nytimes.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'lanouvellerepublique.fr', 'lesechos.fr', 'nknews.org', 'nytimes.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -1346,54 +1346,68 @@ else if (matchDomain('lequipe.fr')) {
   }
 }
 
-else if (matchDomain('lesechos.fr') && window.location.href.match(/-\d{6,}/)) {
-  window.setTimeout(function () {
-    let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
-    let ad_blocks = document.querySelectorAll('[class*="jzxvkd"');
-    for (let ad_block of ad_blocks)
-      ad_block.setAttribute('style', 'display:none');
-    if (abo_banner && dompurify_loaded) {
-      removeDOMElement(abo_banner);
-      let url = window.location.href;
-      let html = document.documentElement.outerHTML;
-      let state;
-      let split1 = html.split('window.__CONFIG__=')[1];
-      let split2 = split1.split('</script>')[0].trim();
-      if (split2.includes('; window.__DATA__=')) {
-        state = split2.split('; window.__DATA__=')[1].split('; window.__')[0].trim();
-      } else
-        state = split2.substr(0, split2.length - 1);
-      try {
-        let data = JSON.parse(state);
-        let data_article = data.article ? data.article : data.pageProps;
-        let article = data_article.data.stripes[0].mainContent[0].data.description;
-        let url_loaded = data_article.data.path;
-        if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))
-          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
-        let paywallNode = document.querySelector('.post-paywall');
-        if (paywallNode) {
-          let contentNode = document.createElement('div');
-          let parser = new DOMParser();
-          let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(article) + '</div>', 'text/html');
-          let article_par = article_html.querySelector('div');
-          if (article_par) {
-            contentNode.appendChild(article_par);
-            contentNode.className = paywallNode.className;
-            paywallNode.parentNode.insertBefore(contentNode, paywallNode);
-            removeDOMElement(paywallNode);
-            let paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
-            if (paywallLastChildNode) {
-              paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+else if (matchDomain('lesechos.fr') && window.location.href.match(/\d{6,}/)) {
+  if (matchDomain('investir.lesechos.fr')) {
+    if (!window.location.href.includes('/amp/')) {
+      let paywall = document.querySelector('div.bloc-paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall && amphtml) {
+        removeDOMElement(paywall);
+        window.location.href = amphtml.href;
+      }
+    } else {
+      let amp_ads = document.querySelectorAll('amp-ad');
+      removeDOMElement(...amp_ads);
+    }
+  } else {
+    window.setTimeout(function () {
+      let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
+      let ad_blocks = document.querySelectorAll('[class*="jzxvkd"');
+      for (let ad_block of ad_blocks)
+        ad_block.setAttribute('style', 'display:none');
+      if (abo_banner && dompurify_loaded) {
+        removeDOMElement(abo_banner);
+        let url = window.location.href;
+        let html = document.documentElement.outerHTML;
+        let state;
+        let split1 = html.split('window.__CONFIG__=')[1];
+        let split2 = split1.split('</script>')[0].trim();
+        if (split2.includes('; window.__DATA__=')) {
+          state = split2.split('; window.__DATA__=')[1].split('; window.__')[0].trim();
+        } else
+          state = split2.substr(0, split2.length - 1);
+        try {
+          let data = JSON.parse(state);
+          let data_article = data.article ? data.article : data.pageProps;
+          let article = data_article.data.stripes[0].mainContent[0].data.description;
+          let url_loaded = data_article.data.path;
+          if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))
+            ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+          let paywallNode = document.querySelector('.post-paywall');
+          if (paywallNode) {
+            let contentNode = document.createElement('div');
+            let parser = new DOMParser();
+            let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(article) + '</div>', 'text/html');
+            let article_par = article_html.querySelector('div');
+            if (article_par) {
+              contentNode.appendChild(article_par);
+              contentNode.className = paywallNode.className;
+              paywallNode.parentNode.insertBefore(contentNode, paywallNode);
+              removeDOMElement(paywallNode);
+              let paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
+              if (paywallLastChildNode) {
+                paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+              }
             }
           }
+          let styleElem = document.head.appendChild(document.createElement('style'));
+          styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
+        } catch (err) {
+          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
         }
-        let styleElem = document.head.appendChild(document.createElement('style'));
-        styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
-      } catch (err) {
-        ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
       }
-    }
-  }, 500); // Delay (in milliseconds)
+    }, 500); // Delay (in milliseconds)
+  }
 }
 
 else if (matchDomain('lesinrocks.com')) {
