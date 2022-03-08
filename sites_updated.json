@@ -1,4 +1,10 @@
 {
+  "Bloomberg Quint": {
+    "domain": "bloombergquint.com",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.cxense\\.com\\/|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-((sticky-)?ad|subscriptions)-.+\\.js)",
+    "amp_unhide": 1
+  },
   "Causeur": {
     "domain": "causeur.fr",
     "allow_cookies": 1,
@@ -15,8 +21,7 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|analytics)-.+\\.js",
     "amp_redirect": {
       "paywall": "#csc-paywall"
-    },
-    "amp_unhide": 1
+    }
   },
   "Internazionale.it": {
     "domain": "internazionale.it",

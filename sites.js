@@ -188,7 +188,7 @@ var defaultSites = {
   "Bloomberg Quint": {
     domain: "bloombergquint.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
   "Brisbane Times": {
     domain: "brisbanetimes.com.au",
