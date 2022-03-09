@@ -329,7 +329,7 @@ var defaultSites = {
   },
   "Digiday": {
     domain: "digiday.com",
-    block_regex: /(cdn.\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "Discover Magazine": {
     domain: "discovermagazine.com"
@@ -1520,7 +1520,7 @@ var defaultSites = {
   "The Economist": {
     domain: "economist.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",

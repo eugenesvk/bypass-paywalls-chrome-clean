@@ -66,5 +66,10 @@
         "rm_class": "premium-fold-bottom"
       }
     ]
+  },
+  "The Economist": {
+    "domain": "economist.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
   }
 }
