@@ -364,6 +364,7 @@ Grouped in options:\
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
 [La Libre](https://www.lalibre.be) -
+[La Montagne](https://www.lamontagne.fr) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
 [Le Journal du Dimanche](https://lejdd.fr) -

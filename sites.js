@@ -854,6 +854,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "La Montagne": {
+    domain: "lamontagne.fr",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "La Nación": {
     domain: "lanacion.com.ar"
   },
