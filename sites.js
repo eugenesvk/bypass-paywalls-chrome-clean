@@ -1868,6 +1868,9 @@ var defaultSites = {
   "TribDss": {
     domain: "tribdss.com"
   },
+  "Weborama.fr": {
+    domain: "weborama.fr"
+  },
   "Zephr": {
     domain: "zephr.com"
   },

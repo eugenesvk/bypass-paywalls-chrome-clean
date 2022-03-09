@@ -5,6 +5,7 @@ Post-release
 Fix Bloomberg Quint (amp)
 Fix LesEchos.fr (investir)
 Fix NHST Media Group
+Update block general paywall script (Weborama.fr)
 
 * v2.5.9.0 (2022-03-06)
 Add Causeur.fr

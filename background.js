@@ -649,6 +649,7 @@ var block_js = [
   "*://*.poool.fr/*",
   "*://*.qiota.com/*",
   "*://*.tribdss.com/*",
+  "*://*.weborama.fr/*",
   "*://*.zephr.com/zephr-browser/*",
   "*://*/c/assets/pigeon.js*",
   "*://cdn.ampproject.org/v*/amp-access-*.*js",

@@ -602,6 +602,7 @@
         "*://*.qiota.com/*",
         "*://*.tinypass.com/*",
         "*://*.tribdss.com/*",
+        "*://*.weborama.fr/*",
         "*://*.zephr.com/*",
         "*://*.amazonaws.com/*",
         "*://*.apnarm.net.au/*",
