@@ -2206,11 +2206,6 @@ else if (matchDomain('americanbanker.com')) {
   }
 }
 
-else if (matchDomain('americanaffairsjournal.org')) {
-  let paywall_bar = document.querySelector('.paywall-notification-bar-wrapper');
-  removeDOMElement(paywall_bar);
-}
-
 else if (matchDomain('artnet.com')) {
   if (window.location.pathname.endsWith('/amp-page')) {
     amp_unhide_subscr_section();

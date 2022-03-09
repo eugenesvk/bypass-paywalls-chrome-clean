@@ -73,7 +73,9 @@ var defaultSites = {
     remove_cookies_select_drop: ["TDNotesRead"]
   },
   "American Affairs": {
-    domain: "americanaffairsjournal.org"
+    domain: "americanaffairsjournal.org",
+    allow_cookies: 1,
+    block_regex: /\/americanaffairsjournal\.org\/wp-content\/mu-plugins\/app\/src\/paywall\/paywall\.js/
   },
   "American Banker": {
     domain: "americanbanker.com",

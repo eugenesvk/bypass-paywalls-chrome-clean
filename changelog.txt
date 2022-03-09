@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add LaMontagne.fr
+Fix American Affairs (js)
 Fix Bloomberg Quint (amp)
 Fix Economist (js typo)
 Fix LaNouvelleRepublique.fr (js)
