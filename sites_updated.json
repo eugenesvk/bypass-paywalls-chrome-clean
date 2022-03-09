@@ -28,6 +28,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.internazionale\\.it\\/templates_js_ajax\\.inc\\.php"
   },
+  "La Nouvelle République du Centre-Ouest": {
+    "domain": "lanouvellerepublique.fr",
+    "allow_cookies": 1,
+    "block_regex": "(\\.weborama\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
+  },
   "La Opinión de Málaga": {
     "domain": "laopiniondemalaga.es",
     "allow_cookies": 1,

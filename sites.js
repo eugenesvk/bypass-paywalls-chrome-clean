@@ -860,8 +860,7 @@ var defaultSites = {
   "La Nouvelle République du Centre-Ouest": {
     domain: "lanouvellerepublique.fr",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
-    useragent: "googlebot"
+    block_regex: /(\.weborama\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
   },
   "La Nuova Sardegna": {
     domain: "lanuovasardegna.it",
