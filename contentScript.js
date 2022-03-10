@@ -1119,7 +1119,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'ledevoir.com', 'lesinrocks.com', 'lejsl.com', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'ledevoir.com', 'lesinrocks.com', 'lejsl.com', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -1162,6 +1162,11 @@ else if (matchDomain('charliehebdo.fr')) {
     let poool_widget = document.querySelector('div#poool-widget');
     removeDOMElement(poool_widget);
   }, 500);
+}
+
+else if (matchDomain('connaissancedesarts.com')) {
+  let ads = document.querySelectorAll('div.ad-container');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('elle.fr')) {

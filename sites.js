@@ -250,6 +250,11 @@ var defaultSites = {
     block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
     useragent: "googlebot"
   },
+  "Connaissance des Arts": {
+    domain: "connaissancedesarts.com",
+    allow_cookies: 1,
+    block_regex: /\.connaissancedesarts\.com\/wp-content\/cache\/.+\.js/
+  },
   "Correio da Manhã": {
     domain: "cmjornal.pt",
     allow_cookies: 1,

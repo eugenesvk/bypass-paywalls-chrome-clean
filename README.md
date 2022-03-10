@@ -351,9 +351,10 @@ Grouped in options:\
 ##### France/Wallonia
 [Alternatives Economiques](https://www.alternatives-economiques.fr) -
 [Atlantico](https://atlantico.fr) -
+[Causeur](https://www.causeur.fr) -
 [Challenges](https://www.challenges.fr) -
 [Charlie Hebdo](https://charliehebdo.fr) -
-[Causeur](https://www.causeur.fr) -
+[Connaissance des Arts](https://www.connaissancedesarts.com) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
 [L'Équipe](https://www.lequipe.fr) -

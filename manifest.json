@@ -130,6 +130,7 @@
         "*://*.cmjornal.pt/*",
         "*://*.codesports.com.au/*",
         "*://*.commentary.org/*",
+        "*://*.connaissancedesarts.com/*",
         "*://*.corriere.it/*",
         "*://*.corriereadriatico.it/*",
         "*://*.courant.com/*",
@@ -633,5 +634,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.9.3"
+    "version": "2.5.9.4"
 }
