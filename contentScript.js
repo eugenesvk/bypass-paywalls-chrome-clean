@@ -2306,9 +2306,8 @@ else if (matchDomain('bloomberg.com')) {
       removeDOMElement(...shimmering_content);
       if (body_transparent)
         removeClassesByPrefix(body_transparent, 'nearly-transparent-text-blur');
-      let premium = document.querySelector('div[data-testid="premium-label"]');
       let json_script = document.querySelector('script[data-component-props="ArticleBody"], script[data-component-props="FeatureBody"]');
-      if (premium && json_script) {
+      if (json_script) {
         let json = JSON.parse(json_script.innerHTML);
         if (json) {
           let json_text;
