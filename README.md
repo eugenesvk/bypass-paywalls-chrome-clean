@@ -696,7 +696,8 @@ Grouped in options:\
 [La Segunda](https://digital.lasegunda.com) -
 [La Tercera](https://www.latercera.com)
 ##### Colombia
-[El Espectador](https://www.elespectador.com)
+[El Espectador](https://www.elespectador.com) -
+[El Tiempo](https://www.eltiempo.com)
 ##### Mexico
 [Mexico News Daily](https://mexiconewsdaily.com)
 ##### Peru

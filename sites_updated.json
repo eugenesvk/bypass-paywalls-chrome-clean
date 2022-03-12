@@ -20,6 +20,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.connaissancedesarts\\.com\\/wp-content\\/cache\\/.+\\.js"
   },
+  "El Tiempo": {
+    "domain": "eltiempo.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/"
+  },
   "Financial Times (not Chinese)": {
     "domain": "ft.com",
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|subscriptions)-.+\\.js",

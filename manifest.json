@@ -191,6 +191,7 @@
         "*://*.elpais.com/*",
         "*://*.elperiodico.com/*",
         "*://*.elperiodicomediterraneo.com/*",
+        "*://*.eltiempo.com/*",
         "*://*.entrepreneur.com/*",
         "*://*.espn.com/*",
         "*://*.esprit.presse.fr/*",
@@ -635,5 +636,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.9.5"
+    "version": "2.5.9.6"
 }

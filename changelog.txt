@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Connaissance des Arts (France)
+Add El Tiempo (Colombia)
 Add LaMontagne.fr
 Add Volksstimme.de
 Fix American Affairs (js)
