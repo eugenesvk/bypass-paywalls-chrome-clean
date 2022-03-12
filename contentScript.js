@@ -255,7 +255,7 @@ else {
         amp_unhide_access_hide('="access AND subscriber"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#story-comments, .comments-wrapper');
       } else if (window.location.href.includes('?amp')) {
-        amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '="status=\'logged-out\'"', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#comments-load');
         let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
         removeDOMElement(...amp_iframe_sizers)
@@ -616,7 +616,7 @@ else if (matchDomain('kurier.at')) {
     plus_content.classList.remove('plusContent');
 }
 
-else if (matchDomain('mz.de')) {
+else if (matchDomain(['mz.de', 'volksstimme.de'])) {
   let url = window.location.href.split('?')[0];
   let paywall = document.querySelector('.fp-paywall');
   if (url.includes('/amp/')) {

@@ -445,6 +445,7 @@ Grouped in options:\
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
+[Volksstimme](https://www.volksstimme.de) -
 [Westfalen-Blatt](https://www.westfalen-blatt.de) -
 [Westfälische Nachrichten](https://www.wn.de)
 

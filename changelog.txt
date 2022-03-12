@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Connaissance des Arts (France)
 Add LaMontagne.fr
+Add Volksstimme.de
 Fix American Affairs (js)
 Fix Bloomberg
 Fix Bloomberg Quint (amp)

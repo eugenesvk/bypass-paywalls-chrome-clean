@@ -1781,6 +1781,11 @@ var defaultSites = {
     domain: "volkskrant.nl",
     group_rule: "###_gr_nl_pg_domains"
   },
+  "Volksstimme": {
+    domain: "volksstimme.de",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/
+  },
   "Vrij Nederland": {
     domain: "vn.nl",
     allow_cookies: 1

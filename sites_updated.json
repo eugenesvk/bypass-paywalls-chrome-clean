@@ -81,5 +81,10 @@
     "domain": "economist.com",
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
+  },
+  "Volksstimme": {
+    "domain": "volksstimme.de",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|subscriptions)-.+\\.js"
   }
 }
