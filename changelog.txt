@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.0.0 (2022-03-13)
 Add Connaissance des Arts (France)
 Add El Tiempo (Colombia)
 Add LaMontagne.fr

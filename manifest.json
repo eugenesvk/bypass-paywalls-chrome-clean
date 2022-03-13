@@ -636,5 +636,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.5.9.6"
+    "version": "2.6.0.0"
 }

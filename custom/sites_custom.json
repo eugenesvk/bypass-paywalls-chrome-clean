@@ -51,11 +51,6 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
-  "Eltiempo.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "domain": "eltiempo.com"
-  },
   "Eluniversal.com.mx": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -138,6 +133,9 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "nationalobserver.com"
+  },
+  "Physicsworld.com": {
+    "domain": "physicsworld.com"
   },
   "Pressandjournal.co.uk": {
     "allow_cookies": 1,
