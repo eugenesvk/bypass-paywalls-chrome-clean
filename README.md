@@ -450,7 +450,7 @@ Grouped in options:\
 [Westfälische Nachrichten](https://www.wn.de)
 
 Grouped in options:\
-*Funke Mediengruppe* sites like\
+*Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
 [Berliner Morgenpost](https://www.morgenpost.de) -
 [Braunschweiger Zeitung](https://www.braunschweiger-zeitung.de) -
 [Hamburger Abendblatt](https://www.abendblatt.de) -

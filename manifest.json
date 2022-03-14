@@ -618,6 +618,7 @@
         "*://*.emol.cl/*",
         "*://*.epimg.net/*",
         "*://*.flip-pay.com/*",
+        "*://*.funkedigital.de/*",
         "*://*.gannett-cdn.com/*",
         "*://*.gitlab.com/magnolia1234/*",
         "*://*.hearstnp.com/*",
@@ -636,5 +637,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.0.0"
+    "version": "2.6.0.1"
 }

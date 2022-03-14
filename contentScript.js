@@ -451,7 +451,7 @@ else if (matchDomain('cicero.de')) {
   removeDOMElement(...urban_ad_sign);
 }
 
-else if (matchDomain(de_funke_media_domains)) {
+else if (matchDomain(de_funke_media_domains) || document.querySelector('a[href="https://www.funkemedien.de/"]')) {
   if (window.location.search.startsWith('?service=amp'))
     amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', 'amp-ad, amp-embed, amp-fx-flying-carpet');
   else

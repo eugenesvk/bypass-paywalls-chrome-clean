@@ -1907,7 +1907,7 @@ var defaultSites = {
   "Check for update rules at startup": {
     domain: "#options_optin_update_rules"
   },
-  "Restore opt-in for custom sites (on reload; Chrome-only)": {
+  "Restore opt-in for custom sites (on reload; load unpacked)": {
     domain: "#options_restore_custom"
   },
   "Barron's - no Googlebot (http error 500)": {
@@ -1916,6 +1916,12 @@ var defaultSites = {
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
   }
+}
+
+if (typeof browser === 'object') {
+  let key = Object.keys(defaultSites).find(key => defaultSites[key].domain === '#options_restore_custom');
+  if (key)
+    delete defaultSites[key];
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {
