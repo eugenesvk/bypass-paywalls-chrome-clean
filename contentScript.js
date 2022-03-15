@@ -1664,6 +1664,11 @@ else
 } else if (window.location.hostname.match(/\.(be|nl)$/)) {//belgium/netherlands
 
 if (matchDomain(['bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'])) {
+  let login = document.querySelector('article#PURCHASE_LOGIN_WALL');
+  if (login) {
+    removeDOMElement(login);
+    window.location.reload(true);
+  }
   let paywall = document.querySelectorAll('.article__component--paywall-module-notification, .fjs-paywall-notification');
   let modal_login = document.querySelector('.modal--login');
   removeDOMElement(...paywall, modal_login);
@@ -3654,6 +3659,8 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
         article.insertBefore(text_fail_div, article.firstChild);
       }
     }
+  }).catch(function (err) {
+    false;
   });
 }
 
