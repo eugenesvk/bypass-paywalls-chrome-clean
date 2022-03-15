@@ -368,7 +368,7 @@ var defaultSites = {
   "El Espectador": {
     domain: "elespectador.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|fx-flying-carpet|subscriptions)-.+\.js)/
   },
   "El Mercurio": {
     domain: "elmercurio.com",
@@ -464,7 +464,8 @@ var defaultSites = {
       "blogfolha.uol.com.br"
     ],
     allow_cookies: 1,
-    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/,
+    useragent: "googlebot"
   },
   "Follow the Money (ftm.nl)": {
     domain: "ftm.nl",

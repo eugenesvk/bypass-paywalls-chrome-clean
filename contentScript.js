@@ -27,9 +27,9 @@ var usa_conde_nast_domains = ['bonappetit.com', 'gq.com' , 'newyorker.com', 'van
 var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
-var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pe.com', 'twincities.com'];
+var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
@@ -702,7 +702,7 @@ else
 } else if (window.location.hostname.match(/\.(dk|fi|no|se)$/)) {//denmark/finland/norway/sweden
 
 if (matchDomain(fi_alma_talent_domains)) {
-  let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container');
+  let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad');
   removeDOMElement(...ads);
   if (matchDomain('iltalehti.fi')) {
     let paywall = document.querySelector('div.faded-text');
@@ -2087,7 +2087,7 @@ else if (matchDomain(pe_grupo_elcomercio_domains)) {
 
 else if (matchDomain('elespectador.com')) {
   if (window.location.search.startsWith('?outputType=amp')) {
-    amp_unhide_subscr_section('amp-ad, amp-embed, [class^="Widget"]');
+    amp_unhide_subscr_section('amp-ad, amp-embed, [class^="Widget"], amp-fx-flying-carpet');
   } else {
     let paywall = document.querySelector('.paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
@@ -2129,6 +2129,14 @@ else if (matchDomain('folha.uol.com.br')) {
   } else {
     let signup = document.querySelector('.c-top-signup');
     removeDOMElement(signup);
+  }
+}
+
+else if (matchDomain('blogfolha.uol.com.br')) {
+  let hidden_images = document.querySelectorAll('div[id^="attachment_"] > a > img[src^="http:"][srcset]');
+  for (let hidden_image of hidden_images) {
+    hidden_image.src = hidden_image.src.replace('http:', 'https:');
+    hidden_image.srcset = '';
   }
 }
 
@@ -3008,13 +3016,16 @@ else if (matchDomain('science.org')) {
     overlay.classList.remove('alert-read-limit__overlay');
 }
 
-else if (matchDomain('scmp.com') && window.location.href.includes('/amp.')) {
-  let div_hidden = document.querySelectorAll('div.article-body[amp-access][amp-access-hide]');
-  for (let elem of div_hidden)
-    elem.removeAttribute('amp-access-hide');
-  let default_meters = document.querySelectorAll('div.default-meter, div#archive-article-meter');
-  let adverts = document.querySelectorAll('amp-ad, div.ad-banner, div.advert-fly-carpet-container, div.inline-advert');
-  removeDOMElement(...default_meters, ...adverts);
+else if (matchDomain('scmp.com')) {
+  if (window.location.href.includes('/amp.')) {
+    let div_hidden = document.querySelectorAll('div.article-body[amp-access][amp-access-hide]');
+    for (let elem of div_hidden)
+      elem.removeAttribute('amp-access-hide');
+    let default_meters = document.querySelectorAll('div.default-meter, div#archive-article-meter');
+    let adverts = document.querySelectorAll('amp-ad, div.ad-banner, div.advert-fly-carpet-container, div.inline-advert');
+    removeDOMElement(...default_meters, ...adverts);
+  } else
+    csDoneOnce = true;
 }
 
 else if (matchDomain('scribd.com')) {
@@ -3099,7 +3110,7 @@ else if (matchDomain('stratfor.com')) {
     hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
   let url = window.location.href.split('?')[0];
   if (url.match(/(\/(\d){4}-([a-z]|-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]|-)+)$/)) {
-    json_script = document.querySelector('script#__NEXT_DATA__');
+    let json_script = document.querySelector('script#__NEXT_DATA__');
     if (json_script && dompurify_loaded) {
       let json = JSON.parse(json_script.innerText);
       if (json && json.props.pageProps.data) {
@@ -3469,23 +3480,9 @@ else if (matchDomain('venturebeat.com')) {
 }
 
 else if (matchDomain('washingtonpost.com')) {
-  if (location.href.includes('/gdpr-consent/')) {
-    let free_button = document.querySelector('.gdpr-consent-container .continue-btn.button.free');
-    if (free_button)
-      free_button.click();
-    window.setTimeout(function () {
-      let gdprcheckbox = document.querySelector('.gdpr-consent-container .consent-page:not(.hide) #agree');
-      if (gdprcheckbox) {
-        gdprcheckbox.checked = true;
-        gdprcheckbox.dispatchEvent(new Event('change'));
-        document.querySelector('.gdpr-consent-container .consent-page:not(.hide) .continue-btn.button.accept-consent').click();
-      }
-    }, 500);
-  } else {
-    let leaderboard = document.querySelector('#leaderboard-wrapper');
-    let adverts = document.querySelectorAll('div[data-qa$="-ad"]');
-    removeDOMElement(leaderboard, ...adverts);    
-  }
+  let leaderboard = document.querySelector('#leaderboard-wrapper');
+  let adverts = document.querySelectorAll('div[data-qa$="-ad"]');
+  removeDOMElement(leaderboard, ...adverts);
 }
 
 else if (matchDomain('wsj.com')) {
@@ -3621,7 +3618,7 @@ function matchDomain(domains, hostname = window.location.hostname) {
 }
 
 function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
-  let proxyurl = proxy ? 'https://bpc2-cors-anywhere.herokuapp.com/' : '';
+  let proxyurl = proxy ? 'https://bpc-cors-anywhere.herokuapp.com/' : '';
   fetch(proxyurl + url, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
   .then(response => {
     let article = document.querySelector(selector);
