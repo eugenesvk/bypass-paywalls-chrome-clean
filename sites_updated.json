@@ -82,6 +82,15 @@
     },
     "amp_unhide": 1
   },
+  "Mid-Day": {
+    "domain": "mid-day.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js",
+    "amp_redirect": {
+      "paywall": "#widget-_csc"
+    },
+    "amp_unhide": 1
+  },
   "RugbyPass": {
     "domain": "rugbypass.com",
     "allow_cookies": 1,

@@ -662,6 +662,7 @@ Grouped in options:\
 [Live Law](https://www.livelaw.in) -
 [LiveMint](https://www.livemint.com) -
 [MediaNama](https://www.medianama.com) -
+[Mid-Day](https://www.mid-day.com) -
 [The Economic Times (ET Prime)](https://economictimes.indiatimes.com) -
 [The Hindu](https://www.thehindu.com) -
 [The Hindu BusinessLine](https://www.thehindubusinessline.com) -

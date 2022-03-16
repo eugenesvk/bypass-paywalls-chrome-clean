@@ -1100,6 +1100,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.mexiconewsdaily\.com\/c\/assets\/pigeon\.js/
   },
+  "Mid-Day": {
+    domain: "mid-day.com",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js/
+  },
   "MIT Sloan Management Review": {
     domain: "sloanreview.mit.edu",
     block_regex: /(\.tinypass\.com\/|\/sloanreview\.mit\.edu\/.+\/welcome-ad\.js)/,

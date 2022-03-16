@@ -372,6 +372,7 @@
         "*://*.mercurynews.com/*",
         "*://*.mexiconewsdaily.com/*",
         "*://*.miamiherald.com/*",
+        "*://*.mid-day.com/*",
         "*://*.midi-olympique.fr/*",
         "*://*.midilibre.fr/*",
         "*://*.mikrobitti.fi/*",
@@ -637,5 +638,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.0.2"
+    "version": "2.6.0.3"
 }
