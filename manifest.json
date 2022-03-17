@@ -41,7 +41,8 @@
         "matches": [
             "*://*.inkl.com/*",
             "*://*.nationalgeographic.com/*",
-            "*://*.nyteknik.se/*"
+            "*://*.nyteknik.se/*",
+            "*://*.gitlab.com/magnolia1234"
         ],
         "run_at": "document_start",
         "js": ["contentScript_once.js"]
@@ -638,5 +639,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.0.3"
+    "version": "2.6.0.4"
 }

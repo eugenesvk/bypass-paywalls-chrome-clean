@@ -58,7 +58,32 @@ else if (matchDomain('nyteknik.se')) {
     let hidden_images = document.querySelectorAll('img[src=""][data-proxy-image]');
     for (let hidden_image of hidden_images)
       hidden_image.setAttribute('src', hidden_image.getAttribute('data-proxy-image').replace('_320', '_640'));
-  }, 2000); // Delay (in milliseconds)
+  }, 2000);
+}
+
+else if (matchDomain('gitlab.com')) {
+  window.setTimeout(function () {
+    let bio = document.querySelector('div.profile-user-bio');
+    if (bio) {
+      let split = bio.innerText.split(/(https:[\w\-/.]+)|\|/g).filter(x => x && x.trim());
+      bio.innerText = '';
+      for (let part of split) {
+        let elem;
+        if (part.startsWith('https')) {
+          elem = document.createElement('a');
+          elem.innerText = part;
+          elem.href = part;
+          elem.appendChild(document.createElement('br'));
+        } else {
+          elem = document.createElement('b');
+          elem.appendChild(document.createTextNode(part));
+          if (!part.includes(':'))
+            elem.appendChild(document.createElement('br'));
+        }
+        bio.appendChild(elem);
+      }
+    }
+  }, 1000);
 }
 
 function matchDomain(domains, hostname) {
