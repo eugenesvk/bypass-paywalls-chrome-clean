@@ -1276,7 +1276,6 @@ else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
 else if (matchDomain('lequipe.fr')) {
   let paywall = document.querySelectorAll('.Paywall, .Article__paywall');
   if (paywall.length) {
-    removeDOMElement(...paywall);
     let scripts = document.querySelectorAll('script:not([src], [type])');
     let json_script;
     for (let script of scripts) {
@@ -1288,6 +1287,7 @@ else if (matchDomain('lequipe.fr')) {
     let article = document.querySelector('div.article__body');
     if (article && json_script && dompurify_loaded) {
       if (json_script.innerText.includes('articleObject:')) {
+        removeDOMElement(...paywall);
         let json = json_script.textContent.split('articleObject:')[1].split(',articleType')[0];
         let url_nuxt = json_script.textContent.split('comment_count_url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
@@ -1340,15 +1340,16 @@ else if (matchDomain('lequipe.fr')) {
                   ratio = 1.5;
                 let url = media.split('url:"')[1].split('"')[0].replace(/\\u002F/g, '/').replace('{width}', '400').replace('{height}', parseInt(400 / ratio)).replace('{quality}', '75');
                 if (url)
-                  article_text += '<p><img src="' + url + '"</img></p>';
+                  article_text += '<p><img src="' + url + '" style="width:95%;"</img></p>';
               }
             }
           }
           article_dom = parser.parseFromString('<div style="margin:20px; font-famile:"DINNextLTPro-Regular",sans-serif; fot-size:18px;">' + DOMPurify.sanitize(article_text) + '</div>', 'text/html');
           article.appendChild(article_dom.querySelector('div'));
         }
-      }
-    }
+      } else
+        ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+    } 
   }
 }
 

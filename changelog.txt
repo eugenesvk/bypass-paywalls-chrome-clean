@@ -6,6 +6,7 @@ Add Mid-Day (India)
 Fix Algemeen Dagblad (regional; refresh)
 Fix Folha de S. Paulo
 Fix Funke Mediengruppe (opt-in to custom sites for unlisted)
+Fix Lequipe.fr (refresh)
 
 * v2.6.0.0 (2022-03-13)
 Add Connaissance des Arts (France)
