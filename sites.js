@@ -1275,6 +1275,11 @@ var defaultSites = {
     domain: "politicaexterior.com",
     allow_cookies: 1
   },
+  "Popular Mechanics": {
+    domain: "popularmechanics.com",
+    allow_cookies: 1,
+    block_regex: /nexus\.ensighten\.com\/hearst\/mag\/Bootstrap\.js/
+  },
   "Postmedia Network": {
     domain: "###_ca_postmedia",
     group: [

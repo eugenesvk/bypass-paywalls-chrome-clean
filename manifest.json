@@ -440,6 +440,7 @@
         "*://*.pilotonline.com/*",
         "*://*.piqd.de/*",
         "*://*.politicaexterior.com/*",
+        "*://*.popularmechanics.com/*",
         "*://*.portnews.com.au/*",
         "*://*.post-gazette.com/*",
         "*://*.precisiononcologynews.com/*",
@@ -618,6 +619,7 @@
         "*://*.corriereobjects.it/*",
         "*://*.eestatic.com/*",
         "*://*.emol.cl/*",
+        "*://*.ensighten.com/*",
         "*://*.epimg.net/*",
         "*://*.flip-pay.com/*",
         "*://*.funkedigital.de/*",
@@ -639,5 +641,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.0.4"
+    "version": "2.6.0.5"
 }
