@@ -229,8 +229,8 @@ else if (domain = matchDomain(["brisbanetimes.com.au", "smh.com.au", "theage.com
 else {
   // Australian Community Media newspapers
   let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'northerndailyleader.com.au', 'portnews.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
-  let au_piano_script = document.querySelector('script[src="https://cdn-au.piano.io/api/tinypass.min.js"]');
-  if (matchDomain(au_comm_media_domains) || au_piano_script) {
+  let au_comm_media_link = document.querySelector('a[href^="https://australiancommunitymedia.zendesk.com"]');
+  if (matchDomain(au_comm_media_domains) || au_comm_media_link) {
     let subscribe_truncate = document.querySelector('.subscribe-truncate');
     if (subscribe_truncate)
       subscribe_truncate.classList.remove('subscribe-truncate');

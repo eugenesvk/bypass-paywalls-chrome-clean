@@ -3,8 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Franc-Tireur.fr
+Add group Hearst Communications magazines
 Add Mid-Day (India)
-Add Popular Mechanics
 Add Winnipeg Free Press (Canada)
 Fix Algemeen Dagblad (regional; refresh)
 Fix Folha de S. Paulo

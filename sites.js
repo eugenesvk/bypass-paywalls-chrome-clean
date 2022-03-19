@@ -726,6 +726,28 @@ var defaultSites = {
     ],
     block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
+  "Hearst Communications magazines": {
+    domain: "###_usa_hearst_comm_mag",
+    group: [
+      "bicycling.com",
+      "cosmopolitan.com",
+      "countryliving.com",
+      "elle.com",
+      "esquire.com",
+      "goodhousekeeping.com",
+      "hollywoodreporter.com",
+      "housebeautiful.com",
+      "menshealth.com",
+      "popularmechanics.com",
+      "prevention.com",
+      "roadandtrack.com",
+      "runnersworld.com",
+      "townandcountrymag.com",
+      "womenshealthmag.com"
+    ],
+    allow_cookies: 1,
+    block_regex: /nexus\.ensighten\.com\/hearst\/mag\/Bootstrap\.js/
+  },
   "Hindustan Times": {
     domain: "hindustantimes.com",
     allow_cookies: 1,
@@ -1279,11 +1301,6 @@ var defaultSites = {
   "Política Exterior": {
     domain: "politicaexterior.com",
     allow_cookies: 1
-  },
-  "Popular Mechanics": {
-    domain: "popularmechanics.com",
-    allow_cookies: 1,
-    block_regex: /nexus\.ensighten\.com\/hearst\/mag\/Bootstrap\.js/
   },
   "Postmedia Network": {
     domain: "###_ca_postmedia",

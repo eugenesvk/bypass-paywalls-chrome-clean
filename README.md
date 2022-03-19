@@ -130,7 +130,6 @@ Grouped in options:\
 [MIT Technology Review](https://www.technologyreview.com) -
 [National Geographic USA](https://www.nationalgeographic.com) -
 [Nautilus](https://nautil.us) -
-[Popular Mechanics](https://www.popularmechanics.com) -
 [Precision Oncology News](https://www.precisiononcologynews.com) -
 [Science](https://www.science.org)* -
 [Scientific American](https://www.scientificamerican.com)* -
@@ -181,6 +180,22 @@ Grouped in options:\
 [Vanity Fair](https://www.vanityfair.com) -
 [Vogue USA](https://www.vogue.com) -
 [Wired](https://www.wired.com)\
+*Hearst Communications magazines* sites like:\
+[Bicycling](https://www.bicycling.com) -
+[Cosmopolitan](https://www.cosmopolitan.com) -
+[Country Living](https://www.countryliving.com) -
+[Elle USA](https://www.elle.com) -
+[Esquire](https://www.esquire.com) -
+[Good Housekeeping](https://www.goodhousekeeping.com) -
+[House Beautiful](https://www.housebeautiful.com) -
+[Men's Health](https://www.menshealth.com) -
+[Popular Mechanics](https://www.popularmechanics.com) -
+[Prevention](https://www.prevention.com) -
+[Road & Track](https://www.roadandtrack.com) -
+[Runner's World](https://www.runnersworld.com) -
+[The Hollywood Reporter](https://www.hollywoodreporter.com) -
+[Town & Country](https://www.townandcountrymag.com) -
+[Women's Health](https://www.womenshealthmag.com)\
 *Outside magazines* sites like:\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -
