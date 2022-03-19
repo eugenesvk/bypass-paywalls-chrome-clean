@@ -359,6 +359,7 @@ Grouped in options:\
 [Connaissance des Arts](https://www.connaissancedesarts.com) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
+[Franc-Tireur](https://www.franc-tireur.fr) -
 [L'Équipe](https://www.lequipe.fr) -
 [L'Express](https://www.lexpress.fr) -
 [L'Obs](https://www.nouvelobs.com) -

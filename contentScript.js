@@ -1229,6 +1229,11 @@ else if (domain = matchDomain(fr_groupe_nice_matin_domains)) {
   removeDOMElement(...ads);
 }
 
+else if (matchDomain('franc-tireur.fr')) {
+  let paywall = document.querySelector('.paywall');
+  removeDOMElement(paywall);
+}
+
 else if (matchDomain('journaldunet.com')) {
   let reg_wall = document.querySelector('.reg_wall');
   removeDOMElement(reg_wall);

@@ -216,6 +216,7 @@
         "*://*.foreignaffairs.com/*",
         "*://*.foreignpolicy.com/*",
         "*://*.fortune.com/*",
+        "*://*.franc-tireur.fr/*",
         "*://*.freep.com/*",
         "*://*.freiepresse.de/*",
         "*://*.fresnobee.com/*",
@@ -642,5 +643,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.0.5"
+    "version": "2.6.0.6"
 }

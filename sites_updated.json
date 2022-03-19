@@ -40,6 +40,11 @@
     "block_regex": "(\\.folha\\.uol\\.com\\.br\\/paywall\\/js\\/|paywall\\.folha\\.uol\\.com\\.br\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-((sticky-)?ad|subscriptions)-.+\\.js)",
     "useragent": "googlebot"
   },
+  "Franc-Tireur": {
+    "domain": "franc-tireur.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/"
+  },
   "India Today": {
     "domain": "indiatoday.in",
     "allow_cookies": 1,

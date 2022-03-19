@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Franc-Tireur.fr
 Add Mid-Day (India)
 Add Popular Mechanics
 Add Winnipeg Free Press (Canada)
