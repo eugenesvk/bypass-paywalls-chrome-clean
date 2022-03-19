@@ -287,7 +287,8 @@ Grouped in options:\
 #### Canada
 [Le Devoir](https://www.ledevoir.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
-[The Hill Times](https://www.hilltimes.com)\
+[The Hill Times](https://www.hilltimes.com) -
+[Winnipeg Free Press](https://www.winnipegfreepress.com)
 
 Grouped in options:\
 *Postmedia Network* sites like (opt-in to custom sites for unlisted)\

@@ -3503,6 +3503,17 @@ else if (matchDomain('washingtonpost.com')) {
   removeDOMElement(leaderboard, ...adverts);
 }
 
+else if (matchDomain('winnipegfreepress.com')) {
+  let paywall = document.querySelector('.paidaccess');
+  if (paywall) {
+    paywall.classList.remove('paidaccess');
+    let teaser = document.querySelector('#paywall-teaser');
+    removeDOMElement(teaser);
+  }
+  let ads = document.querySelectorAll('.billboard-ad-space, .ad, .article-ad, .fixed-sky');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('wsj.com')) {
   let url = window.location.href;
   if (location.href.includes('/articles/')) {

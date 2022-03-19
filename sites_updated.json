@@ -115,5 +115,15 @@
     "domain": "volksstimme.de",
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|subscriptions)-.+\\.js"
+  },
+  "Winnipeg Free Press": {
+    "domain": "winnipegfreepress.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.cxense\\.com\\/",
+    "cs_code": [{
+        "cond": ".paidaccess",
+        "rm_class": "paidaccess"
+      }
+    ]
   }
 }

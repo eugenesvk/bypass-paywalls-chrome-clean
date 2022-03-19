@@ -1822,6 +1822,11 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
+  "Winnipeg Free Press": {
+    domain: "winnipegfreepress.com",
+    allow_cookies: 1,
+    block_regex: /cdn\.cxense\.com\//
+  },
   "World Politics Review": {
     domain: "worldpoliticsreview.com",
     allow_cookies: 1,
