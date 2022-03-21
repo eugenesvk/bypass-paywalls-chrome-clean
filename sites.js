@@ -714,9 +714,6 @@ var defaultSites = {
     domain: "hbrchina.org",
     allow_cookies: 1
   },
-  "Harvard Business Review Taiwan": {
-    domain: "hbrtaiwan.com"
-  },
   "Hearst Communications (newspapers)": {
     domain: "###_usa_hearst_comm",
     group: [
