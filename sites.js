@@ -142,6 +142,7 @@ var defaultSites = {
       "dailyliberal.com.au",
       "examiner.com.au",
       "illawarramercury.com.au",
+      "newcastleherald.com.au",
       "northerndailyleader.com.au",
       "portnews.com.au",
       "standard.net.au",
@@ -150,12 +151,12 @@ var defaultSites = {
       "westernadvocate.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /cdn-au\.piano\.io\/api\/tinypass.+\.js/
+    block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|cdn\.cxense\.com\/)/
   },
   "Barron's": {
     domain: "barrons.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/.+|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
     useragent: "googlebot"
   },
   "BBC History Extra": {
@@ -2010,6 +2011,7 @@ var grouped_sites = {};
 expandSiteRules(defaultSites);
 
 // grouped domains (background)
+var au_comm_media_domains = grouped_sites['###_au_comm_media'];
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];

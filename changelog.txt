@@ -2,7 +2,9 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add NewcastleHerald.com.au
 Remove HBR Taiwan (fix obsolete)
+Fix Australian Community Media
 
 * v2.6.1.0 (2022-03-20)
 Add Franc-Tireur.fr

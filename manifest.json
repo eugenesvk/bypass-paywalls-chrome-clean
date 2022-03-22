@@ -398,6 +398,7 @@
         "*://*.nationalreview.com/*",
         "*://*.nautil.us/*",
         "*://*.neuepresse.de/*",
+        "*://*.newcastleherald.com.au/*",
         "*://*.newleftreview.org/*",
         "*://*.newrepublic.com/*",
         "*://*.newsday.com/*",
@@ -656,5 +657,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.1.0"
+    "version": "2.6.1.1"
 }

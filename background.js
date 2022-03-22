@@ -8,7 +8,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
-const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(au_comm_media_domains, fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -756,7 +756,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   var medium_custom_domains = [];
   var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com', 'towardsdatascience.com']), header_referer) && enabledSites.includes('###_medium_custom'));
   if (medium_custom_domain)
-    medium_custom_domains = customAddRules(medium_custom_domains, '', '', '', custom_referer = 'twitter');
+    medium_custom_domains = customAddRules(medium_custom_domains, '', '', '', 'twitter');
   else {
     let header_referer_hostname = urlHost(header_referer);
     if (header_referer_hostname.endsWith('.com.au')) {
