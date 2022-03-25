@@ -444,6 +444,7 @@ Grouped in options:\
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
+[Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Cicero](https://www.cicero.de) -
 [Deutsche Wirtschafts Nachrichten](https://deutsche-wirtschafts-nachrichten.de) -
@@ -457,6 +458,7 @@ Grouped in options:\
 [Krautreporter.de](https://krautreporter.de) -
 [Kurier.at](https://kurier.at) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
+[Münstersche Zeitung](https://www.muensterschezeitung.de) -
 [Neue Osnabrücker Zeitung](https://www.noz.de]) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Piqd.de](https://www.piqd.de) -
@@ -464,6 +466,7 @@ Grouped in options:\
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
 [Volksstimme](https://www.volksstimme.de) -
+[Westdeutsche Zeitung](https://www.wz.de) -
 [Westfalen-Blatt](https://www.westfalen-blatt.de) -
 [Westfälische Nachrichten](https://www.wn.de)
 

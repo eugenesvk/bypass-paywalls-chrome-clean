@@ -153,6 +153,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|cdn\.cxense\.com\/)/
   },
+  "Badische Neueste Nachrichten": {
+    allow_cookies: 1,
+    domain: "bnn.de",
+    useragent: "googlebot"
+  },
   "Barron's": {
     domain: "barrons.com",
     allow_cookies: 1,
@@ -1148,6 +1153,11 @@ var defaultSites = {
   "Mountain View Voice": {
     domain: "mv-voice.com"
   },
+  "Münstersche Zeitung": {
+    allow_cookies: 1,
+    domain: "muensterschezeitung.de",
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+  },
   "National Geographic USA": {
     domain: "nationalgeographic.com",
     allow_cookies: 1,
@@ -1829,6 +1839,11 @@ var defaultSites = {
   "WAtoday": {
     domain: "watoday.com.au",
     group_rule: "###_gr_au_nine_domains"
+  },
+  "Westdeutsche Zeitung": {
+    allow_cookies: 1,
+    domain: "wz.de",
+    useragent: "googlebot"
   },
   "Westfalen-Blatt": {
     domain: "westfalen-blatt.de",

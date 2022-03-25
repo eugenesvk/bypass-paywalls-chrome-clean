@@ -33,7 +33,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nknews.org', 'nytimes.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'kurier.at', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'muensterschezeitung.de', 'nknews.org', 'nytimes.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'westfalen-blatt.de', 'wn.de', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -699,7 +699,7 @@ else if (matchDomain('rheinpfalz.de')) {
   }
 }
 
-else if (matchDomain(['westfalen-blatt.de', 'wn.de'])) {
+else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de'])) {
   let url = window.location.href;
   if (url.includes('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed, section[class^="fp-ad"]');

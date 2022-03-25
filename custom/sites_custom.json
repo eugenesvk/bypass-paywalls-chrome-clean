@@ -25,11 +25,6 @@
     "domain": "beobachter.ch",
     "useragent": "googlebot"
   },
-  "Bnn.de": {
-    "allow_cookies": 1,
-    "domain": "bnn.de",
-    "useragent": "googlebot"
-  },
   "Brainly.com": {
     "domain": "brainly.com"
   },
@@ -123,12 +118,6 @@
     "domain": "morgenbladet.no",
     "useragent": "googlebot"
   },
-  "Muensterschezeitung.de": {
-    "allow_cookies": 1,
-    "amp_unhide": 1,
-    "domain": "muensterschezeitung.de",
-    "useragent": "googlebot"
-  },
   "Nationalobserver.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -219,10 +208,5 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "toledoblade.com"
-  },
-  "Wz.de": {
-    "allow_cookies": 1,
-    "domain": "wz.de",
-    "useragent": "googlebot"
   }
 }

@@ -1,29 +1,8 @@
 {
-  "American Affairs": {
-    "domain": "americanaffairsjournal.org",
+  "Badische Neueste Nachrichten": {
     "allow_cookies": 1,
-    "block_regex": "\\/americanaffairsjournal\\.org\\/wp-content\\/mu-plugins\\/app\\/src\\/paywall\\/paywall\\.js"
-  },
-  "Bloomberg Quint": {
-    "domain": "bloombergquint.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-((sticky-)?ad|subscriptions)-.+\\.js)",
-    "amp_unhide": 1
-  },
-  "Causeur": {
-    "domain": "causeur.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/"
-  },
-  "Connaissance des Arts": {
-    "domain": "connaissancedesarts.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.connaissancedesarts\\.com\\/wp-content\\/cache\\/.+\\.js"
-  },
-  "El Tiempo": {
-    "domain": "eltiempo.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/"
+    "domain": "bnn.de",
+    "useragent": "googlebot"
   },
   "Financial Times (not Chinese)": {
     "domain": "ft.com",
@@ -45,48 +24,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
-  "India Today": {
-    "domain": "indiatoday.in",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|analytics)-.+\\.js",
-    "amp_redirect": {
-      "paywall": "#csc-paywall"
-    }
-  },
-  "Internazionale.it": {
-    "domain": "internazionale.it",
-    "allow_cookies": 1,
-    "block_regex": "\\.internazionale\\.it\\/templates_js_ajax\\.inc\\.php"
-  },
-  "La Montagne": {
-    "domain": "lamontagne.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
-  "La Nouvelle République du Centre-Ouest": {
-    "domain": "lanouvellerepublique.fr",
-    "allow_cookies": 1,
-    "block_regex": "(\\.weborama\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
-  },
-  "La Opinión de Málaga": {
-    "domain": "laopiniondemalaga.es",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|analytics)-.+\\.js)"
-  },
-  "La Opinión de Murcia": {
-    "domain": "laopiniondemurcia.es",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|analytics)-.+\\.js)"
-  },
-  "Les Échos": {
-    "domain": "lesechos.fr",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|analytics)-.+\\.js)",
-    "amp_redirect": {
-      "paywall": ".bloc-paywall"
-    },
-    "amp_unhide": 1
-  },
   "Mid-Day": {
     "domain": "mid-day.com",
     "allow_cookies": 1,
@@ -96,25 +33,19 @@
     },
     "amp_unhide": 1
   },
-  "RugbyPass": {
-    "domain": "rugbypass.com",
+  "Münstersche Zeitung": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "cs_code": [{
-        "cond": ".premium-fold-bottom",
-        "rm_class": "premium-fold-bottom"
-      }
-    ]
+    "domain": "muensterschezeitung.de",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
+    "amp_redirect": {
+      "paywall": ".fp-article-paywall"
+    },
+    "amp_unhide": 1
   },
-  "The Economist": {
-    "domain": "economist.com",
+  "Westdeutsche Zeitung": {
     "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad)-.+\\.js)"
-  },
-  "Volksstimme": {
-    "domain": "volksstimme.de",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|subscriptions)-.+\\.js"
+    "domain": "wz.de",
+    "useragent": "googlebot"
   },
   "Winnipeg Free Press": {
     "domain": "winnipegfreepress.com",

@@ -2,7 +2,10 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Badische Neueste Nachrichten
+Add Muenstersche Zeitung
 Add NewcastleHerald.com.au
+Add Westdeutsche Zeitung
 Remove HBR Taiwan (fix obsolete)
 Fix Australian Community Media
 
