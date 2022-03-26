@@ -24,6 +24,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
+  "Le Nouvel Economiste": {
+    "domain": "lenouveleconomiste.fr",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Mid-Day": {
     "domain": "mid-day.com",
     "allow_cookies": 1,

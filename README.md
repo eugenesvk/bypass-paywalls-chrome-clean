@@ -388,6 +388,7 @@ Grouped in options:\
 [La Tribune](https://www.latribune.fr) -
 [Le Journal du Dimanche](https://lejdd.fr) -
 [Le Journal du Net](https://www.journaldunet.com) -
+[Le Nouvel Economiste](https://www.lenouveleconomiste.fr) -
 [Le Parisien](https://www.leparisien.fr) -
 [Le Télégramme](https://www.letelegramme.fr) -
 [Le Vif](https://www.levif.be) -

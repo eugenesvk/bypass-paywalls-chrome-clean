@@ -1392,7 +1392,7 @@ else if (matchDomain('lequipe.fr')) {
               }
             }
           }
-          article_dom = parser.parseFromString('<div style="margin:20px; font-famile:"DINNextLTPro-Regular",sans-serif; fot-size:18px;">' + DOMPurify.sanitize(article_text) + '</div>', 'text/html');
+          article_dom = parser.parseFromString('<div style="margin:20px; font-family:DINNextLTPro-Regular,sans-serif; font-size:18px;">' + DOMPurify.sanitize(article_text) + '</div>', 'text/html');
           article.appendChild(article_dom.querySelector('div'));
         }
       } else

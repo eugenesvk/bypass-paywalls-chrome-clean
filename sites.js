@@ -963,8 +963,14 @@ var defaultSites = {
     domain: "journaldunet.com",
     allow_cookies: 1
   },
+  "Le Nouvel Economiste": {
+    domain: "lenouveleconomiste.fr",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Le Parisien": {
     domain: "leparisien.fr",
+    allow_cookies: 1,
     block_regex: /\.tinypass\.com\//,
     useragent: "googlebot"
   },
