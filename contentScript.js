@@ -2797,6 +2797,27 @@ else if (matchDomain('inkl.com')) {
   // plus code in contentScript_once.js
 }
 
+else if (matchDomain('ipolitics.ca')) {
+  let login = document.querySelector('div.login');
+  if (login) {
+    removeDOMElement(login);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script && dompurify_loaded) {
+      let json = JSON.parse(json_script.innerText);
+      if (json && json.props.pageProps.post.content) {
+        let article_new = json.props.pageProps.post.content;
+        let article = document.querySelector('.post-header');
+        if (article) {
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          article.appendChild(content_new);
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('jpost.com')) {
   let premium_banners = document.querySelectorAll('.hide-for-premium, #hiddenPremiumForm, #hiddenLink');
   removeDOMElement(...premium_banners);

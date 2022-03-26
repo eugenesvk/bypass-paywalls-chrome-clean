@@ -300,6 +300,7 @@ Grouped in options:\
 [The Virginian-Pilot](https://www.pilotonline.com)
 
 #### Canada
+[iPolitics](https://www.ipolitics.ca) -
 [Le Devoir](https://www.ledevoir.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
 [The Hill Times](https://www.hilltimes.com) -

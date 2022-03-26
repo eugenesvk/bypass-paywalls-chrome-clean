@@ -824,6 +824,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.internazionale\.it\/templates_js_ajax\.inc\.php/
   },
+  "iPolitics.ca": {
+    domain: "ipolitics.ca",
+    allow_cookies: 1
+  },
   "Irish Independent (setCookie opt-in)": {
     domain: "independent.ie",
     allow_cookies: 1,

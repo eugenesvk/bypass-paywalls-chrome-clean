@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Badische Neueste Nachrichten
+Add iPolitics.ca
 Add LeNouvelEconomiste.fr
 Add Muenstersche Zeitung
 Add NewcastleHerald.com.au

@@ -290,6 +290,7 @@
         "*://*.intelligentinvestor.com.au/*",
         "*://*.internazionale.it/*",
         "*://*.intrafish.com/*",
+        "*://*.ipolitics.ca/*",
         "*://*.italian.tech/*",
         "*://*.japantimes.co.jp/*",
         "*://*.journaldunet.com/*",
@@ -661,5 +662,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.1.3"
+    "version": "2.6.1.4"
 }
