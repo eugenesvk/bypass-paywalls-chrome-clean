@@ -499,6 +499,7 @@
         "*://*.spectator.co.uk/*",
         "*://*.spectator.com.au/*",
         "*://*.spectatorworld.com/*",
+        "*://*.spglobal.com/*",
         "*://*.standard.net.au/*",
         "*://*.star-telegram.com/*",
         "*://*.staradvertiser.com/*",
@@ -662,5 +663,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.1.4"
+    "version": "2.6.1.5"
 }

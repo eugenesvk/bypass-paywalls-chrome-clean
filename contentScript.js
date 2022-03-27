@@ -3161,6 +3161,14 @@ else if (matchDomain('sofrep.com')) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain('spglobal.com')) {
+  let overlay = document.querySelector('.article__overlay');
+  removeDOMElement(overlay);
+  let html_noscroll = document.querySelector('html[class]');
+  if (html_noscroll)
+    html_noscroll.removeAttribute('class');
+}
+
 else if (matchDomain('staradvertiser.com')) {
   let url = window.location.href.split('?')[0];
   if (url.endsWith('/amp/')) {

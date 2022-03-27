@@ -98,6 +98,7 @@ _* free/cached articles only._
 [MarketWatch](https://www.marketwatch.com) -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
 [Quartz](https://qz.com)* -
+[S&P Global](https://www.spglobal.com) -
 [Seeking Alpha](https://seekingalpha.com) -
 [Stock News](https://stocknews.com) -
 [The Business Journals](https://www.bizjournals.com) -

@@ -1383,6 +1383,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "S&P Global": {
+    domain: "spglobal.com",
+    allow_cookies: 1,
+    block_regex: /\.blueconic\.net\//
+  },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
     block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/

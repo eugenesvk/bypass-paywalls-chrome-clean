@@ -7,6 +7,7 @@ Add iPolitics.ca
 Add LeNouvelEconomiste.fr
 Add Muenstersche Zeitung
 Add NewcastleHerald.com.au
+Add S&P Global
 Add Westdeutsche Zeitung
 Remove HBR Taiwan (fix obsolete)
 Fix Australian Community Media

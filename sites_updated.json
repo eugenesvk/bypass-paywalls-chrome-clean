@@ -47,6 +47,19 @@
     },
     "amp_unhide": 1
   },
+  "S&P Global": {
+    "domain": "spglobal.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.blueconic\\.net\\/",
+    "cs_code": [{
+        "cond": ".article__overlay",
+        "rm_elem": 1
+      }, {
+        "cond": "html[class]",
+        "rm_attrib": "class"
+      }
+    ]
+  },
   "Westdeutsche Zeitung": {
     "allow_cookies": 1,
     "domain": "wz.de",
