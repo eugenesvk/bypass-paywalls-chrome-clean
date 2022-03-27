@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.2.0 (2022-03-27)
 Add Badische Neueste Nachrichten
 Add iPolitics.ca
 Add LeNouvelEconomiste.fr
