@@ -658,14 +658,17 @@ var defaultSites = {
   "Grupo Prensa Ibérica": {
     domain: "###_es_epiberica",
     group: [
+      "diariocordoba.com",
       "diariodeibiza.es",
       "diariodemallorca.es",
       "eldia.es",
       "elperiodicomediterraneo.com",
       "farodevigo.es",
       "informacion.es",
+      "laopinioncoruna.es",
       "laopiniondemalaga.es",
       "laopiniondemurcia.es",
+      "laopiniondezamora.es",
       "laprovincia.es",
       "levante-emv.com",
       "lne.es"

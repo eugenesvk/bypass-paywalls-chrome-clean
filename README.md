@@ -575,6 +575,7 @@ Grouped in options:\
 
 Grouped in options:\
 *Grupo Prensa Ibérica* sites like\
+[Diario Córdoba](https://www.diariocordoba.com) -
 [Diario de Ibiza](https://www.diariodeibiza.es) -
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
@@ -582,8 +583,10 @@ Grouped in options:\
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -
 [La Nueva España](https://www.lne.es) -
+[La Opinión A Coruña](https://www.laopinioncoruna.es) -
 [La Opinión de Málaga](https://www.laopiniondemalaga.es) -
 [La Opinión de Murcia](https://www.laopiniondemurcia.es) -
+[La Opinión de Zamora](https://www.laopiniondezamora.es) -
 [La Provincia](https://www.laprovincia.es) -
 [Levante-EMV](https://www.levante-emv.com)\
 *Grupo Vocento* (ABC regional) sites like\

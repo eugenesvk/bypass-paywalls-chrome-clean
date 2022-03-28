@@ -2,6 +2,9 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Diario Cordoba
+Add La Opinion A Coruna
+Add La Opinion de Zamora
 
 * v2.6.2.0 (2022-03-27)
 Add Badische Neueste Nachrichten

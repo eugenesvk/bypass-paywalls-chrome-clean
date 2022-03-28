@@ -163,6 +163,7 @@
         "*://*.deutsche-wirtschafts-nachrichten.de/*",
         "*://*.df.cl/*",
         "*://*.di.se/*",
+        "*://*.diariocordoba.com/*",
         "*://*.diariocorreo.pe/*",
         "*://*.diariodeibiza.es/*",
         "*://*.diariodemallorca.es/*",
@@ -316,8 +317,10 @@
         "*://*.lanazione.it/*",
         "*://*.lanouvellerepublique.fr/*",
         "*://*.lanuovasardegna.it/*",
+        "*://*.laopinioncoruna.es/*",
         "*://*.laopiniondemalaga.es/*",
         "*://*.laopiniondemurcia.es/*",
+        "*://*.laopiniondezamora.es/*",
         "*://*.laprovincia.es/*",
         "*://*.lardennais.fr/*",
         "*://*.larepubliquedespyrenees.fr/*",
@@ -663,5 +666,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.2.0"
+    "version": "2.6.2.1"
 }
