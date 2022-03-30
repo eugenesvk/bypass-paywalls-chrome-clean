@@ -779,7 +779,8 @@ else
 
 if (matchDomain(fi_alma_talent_domains)) {
   let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad');
-  removeDOMElement(...ads);
+  for (let ad of ads)
+    ad.setAttribute('style', 'display:none;');
   if (matchDomain('iltalehti.fi')) {
     let paywall = document.querySelector('div.faded-text');
     if (paywall && dompurify_loaded) {
