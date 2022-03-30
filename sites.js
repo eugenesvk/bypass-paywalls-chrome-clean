@@ -1062,7 +1062,7 @@ var defaultSites = {
       "ostsee-zeitung.de"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+    block_regex: /(\.tinypass\.com\/|\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
   },
   "Mainichi Shimbun": {
     domain: "mainichi.jp",

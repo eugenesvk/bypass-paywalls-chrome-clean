@@ -38,6 +38,18 @@ if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
 
+function getArticleJsonScript() {
+  let scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  let json_script;
+  for (let script of scripts) {
+    if (script.innerText.includes('articleBody')) {
+      json_script = script;
+      break;
+    }
+  }
+  return json_script;
+}
+
 var bg2csData;
 
 // custom/updated sites: load text from json
@@ -49,14 +61,9 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
     let paywall = document.querySelector(paywall_sel);
     if (paywall) {
       removeDOMElement(paywall);
-      let scripts = document.querySelectorAll('script[type="application/ld+json"]');
-      let json;
-      for (let script of scripts) {
-        if (script.innerText.includes('articleBody'))
-          json = script;
-      }
-      if (json) {
-        let json_text = JSON.parse(json.text).articleBody;
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json_text = JSON.parse(json_script.text).articleBody;
         let content = document.querySelector(article_sel);
         if (json_text && content) {
           let parser = new DOMParser();
@@ -629,14 +636,9 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
   let paywall = document.querySelector('.pay.wall');
   if (paywall) {
     removeDOMElement(paywall);
-    let scripts = document.querySelectorAll('script[type="application/ld+json"]');
-    let json;
-    for (let script of scripts) {
-      if (script.innerText.includes('articleBody'))
-        json = script;
-    }
-    if (json) {
-      let json_text = JSON.parse(json.text).articleBody;
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json_text = JSON.parse(json_script.text).articleBody;
       json_text = parseHtmlEntities(json_text);
       json_text = breakText(json_text);
       let region = 'ortsmarke';
@@ -718,24 +720,55 @@ else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de']))
   }
 }
 
-else if ((domain = matchDomain(de_madsack_domains)) || document.querySelector('link[rel="preload"][href="https://static.rndtech.de/cmp/1.x.x.js"]')) {
-  let url = window.location.href;
-  if (!url.includes(domain + '/amp/')) {
+else if (matchDomain(de_madsack_domains) || document.querySelector('link[rel="preload"][href="https://static.rndtech.de/cmp/1.x.x.js"]') || document.querySelector('a.pdb-footer-meta-items-item-link[href="http://www.madsack.de/"]')) {
+  if (!(window.location.pathname.startsWith('/amp/') || window.location.search.startsWith('?outputType=valid_amp'))) {
     let paidcontent_intro = document.querySelector('div.pdb-article-body-paidcontentintro');
     if (paidcontent_intro) {
       paidcontent_intro.classList.remove('pdb-article-body-paidcontentintro');
-      let json_script = document.querySelector('div.pdb-article > script[type="application/ld+json"]');
-      let json_text = JSON.parse(json_script.text).articleBody;
-      if (json_text) {
-        let pdb_richtext_field = document.querySelectorAll('div.pdb-richtext-field');
-        if (pdb_richtext_field[1])
-          pdb_richtext_field[1].innerText = json_text;
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json_text = JSON.parse(json_script.text).articleBody;
+        if (json_text) {
+          let pdb_richtext_field = document.querySelectorAll('div.pdb-richtext-field');
+          if (pdb_richtext_field[1])
+            pdb_richtext_field[1].innerText = json_text;
+        }
       }
       let paidcontent_reg = document.querySelector('div.pdb-article-paidcontent-registration');
       removeDOMElement(paidcontent_reg);
+    } else {
+      let paywall = document.querySelector('div.paywall');
+      if (paywall) {
+        let gradient = document.querySelector('div[class^="ArticleContentLoaderstyled__Gradient"]');
+        let loading = document.querySelector('#article > svg');
+        removeDOMElement(paywall, gradient, loading);
+        let article = document.querySelector('div[class*="ArticleTeaserContainer"] > div:not([class])');
+        let json_script = getArticleJsonScript();
+        if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (article && json) {
+            let json_text = json.articleBody;
+            let article_new = document.createElement('span');
+            let par = article.querySelector('p');
+            let par_class = par ? par.getAttribute('class') : '';
+            article_new.setAttribute('class', par_class);
+            article_new.innerText = json_text;
+            article.innerText = '';
+            if (json.articleSection) {
+              let json_section = json.articleSection;
+              let article_section = document.querySelector('span');
+              article_section.setAttribute('class', par_class);
+              article_section.setAttribute('style', 'font-weight: bold;');
+              article_section.innerText = json_section + '. ';
+              article.appendChild(article_section);
+            }
+            article.appendChild(article_new);
+          }
+        }
+      }
     }
   } else {
-    amp_unhide_subscr_section('.pdb-ad-container');
+    amp_unhide_subscr_section('.pdb-ad-container, amp-embed');
   }
 }
 
@@ -2437,14 +2470,9 @@ else if (matchDomain('business-standard.com')) {
   let p_content = document.querySelector('span.p-content.paywall');
   if (p_content) {
     p_content.classList.remove('paywall');
-    let scripts = document.querySelectorAll('script[type="application/ld+json"]');
-    let json;
-    for (let script of scripts) {
-      if (script.innerText.includes('articleBody'))
-        json = script;
-    }
-    if (json) {
-      let json_text = JSON.parse(json.text.replace(/(\r|\n|\t)/gm, ''))[0].articleBody;
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json_text = JSON.parse(json_script.text.replace(/(\r|\n|\t)/gm, ''))[0].articleBody;
       json_text = parseHtmlEntities(json_text);
       json_text = json_text.replace(/(?:^|[\w\"\'\’])(\.|\?|!)(?=[A-Z\"\”\“\‘\’\'][A-Za-zÀ-ÿ\"\”\“\‘\’\']{1,})/gm, "$&\r\n\r\n") + '\r\n\r\n';
       let article = document.createElement('div');
@@ -3643,9 +3671,8 @@ else if ((domain = matchDomain(usa_mcc_domains)) || document.querySelector('scri
   }
 }
 
-else if ((domain = matchDomain(usa_mng_domains)) || (window.location.href.match(/\.com\/(\d){4}\/(\d){2}\/(\d){2}\/.+\/amp\//) && document.querySelector('amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))) {
-  let url = window.location.href;
-  if (url.split('?')[0].endsWith('/amp/')) {
+else if (matchDomain(usa_mng_domains) || (window.location.href.match(/\.com\/(\d){4}\/(\d){2}\/(\d){2}\/.+\/amp\//) && document.querySelector('amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))) {
+  if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');
   }
 }
