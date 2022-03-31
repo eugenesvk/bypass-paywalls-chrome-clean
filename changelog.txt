@@ -6,6 +6,7 @@ Add Diario Cordoba
 Add La Opinion A Coruna
 Add La Opinion de Zamora
 Fix Alma Talent sites (js-ads)
+Fix Australia News Corp (amp)
 Fix Madsack Mediengruppe
 
 * v2.6.2.0 (2022-03-27)

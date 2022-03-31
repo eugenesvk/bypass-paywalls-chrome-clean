@@ -302,10 +302,10 @@ else {
       let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
       let comments;
       if (window.location.hostname.startsWith('amp.')) {
-        amp_unhide_access_hide('="access AND subscriber"', '', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#story-comments, .comments-wrapper');
       } else if (window.location.href.includes('?amp')) {
-        amp_unhide_access_hide('="subscriber AND status=\'logged-in\'"', '="status=\'logged-out\'"', amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#comments-load');
         let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
         removeDOMElement(...amp_iframe_sizers)

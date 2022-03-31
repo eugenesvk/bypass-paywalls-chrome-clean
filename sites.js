@@ -129,7 +129,7 @@ var defaultSites = {
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",
