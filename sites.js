@@ -1059,7 +1059,8 @@ var defaultSites = {
       "lvz.de",
       "maz-online.de",
       "neuepresse.de",
-      "ostsee-zeitung.de"
+      "ostsee-zeitung.de",
+      "rnd.de"
     ],
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/

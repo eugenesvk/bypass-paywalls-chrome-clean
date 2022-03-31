@@ -7,7 +7,7 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
-var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de'];
+var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicomediterraneo.com', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
@@ -720,7 +720,7 @@ else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de']))
   }
 }
 
-else if (matchDomain(de_madsack_domains) || document.querySelector('link[rel="preload"][href="https://static.rndtech.de/cmp/1.x.x.js"]') || document.querySelector('a.pdb-footer-meta-items-item-link[href="http://www.madsack.de/"]')) {
+else if (matchDomain(de_madsack_domains) || document.querySelector('link[rel="preload"][href="https://static.rndtech.de/cmp/1.x.x.js"]') || document.querySelector('li > a[href*="//www.madsack.de/"]')) {
   if (!(window.location.pathname.startsWith('/amp/') || window.location.search.startsWith('?outputType=valid_amp'))) {
     let paidcontent_intro = document.querySelector('div.pdb-article-body-paidcontentintro');
     if (paidcontent_intro) {

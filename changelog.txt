@@ -5,6 +5,7 @@ Post-release
 Add Diario Cordoba
 Add La Opinion A Coruna
 Add La Opinion de Zamora
+Add RedaktionsNetzwerk Deutschland
 Fix Alma Talent sites (js-ads)
 Fix Australia News Corp (amp)
 Fix Madsack Mediengruppe

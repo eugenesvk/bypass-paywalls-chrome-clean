@@ -775,7 +775,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       else {
         // block script for additional Madsack/RND sites (opt-in to custom sites)
         var de_madsack_domains = grouped_sites['###_de_madsack'];
-        var de_rnd_domain = (matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de', 'rnd.de']), header_referer) && enabledSites.includes('###_de_madsack'));
+        var de_rnd_domain = (((matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type)) || (details.url.includes('.images.arcpublishing.com/madsack/') && ['image'].includes(details.type))) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de']), header_referer) && enabledSites.includes('###_de_madsack'));
         if (de_rnd_domain)
           de_madsack_domains = customAddRules(de_madsack_domains, true, blockedRegexes['haz.de']);
       }

@@ -492,7 +492,9 @@ Grouped in options:\
 [Lübecker Nachrichten](https://www.ln-online.de) -
 [Märkische Allgemeine](https://www.maz-online.de) -
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
-[Ostsee-Zeitung](https://www.ostsee-zeitung.de)
+[Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
+[RedaktionsNetzwerk Deutschland](https://www.rnd.de)
+
 
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -
