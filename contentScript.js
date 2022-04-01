@@ -8,7 +8,7 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
-var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicomediterraneo.com', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
+var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicomediterraneo.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
@@ -130,7 +130,7 @@ function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes 
 }
 
 function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
-  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]');
+  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]:not([amp-access="error"], [amp-access^="message"])');
   for (let elem of access_hide)
     elem.removeAttribute('amp-access-hide');
   if (amp_access_not) {
@@ -1022,7 +1022,7 @@ else if (matchDomain('nyteknik.se')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain('abc.es')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -1163,8 +1163,10 @@ else if (matchDomain(es_epiberica_domains)) {
       truncated.classList.remove('article-body--truncated');
     amp_unhide_access_hide('="NOT access"', '="access"');
     amp_unhide_access_hide('="FALSE"');
+  } else if (window.location.hostname === 'amp.epe.es') {
+    amp_unhide_access_hide('="loggedIn"', '="NOT loggedIn"', 'amp-ad, amp-embed, amp-next-page');
   } else {
-    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.article-sidebar--sticky');
+    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.sidebar--sticky__space, div[data-bbnx-id*="cxense"]');
     removeDOMElement(...ads);
   }
 }
@@ -3627,7 +3629,7 @@ else if (matchDomain('wsj.com')) {
     if (close_button)
       close_button.click();
   }
-  let wsj_ads = document.querySelectorAll('div[class*="wsj-ad"]');
+  let wsj_ads = document.querySelectorAll('div[class*="wsj-ad"], div[class*="BodyAdWrapper"]');
   removeDOMElement(...wsj_ads);
   if (url.includes('/amp/')) {
     let masthead_link = document.querySelector('div.masthead > a[href*="/articles/"]');

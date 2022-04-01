@@ -662,7 +662,9 @@ var defaultSites = {
       "diariodeibiza.es",
       "diariodemallorca.es",
       "eldia.es",
+      "elperiodicodearagon.com",
       "elperiodicomediterraneo.com",
+      "epe.es",
       "farodevigo.es",
       "informacion.es",
       "laopinioncoruna.es",
@@ -674,7 +676,7 @@ var defaultSites = {
       "lne.es"
     ],
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|analytics)-.+\.js)/
+    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|analytics)-.+\.js)/
   },
   "Grupo Vocento": {
     domain: "###_es_grupo_vocento",

@@ -581,6 +581,8 @@ Grouped in options:\
 [Diario de Ibiza](https://www.diariodeibiza.es) -
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
+[El Periódico de Aragón](https://www.elperiodicodearagon.com) -
+[El Periódico de España](https://www.ese.es) -
 [El Periódico Mediterráneo](https://www.elperiodicomediterraneo.com) -
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -

@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Diario Cordoba
+Add El Periodico de Aragon
+Add El Periodico de Espana
 Add La Opinion A Coruna
 Add La Opinion de Zamora
 Add RedaktionsNetzwerk Deutschland
