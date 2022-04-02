@@ -61,6 +61,16 @@ else if (matchDomain('nyteknik.se')) {
   }, 2000);
 }
 
+else if (matchDomain('nzherald.co.nz')) {
+  function nzherald_main() {
+    if (window.Fusion)
+      window.Fusion.globalContent.isPremium = false;
+  }
+  window.setTimeout(function () {
+    insert_script(nzherald_main);
+  }, 100);
+}
+
 else if (matchDomain('gitlab.com')) {
   window.setTimeout(function () {
     let bio = document.querySelector('div.profile-user-bio');
@@ -120,4 +130,15 @@ function waitDOMElement(selector, tagName = '', callback, multiple = false) {
     subtree: true,
     childList: true
   });
+}
+
+function insert_script(func, insertAfterDom) {
+  let bpc_script = document.querySelector('script#bpc_script');
+  if (!bpc_script) {
+    let script = document.createElement('script');
+    script.setAttribute('id', 'bpc_script');
+    script.appendChild(document.createTextNode('(' + func + ')();'));
+    let insertAfter = insertAfterDom ? insertAfterDom : (document.body || document.head || document.documentElement);
+    insertAfter.appendChild(script);
+  }
 }

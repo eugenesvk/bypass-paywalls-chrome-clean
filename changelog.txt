@@ -11,6 +11,7 @@ Add RedaktionsNetzwerk Deutschland
 Fix Alma Talent sites (js-ads)
 Fix Australia News Corp (amp)
 Fix Madsack Mediengruppe
+Fix NzHerald
 
 * v2.6.2.0 (2022-03-27)
 Add Badische Neueste Nachrichten

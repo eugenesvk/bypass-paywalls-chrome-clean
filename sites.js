@@ -1219,6 +1219,8 @@ var defaultSites = {
   },
   "New Zealand Herald": {
     domain: "nzherald.co.nz",
+    allow_cookies: 1,
+    block_regex: /\.nzherald\.co\.nz\/pf\/resources\/(dist\/)?scripts\/(prebid|global-ad-script|tracking\/.+)\.js/,
     useragent: "bingbot"
   },
   "Newsday": {
