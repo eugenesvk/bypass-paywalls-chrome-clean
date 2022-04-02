@@ -991,7 +991,7 @@ else if (matchDomain('hs.fi')) {
                 img.setAttribute('style', 'width:468px !important');
                 elem.appendChild(img);
                 caption = document.createElement('figcaption');
-                caption_text = slide.split('text:')[1].split(',"text-style"')[0];
+                caption_text = slide.includes('text:') ? slide.split('text:')[1].split(',"text-style"')[0] : slide.split('caption:')[1].split('",')[0];
                 if (caption_text.length)
                   caption_text = caption_text.slice(1, caption_text.length - 1);
                 par_html = parser.parseFromString('<div>' + DOMPurify.sanitize(caption_text) + '</div>', 'text/html');
