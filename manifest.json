@@ -42,7 +42,7 @@
             "*://*.inkl.com/*",
             "*://*.nationalgeographic.com/*",
             "*://*.nyteknik.se/*",
-             "*://*.nzherald.co.nz/*",
+            "*://*.nzherald.co.nz/*",
             "*://*.gitlab.com/magnolia1234"
         ],
         "run_at": "document_start",
@@ -670,5 +670,5 @@
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.2.6"
+    "version": "2.6.3.0"
 }
