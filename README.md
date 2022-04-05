@@ -543,14 +543,6 @@ Grouped in options:\
 [Vrij Nederland](https://www.nl.nl)
 
 Grouped in options:\
-*Algemeen Dagblad Regional (ADR)* sites like
-[BN DeStem](https://www.bndestem.nl) -
-[Brabants Dagblad](https://www.bd.nl) -
-[Eindhovens Dagblad](https://www.ed.nl) -
-[Gelderlander](https://www.gelderlander.nl) -
-[PZC](https://www.pzc.nl) -
-[Stentor](https://www.destentor.nl) -
-[Tubantia](https://tubantia.nl)\
 *Mediahuis Nederland Regional* sites like\
 [Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -

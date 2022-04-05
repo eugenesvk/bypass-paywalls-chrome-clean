@@ -29,19 +29,6 @@ var defaultSites = {
     domain: "adweek.com",
     block_regex: /\.lightboxcdn\.com\//
   },
-  "Algemeen Dagblad (regional free premium articles only)": {
-    domain: "###_nl_ad_region",
-    group: [
-      "bd.nl",
-      "bndestem.nl",
-      "destentor.nl",
-      "ed.nl",
-      "gelderlander.nl",
-      "pzc.nl",
-      "tubantia.nl"
-    ],
-    remove_cookies_select_drop: ["temptationTrackingId"]
-  },
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
     allow_cookies: 1,
