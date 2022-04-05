@@ -2731,6 +2731,23 @@ else if (matchDomain('hbrchina.org')) {
     div_hidden.removeAttribute('style');
 }
 
+else if (matchDomain('hilltimes.com')) {
+  let paywall = document.querySelector('div.paywallcont');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text).filter(x => x.articleBody)[0];
+      if (json) {
+        let json_text = json.articleBody.replace(/&nbsp;/g, '').replace(/(\.|\%)\s{3,}/g, "$&\r\n\r\n");
+        let content = document.querySelector('div#xorg');
+        if (json_text && content)
+          content.innerText = '\r\n' + json_text;
+      }
+    }
+  }
+}
+
 else if (matchDomain('hindustantimes.com')) {
   let paywall = document.querySelector('.freemium-card');
   if (paywall) {
