@@ -575,6 +575,7 @@ Grouped in options:\
 [El Día](https://www.eldia.es) -
 [El Periódico de Aragón](https://www.elperiodicodearagon.com) -
 [El Periódico de España](https://www.ese.es) -
+[El Periódico Extremadura](https://www.elperiodicoextremadura.com) -
 [El Periódico Mediterráneo](https://www.elperiodicomediterraneo.com) -
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -

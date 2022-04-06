@@ -2,8 +2,10 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add El Periodico Extremadura
 Remove Algemeen Dagblad Regional (fix obsolete)
 Fix The Hill Times (text)
+Fix (custom) group-sites (limit identify on image)
 
 * v2.6.3.0 (2022-04-03)
 Add Diario Cordoba
@@ -1017,7 +1019,7 @@ Fix LaDepeche.fr
 Fix LesEchos.fr (premium)
 Fix Miami Herald
 Add changelog & update json links (raw)
-Fix mismatch domain with url query string (use matchDomain also in background.js)
+Fix mismatch domain with url query string
 Resynch Chrome/Firefox code
 
 * v1.7.0.5 (2020-04-28)

@@ -195,6 +195,7 @@
         "*://*.elpais.com/*",
         "*://*.elperiodico.com/*",
         "*://*.elperiodicodearagon.com/*",
+        "*://*.elperiodicoextremadura.com/*",
         "*://*.elperiodicomediterraneo.com/*",
         "*://*.eltiempo.com/*",
         "*://*.entrepreneur.com/*",
@@ -658,10 +659,9 @@
         "*://*.postmedia.digital/*",
         "*://*.prcdn.co/*",
         "*://*.repstatic.it/*",
-        "*://*.rndtech.de/*",
         "*://*.sanoma-sndp.fi/*",
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*"
     ],
-    "version": "2.6.3.1"
+    "version": "2.6.3.2"
 }

@@ -8,7 +8,8 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
-var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicomediterraneo.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
+var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
+var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
@@ -720,7 +721,7 @@ else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de']))
   }
 }
 
-else if (matchDomain(de_madsack_domains) || document.querySelector('link[rel="preload"][href="https://static.rndtech.de/cmp/1.x.x.js"]') || document.querySelector('li > a[href*="//www.madsack.de/"]')) {
+else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domains)) {
   if (!(window.location.pathname.startsWith('/amp/') || window.location.search.startsWith('?outputType=valid_amp'))) {
     let paidcontent_intro = document.querySelector('div.pdb-article-body-paidcontentintro');
     if (paidcontent_intro) {
@@ -767,7 +768,7 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('link[rel="pr
         }
       }
     }
-  } else {
+  } else if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_subscr_section('.pdb-ad-container, amp-embed');
   }
 }
@@ -1022,7 +1023,7 @@ else if (matchDomain('nyteknik.se')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain('abc.es')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -3655,9 +3656,13 @@ else if (matchDomain('wsj.com')) {
   }
 }
 
-else if (matchDomain(usa_lee_ent_domains)) {
-  if (window.location.pathname.endsWith('.amp.html'))
+else if (matchDomain(usa_lee_ent_domains) || (window.location.pathname.endsWith('.amp.html') && document.querySelector('div.site-copyright>p> a[href^="https://bloxcms.com"]'))) {
+  if (window.location.pathname.endsWith('.amp.html')) {
     amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"');
+    let elem_hidden = document.querySelectorAll('html[class], body[class]');
+    for (let elem of elem_hidden)
+      elem.removeAttribute('class');
+  }
 }
 
 else if ((domain = matchDomain(usa_mcc_domains)) || document.querySelector('script[src^="https://media.mcclatchyinteractive.com/"]') || (window.location.href.match(/\/\/amp\..+\.com\/(.+\/)?article(\d){8,}\.html/) && document.querySelector('a[href^="https://classifieds.mcclatchy.com/"]'))) {

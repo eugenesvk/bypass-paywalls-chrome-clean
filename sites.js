@@ -650,6 +650,7 @@ var defaultSites = {
       "diariodemallorca.es",
       "eldia.es",
       "elperiodicodearagon.com",
+      "elperiodicoextremadura.com",
       "elperiodicomediterraneo.com",
       "epe.es",
       "farodevigo.es",

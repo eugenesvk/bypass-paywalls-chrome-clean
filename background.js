@@ -1,5 +1,3 @@
-/* Please respect alphabetical order when adding a site in any list */
-
 'use strict';
 var ext_api = (typeof browser === 'object') ? browser : chrome;
 var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
@@ -752,6 +750,8 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     return custom_domains;
   }
 
+  if (!matchUrlDomain(excludedSites, header_referer)) {
+
   // remove cookies for sites medium platform (custom domains)
   var medium_custom_domains = [];
   var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com', 'towardsdatascience.com']), header_referer) && enabledSites.includes('###_medium_custom'));
@@ -775,8 +775,9 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       else {
         // block script for additional Madsack/RND sites (opt-in to custom sites)
         var de_madsack_domains = grouped_sites['###_de_madsack'];
-        var de_rnd_domain = (((matchUrlDomain('rndtech.de', details.url) && ['script'].includes(details.type)) || (details.url.includes('.images.arcpublishing.com/madsack/') && ['image'].includes(details.type))) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de']), header_referer) && enabledSites.includes('###_de_madsack'));
-        if (de_rnd_domain)
+        var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
+        var de_madsack_domain = (matchUrlDomain(de_madsack_custom_domains, details.url) && !matchUrlDomain(de_madsack_domains, header_referer) && enabledSites.includes('###_de_madsack'));
+        if (de_madsack_domain)
           de_madsack_domains = customAddRules(de_madsack_domains, true, blockedRegexes['haz.de']);
       }
     } else if (header_referer_hostname.endsWith('.fi')) {
@@ -788,7 +789,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
       // block TinyPass for Postmedia Network sites
       var ca_postmedia_domains = grouped_sites['###_ca_postmedia'];
-      var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['image'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
+      var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
       if (ca_postmedia_domain)
         ca_postmedia_domains = customAddRules(ca_postmedia_domains, true, blockedRegexes['nationalpost.com']);
       else {
@@ -805,15 +806,15 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
           else {
             // block script for additional Lee Enterprises sites (opt-in to custom sites)
             var usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
-            var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['image', 'script'].includes(details.type) &&
+            var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['script'].includes(details.type) &&
               !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
             if (usa_lee_ent_domain)
               usa_lee_ent_domains = customAddRules(usa_lee_ent_domains, '', blockedRegexes['buffalonews.com']);
             else {
               // block script for TownNews sites (Blox CMS; opt-in to custom sites)
               var usa_townnews_domains = [];
-              var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['image', 'script'].includes(details.type) &&
-                !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, 'townnews.com'), header_referer) && enabledSites.includes('###_usa_townnews'));
+              var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['script'].includes(details.type) &&
+                !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
               if (usa_townnews_domain)
                 usa_townnews_domains = customAddRules(usa_townnews_domains, '', /\.com\/shared-content\/art\/tncms\/user\/user\.js/);
               else {
@@ -839,6 +840,8 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       }
     }
   }
+
+  } // not in excludedSites
 
   // block external javascript for custom sites (optional)
   var domain_blockjs_ext = matchUrlDomain(block_js_custom_ext, header_referer);
