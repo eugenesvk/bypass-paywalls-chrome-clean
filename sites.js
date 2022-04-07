@@ -1588,7 +1588,7 @@ var defaultSites = {
   },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
-    block_regex: /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/
+    block_regex: /smartwall\.theglobeandmail\.com\//
   },
   "The Hill Times": {
     domain: "hilltimes.com",
@@ -1802,7 +1802,7 @@ var defaultSites = {
       "sun-sentinel.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.tribdss\.com\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
+    block_regex: /(\.tribdss\.com\/|js\.matheranalytics\.com\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
   },
   "Trouw": {
     domain: "trouw.nl",
@@ -1977,7 +1977,10 @@ var defaultSites = {
   },
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
-  }
+  },
+  "The Globe and Mail premium-media (empty sections)": {
+    domain: "#options_optin_tgam_media"
+  },
 }
 
 if (typeof browser === 'object') {

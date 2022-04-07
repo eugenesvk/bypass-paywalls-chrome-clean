@@ -279,6 +279,8 @@ function set_rules(sites, sites_updated, sites_custom) {
       }
     }
   }
+  if (enabledSites.includes('#options_optin_tgam_media'))
+    blockedRegexes['theglobeandmail.com'] = /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/;
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
   disableJavascriptOnListedSites();
@@ -617,12 +619,12 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = [];
+var block_js_inline = ["*://*.theglobeandmail.com/*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
+  let excluded = matchUrlDomain('theglobeandmail.com', details.url) && (enabledSites.includes('#options_optin_tgam_media') || !details.url.includes('?rel=premium'));
+  if (!isSiteEnabled(details) || excluded)
     return;
-  }
   var headers = details.responseHeaders;
   headers.push({
     'name': 'Content-Security-Policy',
