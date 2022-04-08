@@ -21,44 +21,10 @@
     "block_regex": "(\\.com\\.au\\/remote\\/identity\\/rampart\\/latest\\/rampart\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad|subscriptions)-.+\\.js)",
     "amp_unhide": 1
   },
-  "Badische Neueste Nachrichten": {
-    "allow_cookies": 1,
-    "domain": "bnn.de",
-    "useragent": "googlebot"
-  },
-  "Financial Times (not Chinese)": {
-    "domain": "ft.com",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|ad|subscriptions)-.+\\.js",
-    "useragent": "googlebot"
-  },
-  "Folha de S. Paulo": {
-    "domain": "###_br_folha",
-    "group": [
-      "folha.uol.com.br",
-      "blogfolha.uol.com.br"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.folha\\.uol\\.com\\.br\\/paywall\\/js\\/|paywall\\.folha\\.uol\\.com\\.br\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-((sticky-)?ad|subscriptions)-.+\\.js)",
-    "useragent": "googlebot"
-  },
-  "Franc-Tireur": {
-    "domain": "franc-tireur.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
   "Le Nouvel Economiste": {
     "domain": "lenouveleconomiste.fr",
     "allow_cookies": 1,
     "useragent": "googlebot"
-  },
-  "Mid-Day": {
-    "domain": "mid-day.com",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js",
-    "amp_redirect": {
-      "paywall": "#widget-_csc"
-    },
-    "amp_unhide": 1
   },
   "Münstersche Zeitung": {
     "allow_cookies": 1,
@@ -68,6 +34,10 @@
       "paywall": ".fp-article-paywall"
     },
     "amp_unhide": 1
+  },
+  "Nürnberger Nachrichten": {
+    "domain": "nn.de",
+    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
   },
   "S&P Global": {
     "domain": "spglobal.com",
@@ -86,15 +56,5 @@
     "allow_cookies": 1,
     "domain": "wz.de",
     "useragent": "googlebot"
-  },
-  "Winnipeg Free Press": {
-    "domain": "winnipegfreepress.com",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.cxense\\.com\\/",
-    "cs_code": [{
-        "cond": ".paidaccess",
-        "rm_class": "paidaccess"
-      }
-    ]
   }
 }

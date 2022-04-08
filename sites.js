@@ -1249,6 +1249,10 @@ var defaultSites = {
     domain: "nrc.nl",
     remove_cookies_select_drop: ["counter"]
   },
+  "Nürnberger Nachrichten": {
+    domain: "nn.de",
+    block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/)/
+  },
   "NyTeknik": {
     domain: "nyteknik.se",
     allow_cookies: 1,

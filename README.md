@@ -462,8 +462,9 @@ Grouped in options:\
 [Kurier.at](https://kurier.at) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Münstersche Zeitung](https://www.muensterschezeitung.de) -
-[Neue Osnabrücker Zeitung](https://www.noz.de]) -
+[Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
+[Nürnberger Nachrichten](https://www.nn.de) -
 [Piqd.de](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -

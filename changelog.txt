@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add El Periodico Extremadura
+Add Nuernberger Nachrichten
 Remove Algemeen Dagblad Regional (fix obsolete)
 Fix The Globe and Mail (sections)
 Fix The Hill Times (text)
