@@ -661,7 +661,8 @@
         "*://*.repstatic.it/*",
         "*://*.sanoma-sndp.fi/*",
         "*://*.wallkit.net/*",
-        "*://*.wsj.net/*"
+        "*://*.wsj.net/*",
+        "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.3.4"
+    "version": "2.6.3.5"
 }

@@ -1328,6 +1328,41 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
   if (message.request === 'refreshCurrentTab') {
     refreshCurrentTab();
   }
+  if (message.request === 'getExtSrc' && message.data) {
+    fetch(message.data.url)
+    .then(response => {
+      if (response.ok) {
+        response.text().then(html => {
+          if (message.data.base64) {
+            html = decode_utf8(atob(html));
+            message.data.selector_source = 'body';
+          }
+          let parser = new DOMParser();
+          let doc = parser.parseFromString(html, 'text/html');
+          let article_new = doc.querySelector(message.data.selector_source);
+          message.data.html = article_new.outerHTML;
+          ext_api.tabs.query({
+            active: true,
+            currentWindow: true
+          }, function (tabs) {
+            if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+              ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
+            }
+          });
+        });
+      }
+    }).catch(function (err) {
+      message.data.html = '';
+      ext_api.tabs.query({
+        active: true,
+        currentWindow: true
+      }, function (tabs) {
+        if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+          ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
+        }
+      });
+    });
+  }
   if (message.scheme && (![chrome_scheme, 'undefined'].includes(message.scheme) || focus_changed)) {
       let icon_path = {path: {'128': 'bypass.png'}};
       if (message.scheme === 'dark')
@@ -1431,6 +1466,10 @@ function getParameterByName(name, url) {
 
 function stripQueryStringAndHashFromPath(url) {
   return url.split("?")[0].split("#")[0];
+}
+
+function decode_utf8(str) {
+  return decodeURIComponent(escape(str));
 }
 
 function randomInt(max) {

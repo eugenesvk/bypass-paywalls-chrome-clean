@@ -80,6 +80,14 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
 var div_bpc_done = document.querySelector('div#bpc_done');
 if (!div_bpc_done) {
 
+ext_api.runtime.onMessage.addListener(
+  function(request, sender) {
+    if (request.msg === 'showExtSrc') {
+	  replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
+	}
+  }
+);
+
 // check for opt-in confirmation (from background.js)
 if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
   if (domain = matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
@@ -2022,6 +2030,7 @@ else if (matchDomain('prospectmagazine.co.uk')) {
   let paywall = document.querySelector('div.paywall_overlay_blend, div.paywall');
   if (paywall) {
     removeDOMElement(paywall);
+    csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
     replaceDomElementExt(url_cache, true, false, 'main');
   }
@@ -2255,6 +2264,7 @@ else if (matchDomain('valor.globo.com')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall) {
     removeDOMElement(paywall);
+    csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
     replaceDomElementExt(url_cache, true, false, 'div.protected-content');
   }
@@ -3011,6 +3021,7 @@ else if (matchDomain('newleftreview.org')) {
     let paywall = document.querySelector('div.promo-wrapper');
     if (paywall) {
       removeDOMElement(paywall);
+      csDoneOnce = true;
       let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
       replaceDomElementExt(url_cache, true, false, 'div.article-page');
     }
@@ -3785,47 +3796,67 @@ function matchDomain(domains, hostname = window.location.hostname) {
 }
 
 function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
-  let proxyurl = proxy ? 'https://bpc-cors-anywhere.herokuapp.com/' : '';
-  fetch(proxyurl + url, {headers: {"Content-Type": "text/plain", "X-Requested-With": "XMLHttpRequest"} })
-  .then(response => {
-    let article = document.querySelector(selector);
-    if (response.ok) {
-      response.text().then(html => {
-        if (base64) {
-          html = decode_utf8(atob(html));
-          selector_source = 'body';
-        }
-        let parser = new DOMParser();
-        let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout'], ADD_TAGS: ['amp-img']}), 'text/html');
-        //console.log(DOMPurify.removed);
-        let article_new = doc.querySelector(selector_source);
-        if (article_new) {
-          if (article && article.parentNode)
-            article.parentNode.replaceChild(article_new, article);
-        }
-      });
-    } else {
-      if (!text_fail) {
-        if (url.includes('webcache.googleusercontent.com'))
-          text_fail = 'BPC > failed to load from Google webcache: '
-      }
-      if (text_fail && article) {
-        let text_fail_div = document.createElement('div');
-        text_fail_div.setAttribute('style', 'margin: 0px 50px; font-weight: bold; color: red;');
-        text_fail_div.appendChild(document.createTextNode(text_fail));
-        if (proxy) {
-          let a_link = document.createElement('a');
-          a_link.innerText = url;
-          a_link.href = url;
-          a_link.target = '_blank';
-          text_fail_div.appendChild(a_link);
-        }
-        article.insertBefore(text_fail_div, article.firstChild);
-      }
+  if (proxy) {
+    if (!text_fail) {
+      if (url.includes('webcache.googleusercontent.com'))
+        text_fail = 'BPC > failed to load from Google webcache: '
     }
-  }).catch(function (err) {
-    false;
-  });
+    ext_api.runtime.sendMessage({request: 'getExtSrc', data: {url: url, selector: selector, selector_source: selector_source, base64: base64, text_fail: text_fail}});
+  } else {
+    fetch(url)
+    .then(response => {
+      let article = document.querySelector(selector);
+      if (response.ok) {
+        response.text().then(html => {
+          replaceDomElementExtSrc(url, html, false, base64, selector, text_fail, selector_source);
+        });
+      } else {
+        if (text_fail && article) {
+          replaceTextFail(article, proxy, text_fail)
+        }
+      }
+    }).catch(function (err) {
+      false;
+    });
+  }
+}
+
+function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail = '', selector_source = selector) {
+  let article = document.querySelector(selector);
+  if (html) {
+    if (base64) {
+      html = decode_utf8(atob(html));
+      selector_source = 'body';
+    }
+    let parser = new DOMParser();
+    window.setTimeout(function () {
+      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout'], ADD_TAGS: ['amp-img']}), 'text/html');
+      //console.log(DOMPurify.removed);
+      let article_new = doc.querySelector(selector_source);
+      if (article_new) {
+        if (article && article.parentNode)
+          article.parentNode.replaceChild(article_new, article);
+      }
+    }, 200);
+  } else {
+    replaceTextFail(url, article, proxy, text_fail);
+  }
+}
+
+function replaceTextFail(url, article, proxy, text_fail) {
+  if (text_fail && article) {
+    let text_fail_div = document.createElement('div');
+    text_fail_div.setAttribute('style', 'margin: 0px 50px; font-weight: bold; color: red;');
+    text_fail_div.appendChild(document.createTextNode(text_fail));
+    if (proxy) {
+      let a_link = document.createElement('a');
+      a_link.innerText = url;
+      a_link.href = url;
+      a_link.target = '_blank';
+      text_fail_div.appendChild(a_link);
+    }
+    article.insertBefore(text_fail_div, article.firstChild);
+  }
 }
 
 function archiveLink(url) {

@@ -9,6 +9,7 @@ Remove NK News (fix obsolete)
 Fix The Globe and Mail (sections)
 Fix The Hill Times (text)
 Fix (custom) group-sites (limit identify on image)
+Remove Cors Anywhere (cached articles)
 
 * v2.6.3.0 (2022-04-03)
 Add Diario Cordoba
