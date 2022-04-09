@@ -1235,11 +1235,6 @@ var defaultSites = {
     domain: "asia.nikkei.com",
     remove_cookies_select_drop: ["xbc"]
   },
-  "NK News (free articles only)": {
-    domain: "nknews.org",
-    block_regex: /\.nknews\.org\/wp-content\/themes\/nknews\/js\/bootstrap\.min\.js/,
-    useragent: "googlebot"
-  },
   "Nordwest Zeitung": {
     domain: "nwzonline.de",
     allow_cookies: 1,

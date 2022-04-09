@@ -26,7 +26,6 @@ var restrictions = {
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
-  'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'repubblica.it': /^((?!\/video\.repubblica\.it\/).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
