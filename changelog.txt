@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.4.0 (2022-04-10)
 Add El Periodico Extremadura
 Add Nuernberger Nachrichten
 Remove Algemeen Dagblad Regional (fix obsolete)
