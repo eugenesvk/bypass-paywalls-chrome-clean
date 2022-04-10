@@ -478,7 +478,7 @@ else if (matchDomain('berliner-zeitung.de')) {
   if (url.split('?')[0].includes('.amp')) {
     if (paywall) {
       removeDOMElement(paywall);
-      amp_unhide_subscr_section();
+      amp_unhide_subscr_section('amp-ad, amp-embed, amp-fx-flying-carpet, div.amp-flying-carpet-text-border');
     }
   } else {
     if (paywall) {

@@ -163,7 +163,8 @@ var defaultSites = {
   },
   "Berliner Zeitung": {
     domain: "berliner-zeitung.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|fx-flying-carpet|subscriptions)-.+\.js/
   },
   "Berlingske": {
     domain: "berlingske.dk",

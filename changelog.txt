@@ -6,6 +6,7 @@ Add El Periodico Extremadura
 Add Nuernberger Nachrichten
 Remove Algemeen Dagblad Regional (fix obsolete)
 Remove NK News (fix obsolete)
+Fix Berliner Zeitung (amp)
 Fix The Globe and Mail (sections)
 Fix The Hill Times (text)
 Fix (custom) group-sites (limit identify on image)
