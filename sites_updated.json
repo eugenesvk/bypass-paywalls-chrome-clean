@@ -1,4 +1,9 @@
 {
+  "Aftonbladet": {
+    "domain": "aftonbladet.se",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Australia News Corp": {
     "domain": "###_au_news_corp",
     "group": [
@@ -26,40 +31,8 @@
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|fx-flying-carpet|subscriptions)-.+\\.js"
   },
-  "Le Nouvel Economiste": {
-    "domain": "lenouveleconomiste.fr",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Münstersche Zeitung": {
-    "allow_cookies": 1,
-    "domain": "muensterschezeitung.de",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
-    "amp_redirect": {
-      "paywall": ".fp-article-paywall"
-    },
-    "amp_unhide": 1
-  },
   "Nürnberger Nachrichten": {
     "domain": "nn.de",
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
-  },
-  "S&P Global": {
-    "domain": "spglobal.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.blueconic\\.net\\/",
-    "cs_code": [{
-        "cond": ".article__overlay",
-        "rm_elem": 1
-      }, {
-        "cond": "html[class]",
-        "rm_attrib": "class"
-      }
-    ]
-  },
-  "Westdeutsche Zeitung": {
-    "allow_cookies": 1,
-    "domain": "wz.de",
-    "useragent": "googlebot"
   }
 }

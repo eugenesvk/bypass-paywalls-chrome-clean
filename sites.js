@@ -29,6 +29,11 @@ var defaultSites = {
     domain: "adweek.com",
     block_regex: /\.lightboxcdn\.com\//
   },
+  "Aftonbladet": {
+    domain: "aftonbladet.se",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
     allow_cookies: 1,
@@ -288,7 +293,7 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "Dagens Nyheter": {
+  "Dagens Nyheter (free articles only)": {
     domain: "dn.se",
     allow_cookies: 1,
     useragent: "googlebot"

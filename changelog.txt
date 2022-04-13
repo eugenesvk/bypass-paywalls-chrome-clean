@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Aftonbladet.se
 
 * v2.6.4.0 (2022-04-10)
 Add El Periodico Extremadura

@@ -64,6 +64,7 @@
         "*://*.adelaidenow.com.au/*",
         "*://*.adweek.com/*",
         "*://*.afr.com/*",
+        "*://*.aftonbladet.se/*",
         "*://*.aisnenouvelle.fr/*",
         "*://*.ajc.com/*",
         "*://*.al.com/*",
@@ -664,5 +665,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.4.0"
+    "version": "2.6.4.1"
 }
