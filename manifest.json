@@ -661,9 +661,10 @@
         "*://*.prcdn.co/*",
         "*://*.repstatic.it/*",
         "*://*.sanoma-sndp.fi/*",
+        "*://*.static-chmedia.ch/*",
         "*://*.wallkit.net/*",
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.4.1"
+    "version": "2.6.4.2"
 }

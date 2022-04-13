@@ -296,6 +296,7 @@ var defaultSites = {
   "Dagens Nyheter (free articles only)": {
     domain: "dn.se",
     allow_cookies: 1,
+    block_regex: /auth\.dn\.se\/check-paywall-v2\.js/,
     useragent: "googlebot"
   },
   "Daily Nation": {
@@ -1188,10 +1189,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js/
   },
-  "Neue Zürcher Zeitung": {
+  "Neue Zürcher Zeitung (+ regional/opt-in to custom sites)": {
     domain: "nzz.ch",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
+    block_regex: /((ens\.nzz\.ch|nexus\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
     useragent: "googlebot"
   },
   "New Left Review": {
@@ -1643,7 +1644,7 @@ var defaultSites = {
   "The Market.ch": {
     domain: "themarket.ch",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
+    block_regex: /(\.piano\.io\/|ens\.themarket\.ch\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
     useragent: "googlebot"
   },
   "The Nation": {

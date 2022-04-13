@@ -704,11 +704,6 @@ else if (matchDomain(['noz.de', 'nwzonline.de', 'shz.de', 'svz.de'])) {
   }
 }
 
-else if (matchDomain('nzz.ch')) {
-  let regwall = document.querySelector('.dynamic-regwall');
-  removeDOMElement(regwall);
-}
-
 else if (matchDomain('rheinpfalz.de')) {
   let url = window.location.href;
   if (url.includes('reduced=true')) {

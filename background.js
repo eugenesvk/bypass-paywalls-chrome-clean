@@ -147,10 +147,11 @@ function set_rules(sites, sites_updated, sites_custom) {
     let custom = false;
     if (!site_domain.match(/^(###$|#options_)/)) {
       let rule = {};
-      if (defaultSites.hasOwnProperty(site)) {
-        rule = defaultSites[site];
-        if (sites_updated.hasOwnProperty(site))
-          rule = sites_updated[site];
+      let site_default = defaultSites.hasOwnProperty(site) ? site : Object.keys(defaultSites).find(default_key => compareKey(default_key, site));
+      if (site_default) {
+        rule = defaultSites[site_default];
+        if (sites_updated.hasOwnProperty(site_default))
+          rule = sites_updated[site_default];
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];
       } else if (sites_custom.hasOwnProperty(site)) { // custom (new) sites
@@ -767,6 +768,12 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
       if (au_thewest_domain)
         au_thewest_domains = customAddRules(au_thewest_domains, true);
+    } else if (header_referer_hostname.endsWith('.ch')) {
+      // set googlebot-useragent for regional nzz.ch sites (opt-in to custom sites)
+      var ch_media_domains = [];
+      var ch_media_domain = (matchUrlDomain('static-chmedia.ch', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ch_media_domains, header_referer) && enabledSites.includes('nzz.ch'));
+      if (ch_media_domain)
+        ch_media_domains = customAddRules(ch_media_domains, true, blockedRegexes['nzz.ch'], 'googlebot');
     } else if (header_referer_hostname.endsWith('.de')) {
       // set googlebot-useragent for additional Funke sites (opt-in to custom sites)
       var de_funke_medien_domains = grouped_sites['###_de_funke_medien'];

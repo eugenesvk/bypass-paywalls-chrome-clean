@@ -1,9 +1,4 @@
 {
-  "Aargauerzeitung.ch": {
-    "allow_cookies": 1,
-    "domain": "aargauerzeitung.ch",
-    "useragent": "googlebot"
-  },
   "Abqjournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.abqjournal\\.com\\/.+\\/abq-pw-manager\\.js",
@@ -95,11 +90,6 @@
     "domain": "lsa-conso.fr",
     "useragent": "googlebot"
   },
-  "Luzernerzeitung.ch": {
-    "allow_cookies": 1,
-    "domain": "luzernerzeitung.ch",
-    "useragent": "googlebot"
-  },
   "Mailplus.co.uk": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -157,11 +147,6 @@
   "Supchina.com": {
     "allow_cookies": 1,
     "domain": "supchina.com"
-  },
-  "Tagblatt.ch": {
-    "allow_cookies": 1,
-    "domain": "tagblatt.ch",
-    "useragent": "googlebot"
   },
   "The-japan-news.com": {
     "domain": "the-japan-news.com"
