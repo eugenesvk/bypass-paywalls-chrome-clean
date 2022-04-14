@@ -97,7 +97,7 @@ _* free/cached articles only._
 [Law360](https://www.law360.com)* -
 [MarketWatch](https://www.marketwatch.com) -
 [MIT Sloan Management Review](https://sloanreview.mit.edu) -
-[Quartz](https://qz.com)* -
+[Quartz](https://qz.com) -
 [S&P Global](https://www.spglobal.com) -
 [Seeking Alpha](https://seekingalpha.com) -
 [Stock News](https://stocknews.com) -

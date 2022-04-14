@@ -3118,20 +3118,15 @@ else if (matchDomain('quora.com')) {
 }
 
 else if (matchDomain('qz.com')) {
-  let url = window.location.href;
-  window.setTimeout(function () {
-    if (url.includes('utm_source='))
-      window.location.href = url.split('?')[0];
-  }, 500);
   let paywall = document.querySelector('div.KbD9m');
-  let overflow = document.querySelector('div._7S-qA');
-  let msg = document.querySelector('div#bpc_archive');
-  if (paywall && !msg) {
+  if (paywall) {
+    removeDOMElement(paywall);
+    let overflow = document.querySelector('div._4BDxU');
     if (overflow)
-      overflow.classList.remove('_7S-qA');
-    let article = document.querySelector('div#article-content');
-    if (article)
-      article.appendChild(archiveLink(url));
+      overflow.classList.remove('_4BDxU');
+    let noscroll = document.querySelector('iframe[scrolling]');
+    if (noscroll)
+      noscroll.removeAttribute('scrolling');
   }
 }
 

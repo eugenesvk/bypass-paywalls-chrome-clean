@@ -667,8 +667,9 @@ function disableJavascriptOnListedSites() {
   ext_api.webRequest.onBeforeRequest.addListener(function (details) {
     let header_referer = details.originUrl ? details.originUrl : details.initiator;
     if (!(isSiteEnabled(details)
-         || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
-         || (enabledSites.includes('###_wp_evolok') && details.url.includes('/wp-content/evolok/ev-widgets/ev-widgets.min.js')))
+         || (['script'].includes(details.type)
+           && ((enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
+             || (enabledSites.includes('###_wp_evolok') && details.url.includes('/wp-content/evolok/ev-widgets/ev-widgets.min.js')))))
        || matchUrlDomain(excludedSites.concat(['asia.nikkei.com', 'cambridge.org']), header_referer)) {
       return;
     }

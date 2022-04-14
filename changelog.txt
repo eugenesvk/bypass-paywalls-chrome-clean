@@ -5,6 +5,7 @@ Post-release
 Add Aftonbladet.se
 Add Investors' Chronicle (UK)
 Add Nzz.ch Regional (opt-in to custom sites)
+Fix Quartz (newsletter)
 Update block general paywall script (Ensighten)
 Update block general paywall script (Evolok WordPress)
 
@@ -1200,7 +1201,7 @@ Fix Economist (new option to block external scripts)
 Fix ET Prime restrictions (now with regular expressions)
 Fix ET Prime (bug in isSiteEnabled)
 Fix Foreign Policy (block paywall-script)
-Fix Quartz/qz.com (gdpr)
+Fix Quartz (gdpr)
 Fix Spectator.co.uk (block paywall-script)
 Fix WSJ (cookie-fix for reformatting & restriction to only articles)
 
@@ -1221,6 +1222,6 @@ Fix The Atlantic (cookie)
 Add Dutch papers: ad.nl, ed.nl, parool.nl, trouw.nl, telegraaf.nl
 Add Dutch magazines: groene.nl, vn.nl
 Add Le Monde
-Fix Quartz/qz.com
+Fix Quartz
 Fix WaPo (gdpr-banner)
 Fix WSJ (Googlebot; mod=rsswn obsolete)

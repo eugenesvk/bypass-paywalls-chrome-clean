@@ -1348,7 +1348,7 @@ var defaultSites = {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1
   },
-  "Quartz (free articles only)": {
+  "Quartz": {
     domain: "qz.com",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
