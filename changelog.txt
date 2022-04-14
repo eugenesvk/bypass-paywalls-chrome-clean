@@ -5,6 +5,7 @@ Post-release
 Add Aftonbladet.se
 Add Nzz.ch Regional (opt-in to custom sites)
 Update block general paywall script (Ensighten)
+Update block general paywall script (Evolok WordPress)
 
 * v2.6.4.0 (2022-04-10)
 Add El Periodico Extremadura

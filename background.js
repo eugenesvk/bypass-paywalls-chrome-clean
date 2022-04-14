@@ -652,6 +652,7 @@ var block_js = [
   "*://*.weborama.fr/*",
   "*://*.zephr.com/zephr-browser/*",
   "*://*/c/assets/pigeon.js*",
+  "*://*/wp-content/evolok/ev-widgets/ev-widgets.min.js*",
   "*://cdn.ampproject.org/v*/amp-access-*.*js",
   "*://cdn.ampproject.org/v*/amp-subscriptions-*.*js",
   "*://cdn.tinypass.com/*",
@@ -665,7 +666,9 @@ var block_js = [
 function disableJavascriptOnListedSites() {
   ext_api.webRequest.onBeforeRequest.addListener(function (details) {
     let header_referer = details.originUrl ? details.originUrl : details.initiator;
-    if (!(isSiteEnabled(details) || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js')))
+    if (!(isSiteEnabled(details)
+         || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
+         || (enabledSites.includes('###_wp_evolok') && details.url.includes('/wp-content/evolok/ev-widgets/ev-widgets.min.js')))
        || matchUrlDomain(excludedSites.concat(['asia.nikkei.com', 'cambridge.org']), header_referer)) {
       return;
     }

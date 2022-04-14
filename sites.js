@@ -1930,6 +1930,9 @@ var defaultSites = {
   "Evolok": {
     domain: "evolok.net"
   },
+  "Evolok WordPress (opt-in to custom sites)": {
+    domain: "###_wp_evolok"
+  },
   "MatherAnalytics": {
     domain: "matheranalytics.com"
   },
