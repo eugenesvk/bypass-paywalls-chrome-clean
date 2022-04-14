@@ -1192,7 +1192,7 @@ var defaultSites = {
   "Neue Zürcher Zeitung (+ regional/opt-in to custom sites)": {
     domain: "nzz.ch",
     allow_cookies: 1,
-    block_regex: /((ens\.nzz\.ch|nexus\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+    block_regex: /(\.piano\.io\/|(ens\.nzz\.ch|nexus\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
     useragent: "googlebot"
   },
   "New Left Review": {
@@ -1923,6 +1923,9 @@ var defaultSites = {
   },
   "Cxense": {
     domain: "cxense.com"
+  },
+  "Ensighten": {
+    domain: "ensighten.com"
   },
   "Evolok": {
     domain: "evolok.net"
