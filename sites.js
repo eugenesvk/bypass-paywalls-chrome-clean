@@ -824,6 +824,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.internazionale\.it\/templates_js_ajax\.inc\.php/
   },
+  "Investors' Chronicle": {
+    allow_cookies: 1,
+    domain: "investorschronicle.co.uk",
+    referer: "google"
+  },
   "iPolitics.ca": {
     domain: "ipolitics.ca",
     allow_cookies: 1

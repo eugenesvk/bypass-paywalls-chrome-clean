@@ -75,11 +75,6 @@
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
   },
-  "Investorschronicle.co.uk": {
-    "allow_cookies": 1,
-    "domain": "investorschronicle.co.uk",
-    "referer": "google"
-  },
   "Lindipendente.online": {
     "allow_cookies": 1,
     "domain": "lindipendente.online",

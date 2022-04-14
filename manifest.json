@@ -291,6 +291,7 @@
         "*://*.intelligentinvestor.com.au/*",
         "*://*.internazionale.it/*",
         "*://*.intrafish.com/*",
+        "*://*.investorschronicle.co.uk/*",
         "*://*.ipolitics.ca/*",
         "*://*.italian.tech/*",
         "*://*.japantimes.co.jp/*",
@@ -666,5 +667,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.4.2"
+    "version": "2.6.4.3"
 }
