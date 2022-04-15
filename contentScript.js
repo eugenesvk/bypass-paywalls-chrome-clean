@@ -790,7 +790,7 @@ else
 } else if (window.location.hostname.match(/\.(dk|fi|no|se)$/)) {//denmark/finland/norway/sweden
 
 if (matchDomain(fi_alma_talent_domains)) {
-  let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad');
+  let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad, div.iZivCJ');
   for (let ad of ads)
     ad.setAttribute('style', 'display:none;');
   if (matchDomain('iltalehti.fi')) {

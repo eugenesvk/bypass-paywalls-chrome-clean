@@ -81,7 +81,7 @@ _* free/cached articles only._
 [World Politics Review](https://www.worldpoliticsreview.com)
 
 ##### Business
-[Adweek](https://www.adweek.com) -
+[Adweek](https://www.adweek.com)* -
 [American Affairs](https://americanaffairsjournal.org) -
 [American Banker](https://www.americanbanker.com) -
 [Barron's](https://www.barrons.com) -

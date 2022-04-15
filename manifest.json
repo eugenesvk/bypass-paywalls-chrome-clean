@@ -651,7 +651,6 @@
         "*://*.gannett-cdn.com/*",
         "*://*.gitlab.com/magnolia1234/*",
         "*://*.hearstnp.com/*",
-        "*://*.lightboxcdn.com/*",
         "*://*.loader-cdn.azureedge.net/*",
         "*://*.mcclatchy-wires.com/*",
         "*://*.mcclatchyinteractive.com/*",
@@ -667,5 +666,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.4.4"
+    "version": "2.6.4.5"
 }

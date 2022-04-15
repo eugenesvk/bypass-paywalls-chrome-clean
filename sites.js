@@ -25,9 +25,8 @@ var defaultSites = {
       "syracuse.com"
     ]
   },
-  "Adweek": {
-    domain: "adweek.com",
-    block_regex: /\.lightboxcdn\.com\//
+  "Adweek (free articles only)": {
+    domain: "adweek.com"
   },
   "Aftonbladet": {
     domain: "aftonbladet.se",

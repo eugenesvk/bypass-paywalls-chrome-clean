@@ -16,7 +16,6 @@ var blocked_referer = false;
 // defaultSites are loaded from sites.js at installation extension
 
 var restrictions = {
-  'adweek.com': /^((?!\.adweek\.com\/(.+\/)?(amp|agencyspy|tvnewser|tvspy)\/).)*$/,
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
