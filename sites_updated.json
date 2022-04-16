@@ -1,4 +1,11 @@
 {
+  "ABC.es": {
+    "domain": "abc.es",
+    "allow_cookies": 1,
+    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)",
+    "useragent": "googlebot",
+    "amp_redirect": ".cierre-suscripcion:not([style=\"display: none;\"]"
+  },
   "Aftonbladet": {
     "domain": "aftonbladet.se",
     "allow_cookies": 1,

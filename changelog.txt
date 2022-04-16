@@ -5,6 +5,7 @@ Post-release
 Add Aftonbladet.se
 Add Investors' Chronicle (UK)
 Add Nzz.ch Regional (opt-in to custom sites)
+Fix ABC.es (mobile)
 Fix Adweek (free articles only)
 Fix Quartz (newsletter)
 Update block general paywall script (Ensighten)
