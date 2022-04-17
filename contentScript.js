@@ -2077,7 +2077,7 @@ else if (matchDomain('the-tls.co.uk')) {
 
 else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
   if (!window.location.href.includes('?amp')) {
-    let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall');
+    let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall.length && amphtml) {
       removeDOMElement(...paywall);
@@ -2089,6 +2089,11 @@ else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
     amp_unhide_subscr_section();
     let subscr_actions = document.querySelectorAll('[subscriptions-actions]');
     removeDOMElement(...subscr_actions);
+    let layout_fail = document.querySelectorAll('.col-sm-12');
+    for (let elem of layout_fail) {
+      elem.classList.remove('col-sm-12');
+      elem.style = 'padding: 0px 15px;';
+    }
     let podcast = document.querySelector('div[id^="podcast-clip-"]');
     if (podcast) {
       let podcast_src = podcast.innerHTML.replace(/<amp-/g, '<').replace(/<\/amp-/g, '</');

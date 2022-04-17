@@ -8,6 +8,7 @@ Add Nzz.ch Regional (opt-in to custom sites)
 Fix ABC.es (mobile)
 Fix Adweek (free articles only)
 Fix Quartz (newsletter)
+Fix The Athletic (Ink-layout)
 Update block general paywall script (Ensighten)
 Update block general paywall script (Evolok WordPress)
 
