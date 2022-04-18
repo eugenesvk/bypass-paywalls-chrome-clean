@@ -30,5 +30,14 @@
     "allow_cookies": 1,
     "ld_json": "div.paywall|div#articleBody",
     "new_site": 1
+  },
+  "Vogue Business": {
+    "allow_cookies": 1,
+    "domain": "voguebusiness.com",
+    "useragent": "googlebot",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
+    "amp_redirect": "div[class*=\"PaywallInlineBarrier\"]",
+    "amp_unhide": 1,
+    "new_site": 1
   }
 }

@@ -10,6 +10,7 @@ Fix ABC.es (mobile)
 Fix Adweek (free articles only)
 Fix Quartz (newsletter)
 Fix The Athletic (Ink-layout)
+Fix Vogue Business (amp)
 Update block general paywall script (Ensighten)
 Update block general paywall script (Evolok WordPress)
 

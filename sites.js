@@ -1846,7 +1846,8 @@ var defaultSites = {
   "Vogue Business": {
     allow_cookies: 1,
     domain: "voguebusiness.com",
-    useragent: "googlebot"
+    useragent: "googlebot",
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
   },
   "Volkskrant": {
     domain: "volkskrant.nl",
