@@ -5,6 +5,7 @@ Post-release
 Add Aftonbladet.se
 Add Investors' Chronicle (UK)
 Add Nzz.ch Regional (opt-in to custom sites)
+Add Outlook India
 Fix ABC.es (mobile)
 Fix Adweek (free articles only)
 Fix Quartz (newsletter)

@@ -1277,6 +1277,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
+  "Outlook India": {
+    domain: "outlookindia.com",
+    allow_cookies: 1
+  },
   "Outside magazines": {
     domain: "###_usa_outside_mag",
     group: [

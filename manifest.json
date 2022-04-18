@@ -445,6 +445,7 @@
         "*://*.orlandosentinel.com/*",
         "*://*.ostsee-zeitung.de/*",
         "*://*.otz.de/*",
+        "*://*.outlookindia.com/*",
         "*://*.outsideonline.com/*",
         "*://*.oxygenmag.com/*",
         "*://*.paloaltoonline.com/*",
@@ -666,5 +667,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.4.6"
+    "version": "2.6.4.7"
 }

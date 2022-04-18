@@ -689,6 +689,7 @@ Grouped in options:\
 [LiveMint](https://www.livemint.com) -
 [MediaNama](https://www.medianama.com) -
 [Mid-Day](https://www.mid-day.com) -
+[Outlook](https://www.outlookindia.com) -
 [The Economic Times (ET Prime)](https://economictimes.indiatimes.com) -
 [The Hindu](https://www.thehindu.com) -
 [The Hindu BusinessLine](https://www.thehindubusinessline.com) -

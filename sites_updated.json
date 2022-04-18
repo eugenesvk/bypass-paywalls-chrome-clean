@@ -24,5 +24,11 @@
   "Nürnberger Nachrichten": {
     "domain": "nn.de",
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
+  },
+  "Outlook India": {
+    "domain": "outlookindia.com",
+    "allow_cookies": 1,
+    "ld_json": "div.paywall|div#articleBody",
+    "new_site": 1
   }
 }

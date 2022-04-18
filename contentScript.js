@@ -64,7 +64,7 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
       removeDOMElement(paywall);
       let json_script = getArticleJsonScript();
       if (json_script) {
-        let json_text = JSON.parse(json_script.text).articleBody;
+        let json_text = parseHtmlEntities(JSON.parse(json_script.text).articleBody);
         let content = document.querySelector(article_sel);
         if (json_text && content) {
           let parser = new DOMParser();
@@ -2753,7 +2753,7 @@ else if (matchDomain('hilltimes.com')) {
     if (json_script) {
       let json = JSON.parse(json_script.text).filter(x => x.articleBody)[0];
       if (json) {
-        let json_text = json.articleBody.replace(/&nbsp;/g, '').replace(/(\.|\%)\s{3,}/g, "$&\r\n\r\n");
+        let json_text = parseHtmlEntities(json.articleBody).replace(/(\.|\%)\s{3,}/g, "$&\r\n\r\n");
         let content = document.querySelector('div#xorg');
         if (json_text && content)
           content.innerText = '\r\n' + json_text;
@@ -3117,6 +3117,27 @@ else if (matchDomain('nytimes.com')) {
     waitDOMElement('div[data-testid="inline-message"]', 'DIV', removeDOMElement, false);
     waitDOMElement('div.expanded-dock', 'DIV', removeDOMElement, false);
     csDoneOnce = true;
+  }
+}
+
+else if (matchDomain('outlookindia.com')) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = parseHtmlEntities(json.articleBody).replace(/\n/g, "$&\r\n");
+        let content = document.querySelector('div#articleBody');
+        if (json_text && content) {
+          content.innerHTML = '';
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          content.appendChild(article_new);
+        }
+      }
+    }
   }
 }
 
@@ -3956,9 +3977,9 @@ function breakText(str) {
 };
 
 function parseHtmlEntities(encodedString) {
-  let translate_re = /&(nbsp|amp|quot|lt|gt|deg|hellip|laquo|raquo|ldquo|rdquo|lsquo|rsquo|mdash);/g;
+  let translate_re = /&(nbsp|amp|quot|lt|gt|deg|hellip|laquo|raquo|ldquo|rdquo|lsquo|rsquo|mdash|shy);/g;
   let translate = {"nbsp": " ", "amp": "&", "quot": "\"", "lt": "<", "gt": ">", "deg": "°", "hellip": "…",
-      "laquo": "«", "raquo": "»", "ldquo": "“", "rdquo": "”", "lsquo": "‘", "rsquo": "’", "mdash": "—"};
+      "laquo": "«", "raquo": "»", "ldquo": "“", "rdquo": "”", "lsquo": "‘", "rsquo": "’", "mdash": "—", "shy": ""};
   return encodedString.replace(translate_re, function (match, entity) {
       return translate[entity];
   }).replace(/&#(\d+);/gi, function (match, numStr) {
