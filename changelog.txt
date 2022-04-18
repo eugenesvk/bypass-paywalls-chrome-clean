@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.5.0 (2022-04-18)
 Add Aftonbladet.se
 Add Investors' Chronicle (UK)
 Add Nzz.ch Regional (opt-in to custom sites)

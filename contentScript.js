@@ -3054,38 +3054,6 @@ else if (matchDomain(['nola.com', 'theadvocate.com'])) {
   }
 }
 
-else if (matchDomain('nzherald.co.nz')) {
-  // plus code in contentScript_once.js
-  let article_content = document.querySelector('.article__content');
-  if (article_content) {
-    let premium = document.querySelector('span.ellipsis');
-    if (premium && dompurify_loaded) {
-      premium.classList.remove('ellipsis');
-      let article_offer = document.querySelector('.article-offer');
-      removeDOMElement(article_offer);
-      let css_selector = article_content.querySelectorAll('p[style]')[1].getAttribute('class');
-      let hidden_not_pars = article_content.querySelectorAll('.' + css_selector + ':not(p)');
-      for (let hidden_not_par of hidden_not_pars) {
-        hidden_not_par.classList.remove(css_selector);
-        hidden_not_par.removeAttribute('style');
-      }
-      let hidden_pars = article_content.querySelectorAll('p.' + css_selector);
-      let par_html, par_dom;
-      let parser = new DOMParser();
-      for (let hidden_par of hidden_pars) {
-        let par_html = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px">' + DOMPurify.sanitize(hidden_par.innerHTML) + '</div>', 'text/html');
-        let par_dom = par_html.querySelector('div');
-        article_content.insertBefore(par_dom, hidden_par);
-      }
-      let first_span = document.querySelector('p > span');
-      if (first_span)
-        first_span.removeAttribute('class');
-    }
-  }
-  let premium_toaster = document.querySelector('#premium-toaster');
-  removeDOMElement(premium_toaster);
-}
-
 else if (matchDomain('nybooks.com')) {
   let paywall_article = document.querySelector('.paywall-article');
   if (paywall_article)
@@ -3118,6 +3086,38 @@ else if (matchDomain('nytimes.com')) {
     waitDOMElement('div.expanded-dock', 'DIV', removeDOMElement, false);
     csDoneOnce = true;
   }
+}
+
+else if (matchDomain('nzherald.co.nz')) {
+  // plus code in contentScript_once.js
+  let article_content = document.querySelector('.article__content');
+  if (article_content) {
+    let premium = document.querySelector('span.ellipsis');
+    if (premium && dompurify_loaded) {
+      premium.classList.remove('ellipsis');
+      let article_offer = document.querySelector('.article-offer');
+      removeDOMElement(article_offer);
+      let css_selector = article_content.querySelectorAll('p[style]')[1].getAttribute('class');
+      let hidden_not_pars = article_content.querySelectorAll('.' + css_selector + ':not(p)');
+      for (let hidden_not_par of hidden_not_pars) {
+        hidden_not_par.classList.remove(css_selector);
+        hidden_not_par.removeAttribute('style');
+      }
+      let hidden_pars = article_content.querySelectorAll('p.' + css_selector);
+      let par_html, par_dom;
+      let parser = new DOMParser();
+      for (let hidden_par of hidden_pars) {
+        let par_html = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px">' + DOMPurify.sanitize(hidden_par.innerHTML) + '</div>', 'text/html');
+        let par_dom = par_html.querySelector('div');
+        article_content.insertBefore(par_dom, hidden_par);
+      }
+      let first_span = document.querySelector('p > span');
+      if (first_span)
+        first_span.removeAttribute('class');
+    }
+  }
+  let premium_toaster = document.querySelector('#premium-toaster');
+  removeDOMElement(premium_toaster);
 }
 
 else if (matchDomain('outlookindia.com')) {
