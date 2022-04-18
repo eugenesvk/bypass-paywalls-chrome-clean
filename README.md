@@ -448,6 +448,7 @@ Grouped in options:\
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
+[Automobilwoche](https://www.automobilwoche.de/) -
 [Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Cicero](https://www.cicero.de) -

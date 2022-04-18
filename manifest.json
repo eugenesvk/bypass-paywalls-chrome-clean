@@ -81,6 +81,7 @@
         "*://*.atlantico.fr/*",
         "*://*.augsburger-allgemeine.de/*",
         "*://*.autonews.com/*",
+        "*://*.automobilwoche.de/*",
         "*://*.azcentral.com/*",
         "*://*.backpacker.com/*",
         "*://*.baltimoresun.com/*",
@@ -667,5 +668,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.5.0"
+    "version": "2.6.5.1"
 }
