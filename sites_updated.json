@@ -11,6 +11,11 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
+  "Automobilwoche": {
+    "domain": "automobilwoche.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.amazonaws\\.com\\/s3fs-public\\/js\\/js_.+\\.js"
+  },
   "Berliner Zeitung": {
     "domain": "berliner-zeitung.de",
     "allow_cookies": 1,

@@ -144,6 +144,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|cdn\.cxense\.com\/)/
   },
+  "Automobilwoche": {
+    domain: "automobilwoche.de",
+    allow_cookies: 1,
+    block_regex: /\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
+  },
   "Badische Neueste Nachrichten": {
     allow_cookies: 1,
     domain: "bnn.de",

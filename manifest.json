@@ -80,6 +80,7 @@
         "*://*.atavist.com/*",
         "*://*.atlantico.fr/*",
         "*://*.augsburger-allgemeine.de/*",
+        "*://*.automobilwoche.de/*",
         "*://*.autonews.com/*",
         "*://*.azcentral.com/*",
         "*://*.backpacker.com/*",
@@ -667,5 +668,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.5.0"
+    "version": "2.6.5.1"
 }
