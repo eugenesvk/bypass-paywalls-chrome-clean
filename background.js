@@ -149,7 +149,7 @@ function set_rules(sites, sites_updated, sites_custom) {
       let site_default = defaultSites.hasOwnProperty(site) ? site : Object.keys(defaultSites).find(default_key => compareKey(default_key, site));
       if (site_default) {
         rule = defaultSites[site_default];
-        if (sites_updated.hasOwnProperty(site_default)  && !sites_updated[site_default].new_site)
+        if (sites_updated.hasOwnProperty(site_default) && !sites_updated[site_default].new_site)
           rule = sites_updated[site_default];
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];

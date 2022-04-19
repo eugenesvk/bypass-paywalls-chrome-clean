@@ -36,6 +36,21 @@
     "ld_json": "div.paywall|div#articleBody",
     "new_site": 1
   },
+  "Rock and Ice": {
+    "domain": "rockandice.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.rockandice\\.com\\/.+\\/scripts\\/contentGate.+\\.js",
+    "cs_code": [{
+        "cond": "div.o-membership-overlay",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "[class*=\"is-gated\"]",
+            "rm_class": "is-gated,is-gated--flexible-layout"
+          }
+        ]
+      }
+    ]
+  },
   "Vogue Business": {
     "allow_cookies": 1,
     "domain": "voguebusiness.com",

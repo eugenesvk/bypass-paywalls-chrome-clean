@@ -1296,6 +1296,7 @@ var defaultSites = {
       "cyclingtips.com",
       "outsideonline.com",
       "oxygenmag.com",
+      "rockandice.com",
       "skimag.com",
       "trailrunnermag.com",
       "triathlete.com",

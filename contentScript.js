@@ -30,7 +30,7 @@ var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchr
 var usa_lee_ent_domains = ['buffalonews.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pe.com', 'twincities.com'];
-var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
+var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "outsideonline.com", "oxygenmag.com", "rockandice.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
@@ -313,7 +313,7 @@ else {
       if (window.location.hostname.startsWith('amp.')) {
         amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#story-comments, .comments-wrapper');
-      } else if (window.location.href.includes('?amp')) {
+      } else if (window.location.search.match(/(\?|&)amp/)) {
         amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
         comments = document.querySelector('#comments-load');
         let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
@@ -490,7 +490,7 @@ else if (matchDomain('berliner-zeitung.de')) {
 
 else if (matchDomain('cicero.de')) {
   let url = window.location.href;
-  if (!url.includes('?amp')) {
+  if (!window.location.search.match(/(\?|&)amp/)) {
     let paywall = document.querySelector('.plenigo-paywall');
     if (paywall) {
       removeDOMElement(paywall);
@@ -693,7 +693,7 @@ else if (matchDomain('nn.de')) {
 
 else if (matchDomain(['noz.de', 'nwzonline.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.match(/(-amp\.html|\/amp)$/)) {
-    amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, #flying-carpet-wrapper');
+    amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
   } else {
     let paywall = document.querySelector('.paywall, .story--premium__container');
     let amphtml = document.querySelector('link[rel="amphtml"]');
@@ -1520,7 +1520,7 @@ else if (matchDomain('lesechos.fr') && window.location.href.match(/\d{6,}/)) {
 }
 
 else if (matchDomain('lesinrocks.com')) {
-  if (window.location.search.startsWith('?amp')) {
+  if (window.location.search.match(/(\?|&)amp/)) {
     let size_defined = document.querySelector('amp-script.i-amphtml-layout-size-defined');
     if (size_defined)
       size_defined.style = 'overflow:visible !important;';
@@ -2010,7 +2010,7 @@ else
 
 if (matchDomain('independent.co.uk')) {
   let url = window.location.href;
-  if (url.includes('?amp')) {
+  if (window.location.search.match(/(\?|&)amp/)) {
     let ads = document.querySelectorAll('amp-ad, amp-embed, [id^="ad-"]');
     removeDOMElement(...ads);
   } else {
@@ -2076,7 +2076,7 @@ else if (matchDomain('the-tls.co.uk')) {
 }
 
 else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
-  if (!window.location.href.includes('?amp')) {
+  if (!window.location.search.match(/(\?|&)amp/)) {
     let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall.length && amphtml) {
@@ -2339,7 +2339,7 @@ else if (matchDomain('asia.nikkei.com')) {
 }
 
 else if (matchDomain('asiatimes.com')) {
-  if (!window.location.search.includes('?amp_markup=1')) {
+  if (!window.location.search.match(/(\?|&)amp_markup=1/)) {
     let paywall = document.querySelector('div.woocommerce');
     if (paywall) {
       removeDOMElement(paywall);

@@ -205,6 +205,7 @@ Grouped in options:\
 [Cycling Tips](https://cyclingtips.com) -
 [Outside](https://www.outsideonline.com) -
 [Oxygen](https://www.oxygenmag.com) -
+[Rock and Ice](https://www.rockandice.com) -
 [SKI](https://www.skimag.com) -
 [Trail Runner](https://www.trailrunnermag.com) -
 [Triathlete](https://www.triathlete.com) -

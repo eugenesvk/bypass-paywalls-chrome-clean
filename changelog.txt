@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Automobilwoche
+Add Rock and Ice
 
 * v2.6.5.0 (2022-04-18)
 Add Aftonbladet.se
