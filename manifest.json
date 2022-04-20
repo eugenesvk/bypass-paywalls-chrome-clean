@@ -91,6 +91,7 @@
         "*://*.berliner-zeitung.de/*",
         "*://*.berlingske.dk/*",
         "*://*.betamtb.com/*",
+        "*://*.betternutrition.com/*",
         "*://*.bicycling.com/*",
         "*://*.bienpublic.com/*",
         "*://*.billboard.com/*",
@@ -245,6 +246,7 @@
         "*://*.griffithreview.com/*",
         "*://*.groene.nl/*",
         "*://*.grubstreet.com/*",
+        "*://*.gymclimber.com/*",
         "*://*.haaretz.co.il/*",
         "*://*.haaretz.com/*",
         "*://*.haarlemsdagblad.nl/*",
@@ -454,11 +456,13 @@
         "*://*.parismatch.com/*",
         "*://*.parool.nl/*",
         "*://*.pe.com/*",
+        "*://*.pelotonmagazine.com/*",
         "*://*.pennlive.com/*",
         "*://*.petitbleu.fr/*",
         "*://*.philosophynow.org/*",
         "*://*.pilotonline.com/*",
         "*://*.piqd.de/*",
+        "*://*.podiumrunner.com/*",
         "*://*.politicaexterior.com/*",
         "*://*.popularmechanics.com/*",
         "*://*.portnews.com.au/*",
@@ -669,5 +673,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.5.2"
+    "version": "2.6.5.3"
 }

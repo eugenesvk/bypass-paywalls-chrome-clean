@@ -21,6 +21,14 @@
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|fx-flying-carpet|subscriptions)-.+\\.js"
   },
+  "Better Nutrition": {
+    "domain": "betternutrition.com",
+    "group_rule": "###_gr_usa_outside_mag_domains"
+  },
+  "Gym Climber": {
+    "domain": "gymclimber.com",
+    "group_rule": "###_gr_usa_outside_mag_domains"
+  },
   "Investors' Chronicle": {
     "allow_cookies": 1,
     "domain": "investorschronicle.co.uk",
@@ -36,10 +44,31 @@
     "ld_json": "div.paywall|div#articleBody",
     "new_site": 1
   },
+  "Peloton": {
+    "domain": "pelotonmagazine.com",
+    "group_rule": "###_gr_usa_outside_mag_domains"
+  },
+  "Podium Runner": {
+    "domain": "podiumrunner.com",
+    "group_rule": "###_gr_usa_outside_mag_domains"
+  },
   "Rock and Ice": {
     "domain": "rockandice.com",
+    "group_rule": "###_gr_usa_outside_mag_domains"
+  },
+  "Vogue Business": {
     "allow_cookies": 1,
-    "block_regex": "\\.rockandice\\.com\\/.+\\/scripts\\/contentGate.+\\.js",
+    "domain": "voguebusiness.com",
+    "useragent": "googlebot",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
+    "amp_redirect": "div[class*=\"PaywallInlineBarrier\"]",
+    "amp_unhide": 1,
+    "new_site": 1
+  },
+  "###_gr_usa_outside_mag_domains": {
+    "group_rule_domains": ["betternutrition.com", "gymclimber.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com"],
+    "allow_cookies": 1,
+    "block_regex": "\\.{domain}\\/.+\\/scripts\\/contentGate.+\\.js",
     "cs_code": [{
         "cond": "div.o-membership-overlay",
         "rm_elem": 1,
@@ -50,14 +79,5 @@
         ]
       }
     ]
-  },
-  "Vogue Business": {
-    "allow_cookies": 1,
-    "domain": "voguebusiness.com",
-    "useragent": "googlebot",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
-    "amp_redirect": "div[class*=\"PaywallInlineBarrier\"]",
-    "amp_unhide": 1,
-    "new_site": 1
   }
 }
