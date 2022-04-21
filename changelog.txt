@@ -9,6 +9,7 @@ Add Peloton
 Add Podium Runner
 Add Rock and Ice
 Fix El Pais (amp/video)
+Fix Fortune (magazine)
 
 * v2.6.5.0 (2022-04-18)
 Add Aftonbladet.se

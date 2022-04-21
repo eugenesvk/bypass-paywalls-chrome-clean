@@ -2697,10 +2697,13 @@ else if (matchDomain('foreignpolicy.com')) {
 }
 
 else if (matchDomain('fortune.com')) {
+  let paywall = document.querySelector('.paywall');
   if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', '[class^="amp-ad"]');
-    let paywall = document.querySelector('.paywall');
     removeDOMElement(paywall);
+  } else {
+    if (paywall)
+      paywall.removeAttribute('class');
   }
 }
 
