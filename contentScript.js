@@ -1106,23 +1106,21 @@ else if (matchDomain(es_unidad_domains)) {
 }
 
 else if (matchDomain('elpais.com')) {
-  let url = window.location.href;
   let login_register = document.querySelector('.login_register');
-  if (url.includes('.amp.html') || url.includes('?outputType=amp')) {
-    amp_unhide_access_hide('="vip"', '="NOT vip"');
+  if (window.location.pathname.endsWith('.amp.html') || window.location.search.match(/(\?|&)outputType=amp/)) {
+    amp_unhide_access_hide('="vip"], [amp-access="success"', '="NOT vip"], [amp-access="NOT success"');
     removeDOMElement(login_register);
   } else {
     let counter = document.querySelector('#counterLayerDiv');
     removeDOMElement(counter);
-    let video = document.querySelector('div.videoTop');
     let amphtml = document.querySelector('link[rel="amphtml"]');
-    if ((login_register || video) && amphtml) {
+    if (login_register && amphtml) {
       removeDOMElement(login_register, video);
       window.location.href = amphtml.href;
     }
   }
   let paywall_offer = document.querySelector('.paywallOffer');
-  let ctn_closed_article = document.querySelector('#ctn_closed_article, #ctn_freemium_article');
+  let ctn_closed_article = document.querySelector('#ctn_closed_article, #ctn_freemium_article, #ctn_premium_article');
   removeDOMElement(paywall_offer, ctn_closed_article);
 }
 
@@ -1179,8 +1177,7 @@ else if (matchDomain(es_epiberica_domains)) {
     let truncated = document.querySelector('div.article-body--truncated');
     if (truncated)
       truncated.classList.remove('article-body--truncated');
-    amp_unhide_access_hide('="NOT access"', '="access"');
-    amp_unhide_access_hide('="FALSE"');
+    amp_unhide_access_hide('="NOT access"], [amp-access="FALSE"', '="access"');
   } else if (window.location.hostname === 'amp.epe.es') {
     amp_unhide_access_hide('="loggedIn"', '="NOT loggedIn"', 'amp-ad, amp-embed, amp-next-page');
   } else {

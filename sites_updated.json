@@ -25,6 +25,11 @@
     "domain": "betternutrition.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
+  "El País": {
+    "domain": "elpais.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
+  },
   "Gym Climber": {
     "domain": "gymclimber.com",
     "group_rule": "###_gr_usa_outside_mag_domains"

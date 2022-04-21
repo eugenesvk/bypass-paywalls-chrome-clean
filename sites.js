@@ -391,7 +391,7 @@ var defaultSites = {
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
-    block_regex: /(\.epimg\.net\/js\/.+\/(noticia|user)\.min\.js|\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
   },
   "El Periódico (de Catalunya)": {
     domain: "elperiodico.com",

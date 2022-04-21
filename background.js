@@ -19,7 +19,6 @@ var restrictions = {
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
-  'elpais.com': /(\/(.+\.)?elpais\.com\/.+\.html|(static|imagenes(\.\w+)?)\.elpais\.com)/,
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'foreignaffairs.com': /\.foreignaffairs\.com\/((articles|fa-caching|interviews|reviews|sites)\/)/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
@@ -36,7 +35,7 @@ var restrictions = {
 for (let domain of au_news_corp_domains)
   restrictions[domain] = new RegExp('^((?!todayspaper\\.' + domain.replace(/\./g, '\\.') + '\\/).)*$');
 if (typeof browser !== 'object') {
-  for (let domain of['elpais.com'])
+  for (let domain of [])
     restrictions[domain] = new RegExp('((\\/|\\.)' + domain.replace(/\./g, '\\.') + '\\/$|' + restrictions[domain].toString().replace(/(^\/|\/$)/g, '') + ')');
 }
 
@@ -618,10 +617,12 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.theglobeandmail.com/*"];
+var block_js_inline = ["*://*.elpais.com/*", "*://*.theglobeandmail.com/*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-  let excluded = matchUrlDomain('theglobeandmail.com', details.url) && (enabledSites.includes('#options_optin_tgam_media') || !details.url.includes('?rel=premium'));
+  let url_path = details.url.split('?')[0];
+  let excluded = (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
+  || (matchUrlDomain('theglobeandmail.com', details.url) && (enabledSites.includes('#options_optin_tgam_media') || !details.url.includes('?rel=premium')));
   if (!isSiteEnabled(details) || excluded)
     return;
   var headers = details.responseHeaders;
@@ -715,7 +716,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         break;
       }
     }
-    var blocked_referer_domains = ['elpais.com', 'foreignaffairs.com', 'timeshighereducation.com'];
+    var blocked_referer_domains = ['foreignaffairs.com', 'timeshighereducation.com'];
     if (!header_referer && details.initiator) {
       header_referer = details.initiator;
       if (!blocked_referer && matchUrlDomain(blocked_referer_domains, details.url) && ['script', 'xmlhttprequest'].includes(details.type)) {
