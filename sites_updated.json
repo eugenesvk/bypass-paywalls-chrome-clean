@@ -16,11 +16,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.amazonaws\\.com\\/s3fs-public\\/js\\/js_.+\\.js"
   },
-  "Berliner Zeitung": {
-    "domain": "berliner-zeitung.de",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|fx-flying-carpet|subscriptions)-.+\\.js"
-  },
   "Better Nutrition": {
     "domain": "betternutrition.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
@@ -38,10 +33,6 @@
     "allow_cookies": 1,
     "domain": "investorschronicle.co.uk",
     "referer": "google"
-  },
-  "Nürnberger Nachrichten": {
-    "domain": "nn.de",
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
   },
   "Outlook India": {
     "domain": "outlookindia.com",

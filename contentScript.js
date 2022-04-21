@@ -2035,16 +2035,19 @@ else if (matchDomain('prospectmagazine.co.uk')) {
 }
 
 else if (matchDomain('spectator.co.uk')) {
-  let url = window.location.href.split('?')[0];
-  if (url.match(/\/amp(\/)?$/)) {
-    let paywall = document.querySelectorAll('div[amp-access^="p.show"');
-    let not_logged_in = document.querySelector('div[amp-access*="NOT loggedIn"]');
-    removeDOMElement(...paywall, not_logged_in)
-  } else {
-    let premium = document.querySelector('.HardPayWallContainer-module__overlay');
-    removeDOMElement(premium);
-    if (premium)
-      window.location.href = url + '/amp';
+  if (window.location.pathname.match(/\/amp(\/)?$/)) {
+    let banners = document.querySelectorAll('div[amp-access^="p.show"], div[amp-access*="NOT loggedIn"]');
+    removeDOMElement(...banners);
+  } else if (window.location.pathname.startsWith('/article/')) {
+    let paywall = document.querySelector('.HardPayWallContainer-module__overlay');
+    let body_par = document.querySelector('p[class^="ContentPageBodyParagraph"]');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if ((paywall || !body_par) && amphtml) {
+      removeDOMElement(paywall);
+      window.setTimeout(function () {
+        window.location.href = amphtml.href;
+      }, 500);
+    }
   }
 }
 
