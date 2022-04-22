@@ -512,7 +512,6 @@ Grouped in options:\
 [Huffingtonpost.it](https://www.huffingtonpost.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Foglio](https://www.ilfoglio.it) -
-[Il Manifesto](https://ilmanifesto.it) -
 [Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italian.tech](https://www.italian.tech) -

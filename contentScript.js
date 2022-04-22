@@ -2701,7 +2701,7 @@ else if (matchDomain('foreignpolicy.com')) {
 
 else if (matchDomain('fortune.com')) {
   let paywall = document.querySelector('.paywall');
-  if (window.location.pathname.endsWith('/amp/')) {
+  if (window.location.pathname.match(/\/amp(\/)?/)) {
     amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', '[class^="amp-ad"]');
     removeDOMElement(paywall);
   } else {
