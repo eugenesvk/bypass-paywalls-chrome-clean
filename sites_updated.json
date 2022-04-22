@@ -25,6 +25,24 @@
     "allow_cookies": 1,
     "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
   },
+  "eNotes": {
+    "domain": "enotes.com",
+    "allow_cookies": 1,
+    "cs_code": [{
+        "cond": "#enotes-paywall",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "div.c-answer__body > div[class^=\"_\"]",
+            "rm_attrib": "class"
+          }, {
+            "cond": "div.c-answer__body > p",
+            "rm_elem": 1
+          }
+        ]
+      }
+    ],
+    "new_site": 1
+  },
   "Gym Climber": {
     "domain": "gymclimber.com",
     "group_rule": "###_gr_usa_outside_mag_domains"

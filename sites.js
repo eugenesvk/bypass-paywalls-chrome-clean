@@ -411,6 +411,10 @@ var defaultSites = {
   "Encyclopedia Britannica": {
     domain: "britannica.com"
   },
+  "eNotes": {
+    domain: "enotes.com",
+    allow_cookies: 1
+  },
   "Entrepreneur": {
     domain: "entrepreneur.com",
     allow_cookies: 1

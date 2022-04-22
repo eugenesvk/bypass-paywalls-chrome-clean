@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Automobilwoche
 Add Better Nutrition
+Add eNotes
 Add Gym Climber
 Add Peloton
 Add Podium Runner

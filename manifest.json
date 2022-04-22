@@ -201,6 +201,7 @@
         "*://*.elperiodicoextremadura.com/*",
         "*://*.elperiodicomediterraneo.com/*",
         "*://*.eltiempo.com/*",
+        "*://*.enotes.com/*",
         "*://*.entrepreneur.com/*",
         "*://*.epe.es/*",
         "*://*.espn.com/*",
@@ -671,5 +672,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.5.4"
+    "version": "2.6.5.5"
 }

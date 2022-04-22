@@ -2644,6 +2644,19 @@ else if (matchDomain('economist.com')) {
   }
 }
 
+else if (matchDomain('enotes.com')) {
+  let paywall = document.querySelector('#enotes-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let blurred = document.querySelectorAll('div.c-answer__body > div[class^="_"]');
+    for (let elem of blurred)
+      elem.removeAttribute('class');
+    let intro = document.querySelectorAll('div.c-answer__body > p');
+    for (let elem of intro)
+      removeDOMElement(elem);
+  }
+}
+
 else if (matchDomain('entrepreneur.com')) {
   let promo = document.querySelector('.paywall-promo');
   if (promo) {

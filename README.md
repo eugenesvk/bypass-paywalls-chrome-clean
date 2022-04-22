@@ -141,6 +141,7 @@ Grouped in options:\
 ##### Encyclopedia/Book library/Knowledge base
 [BBC History Extra](https://www.historyextra.com) -
 [Encyclopedia Britannica](https://www.britannica.com) -
+[eNotes](https://www.enotes.com) -
 [Glassdoor](https://www.glassdoor.com) -
 [Loeb Classical Library](https://www.loebclassics.com) -
 [Philosophy Now](https://philosophynow.org) -
