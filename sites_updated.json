@@ -52,6 +52,12 @@
     "domain": "investorschronicle.co.uk",
     "referer": "google"
   },
+  "Italia Oggi": {
+    "domain": "italiaoggi.it",
+    "allow_cookies": 1,
+    "ld_json": "div.boxAbb|div.article-locked",
+    "new_site": 1
+  },
   "Outlook India": {
     "domain": "outlookindia.com",
     "allow_cookies": 1,

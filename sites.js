@@ -842,6 +842,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
   },
+  "Italia Oggi": {
+    domain: "italiaoggi.it",
+    allow_cookies: 1
+  },
   "Italian.tech": {
     domain: "italian.tech",
     group_rule: "###_gr_it_repubblica_domains"
@@ -1136,13 +1140,13 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
   },
-  "Medium": {
+  "Medium (free articles only)": {
     domain: "medium.com",
     allow_cookies: 1,
     remove_cookies: 1,
     referer: "twitter"
   },
-  "Medium custom domains": {
+  "Medium custom domains (free articles only; opt-in to custom sites)": {
     domain: "###_medium_custom"
   },
   "Mexico News Daily": {

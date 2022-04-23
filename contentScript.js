@@ -1686,6 +1686,35 @@ else if (matchDomain(it_quotidiano_domains)) {
   }
 }
 
+else if (matchDomain('italiaoggi.it')) {
+  let paywall = document.querySelector('div.boxAbb');
+  if (paywall && dompurify_loaded) {
+    let overlay = document.querySelector('div.article-locked-overlay');
+    removeDOMElement(paywall, overlay);
+    let article_locked = document.querySelector('div.article-locked');
+    if (article_locked) {
+      article_locked.classList.remove('article-locked');
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let json_text = json.articleBody;
+          let content = article_locked.querySelector('section');
+          if (json_text && content) {
+            if (json_text && content) {
+              let parser = new DOMParser();
+              json_text = DOMPurify.sanitize(json_text).replace(/&amp;apos;/g, "'").replace(/;/g, '');
+              let doc = parser.parseFromString('<div><section>' + json_text + '</section></div>', 'text/html');
+              let content_new = doc.querySelector('div');
+              content.parentNode.replaceChild(content_new, content);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('lescienze.it')) {
   window.setTimeout(function () {
     let paywall = document.querySelector('.paywall-adagio');

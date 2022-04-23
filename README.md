@@ -158,7 +158,7 @@ Grouped in options:\
 [Commentary Magazine](https://www.commentary.org) -
 [ESPN USA](https://www.espn.com) -
 [First Things](https://www.firstthings.com) -
-[Medium](https://www.medium.com/topics) (for custom domains enable custom sites) -
+[Medium](https://www.medium.com/topics)* (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
 [Rolling Stone](https://www.rollingstone.com) -
 [RugbyPass](https://www.rugbypass.com) -
@@ -515,6 +515,7 @@ Grouped in options:\
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Internazionale](https://www.internazionale.it) -
+[Italia Oggi](https://www.italiaoggi.it) -
 [Italian.tech](https://www.italian.tech) -
 [La Nuova Sardegna](https://www.lanuovasardegna.it) -
 [La Repubblica](https://www.repubblica.it) -

@@ -3,12 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Automobilwoche
-Add Better Nutrition
+Add Better Nutrition, Gym Climber, Peloton, Podium Runner & Rock and Ice
 Add eNotes
-Add Gym Climber
-Add Peloton
-Add Podium Runner
-Add Rock and Ice
+Add Italia Oggi
 Remove ilManifesto.it (fix obsolete)
 Fix El Pais (amp/video)
 Fix Fortune (magazine)
