@@ -43,6 +43,16 @@
     ],
     "new_site": 1
   },
+  "Fortune": {
+    "domain": "fortune.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)",
+    "cs_code": [{
+        "cond": "div.paywallActive",
+        "rm_attrib": "class"
+      }
+    ]
+  },
   "Gym Climber": {
     "domain": "gymclimber.com",
     "group_rule": "###_gr_usa_outside_mag_domains"

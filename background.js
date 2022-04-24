@@ -349,7 +349,7 @@ ext_api.storage.local.get({
     });
   }
 
-  disabledSites = defaultSites_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x) && x !== '###');
+  disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
   if (enabledSites.includes('#options_optin_update_rules'))
@@ -372,7 +372,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
         }).map(function (val) {
           return val.toLowerCase();
         });
-      disabledSites = defaultSites_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x) && x !== '###');
+      disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
       add_grouped_enabled_domains(grouped_sites);
       set_rules(sites, updatedSites, customSites);
     }

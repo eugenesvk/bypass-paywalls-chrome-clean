@@ -2025,7 +2025,7 @@ if (typeof browser === 'object') {
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {
-    return value.hasOwnProperty('domain');
+    return (value.hasOwnProperty('domain') && value.domain !== '###');
   }).map(x => x.domain);
 var defaultSites_groups_domains = [].concat.apply([], Object.values(defaultSites).filter(function (value) {
     return value.hasOwnProperty('group');

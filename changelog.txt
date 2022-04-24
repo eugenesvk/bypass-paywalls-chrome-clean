@@ -7,6 +7,7 @@ Add Better Nutrition, Gym Climber, Peloton, Podium Runner & Rock and Ice
 Add eNotes
 Add Italia Oggi
 Remove ilManifesto.it (fix obsolete)
+Fix Barron's (continue reading)
 Fix El Pais (amp/video)
 Fix Fortune (magazine)
 Fix The Spectator UK (amp-redirect)

@@ -2387,11 +2387,9 @@ else if (matchDomain('barrons.com')) {
       removeDOMElement(snippet);
       window.location.href = url.replace('barrons.com', 'barrons.com/amp');
     }
-    let signin_links = document.querySelectorAll('a.primary-button--link[href*="target="]');
-    for (let signin_link of signin_links) {
-      signin_link.href = decodeURIComponent(signin_link.href.split('target=')[1]).split('?')[0];
-      signin_link.text = 'Click';
-    }
+    let continue_buttons = document.querySelectorAll('button.snippet__buttons--continue');
+    for (let elem of continue_buttons)
+      elem.addEventListener('click', function () { window.location.reload(); });
     let barrons_ads = document.querySelectorAll('.barrons-body-ad-placement');
     removeDOMElement(...barrons_ads);
   } else {
