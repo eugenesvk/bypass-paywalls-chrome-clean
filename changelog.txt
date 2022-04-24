@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.6.0 (2022-04-24)
 Add Automobilwoche
 Add Better Nutrition, Gym Climber, Peloton, Podium Runner & Rock and Ice
 Add eNotes
