@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Lequipe.fr (json)
 
 * v2.6.6.0 (2022-04-24)
 Add Automobilwoche

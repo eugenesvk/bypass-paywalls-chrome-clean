@@ -1390,65 +1390,44 @@ else if (matchDomain('lequipe.fr')) {
         let json = json_script.textContent.split('articleObject:')[1].split(',articleType')[0];
         let url_nuxt = json_script.textContent.split('comment_count_url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
-          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
-        let par_type = json.split('paragraphs:[')[1].split(',{__type:')[1].split(',')[0];
-        if (par_type) {
+          window.setTimeout(function () {
+            ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+          }, 500);
+        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{");
+        json = JSON.parse(json);
+        if (json.items) {
+          let pars = json.items.filter(x => x.objet && x.objet.paragraphs)[0].objet.paragraphs;
           article.innerHTML = '';
-          let json_split = json.split('__type:' + par_type);
-          json_split.shift();
           let article_dom;
           let article_text = '';
           let parser = new DOMParser();
-          let par_main_title = '';
-          for (let par_main of json_split) {
-            if (par_main.includes(',content:')) {
-              let pars;
-              if (par_main.split(',content:"').filter(x => !x.startsWith('\\')).length > 2) {
-                if (par_main.startsWith(',title:')) {
-                  par_main_title = par_main.split(',title:')[1].split(',')[0].replace(/(^\"|\"$)/g, '');
-                  article_text += '<p><strong>' + par_main_title + '</strong></p>';
-                }
-                par_type = json.split('content:')[1].split('"},{__type:')[1].split(',')[0];
-                pars = par_main.split('__type:' + par_type);
-              } else {
-                pars = [par_main];
+          for (let par of pars) {
+            if (par.title || par.content) {
+              if (par.title && par.title.length > 2)
+                article_text += '<p><strong>' + par.title + '</strong></p>';
+              if (par.content) {
+                let par_content = par.content.replace('class=', '').replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/(^\"|\"$)/g, '').replace(/\\t/g, '');
+                article_text += '<p>' + par_content + '</p>';
               }
-              for (let par of pars) {
-                par = par.split('}')[0];
-                if (par.includes(',content:')) {
-                  let content = par.split(',content:"')[1].split('",')[0];
-                  let par_title = '';
-                  if (par.includes(',title:'))
-                    par_title = par.split(',title:')[1].split(',')[0].replace(/(^\"|\"$)/g, '');
-                  if (content) {
-                    par = content.replace('class=', '');
-                    if (par_title.length > 2 && par_title !== par_main_title)
-                      par = '<strong>' + par_title + '</strong><br><br>' + content;
-                    par = par.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/(^\"|\"$)/g, '').replace(/\\t/g, '');
-                    article_text += '<p>' + par + '</p>';
-                  }
-                }
-              }
-            }
-            par_main = par_main.split('}]')[0];
-            if (par_main.includes(',media:')) {
-              let media = par_main.split(',media:')[1].split('}}')[0] + '}';
-              if (media.includes('ratio:')) {
-                let ratio = media.split('ratio:')[1].split(',')[0].split('}')[0];
-                if (!parseInt(ratio))
-                  ratio = 1.5;
-                let url = media.split('url:"')[1].split('"')[0].replace(/\\u002F/g, '/').replace('{width}', '400').replace('{height}', parseInt(400 / ratio)).replace('{quality}', '75');
-                if (url)
-                  article_text += '<p><img src="' + url + '" style="width:95%;"</img></p>';
-              }
-            }
+            } else if (par.media && par.media.url && par.media.ratio) {
+              let ratio = par.media.ratio;
+              if (!parseInt(ratio))
+                ratio = 1.5;
+              let url = par.media.url.replace(/\\u002F/g, '/').replace('{width}', '400').replace('{height}', parseInt(400 / ratio)).replace('{quality}', '75');
+              article_text += '<p><img src="' + url + '" style="width:95%;"</img></p>';
+              if (par.media.legende && par.media.legende.length > 2)
+                article_text += '<p><strong>' + par.media.legende + '</strong></p>';
+            } else if (par.__type && !par.layout)
+              console.log(par);
           }
           article_dom = parser.parseFromString('<div style="margin:20px; font-family:DINNextLTPro-Regular,sans-serif; font-size:18px;">' + DOMPurify.sanitize(article_text) + '</div>', 'text/html');
           article.appendChild(article_dom.querySelector('div'));
         }
       } else
-        ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
-    } 
+        window.setTimeout(function () {
+          ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+        }, 500);
+    }
   }
 }
 
