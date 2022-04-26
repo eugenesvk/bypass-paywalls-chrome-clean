@@ -578,6 +578,7 @@ Grouped in options:\
 
 Grouped in options:\
 *Grupo Prensa Ibérica* sites like\
+[Diari de Girona](https://www.diaridegirona.cat) -
 [Diario Córdoba](https://www.diariocordoba.com) -
 [Diario de Ibiza](https://www.diariodeibiza.es) -
 [Diario de Mallorca](https://www.diariodemallorca.es) -
@@ -586,6 +587,7 @@ Grouped in options:\
 [El Periódico de España](https://www.ese.es) -
 [El Periódico Extremadura](https://www.elperiodicoextremadura.com) -
 [El Periódico Mediterráneo](https://www.elperiodicomediterraneo.com) -
+[Empordà](https://www.emporda.info) -
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -
 [La Nueva España](https://www.lne.es) -

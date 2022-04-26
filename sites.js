@@ -660,6 +660,7 @@ var defaultSites = {
   "Grupo Prensa Ibérica": {
     domain: "###_es_epiberica",
     group: [
+      "diaridegirona.cat",
       "diariocordoba.com",
       "diariodeibiza.es",
       "diariodemallorca.es",
@@ -667,6 +668,7 @@ var defaultSites = {
       "elperiodicodearagon.com",
       "elperiodicoextremadura.com",
       "elperiodicomediterraneo.com",
+      "emporda.info",
       "epe.es",
       "farodevigo.es",
       "informacion.es",

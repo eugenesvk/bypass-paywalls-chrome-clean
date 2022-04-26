@@ -9,7 +9,7 @@ var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 't
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
-var es_epiberica_domains = ['diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
+var es_epiberica_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
@@ -1034,7 +1034,7 @@ else if (matchDomain('nyteknik.se')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain('abc.es')) {
   let paywall = document.querySelector('.cierre-suscripcion:not([style="display: none;"])');
@@ -2657,7 +2657,7 @@ else if (matchDomain('enotes.com')) {
     let blurred = document.querySelectorAll('div[class^="_"]');
     for (let elem of blurred)
       elem.removeAttribute('class');
-    let intro = document.querySelectorAll('div.o-rte-text[id] > p:not([class]), div.o-rte-text[id] > h3');
+    let intro = document.querySelectorAll('div.o-rte-text > p:not([class]), div.o-rte-text > h3');
     for (let elem of intro)
       removeDOMElement(elem);
   }
