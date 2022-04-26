@@ -29,13 +29,13 @@
     "domain": "enotes.com",
     "allow_cookies": 1,
     "cs_code": [{
-        "cond": "#enotes-paywall",
+        "cond": "section.c-cta-section",
         "rm_elem": 1,
         "elems": [{
-            "cond": "div.c-answer__body > div[class^=\"_\"]",
+            "cond": "div[class^=\"_\"]",
             "rm_attrib": "class"
           }, {
-            "cond": "div.c-answer__body > p",
+            "cond": "div.o-rte-text[id] > p:not([class]), div.o-rte-text[id] > h3a",
             "rm_elem": 1
           }
         ]
