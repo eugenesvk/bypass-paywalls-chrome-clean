@@ -2192,10 +2192,10 @@ else if (matchDomain(pe_grupo_elcomercio_domains)) {
 }
 
 else if (matchDomain('elespectador.com')) {
-  if (window.location.search.startsWith('?outputType=amp')) {
+  if (window.location.search.match(/(\?|&)outputType=amp/)) {
     amp_unhide_subscr_section('amp-ad, amp-embed, [class^="Widget"], amp-fx-flying-carpet');
   } else {
-    let paywall = document.querySelector('.paywall');
+    let paywall = document.querySelector('div.exclusive_validation');
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall && amphtml) {
       removeDOMElement(paywall);

@@ -6,7 +6,7 @@ var defaultSites = {
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/,
+    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
     useragent: "googlebot"
   },
   "Advance Local": {
@@ -36,7 +36,7 @@ var defaultSites = {
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Alma Talent (Finland)": {
     domain: "###_fi_alma_talent",
@@ -81,12 +81,12 @@ var defaultSites = {
   "Artnet": {
     domain: "artnet.com",
     allow_cookies: 1,
-    block_regex: /(\.artnet\.com\/paywall-ajax\.php|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
+    block_regex: /(\.artnet\.com\/paywall-ajax\.php|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Asia Times": {
     domain: "asiatimes.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics)-.+\.(m)?js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.(m)?js/
   },
   "Atavist Magazine": {
     domain: "atavist.com"
@@ -99,7 +99,7 @@ var defaultSites = {
   "Augsburger Allgemeine": {
     domain: "augsburger-allgemeine.de",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Australia News Corp": {
     domain: "###_au_news_corp",
@@ -120,7 +120,7 @@ var defaultSites = {
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",
@@ -157,7 +157,7 @@ var defaultSites = {
   "Barron's": {
     domain: "barrons.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
     useragent: "googlebot"
   },
   "BBC History Extra": {
@@ -173,7 +173,7 @@ var defaultSites = {
   "Berliner Zeitung": {
     domain: "berliner-zeitung.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|fx-flying-carpet|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Berlingske": {
     domain: "berlingske.dk",
@@ -183,7 +183,7 @@ var defaultSites = {
   "Billboard": {
     domain: "billboard.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Bloomberg": {
     domain: "bloomberg.com",
@@ -193,7 +193,7 @@ var defaultSites = {
   "Bloomberg Quint": {
     domain: "bloombergquint.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Brisbane Times": {
     domain: "brisbanetimes.com.au",
@@ -201,7 +201,7 @@ var defaultSites = {
   },
   "Business Insider": {
     domain: "businessinsider.com",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Business Standard": {
     domain: "business-standard.com",
@@ -215,7 +215,7 @@ var defaultSites = {
   "Challenges": {
     domain: "challenges.fr",
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Charlie Hebdo": {
     domain: "charliehebdo.fr",
@@ -250,7 +250,7 @@ var defaultSites = {
     domain: "###_usa_conde_nast",
     group: ["bonappetit.com", "gq.com", "newyorker.com", "vanityfair.com", "vogue.com", "wired.com"],
     remove_cookies_select_drop: ["pay_ent_smp"],
-    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js)",
+    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     useragent: "googlebot"
   },
   "Connaissance des Arts": {
@@ -261,12 +261,12 @@ var defaultSites = {
   "Correio da Manhã": {
     domain: "cmjornal.pt",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Corriere della Sera": {
     domain: "corriere.it",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|\.corriereobjects\.it\/.+\/js\/_paywall\.sjs|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|\.corriereobjects\.it\/.+\/js\/_paywall\.sjs|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Crain Communications": {
     domain: "###_usa_craincomm",
@@ -340,7 +340,7 @@ var defaultSites = {
   },
   "Digiday": {
     domain: "digiday.com",
-    block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Discover Magazine": {
     domain: "discovermagazine.com"
@@ -362,17 +362,17 @@ var defaultSites = {
   },
   "El Diario.es": {
     domain: "eldiario.es",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "El Español": {
     domain: "elespanol.com",
     allow_cookies: 1,
-    block_regex: /(\.eestatic\.com\/assets_js\/web\/v\d\/historia.*\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.eestatic\.com\/assets_js\/web\/v\d\/historia.*\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "El Espectador": {
     domain: "elespectador.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|fx-flying-carpet|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "El Mercurio": {
     domain: "elmercurio.com",
@@ -391,12 +391,12 @@ var defaultSites = {
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
-    block_regex: /(\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "El Periódico (de Catalunya)": {
     domain: "elperiodico.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "El Tiempo": {
     domain: "eltiempo.com",
@@ -406,7 +406,7 @@ var defaultSites = {
   "Elle.fr": {
     domain: "elle.fr",
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Encyclopedia Britannica": {
     domain: "britannica.com"
@@ -449,12 +449,12 @@ var defaultSites = {
   },
   "Financial News (London)": {
     domain: "fnlondon.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
   "Financial Times (not Chinese)": {
     domain: "ft.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
   "Financieele Dagblad (fd.nl)": {
@@ -472,7 +472,7 @@ var defaultSites = {
       "blogfolha.uol.com.br"
     ],
     allow_cookies: 1,
-    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/,
+    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
   "Follow the Money (ftm.nl)": {
@@ -483,7 +483,7 @@ var defaultSites = {
   "Forbes": {
     domain: "forbes.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Foreign Affairs": {
     domain: "foreignaffairs.com",
@@ -497,7 +497,7 @@ var defaultSites = {
   "Fortune": {
     domain: "fortune.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Franc-Tireur": {
     domain: "franc-tireur.fr",
@@ -511,7 +511,7 @@ var defaultSites = {
   "Freie Presse": {
     domain: "freiepresse.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Funke Mediengruppe": {
     domain: "###_de_funke_medien",
@@ -529,7 +529,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     useragent: "googlebot",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Gannett Group (local USA Today)": {
     domain: "###_usa_gannett",
@@ -547,7 +547,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     amp_unhide: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
   "GElocal.it": {
@@ -588,7 +588,7 @@ var defaultSites = {
       "vosgesmatin.fr"
     ],
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Groupe La Dépêche": {
     domain: "###_fr_groupe_la_depeche",
@@ -602,7 +602,7 @@ var defaultSites = {
       "petitbleu.fr"
     ],
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Groupe Nice-Matin": {
     domain: "###_fr_groupe_nice_matin",
@@ -612,7 +612,7 @@ var defaultSites = {
       "varmatin.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Groupe Rossel": {
     domain: "###_fr_be_groupe_rossel",
@@ -645,7 +645,7 @@ var defaultSites = {
   "Grupo Abril": {
     domain: "abril.com.br",
     allow_cookies: 1,
-    block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/js\/abril-paywall\.js|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/js\/abril-paywall\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Grupo El Comercio": {
     domain: "###_pe_grupo_elcomercio",
@@ -681,7 +681,7 @@ var defaultSites = {
       "lne.es"
     ],
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|analytics)-.+\.js)/
+    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Grupo Vocento": {
     domain: "###_es_grupo_vocento",
@@ -700,7 +700,7 @@ var defaultSites = {
       "lavozdigital.es"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "Haaretz English": {
     domain: "haaretz.com",
@@ -724,7 +724,7 @@ var defaultSites = {
   },
   "Harvard Business Review": {
     domain: "hbr.org",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Harvard Business Review China": {
     domain: "hbrchina.org",
@@ -737,7 +737,7 @@ var defaultSites = {
       "houstonchronicle.com",
       "sfchronicle.com"
     ],
-    block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Hearst Communications magazines": {
     domain: "###_usa_hearst_comm_mag",
@@ -764,7 +764,7 @@ var defaultSites = {
   "Hindustan Times": {
     domain: "hindustantimes.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Honolulu Star-Advertiser": {
     domain: "staradvertiser.com",
@@ -781,12 +781,12 @@ var defaultSites = {
   "Il Fatto Quotidiano": {
     domain: "ilfattoquotidiano.it",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Il Foglio": {
     domain: "ilfoglio.it",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Il Messaggero (+ regional)": {
     domain: "###_it_ilmessaggero",
@@ -797,7 +797,7 @@ var defaultSites = {
       "ilmessaggero.it",
       "quotidianodipuglia.it"
     ],
-    block_regex: /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|consent|subscriptions)-.+\.mjs)/
+    block_regex: /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|consent|subscriptions)-.+\.mjs)/
   },
   "Il Secolo XIX": {
     domain: "ilsecoloxix.it",
@@ -810,12 +810,12 @@ var defaultSites = {
   "Inc42": {
     domain: "inc42.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics)-.+\.(m)?js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.(m)?js)/
   },
   "India Today": {
     domain: "indiatoday.in",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|analytics)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Inkl": {
     domain: "inkl.com"
@@ -895,7 +895,7 @@ var defaultSites = {
   },
   "L'Opinion": {
     domain: "lopinion.fr",
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "L'Usine Nouvelle": {
     domain: "usinenouvelle.com",
@@ -905,7 +905,7 @@ var defaultSites = {
   "La Croix": {
     domain: "la-croix.com",
     allow_cookies: 1,
-    block_regex: /(\.la-croix\.com\/build\/lacroix\/article.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.la-croix\.com\/build\/lacroix\/article.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "La Estrella de Valparaíso": {
     domain: "estrellavalpo.cl",
@@ -927,7 +927,7 @@ var defaultSites = {
   "La Nouvelle République du Centre-Ouest": {
     domain: "lanouvellerepublique.fr",
     allow_cookies: 1,
-    block_regex: /(\.weborama\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.weborama\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "La Nuova Sardegna": {
     domain: "lanuovasardegna.it",
@@ -1017,7 +1017,7 @@ var defaultSites = {
       "tulsaworld.com"
     ],
     allow_cookies: 1,
-    block_regex: /(api\.bntech\.io\/js\/|\.com\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(api\.bntech\.io\/js\/|\.com\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Leeuwarder Courant": {
     domain: "lc.nl",
@@ -1027,7 +1027,7 @@ var defaultSites = {
   "Les Échos": {
     domain: "lesechos.fr",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Les Inrockuptibles": {
     domain: "lesinrocks.com",
@@ -1045,7 +1045,7 @@ var defaultSites = {
   "LiveMint": {
     domain: "livemint.com",
     allow_cookies: 1,
-    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Loeb Classical Library": {
     domain: "loebclassics.com"
@@ -1060,7 +1060,7 @@ var defaultSites = {
   },
   "Los Angeles Times": {
     domain: "latimes.com",
-    block_regex: /(metering\.platform\.latimes\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(metering\.platform\.latimes\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Madsack Mediengruppe": {
     domain: "###_de_madsack",
@@ -1075,7 +1075,7 @@ var defaultSites = {
       "rnd.de"
     ],
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Mainichi Shimbun": {
     domain: "mainichi.jp",
@@ -1094,7 +1094,7 @@ var defaultSites = {
   "MarketWatch": {
     domain: "marketwatch.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "McClatchy Group": {
     domain: "###_usa_mcc",
@@ -1112,7 +1112,7 @@ var defaultSites = {
       "thestate.com",
       "tri-cityherald.com"
     ],
-    block_regex: /(js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",
@@ -1140,7 +1140,7 @@ var defaultSites = {
       "twincities.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Medium (free articles only)": {
     domain: "medium.com",
@@ -1159,7 +1159,7 @@ var defaultSites = {
   "Mid-Day": {
     domain: "mid-day.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "MIT Sloan Management Review": {
     domain: "sloanreview.mit.edu",
@@ -1169,12 +1169,12 @@ var defaultSites = {
   "MIT Technology Review": {
     domain: "technologyreview.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.mjs)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.mjs)/
   },
   "Mitteldeutsche Zeitung": {
     domain: "mz.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "Mountain View Voice": {
     domain: "mv-voice.com"
@@ -1182,7 +1182,7 @@ var defaultSites = {
   "Münstersche Zeitung": {
     allow_cookies: 1,
     domain: "muensterschezeitung.de",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "National Geographic USA": {
     domain: "nationalgeographic.com",
@@ -1193,7 +1193,7 @@ var defaultSites = {
   "National Review": {
     domain: "nationalreview.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.nationalreview\.com\/script\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/,
+    block_regex: /(\.blueconic\.net\/|\.nationalreview\.com\/script\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
     useragent: "googlebot"
   },
   "Nautilus": {
@@ -1202,12 +1202,12 @@ var defaultSites = {
   "Neue Osnabrücker Zeitung": {
     domain: "noz.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Neue Zürcher Zeitung (+ regional/opt-in to custom sites)": {
     domain: "nzz.ch",
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|(ens\.nzz\.ch|nexus\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+    block_regex: /(\.piano\.io\/|(ens\.nzz\.ch|nexus\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
     useragent: "googlebot"
   },
   "New Left Review": {
@@ -1236,11 +1236,11 @@ var defaultSites = {
   "Newsday": {
     domain: "newsday.com",
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(loader-cdn\.azureedge\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Newsweek": {
     domain: "newsweek.com",
-    block_regex: /(js\.pelcro\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(js\.pelcro\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "NHST Media Group": {
     domain: "###_no_nhst_media",
@@ -1260,7 +1260,7 @@ var defaultSites = {
   "Nordwest Zeitung": {
     domain: "nwzonline.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "NRC Handelsblad": {
     domain: "nrc.nl",
@@ -1277,7 +1277,7 @@ var defaultSites = {
   },
   "O Estado de S. Paulo": {
     domain: "estadao.com.br",
-    block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad|fx-flying-carpet)-.+\.js)/
+    block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "O Globo (& Valor Econômico; cached articles only)": {
     domain: "globo.com",
@@ -1286,7 +1286,7 @@ var defaultSites = {
   "Observador.pt": {
     domain: "observador.pt",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Outlook India": {
     domain: "outlookindia.com",
@@ -1387,7 +1387,7 @@ var defaultSites = {
       "quotidiano.net"
     ],
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Reuters": {
     domain: "reuters.com",
@@ -1402,7 +1402,7 @@ var defaultSites = {
   "Rolling Stone": {
     domain: "rollingstone.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "RugbyPass": {
     domain: "rugbypass.com",
@@ -1416,7 +1416,7 @@ var defaultSites = {
   },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
-    block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Sanoma Media Finland (+ regional/opt-in to custom sites)": {
     domain: "###_fi_sanoma",
@@ -1430,12 +1430,12 @@ var defaultSites = {
   "Schleswig-Holsteinischer Zeitungsverlag": {
     domain: "shz.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Schweriner Volkszeitung": {
     domain: "svz.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|fx-flying-carpet)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Science (free articles only)": {
     domain: "science.org",
@@ -1447,7 +1447,7 @@ var defaultSites = {
   },
   "Sciences et Avenir": {
     domain: "sciencesetavenir.fr",
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Scientific American (free articles only)": {
     domain: "scientificamerican.com",
@@ -1461,19 +1461,19 @@ var defaultSites = {
   "Seeking Alpha": {
     domain: "seekingalpha.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org(\/.+)?\/v\d\/amp-(access|ad|loader)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org(\/.+)?\/v\d\/amp-(access|loader)-.+\.js)/
   },
   "Slate": {
     domain: "slate.com",
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "SOFREP": {
     domain: "sofrep.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "South China Morning Post": {
     domain: "scmp.com",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|analytics|fx-flying-carpet)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Southern Weekly": {
     domain: "infzm.com",
@@ -1509,7 +1509,7 @@ var defaultSites = {
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(loader-cdn\.azureedge\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Tech in Asia": {
     domain: "techinasia.com",
@@ -1558,11 +1558,11 @@ var defaultSites = {
   "The Atlanta Journal-Constitution": {
     domain: "ajc.com",
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(loader-cdn\.azureedge\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Atlantic": {
     domain: "theatlantic.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
     remove_cookies_select_drop: ["articleViews"]
   },
   "The Australian Financial Review": {
@@ -1573,7 +1573,7 @@ var defaultSites = {
   "The Boston Globe": {
     domain: "bostonglobe.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|meter\.bostonglobe\.com\/js\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|meter\.bostonglobe\.com\/js\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "The Business Journals": {
     domain: "bizjournals.com",
@@ -1595,7 +1595,7 @@ var defaultSites = {
   "The Dallas Morning News": {
     domain: "dallasnews.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "The Diplomat": {
     domain: "thediplomat.com",
@@ -1614,7 +1614,7 @@ var defaultSites = {
   "The Economist": {
     domain: "economist.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
@@ -1634,17 +1634,17 @@ var defaultSites = {
   "The Hindu BusinessLine": {
     domain: "thehindubusinessline.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad(s)?)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Independent": {
     domain: "independent.co.uk",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Indian Express": {
     domain: "indianexpress.com",
     allow_cookies: 1,
-    block_regex: /(\/indianexpress\.com\/.+\/indianexpress\/js\/(evolok\/.+|min\/premiumContent)\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\/indianexpress\.com\/.+\/indianexpress\/js\/(evolok\/.+|min\/premiumContent)\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Intercept": {
     domain: "theintercept.com",
@@ -1668,13 +1668,13 @@ var defaultSites = {
   "The Market.ch": {
     domain: "themarket.ch",
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|ens\.themarket\.ch\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/,
+    block_regex: /(\.piano\.io\/|ens\.themarket\.ch\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
     useragent: "googlebot"
   },
   "The Nation": {
     domain: "thenation.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The New Atlantis": {
     domain: "thenewatlantis.com",
@@ -1716,7 +1716,7 @@ var defaultSites = {
   "The Seattle Times": {
     domain: "seattletimes.com",
     allow_cookies: 1,
-    block_regex: /(\.seattletimes\.com\/wp-content\/.+\/st-(advertising|blocking)-bundle\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js)/
+    block_regex: /(\.seattletimes\.com\/wp-content\/.+\/st-(advertising|blocking)-bundle\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Spectator (UK)": {
     domain: "spectator.co.uk",
@@ -1737,7 +1737,7 @@ var defaultSites = {
   "The Telegraph": {
     domain: "telegraph.co.uk",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Times (UK)": {
     domain: "thetimes.co.uk",
@@ -1760,12 +1760,12 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: /(\.(ca|com)\/api\/overlaydata|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/
+    block_regex: /(\.(ca|com)\/api\/overlaydata|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "The Wall Street Journal": {
     domain: "wsj.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|ad|subscriptions)-.+\.js)/,
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
     useragent: "googlebot"
   },
   "The Washington Post": {
@@ -1785,7 +1785,7 @@ var defaultSites = {
   "Time Magazine": {
     domain: "time.com",
     allow_cookies: 1,
-    block_regex: /(\/time\.com\/dist\/meter-wall-client-js\..+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(\/time\.com\/dist\/meter-wall-client-js\..+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Times Higher Education": {
     domain: "timeshighereducation.com",
@@ -1841,7 +1841,7 @@ var defaultSites = {
   "USA Today": {
     domain: "usatoday.com",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|ad)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
   "Valeurs Actuelles": {
@@ -1852,7 +1852,7 @@ var defaultSites = {
   "Variety": {
     domain: "variety.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "VentureBeat": {
     domain: "venturebeat.com",
@@ -1863,7 +1863,7 @@ var defaultSites = {
     allow_cookies: 1,
     domain: "voguebusiness.com",
     useragent: "googlebot",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Volkskrant": {
     domain: "volkskrant.nl",
@@ -1872,7 +1872,7 @@ var defaultSites = {
   "Volksstimme": {
     domain: "volksstimme.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "Vrij Nederland": {
     domain: "vn.nl",
@@ -1890,13 +1890,13 @@ var defaultSites = {
   "Westfalen-Blatt": {
     domain: "westfalen-blatt.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/.+\/v\d\/amp-(ad|subscriptions)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/.+\/v\d\/amp-subscriptions-.+\.js/,
     useragent: "googlebot"
   },
   "Westfälische Nachrichten": {
     domain: "wn.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(ad|subscriptions)-.+\.js/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
     useragent: "googlebot"
   },
   "Winnipeg Free Press": {
@@ -1911,17 +1911,17 @@ var defaultSites = {
   },
   "###_gr_au_nine_domains": {
     group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-((sticky-)?ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "###_gr_es_unidad_domains": {
     group_rule_domains: ["elmundo.es", "expansion.com", "marca.com"],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|(sticky-)?ad|subscriptions)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "###_gr_it_repubblica_domains": {
     group_rule_domains: ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lanuovasardegna.it", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
     allow_cookies: 1,
-    block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|ad|user-notification)-.+\.js)/,
+    block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/,
     useragent: "googlebot"
   },
   "###_gr_nl_pg_domains": {

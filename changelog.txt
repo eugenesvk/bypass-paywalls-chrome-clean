@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Diari de Girona & Emporda
+Fix El Espectador
 Fix eNotes
 Fix Lequipe.fr (json)
 

@@ -2,7 +2,7 @@
   "ABC.es": {
     "domain": "abc.es",
     "allow_cookies": 1,
-    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)",
+    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "useragent": "googlebot",
     "amp_redirect": ".cierre-suscripcion:not([style=\"display: none;\"]"
   },
@@ -20,10 +20,16 @@
     "domain": "betternutrition.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
+  "El Espectador": {
+    "domain": "elespectador.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "amp_redirect": "div.exclusive_validation"
+  },
   "El País": {
     "domain": "elpais.com",
     "allow_cookies": 1,
-    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)"
+    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "eNotes": {
     "domain": "enotes.com",
@@ -45,7 +51,7 @@
   "Fortune": {
     "domain": "fortune.com",
     "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|(sticky-)?ad)-.+\\.js)",
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": [{
         "cond": "div.paywallActive",
         "rm_attrib": "class"
@@ -89,7 +95,7 @@
     "allow_cookies": 1,
     "domain": "voguebusiness.com",
     "useragent": "googlebot",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(ad|subscriptions)-.+\\.js",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
     "amp_redirect": "div[class*=\"PaywallInlineBarrier\"]",
     "amp_unhide": 1,
     "new_site": 1
