@@ -1112,6 +1112,9 @@ function updateBadge(activeTab) {
     } else if (matchUrlDomain(disabledSites, currentUrl)) {
       badgeText = 'OFF';
       color = 'blue';
+    } else if (matchUrlDomain(nofix_sites, currentUrl)) {
+      badgeText = 'X';
+      color = 'gray';
     }
     if (ext_version_new)
       badgeText = '^' + badgeText;

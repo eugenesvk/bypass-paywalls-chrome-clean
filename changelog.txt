@@ -6,6 +6,7 @@ Add Diari de Girona & Emporda
 Fix El Espectador
 Fix eNotes
 Fix Lequipe.fr (json)
+Update badge (site with no fix; X)
 
 * v2.6.6.0 (2022-04-24)
 Add Automobilwoche

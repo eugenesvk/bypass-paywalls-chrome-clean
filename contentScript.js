@@ -1405,7 +1405,7 @@ else if (matchDomain('lequipe.fr')) {
             if (par.title || par.content) {
               if (par.title && par.title.length > 2)
                 article_text += '<p><strong>' + par.title + '</strong></p>';
-              if (par.content) {
+              if (par.content && par.content.length > 2) {
                 let par_content = par.content.replace('class=', '').replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/(^\"|\"$)/g, '').replace(/\\t/g, '');
                 article_text += '<p>' + par_content + '</p>';
               }
