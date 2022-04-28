@@ -135,7 +135,6 @@ Grouped in options:\
 [Science](https://www.science.org)* -
 [Scientific American](https://www.scientificamerican.com)* -
 [Times Higher Education](https://www.timeshighereducation.com) -
-[Towards Data Science](https://www.towardsdatascience.com) -
 [VentureBeat](https://venturebeat.com)
 
 ##### Encyclopedia/Book library/Knowledge base
@@ -151,6 +150,12 @@ Grouped in options:\
 [Study.com (no videos)](https://study.com)
 
 ##### Magazines/Blogs
+[Medium](https://www.medium.com)*\
+Grouped in options:\
+*Medium custom domains* like (opt-in to custom sites for unlisted):\
+[Better Programming](https://betterprogramming.pub) -
+[Towards Data Science](https://towardsdatascience.com)
+
 [Apollo Magazine](https://www.apollo-magazine.com) -
 [Artnet](https://www.artnet.com) -
 [Atavist Magazine](https://magazine.atavist.com) -
@@ -158,7 +163,7 @@ Grouped in options:\
 [Commentary Magazine](https://www.commentary.org) -
 [ESPN USA](https://www.espn.com) -
 [First Things](https://www.firstthings.com) -
-[Medium](https://www.medium.com/topics)* (for custom domains enable custom sites) -
+[Medium](https://www.medium.com)* (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
 [Rolling Stone](https://www.rollingstone.com) -
 [RugbyPass](https://www.rugbypass.com) -

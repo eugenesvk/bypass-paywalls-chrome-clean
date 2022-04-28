@@ -19,6 +19,7 @@ var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
 var it_repubblica_domains = ['gelocal.it', 'ilsecoloxix.it', 'italian.tech', 'lanuovasardegna.it', 'lastampa.it', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
+var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var no_nhst_media_domains = ['intrafish.com', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
@@ -209,7 +210,7 @@ if ((bg2csData !== undefined) && bg2csData.cs_code) {
 
 // Content workarounds/domain
 
-if (matchDomain(['medium.com', 'towardsdatascience.com']) || document.querySelector('script[src^="https://cdn-client.medium.com/"]')) {
+if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src^="https://cdn-client.medium.com/"]')) {
   let paywall = document.querySelector('div#paywall-background-color');
   removeDOMElement(paywall);
   if (paywall) {

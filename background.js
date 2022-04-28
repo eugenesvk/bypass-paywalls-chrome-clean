@@ -763,10 +763,9 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (!matchUrlDomain(excludedSites, header_referer)) {
 
   // remove cookies for sites medium platform (custom domains)
-  var medium_custom_domains = [];
-  var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com', 'towardsdatascience.com']), header_referer) && enabledSites.includes('###_medium_custom'));
+  var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com']), header_referer) && enabledSites.includes('###_medium_custom'));
   if (medium_custom_domain)
-    medium_custom_domains = customAddRules(medium_custom_domains, '', '', '', 'twitter');
+    medium_custom_domains = customAddRules(medium_custom_domains);
   else {
     let header_referer_hostname = urlHost(header_referer);
     if (header_referer_hostname.endsWith('.com.au')) {
@@ -1272,12 +1271,12 @@ function remove_cookies_fn(domainVar, exclusions = false) {
 
 // remove cookies after page load
 ext_api.webRequest.onCompleted.addListener(function (details) {
-  let domainVar = matchUrlDomain(remove_cookies, details.url);
+  let domain = matchUrlDomain(remove_cookies, details.url);
   let types = ['main_frame', 'sub_frame', 'xmlhttprequest', 'other'];
-  if (domainVar === 'medium.com')
+  if (['medium.com'].concat(medium_custom_domains).includes(domain))
     types = ['main_frame', 'image'];
-  if (domainVar && types.includes(details.type) && enabledSites.includes(domainVar)) {
-    remove_cookies_fn(domainVar, true);
+  if (domain && types.includes(details.type) && enabledSites.includes(domain)) {
+    remove_cookies_fn(domain, true);
   }
 }, {
   urls: ["<all_urls>"]

@@ -1,16 +1,4 @@
 {
-  "ABC.es": {
-    "domain": "abc.es",
-    "allow_cookies": 1,
-    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "useragent": "googlebot",
-    "amp_redirect": ".cierre-suscripcion:not([style=\"display: none;\"]"
-  },
-  "Aftonbladet": {
-    "domain": "aftonbladet.se",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
   "Automobilwoche": {
     "domain": "automobilwoche.de",
     "allow_cookies": 1,
@@ -62,21 +50,10 @@
     "domain": "gymclimber.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
-  "Investors' Chronicle": {
-    "allow_cookies": 1,
-    "domain": "investorschronicle.co.uk",
-    "referer": "google"
-  },
   "Italia Oggi": {
     "domain": "italiaoggi.it",
     "allow_cookies": 1,
     "ld_json": "div.boxAbb|div.article-locked",
-    "new_site": 1
-  },
-  "Outlook India": {
-    "domain": "outlookindia.com",
-    "allow_cookies": 1,
-    "ld_json": "div.paywall|div#articleBody",
     "new_site": 1
   },
   "Peloton": {
@@ -90,15 +67,6 @@
   "Rock and Ice": {
     "domain": "rockandice.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
-  },
-  "Vogue Business": {
-    "allow_cookies": 1,
-    "domain": "voguebusiness.com",
-    "useragent": "googlebot",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "amp_redirect": "div[class*=\"PaywallInlineBarrier\"]",
-    "amp_unhide": 1,
-    "new_site": 1
   },
   "###_gr_usa_outside_mag_domains": {
     "group_rule_domains": ["betternutrition.com", "gymclimber.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com"],

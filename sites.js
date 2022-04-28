@@ -1145,11 +1145,14 @@ var defaultSites = {
   "Medium (free articles only)": {
     domain: "medium.com",
     allow_cookies: 1,
-    remove_cookies: 1,
-    referer: "twitter"
+    remove_cookies: 1
   },
   "Medium custom domains (free articles only; opt-in to custom sites)": {
-    domain: "###_medium_custom"
+    domain: "###_medium_custom",
+    "group": [
+      "betterprogramming.pub",
+      "towardsdatascience.com"
+    ]
   },
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
@@ -1809,11 +1812,6 @@ var defaultSites = {
       }
     ]
   },
-  "Towards Data Science": {
-    domain: "towardsdatascience.com",
-    allow_cookies: 1,
-    referer: "twitter"
-  },
   "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews"
   },
@@ -2081,6 +2079,7 @@ var au_comm_media_domains = grouped_sites['###_au_comm_media'];
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];
+var medium_custom_domains = grouped_sites['###_medium_custom'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 var usa_theathletic_domains = grouped_sites['###_usa_theathletic'];

@@ -92,6 +92,7 @@
         "*://*.berlingske.dk/*",
         "*://*.betamtb.com/*",
         "*://*.betternutrition.com/*",
+        "*://*.betterprogramming.pub/*",
         "*://*.bicycling.com/*",
         "*://*.bienpublic.com/*",
         "*://*.billboard.com/*",
@@ -675,5 +676,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.6.3"
+    "version": "2.6.6.4"
 }
