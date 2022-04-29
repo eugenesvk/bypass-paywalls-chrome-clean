@@ -795,6 +795,13 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         if (de_madsack_domain)
           de_madsack_domains = customAddRules(de_madsack_domains, true, blockedRegexes['haz.de']);
       }
+    } else if (header_referer_hostname.match(/\.(es|cat)$/) || matchUrlDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'], header_referer)) {
+      // block Piano.io for unlisted Grupo Prensa Ibérica (opt-in to custom sites)
+      var es_epiberica_domains = grouped_sites['###_es_epiberica'];
+      var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
+      var es_epiberica_domain = (matchUrlDomain(es_epiberica_custom_domains, details.url) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
+      if (es_epiberica_domain)
+        es_epiberica_domains = customAddRules(es_epiberica_domains, true, blockedRegexes['epe.es']);
     } else if (header_referer_hostname.endsWith('.fi')) {
       // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
       var fi_sanoma_domains = grouped_sites['###_fi_sanoma'];

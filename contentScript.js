@@ -9,7 +9,7 @@ var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 't
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
-var es_epiberica_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es'];
+var es_epiberica_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
@@ -1154,22 +1154,18 @@ else if (matchDomain('elperiodico.com')) {
 }
 
 else if (matchDomain(es_grupo_vocento_domains)) {
-  let url = window.location.href;
-  let content_exclusive_bg = document.querySelector('.content-exclusive-bg, #cierre_suscripcion, ev-engagement[group-name^="paywall-"]');
-  let amphtml = document.querySelector('link[rel="amphtml"]');
-  if (content_exclusive_bg && amphtml) {
-    removeDOMElement(content_exclusive_bg);
-    window.location.href = url.split('?')[0].replace('.html', '_amp.html');
-  } else if (url.includes('_amp.html')) {
-    let voc_advers = document.querySelectorAll('.voc-adver, amp-embed');
-    removeDOMElement(...voc_advers);
-    let container_wall_exclusive = document.querySelector('.container-wall-exclusive');
-    if (container_wall_exclusive) {
-      removeDOMElement(container_wall_exclusive);
-      amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"');
-    }
-    //lavozdigital.es
-    amp_unhide_subscr_section();
+  if (!window.location.pathname.endsWith('_amp.html')) {
+    let paywall = document.querySelector('.content-exclusive-bg, #cierre_suscripcion, ev-engagement[group-name^="paywall-"]');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    } 
+  } else {
+    if (!matchDomain('lavozdigital.es'))
+      amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed');
+    else
+      amp_unhide_subscr_section();
   }
 }
 

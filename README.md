@@ -582,24 +582,13 @@ Grouped in options:\
 [Política Exterior](https://www.politicaexterior.com)
 
 Grouped in options:\
-*Grupo Prensa Ibérica* sites like\
-[Diari de Girona](https://www.diaridegirona.cat) -
-[Diario Córdoba](https://www.diariocordoba.com) -
-[Diario de Ibiza](https://www.diariodeibiza.es) -
+*Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted):\
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
-[El Periódico de Aragón](https://www.elperiodicodearagon.com) -
-[El Periódico de España](https://www.ese.es) -
-[El Periódico Extremadura](https://www.elperiodicoextremadura.com) -
-[El Periódico Mediterráneo](https://www.elperiodicomediterraneo.com) -
-[Empordà](https://www.emporda.info) -
+[El Periódico de España](https://www.epe.es) -
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -
 [La Nueva España](https://www.lne.es) -
-[La Opinión A Coruña](https://www.laopinioncoruna.es) -
-[La Opinión de Málaga](https://www.laopiniondemalaga.es) -
-[La Opinión de Murcia](https://www.laopiniondemurcia.es) -
-[La Opinión de Zamora](https://www.laopiniondezamora.es) -
 [La Provincia](https://www.laprovincia.es) -
 [Levante-EMV](https://www.levante-emv.com)\
 *Grupo Vocento* (ABC regional) sites like\

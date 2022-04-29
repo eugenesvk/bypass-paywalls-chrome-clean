@@ -660,22 +660,11 @@ var defaultSites = {
   "Grupo Prensa Ibérica": {
     domain: "###_es_epiberica",
     group: [
-      "diaridegirona.cat",
-      "diariocordoba.com",
-      "diariodeibiza.es",
       "diariodemallorca.es",
       "eldia.es",
-      "elperiodicodearagon.com",
-      "elperiodicoextremadura.com",
-      "elperiodicomediterraneo.com",
-      "emporda.info",
       "epe.es",
       "farodevigo.es",
       "informacion.es",
-      "laopinioncoruna.es",
-      "laopiniondemalaga.es",
-      "laopiniondemurcia.es",
-      "laopiniondezamora.es",
       "laprovincia.es",
       "levante-emv.com",
       "lne.es"
@@ -2085,4 +2074,4 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 var usa_theathletic_domains = grouped_sites['###_usa_theathletic'];
 
 // sites with no fix (background)
-var nofix_sites = ['ad.nl', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'irishtimes.com', 'jacobinmag.com', 'jeunesafrique.com', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'spiegel.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'ynet.co.il'];
+var nofix_sites = ['ad.nl', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'irishtimes.com', 'jacobinmag.com', 'jeunesafrique.com', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'spiegel.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'ynet.co.il'];

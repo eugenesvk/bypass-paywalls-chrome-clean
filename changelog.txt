@@ -2,9 +2,9 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
-Add Diari de Girona & Emporda
 Fix El Espectador
 Fix eNotes
+Fix Grupo Prensa Iberica (opt-in to custom sites for unlisted)
 Fix Lequipe.fr (json)
 Fix Medium custom domains
 Update badge (site with no fix; X)
