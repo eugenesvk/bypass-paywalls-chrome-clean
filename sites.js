@@ -1359,6 +1359,10 @@ var defaultSites = {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1
   },
+  "Puck.news": {
+    domain: "puck.news",
+    allow_cookies: 1
+  },
   "Quartz": {
     domain: "qz.com",
     allow_cookies: 1,

@@ -64,6 +64,24 @@
     "domain": "podiumrunner.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
+  "Puck.news": {
+    "domain": "puck.news",
+    "allow_cookies": 1,
+    "cs_code": [{
+        "cond": ".paywall",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "body.paywall-active",
+            "rm_class": "paywall-active"
+          }, {
+            "cond": "article[style]",
+            "rm_attrib": "style"
+          }
+        ]
+      }
+    ],
+    "new_site": 1
+  },
   "Rock and Ice": {
     "domain": "rockandice.com",
     "group_rule": "###_gr_usa_outside_mag_domains"

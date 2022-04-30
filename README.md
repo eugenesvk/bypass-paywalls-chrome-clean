@@ -165,6 +165,7 @@ Grouped in options:\
 [First Things](https://www.firstthings.com) -
 [Medium](https://www.medium.com)* (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
+[Puck.news](https://puck.news) -
 [Rolling Stone](https://www.rollingstone.com) -
 [RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -

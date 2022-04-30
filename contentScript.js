@@ -3160,6 +3160,19 @@ else if (matchDomain('outlookindia.com')) {
   }
 }
 
+else if (matchDomain('puck.news')) {
+  let paywall = document.querySelector('.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let overlay = document.querySelector('body.paywall-active');
+    if (overlay)
+      overlay.classList.remove('paywall-active');
+    let article_style = document.querySelector('article[style]');
+    if (article_style)
+      article_style.removeAttribute('style');
+  }
+}
+
 else if (matchDomain('quora.com')) {
   let overlays = document.querySelectorAll('div[class*="_overlay"]');
   removeDOMElement(...overlays);
