@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.7.0 (2022-05-01)
 Add Puck.news
 Add Sportico & WWD (group Penske Media Corporation)
 Fix El Espectador
