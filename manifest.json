@@ -505,6 +505,7 @@
         "*://*.spectator.com.au/*",
         "*://*.spectatorworld.com/*",
         "*://*.spglobal.com/*",
+        "*://*.sportico.com/*",
         "*://*.standard.net.au/*",
         "*://*.star-telegram.com/*",
         "*://*.staradvertiser.com/*",
@@ -619,6 +620,7 @@
         "*://*.wp.de/*",
         "*://*.wr.de/*",
         "*://*.wsj.com/*",
+        "*://*.wwd.com/*",
         "*://*.wz.de/*",
         "*://*.yogajournal.com/*",
         "*://*.zeit.de/*",
@@ -666,5 +668,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.6.5"
+    "version": "2.6.6.6"
 }

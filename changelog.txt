@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Puck.news
+Add Sportico & WWD (group Penske Media Corporation)
 Fix El Espectador
 Fix eNotes
 Fix Grupo Prensa Iberica (opt-in to custom sites for unlisted)

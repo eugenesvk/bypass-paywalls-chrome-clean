@@ -159,14 +159,11 @@ Grouped in options:\
 [Apollo Magazine](https://www.apollo-magazine.com) -
 [Artnet](https://www.artnet.com) -
 [Atavist Magazine](https://magazine.atavist.com) -
-[Billboard](https://www.billboard.com) -
 [Commentary Magazine](https://www.commentary.org) -
 [ESPN USA](https://www.espn.com) -
 [First Things](https://www.firstthings.com) -
-[Medium](https://www.medium.com)* (for custom domains enable custom sites) -
 [National Review](https://www.nationalreview.com) -
 [Puck.news](https://puck.news) -
-[Rolling Stone](https://www.rollingstone.com) -
 [RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
@@ -177,8 +174,7 @@ Grouped in options:\
 [The Daily Beast](https://www.thedailybeast.com) -
 [The New Atlantis](https://www.thenewatlantis.com) -
 [The Point Magazine](https://thepointmag.com) -
-[The Wrap](https://www.thewrap.com) -
-[Variety](https://variety.com)
+[The Wrap](https://www.thewrap.com)
 
 Grouped in options:\
 *Condé Nast magazines* sites like:\
@@ -223,7 +219,13 @@ Grouped in options:\
 [Vegetarian Times](https://www.vegetariantimes.com) -
 [Velo News](https://www.velonews.com) -
 [Women's Running](https://www.womensrunning.com) -
-[Yoga Journal](https://www.yogajournal.com)
+[Yoga Journal](https://www.yogajournal.com)\
+*Penske Media Corporation* sites like:\
+[Billboard](https://www.billboard.com) -
+[Rolling Stone](https://www.rollingstone.com) -
+[Sportico](https://www.sportico.com) -
+[Variety](https://variety.com) -
+[WWD](https://wwd.com)
 
 ##### Local USA news
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
@@ -509,7 +511,6 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)
-
 
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -

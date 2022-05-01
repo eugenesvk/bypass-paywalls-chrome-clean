@@ -180,11 +180,6 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "Billboard": {
-    domain: "billboard.com",
-    allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
-  },
   "Bloomberg": {
     domain: "bloomberg.com",
     block_regex: /(\.tinypass\.com\/|assets\.bwbx\.io\/s\d\/(fence\/plug-client|javelin\/.+\/transporter)\/)/,
@@ -1322,6 +1317,18 @@ var defaultSites = {
     domain: "parool.nl",
     group_rule: "###_gr_nl_pg_domains"
   },
+  "Penske Media Corporation": {
+    domain: "###_usa_penske_media",
+    allow_cookies: 1,
+    group: [
+      "billboard.com",
+      "rollingstone.com",
+      "sportico.com",
+      "variety.com",
+      "wwd.com"
+    ],
+    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+  },
   "Philosophy Now": {
     domain: "philosophynow.org"
   },
@@ -1394,11 +1401,6 @@ var defaultSites = {
     domain: "rhein-zeitung.de",
     allow_cookies: 1,
     useragent: "googlebot"
-  },
-  "Rolling Stone": {
-    domain: "rollingstone.com",
-    allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "RugbyPass": {
     domain: "rugbypass.com",
@@ -1839,11 +1841,6 @@ var defaultSites = {
     domain: "valeursactuelles.com",
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
-  },
-  "Variety": {
-    domain: "variety.com",
-    allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "VentureBeat": {
     domain: "venturebeat.com",
