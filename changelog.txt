@@ -9,6 +9,7 @@ Fix Grupo Prensa Iberica (opt-in to custom sites for unlisted)
 Fix Lequipe.fr (json)
 Fix Medium custom domains
 Update badge (site with no fix; X)
+Update block general paywall script (Pico/Wordpress)
 
 * v2.6.6.0 (2022-04-24)
 Add Automobilwoche
@@ -120,7 +121,7 @@ Fix NewcastleHerald.com.au
 Fix Lequipe.fr (json)
 Fix Neue Osnabrucker Zeitung (amp)
 Fix Quotidiano.net sites
-Update block general paywall script (Pigeon)
+Update block general paywall script (Pigeon/WordPress)
 
 * v2.5.6.0 (2022-02-13)
 Add Condé Nast magazines & Vogue Business

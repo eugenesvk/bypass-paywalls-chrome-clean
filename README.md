@@ -749,11 +749,11 @@ If removing the cookies works you can also add the site as a custom site.
 You can [submit a request for a new website](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues).  
 Please read the following instructions and share your results for a quicker process.  
 Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues?scope=all&state=all) before asking for a new website.  
-1. Visit an article on the site you want to bypass the paywall for and copy the article title.
-2. Open up a new incognito window (Ctrl+Shift+P) and paste the article title into Google.
-3. Click on the same article from the Google search results page. Or you can:
-4. Disable javascript on the website by clicking the button right icon </> on the uBlock Origin panel.
-5. Refresh the page.
+1. Open incognito window and search for article in Google search (or webcache).
+2. Clear cookies for the site (by this add-on: opt-in to custom sites or grant permission for the site; also enables blocking of general paywall scripts).
+3. Disable Javascript on the site (by browser, uBlock Origin or other add-on).
+4. Add the domain as custom site for more bypass options.
+5. Open page in reader view (by browser or add-on).
 
 ### Add custom site
 Add your own custom site (also for testing).  
