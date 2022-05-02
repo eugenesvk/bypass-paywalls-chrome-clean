@@ -543,14 +543,12 @@ Grouped in options:\
 [La Nazione](https://www.lanazione.it)
 
 ##### Netherlands/Flanders
-[Dagblad van het Noorden](https://www.dvhn.nl) -
 [De Morgen](https://www.demorgen.be) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
 [Humo](https://www.humo.be) -
 [Knack](https://www.knack.be) -
-[Leeuwarder Courant](https://www.lc.nl) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
@@ -564,7 +562,10 @@ Grouped in options:\
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -
 [Leidsch Dagblad](https://www.leidschdagblad.nl) -
 [IJmuider Courant](https://www.ijmuidercourant.nl) -
-[De Gooi- en Eemlander](https://www.gooieneemlander.nl)
+[De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
+*Mediahuis Noord* sites like (opt-in to custom sites for unlisted):\
+[Dagblad van het Noorden](https://www.dvhn.nl) -
+[Leeuwarder Courant](https://www.lc.nl)
 
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -

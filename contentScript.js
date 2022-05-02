@@ -1799,14 +1799,9 @@ else if (matchDomain(['knack.be', 'levif.be'])) {
   }
 }
 
-else if (matchDomain(["lc.nl", "dvhn.nl"])) {
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.location.href.includes('?'))
-      window.location.href = window.location.href.split('?')[0];
-  });
+else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
   let top_ad = document.querySelector('.top__ad');
-  let plus = document.querySelector('.plusJustRead');
-  removeDOMElement(top_ad, plus);
+  removeDOMElement(top_ad);
 }
 
 else if (matchDomain(nl_mediahuis_region_domains)) {

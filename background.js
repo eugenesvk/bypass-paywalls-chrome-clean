@@ -810,6 +810,12 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
       if (fi_sanoma_sndp_domain)
         fi_sanoma_domains = customAddRules(fi_sanoma_domains, true, '', 'googlebot');
+    } else if (header_referer_hostname.endsWith('.nl')) {
+      // block Evolok for Mediahuis Noord sites (opt-in to custom sites)
+      var nl_mediahuis_noord_domains = [];
+      var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));
+      if (nl_mediahuis_noord_domain)
+        nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, true, blockedRegexes['lc.nl']);
     } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
       // block TinyPass for Postmedia Network sites
       var ca_postmedia_domains = grouped_sites['###_ca_postmedia'];

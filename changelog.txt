@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add group Mediahuis Noord (opt-in to custom sites for unlisted)
 
 * v2.6.7.0 (2022-05-01)
 Add Puck.news

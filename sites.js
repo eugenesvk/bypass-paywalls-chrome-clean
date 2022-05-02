@@ -282,11 +282,6 @@ var defaultSites = {
       }
     ]
   },
-  "Dagblad van het Noorden": {
-    domain: "dvhn.nl",
-    allow_cookies: 1,
-    block_regex: /\.evolok\.net\//
-  },
   "Dagens Industri": {
     domain: "di.se",
     allow_cookies: 1,
@@ -1003,11 +998,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(api\.bntech\.io\/js\/|\.com\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Leeuwarder Courant": {
-    domain: "lc.nl",
-    allow_cookies: 1,
-    block_regex: /\.evolok\.net\//
-  },
   "Les Échos": {
     domain: "lesechos.fr",
     allow_cookies: 1,
@@ -1108,6 +1098,15 @@ var defaultSites = {
       "noordhollandsdagblad.nl"
     ],
     allow_cookies: 1
+  },
+  "Mediahuis Noord": {
+    domain: "###_nl_mediahuis_noord",
+    group: [
+      "dvhn.nl",
+      "lc.nl"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.evolok\.net\//
   },
   "MediaNama": {
     domain: "medianama.com",
