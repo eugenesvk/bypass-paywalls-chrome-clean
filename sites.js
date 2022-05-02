@@ -301,6 +301,10 @@ var defaultSites = {
   "Dark Reading": {
     domain: "darkreading.com"
   },
+  "De Tijd": {
+    domain: "tijd.be",
+    referer: "google"
+  },
   "DealStreetAsia": {
     domain: "dealstreetasia.com",
     useragent: "bingbot"
@@ -851,6 +855,10 @@ var defaultSites = {
     domain: "kurier.at",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
+  },
+  "L'Écho": {
+    domain: "lecho.be",
+    referer: "google"
   },
   "L'Équipe": {
     domain: "lequipe.fr",

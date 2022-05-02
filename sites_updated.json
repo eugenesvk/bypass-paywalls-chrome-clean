@@ -8,6 +8,10 @@
     "domain": "betternutrition.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
+  "De Tijd": {
+    "domain": "tijd.be",
+    "referer": "google"
+  },
   "El Espectador": {
     "domain": "elespectador.com",
     "allow_cookies": 1,
@@ -55,6 +59,10 @@
     "allow_cookies": 1,
     "ld_json": "div.boxAbb|div.article-locked",
     "new_site": 1
+  },
+  "L'Écho": {
+    "domain": "lecho.be",
+    "referer": "google"
   },
   "Peloton": {
     "domain": "pelotonmagazine.com",
