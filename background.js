@@ -858,7 +858,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
                 else {
                   // block script for additional MediaNews Group sites (opt-in to custom sites)
                   var usa_mng_domains = grouped_sites['###_usa_mng'];
-                  var usa_mng_domain = (details.url.match(/\.com\/wp-content\/plugins\/dfm(-pushly|_zeus)\/.+\.js/) && ['script'].includes(details.type) &&
+                  var usa_mng_domain = (details.url.match(/\.com\/wp-content\/plugins\/dfm(-|_).+\.js/) && ['script'].includes(details.type) &&
                     !matchUrlDomain(usa_mng_domains, header_referer) && enabledSites.includes('###_usa_mng'));
                   if (usa_mng_domain)
                     usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);

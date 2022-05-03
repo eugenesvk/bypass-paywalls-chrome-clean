@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add De Tijd & L'Echo
 Add group Mediahuis Noord (opt-in to custom sites for unlisted)
+Fix Knack.be & LeVif.be
 
 * v2.6.7.0 (2022-05-01)
 Add Puck.news

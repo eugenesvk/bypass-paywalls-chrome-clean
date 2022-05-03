@@ -195,6 +195,11 @@ function cs_code_elems(elems) {
       }
       if (elem.rm_attrib)
         item.removeAttribute(elem.rm_attrib);
+      if (elem.set_attrib && elem.set_attrib.includes('|')) {
+        let attrib = elem.set_attrib.split('|')[0];
+        let value = elem.set_attrib.split('|')[1];
+        item.setAttribute(attrib, value);
+      }
       if (elem.elems)
         cs_code_elems(elem.elems);
     }
@@ -1784,18 +1789,10 @@ else if (matchDomain('ftm.nl')) {
 }
 
 else if (matchDomain(['knack.be', 'levif.be'])) {
-  let paywall = document.querySelector('[class$="Paywall"], #paywall-modal-below');
+  let paywall = document.querySelector('#paywall-modal');
   if (paywall) {
     removeDOMElement(paywall);
-    let hidden_body = document.querySelector('div.rmgDetail-body div');
-    if (hidden_body) {
-      hidden_body.removeAttribute('class');
-      let body_text = hidden_body.innerText.replace(/(?:^|[\w\"\'])(\.|\?|!)(?=[A-Za-zÀ-ÿ\"\']{2,})/gm, "$&\n\n");
-      hidden_body.innerText = body_text;
-      let intro_par = document.querySelector('div.rmgDetail-body p');
-      if (intro_par && intro_par.innerText.length > 200)
-        removeDOMElement(intro_par);
-    }
+    document.querySelector('html').setAttribute('style', 'overflow-y: visible !important');
   }
 }
 
