@@ -305,9 +305,8 @@ var defaultSites = {
     domain: "tijd.be",
     referer: "google"
   },
-  "DealStreetAsia": {
-    domain: "dealstreetasia.com",
-    useragent: "bingbot"
+  "DealStreetAsia (free articles only)": {
+    domain: "dealstreetasia.com"
   },
   "DeMorgen": {
     domain: "demorgen.be",
