@@ -172,6 +172,7 @@ Grouped in options:\
 [The Athletic](https://theathletic.com) -
 [The Intercept](https://theintercept.com) -
 [The Daily Beast](https://www.thedailybeast.com) -
+[The Daily Wire](https://www.dailywire.com) -
 [The New Atlantis](https://www.thenewatlantis.com) -
 [The Point Magazine](https://thepointmag.com) -
 [The Wrap](https://www.thewrap.com)

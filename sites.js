@@ -1596,6 +1596,10 @@ var defaultSites = {
     domain: "thedailybeast.com",
     block_regex: /\.tinypass\.com\//
   },
+  "The Daily Wire": {
+    domain: "dailywire.com",
+    allow_cookies: 1
+  },
   "The Dallas Morning News": {
     domain: "dallasnews.com",
     allow_cookies: 1,

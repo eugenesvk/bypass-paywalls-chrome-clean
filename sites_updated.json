@@ -94,6 +94,16 @@
     "domain": "rockandice.com",
     "group_rule": "###_gr_usa_outside_mag_domains"
   },
+  "The Daily Wire": {
+    "domain": "dailywire.com",
+    "allow_cookies": 1,
+    "cs_code": [{
+        "cond": "#post-body-text > div > div[class]",
+        "rm_attrib": "class"
+      }
+    ],
+    "new_site": 1
+  },
   "###_gr_usa_outside_mag_domains": {
     "group_rule_domains": ["betternutrition.com", "gymclimber.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com"],
     "allow_cookies": 1,
