@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
-const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'ipolitics.ca', 'italiaoggi.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(au_comm_media_domains, fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'hs.fi', 'iltalehti.fi', 'ipolitics.ca', 'italiaoggi.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(fr_groupe_sud_ouest_domains, nl_mediahuis_region_domains, no_nhst_media_domains, usa_theathletic_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -770,13 +770,19 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     medium_custom_domains = customAddRules(medium_custom_domains);
   else {
     let header_referer_hostname = urlHost(header_referer);
-    if (header_referer_hostname.endsWith('.com.au')) {
-      // enable regional The West Australian sites (opt-in to custom sites)
-      var au_thewest_domains = ['thewest.com.au'];
-      var au_thewest_domain = (details.url.startsWith('https://images.thewest.com.au/') && ['image'].includes(details.type) &&
-        !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
-      if (au_thewest_domain)
-        au_thewest_domains = customAddRules(au_thewest_domains, true);
+    if (header_referer_hostname.match(/\.(com|net)\.au$/)) {
+      // block Piano.io for regional Australian Community Media sites (opt-in to custom sites)
+      var au_comm_media_domain = (details.url.startsWith('https://' + header_referer_hostname + '/promotions/website_content_esov/') && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
+      if (au_comm_media_domain)
+        au_comm_media_domains = customAddRules(au_comm_media_domains, true, blockedRegexes['canberratimes.com.au']);
+      else if (header_referer_hostname.endsWith('.com.au')) {
+        // enable regional The West Australian sites (opt-in to custom sites)
+        var au_thewest_domains = ['thewest.com.au'];
+        var au_thewest_domain = (details.url.startsWith('https://images.thewest.com.au/') && ['image'].includes(details.type) &&
+          !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
+        if (au_thewest_domain)
+          au_thewest_domains = customAddRules(au_thewest_domains, true);
+      }
     } else if (header_referer_hostname.endsWith('.ch')) {
       // set googlebot-useragent for regional nzz.ch sites (opt-in to custom sites)
       var ch_media_domains = [];

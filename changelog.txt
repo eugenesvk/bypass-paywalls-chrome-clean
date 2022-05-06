@@ -5,6 +5,7 @@ Post-release
 Add De Tijd & L'Echo
 Add group Mediahuis Noord (opt-in to custom sites for unlisted)
 Add The Daily Wire
+Fix Australian Community Media
 Fix DealStreetAsia (free articles only)
 Fix Knack.be & LeVif.be
 
@@ -76,7 +77,7 @@ Add NewcastleHerald.com.au
 Add S&P Global
 Add Westdeutsche Zeitung
 Remove HBR Taiwan (fix obsolete)
-Fix Australian Community Media
+Fix Australian Community Media (json)
 
 * v2.6.1.0 (2022-03-20)
 Add Franc-Tireur.fr

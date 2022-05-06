@@ -658,7 +658,7 @@ Grouped in options:\
 [The Mercury Tasmania](https://www.themercury.com.au) -
 [The Weekly Times](https://www.weeklytimesnow.com.au) -
 [Townsville Bulletin](https://www.townsvillebulletin.com.au)\
-*Australian Community Media (daily)* sites like (add to custom sites for unlisted & block general paywall-script Piano)\
+*Australian Community Media (daily)* sites like (opt-in to custom sites for unlisted)\
 [Bendigo Advertiser](https://www.bendigoadvertiser.com.au) -
 [Central Western Daily](https://www.centralwesterndaily.com.au) -
 [Daily Liberal](https://www.dailyliberal.com.au) -
@@ -671,7 +671,6 @@ Grouped in options:\
 [The Daily Advertiser](https://www.dailyadvertiser.com.au) -
 [The Examiner](https://www.examiner.com.au) -
 [The Northern Daily Leader](https://www.northerndailyleader.com.au) -
-[The Port Macquarie News](https://www.portnews.com.au) -
 [The Standard](https://www.standard.net.au) -
 [Western Advocate](https://www.westernadvocate.com.au)
 

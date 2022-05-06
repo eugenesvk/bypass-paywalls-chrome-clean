@@ -135,7 +135,6 @@ var defaultSites = {
       "illawarramercury.com.au",
       "newcastleherald.com.au",
       "northerndailyleader.com.au",
-      "portnews.com.au",
       "standard.net.au",
       "theadvocate.com.au",
       "thecourier.com.au",

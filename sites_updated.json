@@ -1,13 +1,4 @@
 {
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.amazonaws\\.com\\/s3fs-public\\/js\\/js_.+\\.js"
-  },
-  "Better Nutrition": {
-    "domain": "betternutrition.com",
-    "group_rule": "###_gr_usa_outside_mag_domains"
-  },
   "De Tijd": {
     "domain": "tijd.be",
     "referer": "google"
@@ -17,11 +8,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "amp_redirect": "div.exclusive_validation"
-  },
-  "El País": {
-    "domain": "elpais.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "eNotes": {
     "domain": "enotes.com",
@@ -40,37 +26,9 @@
       }
     ]
   },
-  "Fortune": {
-    "domain": "fortune.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": [{
-        "cond": "div.paywallActive",
-        "rm_attrib": "class"
-      }
-    ]
-  },
-  "Gym Climber": {
-    "domain": "gymclimber.com",
-    "group_rule": "###_gr_usa_outside_mag_domains"
-  },
-  "Italia Oggi": {
-    "domain": "italiaoggi.it",
-    "allow_cookies": 1,
-    "ld_json": "div.boxAbb|div.article-locked",
-    "new_site": 1
-  },
   "L'Écho": {
     "domain": "lecho.be",
     "referer": "google"
-  },
-  "Peloton": {
-    "domain": "pelotonmagazine.com",
-    "group_rule": "###_gr_usa_outside_mag_domains"
-  },
-  "Podium Runner": {
-    "domain": "podiumrunner.com",
-    "group_rule": "###_gr_usa_outside_mag_domains"
   },
   "Puck.news": {
     "domain": "puck.news",
@@ -90,10 +48,6 @@
     ],
     "new_site": 1
   },
-  "Rock and Ice": {
-    "domain": "rockandice.com",
-    "group_rule": "###_gr_usa_outside_mag_domains"
-  },
   "The Daily Wire": {
     "domain": "dailywire.com",
     "allow_cookies": 1,
@@ -103,20 +57,5 @@
       }
     ],
     "new_site": 1
-  },
-  "###_gr_usa_outside_mag_domains": {
-    "group_rule_domains": ["betternutrition.com", "gymclimber.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com"],
-    "allow_cookies": 1,
-    "block_regex": "\\.{domain}\\/.+\\/scripts\\/contentGate.+\\.js",
-    "cs_code": [{
-        "cond": "div.o-membership-overlay",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "[class*=\"is-gated\"]",
-            "rm_class": "is-gated,is-gated--flexible-layout"
-          }
-        ]
-      }
-    ]
   }
 }

@@ -251,49 +251,15 @@ else if (domain = matchDomain(["brisbanetimes.com.au", "smh.com.au", "theage.com
 
 else {
   // Australian Community Media newspapers
-  let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'newcastleherald.com.au', 'northerndailyleader.com.au', 'portnews.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
+  let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'newcastleherald.com.au', 'northerndailyleader.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
   let au_comm_media_link = document.querySelector('a[href^="https://australiancommunitymedia.zendesk.com"]');
   if (matchDomain(au_comm_media_domains) || au_comm_media_link) {
     let mask = document.querySelector('div[style^="-webkit-mask-image"]');
     if (mask) {
       mask.removeAttribute('style');
-      let json_script = document.querySelector('script#__NEXT_DATA__');
-      if (json_script && dompurify_loaded) {
-        let json = JSON.parse(json_script.innerText);
-        if (json && json.props.pageProps.context.story.elements) {
-          let pars = json.props.pageProps.context.story.elements;
-          let intro = document.querySelector('p[class^="Paragraph_wrapper__"]');
-          if (intro && intro.parentNode) {
-            let article = document.querySelector('div#story-body > div.mx-auto');
-            if (!article)
-              article = intro.parentNode;
-            removeDOMElement(intro);
-            let article_new = '';
-            for (let par of pars) {
-              if (['paragraph', 'topic', 'heading', 'subhead'].includes(par.type) && par.text) {
-                article_new += '<p>' + par.text.replace(/<br>$/, '') + '<br><br></p>';
-              } else if (par.type === 'generic' && par.embed) {
-                article_new += '<p>' + par.embed + '<br><br></p>';
-              } else if (['list', 'listbox'].includes(par.type) && par.items) {
-                if (par.type === 'listbox' && par.headline)
-                  article_new += par.headline + '<br>';
-                article_new += '<ul>';
-                for (let item of par.items)
-                  article_new += '<li>' + item + '</li>';
-                article_new += '</ul>';
-                if (par.type === 'listbox' && par.description)
-                  article_new += par.description + '<br><br>';
-              } else if (!['image', 'gallery', 'quote'].includes(par.type)) {
-                console.log(par);
-              }
-            }
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
-            let content_new = doc.querySelector('div');
-            article.appendChild(content_new);
-          }
-        }
-      }
+      let div_hidden = document.querySelectorAll('div[class="hidden"]');
+      for (let elem of div_hidden)
+        elem.classList.remove('hidden');
     } else {
       let subscribe_truncate = document.querySelector('.subscribe-truncate');
       if (subscribe_truncate)
@@ -307,7 +273,7 @@ else {
     if (noscroll)
       noscroll.removeAttribute('style');
     let story_generic_iframe = document.querySelector('.story-generic__iframe');
-    let ads = document.querySelectorAll('.ad-placeholder, .sticky, #billboard-container');
+    let ads = document.querySelectorAll('.ad-placeholder, .sticky, [id*="-container"]');
     removeDOMElement(story_generic_iframe, blocker, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
