@@ -6,9 +6,9 @@ Add De Tijd & L'Echo
 Add Finance.si
 Add group Mediahuis Noord (opt-in to custom sites for unlisted)
 Add The Daily Wire
+Remove DealStreetAsia (fix obsolete)
 Fix Australian Community Media
 Fix Bloomberg (newsletters)
-Fix DealStreetAsia (free articles only)
 Fix Knack.be & LeVif.be
 
 * v2.6.7.0 (2022-05-01)

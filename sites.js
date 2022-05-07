@@ -304,9 +304,6 @@ var defaultSites = {
     domain: "tijd.be",
     referer: "google"
   },
-  "DealStreetAsia (free articles only)": {
-    domain: "dealstreetasia.com"
-  },
   "DeMorgen": {
     domain: "demorgen.be",
     group_rule: "###_gr_nl_pg_domains"
