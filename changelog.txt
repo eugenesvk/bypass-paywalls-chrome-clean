@@ -6,6 +6,7 @@ Add De Tijd & L'Echo
 Add group Mediahuis Noord (opt-in to custom sites for unlisted)
 Add The Daily Wire
 Fix Australian Community Media
+Fix Bloomberg (newsletters)
 Fix DealStreetAsia (free articles only)
 Fix Knack.be & LeVif.be
 

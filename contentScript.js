@@ -2353,7 +2353,7 @@ else if (matchDomain('bloomberg.com')) {
   removeDOMElement(paywall, counter, leaderboard);
   sessionStorage.clear();
   let url = window.location.href;
-  if (url.match(/\/(articles|features)\//)) {
+  if (url.match(/\/(articles|features|newsletters)\//)) {
     let page_ad = document.querySelectorAll('div.page-ad, div[data-ad-placeholder]');
     let reg_ui_client = document.querySelector('div#reg-ui-client');
     removeDOMElement(leaderboard, ...page_ad, reg_ui_client);
