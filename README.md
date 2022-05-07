@@ -574,6 +574,9 @@ Grouped in options:\
 [Correio da Manhã](https://www.cmjornal.pt) -
 [Observador](https://observador.pt)
 
+##### Slovenia
+[Finance.si](https://www.finance.si)
+
 ##### Spain
 [ABC](https://www.abc.es) -
 [El Confidencial](https://www.elconfidencial.com) -

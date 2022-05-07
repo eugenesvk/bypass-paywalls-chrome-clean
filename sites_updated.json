@@ -26,6 +26,11 @@
       }
     ]
   },
+  "Finance.si": {
+    "domain": "finance.si",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/"
+  },
   "L'Écho": {
     "domain": "lecho.be",
     "referer": "google"

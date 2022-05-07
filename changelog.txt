@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add De Tijd & L'Echo
+Add Finance.si
 Add group Mediahuis Noord (opt-in to custom sites for unlisted)
 Add The Daily Wire
 Fix Australian Community Media

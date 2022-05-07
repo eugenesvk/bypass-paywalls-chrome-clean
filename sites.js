@@ -439,6 +439,11 @@ var defaultSites = {
     domain: "expansion.com",
     group_rule: "###_gr_es_unidad_domains"
   },
+  "Finance.si": {
+    domain: "finance.si",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "Financial News (London)": {
     domain: "fnlondon.com",
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,

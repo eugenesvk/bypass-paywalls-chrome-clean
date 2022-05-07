@@ -216,6 +216,7 @@
         "*://*.farodevigo.es/*",
         "*://*.faz.net/*",
         "*://*.fd.nl/*",
+        "*://*.finance.si/*",
         "*://*.financialpost.com/*",
         "*://*.firstthings.com/*",
         "*://*.fnlondon.com/*",
@@ -671,5 +672,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.7.4"
+    "version": "2.6.7.5"
 }
