@@ -54,7 +54,7 @@ Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypas
 #### Notes
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin).
 * You will be logged out for most of the sites you have checked.
-* Some sites need to redirect to an amp-page (add an exception in your amp2html add-on).
+* Some sites need to redirect to an amp-page (add an exception in your `Redirect AMP to HTML` add-on).
 
 ### List of supported websites
 

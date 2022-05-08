@@ -19,7 +19,7 @@
             "cond": "div[class^=\"_\"]",
             "rm_attrib": "class"
           }, {
-            "cond": "div.o-rte-text > p:not([class]), div.o-rte-text > h3a",
+            "cond": "div.o-rte-text > p:not([class]), div.o-rte-text > h3",
             "rm_elem": 1
           }
         ]
