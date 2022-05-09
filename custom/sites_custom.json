@@ -95,6 +95,9 @@
     "domain": "mannheimer-morgen.de",
     "useragent": "googlebot"
   },
+  "Marketscreener.com (only free articles)": {
+    "domain": "marketscreener.com"
+  },
   "Medpagetoday.com": {
     "domain": "medpagetoday.com"
   },

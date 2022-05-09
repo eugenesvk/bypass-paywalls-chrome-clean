@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Lequipe.fr (json)
 
 * v2.6.8.0 (2022-05-08)
 Add De Tijd & L'Echo

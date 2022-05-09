@@ -1362,7 +1362,7 @@ else if (matchDomain('lequipe.fr')) {
           window.setTimeout(function () {
             ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
           }, 500);
-        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{");
+        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{").replace(/},(\w{2})\]}/g, "},\"$1\"]}");
         json = JSON.parse(json);
         if (json.items) {
           let pars = json.items.filter(x => x.objet && x.objet.paragraphs)[0].objet.paragraphs;
@@ -2622,6 +2622,9 @@ else if (matchDomain('enotes.com')) {
     let intro = document.querySelectorAll('div.o-rte-text > p:not([class]), div.o-rte-text > h3');
     for (let elem of intro)
       removeDOMElement(elem);
+    let section_words = pageContains('p[class="u-align--center"]', /\(The entire section contains/);
+    let ads = document.querySelectorAll('.ad-hfu');
+    removeDOMElement(...section_words, ...ads);
   }
 }
 
