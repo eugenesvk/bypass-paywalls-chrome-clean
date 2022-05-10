@@ -5,6 +5,7 @@ Post-release
 Add UnHerd (UK)
 Remove The Japan Times (fix obsolete)
 Fix Lequipe.fr (json)
+Fix The Dallas Morning News
 
 * v2.6.8.0 (2022-05-08)
 Add De Tijd & L'Echo

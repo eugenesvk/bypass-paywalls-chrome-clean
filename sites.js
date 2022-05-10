@@ -1604,7 +1604,8 @@ var defaultSites = {
   "The Dallas Morning News": {
     domain: "dallasnews.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    useragent: "googlebot"
   },
   "The Diplomat": {
     domain: "thediplomat.com",

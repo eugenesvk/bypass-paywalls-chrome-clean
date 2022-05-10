@@ -2514,6 +2514,12 @@ else if (matchDomain('dailywire.com')) {
 else if (matchDomain('dallasnews.com')) {
   if (window.location.search.startsWith('?outputType=amp')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');
+  } else {
+    let overlay = document.querySelector('div.sl-overlay');
+    removeDOMElement(overlay);
+    let noscroll = document.querySelector('div#courier-body-wrapper[style]');
+    if (noscroll)
+      noscroll.removeAttribute('style');
   }
 }
 
