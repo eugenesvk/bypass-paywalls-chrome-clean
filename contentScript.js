@@ -1362,7 +1362,7 @@ else if (matchDomain('lequipe.fr')) {
           window.setTimeout(function () {
             ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
           }, 500);
-        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{").replace(/},(\w{2})\]}/g, "},\"$1\"]}");
+        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{").replace(/}(,\w{2})+(\]}|,{)/g, "}$2");
         json = JSON.parse(json);
         if (json.items) {
           let pars = json.items.filter(x => x.objet && x.objet.paragraphs)[0].objet.paragraphs;
