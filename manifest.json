@@ -671,5 +671,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.8.2"
+    "version": "2.6.8.3"
 }

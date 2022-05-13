@@ -1899,7 +1899,7 @@ else if (matchDomain('telegraaf.nl')) {
     let html = document.documentElement.outerHTML;
     let json = html.includes('window.__APOLLO_STATE__=') ? html.split('window.__APOLLO_STATE__=')[1].split('};')[0] + '}' : '';
     if (json) {
-      let json_article_id = json.split('uid\":')[1].split(',\"')[0];
+      let json_article_id = json.split('uid\":')[1].split(/\D/)[0];
       if (json_article_id && json_article_id !== article_id) {
         window.setTimeout(function () {
           window.location.reload(true);
@@ -1910,7 +1910,7 @@ else if (matchDomain('telegraaf.nl')) {
         let intro = document.querySelector('span[id^="articleIntro"]');
         if (intro)
           json_text = json_text.replace(intro.innerText + '\n\n', '');
-        let article_body = document.querySelector('section.TextArticlePage__bodyText');
+        let article_body = document.querySelector('section.TextArticlePage__bodyContent');
         if (article_body) {
           let div_main = document.createElement('div');
           div_main.setAttribute('id', 'articleBody' + article_id);
@@ -1924,7 +1924,7 @@ else if (matchDomain('telegraaf.nl')) {
             div_elem.appendChild(p_div);
           });
           div_main.appendChild(div_elem);
-          article_body.appendChild(div_main);
+          article_body.insertBefore(div_main, article_body.firstChild);
         }
       }
     }

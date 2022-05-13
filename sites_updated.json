@@ -3,29 +3,6 @@
     "domain": "tijd.be",
     "referer": "google"
   },
-  "El Espectador": {
-    "domain": "elespectador.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "amp_redirect": "div.exclusive_validation"
-  },
-  "eNotes": {
-    "domain": "enotes.com",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "section.c-cta-section",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "div[class^=\"_\"]",
-            "rm_attrib": "class"
-          }, {
-            "cond": "div.o-rte-text > p:not([class]), div.o-rte-text > h3",
-            "rm_elem": 1
-          }
-        ]
-      }
-    ]
-  },
   "Finance.si": {
     "domain": "finance.si",
     "allow_cookies": 1,
@@ -34,24 +11,6 @@
   "L'Écho": {
     "domain": "lecho.be",
     "referer": "google"
-  },
-  "Puck.news": {
-    "domain": "puck.news",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": ".paywall",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "body.paywall-active",
-            "rm_class": "paywall-active"
-          }, {
-            "cond": "article[style]",
-            "rm_attrib": "style"
-          }
-        ]
-      }
-    ],
-    "new_site": 1
   },
   "The Daily Wire": {
     "domain": "dailywire.com",

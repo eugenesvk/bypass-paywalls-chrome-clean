@@ -172,6 +172,10 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "thenational.scot"
   },
+  "Thestar.com.my": {
+    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com)",
+    "domain": "thestar.com.my"
+  },
   "Theweek.com": {
     "allow_cookies": 1,
     "domain": "theweek.com",
