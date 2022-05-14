@@ -946,6 +946,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain('abc.es', details.url) && mobile) &&
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
+    !(matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) &&
     !(matchUrlDomain('thetimes.co.uk', details.url) && !(details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//) || mobile)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
