@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add The Star Malaysia
 Add UnHerd (UK)
 Remove The Japan Times (fix obsolete)
 Fix Lequipe.fr (json)

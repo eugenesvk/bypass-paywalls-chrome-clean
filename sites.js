@@ -1743,6 +1743,10 @@ var defaultSites = {
     domain: "spectatorworld.com",
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
   },
+  "The Star Malaysia": {
+    domain: "thestar.com.my",
+    block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/)/
+  },
   "The Sydney Morning Herald": {
     domain: "smh.com.au",
     group_rule: "###_gr_au_nine_domains"

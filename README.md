@@ -687,7 +687,8 @@ Grouped in options:\
 [South China Morning Post](https://www.scmp.com) -
 [Southern Weekly](https://www.infzm.com) -
 [Tech in Asia](https://www.techinasia.com) -
-[The Diplomat](https://thediplomat.com)
+[The Diplomat](https://thediplomat.com) -
+[The Star Malaysia](https://www.thestar.com.my)
 
 #### India
 [Bloomberg Quint](https://www.bloombergquint.com) -
