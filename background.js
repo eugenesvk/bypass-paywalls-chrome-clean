@@ -643,6 +643,7 @@ var block_js = [
   "*://*.blueconic.net/*",
   "*://*.cxense.com/*",
   "*://*.evolok.net/*",
+  "*://*.googletagmanager.com/*",
   "*://*.newsmemory.com/?meter*",
   "*://*.onecount.net/*",
   "*://*.piano.io/*",

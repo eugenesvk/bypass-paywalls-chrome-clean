@@ -9,6 +9,7 @@ Fix Lequipe.fr (json)
 Fix Telegraaf.nl
 Fix The Australian (The Oz)
 Fix The Dallas Morning News
+Update block general paywall script (GoogleTagManager)
 
 * v2.6.8.0 (2022-05-08)
 Add De Tijd & L'Echo
