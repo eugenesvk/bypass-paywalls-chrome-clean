@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.6.9.0 (2022-05-15)
 Add The Star Malaysia
 Add UnHerd (UK)
 Remove The Japan Times (fix obsolete)
