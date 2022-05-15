@@ -6,6 +6,7 @@ Add The Star Malaysia
 Add UnHerd (UK)
 Remove The Japan Times (fix obsolete)
 Fix Lequipe.fr (json)
+Fix Live Law (amp)
 Fix Telegraaf.nl
 Fix The Australian (The Oz)
 Fix The Dallas Morning News

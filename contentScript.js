@@ -2897,15 +2897,19 @@ else if (matchDomain('law360.com')) {
 }
 
 else if (matchDomain('livelaw.in')) {
-  let paywall = document.querySelector('div.restricted_message');
+  let paywall = document.querySelector('div#subscription_paid_message, div.subscribeNow');
   if (paywall) {
-    let intro = paywall.querySelectorAll('div.story, div#subscription_paid_message');
-    removeDOMElement(...intro);
-    paywall.classList.remove('restricted_message');
+    let intro = document.querySelector('div.story');
+    removeDOMElement(paywall, intro);
+    let restricted_message = document.querySelector('div.restricted_message');
+    if (restricted_message)
+      restricted_message.classList.remove('restricted_message');
     let paywall_content = document.querySelector('div.paywall-content.hide');
     if (paywall_content)
       paywall_content.classList.remove('hide');
   }
+  let ads = document.querySelectorAll('inside-post-ad, amp-ad');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('livemint.com')) {
