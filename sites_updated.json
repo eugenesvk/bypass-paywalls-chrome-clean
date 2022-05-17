@@ -28,6 +28,10 @@
     "block_regex": "(\\.blueconic\\.net\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot"
   },
+  "The Globe and Mail": {
+    "domain": "theglobeandmail.com",
+    "block_regex": "(\\.theglobeandmail\\.com\\/pf\\/dist\\/engine\\/react\\.js|smartwall\\.theglobeandmail\\.com\\/)"
+  },
   "The Star Malaysia": {
     "domain": "thestar.com.my",
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"

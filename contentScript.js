@@ -3463,7 +3463,7 @@ else if (matchDomain('theglobeandmail.com')) {
     if (article_body_subscribed)
       article_body_subscribed.removeAttribute('class');
   }
-  let banners = document.querySelectorAll('div.c-ad, div#subscription-pencil-area');
+  let banners = document.querySelectorAll('div.c-ad, div#subscription-pencil-area, div.marketing-container-wrapper');
   removeDOMElement(...banners);
 }
 

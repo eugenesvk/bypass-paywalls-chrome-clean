@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix The Globe and Mail (revert to old fix)
 
 * v2.6.9.0 (2022-05-15)
 Add The Star Malaysia

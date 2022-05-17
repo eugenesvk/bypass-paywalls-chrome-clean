@@ -111,7 +111,7 @@ var excludedSites = [];
 function setDefaultOptions() {
   ext_api.storage.local.set({
     sites: filterObject(defaultSites, function (val, key) {
-      return val.domain && !val.domain.match(/^(###$|#options_disable_)/)
+      return val.domain && !val.domain.match(/^(###$|#options_(disable|optin)_)/)
     },
       function (val, key) {
       return [key, val.domain]
@@ -277,8 +277,8 @@ function set_rules(sites, sites_updated, sites_custom) {
       }
     }
   }
-  if (enabledSites.includes('#options_optin_tgam_media'))
-    blockedRegexes['theglobeandmail.com'] = /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/;
+  if (enabledSites.includes('#options_optin_tgam_premium'))
+    blockedRegexes['theglobeandmail.com'] = /smartwall\.theglobeandmail\.com\//;
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
   disableJavascriptOnListedSites();
@@ -622,7 +622,7 @@ if (block_js_inline.length)
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];
   let excluded = (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
-  || (matchUrlDomain('theglobeandmail.com', details.url) && (enabledSites.includes('#options_optin_tgam_media') || !details.url.includes('?rel=premium')));
+  || (matchUrlDomain('theglobeandmail.com', details.url) && (!enabledSites.includes('#options_optin_tgam_premium') || !details.url.includes('?rel=premium')));
   if (!isSiteEnabled(details) || excluded)
     return;
   var headers = details.responseHeaders;
