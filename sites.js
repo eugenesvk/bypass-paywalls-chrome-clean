@@ -1341,7 +1341,7 @@ var defaultSites = {
       "variety.com",
       "wwd.com"
     ],
-    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Philosophy Now": {
     domain: "philosophynow.org"
@@ -1672,6 +1672,11 @@ var defaultSites = {
     domain: "jpost.com",
     allow_cookies: 1,
     block_regex: /\.jpost\.com\/js\/js_article\.min\.js/
+  },
+  "The Lawyer's Daily": {
+    domain: "thelawyersdaily.ca",
+    allow_cookies: 1,
+    useragent: "googlebot"
   },
   "The Marker": {
     domain: "themarker.com",

@@ -3485,6 +3485,11 @@ else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
   document.dispatchEvent(new CustomEvent('bpc_event', {}));
 }
 
+else if (matchDomain('thelawyersdaily.ca')) {
+  let modal = document.querySelectorAll('#NewsletterModal, .modal-backdrop');
+  removeDOMElement(...modal);
+}
+
 else if (matchDomain('thenewatlantis.com')) {
   let article_gated = document.querySelector('.article-gated');
   if (article_gated)

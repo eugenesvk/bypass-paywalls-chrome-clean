@@ -1,27 +1,4 @@
 {
-  "De Tijd": {
-    "domain": "tijd.be",
-    "referer": "google"
-  },
-  "Finance.si": {
-    "domain": "finance.si",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
-  "L'Écho": {
-    "domain": "lecho.be",
-    "referer": "google"
-  },
-  "The Daily Wire": {
-    "domain": "dailywire.com",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "#post-body-text > div > div[class]",
-        "rm_attrib": "class"
-      }
-    ],
-    "new_site": 1
-  },
   "The Dallas Morning News": {
     "domain": "dallasnews.com",
     "allow_cookies": 1,
@@ -31,6 +8,11 @@
   "The Globe and Mail": {
     "domain": "theglobeandmail.com",
     "block_regex": "(\\.theglobeandmail\\.com\\/pf\\/dist\\/engine\\/react\\.js|smartwall\\.theglobeandmail\\.com\\/)"
+  },
+  "The Lawyer's Daily": {
+    "domain": "thelawyersdaily.ca",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
   },
   "The Star Malaysia": {
     "domain": "thestar.com.my",

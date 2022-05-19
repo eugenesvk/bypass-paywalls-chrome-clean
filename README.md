@@ -320,6 +320,7 @@ Grouped in options:\
 [Le Devoir](https://www.ledevoir.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
 [The Hill Times](https://www.hilltimes.com) -
+[The Lawyer's Daily](https://www.thelawyersdaily.ca) -
 [Winnipeg Free Press](https://www.winnipegfreepress.com)
 
 Grouped in options:\

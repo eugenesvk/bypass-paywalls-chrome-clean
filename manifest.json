@@ -549,6 +549,7 @@
         "*://*.thehindu.com/*",
         "*://*.thehindubusinessline.com/*",
         "*://*.theintercept.com/*",
+        "*://*.thelawyersdaily.ca/*",
         "*://*.themarker.com/*",
         "*://*.themarket.ch/*",
         "*://*.themercury.com.au/*",
@@ -673,5 +674,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.9.1"
+    "version": "2.6.9.2"
 }
