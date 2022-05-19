@@ -1,4 +1,9 @@
 {
+  "Mallorca Zeitung": {
+    "domain": "mallorcazeitung.es",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+  },
   "The Dallas Morning News": {
     "domain": "dallasnews.com",
     "allow_cookies": 1,

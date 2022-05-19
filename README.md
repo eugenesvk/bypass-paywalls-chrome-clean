@@ -601,7 +601,8 @@ Grouped in options:\
 [Información](https://www.informacion.es) -
 [La Nueva España](https://www.lne.es) -
 [La Provincia](https://www.laprovincia.es) -
-[Levante-EMV](https://www.levante-emv.com)\
+[Levante-EMV](https://www.levante-emv.com) -
+[Mallorca Zeitung](https://www.mallorcazeitung.es)\
 *Grupo Vocento* (ABC regional) sites like\
 [Diario Vasco](https://www.diariovasco.com) -
 [El Comercio](https://www.elcomercio.es) -

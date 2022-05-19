@@ -668,7 +668,8 @@ var defaultSites = {
       "informacion.es",
       "laprovincia.es",
       "levante-emv.com",
-      "lne.es"
+      "lne.es",
+      "mallorcazeitung.es"
     ],
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/

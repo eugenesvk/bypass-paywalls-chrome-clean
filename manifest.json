@@ -371,6 +371,7 @@
         "*://*.lunion.fr/*",
         "*://*.lvz.de/*",
         "*://*.mainichi.jp/*",
+        "*://*.mallorcazeitung.es/*",
         "*://*.marca.com/*",
         "*://*.marianne.net/*",
         "*://*.marketwatch.com/*",
@@ -674,5 +675,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.9.2"
+    "version": "2.6.9.3"
 }
