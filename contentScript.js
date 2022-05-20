@@ -3547,11 +3547,12 @@ else if (matchDomain(timesofindia_domains)) {
     let paywall = document.querySelector('div.paywall');
     if (paywall && dompurify_loaded) {
       let contentblocker = document.querySelector('div#contentblocker');
-      removeDOMElement(contentblocker);
+      let bottom_banner = document.querySelector('#bottom_banner');
+      removeDOMElement(contentblocker, bottom_banner);
       let preview = document.querySelector('div.article-txt');
       if (preview) {
         let parser = new DOMParser();
-        let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(paywall.innerHTML, {ADD_TAGS: ['amp-img']}) + '</div>', 'text/html');
+        let doc = parser.parseFromString('<div style="margin: 0px 50px;">' + DOMPurify.sanitize(paywall.innerHTML, {ADD_TAGS: ['amp-img']}) + '</div>', 'text/html');
         let article = doc.querySelector('div');
         preview.parentNode.replaceChild(article, preview);
         preview.classList.remove('prime-bottom-blur');
@@ -3564,6 +3565,13 @@ else if (matchDomain(timesofindia_domains)) {
       amp_img.parentNode.replaceChild(img_new, amp_img);
       img_new.parentElement.classList.remove('inline-imgecontent');
       img_new.parentElement.style = 'text-align: center;';
+    }
+  } else {
+    let paywall = document.querySelector('div#story-blocker');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
     }
   }
 }

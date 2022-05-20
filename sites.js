@@ -1823,12 +1823,9 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     useragent: "googlebot",
-    block_regex: /\.timesofindia\.com\/jsrender\.cms/,
     exception: [{
         domain: "timesofindia.indiatimes.com",
-        allow_cookies: 1,
-        useragent: "googlebot",
-        block_regex: /timesofindia\.indiatimes\.com\/jsrender\/version-1\.cms/
+        allow_cookies: 1
       }
     ]
   },

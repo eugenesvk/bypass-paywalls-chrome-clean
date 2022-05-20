@@ -23,6 +23,21 @@
     "domain": "thestar.com.my",
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
   },
+  "Times of India": {
+    "domain": "###_timesofindia",
+    "group": [
+      "timesofindia.com",
+      "timesofindia.indiatimes.com"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "exception": [{
+        "domain": "timesofindia.indiatimes.com",
+        "allow_cookies": 1,
+        "amp_redirect": "div#story-blocker"
+      }
+    ]
+  },
   "UnHerd": {
     "domain": "unherd.com",
     "allow_cookies": 1,
