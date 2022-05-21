@@ -955,6 +955,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/(js\/)?godo-)/
   },
+  "La Vie": {
+    domain: "lavie.fr",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "Law.com (free articles only)": {
     domain: "law.com",
     referer: "facebook"

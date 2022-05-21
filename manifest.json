@@ -330,6 +330,7 @@
         "*://*.latribune.fr/*",
         "*://*.lavanguardia.com/*",
         "*://*.laverdad.es/*",
+        "*://*.lavie.fr/*",
         "*://*.lavoixdunord.fr/*",
         "*://*.lavozdigital.es/*",
         "*://*.law.com/*",
@@ -675,5 +676,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.6.9.4"
+    "version": "2.6.9.5"
 }
