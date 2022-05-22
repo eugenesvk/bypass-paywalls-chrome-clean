@@ -1023,6 +1023,18 @@ if (matchDomain('abc.es')) {
   }
 }
 
+else if (matchDomain(['ara.cat', 'arabalears.cat'])) {
+  let url = window.location.href;
+  if (!window.location.pathname.endsWith('.amp.html')) {
+    let paywall = document.querySelector('div.paywall');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  }
+}
+
 else if (matchDomain('cmjornal.pt')) {
   let paywall = document.querySelector('.bloqueio_exclusivos');
   let amphtml = document.querySelector('link[rel="amphtml"]');

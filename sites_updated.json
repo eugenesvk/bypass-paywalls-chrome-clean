@@ -1,4 +1,14 @@
 {
+  "ARA": {
+    "domain": "###_cat_ara",
+    "group": [
+      "ara.cat",
+      "arabalears.cat"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "useragent": "googlebot"
+  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,

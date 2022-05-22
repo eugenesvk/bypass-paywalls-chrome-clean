@@ -78,6 +78,16 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "ARA": {
+    domain: "###_cat_ara",
+    group: [
+      "ara.cat",
+      "arabalears.cat"
+    ],
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
+    useragent: "googlebot"
+  },
   "Artnet": {
     domain: "artnet.com",
     allow_cookies: 1,
@@ -1852,7 +1862,7 @@ var defaultSites = {
       "sun-sentinel.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.tribdss\.com\/|js\.matheranalytics\.com\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
+    block_regex: /(\.tribdss\.com\/|\.blueconic\.net\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
   },
   "Trouw": {
     domain: "trouw.nl",

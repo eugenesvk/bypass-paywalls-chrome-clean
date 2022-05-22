@@ -594,6 +594,9 @@ Grouped in options:\
 [Política Exterior](https://www.politicaexterior.com)
 
 Grouped in options:\
+*ARA* sites like:\
+[Ara.cat](https://www.ara.cat) -
+[Ara Balears](https://www.arabalears.cat)\
 *Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted):\
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
