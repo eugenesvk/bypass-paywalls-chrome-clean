@@ -6,6 +6,7 @@ Add LaVie.fr
 Add Mallorca Zeitung
 Add The Lawyer's Daily (Canada)
 Fix The Globe and Mail (revert to old fix)
+Fix TheTimes.co.uk (link to archive.is)
 Fix Times of India
 
 * v2.6.9.0 (2022-05-15)

@@ -2074,12 +2074,12 @@ else if (matchDomain('thetimes.co.uk')) {
   let url = window.location.href;
   if (window.location.hostname !== 'epaper.thetimes.co.uk') {
     let block = document.querySelector('.subscription-block');
-    let adverts = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.responsiveweb-sc-1exejum-0');
+    let adverts = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
     removeDOMElement(block, ...adverts);
     let paywall = document.querySelector('div#paywall-portal-article-footer');
     if (paywall && !url.includes('?shareToken=')) {
       removeDOMElement(paywall);
-      let article = document.querySelector('article[role="article"]');
+      let article = document.querySelector('article[class^="responsive__BodyContainer"]');
       if (article)
         article.insertBefore(archiveLink(url), article.firstChild);
     }
