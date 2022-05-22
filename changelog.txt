@@ -5,6 +5,7 @@ Post-release
 Add LaVie.fr
 Add Mallorca Zeitung
 Add The Lawyer's Daily (Canada)
+Fix ESPN USA (disable for Watch)
 Fix The Globe and Mail (revert to old fix)
 Fix TheTimes.co.uk (link to archive.is)
 Fix Times of India

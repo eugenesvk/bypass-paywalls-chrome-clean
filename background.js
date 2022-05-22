@@ -19,6 +19,7 @@ var restrictions = {
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
+  'espn.com': /^((?!espn\.com\/watch).)*$/,
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'foreignaffairs.com': /\.foreignaffairs\.com\/((articles|fa-caching|interviews|reviews|sites)\/)/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
