@@ -1904,7 +1904,7 @@ else if (matchDomain('telegraaf.nl')) {
   removeDOMElement(spotx_banner, paywall);
   let premium = document.querySelector('.PremiumLabelWithLine');
   let article_id = article_wrapper ? article_wrapper.innerText : '123';
-  let article_body_done = document.querySelector('#articleBody' + article_id);
+  let article_body_done = window.location.pathname.startsWith('/video/') || document.querySelector('#articleBody' + article_id);
   if (premium && !article_body_done) {
     let article_body_old = document.querySelector('[id^="articleBody"]');
     removeDOMElement(article_body_old);
@@ -1922,7 +1922,7 @@ else if (matchDomain('telegraaf.nl')) {
         let intro = document.querySelector('span[id^="articleIntro"]');
         if (intro)
           json_text = json_text.replace(intro.innerText + '\n\n', '');
-        let article_body = document.querySelector('section.TextArticlePage__bodyContent');
+        let article_body = document.querySelector('section[data-element="articleBody"]');
         if (article_body) {
           let div_main = document.createElement('div');
           div_main.setAttribute('id', 'articleBody' + article_id);
@@ -3067,7 +3067,7 @@ else if (matchDomain('nybooks.com')) {
   let paywall_article = document.querySelector('.paywall-article');
   if (paywall_article)
     paywall_article.classList.remove('paywall-article');
-  let banner = document.querySelector('div.toast-cta');
+  let banner = document.querySelector('div.toast-cta, div.inline-ad');
   removeDOMElement(banner);
 }
 

@@ -578,6 +578,18 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
+// telegraaf.nl redirect error-page
+ext_api.webRequest.onBeforeRequest.addListener(function (details) {
+  if (!isSiteEnabled(details)) {
+    return;
+  }
+  let updatedUrl = details.url.split('&')[0].replace('error?ref=/', '');;
+  return { redirectUrl: updatedUrl };
+},
+{urls:["*://www.telegraaf.nl/error?ref=/*"], types:["main_frame"]},
+["blocking"]
+);
+
 // Australia News Corp redirect subscribe to amp
 var au_news_corp_subscr = au_news_corp_domains.map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {

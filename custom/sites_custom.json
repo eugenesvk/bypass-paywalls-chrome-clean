@@ -5,11 +5,6 @@
     "domain": "abqjournal.com",
     "useragent": "googlebot"
   },
-  "Ara.cat": {
-    "allow_cookies": 1,
-    "domain": "ara.cat",
-    "useragent": "googlebot"
-  },
   "Bauernzeitung.ch": {
     "allow_cookies": 1,
     "domain": "bauernzeitung.ch",
