@@ -563,6 +563,10 @@ Grouped in options:\
 [Vrij Nederland](https://www.nl.nl)
 
 Grouped in options:\
+*Mediahuis België* sites like:\
+[Gazet van Antwerpen](https://www.gva.be) -
+[Het Belang van Limburg](https://www.hbvl.be) -
+[Het Nieuwsblad](https://www.nieuwsblad.be)\
 *Mediahuis Nederland Regional* sites like\
 [Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -

@@ -1119,6 +1119,15 @@ var defaultSites = {
     ],
     block_regex: /(js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
+  "Mediahuis België": {
+    domain: "###_be_mediahuis",
+    group: [
+      "gva.be",
+      "hbvl.be",
+      "nieuwsblad.be"
+    ],
+    allow_cookies: 1
+  },
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",
     group: [
@@ -2115,6 +2124,7 @@ expandSiteRules(defaultSites);
 // grouped domains (background)
 var au_comm_media_domains = grouped_sites['###_au_comm_media'];
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
+var be_mediahuis_domains = grouped_sites['###_be_mediahuis'];
 var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];
 var medium_custom_domains = grouped_sites['###_medium_custom'];

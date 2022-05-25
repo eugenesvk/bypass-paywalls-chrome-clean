@@ -2,6 +2,9 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Gazet van Antwerpen
+Add Het Belang van Limburg
+Add Het Nieuwsblad
 Fix Telegraaf.nl
 
 * v2.7.0.0 (2022-05-22)
