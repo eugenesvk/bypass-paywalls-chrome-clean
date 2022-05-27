@@ -19,11 +19,15 @@
     "allow_cookies": 1,
     "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
-  "The Dallas Morning News": {
-    "domain": "dallasnews.com",
+  "SlideShare": {
+    "domain": "slideshare.net",
     "allow_cookies": 1,
-    "block_regex": "(\\.blueconic\\.net\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot"
+    "cs_code": [{
+        "cond": ".limit-overlay",
+        "rm_class": "limit-overlay"
+      }
+    ],
+    "new_site": 1
   },
   "The Globe and Mail": {
     "domain": "theglobeandmail.com",
@@ -33,10 +37,6 @@
     "domain": "thelawyersdaily.ca",
     "allow_cookies": 1,
     "useragent": "googlebot"
-  },
-  "The Star Malaysia": {
-    "domain": "thestar.com.my",
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/)"
   },
   "Times of India": {
     "domain": "###_timesofindia",
@@ -52,10 +52,5 @@
         "amp_redirect": "div#story-blocker"
       }
     ]
-  },
-  "UnHerd": {
-    "domain": "unherd.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/"
   }
 }

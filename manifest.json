@@ -504,6 +504,7 @@
         "*://*.silive.com/*",
         "*://*.skimag.com/*",
         "*://*.slate.com/*",
+        "*://*.slideshare.net/*",
         "*://*.sloanreview.mit.edu/*",
         "*://*.smh.com.au/*",
         "*://*.sofrep.com/*",
@@ -680,5 +681,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.0.2"
+    "version": "2.7.0.3"
 }

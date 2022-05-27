@@ -1500,6 +1500,10 @@ var defaultSites = {
     domain: "slate.com",
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "SlideShare": {
+    domain: "slideshare.net",
+    allow_cookies: 1
+  },
   "SOFREP": {
     domain: "sofrep.com",
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/

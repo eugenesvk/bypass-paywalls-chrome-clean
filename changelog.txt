@@ -5,6 +5,7 @@ Post-release
 Add Gazet van Antwerpen
 Add Het Belang van Limburg
 Add Het Nieuwsblad
+Add SlideShare
 Remove Scribd (fix obsolete)
 Fix Telegraaf.nl
 

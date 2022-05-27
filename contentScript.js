@@ -237,14 +237,15 @@ if (matchDomain('thesaturdaypaper.com.au')) {
   removeDOMElement(paywall);
 }
 
-else if (domain = matchDomain(["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"])) {
-  let url = window.location.href;
-  let for_subscribers = document.querySelector('meta[content^="FOR SUBSCRIBERS"], #paywall_prompt');
-  if (for_subscribers) {
-    window.setTimeout(function () {
-      window.location.href = url.replace('www.', 'amp.');
-    }, 500);
-  } else if (url.includes('amp.' + domain)) {
+else if (matchDomain(['brisbanetimes.com.au', 'smh.com.au', 'theage.com.au', 'watoday.com.au'])) {
+  if (!window.location.hostname.startsWith('amp.')) {
+    let paywall = document.querySelector('meta[content^="FOR SUBSCRIBERS"], #paywall_prompt');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  } else {
     amp_unhide_subscr_section();
   }
 }
@@ -278,7 +279,7 @@ else {
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
     let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
-    if (domain = matchDomain(au_news_corp_domains)) {
+    if (matchDomain(au_news_corp_domains)) {
       let header_ads = document.querySelector('.header_ads-container');
       removeDOMElement(header_ads);
       let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
@@ -1261,39 +1262,34 @@ else if (matchDomain('esprit.presse.fr')) {
   removeDOMElement(paywall);
 }
 
-else if ((domain = matchDomain(fr_groupe_ebra_domains)) && window.location.href.match(/\/\d{4}\/\d{2}\/\d{2}\//)) {
-  let url = window.location.href;
-  let url_new = url.replace(domain + '/', domain + '/amp/');
-  if (!url.includes(domain + '/amp/')) {
-    let free = document.querySelector('[class^="paywall"]');
-    if (!free) {
-      window.setTimeout(function () {
-        window.location.href = url_new;
-      }, 500);
+else if (matchDomain(fr_groupe_ebra_domains)) {
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div.preview');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
     }
   } else {
     amp_unhide_access_hide('="access"', '="NOT access"', 'amp-ad, amp-embed');
   }
 }
 
-else if (domain = matchDomain(fr_groupe_la_depeche_domains)) {
-  let url = window.location.href;
-  let url_new = url.replace(domain + '/', domain + '/amp/');
-  if (url.includes(domain + '/amp/')) {
+else if (matchDomain(fr_groupe_la_depeche_domains)) {
+  if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');
   } else {
     let paywall = document.querySelector('div.paywall');
-    if (paywall) {
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
       removeDOMElement(paywall);
-      window.location.href = url_new;
+      window.location.href = amphtml.href;
     }
   }
 }
 
-else if (domain = matchDomain(fr_groupe_nice_matin_domains)) {
-  let url = window.location.href;
-  let url_new = url.replace(domain + '/', domain + '/amp/');
-  if (url.includes(domain + '/amp/')) {
+else if (matchDomain(fr_groupe_nice_matin_domains)) {
+  if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_access_hide('="access"', '="NOT access"', 'amp-ad, amp-embed');
   } else {
     let paywall = document.querySelector('div#article-teaser');
@@ -3347,6 +3343,12 @@ else if (matchDomain('slate.com')) {
   let slate_roadblock = document.querySelector('.slate-roadblock');
   let ads = document.querySelectorAll('section[class*="-ad"]');
   removeDOMElement(slate_roadblock, ...ads);
+}
+
+else if (matchDomain('slideshare.net')) {
+  let limit_overlay = document.querySelector('.limit-overlay');
+  if (limit_overlay)
+    limit_overlay.classList.remove('limit-overlay');
 }
 
 else if (matchDomain('sloanreview.mit.edu')) {
