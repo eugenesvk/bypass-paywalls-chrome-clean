@@ -3329,18 +3329,6 @@ else if (matchDomain('scmp.com')) {
     csDoneOnce = true;
 }
 
-else if (matchDomain('scribd.com')) {
-  let blurred_pages = document.querySelectorAll('.blurred_page');
-  for (let blurred_page of blurred_pages) {
-    blurred_page.classList.remove('blurred_page');
-  }
-  let portal = document.querySelector('.between_page_portal_root');
-  let page_module = document.querySelector('.between_page_module');
-  let promo = document.querySelector('.auto__doc_page_webpack_doc_page_body_static_promo_study');
-  let ad = document.querySelector('.auto__explain_scribd_v2_advertisement');
-  removeDOMElement(portal, page_module, promo, ad);
-}
-
 else if (matchDomain('seekingalpha.com')) {
   let url = window.location.href;
   let locked = document.querySelector('div[data-test-id="post-locked-banner"]');

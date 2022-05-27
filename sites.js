@@ -1491,10 +1491,6 @@ var defaultSites = {
     allow_cookies: 1,
     remove_cookies: 1
   },
-  "Scribd (documents only)": {
-    domain: "scribd.com",
-    allow_cookies: 1
-  },
   "Seeking Alpha": {
     domain: "seekingalpha.com",
     allow_cookies: 1,

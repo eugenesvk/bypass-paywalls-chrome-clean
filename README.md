@@ -145,7 +145,6 @@ Grouped in options:\
 [Loeb Classical Library](https://www.loebclassics.com) -
 [Philosophy Now](https://philosophynow.org) -
 [Quora](https://www.quora.com) -
-[Scribd](https://www.scribd.com) -
 [Statista](https://www.statista.com) -
 [Study.com (no videos)](https://study.com)
 
