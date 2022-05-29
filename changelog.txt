@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.7.1.0 (2022-05-29)
 Add Corriere dello Sport
 Add Gazet van Antwerpen
 Add Het Belang van Limburg
