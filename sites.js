@@ -1654,6 +1654,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "The Financial Express": {
+    domain: "financialexpress.com",
+    allow_cookies: 1,
+    block_regex: /(\.financialexpress\.com\/.+\/min\/premiumStoryContent\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
     block_regex: /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/

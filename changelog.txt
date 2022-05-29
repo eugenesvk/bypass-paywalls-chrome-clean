@@ -7,6 +7,7 @@ Add Gazet van Antwerpen
 Add Het Belang van Limburg
 Add Het Nieuwsblad
 Add SlideShare
+Add The Financial Express (India)
 Remove Scribd (fix obsolete)
 Fix El Mercurio (+ regional/opt-in to custom sites)
 Fix Telegraaf.nl

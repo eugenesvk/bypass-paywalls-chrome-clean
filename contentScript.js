@@ -2781,6 +2781,19 @@ else if (matchDomain('entrepreneur.com')) {
   }
 }
 
+else if (matchDomain('financialexpress.com')) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall)
+    paywall.classList.remove('paywall');
+  let register = document.querySelector('div.pcl-wrap');
+  let ads;
+  if (window.location.pathname.endsWith('/lite/'))
+    ads = document.querySelectorAll('amp-ad, amp-embed, .ad-bg-container');
+  else
+    ads = document.querySelectorAll('div[class*="-ads-blocks-ad-unit"]');
+  removeDOMElement(register, ...ads);
+}
+
 else if (matchDomain('firstthings.com')) {
   let paywall = document.querySelector('.paywall');
   removeDOMElement(paywall);
