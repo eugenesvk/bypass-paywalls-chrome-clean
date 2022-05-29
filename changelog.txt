@@ -8,6 +8,7 @@ Add Het Belang van Limburg
 Add Het Nieuwsblad
 Add SlideShare
 Remove Scribd (fix obsolete)
+Fix El Mercurio (+ regional/opt-in to custom sites)
 Fix Telegraaf.nl
 
 * v2.7.0.0 (2022-05-22)

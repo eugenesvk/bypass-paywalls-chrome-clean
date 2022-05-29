@@ -2352,7 +2352,7 @@ else if (matchDomain('lasegunda.com')) {
   }
 }
 
-else if (matchDomain(["mercuriovalpo.cl", "estrellavalpo.cl"])) {
+else if (window.location.hostname.endsWith('.cl') && document.querySelector('meta[property="og:image"][content*="://impresa.soy-chile.cl/"]')) {
   let content = document.querySelector('div.content');
   if (content)
     content.setAttribute('id', 'content_new');

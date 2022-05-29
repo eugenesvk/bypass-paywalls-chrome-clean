@@ -750,8 +750,11 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     let custom_domain = urlHost(header_referer).replace(/^(www|m|account|amp|edition|eu)\./, '');
     if (custom_allow_cookies && !allow_cookies.includes(custom_domain))
       allow_cookies.push(custom_domain);
-    if (custom_block_regex)
+    if (custom_block_regex) {
+      if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
+        custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
       blockedRegexes[custom_domain] = custom_block_regex;
+    }
     if (custom_useragent) {
       if (custom_useragent === 'googlebot') {
         if (!use_google_bot.includes(custom_domain))
@@ -803,6 +806,13 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var ch_media_domain = (matchUrlDomain('static-chmedia.ch', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ch_media_domains, header_referer) && enabledSites.includes('nzz.ch'));
       if (ch_media_domain)
         ch_media_domains = customAddRules(ch_media_domains, true, blockedRegexes['nzz.ch'], 'googlebot');
+    } else if (header_referer_hostname.endsWith('.cl')) {
+      // block scripts for regional El Mercurio sites (opt-in to custom sites)
+      var cl_emol_region_domains = [];
+      var cl_emol_region_domain = (matchUrlDomain('impresa.soy-chile.cl', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(cl_emol_region_domains, header_referer) && enabledSites.includes('elmercurio.com'));
+      if (cl_emol_region_domain) {
+        cl_emol_region_domains = customAddRules(cl_emol_region_domains, false, "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)");
+	  }
     } else if (header_referer_hostname.endsWith('.de')) {
       // set googlebot-useragent for additional Funke sites (opt-in to custom sites)
       var de_funke_medien_domains = grouped_sites['###_de_funke_medien'];
@@ -1093,7 +1103,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
         }
       }
     });
-  } else { //mercuriovalpo.cl, estrellavalpo.cl, lequipe.fr
+  } else { //El Mercurio Regionales, lequipe.fr
     ext_api.tabs.query({
       active: true,
       currentWindow: true
