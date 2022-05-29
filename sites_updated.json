@@ -9,6 +9,12 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
     "useragent": "googlebot"
   },
+  "Corriere dello Sport": {
+    "domain": "corrieredellosport.it",
+    "allow_cookies": 1,
+    "amp_redirect": "div[class^=\"MainTextTruncated_paragraph__\"]",
+    "new_site": 1
+  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,

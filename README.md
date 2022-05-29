@@ -519,6 +519,7 @@ Grouped in options:\
 
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -
+[Corriere dello Sport](https://www.corrieredellosport.it) -
 [Domani](https://editorialedomani.it) -
 [Eastwest](https://eastwest.eu) -
 [GElocal.it](https://quotidiani.gelocal.it) -

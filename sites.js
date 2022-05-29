@@ -279,6 +279,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|\.corriereobjects\.it\/.+\/js\/_paywall\.sjs|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Corriere dello Sport": {
+    domain: "corrieredellosport.it",
+    allow_cookies: 1
+  },
   "Crain Communications": {
     domain: "###_usa_craincomm",
     group: [
