@@ -1408,7 +1408,7 @@ else if (matchDomain('lequipe.fr')) {
   }
 }
 
-else if (matchDomain('lesechos.fr') && window.location.href.match(/\d{6,}/)) {
+else if (matchDomain('lesechos.fr')) {
   if (matchDomain('investir.lesechos.fr')) {
     if (!window.location.href.includes('/amp/')) {
       let paywall = document.querySelector('div.bloc-paywall');
@@ -1423,7 +1423,7 @@ else if (matchDomain('lesechos.fr') && window.location.href.match(/\d{6,}/)) {
     }
   } else {
     window.setTimeout(function () {
-      let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
+      let abo_banner = document.querySelector('div[data-testid="paywall"]');
       let ad_blocks = document.querySelectorAll('[class*="jzxvkd"');
       for (let ad_block of ad_blocks)
         ad_block.setAttribute('style', 'display:none');
