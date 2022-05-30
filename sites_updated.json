@@ -69,5 +69,23 @@
         "amp_redirect": "div#story-blocker"
       }
     ]
+  },
+  "Quartz": {
+    "domain": "qz.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "cs_code": [{
+        "cond": "div#email-content[class]",
+        "rm_attrib": "class",
+        "elems": [{
+            "cond": "div.BBwe2.RXsUp",
+            "rm_elem": 1
+          }, {
+            "cond": "iframe[scrolling]",
+            "rm_attrib": "scrolling"
+          }
+        ]
+      }
+    ]
   }
 }

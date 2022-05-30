@@ -3307,15 +3307,16 @@ else if (matchDomain('quora.com')) {
 }
 
 else if (matchDomain('qz.com')) {
-  let paywall = document.querySelector('div.KbD9m');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let overflow = document.querySelector('div._4BDxU');
-    if (overflow)
-      overflow.classList.remove('_4BDxU');
-    let noscroll = document.querySelector('iframe[scrolling]');
-    if (noscroll)
-      noscroll.removeAttribute('scrolling');
+  if (window.location.pathname.startsWith('/emails/')) {
+    let paywall = document.querySelector('div#email-content[class]');
+    if (paywall) {
+      paywall.removeAttribute('class');
+      let login = pageContains('h2[class]', /^This story is exclusive to/);
+      removeDOMElement(login[0].parentElement);
+      let noscroll = document.querySelector('iframe[scrolling]');
+      if (noscroll)
+        noscroll.removeAttribute('scrolling');
+    }
   }
 }
 
