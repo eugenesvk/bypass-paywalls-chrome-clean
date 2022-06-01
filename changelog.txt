@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Estado de Minas (Brazil)
 Fix LesEchos.fr (refresh)
 Fix Quartz (newsletter)
 

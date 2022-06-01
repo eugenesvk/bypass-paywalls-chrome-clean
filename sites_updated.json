@@ -15,6 +15,19 @@
     "amp_redirect": "div[class^=\"MainTextTruncated_paragraph__\"]",
     "new_site": 1
   },
+  "Estado de Minas": {
+    "domain": "em.com.br",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "amp_redirect": ".news-blocked-content",
+    "amp_unhide": 1,
+    "cs_code": [{
+        "cond": ".compress-text",
+        "rm_class": "compress-text"
+      }
+    ],
+    "new_site": 1
+  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,

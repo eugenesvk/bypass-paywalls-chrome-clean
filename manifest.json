@@ -200,6 +200,7 @@
         "*://*.elpais.com/*",
         "*://*.elperiodico.com/*",
         "*://*.eltiempo.com/*",
+        "*://*.em.com.br/*",
         "*://*.enotes.com/*",
         "*://*.entrepreneur.com/*",
         "*://*.epe.es/*",
@@ -682,5 +683,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.1.1"
+    "version": "2.7.1.2"
 }

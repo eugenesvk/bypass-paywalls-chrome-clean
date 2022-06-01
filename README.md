@@ -733,6 +733,7 @@ Grouped in options:\
 [Clarín](https://www.clarin.com) -
 [La Nación](https://www.lanacion.com.ar)
 ##### Brazil
+[Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
 [Folha de S. Paulo](https://www.folha.uol.com.br) -
 [Grupo Abril](https://grupoabril.com.br) -

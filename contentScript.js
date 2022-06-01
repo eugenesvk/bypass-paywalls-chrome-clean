@@ -2310,6 +2310,24 @@ else if (matchDomain('elmercurio.com')) {
   }, 3000);
 }
 
+else if (matchDomain('em.com.br')) {
+  if (!window.location.pathname.endsWith('/amp.html')) {
+    let paywall = document.querySelector('.news-blocked-content');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+    let ads = document.querySelectorAll('.ads, .containerads');
+    removeDOMElement(...ads);
+  } else {
+    amp_unhide_subscr_section('amp-ad, amp-embed, amp-fx-flying-carpet');
+    let compress_text = document.querySelector('div.compress-text');
+    if (compress_text)
+      compress_text.classList.remove('compress-text');
+  }
+}
+
 else if (matchDomain('estadao.com.br')) {
   if (window.location.pathname.endsWith('.amp')) {
     amp_unhide_access_hide('="granted"', '="NOT granted"', 'amp-ad, amp-embed, amp-fx-flying-carpet');

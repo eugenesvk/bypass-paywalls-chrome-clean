@@ -435,6 +435,11 @@ var defaultSites = {
     allow_cookies: 1,
     random_ip: "all"
   },
+  "Estado de Minas": {
+    domain: "em.com.br",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+  },
   "EUobserver": {
     domain: "euobserver.com",
     allow_cookies: 1,
