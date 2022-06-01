@@ -3495,15 +3495,6 @@ else if (matchDomain('stratfor.com')) {
   }
 }
 
-else if (matchDomain('study.com')) {
-  let faded_content = document.querySelector('div.faded-content');
-  if (faded_content)
-    faded_content.removeAttribute('class');
-  let div_hidden = document.querySelector('div.hidden[ng-non-bindable]');
-  if (div_hidden)
-    div_hidden.removeAttribute('class');
-}
-
 else if (matchDomain('techinasia.com')) {
   let paywall = document.querySelector('.paywall-content');
   if (paywall && dompurify_loaded) {

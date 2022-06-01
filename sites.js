@@ -1540,10 +1540,6 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "bingbot"
   },
-  "Study.com (no videos)": {
-    domain: "study.com",
-    allow_cookies: 1
-  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,

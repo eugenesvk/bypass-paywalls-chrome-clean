@@ -146,8 +146,7 @@ Grouped in options:\
 [Philosophy Now](https://philosophynow.org) -
 [Quora](https://www.quora.com) -
 [SlideShare]https://www.slideshare.net) -
-[Statista](https://www.statista.com) -
-[Study.com (no videos)](https://study.com)
+[Statista](https://www.statista.com)
 
 ##### Magazines/Blogs
 [Medium](https://www.medium.com)*\
