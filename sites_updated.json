@@ -1,14 +1,4 @@
 {
-  "ARA": {
-    "domain": "###_cat_ara",
-    "group": [
-      "ara.cat",
-      "arabalears.cat"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "useragent": "googlebot"
-  },
   "Corriere dello Sport": {
     "domain": "corrieredellosport.it",
     "allow_cookies": 1,
@@ -27,16 +17,6 @@
       }
     ],
     "new_site": 1
-  },
-  "La Vie": {
-    "domain": "lavie.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
-  "Mallorca Zeitung": {
-    "domain": "mallorcazeitung.es",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "SlideShare": {
     "domain": "slideshare.net",
@@ -59,29 +39,10 @@
     ],
     "new_site": 1
   },
-  "The Globe and Mail": {
-    "domain": "theglobeandmail.com",
-    "block_regex": "(\\.theglobeandmail\\.com\\/pf\\/dist\\/engine\\/react\\.js|smartwall\\.theglobeandmail\\.com\\/)"
-  },
-  "The Lawyer's Daily": {
-    "domain": "thelawyersdaily.ca",
+  "The Irish Times": {
+    "domain": "irishtimes.com",
     "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Times of India": {
-    "domain": "###_timesofindia",
-    "group": [
-      "timesofindia.com",
-      "timesofindia.indiatimes.com"
-    ],
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "exception": [{
-        "domain": "timesofindia.indiatimes.com",
-        "allow_cookies": 1,
-        "amp_redirect": "div#story-blocker"
-      }
-    ]
+    "block_regex": "\\.irishtimes\\.com\\/zephr\\/features"
   },
   "Quartz": {
     "domain": "qz.com",

@@ -1616,7 +1616,7 @@ var defaultSites = {
   "The Business of Fashion": {
     domain: "businessoffashion.com",
     allow_cookies: 1,
-    block_regex: /\.businessoffashion\.com\/zephr\/feature-decisions/
+    block_regex: /\.businessoffashion\.com\/zephr\/features/
   },
   "The Christian Science Monitor": {
     domain: "csmonitor.com",
@@ -1694,6 +1694,11 @@ var defaultSites = {
     domain: "theintercept.com",
     allow_cookies: 1,
     block_regex: /\.theintercept\.com\/api\/tinypass\.min\.js/
+  },
+  "The Irish Times": {
+    domain: "irishtimes.com",
+    allow_cookies: 1,
+    block_regex: /\.irishtimes\.com\/zephr\/features/
   },
   "The Jerusalem Post": {
     domain: "jpost.com",
@@ -2136,4 +2141,4 @@ var usa_theathletic_domains = grouped_sites['###_usa_theathletic'];
 
 // sites with no fix (background)
 var nl_ad_region_domains = ['ad.nl', 'bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'irishtimes.com', 'jacobinmag.com', 'japantimes.co.jp', 'jeunesafrique.com', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'spiegel.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'wiwo.de', 'ynet.co.il'].concat(nl_ad_region_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'jacobinmag.com', 'japantimes.co.jp', 'jeunesafrique.com', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'spiegel.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'wiwo.de', 'ynet.co.il'].concat(nl_ad_region_domains);

@@ -3,9 +3,11 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Estado de Minas (Brazil)
+Add The Irish Times
 Remove Study.com (fix obsolete)
 Fix LesEchos.fr (refresh)
 Fix Quartz (newsletter)
+Update block general paywall script (Zephr-local)
 
 * v2.7.1.0 (2022-05-29)
 Add Corriere dello Sport
