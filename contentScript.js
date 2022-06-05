@@ -416,7 +416,7 @@ else {
     csDone = true;
 }
 
-} else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net', 'handelsblatt.com'])) {//germany/austria/switzerland - ch
+} else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net'])) {//germany/austria/switzerland - ch
 
 if (matchDomain('allgaeuer-zeitung.de')) {
   let url = window.location.href;
@@ -580,23 +580,6 @@ else if (matchDomain('freiepresse.de')) {
     let amp_ads = document.querySelectorAll('amp-fx-flying-carpet, amp-ad, amp-embed');
     let pw_layer = document.querySelector('.pw-layer');
     removeDOMElement(...amp_ads, pw_layer);
-  }
-}
-
-else if (matchDomain('handelsblatt.com')) {
-  let url = window.location.href;
-  if (url.match(/\/amp(\d)?\./)) {
-    let amp_ads = document.querySelectorAll('amp-ad, amp-embed');
-    removeDOMElement(...amp_ads);
-  } else {
-    let paywall = document.querySelector('div.temp-paywall1');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      let premium = document.querySelector('meta[content*="PREMIUM"]');
-      if (!premium)
-        window.location.href = amphtml.href;
-    }
   }
 }
 
