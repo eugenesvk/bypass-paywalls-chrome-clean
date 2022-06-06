@@ -2101,7 +2101,7 @@ else if (matchDomain('vn.nl')) {
             let content = document.querySelector('div[data-article-content-target]');
             if (json_text && content) {
               let parser = new DOMParser();
-              let doc = parser.parseFromString('<div data-article-content-target>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              let doc = parser.parseFromString('<div data-article-content-target>' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
               let content_new = doc.querySelector('div');
               content.parentNode.replaceChild(content_new, content);
             }
