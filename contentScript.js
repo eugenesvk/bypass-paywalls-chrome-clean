@@ -1622,6 +1622,37 @@ else if (matchDomain('ilfoglio.it')) {
   }
 }
 
+else if (matchDomain('ilmanifesto.it')) {
+  if (window.location.pathname.match(/((\w)+(\-)+){3,}/)) {
+    let paywall = document.querySelector('div[class^="PostPaywall_PostPaywall__"]');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let json_script = document.querySelector('script#__NEXT_DATA__');
+      if (json_script && dompurify_loaded) {
+        let json = JSON.parse(json_script.innerText);
+        if (json && json.props.pageProps.content && json.props.pageProps.content.content) {
+          let article_new = json.props.pageProps.content.content;
+          let article = document.querySelector('div.ArticleBody');
+          if (article) {
+            article.innerHTML = '';
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            article.appendChild(content_new);
+          }
+        } else
+          window.location.reload(true);
+      }
+    }
+  }
+  let service_page = document.querySelector('div.service-page');
+  if (service_page) {
+    window.setTimeout(function () {
+      window.location.reload(true);
+    }, 1000);
+  }
+}
+
 else if (matchDomain(it_ilmessaggero_domains)) {
   if (window.location.pathname.toLowerCase().includes('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');

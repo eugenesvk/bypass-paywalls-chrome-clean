@@ -276,6 +276,7 @@
         "*://*.ilgazzettino.it/*",
         "*://*.ilgiorno.it/*",
         "*://*.illawarramercury.com.au/*",
+        "*://*.ilmanifesto.it/*",
         "*://*.ilmattino.it/*",
         "*://*.ilmessaggero.it/*",
         "*://*.ilrestodelcarlino.it/*",
@@ -682,5 +683,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.1.3"
+    "version": "2.7.1.4"
 }
