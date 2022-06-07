@@ -1406,7 +1406,7 @@ else if (matchDomain('lesechos.fr')) {
     }
   } else {
     window.setTimeout(function () {
-      let abo_banner = document.querySelector('div[data-testid="paywall"]');
+      let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
       let ad_blocks = document.querySelectorAll('[class*="jzxvkd"');
       for (let ad_block of ad_blocks)
         ad_block.setAttribute('style', 'display:none');
