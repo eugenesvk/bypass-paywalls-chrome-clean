@@ -53,6 +53,15 @@ else if (matchDomain('nationalgeographic.com')) {
   waitDOMElement('div[id^="fittPortal"]', 'DIV', natgeo_func, false);
 }
 
+else if (matchDomain('nautil.us')) {
+  let hidden_images = document.querySelectorAll('img[src^="data:image"][data-src]');
+  for (let hidden_image of hidden_images)
+    hidden_image.src = hidden_image.getAttribute('data-src');
+  let empty_video_iframes = document.querySelectorAll('iframe[src="about:blank"][data-litespeed-src]');
+  for (let empty_video_iframe of empty_video_iframes)
+    empty_video_iframe.src = empty_video_iframe.getAttribute('data-litespeed-src');
+}
+
 else if (matchDomain('nyteknik.se')) {
   window.setTimeout(function () {
     let hidden_images = document.querySelectorAll('img[src=""][data-proxy-image]');

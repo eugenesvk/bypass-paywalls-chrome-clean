@@ -3190,6 +3190,23 @@ else if (matchDomain('nationalreview.com')) {
   removeDOMElement(...adverts);
 }
 
+else if (matchDomain('nautil.us')) {
+  // plus code in contentScript_once.js
+  let hidden_images = document.querySelectorAll('img[src^="data:image"][data-src]');
+  for (let hidden_image of hidden_images)
+    hidden_image.src = hidden_image.getAttribute('data-src');
+  let empty_video_iframes = document.querySelectorAll('iframe[src="about:blank"][data-litespeed-src]');
+  for (let empty_video_iframe of empty_video_iframes)
+    empty_video_iframe.src = empty_video_iframe.getAttribute('data-litespeed-src');
+  window.setTimeout(function () {
+    let banners = document.querySelectorAll('div[class^="a__sc-np"], div.subscibe-bar');
+    removeDOMElement(...banners);
+    let overflows = document.querySelectorAll('html[style], body[style]');
+    for (let overflow of overflows)
+      overflow.removeAttribute('style');
+  }, 1000);
+}
+
 else if (matchDomain('newleftreview.org')) {
   window.setTimeout(function () {
     let url = window.location.href;

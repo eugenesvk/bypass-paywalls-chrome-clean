@@ -7,6 +7,7 @@ Fix Business Standard
 Fix Helsingin Sanomat (dynamic-json)
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix LesEchos.fr
+Fix Nautilus
 Fix Repubblica.it & LaStampa.it (videos-gtm)
 
 * v2.7.2.0 (2022-06-06)

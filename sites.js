@@ -1228,7 +1228,8 @@ var defaultSites = {
     useragent: "googlebot"
   },
   "Nautilus": {
-    domain: "nautil.us"
+    domain: "nautil.us",
+    allow_cookies: 1
   },
   "Neue Osnabrücker Zeitung": {
     domain: "noz.de",
