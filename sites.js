@@ -216,7 +216,8 @@ var defaultSites = {
   },
   "Business Standard": {
     domain: "business-standard.com",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Causeur": {
     domain: "causeur.fr",

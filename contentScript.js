@@ -2612,25 +2612,15 @@ else if (matchDomain('business-standard.com')) {
   let skip_button = document.querySelector('a.btn_skip');
   if (skip_button)
     skip_button.click();
-  let p_content = document.querySelector('span.p-content.paywall');
-  if (p_content) {
-    p_content.classList.remove('paywall');
-    let json_script = getArticleJsonScript();
-    if (json_script) {
-      let json_text = JSON.parse(json_script.text.replace(/(\r|\n|\t)/gm, ''))[0].articleBody;
-      json_text = parseHtmlEntities(json_text);
-      json_text = json_text.replace(/(?:^|[\w\"\'\’])(\.|\?|!)(?=[A-Z\"\”\“\‘\’\'][A-Za-zÀ-ÿ\"\”\“\‘\’\']{1,})/gm, "$&\r\n\r\n") + '\r\n\r\n';
-      let article = document.createElement('div');
-      article.innerText = json_text;
-      if (article) {
-        let old_pars = p_content.querySelectorAll('p');
-        for (let old_par of old_pars) {
-          if (!old_par.querySelector('img'))
-            removeDOMElement(old_par);
-        }
-        p_content.appendChild(article);
-      }
+  if (!window.location.pathname.startsWith('/article-amp/')) {
+    let paywall = document.querySelector('span.p-content.paywall, main');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
     }
+  } else {
+    amp_unhide_subscr_section('amp-ad, amp-embed, .block-cont-amp, #divnonpaidcontent');
   }
 }
 

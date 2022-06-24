@@ -501,7 +501,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // m.faz.net set user-agent to mobile
-const faz_uaMobile = "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Mobile Safari/537.36";
+const userAgentMobile = "Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Mobile Safari/537.36";
 ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -509,7 +509,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   let headers = details.requestHeaders;
   headers = headers.map(function (header) {
       if (header.name.toLowerCase() === 'user-agent')
-        header.value = faz_uaMobile;
+        header.value = userAgentMobile;
       return header;
     });
   return {
@@ -521,20 +521,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
 },
   ["blocking", "requestHeaders"]);
 
-// wap.business-standard.com (mobile) redirect to www (desktop)
-ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
-    return;
-  }
-  var updatedUrl = details.url.replace('/wap.', '/www.');
-  return { redirectUrl: updatedUrl };
-},
-{urls:["*://wap.business-standard.com/*"], types:["main_frame"]},
-["blocking"]
-);
-
-// www.business-standard.com set user-agent to desktop
-const business_standard_uaDesktop = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36";
+// wap.business-standard.com/article-amp/ set user-agent to mobile
 ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -542,14 +529,14 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   let headers = details.requestHeaders;
   headers = headers.map(function (header) {
       if (header.name.toLowerCase() === 'user-agent')
-        header.value = business_standard_uaDesktop;
+        header.value = userAgentMobile;
       return header;
     });
   return {
     requestHeaders: headers
   };
 }, {
-  urls: ["*://www.business-standard.com/*"],
+  urls: ["*://wap.business-standard.com/article-amp/*"],
   types: ["main_frame"]
 },
   ["blocking", "requestHeaders"]);
