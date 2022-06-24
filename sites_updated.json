@@ -1,62 +1,13 @@
 {
-  "Corriere dello Sport": {
-    "domain": "corrieredellosport.it",
-    "allow_cookies": 1,
-    "amp_redirect": "div[class^=\"MainTextTruncated_paragraph__\"]",
-    "new_site": 1
-  },
-  "Estado de Minas": {
-    "domain": "em.com.br",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "amp_redirect": ".news-blocked-content",
-    "amp_unhide": 1,
-    "cs_code": [{
-        "cond": ".compress-text",
-        "rm_class": "compress-text"
-      }
-    ],
-    "new_site": 1
-  },
-  "SlideShare": {
-    "domain": "slideshare.net",
+  "L'Avenir": {
+    "domain": "lavenir.net",
     "allow_cookies": 1,
     "cs_code": [{
-        "cond": ".limit-overlay",
-        "rm_class": "limit-overlay"
-      }
-    ],
-    "new_site": 1
-  },
-  "The Financial Express": {
-    "domain": "financialexpress.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.financialexpress\\.com\\/.+\\/min\\/premiumStoryContent\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": [{
-        "cond": ".paywall",
-        "rm_class": "paywall"
-      }
-    ],
-    "new_site": 1
-  },
-  "The Irish Times": {
-    "domain": "irishtimes.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.irishtimes\\.com\\/zephr\\/features"
-  },
-  "Quartz": {
-    "domain": "qz.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "cs_code": [{
-        "cond": "div#email-content[class]",
-        "rm_attrib": "class",
+        "cond": "div.is-preview",
+        "rm_elem": 1,
         "elems": [{
-            "cond": "div.BBwe2.RXsUp",
-            "rm_elem": 1
-          }, {
-            "cond": "iframe[scrolling]",
-            "rm_attrib": "scrolling"
+            "cond": "div.is-hidden",
+            "rm_class": "is-hidden"
           }
         ]
       }

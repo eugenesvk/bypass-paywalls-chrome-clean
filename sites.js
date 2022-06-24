@@ -879,6 +879,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "L'Avenir": {
+    domain: "lavenir.net",
+    allow_cookies: 1
+  },
   "L'Écho": {
     domain: "lecho.be",
     referer: "google"
