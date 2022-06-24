@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix Business Standard
+Fix Helsingin Sanomat (dynamic-json)
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix LesEchos.fr
 Fix Repubblica.it & LaStampa.it (videos-gtm)

@@ -912,6 +912,8 @@ else if (matchDomain('hs.fi')) {
               elem.setAttribute('style', 'font-style: italic;');
             }
           } else if (['m', 'u'].includes(type)) { // authors
+            if (!par.includes('text:'))
+              continue;
             value = par.split('text:')[1].split(',role')[0].replace(/(^"|"$)/g, '');
             if (value.length > 1) {
               elem = document.createElement('p');
