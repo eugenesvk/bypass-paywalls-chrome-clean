@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix Business Standard
+Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix LesEchos.fr
 
 * v2.7.2.0 (2022-06-06)

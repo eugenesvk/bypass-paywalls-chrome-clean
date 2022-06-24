@@ -599,23 +599,12 @@ else if (matchDomain('krautreporter.de')) {
 }
 
 else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
-  let paywall = document.querySelector('.pay.wall');
+  let paywall = document.querySelector('div#c1-template-platzhalter');
   if (paywall) {
     removeDOMElement(paywall);
-    let json_script = getArticleJsonScript();
-    if (json_script) {
-      let json_text = JSON.parse(json_script.text).articleBody;
-      json_text = parseHtmlEntities(json_text);
-      json_text = breakText(json_text);
-      let region = 'ortsmarke';
-      if (window.location.hostname === 'mobil.ksta.de')
-        region = 'district';
-      let article_sel = 'div.article-text > p.selectionShareable:not(.' + region + '), div.dm_article_text > p.selectionShareable:not(.' + region + ')';
-      let article = document.querySelector(article_sel);
-      if (article && json_text) {
-        article.innerText = json_text;
-      }
-    }
+    let span_hidden = document.querySelector('span.hide-paid-content');
+    if (span_hidden)
+      span_hidden.classList.remove('hide-paid-content');
   }
 }
 
