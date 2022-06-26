@@ -632,7 +632,6 @@ Grouped in options:\
 ##### Sweden
 [Aftonbladet](https://www.aftonbladet.se) -
 [Dagens Industri](https://www.di.se) -
-[Dagens Nyheter](https://www.dn.se)* -
 [NyTeknik](https://www.nyteknik.se)
 
 ##### Switzerland
