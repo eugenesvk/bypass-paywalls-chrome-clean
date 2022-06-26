@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add L'Avenir (Belgium)
 Fix Business Standard
+Fix El Mercurio
 Fix Helsingin Sanomat (dynamic-json)
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix LesEchos.fr

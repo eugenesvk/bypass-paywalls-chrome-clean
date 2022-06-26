@@ -2318,7 +2318,8 @@ else if (matchDomain('elmercurio.com')) {
       elem.removeAttribute('style');
     let page_pdf_content = document.querySelector('div.page_pdf_content');
     let close_html = document.querySelector('div.close_html');
-    removeDOMElement(page_pdf_content, close_html);
+    let cont_page_full = document.querySelector('div.cont_page_full');
+    removeDOMElement(page_pdf_content, close_html, cont_page_full);
   }, 1000);
   window.setTimeout(function () {
     let cont_articlelight = document.querySelector('div.cont_articlelight');
