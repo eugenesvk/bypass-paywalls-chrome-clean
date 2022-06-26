@@ -3661,6 +3661,11 @@ else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
   document.dispatchEvent(new CustomEvent('bpc_event', {}));
 }
 
+else if (matchDomain('theinitium.com')) {
+  let paywall = document.querySelector('section.c-wall');
+  removeDOMElement(paywall);
+}
+
 else if (matchDomain('thelawyersdaily.ca')) {
   let modal = document.querySelectorAll('#NewsletterModal, .modal-backdrop');
   removeDOMElement(...modal);

@@ -559,6 +559,7 @@
         "*://*.theglobeandmail.com/*",
         "*://*.thehindu.com/*",
         "*://*.thehindubusinessline.com/*",
+        "*://*.theinitium.com/*",
         "*://*.theintercept.com/*",
         "*://*.thelawyersdaily.ca/*",
         "*://*.themarker.com/*",
@@ -686,5 +687,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.2.5"
+    "version": "2.7.2.6"
 }

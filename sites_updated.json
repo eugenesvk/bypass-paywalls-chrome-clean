@@ -2,6 +2,11 @@
   "Artforum": {
     "domain": "artforum.com"
   },
+  "Initium Media": {
+    "domain": "theinitium.com",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "L'Avenir": {
     "domain": "lavenir.net",
     "allow_cookies": 1,

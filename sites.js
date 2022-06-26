@@ -826,6 +826,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
+  "Initium Media": {
+    domain: "theinitium.com",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Inkl": {
     domain: "inkl.com"
   },

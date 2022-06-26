@@ -696,6 +696,7 @@ Grouped in options:\
 [Asia Times](https://asiatimes.com) -
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -
 [Harvard Business Review China](https://www.hbrchina.org) -
+[Initium Media](https://theinitium.com) -
 [Mainichi Shimbun](https://mainichi.jp) -
 [Nikkei Asian Review](https://asia.nikkei.com) -
 [South China Morning Post](https://www.scmp.com) -
