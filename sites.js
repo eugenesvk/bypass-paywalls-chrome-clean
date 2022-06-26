@@ -88,6 +88,9 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
+  "Artforum": {
+    domain: "artforum.com"
+  },
   "Artnet": {
     domain: "artnet.com",
     allow_cookies: 1,

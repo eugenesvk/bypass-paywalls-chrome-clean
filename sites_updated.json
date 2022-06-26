@@ -1,4 +1,7 @@
 {
+  "Artforum": {
+    "domain": "artforum.com"
+  },
   "L'Avenir": {
     "domain": "lavenir.net",
     "allow_cookies": 1,
