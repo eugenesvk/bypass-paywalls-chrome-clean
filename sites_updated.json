@@ -2,6 +2,12 @@
   "Artforum": {
     "domain": "artforum.com"
   },
+  "BQ Prime": {
+    "domain": "bqprime.com",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.cxense\\.com\\/|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "amp_unhide": 1
+  },
   "Initium Media": {
     "domain": "theinitium.com",
     "allow_cookies": 1,

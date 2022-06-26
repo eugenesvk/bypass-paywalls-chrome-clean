@@ -706,7 +706,7 @@ Grouped in options:\
 [The Star Malaysia](https://www.thestar.com.my)
 
 #### India
-[Bloomberg Quint](https://www.bloombergquint.com) -
+[BQ Prime](https://www.bqprime.com) -
 [Business Standard](https://www.business-standard.com) -
 [Hindustan Times](https://www.hindustantimes.com) -
 [Inc42](https://inc42.com) -

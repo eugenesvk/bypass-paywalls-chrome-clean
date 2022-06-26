@@ -2581,18 +2581,18 @@ else if (matchDomain('bloomberg.com')) {
   }
 }
 
-else if (matchDomain('bloombergquint.com')) {
-  if (window.location.pathname.startsWith('/amp/')) {
-    amp_unhide_subscr_section();
-  }
-}
-
 else if (matchDomain('bostonglobe.com')) {
   if (window.location.search.startsWith('?outputType=amp')) {
     amp_unhide_subscr_section();
   } else {
     let ads = document.querySelectorAll('div.arc_ad');
     removeDOMElement(...ads);
+  }
+}
+
+else if (matchDomain('bqprime.com')) {
+  if (window.location.pathname.startsWith('/amp/')) {
+    amp_unhide_subscr_section();
   }
 }
 

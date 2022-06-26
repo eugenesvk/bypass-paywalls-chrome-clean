@@ -204,8 +204,8 @@ var defaultSites = {
     block_regex: /(\.tinypass\.com\/|assets\.bwbx\.io\/s\d\/(fence\/plug-client|javelin\/.+\/transporter)\/)/,
     remove_cookies_select_hold: ["bb_geo_info"]
   },
-  "Bloomberg Quint": {
-    domain: "bloombergquint.com",
+  "BQ Prime": {
+    domain: "bqprime.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
