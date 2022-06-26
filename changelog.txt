@@ -5,6 +5,7 @@ Post-release
 Add Artforum
 Add Initium Media
 Add L'Avenir (Belgium)
+Add The Banker
 Remove Dagens Nyheter (fix obsolete)
 Remove Valor Economico (fix obsolete)
 Fix Business Standard

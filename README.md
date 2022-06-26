@@ -171,6 +171,7 @@ Grouped in options:\
 [Sports Illustrated](https://www.si.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Athletic](https://theathletic.com) -
+[The Banker](https://www.thebanker.com) -
 [The Intercept](https://theintercept.com) -
 [The Daily Beast](https://www.thedailybeast.com) -
 [The Daily Wire](https://www.dailywire.com) -

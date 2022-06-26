@@ -142,11 +142,6 @@
   "The-past.com": {
     "domain": "the-past.com"
   },
-  "Thebanker.com": {
-    "allow_cookies": 1,
-    "domain": "thebanker.com",
-    "useragent": "googlebot"
-  },
   "Thecourier.co.uk": {
     "allow_cookies": 1,
     "domain": "thecourier.co.uk",

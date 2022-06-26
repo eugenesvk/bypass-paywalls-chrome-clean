@@ -20,5 +20,10 @@
         ]
       }
     ]
+  },
+  "The Banker": {
+    "allow_cookies": 1,
+    "domain": "thebanker.com",
+    "useragent": "googlebot"
   }
 }

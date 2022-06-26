@@ -1611,6 +1611,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /api\.afr\.com\/graphql\?query=.+PaywallRuleQuery/
   },
+  "The Banker": {
+    domain: "thebanker.com",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "The Boston Globe": {
     domain: "bostonglobe.com",
     allow_cookies: 1,

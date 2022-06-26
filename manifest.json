@@ -550,6 +550,7 @@
         "*://*.theathletic.com/*",
         "*://*.theatlantic.com/*",
         "*://*.theaustralian.com.au/*",
+        "*://*.thebanker.com/*",
         "*://*.thechronicle.com.au/*",
         "*://*.thecourier.com.au/*",
         "*://*.thecut.com/*",
@@ -686,5 +687,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.2.6"
+    "version": "2.7.2.7"
 }
