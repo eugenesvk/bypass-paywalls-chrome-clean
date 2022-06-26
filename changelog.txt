@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.7.3.0 (2022-06-26)
 Add Artforum
 Add Initium Media
 Add L'Avenir (Belgium)
