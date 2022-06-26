@@ -6,6 +6,7 @@ Add Artforum
 Add Initium Media
 Add L'Avenir (Belgium)
 Remove Dagens Nyheter (fix obsolete)
+Remove Valor Economico (fix obsolete)
 Fix Business Standard
 Fix El Mercurio
 Fix Helsingin Sanomat (dynamic-json)

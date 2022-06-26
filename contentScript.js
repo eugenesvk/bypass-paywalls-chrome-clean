@@ -2275,7 +2275,7 @@ else if (matchDomain('thetimes.co.uk')) {
 else if (!matchDomain(['belfasttelegraph.co.uk', 'independent.ie']))
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -2397,22 +2397,6 @@ else if (window.location.hostname.endsWith('.cl') && document.querySelector('met
   let body_modal = document.querySelector('body.modal-open');
   if (body_modal)
     body_modal.classList.remove('modal-open');
-}
-
-else if (matchDomain('valor.globo.com')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
-    replaceDomElementExt(url_cache, true, false, 'div.protected-content');
-  }
-  let skeleton_box = document.querySelector('div.glb-skeleton-box');
-  if (skeleton_box) {
-    skeleton_box.classList.remove('glb-skeleton-box');
-    skeleton_box.removeAttribute('style');
-  }
 }
 
 else

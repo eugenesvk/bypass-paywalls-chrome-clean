@@ -1313,7 +1313,7 @@ var defaultSites = {
     domain: "estadao.com.br",
     block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "O Globo (& Valor Econômico; cached articles only)": {
+  "O Globo": {
     domain: "globo.com",
     block_regex: /\.tinypass\.com\//
   },
