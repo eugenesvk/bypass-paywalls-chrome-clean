@@ -2864,7 +2864,7 @@ else if (matchDomain('ft.com')) {
   if (window.location.hostname.startsWith('amp.')) {
     amp_unhide_subscr_section('.ad-container, amp-ad');
   } else {
-    let cookie_banner = document.querySelector('.o-banner__outer');
+    let cookie_banner = document.querySelector('.o-cookie-message');
     let ribbon = document.querySelector('.js-article-ribbon');
     let ads = document.querySelector('.o-ads');
     removeDOMElement(cookie_banner, ribbon, ads);

@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add BQ Prime (former Bloomberg Quint)
+Fix Financial Times (cookie-banner)
 Fix Knack.be & LeVif.be
 Fix Times of India (no amp)
 
@@ -1009,8 +1010,8 @@ Add general paywall-script Cxense
 Add Chronicle of Higher Education
 Add Diario Financiero (Chile)
 Add El Mercurio de Valparaiso (Chile)
+Fix Financial Times (remove copy-notice)
 Fix MIT Technology Review
-Remove copy-notice in copied text of Financial Times (ft.com)
 Update show options on update (now optional)
 
 * v1.8.2.0 (2020-08-23)
@@ -1181,7 +1182,7 @@ Fix DeMorgen.be
 Fix WSJ (cookie-fix)
 
 * v1.6.6.6 (2020-03-17)
-Fix Financial Times (ft.com)
+Fix Financial Times
 Update (custom)options UI
 
 * v1.6.6.5 (2020-03-10)

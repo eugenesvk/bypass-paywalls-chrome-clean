@@ -10,6 +10,16 @@
     "amp_unhide": 1,
     "new_site": 1
   },
+  "Financial Times (not Chinese)": {
+    "domain": "ft.com",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
+    "useragent": "googlebot",
+    "cs_code": [{
+        "cond": ".o-cookie-message",
+        "rm_elem": 1
+      }
+    ]
+  },
   "Initium Media": {
     "domain": "theinitium.com",
     "allow_cookies": 1,
