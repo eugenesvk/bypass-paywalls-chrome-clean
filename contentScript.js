@@ -3701,6 +3701,7 @@ else if (matchDomain('timeshighereducation.com')) {
 }
 
 else if (matchDomain(timesofindia_domains)) {
+  let url = window.location.href;
   let region_block = document.querySelector('div.plan-popup.active');
   if (region_block) {
     removeDOMElement(region_block);
@@ -3734,6 +3735,8 @@ else if (matchDomain(timesofindia_domains)) {
   } else {
     let paywall = document.querySelector('div#story-blocker');
     let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (!amphtml)
+      amphtml = {href: url.replace('/timesofindia.indiatimes.com/', '/m.timesofindia.com/').replace('/articleshow/', '/amp_articleshow/')};
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
