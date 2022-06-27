@@ -1905,12 +1905,15 @@ else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be'])) {
   }, 500); // Delay (in milliseconds)
 }
 
-
 else if (matchDomain(['knack.be', 'levif.be'])) {
-  let paywall = document.querySelector('#paywall-modal');
+  let paywall = document.querySelector('#paywall-modal, #datawall-modal');
   if (paywall) {
     removeDOMElement(paywall);
-    document.querySelector('html').setAttribute('style', 'overflow-y: visible !important');
+    function knack_noscroll(node) {
+      node.removeAttribute('style');
+      node.removeAttribute('class');
+    }
+    waitDOMAttribute('html', 'html', 'style', knack_noscroll, true);
   }
 }
 

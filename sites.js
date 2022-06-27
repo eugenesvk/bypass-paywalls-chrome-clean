@@ -863,7 +863,7 @@ var defaultSites = {
   "Knack.be": {
     domain: "knack.be",
     allow_cookies: 1,
-    block_regex: /(\.knack\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
+    block_regex: /\.blueconic\.net\//
   },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
@@ -1022,7 +1022,7 @@ var defaultSites = {
   "Le Vif.be": {
     domain: "levif.be",
     allow_cookies: 1,
-    block_regex: /(\.levif\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
+    block_regex: /\.blueconic\.net\//
   },
   "Lee Enterprises Group": {
     domain: "###_usa_lee_ent",
@@ -1422,7 +1422,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
-  "Quora": {
+  "Quora (not plus)": {
     domain: "quora.com",
     allow_cookies: 1,
     useragent: "googlebot"

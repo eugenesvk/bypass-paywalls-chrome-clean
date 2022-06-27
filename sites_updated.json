@@ -1,17 +1,20 @@
 {
   "Artforum": {
-    "domain": "artforum.com"
+    "domain": "artforum.com",
+    "new_site": 1
   },
   "BQ Prime": {
     "domain": "bqprime.com",
     "allow_cookies": 1,
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "amp_unhide": 1
+    "amp_unhide": 1,
+    "new_site": 1
   },
   "Initium Media": {
     "domain": "theinitium.com",
     "allow_cookies": 1,
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "new_site": 1
   },
   "L'Avenir": {
     "domain": "lavenir.net",
@@ -25,11 +28,13 @@
           }
         ]
       }
-    ]
+    ],
+    "new_site": 1
   },
   "The Banker": {
     "allow_cookies": 1,
     "domain": "thebanker.com",
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "new_site": 1
   }
 }

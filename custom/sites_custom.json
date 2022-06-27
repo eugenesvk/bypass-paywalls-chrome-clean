@@ -136,6 +136,9 @@
     "allow_cookies": 1,
     "domain": "supchina.com"
   },
+  "Swarajyamag.com": {
+    "domain": "swarajyamag.com"
+  },
   "The-japan-news.com": {
     "domain": "the-japan-news.com"
   },
