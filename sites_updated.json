@@ -20,6 +20,25 @@
       }
     ]
   },
+  "Groupe Sud Ouest": {
+    "domain": "###_fr_groupe_sud_ouest",
+    "group": [
+      "sudouest.fr",
+      "charentelibre.fr",
+      "larepubliquedespyrenees.fr"
+    ],
+    "allow_cookies": 1,
+    "cs_code": [{
+        "cond": "div.article-body-wrapper.visible-not-premium",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "div.visible-premium",
+            "rm_class": "visible-premium"
+          }
+        ]
+      }
+    ]
+  },
   "Initium Media": {
     "domain": "theinitium.com",
     "allow_cookies": 1,

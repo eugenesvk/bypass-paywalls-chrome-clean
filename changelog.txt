@@ -5,6 +5,7 @@ Post-release
 Add BQ Prime (former Bloomberg Quint)
 Remove Deutsche Wirtschafts Nachrichten (fix obsolete)
 Fix Financial Times (cookie-banner)
+Fix Groupe SudOuest.fr
 Fix Knack.be & LeVif.be
 Fix Times of India (no amp)
 
@@ -203,7 +204,7 @@ Update block general paywall script (Pigeon/WordPress)
 Add Condé Nast magazines & Vogue Business
 Add Diario Correo (Grupo El Comercio)
 Add Eastwest (it/en)
-Add Groupe Sud Ouest (France)
+Add Groupe SudOuest.fr
 Fix Australian Community Media (images)
 Fix Lequipe.fr & LesEchos.fr (refresh)
 Fix New York Magazine sites (cookies)
@@ -743,7 +744,7 @@ Fix Madsack Mediengruppe (amp)
 Fix Medium/Towards Data Science (login)
 Fix Medium custom domains (login & in options)
 Fix Stratfor (style; not menu)
-Fix Sud Ouest (decode text)
+Fix SudOuest.fr (decode text)
 Update custom sites (set referer)
 
 * v2.0.6.0 (2021-01-31)
@@ -780,7 +781,7 @@ Add Il Secolo XIX (Italy)
 Add L'Usine Nouvelle (France)
 Add La Nuova Sardegna (Italy)
 Add Schweriner Volkszeitung (Germany)
-Add Sud Ouest (France)
+Add SudOuest.fr
 Fix Discover Magazine
 Fix Faz.net (Zeitung subdomain)
 Fix Funke Medien (Germany)

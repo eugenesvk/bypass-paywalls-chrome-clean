@@ -1526,19 +1526,18 @@ else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenee
   let url = window.location.href;
   let paywall = document.querySelector('.article-premium-footer');
   if (paywall) {
-    let premium = document.querySelector('meta[name="gsoi:premium-content"]');
-    if (premium) {
-      if (premium.content) {
-        let url_premium = window.location.origin + premium.content;
-        replaceDomElementExt(url_premium, false, true, 'div.full-content');
-      }
-    }
-    removeDOMElement(paywall);
+    let visible_not_premium = document.querySelector('div.article-body-wrapper.visible-not-premium');
+    removeDOMElement(paywall, visible_not_premium);
+    let visible_premium = document.querySelectorAll('div.visible-premium');
+    for (let elem of visible_premium)
+      elem.classList.remove('visible-premium');
   }
   window.setTimeout(function () {
     let footer_premium = document.querySelector('.footer-premium');
     removeDOMElement(footer_premium);
   }, 500);
+  let ads = document.querySelectorAll('div.pub, div.ph-easy-subscription');
+  removeDOMElement(...ads);
 }
 
 else
