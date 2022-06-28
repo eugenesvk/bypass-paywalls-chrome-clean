@@ -491,15 +491,6 @@ else if (matchDomain(de_funke_media_domains) || document.querySelector('a[href="
     sessionStorage.setItem('deobfuscate', 'true');
 }
 
-else if (matchDomain('deutsche-wirtschafts-nachrichten.de')) {
-  window.setTimeout(function () {
-    let hardpay = document.querySelector('.hardpay');
-    if (hardpay) {
-      window.location.reload(true);
-    }
-  }, 500);
-}
-
 else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
     let paywall_z = document.querySelector('.c-red-carpet');

@@ -327,10 +327,6 @@ var defaultSites = {
     domain: "demorgen.be",
     group_rule: "###_gr_nl_pg_domains"
   },
-  "Deutsche Wirtschafts Nachrichten": {
-    domain: "deutsche-wirtschafts-nachrichten.de",
-    useragent: "googlebot"
-  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
