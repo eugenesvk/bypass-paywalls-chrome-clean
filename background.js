@@ -645,7 +645,6 @@ var block_js = [
   "*://*.blueconic.net/*",
   "*://*.cxense.com/*",
   "*://*.evolok.net/*",
-  "*://*.googletagmanager.com/*",
   "*://*.newsmemory.com/?meter*",
   "*://*.onecount.net/*",
   "*://*.piano.io/*",
@@ -680,7 +679,7 @@ function disableJavascriptOnListedSites() {
              || (enabledSites.includes('###_wp_pico') && details.url.includes('/wp-content/plugins/pico/includes/js/read-more.js'))
              || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
              || (enabledSites.includes('zephr.com') && details.url.includes('/zephr/features')))))
-       || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'cambridge.org', 'japantimes.co.jp', 'video.lastampa.it', 'video.repubblica.it']), header_referer)) {
+       || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'cambridge.org', 'japantimes.co.jp']), header_referer)) {
       return;
     }
     return {

@@ -2012,9 +2012,6 @@ var defaultSites = {
   "Evolok WordPress (opt-in to custom sites)": {
     domain: "###_wp_evolok"
   },
-  "GoogleTagManager": {
-    domain: "googletagmanager.com"
-  },
   "MatherAnalytics": {
     domain: "matheranalytics.com"
   },
