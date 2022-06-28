@@ -3,6 +3,11 @@
     "domain": "artforum.com",
     "new_site": 1
   },
+  "Automobilwoche": {
+    "domain": "automobilwoche.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_.+\\.js"
+  },
   "BQ Prime": {
     "domain": "bqprime.com",
     "allow_cookies": 1,

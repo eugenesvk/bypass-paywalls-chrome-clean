@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add BQ Prime (former Bloomberg Quint)
 Remove Deutsche Wirtschafts Nachrichten (fix obsolete)
+Fix Automobilwoche
 Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Knack.be & LeVif.be

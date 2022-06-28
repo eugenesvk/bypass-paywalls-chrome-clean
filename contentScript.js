@@ -446,6 +446,16 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   }
 }
 
+else if (matchDomain('automobilwoche.de')) {
+  let lazy_images = document.querySelectorAll('img.lazy[data-src]');
+  for (let lazy_image of lazy_images) {
+    lazy_image.src = lazy_image.getAttribute('data-src');
+    lazy_image.removeAttribute('class');
+  }
+  let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
+  removeDOMElement(...lazy_sources);
+}
+
 else if (matchDomain('berliner-zeitung.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('.paywall-dialog-box');

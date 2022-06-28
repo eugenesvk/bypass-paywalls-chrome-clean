@@ -166,7 +166,7 @@ var defaultSites = {
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,
-    block_regex: /\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
+    block_regex: /\.automobilwoche\.de\/s3fs-public\/js\/js_.+\.js/
   },
   "Badische Neueste Nachrichten": {
     allow_cookies: 1,
