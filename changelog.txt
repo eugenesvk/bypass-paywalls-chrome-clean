@@ -10,6 +10,7 @@ Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Iltalehti.fi (videos)
 Fix Knack.be & LeVif.be
+Fix The Athletic (single domain)
 Fix Times of India (no amp)
 Remove block general paywall script (GoogleTagManager)
 

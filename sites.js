@@ -1595,8 +1595,7 @@ var defaultSites = {
   "The Athletic": {
     domain: "###_usa_theathletic",
     group: [
-      "theathletic.com",
-      "theathletic.co.uk"
+      "theathletic.com"
     ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
@@ -2151,7 +2150,6 @@ var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_
 var medium_custom_domains = grouped_sites['###_medium_custom'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
-var usa_theathletic_domains = grouped_sites['###_usa_theathletic'];
 
 // sites with no fix (background)
 var nl_ad_region_domains = ['ad.nl', 'bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];

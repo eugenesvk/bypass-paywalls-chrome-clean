@@ -2133,7 +2133,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['theathletic.com'])) {//united kingdom/ireland
+} else if (window.location.hostname.match(/\.(ie|uk)$/)) {//united kingdom/ireland
 
 if (matchDomain('independent.co.uk')) {
   let url = window.location.href;
@@ -2203,37 +2203,6 @@ else if (matchDomain('telegraph.co.uk')) {
 else if (matchDomain('the-tls.co.uk')) {
   let paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
   removeDOMElement(paywall);
-}
-
-else if (matchDomain(['theathletic.com', 'theathletic.co.uk'])) {
-  if (!window.location.search.match(/(\?|&)amp/)) {
-    let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall.length && amphtml) {
-      removeDOMElement(...paywall);
-      window.setTimeout(function () {
-        window.location.href = amphtml.href;
-      }, 500);
-    }
-  } else {
-    amp_unhide_subscr_section();
-    let subscr_actions = document.querySelectorAll('[subscriptions-actions]');
-    removeDOMElement(...subscr_actions);
-    let layout_fail = document.querySelectorAll('.col-sm-12');
-    for (let elem of layout_fail) {
-      elem.classList.remove('col-sm-12');
-      elem.style = 'padding: 0px 15px;';
-    }
-    let podcast = document.querySelector('div[id^="podcast-clip-"]');
-    if (podcast) {
-      let podcast_src = podcast.innerHTML.replace(/<amp-/g, '<').replace(/<\/amp-/g, '</');
-      let parser = new DOMParser();
-      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(podcast_src, {ADD_TAGS: ['iframe'], ADD_ATTR: ['layout', 'sandbox']}) + '</div>', 'text/html');
-      let podcast_new = doc.querySelector('div');
-      if (podcast_new)
-        podcast.parentNode.replaceChild(podcast_new, podcast);
-    }
-  }
 }
 
 else if (matchDomain('thetimes.co.uk')) {
@@ -3550,6 +3519,37 @@ else if (matchDomain('techinasia.com')) {
 else if (matchDomain('the-american-interest.com')) {
   let counter = document.getElementById('article-counter');
   removeDOMElement(counter);
+}
+
+else if (matchDomain('theathletic.com')) {
+  if (!window.location.search.match(/(\?|&)amp/)) {
+    let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall.length && amphtml) {
+      removeDOMElement(...paywall);
+      window.setTimeout(function () {
+        window.location.href = amphtml.href;
+      }, 500);
+    }
+  } else {
+    amp_unhide_subscr_section();
+    let subscr_actions = document.querySelectorAll('[subscriptions-actions]');
+    removeDOMElement(...subscr_actions);
+    let layout_fail = document.querySelectorAll('.col-sm-12');
+    for (let elem of layout_fail) {
+      elem.classList.remove('col-sm-12');
+      elem.style = 'padding: 0px 15px;';
+    }
+    let podcast = document.querySelector('div[id^="podcast-clip-"]');
+    if (podcast) {
+      let podcast_src = podcast.innerHTML.replace(/<amp-/g, '<').replace(/<\/amp-/g, '</');
+      let parser = new DOMParser();
+      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(podcast_src, {ADD_TAGS: ['iframe'], ADD_ATTR: ['layout', 'sandbox']}) + '</div>', 'text/html');
+      let podcast_new = doc.querySelector('div');
+      if (podcast_new)
+        podcast.parentNode.replaceChild(podcast_new, podcast);
+    }
+  }
 }
 
 else if (matchDomain('theatlantic.com')) {

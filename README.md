@@ -355,7 +355,6 @@ Grouped in options:\
 [London Review of Books](https://www.lrb.co.uk) -
 [New Left Review](https://newleftreview.org) -
 [Prospect Magazine](https://www.prospectmagazine.co.uk) -
-[The Athletic UK](https://theathletic.co.uk) -
 [The Economist](https://www.economist.com) -
 [The Independent](https://www.independent.co.uk) -
 [The Irish Times](https://www.irishtimes.com) -
