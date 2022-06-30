@@ -660,6 +660,17 @@ else if (matchDomain('rheinpfalz.de')) {
   }
 }
 
+else if (matchDomain('spiegel.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div[data-area="paywall"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div[data-area="body"]');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+}
+
 else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de'])) {
   let url = window.location.href;
   if (url.includes('/amp/')) {

@@ -332,6 +332,10 @@ var defaultSites = {
     domain: "demorgen.be",
     group_rule: "###_gr_nl_pg_domains"
   },
+  "Der Spiegel": {
+    domain: "spiegel.de",
+    allow_cookies: 1
+  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
