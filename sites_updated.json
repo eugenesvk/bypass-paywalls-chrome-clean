@@ -1,4 +1,26 @@
 {
+  "Alma Talent (Finland)": {
+    "domain": "###_fi_alma_talent",
+    "group": [
+      "arvopaperi.fi",
+      "iltalehti.fi",
+      "kauppalehti.fi",
+      "marmai.fi",
+      "mediuutiset.fi",
+      "mikrobitti.fi",
+      "talouselama.fi",
+      "tekniikkatalous.fi",
+      "tivi.fi",
+      "uusisuomi.fi"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "exception": [{
+        "domain": "iltalehti.fi",
+        "allow_cookies": 1
+      }
+    ]
+  },
   "Artforum": {
     "domain": "artforum.com",
     "new_site": 1

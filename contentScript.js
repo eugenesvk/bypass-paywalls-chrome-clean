@@ -1328,7 +1328,8 @@ else if (matchDomain('ledevoir.com')) {
 else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
   let poool_banner = document.querySelector('#poool-container');
   let forbidden = document.querySelector('.forbidden');
-  removeDOMElement(poool_banner, forbidden);
+  let ads = document.querySelectorAll('div[class^="lmn-"]');
+  removeDOMElement(poool_banner, forbidden, ...ads);
   let bottom_hide = document.querySelector('.cnt[data-poool-mode="hide"]');
   if (bottom_hide) {
     bottom_hide.removeAttribute('data-poool-mode');

@@ -53,7 +53,12 @@ var defaultSites = {
       "uusisuomi.fi"
     ],
     allow_cookies: 1,
-    useragent: "googlebot"
+    useragent: "googlebot",
+    exception: [{
+        domain: "iltalehti.fi",
+        allow_cookies: 1
+      }
+    ]
   },
   "Alternatives Economiques": {
     domain: "alternatives-economiques.fr",
