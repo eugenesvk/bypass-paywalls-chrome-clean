@@ -1155,11 +1155,16 @@ else if (matchDomain(es_epiberica_domains)) {
 }
 
 else if (matchDomain('observador.pt')) {
-  let paywall = document.querySelector('.premium-article');
-  if (paywall)
-    paywall.classList.remove('premium-article');
-  let amp_ads = document.querySelectorAll('amp-ad');
-  removeDOMElement(... amp_ads)
+  if (!window.location.pathname.endsWith('/amp/')) {
+    let paywall = document.querySelector('.premium-article');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      paywall.classList.remove('premium-article');
+      window.location.href = amphtml.href;
+    }
+  } else {
+    amp_unhide_subscr_section('amp-ad, amp-consent, section > .modal');
+  }
 }
 
 else if (matchDomain('politicaexterior.com')) {

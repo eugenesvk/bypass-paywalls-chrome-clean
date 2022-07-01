@@ -10,6 +10,7 @@ Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Iltalehti.fi (videos)
 Fix Knack.be & LeVif.be
+Fix Observador.pt
 Fix The Athletic (single domain)
 Fix Times of India (no amp)
 Remove block general paywall script (GoogleTagManager)
@@ -769,7 +770,7 @@ Add Correio da Manha (Portugal)
 Add El Confidencial (Spain)
 Add elDiario.es (Spain)
 Add La Nueva Espana (Spain)
-Add Observador (Portugal)
+Add Observador.pt
 Add Prospect Magazine (United Kingdom)
 Add RuhrNachrichten.de
 Add The Point Magazine
