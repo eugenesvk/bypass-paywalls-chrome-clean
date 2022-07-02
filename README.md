@@ -530,6 +530,7 @@ Grouped in options:\
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Manifesto](https://ilmanifesto.it) -
 [Il Secolo XIX](https://www.ilsecoloxix.it) -
+[Il Tirreno](https://www.iltirreno.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
 [Italian.tech](https://www.italian.tech) -

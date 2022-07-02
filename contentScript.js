@@ -17,7 +17,7 @@ var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', '
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
-var it_repubblica_domains = ['gelocal.it', 'ilsecoloxix.it', 'italian.tech', 'lanuovasardegna.it', 'lastampa.it', 'repubblica.it'];
+var it_repubblica_domains = ['gelocal.it', 'ilsecoloxix.it', 'italian.tech', 'lastampa.it', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
@@ -1671,6 +1671,11 @@ else if (matchDomain('ilmanifesto.it')) {
       window.location.reload(true);
     }, 1000);
   }
+}
+
+else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it'])) {
+  let banner = document.querySelector('div.MuiSnackbar-root');
+  removeDOMElement(banner);
 }
 
 else if (matchDomain(it_ilmessaggero_domains)) {

@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add BQ Prime (former Bloomberg Quint)
+Add ilTirreno.it
 Add Spiegel.de (link to archive.is)
 Remove Deutsche Wirtschafts Nachrichten (fix obsolete)
 Fix Automobilwoche
@@ -10,10 +11,11 @@ Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Iltalehti.fi (videos)
 Fix Knack.be & LeVif.be
+Fix La Nuova Sardegna
 Fix Observador.pt
 Fix The Athletic (single domain)
 Fix Times of India (no amp)
-Remove block general paywall script (GoogleTagManager)
+Update block general paywall script (remove GoogleTagManager)
 
 * v2.7.3.0 (2022-06-26)
 Add Artforum

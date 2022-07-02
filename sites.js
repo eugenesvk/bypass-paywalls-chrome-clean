@@ -811,6 +811,9 @@ var defaultSites = {
     domain: "ilsecoloxix.it",
     group_rule: "###_gr_it_repubblica_domains"
   },
+  "Il Tirreno": {
+    domain: "iltirreno.it"
+  },
   "Inc.com": {
     domain: "inc.com",
     block_regex: /\.tinypass\.com\//
@@ -947,8 +950,7 @@ var defaultSites = {
     block_regex: /(\.weborama\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "La Nuova Sardegna": {
-    domain: "lanuovasardegna.it",
-    group_rule: "###_gr_it_repubblica_domains"
+    domain: "lanuovasardegna.it"
   },
   "La Repubblica": {
     domain: "repubblica.it",
@@ -1981,7 +1983,7 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "###_gr_it_repubblica_domains": {
-    group_rule_domains: ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lanuovasardegna.it", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
+    group_rule_domains: ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
     allow_cookies: 1,
     block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/,
     useragent: "googlebot"
