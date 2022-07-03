@@ -92,6 +92,7 @@
         "*://*.barrons.com/*",
         "*://*.belfasttelegraph.co.uk/*",
         "*://*.bendigoadvertiser.com.au/*",
+        "*://*.beobachter.ch/*",
         "*://*.berliner-zeitung.de/*",
         "*://*.berlingske.dk/*",
         "*://*.betamtb.com/*",
@@ -687,5 +688,5 @@
         "*://*.wsj.net/*",
         "*://webcache.googleusercontent.com/*"
     ],
-    "version": "2.7.3.7"
+    "version": "2.7.3.8"
 }

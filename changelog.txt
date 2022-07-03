@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Beobachter.ch
 Add BQ Prime (former Bloomberg Quint)
 Add ilTirreno.it
 Add Spiegel.de (link to archive.is)

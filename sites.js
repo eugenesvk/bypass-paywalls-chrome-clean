@@ -194,6 +194,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
   },
+  "Beobachter.ch": {
+    allow_cookies: 1,
+    domain: "beobachter.ch",
+    useragent: "googlebot"
+  },
   "Berliner Zeitung": {
     domain: "berliner-zeitung.de",
     allow_cookies: 1,

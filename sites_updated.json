@@ -30,6 +30,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_.+\\.js"
   },
+  "Beobachter.ch": {
+    "allow_cookies": 1,
+    "domain": "beobachter.ch",
+    "useragent": "googlebot"
+  },
   "BQ Prime": {
     "domain": "bqprime.com",
     "allow_cookies": 1,

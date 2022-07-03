@@ -10,11 +10,6 @@
     "domain": "bauernzeitung.ch",
     "useragent": "googlebot"
   },
-  "Beobachter.ch": {
-    "allow_cookies": 1,
-    "domain": "beobachter.ch",
-    "useragent": "googlebot"
-  },
   "Brainly.com": {
     "domain": "brainly.com"
   },
