@@ -3272,7 +3272,7 @@ else if (matchDomain('nzherald.co.nz')) {
       let par_html, par_dom;
       let parser = new DOMParser();
       for (let hidden_par of hidden_pars) {
-        let par_html = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px">' + DOMPurify.sanitize(hidden_par.innerHTML) + '</div>', 'text/html');
+        let par_html = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px; line-height: 1.6">' + DOMPurify.sanitize(hidden_par.innerHTML) + '</div>', 'text/html');
         let par_dom = par_html.querySelector('div');
         article_content.insertBefore(par_dom, hidden_par);
       }

@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.7.4.0 (2022-07-03)
 Add Beobachter.ch
 Add BQ Prime (former Bloomberg Quint)
 Add ilTirreno.it
