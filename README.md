@@ -102,7 +102,7 @@ _* free/cached articles only._
 [S&P Global](https://www.spglobal.com) -
 [Seeking Alpha](https://seekingalpha.com) -
 [Stock News](https://stocknews.com) -
-[The Business Journals](https://www.bizjournals.com) -
+[The Business Journals](https://www.bizjournals.com)* -
 [The Business of Fashion](https://www.businessoffashion.com) -
 [The Wall Street Journal](https://www.wsj.com) -
 [Vogue Business](https://www.voguebusiness.com)

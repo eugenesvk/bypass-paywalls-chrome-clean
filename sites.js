@@ -876,7 +876,7 @@ var defaultSites = {
   "Knack.be": {
     domain: "knack.be",
     allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//
+    block_regex: /(\.knack\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
   },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
@@ -1034,7 +1034,7 @@ var defaultSites = {
   "Le Vif.be": {
     domain: "levif.be",
     allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//
+    block_regex: /(\.levif\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
   },
   "Lee Enterprises Group": {
     domain: "###_usa_lee_ent",
@@ -1632,7 +1632,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.blueconic\.net\/|meter\.bostonglobe\.com\/js\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "The Business Journals": {
+  "The Business Journals (free articles only)": {
     domain: "bizjournals.com",
     block_regex: /(assets\.bizjournals\.com\/static\/js\/app\/cxense\.js|cdn\.cxense\.com\/)/
   },

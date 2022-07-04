@@ -77,6 +77,24 @@
     "useragent": "googlebot",
     "new_site": 1
   },
+  "Knack.be": {
+    "domain": "knack.be",
+    "allow_cookies": 1,
+    "block_regex": "(\\.knack\\.be\\/js\\/responsive\\/rmg(Modal|Paywall)\\.js|\\.blueconic\\.net\\/)",
+    "cs_code": [{
+        "cond": "div[id*=\"wall-modal\"]",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "div.article-body > p",
+            "rm_elem": 1
+          }, {
+            "cond": "div.article-body > style",
+            "rm_elem": 1
+          }
+        ]
+      }
+    ]
+  },
   "L'Avenir": {
     "domain": "lavenir.net",
     "allow_cookies": 1,
@@ -91,6 +109,24 @@
       }
     ],
     "new_site": 1
+  },
+  "Le Vif.be": {
+    "domain": "levif.be",
+    "allow_cookies": 1,
+    "block_regex": "(\\.levif\\.be\\/js\\/responsive\\/rmg(Modal|Paywall)\\.js|\\.blueconic\\.net\\/)",
+    "cs_code": [{
+        "cond": "div[id*=\"wall-modal\"]",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "div.article-body > p",
+            "rm_elem": 1
+          }, {
+            "cond": "div.article-body > style",
+            "rm_elem": 1
+          }
+        ]
+      }
+    ]
   },
   "The Banker": {
     "allow_cookies": 1,

@@ -82,13 +82,15 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
 var div_bpc_done = document.querySelector('div#bpc_done');
 if (!div_bpc_done) {
 
-ext_api.runtime.onMessage.addListener(
-  function(request, sender) {
-    if (request.msg === 'showExtSrc') {
-	  replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
-	}
-  }
-);
+if (ext_api.runtime) {
+  ext_api.runtime.onMessage.addListener(
+    function(request, sender) {
+      if (request.msg === 'showExtSrc') {
+	    replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
+	  }
+    }
+  )
+}
 
 // check for opt-in confirmation (from background.js)
 if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
@@ -1928,7 +1930,7 @@ else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be'])) {
 }
 
 else if (matchDomain(['knack.be', 'levif.be'])) {
-  let paywall = document.querySelector('#paywall-modal, #datawall-modal');
+  let paywall = document.querySelector('div[id*="wall-modal"]');
   if (paywall) {
     removeDOMElement(paywall);
     function knack_noscroll(node) {
@@ -1936,6 +1938,8 @@ else if (matchDomain(['knack.be', 'levif.be'])) {
       node.removeAttribute('class');
     }
     waitDOMAttribute('html', 'html', 'style', knack_noscroll, true);
+    let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
+    removeDOMElement(...intro);
   }
 }
 
