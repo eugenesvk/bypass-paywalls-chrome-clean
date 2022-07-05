@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Architectural Digest (Conde Nast)
 Fix Knack.be & LeVif.be (subdomains-text)
 
 * v2.7.4.0 (2022-07-03)
@@ -213,7 +214,7 @@ Fix Quotidiano.net sites
 Update block general paywall script (Pigeon/WordPress)
 
 * v2.5.6.0 (2022-02-13)
-Add Condé Nast magazines & Vogue Business
+Add Conde Nast magazines & Vogue Business
 Add Diario Correo (Grupo El Comercio)
 Add Eastwest (it/en)
 Add Groupe SudOuest.fr
@@ -724,7 +725,7 @@ Add Daily Nation (Kenya)
 Add Houston Chronicle (USA)
 Add Schleswig-Holsteinischer Zeitungsverlag (Germany)
 Add Sports Illustrated
-Fix Groupe La Depeche
+Fix Groupe LaDepeche.fr
 Fix La Croix (timing)
 Grouping Repubblica.it sites (rules only)
 Fix popup (update notification; GitLab CORS issue)
@@ -838,7 +839,7 @@ Add Berlingske (Denmark)
 Add EUobserver
 Add Funke Mediengruppe (Germany)
 Add Groupe EBRA (France)
-Add Groupe La Dépêche (France)
+Add Groupe LaDepeche.fr
 Add Madsack Mediengruppe (Germany)
 Fix Australian Financial Review (images)
 Fix Bloomberg (inline articles/adblocker)

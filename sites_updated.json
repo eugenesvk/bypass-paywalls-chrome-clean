@@ -21,6 +21,13 @@
       }
     ]
   },
+  "Architectural Digest": {
+    "domain": "architecturaldigest.com",
+    "remove_cookies_select_drop": ["pay_ent_smp", "pay_ent_usmp"],
+    "block_regex": "(journey\\.architecturaldigest\\.com\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "useragent": "googlebot",
+    "amp_unhide": 1
+  },
   "Artforum": {
     "domain": "artforum.com",
     "new_site": 1

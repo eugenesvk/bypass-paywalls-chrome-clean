@@ -273,9 +273,9 @@ var defaultSites = {
   },
   "Condé Nast magazines": {
     domain: "###_usa_conde_nast",
-    group: ["bonappetit.com", "gq.com", "newyorker.com", "vanityfair.com", "vogue.com", "wired.com"],
-    remove_cookies_select_drop: ["pay_ent_smp"],
-    block_regex: "(journey\\.{domain}\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    group: ["architecturaldigest.com", "bonappetit.com", "gq.com", "newyorker.com", "vanityfair.com", "vogue.com", "wired.com"],
+    remove_cookies_select_drop: ["pay_ent_smp", "pay_ent_usmp"],
+    block_regex: "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     useragent: "googlebot"
   },
   "Connaissance des Arts": {
