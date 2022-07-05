@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Architectural Digest (Conde Nast)
+Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
 
 * v2.7.4.0 (2022-07-03)

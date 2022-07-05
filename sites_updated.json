@@ -1,4 +1,18 @@
 {
+  "ABC.es": {
+    "domain": "abc.es",
+    "allow_cookies": 1,
+    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "useragent": "googlebot",
+    "amp_redirect": {
+      "paywall": "div.voc-paywall"
+    },
+    "cs_code": [{
+        "cond": "body#top",
+        "rm_attrib": "id"
+      }
+    ]
+  },
   "Alma Talent (Finland)": {
     "domain": "###_fi_alma_talent",
     "group": [

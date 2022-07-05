@@ -999,15 +999,21 @@ else
 } else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain('abc.es')) {
-  let paywall = document.querySelector('.cierre-suscripcion:not([style="display: none;"])');
+  let paywall = document.querySelector('div.voc-paywall');
   if (window.location.pathname.endsWith('_amp.html')) {
     amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '', 'amp-ad, amp-embed');
     removeDOMElement(paywall);
+    let body_top = document.querySelector('body#top');
+    if (body_top)
+      body_top.removeAttribute('id');
   } else {
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
+    } else {
+      let banners = document.querySelectorAll('div.ev-em-modal, span.mega-superior');
+      removeDOMElement(...banners);
     }
   }
 }
