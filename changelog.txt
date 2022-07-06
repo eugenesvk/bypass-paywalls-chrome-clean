@@ -5,6 +5,7 @@ Post-release
 Add Architectural Digest (Conde Nast)
 Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
+Fix WSJ (no Googlebot)
 
 * v2.7.4.0 (2022-07-03)
 Add Beobachter.ch

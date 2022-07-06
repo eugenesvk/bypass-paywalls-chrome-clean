@@ -3936,7 +3936,7 @@ else if (matchDomain('wsj.com')) {
       masthead_link.href = 'https://www.wsj.com';
     amp_unhide_subscr_section();
   } else {
-    let snippet = document.querySelector('.snippet-promotion');
+    let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
     let wsj_pro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
     if (snippet || wsj_pro) {
       removeDOMElement(snippet, wsj_pro);
