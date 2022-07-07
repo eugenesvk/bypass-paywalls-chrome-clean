@@ -3422,6 +3422,14 @@ else if (matchDomain('sloanreview.mit.edu')) {
 }
 
 else if (matchDomain('sofrep.com')) {
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div.fader');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  }
   let banners = document.querySelectorAll('#scrollerCTA, #botCta');
   removeDOMElement(...banners);
 }

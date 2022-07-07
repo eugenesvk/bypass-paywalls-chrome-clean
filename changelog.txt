@@ -6,6 +6,7 @@ Add Architectural Digest (Conde Nast)
 Add Handelszeitung.ch
 Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
+Fix SOFREP (plus)
 Fix WSJ (no Googlebot)
 
 * v2.7.4.0 (2022-07-03)

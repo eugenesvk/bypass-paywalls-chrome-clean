@@ -129,6 +129,13 @@
       }
     ]
   },
+  "SOFREP": {
+    "domain": "sofrep.com",
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": {
+      "paywall": "div.fader"
+    }
+  },
   "The Wall Street Journal": {
     "domain": "wsj.com",
     "allow_cookies": 1,
