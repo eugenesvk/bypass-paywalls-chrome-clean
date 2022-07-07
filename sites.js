@@ -728,6 +728,11 @@ var defaultSites = {
     block_regex: /haaretz\.co\.il\/htz\/js\/inter\.js/,
     useragent: "bingbot"
   },
+  "Handelszeitung.ch": {
+    allow_cookies: 1,
+    domain: "handelszeitung.ch",
+    useragent: "googlebot"
+  },
   "Harper's Magazine": {
     domain: "harpers.org"
   },

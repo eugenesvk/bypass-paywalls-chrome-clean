@@ -42,10 +42,6 @@
     "useragent": "googlebot",
     "amp_unhide": 1
   },
-  "Artforum": {
-    "domain": "artforum.com",
-    "new_site": 1
-  },
   "Automobilwoche": {
     "domain": "automobilwoche.de",
     "allow_cookies": 1,
@@ -92,11 +88,10 @@
       }
     ]
   },
-  "Initium Media": {
-    "domain": "theinitium.com",
+  "Handelszeitung.ch": {
     "allow_cookies": 1,
-    "useragent": "googlebot",
-    "new_site": 1
+    "domain": "handelszeitung.ch",
+    "useragent": "googlebot"
   },
   "Knack.be": {
     "domain": "knack.be",
@@ -116,21 +111,6 @@
       }
     ]
   },
-  "L'Avenir": {
-    "domain": "lavenir.net",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "div.is-preview",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "div.is-hidden",
-            "rm_class": "is-hidden"
-          }
-        ]
-      }
-    ],
-    "new_site": 1
-  },
   "Le Vif.be": {
     "domain": "levif.be",
     "allow_cookies": 1,
@@ -148,12 +128,6 @@
         ]
       }
     ]
-  },
-  "The Banker": {
-    "allow_cookies": 1,
-    "domain": "thebanker.com",
-    "useragent": "googlebot",
-    "new_site": 1
   },
   "The Wall Street Journal": {
     "domain": "wsj.com",

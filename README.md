@@ -638,6 +638,7 @@ Grouped in options:\
 
 ##### Switzerland
 [Beobachter](https://www.beobachter.ch) -
+[Handelszeitung](https://www.handelszeitung.ch) -
 [Neue Zürcher Zeitung (+ regional/opt-in to custom sites)](https://www.nzz.ch) -
 [The Market](https://themarket.ch)
 

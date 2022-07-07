@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Architectural Digest (Conde Nast)
+Add Handelszeitung.ch
 Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
 Fix WSJ (no Googlebot)
