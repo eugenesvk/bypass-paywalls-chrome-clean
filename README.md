@@ -719,6 +719,7 @@ Grouped in options:\
 [MediaNama](https://www.medianama.com) -
 [Mid-Day](https://www.mid-day.com) -
 [Outlook](https://www.outlookindia.com) -
+[Outlook Business](https://www.outlookbusiness.com) -
 [The Economic Times (ET Prime)](https://economictimes.indiatimes.com) -
 [The Financial Express](https://www.financialexpress.com) -
 [The Hindu](https://www.thehindu.com) -

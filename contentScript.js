@@ -3295,6 +3295,28 @@ else if (matchDomain('nzherald.co.nz')) {
   removeDOMElement(premium_toaster);
 }
 
+else if (matchDomain('outlookbusiness.com')) {
+  let paywall = document.querySelector('div#csc-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script && dompurify_loaded) {
+      let json = JSON.parse(json_script.innerText);
+      if (json && json.props.initialState.dashboard.ARTICLE_POST_DETAIL_API.data.article_data.description) {
+        let article_new = json.props.initialState.dashboard.ARTICLE_POST_DETAIL_API.data.article_data.description;
+        let article = document.querySelector('div.story-content');
+        if (article) {
+          article.innerHTML = '';
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          article.appendChild(content_new);
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('outlookindia.com')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall) {
