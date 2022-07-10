@@ -10,6 +10,7 @@ Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
 Fix SOFREP (plus)
 Fix WSJ (no Googlebot)
+Update block general paywall script (update Evolok WordPress)
 
 * v2.7.4.0 (2022-07-03)
 Add Beobachter.ch
