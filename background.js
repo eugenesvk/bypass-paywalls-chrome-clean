@@ -25,6 +25,7 @@ var restrictions = {
   'foreignaffairs.com': /\.foreignaffairs\.com\/((articles|fa-caching|interviews|reviews|sites)\/)/,
   'globo.com': /^((?!\/valor\.globo\.com\/).)*$/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
+  'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,

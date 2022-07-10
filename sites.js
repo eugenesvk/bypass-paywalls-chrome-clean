@@ -891,6 +891,11 @@ var defaultSites = {
     domain: "rundschau-online.de",
     allow_cookies: 1
   },
+  "Krant van West-Vlaanderen": {
+    domain: "kw.be",
+    allow_cookies: 1,
+    block_regex: /\.blueconic\.net\//
+  },
   "Krautreporter.de": {
     domain: "krautreporter.de"
   },

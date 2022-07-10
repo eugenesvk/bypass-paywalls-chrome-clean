@@ -1935,7 +1935,7 @@ else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be'])) {
   }, 500); // Delay (in milliseconds)
 }
 
-else if (matchDomain(['knack.be', 'levif.be'])) {
+else if (matchDomain(['knack.be', 'kw.be', 'levif.be'])) {
   let paywall = document.querySelector('div[id*="wall-modal"]');
   if (paywall) {
     removeDOMElement(paywall);

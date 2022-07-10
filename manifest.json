@@ -319,6 +319,7 @@
     "*://*.krautreporter.de/*",
     "*://*.ksta.de/*",
     "*://*.kurier.at/*",
+    "*://*.kw.be/*",
     "*://*.la-croix.com/*",
     "*://*.labusinessjournal.com/*",
     "*://*.ladepeche.fr/*",
@@ -691,5 +692,5 @@
     "*://*.wsj.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.4.6"
+  "version": "2.7.4.7"
 }

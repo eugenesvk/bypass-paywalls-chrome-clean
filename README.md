@@ -561,6 +561,7 @@ Grouped in options:\
 [Groene Amsterdammer](https://www.groene.nl) -
 [Humo](https://www.humo.be) -
 [Knack](https://www.knack.be) -
+[Krant van West-Vlaanderen](https://kw.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -

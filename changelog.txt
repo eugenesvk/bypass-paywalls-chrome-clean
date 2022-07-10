@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Architectural Digest (Conde Nast)
 Add Handelszeitung.ch
+Add Kw.be
 Add Outlook Business (India)
 Fix ABC.es (mobile)
 Fix Knack.be & LeVif.be (subdomains-text)
