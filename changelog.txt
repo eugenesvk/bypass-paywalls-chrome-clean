@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix ilTirreno.it & LaNuovaSardegna.it
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 
 * v2.7.5.0 (2022-07-10)
@@ -26,7 +27,7 @@ Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Iltalehti.fi (videos)
 Fix Knack.be & LeVif.be
-Fix La Nuova Sardegna
+Fix LaNuovaSardegna.it
 Fix Observador.pt
 Fix The Athletic (single domain)
 Fix Times of India (no amp)
@@ -802,7 +803,7 @@ Update excluded sites (no general block paywall scripts)
 Add Cicero.de
 Add Il Secolo XIX (Italy)
 Add L'Usine Nouvelle (France)
-Add La Nuova Sardegna (Italy)
+Add LaNuovaSardegna.it
 Add Schweriner Volkszeitung (Germany)
 Add SudOuest.fr
 Fix Discover Magazine

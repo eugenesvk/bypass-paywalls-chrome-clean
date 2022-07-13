@@ -1682,8 +1682,28 @@ else if (matchDomain('ilmanifesto.it')) {
 }
 
 else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it'])) {
-  let banner = document.querySelector('div.MuiSnackbar-root');
-  removeDOMElement(banner);
+  if (window.location.pathname.includes('/news/')) {
+    let pars = document.querySelectorAll('div.MuiGrid-root > div > p:not([class])');
+    if (pars.length === 1) {
+      let article = pars[0].parentNode;
+      removeDOMElement(pars[0]);
+      let json_script = document.querySelector('script#__NEXT_DATA__');
+      if (json_script && dompurify_loaded) {
+        let json = JSON.parse(json_script.innerText);
+        if (json && json.props.pageProps.article.content) {
+          let article_new = json.props.pageProps.article.content;
+          if (article) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            article.appendChild(content_new);
+          }
+        }
+      }
+    }
+    let banner = document.querySelector('div.MuiSnackbar-root');
+    removeDOMElement(banner);
+  }
 }
 
 else if (matchDomain(it_ilmessaggero_domains)) {
