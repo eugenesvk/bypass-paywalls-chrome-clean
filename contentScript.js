@@ -607,7 +607,7 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
     removeDOMElement(paywall);
     let span_hidden = document.querySelector('span.hide-paid-content');
     if (span_hidden)
-      span_hidden.classList.remove('hide-paid-content');
+      span_hidden.removeAttribute('class');
   }
 }
 

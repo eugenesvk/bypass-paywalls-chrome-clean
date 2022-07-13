@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 
 * v2.7.5.0 (2022-07-10)
 Add Architectural Digest (Conde Nast)

@@ -13,80 +13,12 @@
       }
     ]
   },
-  "Alma Talent (Finland)": {
-    "domain": "###_fi_alma_talent",
-    "group": [
-      "arvopaperi.fi",
-      "iltalehti.fi",
-      "kauppalehti.fi",
-      "marmai.fi",
-      "mediuutiset.fi",
-      "mikrobitti.fi",
-      "talouselama.fi",
-      "tekniikkatalous.fi",
-      "tivi.fi",
-      "uusisuomi.fi"
-    ],
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "exception": [{
-        "domain": "iltalehti.fi",
-        "allow_cookies": 1
-      }
-    ]
-  },
   "Architectural Digest": {
     "domain": "architecturaldigest.com",
     "remove_cookies_select_drop": ["pay_ent_smp", "pay_ent_usmp"],
     "block_regex": "(journey\\.architecturaldigest\\.com\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot",
     "amp_unhide": 1
-  },
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_.+\\.js"
-  },
-  "Beobachter.ch": {
-    "allow_cookies": 1,
-    "domain": "beobachter.ch",
-    "useragent": "googlebot"
-  },
-  "BQ Prime": {
-    "domain": "bqprime.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "amp_unhide": 1,
-    "new_site": 1
-  },
-  "Financial Times (not Chinese)": {
-    "domain": "ft.com",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
-    "useragent": "googlebot",
-    "cs_code": [{
-        "cond": ".o-cookie-message",
-        "rm_elem": 1
-      }
-    ]
-  },
-  "Groupe Sud Ouest": {
-    "domain": "###_fr_groupe_sud_ouest",
-    "group": [
-      "sudouest.fr",
-      "charentelibre.fr",
-      "larepubliquedespyrenees.fr"
-    ],
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "div.article-body-wrapper.visible-not-premium",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "div.visible-premium",
-            "rm_class": "visible-premium"
-          }
-        ]
-      }
-    ]
   },
   "Handelszeitung.ch": {
     "allow_cookies": 1,

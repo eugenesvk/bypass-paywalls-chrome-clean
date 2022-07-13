@@ -5,6 +5,11 @@
     "domain": "abqjournal.com",
     "useragent": "googlebot"
   },
+  "Airmail.news": {
+    "allow_cookies": 1,
+    "domain": "airmail.news",
+    "useragent": "googlebot"
+  },
   "Bauernzeitung.ch": {
     "allow_cookies": 1,
     "domain": "bauernzeitung.ch",
@@ -102,11 +107,6 @@
   "Pressandjournal.co.uk": {
     "allow_cookies": 1,
     "domain": "pressandjournal.co.uk",
-    "useragent": "googlebot"
-  },
-  "Pv-digest.de": {
-    "allow_cookies": 1,
-    "domain": "pv-digest.de",
     "useragent": "googlebot"
   },
   "Reviewjournal.com": {
