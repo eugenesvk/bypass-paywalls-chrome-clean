@@ -68,6 +68,11 @@
       "paywall": "div.fader"
     }
   },
+  "The Japan Times": {
+    "domain": "japantimes.co.jp",
+    "block_regex": "cdn\\.cxense\\.com\\/",
+    "remove_cookies_select_drop": ["xbc"]
+  },
   "The Wall Street Journal": {
     "domain": "wsj.com",
     "allow_cookies": 1,

@@ -306,6 +306,7 @@
     "*://*.irishtimes.com/*",
     "*://*.italian.tech/*",
     "*://*.italiaoggi.it/*",
+    "*://*.japantimes.co.jp/*",
     "*://*.journaldunet.com/*",
     "*://*.journalnow.com/*",
     "*://*.jpost.com/*",
@@ -692,5 +693,5 @@
     "*://*.wsj.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.5.1"
+  "version": "2.7.5.2"
 }
