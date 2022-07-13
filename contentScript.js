@@ -3270,14 +3270,15 @@ else if (matchDomain('nytimes.com')) {
     let no_scroll = document.querySelectorAll('.nytc---modal-window---noScroll');
     for (let elem of no_scroll)
       elem.classList.remove('nytc---modal-window---noScroll');
-    let login = document.querySelector('.nytc---modal-window---isShown');
+    let login = document.querySelector('div[class*="modal_modal-window-container"]:not([style="display:none;"])');
     if (login) {
       let close_button = login.querySelector('span[aria-label="close"]');
       if (!close_button)
-        login.classList.remove('nytc---modal-window---isShown');
+        login.style = 'display:none;';
     }
   } else {
     waitDOMElement('div[data-testid="inline-message"]', 'DIV', removeDOMElement, false);
+    waitDOMElement('div[id^="ad-"]', 'DIV', removeDOMElement, false);
     waitDOMElement('div.expanded-dock', 'DIV', removeDOMElement, false);
     csDoneOnce = true;
   }
