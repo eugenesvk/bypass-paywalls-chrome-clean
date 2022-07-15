@@ -6,6 +6,7 @@ Add The Japan Times
 Fix ilTirreno.it & LaNuovaSardegna.it
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix NYTimes (Cooking)
+Update popup (archive-links)
 
 * v2.7.5.0 (2022-07-10)
 Add Architectural Digest (Conde Nast)

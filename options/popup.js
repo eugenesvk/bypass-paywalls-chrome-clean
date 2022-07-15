@@ -57,6 +57,36 @@ document.getElementById("clear_cookies").addEventListener('click', function () {
   });
 });
 
+function showArchiveLinks() {
+  ext_api.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function (tabs) {
+    if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+      let url = tabs[0].url.split('?')[0];
+      let archive_array = {
+        'Archive.today': 'https://archive.today?run=1&url=' + url,
+        'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url
+      };
+      let archive_id = document.querySelector('span#archive');
+      if (archive_id) {
+        archive_id.appendChild(document.createTextNode('Open tab in:'));
+        for (let key in archive_array) {
+          let elem_div = document.createElement('div');
+          let elem = document.createElement('a');
+          elem.innerText = key;
+          elem.href = archive_array[key];
+          elem.style = 'color:black;';
+          elem.target = '_blank';
+          elem_div.appendChild(elem);
+          archive_id.appendChild(elem_div);
+        }
+      }
+    }
+  });
+}
+showArchiveLinks();
+
 function closeButton() {
   window.close();
 }
