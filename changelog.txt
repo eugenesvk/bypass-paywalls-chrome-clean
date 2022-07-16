@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add The Japan Times
+Add The Ken (not Southeast Asia)
 Fix ilTirreno.it & LaNuovaSardegna.it
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix Nrc.nl

@@ -65,6 +65,11 @@
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
   },
+  "Kaleva.fi": {
+    "allow_cookies": 1,
+    "domain": "kaleva.fi",
+    "useragent": "googlebot"
+  },
   "Lindipendente.online": {
     "allow_cookies": 1,
     "domain": "lindipendente.online",

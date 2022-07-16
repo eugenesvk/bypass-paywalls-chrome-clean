@@ -548,6 +548,7 @@
     "*://*.telerama.fr/*",
     "*://*.tennessean.com/*",
     "*://*.the-american-interest.com/*",
+    "*://*.the-ken.com/*",
     "*://*.the-tls.co.uk/*",
     "*://*.theadvocate.com.au/*",
     "*://*.theadvocate.com/*",
@@ -693,5 +694,5 @@
     "*://*.wsj.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.5.4"
+  "version": "2.7.5.5"
 }
