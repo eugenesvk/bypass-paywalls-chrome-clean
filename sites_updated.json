@@ -61,6 +61,11 @@
       }
     ]
   },
+  "NRC Handelsblad": {
+    "domain": "nrc.nl",
+    "remove_cookies_select_drop": ["counter"],
+    "block_regex": "\\.nrc\\.nl\\/paywall-api\\/api\\/zephr"
+  },
   "SOFREP": {
     "domain": "sofrep.com",
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",

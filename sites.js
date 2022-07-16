@@ -1320,7 +1320,8 @@ var defaultSites = {
   },
   "NRC Handelsblad": {
     domain: "nrc.nl",
-    remove_cookies_select_drop: ["counter"]
+    remove_cookies_select_drop: ["counter"],
+    block_regex: /\.nrc\.nl\/paywall-api\/api\/zephr/
   },
   "Nürnberger Nachrichten": {
     domain: "nn.de",

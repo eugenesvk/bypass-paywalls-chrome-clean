@@ -5,6 +5,7 @@ Post-release
 Add The Japan Times
 Fix ilTirreno.it & LaNuovaSardegna.it
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
+Fix Nrc.nl
 Fix NYTimes (Cooking)
 Update popup (archive-links)
 
