@@ -1686,23 +1686,37 @@ else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it'])) {
     let pars = document.querySelectorAll('div.MuiGrid-root > div > p:not([class])');
     if (pars.length === 1) {
       let article = pars[0].parentNode;
-      removeDOMElement(pars[0]);
-      let json_script = document.querySelector('script#__NEXT_DATA__');
-      if (json_script && dompurify_loaded) {
-        let json = JSON.parse(json_script.innerText);
-        if (json && json.props.pageProps.article.content) {
-          let article_new = json.props.pageProps.article.content;
-          if (article) {
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
-            let content_new = doc.querySelector('div');
-            article.appendChild(content_new);
-          }
+      if (article && dompurify_loaded) {
+        removeDOMElement(pars[0]);
+        try {
+          fetch(window.location.href)
+          .then(response => {
+            if (response.ok) {
+              response.text().then(html => {
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(html, 'text/html');
+                let json = doc.querySelector('script#__NEXT_DATA__');
+                if (json) {
+                  let article_new = JSON.parse(json.text).props.pageProps.article.content;
+                  if (article_new) {
+                    let parser = new DOMParser();
+                    let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+                    let content_new = doc.querySelector('div');
+                    article.appendChild(content_new);
+                  }
+                }
+              })
+            }
+          });
+        } catch (err) {
+          console.log(err);
         }
       }
     }
-    let banner = document.querySelector('div.MuiSnackbar-root');
-    removeDOMElement(banner);
+    window.setTimeout(function () {
+      let banners = document.querySelectorAll('div.MuiSnackbar-root, div.css-16cchgy');
+      removeDOMElement(...banners);
+    }, 1000);
   }
 }
 
