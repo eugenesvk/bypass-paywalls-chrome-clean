@@ -533,6 +533,7 @@
     "*://*.stcatharinesstandard.ca/*",
     "*://*.stocknews.com/*",
     "*://*.stratfor.com/*",
+    "*://*.studocu.com/*",
     "*://*.sudinfo.be/*",
     "*://*.sudouest.fr/*",
     "*://*.sun-sentinel.com/*",
@@ -693,5 +694,5 @@
     "*://*.wsj.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.6.1"
+  "version": "2.7.6.2"
 }

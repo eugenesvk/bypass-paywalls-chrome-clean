@@ -1573,6 +1573,10 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "bingbot"
   },
+  "StuDocu (no downloads)": {
+    domain: "studocu.com",
+    allow_cookies: 1
+  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,

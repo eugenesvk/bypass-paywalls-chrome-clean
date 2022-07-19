@@ -3573,6 +3573,23 @@ else if (matchDomain('stratfor.com')) {
   }
 }
 
+else if (matchDomain('studocu.com')) {
+  window.setTimeout(function () {
+    let paywall = document.querySelector('div._de9e5fdb76af');
+    if (paywall) {
+      let banners = document.querySelectorAll('div._d18a99c0d544, div#premium-page-header');
+      removeDOMElement(paywall, ...banners);
+      let blurred_pages = document.querySelectorAll('div.page-content[style*="filter: blur"]');
+      for (let blurred_page of blurred_pages) {
+        let page = document.createElement('span');
+        page.setAttribute('class', 'page-content');
+        page.appendChild(blurred_page.firstChild);
+        blurred_page.parentNode.replaceChild(page, blurred_page);
+      }
+    }
+  }, 1000);
+}
+
 else if (matchDomain('techinasia.com')) {
   let paywall = document.querySelector('.paywall-content');
   if (paywall && dompurify_loaded) {
