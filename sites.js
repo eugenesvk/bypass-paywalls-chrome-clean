@@ -1521,10 +1521,9 @@ var defaultSites = {
     domain: "sciencesetavenir.fr",
     block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Scientific American (free articles only)": {
+  "Scientific American": {
     domain: "scientificamerican.com",
-    allow_cookies: 1,
-    remove_cookies: 1
+    allow_cookies: 1
   },
   "Seeking Alpha": {
     domain: "seekingalpha.com",

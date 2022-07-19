@@ -134,7 +134,7 @@ Grouped in options:\
 [Nautilus](https://nautil.us) -
 [Precision Oncology News](https://www.precisiononcologynews.com) -
 [Science](https://www.science.org)* -
-[Scientific American](https://www.scientificamerican.com)* -
+[Scientific American](https://www.scientificamerican.com) -
 [Times Higher Education](https://www.timeshighereducation.com) -
 [VentureBeat](https://venturebeat.com)
 
