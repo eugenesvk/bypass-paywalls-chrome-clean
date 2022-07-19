@@ -3606,13 +3606,6 @@ else if (matchDomain('the-american-interest.com')) {
   removeDOMElement(counter);
 }
 
-else if (matchDomain('the-ken.com')) {
-  if (window.location.pathname.startsWith('/story/')) {
-    let paywall = document.querySelector('section#paywall');
-    removeDOMElement(paywall);
-  }
-}
-
 else if (matchDomain('theathletic.com')) {
   if (!window.location.search.match(/(\?|&)amp/)) {
     let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');

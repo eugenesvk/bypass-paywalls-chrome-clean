@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove The Ken (fix not working)
 Fix Scientific American (magazine)
 
 * v2.7.6.0 (2022-07-17)
