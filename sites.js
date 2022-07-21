@@ -1486,6 +1486,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.blueconic\.net\//
   },
+  "Saltwire Network": {
+    domain: "saltwire.com",
+    allow_cookies: 1,
+    block_regex: /\/loader-cdn\.azureedge\.net\//
+  },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
     block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/

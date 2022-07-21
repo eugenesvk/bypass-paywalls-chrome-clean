@@ -27,6 +27,11 @@
     "remove_cookies_select_drop": ["counter"],
     "block_regex": "\\.nrc\\.nl\\/paywall-api\\/api\\/zephr"
   },
+  "Saltwire Network": {
+    "domain": "saltwire.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/loader-cdn\\.azureedge\\.net\\/"
+  },
   "The Japan Times": {
     "domain": "japantimes.co.jp",
     "block_regex": "cdn\\.cxense\\.com\\/",

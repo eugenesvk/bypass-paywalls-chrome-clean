@@ -322,6 +322,7 @@ Grouped in options:\
 #### Canada
 [iPolitics](https://www.ipolitics.ca) -
 [Le Devoir](https://www.ledevoir.com) -
+[Saltwire Network](https://www.saltwire.com) -
 [The Globe and Mail](https://www.theglobeandmail.com) -
 [The Hill Times](https://www.hilltimes.com) -
 [The Lawyer's Daily](https://www.thelawyersdaily.ca) -
