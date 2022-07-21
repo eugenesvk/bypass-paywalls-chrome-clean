@@ -1,61 +1,18 @@
 {
-  "ABC.es": {
-    "domain": "abc.es",
-    "allow_cookies": 1,
-    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "useragent": "googlebot",
-    "amp_redirect": {
-      "paywall": "div.voc-paywall"
-    },
+  "Krautreporter.de": {
+    "domain": "krautreporter.de",
     "cs_code": [{
-        "cond": "body#top",
-        "rm_attrib": "id"
-      }
-    ]
-  },
-  "Architectural Digest": {
-    "domain": "architecturaldigest.com",
-    "remove_cookies_select_drop": ["pay_ent_smp", "pay_ent_usmp"],
-    "block_regex": "(journey\\.architecturaldigest\\.com\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot",
-    "amp_unhide": 1
-  },
-  "Handelszeitung.ch": {
-    "allow_cookies": 1,
-    "domain": "handelszeitung.ch",
-    "useragent": "googlebot"
-  },
-  "Knack.be": {
-    "domain": "knack.be",
-    "allow_cookies": 1,
-    "block_regex": "(\\.knack\\.be\\/js\\/responsive\\/rmg(Modal|Paywall)\\.js|\\.blueconic\\.net\\/)",
-    "cs_code": [{
-        "cond": "div[id*=\"wall-modal\"]",
+        "cond": ".js-article-paywall",
         "rm_elem": 1,
         "elems": [{
-            "cond": "div.article-body > p",
+            "cond": ".js-paywall-divider",
             "rm_elem": 1
           }, {
-            "cond": "div.article-body > style",
-            "rm_elem": 1
-          }
-        ]
-      }
-    ]
-  },
-  "Le Vif.be": {
-    "domain": "levif.be",
-    "allow_cookies": 1,
-    "block_regex": "(\\.levif\\.be\\/js\\/responsive\\/rmg(Modal|Paywall)\\.js|\\.blueconic\\.net\\/)",
-    "cs_code": [{
-        "cond": "div[id*=\"wall-modal\"]",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "div.article-body > p",
+            "cond": "#steady-checkout",
             "rm_elem": 1
           }, {
-            "cond": "div.article-body > style",
-            "rm_elem": 1
+            "cond": ".blurred",
+            "rm_class": "blurred"
           }
         ]
       }
@@ -71,25 +28,9 @@
     "allow_cookies": 1,
     "block_regex": "\\.scientificamerican\\.com\\/core\\/modules\\/.+\\/core_assets\\/js\\/mura\\.min\\.js"
   },
-  "SOFREP": {
-    "domain": "sofrep.com",
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "amp_redirect": {
-      "paywall": "div.fader"
-    }
-  },
   "The Japan Times": {
     "domain": "japantimes.co.jp",
     "block_regex": "cdn\\.cxense\\.com\\/",
     "remove_cookies_select_drop": ["xbc"]
-  },
-  "The Wall Street Journal": {
-    "domain": "wsj.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "useragent": "googlebot",
-    "amp_redirect": {
-      "paywall": ".snippet-promotion, div#cx-snippet-overlay"
-    }
   }
 }

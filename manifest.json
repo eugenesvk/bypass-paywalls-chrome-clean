@@ -651,7 +651,6 @@
     "*://*.blueconic.net/*",
     "*://*.cxense.com/*",
     "*://*.evolok.net/*",
-    "*://*.googletagmanager.com/*",
     "*://*.matheranalytics.com/*",
     "*://*.newsmemory.com/*",
     "*://*.onecount.net/*",
@@ -694,5 +693,5 @@
     "*://*.wsj.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.6.2"
+  "version": "2.7.6.3"
 }

@@ -587,7 +587,7 @@ else if (matchDomain('freiepresse.de')) {
 }
 
 else if (matchDomain('krautreporter.de')) {
-  let paywall = document.querySelector('.article-paywall');
+  let paywall = document.querySelector('.js-article-paywall');
   if (paywall) {
     removeDOMElement(paywall);
     window.setTimeout(function () {

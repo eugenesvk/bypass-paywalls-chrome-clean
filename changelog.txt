@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add StuDocu (no downloads)
 Remove The Ken (fix not working)
+Fix Krautreporter.de
 Fix Scientific American (magazine)
 
 * v2.7.6.0 (2022-07-17)
