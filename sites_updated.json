@@ -27,11 +27,6 @@
     "remove_cookies_select_drop": ["counter"],
     "block_regex": "\\.nrc\\.nl\\/paywall-api\\/api\\/zephr"
   },
-  "Scientific American (free articles only)": {
-    "domain": "scientificamerican.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.scientificamerican\\.com\\/core\\/modules\\/.+\\/core_assets\\/js\\/mura\\.min\\.js"
-  },
   "The Japan Times": {
     "domain": "japantimes.co.jp",
     "block_regex": "cdn\\.cxense\\.com\\/",

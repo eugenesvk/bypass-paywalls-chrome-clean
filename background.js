@@ -619,13 +619,12 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.elpais.com/*", "*://*.nautil.us/*", "*://*.scientificamerican.com/*", "*://*.theglobeandmail.com/*"];
+var block_js_inline = ["*://*.elpais.com/*", "*://*.nautil.us/*", "*://*.theglobeandmail.com/*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];
   let excluded = (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
   || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/))
-  || (matchUrlDomain('scientificamerican.com', details.url) && !details.url.match(/\.com\/article\//))
   || (matchUrlDomain('theglobeandmail.com', details.url) && (!enabledSites.includes('#options_optin_tgam_premium') || !details.url.includes('?rel=premium')));
   if (!isSiteEnabled(details) || excluded)
     return;
