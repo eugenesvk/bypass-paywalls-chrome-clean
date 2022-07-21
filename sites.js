@@ -511,7 +511,7 @@ var defaultSites = {
   },
   "Foreign Affairs": {
     domain: "foreignaffairs.com",
-    block_regex: /\.foreignaffairs\.com\/sites\/default\/files\/js\/js_[^y].+\.js/
+    block_regex: /\.foreignaffairs\.com\/modules\/custom\/fa_paywall_js\/js\/paywall\.js/
   },
   "Foreign Policy": {
     domain: "foreignpolicy.com",

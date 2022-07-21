@@ -1,4 +1,8 @@
 {
+  "Foreign Affairs": {
+    "domain": "foreignaffairs.com",
+    "block_regex": "\\.foreignaffairs\\.com\\/modules\\/custom\\/fa_paywall_js\\/js\\/paywall\\.js"
+  },
   "Krautreporter.de": {
     "domain": "krautreporter.de",
     "cs_code": [{

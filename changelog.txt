@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add StuDocu (no downloads)
 Remove The Ken (fix not working)
+Fix Foreign Affairs (js)
 Fix Krautreporter.de
 Fix Scientific American (magazine)
 
