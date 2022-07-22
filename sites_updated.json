@@ -22,6 +22,11 @@
       }
     ]
   },
+  "Le Devoir": {
+    "domain": "ledevoir.com",
+    "block_regex": "\\.tinypass\\.com\\/",
+    "remove_cookies_select_drop": ["pw6"]
+  },
   "NRC Handelsblad": {
     "domain": "nrc.nl",
     "remove_cookies_select_drop": ["counter"],

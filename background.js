@@ -24,6 +24,7 @@ var restrictions = {
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'globo.com': /^((?!\/valor\.globo\.com\/).)*$/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
+  'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,

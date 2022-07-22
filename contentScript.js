@@ -1194,7 +1194,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'lavenir.net', 'ledauphine.com', 'ledevoir.com', 'lesinrocks.com', 'lejsl.com', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'lavenir.net', 'ledauphine.com', 'lesinrocks.com', 'lejsl.com', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -1342,11 +1342,6 @@ else if (matchDomain('lavenir.net')) {
   }
   let ads = document.querySelectorAll('div.ap-AdContainer');
   removeDOMElement(...ads);
-}
-
-else if (matchDomain('ledevoir.com')) {
-  let counter = document.querySelector('.popup-msg');
-  removeDOMElement(counter);
 }
 
 else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
@@ -3089,6 +3084,11 @@ else if (matchDomain('law360.com')) {
     let modal = document.querySelectorAll('div#NewsletterModal, div.modal-backdrop');
     removeDOMElement(...modal);
   }, 500);
+}
+
+else if (matchDomain('ledevoir.com')) {
+  let counter = document.querySelector('.paywall-breakpoint-wrapper');
+  removeDOMElement(counter);
 }
 
 else if (matchDomain('livelaw.in')) {

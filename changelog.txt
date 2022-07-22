@@ -7,6 +7,7 @@ Add StuDocu (no downloads)
 Remove The Ken (fix not working)
 Fix Foreign Affairs (js)
 Fix Krautreporter.de
+Fix Le Devoir (cookie)
 Fix Scientific American (magazine)
 
 * v2.7.6.0 (2022-07-17)

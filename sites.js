@@ -1009,8 +1009,8 @@ var defaultSites = {
   },
   "Le Devoir": {
     domain: "ledevoir.com",
-    allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
+    block_regex: /\.tinypass\.com\//,
+    remove_cookies_select_drop: ["pw6"]
   },
   "Le Journal du Dimanche": {
     domain: "lejdd.fr",
