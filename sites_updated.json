@@ -1,4 +1,18 @@
 {
+  "Folha de S. Paulo": {
+    "domain": "###_br_folha",
+    "group": [
+      "folha.uol.com.br",
+      "blogfolha.uol.com.br"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.folha\\.uol\\.com\\.br\\/paywall\\/js\\/|paywall\\.folha\\.uol\\.com\\.br\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "useragent": "googlebot",
+    "amp_redirect": {
+      "paywall": ".revista--interna__assineonly"
+    },
+    "amp_unhide": 1
+  },
   "Foreign Affairs": {
     "domain": "foreignaffairs.com",
     "block_regex": "\\.foreignaffairs\\.com\\/modules\\/custom\\/fa_paywall_js\\/js\\/paywall\\.js"

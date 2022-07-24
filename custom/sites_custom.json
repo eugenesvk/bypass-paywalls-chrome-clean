@@ -61,6 +61,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "heraldscotland.com"
   },
+  "Inews.co.uk": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "domain": "inews.co.uk"
+  },
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"

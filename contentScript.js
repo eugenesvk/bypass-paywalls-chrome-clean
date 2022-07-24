@@ -2389,11 +2389,24 @@ else if (matchDomain('estadao.com.br')) {
 }
 
 else if (matchDomain('folha.uol.com.br')) {
-  if (window.location.pathname.startsWith('/amp/')) {
-    amp_unhide_subscr_section('amp-ad, amp-sticky-ad, amp-embed');
+  if (matchDomain('piaui.folha.uol.com.br')) {
+    if (window.location.search.startsWith('?amp')) {
+      amp_unhide_subscr_section();
+    } else {
+      let paywall = document.querySelector('.revista--interna__assineonly');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall && amphtml) {
+        removeDOMElement(paywall);
+        window.location.href = amphtml.href;
+      }
+    }
   } else {
-    let signup = document.querySelector('.c-top-signup');
-    removeDOMElement(signup);
+    if (window.location.pathname.startsWith('/amp/')) {
+      amp_unhide_subscr_section('amp-ad, amp-sticky-ad, amp-embed');
+    } else {
+      let signup = document.querySelector('.c-top-signup');
+      removeDOMElement(signup);
+    }
   }
 }
 

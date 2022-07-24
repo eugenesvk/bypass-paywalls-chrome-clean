@@ -5,6 +5,7 @@ Post-release
 Add Saltwire Network (Canada)
 Add StuDocu (no downloads)
 Remove The Ken (fix not working)
+Fix Folha de S. Paulo (piaui)
 Fix Foreign Affairs (js)
 Fix Krautreporter.de
 Fix Le Devoir (cookie)
