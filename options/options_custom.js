@@ -1,4 +1,5 @@
 var ext_api = chrome || browser;
+var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 
 var useragent_options = ['', 'googlebot', 'bingbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
@@ -64,16 +65,16 @@ function export_options() {
   });
 }
 
-// Import custom sites from file
-function import_options(e) {
-  var files = e.target.files;
-  var reader = new FileReader();
-  reader.onload = _imp;
-  reader.readAsText(files[0]);
-}
+function import_json(result) {
+							
+							 
+								
+					   
+							  
+ 
 
-function _imp() {
-  var result = this.result;
+				 
+						   
   ext_api.storage.local.get({
     sites_custom: {}
   }, function (items) {
@@ -94,6 +95,36 @@ function _imp() {
       }, 800);
     });
   });
+}
+
+// Import custom sites from GitLab
+function import_gitlab_options(e) {
+  let url = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/custom/sites_custom.json';
+  try {
+    fetch(url)
+    .then(response => {
+      if (response.ok) {
+        response.text().then(result => {
+          import_json(result);
+        })
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+// Import custom sites from file
+function import_options(e) {
+  var files = e.target.files;
+  var reader = new FileReader();
+  reader.onload = _imp;
+  reader.readAsText(files[0]);
+}
+
+function _imp() {
+  var result = this.result;
+  import_json(result)
 }
 
 // Add custom site to ext_api.storage
@@ -374,6 +405,7 @@ document.getElementById('sort').addEventListener('click', sort_options);
 document.getElementById('export').addEventListener('click', export_options);
 document.getElementById('import').onclick = function () {importInput.click()}
 document.getElementById('importInput').addEventListener("change", import_options, false);
+document.getElementById('import_gitlab').addEventListener('click', import_gitlab_options);
 document.getElementById('add').addEventListener('click', add_options);
 document.getElementById('delete').addEventListener('click', delete_options);
 document.getElementById('edit').addEventListener('click', edit_options);

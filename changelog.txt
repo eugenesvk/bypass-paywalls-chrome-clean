@@ -10,6 +10,7 @@ Fix Foreign Affairs (js)
 Fix Krautreporter.de
 Fix Le Devoir (cookie)
 Fix Scientific American (magazine)
+Update custom sites (import from GitLab)
 
 * v2.7.6.0 (2022-07-17)
 Add The Japan Times
