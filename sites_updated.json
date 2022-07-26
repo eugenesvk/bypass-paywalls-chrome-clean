@@ -36,6 +36,12 @@
       }
     ]
   },
+  "Law.com (free articles only)": {
+    "domain": "law.com",
+    "allow_cookies": 1,
+    "remove_cookies": 1,
+    "referer": "facebook"
+  },
   "Le Devoir": {
     "domain": "ledevoir.com",
     "block_regex": "\\.tinypass\\.com\\/",

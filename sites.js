@@ -1001,6 +1001,8 @@ var defaultSites = {
   },
   "Law.com (free articles only)": {
     domain: "law.com",
+    allow_cookies: 1,
+    remove_cookies: 1,
     referer: "facebook"
   },
   "Law360 (free articles only)": {
