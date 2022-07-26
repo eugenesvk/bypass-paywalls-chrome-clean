@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Le Soleil - Quebec (+ regional/opt-in to custom sites)
+Fix McClatchy Group (identify site)
 
 * v2.7.7.0 (2022-07-24)
 Add Saltwire Network (Canada)

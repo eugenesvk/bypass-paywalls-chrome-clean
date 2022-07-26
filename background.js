@@ -883,8 +883,8 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
                   // block script for additional McClatchy sites (opt-in to custom sites)
                   var usa_mcc_domains = grouped_sites['###_usa_mcc'];
                   var usa_mcc_domain = (((matchUrlDomain('mcclatchyinteractive.com', details.url) && ['script'].includes(details.type)) ||
-                      (matchUrlDomain('mcclatchy-wires.com', details.url) && ['image'].includes(details.type))) &&
-                    !matchUrlDomain(usa_mcc_domains, header_referer) && enabledSites.includes('###_usa_mcc'));
+                      (matchUrlDomain('mcclatchy.com', details.url) && ['image'].includes(details.type))) &&
+                    !matchUrlDomain(usa_mcc_domains.concat(['mcclatchy.com']), header_referer) && enabledSites.includes('###_usa_mcc'));
                   if (usa_mcc_domain)
                     usa_mcc_domains = customAddRules(usa_mcc_domains, '', blockedRegexes['bnd.com']);
                   else {
