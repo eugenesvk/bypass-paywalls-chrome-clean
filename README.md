@@ -329,6 +329,8 @@ Grouped in options:\
 [Winnipeg Free Press](https://www.winnipegfreepress.com)
 
 Grouped in options:\
+*Groupe Capitales Médias* sites like (opt-in to custom sites for unlisted)\
+[Le Soleil](https://www.lesoleil.com)\
 *Postmedia Network* sites like (opt-in to custom sites for unlisted)\
 [Calgary Herald](https://calgaryherald.com) -
 [Financial Post](https://www.financialpost.com) -

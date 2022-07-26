@@ -739,10 +739,14 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     }
   }
 
-  function customAddRules(custom_domains, custom_allow_cookies = '', custom_block_regex = '', custom_useragent = '', custom_referer = '', custom_amp_unhide = false) {
+  function customAddRules(custom_domains, custom_cookies = '', custom_block_regex = '', custom_useragent = '', custom_referer = '', custom_amp_unhide = false) {
     let custom_domain = urlHost(header_referer).replace(/^(www|m|account|amp|edition|eu)\./, '');
-    if (custom_allow_cookies && !allow_cookies.includes(custom_domain))
-      allow_cookies.push(custom_domain);
+    if (custom_cookies) {
+      if (custom_cookies.allow_cookies && !allow_cookies.includes(custom_domain))
+        allow_cookies.push(custom_domain);
+      if (custom_cookies.remove_cookies && !remove_cookies.includes(custom_domain))
+        remove_cookies.push(custom_domain);
+    }
     if (custom_block_regex) {
       if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
         custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
@@ -784,41 +788,41 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       // block Piano.io for regional Australian Community Media sites (opt-in to custom sites)
       var au_comm_media_domain = (details.url.startsWith('https://' + header_referer_hostname + '/promotions/website_content_esov/') && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
       if (au_comm_media_domain)
-        au_comm_media_domains = customAddRules(au_comm_media_domains, true, blockedRegexes['canberratimes.com.au']);
+        au_comm_media_domains = customAddRules(au_comm_media_domains, {allow_cookies: 1}, blockedRegexes['canberratimes.com.au']);
       else if (header_referer_hostname.endsWith('.com.au')) {
         // enable regional The West Australian sites (opt-in to custom sites)
         var au_thewest_domains = ['thewest.com.au'];
         var au_thewest_domain = (details.url.startsWith('https://images.thewest.com.au/') && ['image'].includes(details.type) &&
           !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
         if (au_thewest_domain)
-          au_thewest_domains = customAddRules(au_thewest_domains, true);
+          au_thewest_domains = customAddRules(au_thewest_domains, {allow_cookies: 1});
       }
     } else if (header_referer_hostname.endsWith('.ch')) {
       // set googlebot-useragent for regional nzz.ch sites (opt-in to custom sites)
       var ch_media_domains = [];
       var ch_media_domain = (matchUrlDomain('static-chmedia.ch', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ch_media_domains, header_referer) && enabledSites.includes('nzz.ch'));
       if (ch_media_domain)
-        ch_media_domains = customAddRules(ch_media_domains, true, blockedRegexes['nzz.ch'], 'googlebot');
+        ch_media_domains = customAddRules(ch_media_domains, {allow_cookies: 1}, blockedRegexes['nzz.ch'], 'googlebot');
     } else if (header_referer_hostname.endsWith('.cl')) {
       // block scripts for regional El Mercurio sites (opt-in to custom sites)
       var cl_emol_region_domains = [];
       var cl_emol_region_domain = (matchUrlDomain('impresa.soy-chile.cl', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(cl_emol_region_domains, header_referer) && enabledSites.includes('elmercurio.com'));
       if (cl_emol_region_domain) {
-        cl_emol_region_domains = customAddRules(cl_emol_region_domains, false, "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)");
-	  }
+        cl_emol_region_domains = customAddRules(cl_emol_region_domains, '', "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)");
+      }
     } else if (header_referer_hostname.endsWith('.de')) {
       // set googlebot-useragent for additional Funke sites (opt-in to custom sites)
       var de_funke_medien_domains = grouped_sites['###_de_funke_medien'];
       var de_funke_domain = (matchUrlDomain('funkedigital.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_funke_medien_domains, header_referer) && enabledSites.includes('###_de_funke_medien'));
       if (de_funke_domain)
-        de_funke_medien_domains = customAddRules(de_funke_medien_domains, true, blockedRegexes['waz.de'], 'googlebot');
+        de_funke_medien_domains = customAddRules(de_funke_medien_domains, {allow_cookies: 1}, blockedRegexes['waz.de'], 'googlebot');
       else {
         // block script for additional Madsack/RND sites (opt-in to custom sites)
         var de_madsack_domains = grouped_sites['###_de_madsack'];
         var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
         var de_madsack_domain = (matchUrlDomain(de_madsack_custom_domains, details.url) && !matchUrlDomain(de_madsack_domains, header_referer) && enabledSites.includes('###_de_madsack'));
         if (de_madsack_domain)
-          de_madsack_domains = customAddRules(de_madsack_domains, true, blockedRegexes['haz.de']);
+          de_madsack_domains = customAddRules(de_madsack_domains, {allow_cookies: 1}, blockedRegexes['haz.de']);
       }
     } else if (header_referer_hostname.match(/\.(es|cat)$/) || matchUrlDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'], header_referer)) {
       // block Piano.io for unlisted Grupo Prensa Ibérica (opt-in to custom sites)
@@ -826,65 +830,71 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
       var es_epiberica_domain = (matchUrlDomain(es_epiberica_custom_domains, details.url) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
       if (es_epiberica_domain)
-        es_epiberica_domains = customAddRules(es_epiberica_domains, true, blockedRegexes['epe.es']);
+        es_epiberica_domains = customAddRules(es_epiberica_domains, {allow_cookies: 1}, blockedRegexes['epe.es']);
     } else if (header_referer_hostname.endsWith('.fi')) {
       // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
       var fi_sanoma_domains = grouped_sites['###_fi_sanoma'];
       var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
       if (fi_sanoma_sndp_domain)
-        fi_sanoma_domains = customAddRules(fi_sanoma_domains, true, '', 'googlebot');
+        fi_sanoma_domains = customAddRules(fi_sanoma_domains, {allow_cookies: 1}, '', 'googlebot');
     } else if (header_referer_hostname.endsWith('.nl')) {
       // block Evolok for Mediahuis Noord sites (opt-in to custom sites)
       var nl_mediahuis_noord_domains = [];
       var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));
       if (nl_mediahuis_noord_domain)
-        nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, true, blockedRegexes['lc.nl']);
+        nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, {allow_cookies: 1}, blockedRegexes['lc.nl']);
     } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
-      // block TinyPass for Postmedia Network sites
-      var ca_postmedia_domains = grouped_sites['###_ca_postmedia'];
-      var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
-      if (ca_postmedia_domain)
-        ca_postmedia_domains = customAddRules(ca_postmedia_domains, true, blockedRegexes['nationalpost.com']);
+      // remove cookies for Groupe Capitales Médias sites
+      var ca_gcm_domain = (matchUrlDomain('gcm.omerlocdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(ca_gcm_domains, header_referer) && enabledSites.includes('lesoleil.com'));
+      if (ca_gcm_domain)
+        ca_gcm_domains = customAddRules(ca_gcm_domains, {allow_cookies: 1, remove_cookies: 1});
       else {
-        // set googlebot-useragent for Gannett sites
-        var usa_gannett_domains = grouped_sites['###_usa_gannett'];
-        var usa_gannett_domain = (matchUrlDomain('gannett-cdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(usa_gannett_domains.concat(['usatoday.com']), header_referer) && enabledSites.includes('###_usa_gannett'));
-        if (usa_gannett_domain)
-          usa_gannett_domains = customAddRules(usa_gannett_domains, '', blockedRegexes['azcentral.com'], 'googlebot', '', true);
+        // block TinyPass for Postmedia Network sites
+        var ca_postmedia_domains = grouped_sites['###_ca_postmedia'];
+        var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
+        if (ca_postmedia_domain)
+          ca_postmedia_domains = customAddRules(ca_postmedia_domains, {allow_cookies: 1}, blockedRegexes['nationalpost.com']);
         else {
-          var usa_hearst_comm_domains = grouped_sites['###_usa_hearst_comm'];
-          var usa_hearst_comm_domain = (matchUrlDomain('treg.hearstnp.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(usa_hearst_comm_domains, header_referer) && enabledSites.includes('###_usa_hearst_comm'));
-          if (usa_hearst_comm_domain)
-            usa_hearst_comm_domains = customAddRules(usa_hearst_comm_domains, '', blockedRegexes['houstonchronicle.com']);
+          // set googlebot-useragent for Gannett sites
+          var usa_gannett_domains = grouped_sites['###_usa_gannett'];
+          var usa_gannett_domain = (matchUrlDomain('gannett-cdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(usa_gannett_domains.concat(['usatoday.com']), header_referer) && enabledSites.includes('###_usa_gannett'));
+          if (usa_gannett_domain)
+            usa_gannett_domains = customAddRules(usa_gannett_domains, '', blockedRegexes['azcentral.com'], 'googlebot', '', true);
           else {
-            // block script for additional Lee Enterprises sites (opt-in to custom sites)
-            var usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
-            var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['script'].includes(details.type) &&
-              !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
-            if (usa_lee_ent_domain)
-              usa_lee_ent_domains = customAddRules(usa_lee_ent_domains, '', blockedRegexes['buffalonews.com']);
+            var usa_hearst_comm_domains = grouped_sites['###_usa_hearst_comm'];
+            var usa_hearst_comm_domain = (matchUrlDomain('treg.hearstnp.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(usa_hearst_comm_domains, header_referer) && enabledSites.includes('###_usa_hearst_comm'));
+            if (usa_hearst_comm_domain)
+              usa_hearst_comm_domains = customAddRules(usa_hearst_comm_domains, '', blockedRegexes['houstonchronicle.com']);
             else {
-              // block script for TownNews sites (Blox CMS; opt-in to custom sites)
-              var usa_townnews_domains = [];
-              var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['script'].includes(details.type) &&
-                !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
-              if (usa_townnews_domain)
-                usa_townnews_domains = customAddRules(usa_townnews_domains, '', /\.com\/shared-content\/art\/tncms\/user\/user\.js/);
+              // block script for additional Lee Enterprises sites (opt-in to custom sites)
+              var usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
+              var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['script'].includes(details.type) &&
+                !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
+              if (usa_lee_ent_domain)
+                usa_lee_ent_domains = customAddRules(usa_lee_ent_domains, '', blockedRegexes['buffalonews.com']);
               else {
-                // block script for additional McClatchy sites (opt-in to custom sites)
-                var usa_mcc_domains = grouped_sites['###_usa_mcc'];
-                var usa_mcc_domain = (((matchUrlDomain('mcclatchyinteractive.com', details.url) && ['script'].includes(details.type)) ||
-                    (matchUrlDomain('mcclatchy-wires.com', details.url) && ['image'].includes(details.type))) &&
-                  !matchUrlDomain(usa_mcc_domains, header_referer) && enabledSites.includes('###_usa_mcc'));
-                if (usa_mcc_domain)
-                  usa_mcc_domains = customAddRules(usa_mcc_domains, '', blockedRegexes['bnd.com']);
+                // block script for TownNews sites (Blox CMS; opt-in to custom sites)
+                var usa_townnews_domains = [];
+                var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['script'].includes(details.type) &&
+                  !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
+                if (usa_townnews_domain)
+                  usa_townnews_domains = customAddRules(usa_townnews_domains, '', /\.com\/shared-content\/art\/tncms\/user\/user\.js/);
                 else {
-                  // block script for additional MediaNews Group sites (opt-in to custom sites)
-                  var usa_mng_domains = grouped_sites['###_usa_mng'];
-                  var usa_mng_domain = (details.url.match(/\.com\/wp-content\/plugins\/dfm(-|_).+\.js/) && ['script'].includes(details.type) &&
-                    !matchUrlDomain(usa_mng_domains, header_referer) && enabledSites.includes('###_usa_mng'));
-                  if (usa_mng_domain)
-                    usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);
+                  // block script for additional McClatchy sites (opt-in to custom sites)
+                  var usa_mcc_domains = grouped_sites['###_usa_mcc'];
+                  var usa_mcc_domain = (((matchUrlDomain('mcclatchyinteractive.com', details.url) && ['script'].includes(details.type)) ||
+                      (matchUrlDomain('mcclatchy-wires.com', details.url) && ['image'].includes(details.type))) &&
+                    !matchUrlDomain(usa_mcc_domains, header_referer) && enabledSites.includes('###_usa_mcc'));
+                  if (usa_mcc_domain)
+                    usa_mcc_domains = customAddRules(usa_mcc_domains, '', blockedRegexes['bnd.com']);
+                  else {
+                    // block script for additional MediaNews Group sites (opt-in to custom sites)
+                    var usa_mng_domains = grouped_sites['###_usa_mng'];
+                    var usa_mng_domain = (details.url.match(/\.com\/wp-content\/plugins\/dfm(-|_).+\.js/) && ['script'].includes(details.type) &&
+                      !matchUrlDomain(usa_mng_domains, header_referer) && enabledSites.includes('###_usa_mng'));
+                    if (usa_mng_domain)
+                      usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);
+                  }
                 }
               }
             }
@@ -930,7 +940,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   let allow_ext_source = medium_custom_domain;
   let bpc_amp_site = false;
 
-  if (isSiteEnabled({url: header_referer}) && ['script', 'image'].includes(details.type)) {
+  if (isSiteEnabled({url: header_referer}) && ['script', 'xmlhttprequest', 'image'].includes(details.type)) {
     bpc_amp_site = matchUrlDomain('cdn.ampproject.org', details.url);
     allow_ext_source = allow_ext_source || bpc_amp_site ||
       (matchUrlDomain('elespanol.com', header_referer) && matchUrlDomain('eestatic.com', details.url)) ||
@@ -940,6 +950,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
       (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
       (matchUrlDomain('usatoday.com', header_referer) && matchUrlDomain('gannett-cdn.com', details.url)) ||
+      (matchUrlDomain(ca_gcm_domains, header_referer) && matchUrlDomain('gcm.omerlocdn.com', details.url)) ||
       (matchUrlDomain(it_repubblica_domains, header_referer) && matchUrlDomain(['repstatic.it'], details.url));
   }
 

@@ -2,11 +2,11 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Le Soleil - Quebec (+ regional/opt-in to custom sites)
 
 * v2.7.7.0 (2022-07-24)
 Add Saltwire Network (Canada)
 Add StuDocu (no downloads)
-Remove The Ken (fix not working)
 Fix Folha de S. Paulo (piaui)
 Fix Foreign Affairs (js)
 Fix Krautreporter.de
@@ -16,7 +16,6 @@ Update custom sites (import from GitLab)
 
 * v2.7.6.0 (2022-07-17)
 Add The Japan Times
-Add The Ken (not Southeast Asia)
 Fix ilTirreno.it & LaNuovaSardegna.it
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix Nrc.nl
