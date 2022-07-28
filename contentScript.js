@@ -587,6 +587,48 @@ else if (matchDomain('freiepresse.de')) {
   }
 }
 
+else if (matchDomain('golem.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('article.golemplus');
+  if (paywall) {
+    paywall.classList.remove('golemplus');
+    csDoneOnce = true;
+    if (url.includes('?page='))
+      url = url.replace('.html', '-' + url.split('?page=')[1] + '.html').split('?')[0];
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    replaceDomElementExt(url_cache, true, false, 'article');
+    window.setTimeout(function () {
+      let list_pages = document.querySelectorAll('ol.list-pages > li >a[href]');
+      for (let list_page of list_pages) {
+        let page = list_page.href.match(/-(\d{1,2})\.html/);
+        if (page && page[1]) {
+          list_page.href = list_page.href.replace(/-\d{1,2}\.html/, '.html') + '?page=' + page[1];
+        }
+      }
+      let gallery_images = document.querySelectorAll('ul[class^="golemGallery"] > li > img[data-src]');
+      for (let gallery_image of gallery_images) {
+        if (!gallery_image.src || gallery_image.src.includes('.html'))
+          removeDOMElement(gallery_image.parentNode);
+      }
+      let videos = document.querySelectorAll('figure.gvideofig');
+      for (let video of videos) {
+        let video_text = video.querySelector('div.gvidtext');
+        if (!video_text) {
+          let gwc_link = document.createElement('a');
+          gwc_link.href = url_cache;
+          gwc_link.innerText = 'Watch video on Google webcache';
+          gwc_link.target = '_blank';
+          video.parentNode.replaceChild(gwc_link, video);
+        }
+      }
+    }, 1000);
+  }
+  window.setTimeout(function () {
+    let ads = document.querySelectorAll('div[id^="iqadtile"], div.wraptusplit');
+    removeDOMElement(...ads);
+  }, 1000);
+}
+
 else if (matchDomain('krautreporter.de')) {
   let paywall = document.querySelector('.js-article-paywall');
   if (paywall) {

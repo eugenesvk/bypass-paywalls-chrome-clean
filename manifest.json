@@ -244,6 +244,7 @@
     "*://*.globes.co.il/*",
     "*://*.globo.com/*",
     "*://*.goldcoastbulletin.com.au/*",
+    "*://*.golem.de/*",
     "*://*.goodhousekeeping.com/*",
     "*://*.gooieneemlander.nl/*",
     "*://*.gq.com/*",
@@ -695,5 +696,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.7.3"
+  "version": "2.7.7.4"
 }

@@ -589,6 +589,10 @@ var defaultSites = {
     domain: "globes.co.il",
     block_regex: /\.tinypass\.com\//
   },
+  "Golem.de": {
+    domain: "golem.de",
+    allow_cookies: 1
+  },
   "Griffith Review": {
     domain: "griffithreview.com",
     block_regex: /\.griffithreview\.com\/.+\/leaky-paywall\//,
