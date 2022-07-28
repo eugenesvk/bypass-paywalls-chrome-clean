@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Le Soleil - Quebec (+ regional/opt-in to custom sites)
+Fix Bloomberg (graphics)
 Fix Law.com (cookies)
 Fix McClatchy Group (identify site)
 

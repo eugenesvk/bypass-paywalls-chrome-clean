@@ -2330,6 +2330,8 @@ else if (matchDomain(pe_grupo_elcomercio_domains)) {
     paywall.classList.remove('story-content__nota-premium');
     paywall.removeAttribute('style');
   }
+  let ads = document.querySelectorAll('div[class*="_ads"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('elespectador.com')) {
@@ -2554,8 +2556,8 @@ else if (matchDomain('bloomberg.com')) {
   removeDOMElement(paywall, counter, leaderboard);
   sessionStorage.clear();
   let url = window.location.href;
-  if (url.match(/\/(articles|features|newsletters)\//)) {
-    let page_ad = document.querySelectorAll('div.page-ad, div[data-ad-placeholder]');
+  if (url.match(/s\/\d{4}-/)) {
+    let page_ad = document.querySelectorAll('div.page-ad, div[data-ad-placeholder], div[class*="-ad-top"]');
     let reg_ui_client = document.querySelector('div#reg-ui-client');
     removeDOMElement(leaderboard, ...page_ad, reg_ui_client);
     let hidden_images = document.querySelectorAll('img.lazy-img__image[src][data-native-src]');
