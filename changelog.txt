@@ -2,7 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
-Le Soleil - Quebec (+ regional/opt-in to custom sites)
+Add Le Soleil - Quebec (+ regional/opt-in to custom sites)
+Remove Kurier.at (fix obsolete)
 Fix Bloomberg (graphics)
 Fix Law.com (cookies)
 Fix McClatchy Group (identify site)

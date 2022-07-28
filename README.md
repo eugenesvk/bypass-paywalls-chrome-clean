@@ -487,7 +487,6 @@ Grouped in options:\
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter.de](https://krautreporter.de) -
-[Kurier.at](https://kurier.at) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Münstersche Zeitung](https://www.muensterschezeitung.de) -
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
