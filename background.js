@@ -947,6 +947,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       (matchUrlDomain('elmercurio.com', header_referer) && matchUrlDomain('emol.cl', details.url)) ||
       (matchUrlDomain('epaper.thetimes.co.uk', header_referer) && matchUrlDomain(['prcdn.co'], details.url)) ||
       (matchUrlDomain('law360.com', header_referer) && matchUrlDomain('law360news.com', details.url)) ||
+      (matchUrlDomain('lesechos.fr', header_referer) && matchUrlDomain('lesechos.com', details.url)) ||
       (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
       (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
       (matchUrlDomain('usatoday.com', header_referer) && matchUrlDomain('gannett-cdn.com', details.url)) ||
