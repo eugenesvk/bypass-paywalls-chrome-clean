@@ -98,6 +98,9 @@ if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
   if (domain = matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
     if (!cookieExists('subscriber'))
       setCookie('subscriber', '{"subscriptionStatus": true}', domain, '/', 14);
+  } else if (matchDomain(['crusoe.uol.com.br'])) {
+    if (!cookieExists('crs_subscriber'))
+      setCookie('crs_subscriber', 1, 'crusoe.uol.com.br', '/', 14);
   }
 }
 
@@ -2356,6 +2359,12 @@ if (matchDomain('abril.com.br')) {
 else if (matchDomain('clarin.com')) {
   let ads = document.querySelectorAll('.ad-slot');
   removeDOMElement(...ads);
+}
+
+else if (matchDomain('crusoe.uol.com.br')) {
+  let paywall = document.querySelector('#wallcontent');
+  let ads = document.querySelectorAll('#gpt-leaderboard, .ads_desktop, .catchment-box');
+  removeDOMElement(paywall, ...ads);
 }
 
 else if (matchDomain(pe_grupo_elcomercio_domains)) {
