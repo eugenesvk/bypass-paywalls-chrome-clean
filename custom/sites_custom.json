@@ -101,11 +101,6 @@
   "Medpagetoday.com": {
     "domain": "medpagetoday.com"
   },
-  "Morgenbladet.no": {
-    "allow_cookies": 1,
-    "domain": "morgenbladet.no",
-    "useragent": "googlebot"
-  },
   "Nationalobserver.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",

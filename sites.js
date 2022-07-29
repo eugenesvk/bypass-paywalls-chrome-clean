@@ -2006,7 +2006,7 @@ var defaultSites = {
   "Winnipeg Free Press": {
     domain: "winnipegfreepress.com",
     allow_cookies: 1,
-    block_regex: /cdn\.cxense\.com\//
+    block_regex: /(account\.winnipegfreepress\.com\/api\/v\d\/auth\/identify|cdn\.cxense\.com\/)/
   },
   "World Politics Review": {
     domain: "worldpoliticsreview.com",

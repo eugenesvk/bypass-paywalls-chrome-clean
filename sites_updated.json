@@ -51,5 +51,10 @@
     "domain": "saltwire.com",
     "allow_cookies": 1,
     "block_regex": "\\/loader-cdn\\.azureedge\\.net\\/"
+  },
+  "Winnipeg Free Press": {
+    "domain": "winnipegfreepress.com",
+    "allow_cookies": 1,
+    "block_regex": "(account\\.winnipegfreepress\\.com\\/api\\/v\\d\\/auth\\/identify|cdn\\.cxense\\.com\\/)"
   }
 }
