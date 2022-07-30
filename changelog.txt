@@ -6,6 +6,7 @@ Add Crusoe (Brazil)
 Add Golem.de
 Add Le Soleil - Quebec (+ regional/opt-in to custom sites)
 Remove Kurier.at (fix obsolete)
+Fix Belfast Telegraph/Independent.ie (css)
 Fix Bloomberg (graphics)
 Fix Law.com (cookies)
 Fix LesEchos.fr (timing)

@@ -189,7 +189,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
-  "Belfast Telegraph (setCookie opt-in)": {
+  "Belfast Telegraph": {
     domain: "belfasttelegraph.co.uk",
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
@@ -873,7 +873,7 @@ var defaultSites = {
     domain: "ipolitics.ca",
     allow_cookies: 1
   },
-  "Irish Independent (setCookie opt-in)": {
+  "Irish Independent": {
     domain: "independent.ie",
     allow_cookies: 1,
     block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/

@@ -1,4 +1,14 @@
 {
+  "Belfast Telegraph (setCookie opt-in)": {
+    "domain": "belfasttelegraph.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.flip-pay\\.com\\/clients\\/inm\\/flip-pay\\.js)",
+    "cs_code": [{
+        "cond": "div#flip-pay[style]",
+        "rm_attrib": "style"
+      }
+    ]
+  },
   "Folha de S. Paulo": {
     "domain": "###_br_folha",
     "group": [
@@ -16,6 +26,16 @@
   "Foreign Affairs": {
     "domain": "foreignaffairs.com",
     "block_regex": "\\.foreignaffairs\\.com\\/modules\\/custom\\/fa_paywall_js\\/js\\/paywall\\.js"
+  },
+  "Irish Independent (setCookie opt-in)": {
+    "domain": "independent.ie",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.flip-pay\\.com\\/clients\\/inm\\/flip-pay\\.js)",
+    "cs_code": [{
+        "cond": "div#flip-pay[style]",
+        "rm_attrib": "style"
+      }
+    ]
   },
   "Krautreporter.de": {
     "domain": "krautreporter.de",

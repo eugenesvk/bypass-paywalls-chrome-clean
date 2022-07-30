@@ -95,10 +95,7 @@ if (ext_api.runtime) {
 
 // check for opt-in confirmation (from background.js)
 if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
-  if (domain = matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
-    if (!cookieExists('subscriber'))
-      setCookie('subscriber', '{"subscriptionStatus": true}', domain, '/', 14);
-  } else if (matchDomain(['crusoe.uol.com.br'])) {
+  if (matchDomain(['crusoe.uol.com.br'])) {
     if (!cookieExists('crs_subscriber'))
       setCookie('crs_subscriber', 1, 'crusoe.uol.com.br', '/', 14);
   }
@@ -2222,7 +2219,13 @@ else
 
 } else if (window.location.hostname.match(/\.(ie|uk)$/)) {//united kingdom/ireland
 
-if (matchDomain('independent.co.uk')) {
+if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
+  let flip_pay = document.querySelector('div#flip-pay[style]');
+  if (flip_pay)
+    flip_pay.removeAttribute('style');
+}
+
+else if (matchDomain('independent.co.uk')) {
   let url = window.location.href;
   if (window.location.search.match(/(\?|&)amp/)) {
     let ads = document.querySelectorAll('amp-ad, amp-embed, [id^="ad-"]');
@@ -2343,7 +2346,7 @@ else if (matchDomain('thetimes.co.uk')) {
   }
 }
 
-else if (!matchDomain(['belfasttelegraph.co.uk', 'independent.ie']))
+else
   csDone = true;
 
 } else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com'])) {//south america
