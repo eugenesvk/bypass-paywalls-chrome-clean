@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.7.8.0 (2022-07-31)
 Add Crusoe (Brazil)
 Add Golem.de
 Add Groupe Capitales Medias (+ regional/opt-in to custom sites)
