@@ -123,20 +123,23 @@ Grouped in options:\
 [Upstream](https://www.upstreamonline.com)
 
 ##### Tech/Science
-[360Dx](https://www.360dx.com) -
 [Chemical & Engineering News](https://cen.acs.org) -
 [Chronicle of Higher Education](https://www.chronicle.com) -
 [Dark Reading](https://www.darkreading.com) -
 [Discover Magazine](https://www.discovermagazine.com) -
-[GenomeWeb](https://www.genomeweb.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
 [National Geographic USA](https://www.nationalgeographic.com) -
 [Nautilus](https://nautil.us) -
-[Precision Oncology News](https://www.precisiononcologynews.com) -
 [Science](https://www.science.org)* -
 [Scientific American](https://www.scientificamerican.com) -
 [Times Higher Education](https://www.timeshighereducation.com) -
 [VentureBeat](https://venturebeat.com)
+
+Grouped in options:\
+*GenomeWeb* sites like\
+[360Dx](https://www.360dx.com) -
+[GenomeWeb](https://www.genomeweb.com) -
+[Precision Oncology News](https://www.precisiononcologynews.com)
 
 ##### Encyclopedia/Book library/Knowledge base
 [BBC History Extra](https://www.historyextra.com) -

@@ -5,6 +5,7 @@ Post-release
 Add Crusoe (Brazil)
 Add Golem.de
 Add Groupe Capitales Medias (+ regional/opt-in to custom sites)
+Grouping GenomeWeb sites
 Remove Kurier.at (fix obsolete)
 Fix Belfast Telegraph/Independent.ie (css)
 Fix Bloomberg (graphics)

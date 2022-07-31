@@ -1,8 +1,4 @@
 var defaultSites = {
-  "360Dx": {
-    domain: "360dx.com",
-    group_rule: "###_gr_usa_genomeweb_domains"
-  },
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,
@@ -583,8 +579,14 @@ var defaultSites = {
     group_rule: "###_gr_it_repubblica_domains"
   },
   "GenomeWeb": {
-    domain: "genomeweb.com",
-    group_rule: "###_gr_usa_genomeweb_domains"
+    domain: "###_usa_genomeweb",
+    group: [
+      "360dx.com",
+      "genomeweb.com",
+      "precisiononcologynews.com"
+    ],
+    allow_cookies: 1,
+    block_regex: /crain-platform-.+-prod\.s3\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
   },
   "Glassdoor": {
     domain: "glassdoor.com"
@@ -1445,10 +1447,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
-  "Precision Oncology News": {
-    domain: "precisiononcologynews.com",
-    group_rule: "###_gr_usa_genomeweb_domains"
-  },
   "Prospect Magazine": {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1
@@ -2039,11 +2037,6 @@ var defaultSites = {
     group_rule_domains: ["parool.nl", "trouw.nl", "volkskrant.nl", "humo.be", "demorgen.be"],
     remove_cookies_select_drop: ["TID_ID"],
     block_regex: "\\.{domain}\\/temptation\\/resolve"
-  },
-  "###_gr_usa_genomeweb_domains": {
-    group_rule_domains: ["genomeweb.com", "360dx.com", "precisiononcologynews.com"],
-    allow_cookies: 1,
-    block_regex: /crain-platform-.+-prod\.s3\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
   },
   "* Block Paywall-scripts (opt-in to custom sites to enable also for non-listed sites)": {
     domain: "###"
