@@ -4101,12 +4101,16 @@ else if (matchDomain('wsj.com')) {
   }
 }
 
-else if (matchDomain(usa_lee_ent_domains) || (window.location.pathname.endsWith('.amp.html') && document.querySelector('div.site-copyright>p> a[href^="https://bloxcms.com"]'))) {
+else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('a[href^="https://bloxcms.com"][title^="BLOX"]')) {
   if (window.location.pathname.endsWith('.amp.html')) {
-    amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"');
+    amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"', 'amp-ad, amp-embed, .amp-ads-container');
     let elem_hidden = document.querySelectorAll('html[class], body[class]');
     for (let elem of elem_hidden)
       elem.removeAttribute('class');
+  } else if (!domain) {
+    let subscriber_only = document.querySelectorAll('div.subscriber-only[style]:not(.encrypted-content)');
+    for (let elem of subscriber_only)
+      elem.removeAttribute('style');
   }
 }
 

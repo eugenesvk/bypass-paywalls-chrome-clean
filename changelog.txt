@@ -12,6 +12,7 @@ Fix Bloomberg (graphics)
 Fix Law.com (cookies)
 Fix LesEchos.fr (timing)
 Fix McClatchy Group (identify site)
+Fix TownNews sites (css)
 Fix Winnipeg Free Press (xhr)
 
 * v2.7.7.0 (2022-07-24)
