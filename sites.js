@@ -606,6 +606,14 @@ var defaultSites = {
     domain: "groene.nl",
     remove_cookies_select_hold: ["accept-cookies", "popunder-hidden"]
   },
+  "Groupe Capitales Médias (+ regional/opt-in to custom sites)": {
+    domain: "###_ca_gcm",
+    group: [
+      "lesoleil.com"
+    ],
+    allow_cookies: 1,
+    remove_cookies: 1
+  },
   "Groupe EBRA": {
     domain: "###_fr_groupe_ebra",
     group: [
@@ -1040,11 +1048,6 @@ var defaultSites = {
   "Le Scienze": {
     domain: "lescienze.it",
     group_rule: "###_gr_it_repubblica_domains"
-  },
-  "Le Soleil - Quebec (+ regional/opt-in to custom sites)": {
-    domain: "lesoleil.com",
-    allow_cookies: 1,
-    remove_cookies: 1
   },
   "Le Télégramme": {
     domain: "letelegramme.fr",
@@ -2191,7 +2194,7 @@ expandSiteRules(defaultSites);
 var au_comm_media_domains = grouped_sites['###_au_comm_media'];
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var be_mediahuis_domains = grouped_sites['###_be_mediahuis'];
-var ca_gcm_domains = ['lesoleil.com'];
+var ca_gcm_domains = grouped_sites['###_ca_gcm'];
 var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];
 var medium_custom_domains = grouped_sites['###_medium_custom'];

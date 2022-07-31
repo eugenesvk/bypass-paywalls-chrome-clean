@@ -846,7 +846,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, {allow_cookies: 1}, blockedRegexes['lc.nl']);
     } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
       // remove cookies for Groupe Capitales Médias sites
-      var ca_gcm_domain = (matchUrlDomain('gcm.omerlocdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(ca_gcm_domains, header_referer) && enabledSites.includes('lesoleil.com'));
+      var ca_gcm_domain = (matchUrlDomain('gcm.omerlocdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(ca_gcm_domains, header_referer) && enabledSites.includes('###_ca_gcm'));
       if (ca_gcm_domain)
         ca_gcm_domains = customAddRules(ca_gcm_domains, {allow_cookies: 1, remove_cookies: 1});
       else {

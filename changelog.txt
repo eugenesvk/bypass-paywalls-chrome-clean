@@ -4,7 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Crusoe (Brazil)
 Add Golem.de
-Add Le Soleil - Quebec (+ regional/opt-in to custom sites)
+Add Groupe Capitales Medias (+ regional/opt-in to custom sites)
 Remove Kurier.at (fix obsolete)
 Fix Belfast Telegraph/Independent.ie (css)
 Fix Bloomberg (graphics)

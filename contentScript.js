@@ -5,7 +5,7 @@ var csDone = false;
 var csDoneOnce = false;
 var dompurify_loaded = (typeof DOMPurify === 'function');
 
-var ca_gcm_custom_domains = ['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com'];
+var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
@@ -37,7 +37,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'muensterschezeitung.de', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'westfalen-blatt.de', 'wn.de', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, [ 'lesoleil.com'].concat(ca_gcm_custom_domains), nl_pg_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'muensterschezeitung.de', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'westfalen-blatt.de', 'wn.de', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_pg_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -2712,6 +2712,18 @@ else if (matchDomain('businessoffashion.com')) {
   removeDOMElement(...ads);
 }
 
+else if (matchDomain(ca_gcm_domains)) {
+  let paywall = document.querySelector('div._block_1dgevo');
+  if (paywall) {
+    removeDOMElement(paywall);
+    window.setTimeout(function () {
+      window.location.reload(true);
+    }, 500);
+  }
+  let counter = document.querySelector('div#paywall-banner-content');
+  removeDOMElement(counter);
+}
+
 else if (matchDomain(ca_torstar_domains)) {
   window.setTimeout(function () {
     let meter_banner = document.querySelector('.c-article-meter-banner');
@@ -3150,18 +3162,6 @@ else if (matchDomain('law360.com')) {
 
 else if (matchDomain('ledevoir.com')) {
   let counter = document.querySelector('.paywall-breakpoint-wrapper');
-  removeDOMElement(counter);
-}
-
-else if (matchDomain(['lesoleil.com'].concat(ca_gcm_custom_domains))) {
-  let paywall = document.querySelector('div._block_1dgevo');
-  if (paywall) {
-    removeDOMElement(paywall);
-    window.setTimeout(function () {
-      window.location.reload(true);
-    }, 500);
-  }
-  let counter = document.querySelector('div#paywall-banner-content');
   removeDOMElement(counter);
 }
 
