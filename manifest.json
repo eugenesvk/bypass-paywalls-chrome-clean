@@ -667,7 +667,6 @@
     "*://*.weborama.fr/*",
     "*://*.zephr.com/*",
     "*://*.amazonaws.com/*",
-    "*://*.apnarm.net.au/*",
     "*://*.bntech.io/*",
     "*://*.bwbx.io/*",
     "*://*.cedsdigital.it/*",
@@ -698,5 +697,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.8.1"
+  "version": "2.7.8.2"
 }

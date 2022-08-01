@@ -70,6 +70,8 @@ var amp_redirect;
 var cs_code;
 // load text from json
 var ld_json;
+// load text from Google webcache
+var ld_google_webcache;
 
 // custom: block javascript
 var block_js_custom = [];
@@ -91,6 +93,7 @@ function initSetRules() {
   amp_redirect = {};
   cs_code = {};
   ld_json = {};
+  ld_google_webcache = {};
   block_js_custom = [];
   block_js_custom_ext = [];
   blockedRegexes = {};
@@ -275,6 +278,11 @@ function set_rules(sites, sites_updated, sites_custom) {
           amp_unhide.push(domain);
         if (rule.ld_json) {
           ld_json[domain] = rule.ld_json;
+          if (!dompurify_sites.includes(domain))
+            dompurify_sites.push(domain);
+        }
+        if (rule.ld_google_webcache) {
+          ld_google_webcache[domain] = rule.ld_google_webcache;
           if (!dompurify_sites.includes(domain))
             dompurify_sites.push(domain);
         }
@@ -1103,6 +1111,9 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
           let ld_json_domain = '';
           if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), currentTabUrl))
             bg2csData.ld_json = ld_json[ld_json_domain];
+          let ld_google_webcache_domain = '';
+          if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), currentTabUrl))
+            bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
           ext_api.tabs.executeScript(tabId, {
             code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
           }, function () {

@@ -66,15 +66,6 @@ function export_options() {
 }
 
 function import_json(result) {
-							
-							 
-								
-					   
-							  
- 
-
-				 
-						   
   ext_api.storage.local.get({
     sites_custom: {}
   }, function (items) {
@@ -224,6 +215,7 @@ function edit_options() {
     document.querySelector('input[data-key="amp_unhide"]').checked = (edit_site.amp_unhide > 0);
     document.querySelector('input[data-key="amp_redirect"]').value = edit_site.amp_redirect ? edit_site.amp_redirect : '';
     document.querySelector('input[data-key="ld_json"]').value = edit_site.ld_json ? edit_site.ld_json : '';
+    document.querySelector('input[data-key="ld_google_webcache"]').value = edit_site.ld_google_webcache ? edit_site.ld_google_webcache : '';
     document.querySelector('select[data-key="referer"]').selectedIndex = referer_options.indexOf(edit_site.referer);
     document.querySelector('select[data-key="random_ip"]').selectedIndex = random_ip_options.indexOf(edit_site.random_ip);
   });
@@ -288,7 +280,8 @@ function renderOptions() {
       'block_regex': 0,
       'amp_unhide': 1,
       'amp_redirect': 0,
-      'ld_json': 0
+      'ld_json': 0,
+      'ld_google_webcache': 0
     };
     for (var key in add_checkboxes) {
       labelEl = document.createElement('label');
@@ -304,7 +297,8 @@ function renderOptions() {
           domain: 'example.com',
           block_regex: '\\.example\\.com\\/js\\/',
           amp_redirect: 'div.paywall',
-          ld_json: 'div.paywall|div.article'
+          ld_json: 'div.paywall|div.article',
+          ld_google_webcache: 'div.paywall|div.article',
         };
         if (placeholders[key])
           inputEl.placeholder = placeholders[key];
@@ -360,7 +354,8 @@ function renderOptions() {
       (sites_custom[key]['random_ip'] ? ' | random_ip: ' + sites_custom[key]['random_ip'] : '') +
       (sites_custom[key]['amp_unhide'] > 0 ? ' | amp_unhide' : '') +
       (sites_custom[key]['amp_redirect'] ? ' | amp_redirect' : '') +
-      (sites_custom[key]['ld_json'] ? ' | ld_json' : '');
+      (sites_custom[key]['ld_json'] ? ' | ld_json' : '') +
+      (sites_custom[key]['ld_google_webcache'] ? ' | ld_google_webcache' : '');	  
       optionEl.value = key;
       selectEl.add(optionEl);
     }

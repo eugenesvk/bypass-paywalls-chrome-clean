@@ -60,24 +60,44 @@ var bg2csData;
 // custom/updated sites: load text from json
 if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
   if (bg2csData.ld_json.includes('|')) {
-    let ld_json_split = bg2csData.ld_json.split('|');
-    let paywall_sel = ld_json_split[0];
-    let article_sel = ld_json_split[1];
-    let paywall = document.querySelector(paywall_sel);
-    if (paywall) {
-      removeDOMElement(paywall);
-      let json_script = getArticleJsonScript();
-      if (json_script) {
-        let json_text = parseHtmlEntities(JSON.parse(json_script.text).articleBody);
-        let content = document.querySelector(article_sel);
-        if (json_text && content) {
-          let parser = new DOMParser();
-          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
-          let content_new = doc.querySelector('div');
-          content.parentNode.replaceChild(content_new, content);
+    window.setTimeout(function () {
+      let ld_json_split = bg2csData.ld_json.split('|');
+      let paywall_sel = ld_json_split[0];
+      let article_sel = ld_json_split[1];
+      let paywall = document.querySelector(paywall_sel);
+      if (paywall) {
+        removeDOMElement(paywall);
+        let json_script = getArticleJsonScript();
+        if (json_script) {
+          let json_text = parseHtmlEntities(JSON.parse(json_script.text).articleBody);
+          let content = document.querySelector(article_sel);
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.parentNode.replaceChild(content_new, content);
+          }
         }
       }
-    }
+    }, 1000);
+  }
+}
+
+// custom/updated sites: load text from Google webcache
+if ((bg2csData !== undefined) && bg2csData.ld_google_webcache && dompurify_loaded) {
+  if (bg2csData.ld_google_webcache.includes('|')) {
+    window.setTimeout(function () {
+      let url = window.location.href;
+      let ld_google_webcache_split = bg2csData.ld_google_webcache.split('|');
+      let paywall_sel = ld_google_webcache_split[0];
+      let article_sel = ld_google_webcache_split[1];
+      let paywall = document.querySelector(paywall_sel);
+      if (paywall) {
+        removeDOMElement(paywall);
+        let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+        replaceDomElementExt(url_cache, true, false, article_sel);
+      }
+    }, 1000);
   }
 }
 
