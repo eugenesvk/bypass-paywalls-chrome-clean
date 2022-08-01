@@ -381,7 +381,8 @@ Grouped in options:\
 Grouped in options:\
 *Sanoma Media Finland* sites like (opt-in to custom sites for unlisted/regional sites)\
 [Aamulehti](https://www.aamulehti.fi) -
-[Helsingin Sanomat](https://www.hs.fi)
+[Helsingin Sanomat](https://www.hs.fi) -
+[Suomen Sotilas](https://suomensotilas.fi)
 
 *Alma Talent* sites like\
 [Arvopaperi](https://www.arvopaperi.fi) -

@@ -1060,6 +1060,12 @@ else if (matchDomain('nyteknik.se')) {
     locked_article.classList.remove('locked-article');
 }
 
+else if (matchDomain('suomensotilas.fi')) {
+  let obscured = document.querySelector('div.epfl-pw-obscured');
+  if (obscured)
+    obscured.classList.remove('epfl-pw-obscured');
+}
+
 else
   csDone = true;
 

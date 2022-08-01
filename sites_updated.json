@@ -72,6 +72,16 @@
     "allow_cookies": 1,
     "block_regex": "\\/loader-cdn\\.azureedge\\.net\\/"
   },
+  "Suomen Sotilas": {
+    "domain": "suomensotilas.fi",
+    "allow_cookies": 1,
+    "block_regex": "\\/suomensotilas\\.fi\\/wp-content\\/plugins\\/epflpw\\/js\\/pw\\.js",
+    "cs_code": [{
+        "cond": "div.epfl-pw-obscured",
+        "rm_class": "epfl-pw-obscured"
+      }
+    ]
+  },
   "Winnipeg Free Press": {
     "domain": "winnipegfreepress.com",
     "allow_cookies": 1,

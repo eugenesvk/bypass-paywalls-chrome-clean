@@ -1598,6 +1598,11 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
+  "Suomen Sotilas": {
+    domain: "suomensotilas.fi",
+    allow_cookies: 1,
+    block_regex: /\/suomensotilas\.fi\/wp-content\/plugins\/epflpw\/js\/pw\.js/
+  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,
