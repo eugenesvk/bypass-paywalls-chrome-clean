@@ -489,6 +489,20 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 ["blocking"]
 );
 
+// Google AMP cache redirect
+ext_api.webRequest.onBeforeRequest.addListener(function (details) {
+  var url = details.url.split('?')[0];
+  var updatedUrl;
+  if (matchUrlDomain('cdn.ampproject.org', url))
+    updatedUrl = 'https://' + url.split(/cdn\.ampproject\.org\/[a-z]\/s\//)[1];
+  else if (matchUrlDomain('google.com', url))
+    updatedUrl = 'https://' + url.split(/\.google\.com\/amp\/s\//)[1];
+  return { redirectUrl: decodeURIComponent(updatedUrl) };
+},
+{urls:["*://*.cdn.ampproject.org/*/s/*", "*://*.google.com/amp/s/*"], types:["main_frame"]},
+["blocking"]
+);
+
 // inkl bypass
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details)) {

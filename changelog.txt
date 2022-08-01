@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Tagesspiegel.de
+Redirect Google AMP cache (opt-in to custom sites)
 
 * v2.7.8.0 (2022-07-31)
 Add Crusoe (Brazil)
