@@ -709,6 +709,17 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
+else if (matchDomain('tagesspiegel.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.Rc6');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    replaceDomElementExt(url_cache, true, false, 'div.Af');
+  }
+}
+
 else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de'])) {
   let url = window.location.href;
   if (url.includes('/amp/')) {

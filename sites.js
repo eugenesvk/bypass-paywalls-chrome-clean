@@ -341,6 +341,10 @@ var defaultSites = {
     domain: "spiegel.de",
     allow_cookies: 1
   },
+  "Der Tagesspiegel": {
+    domain: "tagesspiegel.de",
+    allow_cookies: 1
+  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
@@ -2196,4 +2200,4 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // sites with no fix (background)
 var nl_ad_region_domains = ['ad.nl', 'bd.nl', 'ed.nl', 'tubantia.nl', 'bndestem.nl', 'pzc.nl', 'destentor.nl', 'gelderlander.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'handelsblatt.com', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'wiwo.de', 'ynet.co.il'].concat(nl_ad_region_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'handelsblatt.com', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.de', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'wiwo.de', 'ynet.co.il'].concat(nl_ad_region_domains);

@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Tagesspiegel.de
 
 * v2.7.8.0 (2022-07-31)
 Add Crusoe (Brazil)
