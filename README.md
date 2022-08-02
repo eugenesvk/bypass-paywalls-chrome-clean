@@ -581,6 +581,7 @@ Grouped in options:\
 
 Grouped in options:\
 *Mediahuis België* sites like:\
+[De Standaard](https://www.standaard.be) -
 [Gazet van Antwerpen](https://www.gva.be) -
 [Het Belang van Limburg](https://www.hbvl.be) -
 [Het Nieuwsblad](https://www.nieuwsblad.be)\

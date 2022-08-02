@@ -27,6 +27,7 @@ var restrictions = {
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
+  'standaard.be': /^((?!\.standaard\.be\/plus\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'repubblica.it': /^((?!\/video\.repubblica\.it\/).)*$/,
@@ -1435,15 +1436,17 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
           let parser = new DOMParser();
           let doc = parser.parseFromString(html, 'text/html');
           let article_new = doc.querySelector(message.data.selector_source);
-          message.data.html = article_new.outerHTML;
-          ext_api.tabs.query({
-            active: true,
-            currentWindow: true
-          }, function (tabs) {
-            if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-              ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-            }
-          });
+          if (article_new) {
+            message.data.html = article_new.outerHTML;
+            ext_api.tabs.query({
+              active: true,
+              currentWindow: true
+            }, function (tabs) {
+              if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+                ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
+              }
+            });
+          }
         });
       }
     }).catch(function (err) {
