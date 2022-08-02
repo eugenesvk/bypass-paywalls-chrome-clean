@@ -731,12 +731,12 @@ else if (matchDomain('spiegel.de')) {
 
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.Rc6');
+  let paywall = document.querySelector('div.Rc6, .ts-paywall-blurred');
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
-    replaceDomElementExt(url_cache, true, false, 'div.Af');
+    replaceDomElementExt(url_cache, true, false, 'div.Af, [class*="ts-paywall"]');
   }
 }
 
