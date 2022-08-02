@@ -94,7 +94,7 @@ if ((bg2csData !== undefined) && bg2csData.ld_google_webcache && dompurify_loade
       let paywall = document.querySelector(paywall_sel);
       if (paywall) {
         removeDOMElement(paywall);
-        let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+        let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
         replaceDomElementExt(url_cache, true, false, article_sel);
       }
     }, 1000);
@@ -616,7 +616,7 @@ else if (matchDomain('golem.de')) {
     csDoneOnce = true;
     if (url.includes('?page='))
       url = url.replace('.html', '-' + url.split('?page=')[1] + '.html').split('?')[0];
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'article');
     window.setTimeout(function () {
       let list_pages = document.querySelectorAll('ol.list-pages > li >a[href]');
@@ -735,7 +735,7 @@ else if (matchDomain('tagesspiegel.de')) {
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div.Af, [class*="ts-paywall"]');
   }
 }
@@ -2056,6 +2056,24 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
   removeDOMElement(top_ad);
 }
 
+else if (matchDomain('limburger.nl')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div[data-cj-root="subscription-wall"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div[data-fragment-name="articleDetail"]');
+    window.setTimeout(function () {
+      let overlay = document.querySelector('div.cj-root');
+      removeDOMElement(overlay);
+      let noscroll = document.querySelector('html.is-dialog-active');
+      if (noscroll)
+        noscroll.classList.remove('is-dialog-active');
+    }, 1000); // Delay (in milliseconds)
+  }
+}
+
 else if (matchDomain(nl_mediahuis_region_domains)) {
   window.setTimeout(function () {
     let close_button = document.querySelector('button[data-testid="button-close"]');
@@ -2287,7 +2305,7 @@ else if (matchDomain('prospectmagazine.co.uk')) {
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'main');
   }
 }
@@ -3349,7 +3367,7 @@ else if (matchDomain('newleftreview.org')) {
     if (paywall) {
       removeDOMElement(paywall);
       csDoneOnce = true;
-      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
       replaceDomElementExt(url_cache, true, false, 'div.article-page');
     }
   }, 500);

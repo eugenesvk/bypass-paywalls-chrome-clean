@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Limburger.nl
 Add SuomenSotilas.fi
 Add Tagesspiegel.de
 Redirect Google AMP cache (opt-in to custom sites)

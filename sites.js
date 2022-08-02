@@ -329,6 +329,10 @@ var defaultSites = {
   "Dark Reading": {
     domain: "darkreading.com"
   },
+  "De Limburger": {
+    domain: "limburger.nl",
+    allow_cookies: 1
+  },
   "De Tijd": {
     domain: "tijd.be",
     referer: "google"
