@@ -6,6 +6,7 @@ Add Limburger.nl
 Add Standaard.be
 Add SuomenSotilas.fi
 Add Tagesspiegel.de
+Fix The Athletic (amp)
 Redirect Google AMP cache (opt-in to custom sites)
 Update block general paywall script (limit Evolok WordPress)
 Update custom sites (load text from Google webcache)

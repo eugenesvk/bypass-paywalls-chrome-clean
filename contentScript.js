@@ -3675,10 +3675,11 @@ else if (matchDomain('theathletic.com')) {
       removeDOMElement(...paywall);
       window.setTimeout(function () {
         window.location.href = amphtml.href;
-      }, 500);
+      }, 1000);
     }
   } else {
     amp_unhide_subscr_section();
+    amp_unhide_access_hide('', '*="NOT granted"');
     let subscr_actions = document.querySelectorAll('[subscriptions-actions]');
     removeDOMElement(...subscr_actions);
     let layout_fail = document.querySelectorAll('.col-sm-12');
