@@ -7,9 +7,10 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
-var de_funke_media_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
+var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
+var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var es_epiberica_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
@@ -38,7 +39,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'muensterschezeitung.de', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'westfalen-blatt.de', 'wn.de', 'wsj.com'].concat(de_funke_media_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_pg_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_pg_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -518,13 +519,6 @@ else if (matchDomain('cicero.de')) {
   removeDOMElement(...urban_ad_sign);
 }
 
-else if (matchDomain(de_funke_media_domains) || document.querySelector('a[href="https://www.funkemedien.de/"]')) {
-  if (window.location.search.startsWith('?service=amp'))
-    amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', 'amp-ad, amp-embed, amp-fx-flying-carpet');
-  else
-    sessionStorage.setItem('deobfuscate', 'true');
-}
-
 else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
     let paywall_z = document.querySelector('.c-red-carpet');
@@ -740,23 +734,26 @@ else if (matchDomain('tagesspiegel.de')) {
   }
 }
 
-else if (matchDomain(['westfalen-blatt.de', 'wn.de', 'muensterschezeitung.de'])) {
+else if (matchDomain(de_westfalen_medien_domains)) {
   let url = window.location.href;
   if (url.includes('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed, section[class^="fp-ad"]');
   } else {
-    let paywall = document.querySelector('.fp-article-paywall-dialog, .fp-article-paywall');
+    let paywall = document.querySelector('.fp-article-paywall');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall) {
       removeDOMElement(paywall);
-      let gallery_no_amp = false;
-      if (matchDomain('westfalen-blatt.de')) {
-        let article_body = document.querySelector('.fp-article__body');
-        gallery_no_amp = url.includes('/fotos/') || (!article_body && document.querySelector('.fp-gallery-carousel'));
-      }
-      if (!gallery_no_amp)
-        window.location.href = url.replace('.de/', '.de/amp/');
+      if (amphtml)
+        window.location.href = amphtml.href;
     }
   }
+}
+
+else if (matchDomain(de_funke_medien_domains) || document.querySelector('a[href="https://www.funkemedien.de/"]')) {
+  if (window.location.search.startsWith('?service=amp'))
+    amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', 'amp-ad, amp-embed, amp-fx-flying-carpet');
+  else
+    sessionStorage.setItem('deobfuscate', 'true');
 }
 
 else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domains)) {

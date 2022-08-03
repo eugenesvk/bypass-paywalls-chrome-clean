@@ -25,7 +25,7 @@ If you want to install the latest [master ZIP-file from GitLab](https://gitlab.c
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked folder (of master-zip)).
 
 By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
-You can also install the custom add-on version (with host permissions for all sites): [Bypass Paywalls Clean (c)](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean)
+You can also install the custom add-on version (with host permissions for all sites): [Bypass Paywalls Clean (c)](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean-custom)
 
 ### Update
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
@@ -492,9 +492,8 @@ Grouped in options:\
 [Golem.de](https://www.golem.de) -
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -
-[Krautreporter.de](https://krautreporter.de) -
+[Krautreporter](https://krautreporter.de) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
-[Münstersche Zeitung](https://www.muensterschezeitung.de) -
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Nürnberger Nachrichten](https://www.nn.de) -
@@ -503,9 +502,7 @@ Grouped in options:\
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
 [Volksstimme](https://www.volksstimme.de) -
-[Westdeutsche Zeitung](https://www.wz.de) -
-[Westfalen-Blatt](https://www.westfalen-blatt.de) -
-[Westfälische Nachrichten](https://www.wn.de)
+[Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\
 *Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
@@ -527,7 +524,11 @@ Grouped in options:\
 [Märkische Allgemeine](https://www.maz-online.de) -
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
-[RedaktionsNetzwerk Deutschland](https://www.rnd.de)
+[RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
+*Westfälische Mediengruppe* sites like\
+[Münstersche Zeitung](https://www.muensterschezeitung.de) -
+[Westfalen-Blatt](https://www.westfalen-blatt.de) -
+[Westfälische Nachrichten](https://www.wn.de)
 
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -

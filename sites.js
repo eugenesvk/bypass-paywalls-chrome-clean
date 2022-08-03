@@ -1258,11 +1258,6 @@ var defaultSites = {
   "Mountain View Voice": {
     domain: "mv-voice.com"
   },
-  "Münstersche Zeitung": {
-    allow_cookies: 1,
-    domain: "muensterschezeitung.de",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
-  },
   "National Geographic USA": {
     domain: "nationalgeographic.com",
     allow_cookies: 1,
@@ -2010,17 +2005,15 @@ var defaultSites = {
     domain: "wz.de",
     useragent: "googlebot"
   },
-  "Westfalen-Blatt": {
-    domain: "westfalen-blatt.de",
+  "Westfälische Mediengruppe": {
+    domain: "###_de_westfalen_medien",
+    group: [
+      "muensterschezeitung.de",
+      "westfalen-blatt.de",
+      "wn.de"
+    ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/.+\/v\d\/amp-subscriptions-.+\.js/,
-    useragent: "googlebot"
-  },
-  "Westfälische Nachrichten": {
-    domain: "wn.de",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
-    useragent: "googlebot"
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Winnipeg Free Press": {
     domain: "winnipegfreepress.com",

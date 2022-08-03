@@ -9,24 +9,6 @@
       }
     ]
   },
-  "Folha de S. Paulo": {
-    "domain": "###_br_folha",
-    "group": [
-      "folha.uol.com.br",
-      "blogfolha.uol.com.br"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.folha\\.uol\\.com\\.br\\/paywall\\/js\\/|paywall\\.folha\\.uol\\.com\\.br\\/|js\\.matheranalytics\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot",
-    "amp_redirect": {
-      "paywall": ".revista--interna__assineonly"
-    },
-    "amp_unhide": 1
-  },
-  "Foreign Affairs": {
-    "domain": "foreignaffairs.com",
-    "block_regex": "\\.foreignaffairs\\.com\\/modules\\/custom\\/fa_paywall_js\\/js\\/paywall\\.js"
-  },
   "Irish Independent (setCookie opt-in)": {
     "domain": "independent.ie",
     "allow_cookies": 1,
@@ -37,40 +19,11 @@
       }
     ]
   },
-  "Krautreporter.de": {
-    "domain": "krautreporter.de",
-    "cs_code": [{
-        "cond": ".js-article-paywall",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": ".js-paywall-divider",
-            "rm_elem": 1
-          }, {
-            "cond": "#steady-checkout",
-            "rm_elem": 1
-          }, {
-            "cond": ".blurred",
-            "rm_class": "blurred"
-          }
-        ]
-      }
-    ]
-  },
   "Law.com (free articles only)": {
     "domain": "law.com",
     "allow_cookies": 1,
     "remove_cookies": 1,
     "referer": "facebook"
-  },
-  "Le Devoir": {
-    "domain": "ledevoir.com",
-    "block_regex": "\\.tinypass\\.com\\/",
-    "remove_cookies_select_drop": ["pw6"]
-  },
-  "Saltwire Network": {
-    "domain": "saltwire.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/loader-cdn\\.azureedge\\.net\\/"
   },
   "Suomen Sotilas": {
     "domain": "suomensotilas.fi",

@@ -5,7 +5,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'];
+const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'].concat(de_westfalen_medien_domains);
 const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'golem.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'limburger.nl', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'tagesspiegel.de', 'techinasia.com', 'theathletic.com', 'timesofindia.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
