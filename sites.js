@@ -337,10 +337,6 @@ var defaultSites = {
     domain: "tijd.be",
     referer: "google"
   },
-  "DeMorgen": {
-    domain: "demorgen.be",
-    group_rule: "###_gr_nl_pg_domains"
-  },
   "Der Spiegel": {
     domain: "spiegel.de",
     allow_cookies: 1
@@ -376,6 +372,18 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.editorialedomani\.it\/pelcro\.js|js\.pelcro\.com\/)/,
     useragent: "googlebot"
+  },
+  "DPG Media (not ADR)": {
+    domain: "###_nl_dpg_media",
+    group: [
+      "demorgen.be",
+      "humo.be",
+      "parool.nl",
+      "trouw.nl",
+      "volkskrant.nl"
+    ],
+    allow_cookies: 1,
+    block_regex: "(\\.{domain}\\/temptation\\/resolve|temptation\\.{domain}\\/rest\\/.+\\/_resolve_from_website)"
   },
   "Eastwest.eu": {
     domain: "eastwest.eu",
@@ -814,10 +822,6 @@ var defaultSites = {
   "Huffingtonpost.it": {
     domain: "huffingtonpost.it",
     group_rule: "###_gr_it_repubblica_domains"
-  },
-  "Humo.be": {
-    domain: "humo.be",
-    group_rule: "###_gr_nl_pg_domains"
   },
   "Il Fatto Quotidiano": {
     domain: "ilfattoquotidiano.it",
@@ -1403,10 +1407,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
   },
-  "Parool": {
-    domain: "parool.nl",
-    group_rule: "###_gr_nl_pg_domains"
-  },
   "Penske Media Corporation": {
     domain: "###_usa_penske_media",
     allow_cookies: 1,
@@ -1949,10 +1949,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tribdss\.com\/|\.blueconic\.net\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
   },
-  "Trouw": {
-    domain: "trouw.nl",
-    group_rule: "###_gr_nl_pg_domains"
-  },
   "UnHerd": {
     domain: "unherd.com",
     allow_cookies: 1,
@@ -1979,10 +1975,6 @@ var defaultSites = {
     domain: "voguebusiness.com",
     useragent: "googlebot",
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
-  },
-  "Volkskrant": {
-    domain: "volkskrant.nl",
-    group_rule: "###_gr_nl_pg_domains"
   },
   "Volksstimme": {
     domain: "volksstimme.de",
@@ -2031,11 +2023,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/,
     useragent: "googlebot"
-  },
-  "###_gr_nl_pg_domains": {
-    group_rule_domains: ["parool.nl", "trouw.nl", "volkskrant.nl", "humo.be", "demorgen.be"],
-    remove_cookies_select_drop: ["TID_ID"],
-    block_regex: "\\.{domain}\\/temptation\\/resolve"
   },
   "* Block Paywall-scripts (opt-in to custom sites to enable also for non-listed sites)": {
     domain: "###"

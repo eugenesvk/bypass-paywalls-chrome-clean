@@ -565,22 +565,23 @@ Grouped in options:\
 
 ##### Netherlands/Flanders
 [De Limburger](https://www.limburger.nl) -
-[De Morgen](https://www.demorgen.be) -
 [De Tijd](https://www.tijd.be) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
-[Humo](https://www.humo.be) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
-[Parool](https://www.parool.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
-[Trouw](https://www.trouw.nl) -
-[Volkskrant](https://www.volkskrant.nl) -
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
+*DPG Media (not ADR)* sites like\
+[De Morgen](https://www.demorgen.be) -
+[De Volkskrant](https://www.volkskrant.nl) -
+[Humo](https://www.humo.be) -
+[Parool](https://www.parool.nl) -
+[Trouw](https://www.trouw.nl)\
 *Mediahuis België* sites like\
 [De Standaard](https://www.standaard.be) -
 [Gazet van Antwerpen](https://www.gva.be) -

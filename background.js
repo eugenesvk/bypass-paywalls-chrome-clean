@@ -226,7 +226,7 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexes[domain] = rule.block_regex;
           else {
             try {
-              blockedRegexes[domain] = new RegExp(rule.block_regex.replace('{domain}', domain.replace(/\./g, '\\.').replace(/(^\/|\/$)/g, '')));
+              blockedRegexes[domain] = new RegExp(rule.block_regex.replace(/{domain}/g, domain.replace(/\./g, '\\.').replace(/(^\/|\/$)/g, '')));
             } catch (e) {
               false;
             }
