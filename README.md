@@ -184,7 +184,7 @@ Grouped in options:\
 [The Wrap](https://www.thewrap.com)
 
 Grouped in options:\
-*Condé Nast magazines* sites like:\
+*Condé Nast magazines* sites like\
 [Architectural Digest](https://www.architecturaldigest.com) -
 [Bon Appétit](https://www.bonappetit.com) -
 [GC](https://www.gq.com) -
@@ -192,7 +192,7 @@ Grouped in options:\
 [Vanity Fair](https://www.vanityfair.com) -
 [Vogue USA](https://www.vogue.com) -
 [Wired](https://www.wired.com)\
-*Hearst Communications magazines* sites like:\
+*Hearst Communications magazines* sites like\
 [Bicycling](https://www.bicycling.com) -
 [Cosmopolitan](https://www.cosmopolitan.com) -
 [Country Living](https://www.countryliving.com) -
@@ -208,7 +208,7 @@ Grouped in options:\
 [The Hollywood Reporter](https://www.hollywoodreporter.com) -
 [Town & Country](https://www.townandcountrymag.com) -
 [Women's Health](https://www.womenshealthmag.com)\
-*Outside magazines* sites like:\
+*Outside magazines* sites like\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -
 [Better Nutrition](https://www.betternutrition.com) -
@@ -228,7 +228,7 @@ Grouped in options:\
 [Velo News](https://www.velonews.com) -
 [Women's Running](https://www.womensrunning.com) -
 [Yoga Journal](https://www.yogajournal.com)\
-*Penske Media Corporation* sites like:\
+*Penske Media Corporation* sites like\
 [Billboard](https://www.billboard.com) -
 [Rolling Stone](https://www.rollingstone.com) -
 [Sportico](https://www.sportico.com) -
@@ -257,7 +257,7 @@ Grouped in options:\
 
 [USA Today](https://www.usatoday.com)\
 Grouped in options:\
-*Advance Local* sites like:\
+*Advance Local* sites like\
 [AL/Alabama](https://www.al.com) -
 [MLive/Michigan](https://www.mlive.com) -
 [NJ/New Jersey](https://www.nj.com) -
@@ -581,7 +581,7 @@ Grouped in options:\
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
-*Mediahuis België* sites like:\
+*Mediahuis België* sites like\
 [De Standaard](https://www.standaard.be) -
 [Gazet van Antwerpen](https://www.gva.be) -
 [Het Belang van Limburg](https://www.hbvl.be) -
@@ -608,16 +608,13 @@ Grouped in options:\
 [El Confidencial](https://www.elconfidencial.com) -
 [El Diario.es](https://www.eldiario.es) -
 [El Español](https://www.elespanol.com) -
-[El Mundo](https://www.elmundo.es) -
 [El País](https://elpais.com) -
 [El Periódico de Catalunya](https://www.elperiodico.com) -
-[Expansión](https://www.expansion.com) -
 [La Vanguardia](https://www.lavanguardia.com) -
-[Marca](https://www.marca.com) -
 [Política Exterior](https://www.politicaexterior.com)
 
 Grouped in options:\
-*ARA* sites like:\
+*ARA* sites like\
 [Ara.cat](https://www.ara.cat) -
 [Ara Balears](https://www.arabalears.cat)\
 *Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted):\
@@ -630,6 +627,10 @@ Grouped in options:\
 [La Provincia](https://www.laprovincia.es) -
 [Levante-EMV](https://www.levante-emv.com) -
 [Mallorca Zeitung](https://www.mallorcazeitung.es)\
+*Grupo Unidad Editorial* sites like\
+[El Mundo](https://www.elmundo.es) -
+[Expansión](https://www.expansion.com) -
+[Marca](https://www.marca.com)\
 *Grupo Vocento* (ABC regional) sites like\
 [Diario Vasco](https://www.diariovasco.com) -
 [El Comercio](https://www.elcomercio.es) -
@@ -773,7 +774,7 @@ Grouped in options:\
 ##### Mexico
 [Mexico News Daily](https://mexiconewsdaily.com)
 ##### Peru
-*Grupo El Comercio* sites like:
+*Grupo El Comercio* sites like
 [Diario Correo](https://diariocorreo.pe) -
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)

@@ -7,6 +7,7 @@ Add Standaard.be
 Add SuomenSotilas.fi
 Add Tagesspiegel.de
 Fix The Athletic (amp)
+Grouping Unidad Editorial
 Grouping Westfaelische Mediengruppe
 Redirect Google AMP cache (opt-in to custom sites)
 Update block general paywall script (limit Evolok WordPress)

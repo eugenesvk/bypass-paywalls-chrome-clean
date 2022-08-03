@@ -406,10 +406,6 @@ var defaultSites = {
     block_regex: /\.(elmercurio\.com|emol\.cl)\/(.+\/)?js\/(.+\/)?(modal|merPramV\d|PramModal\.min)\.js/,
     useragent: "googlebot"
   },
-  "El Mundo": {
-    domain: "elmundo.es",
-    group_rule: "###_gr_es_unidad_domains"
-  },
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
@@ -469,10 +465,6 @@ var defaultSites = {
   "Exame": {
     domain: "exame.com",
     block_regex: /\/exame\.com\/.+\/js\/pywll-dyn\.js/
-  },
-  "Expansión": {
-    domain: "expansion.com",
-    group_rule: "###_gr_es_unidad_domains"
   },
   "Finance.si": {
     domain: "finance.si",
@@ -722,6 +714,15 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
+  "Grupo Unidad Editorial": {
+    domain: "###_es_unidad",
+    group: [
+      "elmundo.es",
+      "expansion.com",
+      "marca.com"],
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "Grupo Vocento": {
     domain: "###_es_grupo_vocento",
@@ -1138,10 +1139,6 @@ var defaultSites = {
     domain: "mainichi.jp",
     allow_cookies: 1,
     useragent: "googlebot"
-  },
-  "Marca": {
-    domain: "marca.com",
-    group_rule: "###_gr_es_unidad_domains"
   },
   "Marianne.net": {
     domain: "marianne.net",
@@ -2029,11 +2026,6 @@ var defaultSites = {
     group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
-  "###_gr_es_unidad_domains": {
-    group_rule_domains: ["elmundo.es", "expansion.com", "marca.com"],
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
-  },
   "###_gr_it_repubblica_domains": {
     group_rule_domains: ["gelocal.it", "huffingtonpost.it", "ilsecoloxix.it", "italian.tech", "lastampa.it", "lescienze.it", "limesonline.com", "repubblica.it"],
     allow_cookies: 1,
@@ -2195,6 +2187,7 @@ var au_comm_media_domains = grouped_sites['###_au_comm_media'];
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var be_mediahuis_domains = grouped_sites['###_be_mediahuis'];
 var ca_gcm_domains = grouped_sites['###_ca_gcm'];
+var de_westfalen_medien_domains = grouped_sites['###_de_westfalen_medien'];
 var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_repubblica_domains = defaultSites['###_gr_it_repubblica_domains']['group_rule_domains'];
 var medium_custom_domains = grouped_sites['###_medium_custom'];

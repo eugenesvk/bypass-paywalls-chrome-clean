@@ -1144,7 +1144,7 @@ else if (matchDomain('elespanol.com')) {
 else if (matchDomain(es_unidad_domains)) {
   let premium = document.querySelector('.ue-c-article__premium');
   let url = window.location.href;
-  if (!window.location.hostname.startsWith('amp.')) {
+  if (!window.location.hostname.match(/^amp(-\w{2})?\./)) {
     if (premium) {
       removeDOMElement(premium);
       window.location.href = url.replace('/www.', '/amp.');
