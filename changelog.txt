@@ -7,7 +7,7 @@ Add Standaard.be
 Add SuomenSotilas.fi
 Fix Australian Community Media (css)
 Add Tagesspiegel.de
-Fix The Athletic (amp)
+Fix The Athletic (css & amp)
 Grouping DPG Media (not ADR)
 Grouping Unidad Editorial
 Grouping Westfaelische Mediengruppe

@@ -2071,7 +2071,7 @@ else if (matchDomain(nl_mediahuis_region_domains)) {
   }, 500);
 }
 
-else if (false && matchDomain(nl_dpg_media_domains)) {
+else if (matchDomain(nl_dpg_media_domains)) {
   let banners = document.querySelectorAll('div[data-temptation-position^="PAGE_"], div[class^="ad--"]');
   let paywall = document.querySelectorAll('[data-temptation-position^="ARTICLE_"]');
   removeDOMElement(...banners, ...paywall);
@@ -3666,34 +3666,31 @@ else if (matchDomain('the-american-interest.com')) {
 
 else if (matchDomain('theathletic.com')) {
   if (!window.location.search.match(/(\?|&)amp/)) {
-    let paywall = document.querySelectorAll('div#paywall-container, div[subscriptions-action="subscribe"], a.headline-paywall, div#slideup-paywall');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall.length && amphtml) {
-      removeDOMElement(...paywall);
-      window.setTimeout(function () {
-        window.location.href = amphtml.href;
-      }, 1000);
+    let paywall = document.querySelector('div#slideup-paywall');
+    if (paywall) {
+      let overlays = document.querySelectorAll('div[id*="overlay"], div.gPmuKa');
+      removeDOMElement(paywall, ...overlays);
+      let body = document.querySelector('body');
+      if (body) {
+        body.style.overflow = 'visible';
+        body.style.position = 'relative';
+      }
+    } else {
+      let headline_paywall = document.querySelectorAll('a.headline-paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (headline_paywall.length && amphtml) {
+        removeDOMElement(...headline_paywall);
+        window.setTimeout(function () {
+          window.location.href = amphtml.href;
+        }, 1000);
+      }
     }
   } else {
     amp_unhide_subscr_section();
     amp_unhide_access_hide('', '*="NOT granted"');
-    let subscr_actions = document.querySelectorAll('[subscriptions-actions]');
-    removeDOMElement(...subscr_actions);
-    let layout_fail = document.querySelectorAll('.col-sm-12');
-    for (let elem of layout_fail) {
-      elem.classList.remove('col-sm-12');
-      elem.style = 'padding: 0px 15px;';
-    }
-    let podcast = document.querySelector('div[id^="podcast-clip-"]');
-    if (podcast) {
-      let podcast_src = podcast.innerHTML.replace(/<amp-/g, '<').replace(/<\/amp-/g, '</');
-      let parser = new DOMParser();
-      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(podcast_src, {ADD_TAGS: ['iframe'], ADD_ATTR: ['layout', 'sandbox']}) + '</div>', 'text/html');
-      let podcast_new = doc.querySelector('div');
-      if (podcast_new)
-        podcast.parentNode.replaceChild(podcast_new, podcast);
-    }
   }
+  let apron = document.querySelector('div#free-apron-cta, div.slideup-free-apron-container');
+  removeDOMElement(apron);
 }
 
 else if (matchDomain('theatlantic.com')) {
