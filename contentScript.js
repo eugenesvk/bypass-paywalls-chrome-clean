@@ -280,10 +280,10 @@ else {
   let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'newcastleherald.com.au', 'northerndailyleader.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
   let au_comm_media_link = document.querySelector('a[href^="https://australiancommunitymedia.zendesk.com"]');
   if (matchDomain(au_comm_media_domains) || au_comm_media_link) {
-    let mask = document.querySelector('div[style^="-webkit-mask-image"]');
+    let mask = document.querySelector('div[style*="mask-image"]');
     if (mask) {
       mask.removeAttribute('style');
-      let div_hidden = document.querySelectorAll('div[class="hidden"]');
+      let div_hidden = document.querySelectorAll('div.hidden');
       for (let elem of div_hidden)
         elem.classList.remove('hidden');
     } else {
@@ -299,7 +299,7 @@ else {
     if (noscroll)
       noscroll.removeAttribute('style');
     let story_generic_iframe = document.querySelector('.story-generic__iframe');
-    let ads = document.querySelectorAll('.ad-placeholder, .sticky, [id*="-container"]');
+    let ads = document.querySelectorAll('.ad-placeholder, .sticky, [id*="-container"], #hindsight-ads-iframe');
     removeDOMElement(story_generic_iframe, blocker, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
@@ -1144,7 +1144,7 @@ else if (matchDomain('elespanol.com')) {
 else if (matchDomain(es_unidad_domains)) {
   let premium = document.querySelector('.ue-c-article__premium');
   let url = window.location.href;
-  if (!window.location.hostname.match(/^amp(-\w{2})?\./)) {
+  if (!window.location.hostname.match(/^amp(-[a-z]{2})?\./)) {
     if (premium) {
       removeDOMElement(premium);
       window.location.href = url.replace('/www.', '/amp.');
@@ -2071,7 +2071,7 @@ else if (matchDomain(nl_mediahuis_region_domains)) {
   }, 500);
 }
 
-else if (matchDomain(nl_dpg_media_domains)) {
+else if (false && matchDomain(nl_dpg_media_domains)) {
   let banners = document.querySelectorAll('div[data-temptation-position^="PAGE_"], div[class^="ad--"]');
   let paywall = document.querySelectorAll('[data-temptation-position^="ARTICLE_"]');
   removeDOMElement(...banners, ...paywall);

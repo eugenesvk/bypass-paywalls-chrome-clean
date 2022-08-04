@@ -29,7 +29,7 @@ You can also install the custom add-on version (with host permissions for all si
 
 ### Update
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
-You can also check for update of site rules at startup (opt-in).\
+You can also check for update of site rules at startup (opt-in); only available until about 10 days after fix-release.\
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
 #### Android
@@ -156,7 +156,7 @@ Grouped in options:\
 ##### Magazines/Blogs
 [Medium](https://www.medium.com)*\
 Grouped in options:\
-*Medium custom domains* like (opt-in to custom sites for unlisted):\
+*Medium custom domains* like (opt-in to custom sites for unlisted)\
 [Better Programming](https://betterprogramming.pub) -
 [Towards Data Science](https://towardsdatascience.com)
 
@@ -593,7 +593,7 @@ Grouped in options:\
 [Leidsch Dagblad](https://www.leidschdagblad.nl) -
 [IJmuider Courant](https://www.ijmuidercourant.nl) -
 [De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
-*Mediahuis Noord* sites like (opt-in to custom sites for unlisted):\
+*Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)
 
@@ -618,7 +618,7 @@ Grouped in options:\
 *ARA* sites like\
 [Ara.cat](https://www.ara.cat) -
 [Ara Balears](https://www.arabalears.cat)\
-*Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted):\
+*Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted)\
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
 [El Periódico de España](https://www.epe.es) -

@@ -5,6 +5,7 @@ Post-release
 Add Limburger.nl
 Add Standaard.be
 Add SuomenSotilas.fi
+Fix Australian Community Media (css)
 Add Tagesspiegel.de
 Fix The Athletic (amp)
 Grouping DPG Media (not ADR)
