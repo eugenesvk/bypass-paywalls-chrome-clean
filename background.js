@@ -976,7 +976,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
       (matchUrlDomain('usatoday.com', header_referer) && matchUrlDomain('gannett-cdn.com', details.url)) ||
       (matchUrlDomain(ca_gcm_domains, header_referer) && matchUrlDomain('gcm.omerlocdn.com', details.url)) ||
-      (matchUrlDomain(it_repubblica_domains, header_referer) && matchUrlDomain(['repstatic.it'], details.url));
+      (matchUrlDomain(it_gedi_domains, header_referer) && matchUrlDomain(['repstatic.it'], details.url));
   }
 
   if (!isSiteEnabled(details) && !allow_ext_source) {
@@ -1018,7 +1018,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
       setReferer = true;
     }
     if (requestHeader.name === 'User-Agent') {
-      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr'].concat(it_repubblica_domains), details.url);
+      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr'].concat(it_gedi_domains), details.url);
     }
     return requestHeader;
   });

@@ -535,23 +535,24 @@ Grouped in options:\
 [Corriere dello Sport](https://www.corrieredellosport.it) -
 [Domani](https://editorialedomani.it) -
 [Eastwest](https://eastwest.eu) -
-[GElocal.it](https://quotidiani.gelocal.it) -
-[Huffingtonpost.it](https://www.huffingtonpost.it) -
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Manifesto](https://ilmanifesto.it) -
-[Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Il Tirreno](https://www.iltirreno.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
+[La Nuova Sardegna](https://www.lanuovasardegna.it)
+
+Grouped in options:\
+*Gruppo GEDI.it* sites like\
+[GElocal.it](https://quotidiani.gelocal.it) -
+[Huffingtonpost.it](https://www.huffingtonpost.it) -
+[Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Italian.tech](https://www.italian.tech) -
-[La Nuova Sardegna](https://www.lanuovasardegna.it) -
 [La Repubblica](https://www.repubblica.it) -
 [La Stampa](https://www.lastampa.it) -
 [Le Scienze](https://www.lescienze.it) -
-[LimesOnline (it/en)](https://www.limesonline.com)
-
-Grouped in options:\
+[LimesOnline (it/en)](https://www.limesonline.com)\
 [Il Messaggero](https://www.ilmessaggero.it) and regional sites like
 [Corriere Adriatico](https://www.corriereadriatico.it) -
 [Il Gazzettino](https://www.ilgazzettino.it) -
@@ -679,7 +680,7 @@ Grouped in options:\
 [WAtoday](https://www.watoday.com.au)
 
 Grouped in options:\
-*News Corp Australia* site like\
+*News Corp Australia* sites like\
 [Cairns Post](https://www.cairnspost.com.au) -
 [Code Sports](https://www.codesports.com.au) -
 [Geelong Advertiser](https://www.geelongadvertiser.com.au) -

@@ -19,7 +19,7 @@ var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', '
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
-var it_repubblica_domains = ['gelocal.it', 'ilsecoloxix.it', 'italian.tech', 'lastampa.it', 'repubblica.it'];
+var it_gedi_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'italian.tech', 'lastampa.it', 'lescienze.it', 'limesonline.com', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
@@ -1833,28 +1833,6 @@ else if (matchDomain('italiaoggi.it')) {
   }
 }
 
-else if (matchDomain('lescienze.it')) {
-  window.setTimeout(function () {
-    let paywall = document.querySelector('.paywall-adagio');
-    let body_paywall = document.getElementById('detail-body-paywall');
-    let shade = document.querySelector('.shade');
-    removeDOMElement(paywall, body_paywall, shade);
-    let hidden_bodies = document.querySelectorAll('.detail_body');
-    for (let hidden_body of hidden_bodies) {
-      hidden_body.removeAttribute('hidden');
-      hidden_body.setAttribute('style', 'display:block; max-height:auto; overflow:visible');
-    }
-  }, 1000);
-}
-
-else if (matchDomain('limesonline.com')) {
-  window.setTimeout(function () {
-    let url = window.location.href;
-    if (url.includes('prv=true'))
-      window.location.href = new URL(url).pathname;
-  }, 500);
-}
-
 else if (matchDomain('rep.repubblica.it')) {
   window.setTimeout(function () {
     if (window.location.href.includes('/pwa/')) {
@@ -1870,37 +1848,60 @@ else if (matchDomain('rep.repubblica.it')) {
   }
 }
 
-else if (matchDomain(it_repubblica_domains)) {
-  let url = window.location.href.split('?')[0];
-  if (!url.match(/\amp(\/)?$/)) {
-    let premium = document.querySelector('#paywall, iframe#__limio_frame');
-    if (premium) {
-      removeDOMElement(premium);
-      if (!url.includes('/podcast/')) {
+else if (matchDomain(it_gedi_domains)) {
+  if (matchDomain('huffingtonpost.it')) {
+    csDoneOnce = true;
+  } else if (matchDomain('lescienze.it')) {
+    let paywall = document.querySelector('.paywall-adagio');
+    if (paywall) {
+      let body_paywall = document.querySelector('#detail-body-paywall');
+      let shade = document.querySelector('.shade');
+      removeDOMElement(paywall, body_paywall, shade);
+      let detail_body_hidden = document.querySelectorAll('.detail_body[hidden]');
+      for (let elem of detail_body_hidden) {
+        elem.removeAttribute('hidden');
+        elem.removeAttribute('style');
+      }
+      csDoneOnce = true;
+    }
+  } else if (matchDomain('limesonline.com')) {
+    let url = window.location.href;
+    if (url.includes('prv=true')) {
+      window.setTimeout(function () {
+        window.location.href = url.split('?')[0];
+      }, 500);
+    } else
+      csDoneOnce = true;
+  } else {
+    let url = window.location.href.split('?')[0];
+    if (!url.match(/\amp(\/)?$/)) {
+      let premium = document.querySelector('#paywall, iframe#__limio_frame');
+      if (premium) {
+        removeDOMElement(premium);
         let amphtml = document.querySelector('link[rel="amphtml"]');
         if (amphtml)
           window.location.href = amphtml.href;
+      } else if (matchDomain('gelocal.it')) {
+        premium = document.querySelector('.paywall-adagio');
+        if (premium) {
+          removeDOMElement(premium);
+          window.setTimeout(function () {
+            let article_body = document.querySelector('div#article-body[style]');
+            if (article_body)
+              article_body.removeAttribute('style');
+          }, 1000);
+        }
       }
-    } else if (matchDomain('gelocal.it')) {
-      premium = document.querySelector('.paywall-adagio');
-      if (premium) {
-        removeDOMElement(premium);
-        window.setTimeout(function () {
-          let article_body = document.querySelector('div#article-body[style]');
-          if (article_body)
-            article_body.removeAttribute('style');
-        }, 1000);
-      }
-    }
-    let ads = document.querySelectorAll('div[id^="adv"]');
-    removeDOMElement(...ads);
-  } else {
-    if (matchDomain(['lastampa.it', 'www.repubblica.it'])) {
-      let paywall = document.querySelector('div[id^="paywall-banner"]');
-      removeDOMElement(paywall);
-      amp_unhide_subscr_section('amp-ad, amp-embed');
+      let ads = document.querySelectorAll('div[id^="adv"]');
+      removeDOMElement(...ads);
     } else {
-      amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed')
+      if (matchDomain(['lastampa.it', 'www.repubblica.it'])) {
+        let paywall = document.querySelector('div[id^="paywall-banner"]');
+        removeDOMElement(paywall);
+        amp_unhide_subscr_section('amp-ad, amp-embed');
+      } else {
+        amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed')
+      }
     }
   }
 }

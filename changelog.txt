@@ -9,6 +9,7 @@ Fix Australian Community Media (css)
 Add Tagesspiegel.de
 Fix The Athletic (css & amp)
 Grouping DPG Media (not ADR)
+Grouping GEDI.it sites
 Grouping Unidad Editorial
 Grouping Westfaelische Mediengruppe
 Redirect Google AMP cache (opt-in to custom sites)
