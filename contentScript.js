@@ -2266,18 +2266,32 @@ else if (matchDomain('the-tls.co.uk')) {
 else if (matchDomain('thetimes.co.uk')) {
   let url = window.location.href;
   if (window.location.hostname !== 'epaper.thetimes.co.uk') {
-    let block = document.querySelector('.subscription-block');
-    let adverts = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
-    removeDOMElement(block, ...adverts);
     let paywall = document.querySelector('div#paywall-portal-article-footer');
     if (paywall && !url.includes('?shareToken=')) {
       removeDOMElement(paywall);
-      let article = document.querySelector('article[class^="responsive__BodyContainer"]');
-      if (article)
-        article.insertBefore(archiveLink(url), article.firstChild);
+      csDoneOnce = true;
+      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+      let article_selector = 'article[class^="responsive__BodyContainer"]';
+      replaceDomElementExt(url_cache, true, false, article_selector);
+      window.setTimeout(function () {
+        let interactive_containers = document.querySelectorAll('div[class^="responsive__InteractiveContainer-"]');
+        if (interactive_containers.length) {
+          let article = document.querySelector(article_selector);
+          if (article)
+            article.insertBefore(archiveLink(url, 'BPC > Full article text (with interactive elements):\r\n'), article.firstChild);
+        }
+        let responsive_images = document.querySelectorAll('img[class^="responsive-"][src]');
+        for (let elem of responsive_images) {
+          if (elem.src.includes('?')) {
+            elem.src = elem.src.split('?')[0];
+            elem.parentNode.style = 'padding-bottom:75%';
+          }
+        }
+        let banners = document.querySelectorAll('.subscription-block, div#paywall-portal-page-footer');
+        let ads = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
+        removeDOMElement(...banners, ...ads);
+      }, 1500);
     }
-    let paywall_page = document.querySelector('div#paywall-portal-page-footer');
-    removeDOMElement(paywall_page);
   } else {
     if (url.includes('/textview')) {
       let article_locks = document.querySelectorAll('article[aid] > div > div > a.readmore.dis[href="javascript:void(0)"]');
@@ -4247,11 +4261,11 @@ function replaceTextFail(url, article, proxy, text_fail) {
   }
 }
 
-function archiveLink(url) {
+function archiveLink(url, text_fail = 'BPC > Full article text:\r\n') {
   let text_fail_div = document.createElement('div');
   text_fail_div.id = 'bpc_archive';
   text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color:red;');
-  text_fail_div.appendChild(document.createTextNode('BPC > Full article text:\r\n'));
+  text_fail_div.appendChild(document.createTextNode(text_fail));
   function add_links(domains) {
     for (let domain of domains) {
       let a_link = document.createElement('a');

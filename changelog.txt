@@ -8,6 +8,7 @@ Add SuomenSotilas.fi
 Fix Australian Community Media (css)
 Add Tagesspiegel.de
 Fix The Athletic (css & amp)
+Fix TheTimes.co.uk (Google webcache)
 Grouping DPG Media (not ADR)
 Grouping GEDI.it sites
 Grouping Unidad Editorial
