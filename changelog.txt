@@ -6,6 +6,7 @@ Add Limburger.nl
 Add Standaard.be
 Add SuomenSotilas.fi
 Fix Australian Community Media (css)
+Fix Spiegel.de (Google webcache)
 Add Tagesspiegel.de
 Fix The Athletic (css & amp)
 Fix TheTimes.co.uk (Google webcache)

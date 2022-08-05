@@ -717,9 +717,15 @@ else if (matchDomain('spiegel.de')) {
   let paywall = document.querySelector('div[data-area="paywall"]');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div[data-area="body"]');
-    if (article)
-      article.insertBefore(archiveLink(url), article.firstChild);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div[data-area="body"]');
+      window.setTimeout(function () {
+        let lazy_images = document.querySelectorAll('img.lazyload[src^="data:image/"][data-src]');
+        for (let elem of lazy_images) {
+            elem.src = elem.getAttribute('data-src');
+        }
+      }, 1000);
   }
 }
 

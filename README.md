@@ -483,7 +483,7 @@ Grouped in options:\
 [Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Cicero](https://www.cicero.de) -
-[Der Spiegel (link to archive.today)](https://www.spiegel.de) -
+[Der Spiegel](https://www.spiegel.de) -
 [Der Tagesspiegel](https://www.tagesspiegel.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
 [Die Zeit](https://www.zeit.de) -
