@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Limburger.nl
 Add Standaard.be
+Add Substack
 Add SuomenSotilas.fi
 Add Welt.de
 Add Wiwo.de

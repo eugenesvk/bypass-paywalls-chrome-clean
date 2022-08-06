@@ -25,6 +25,10 @@
     "remove_cookies": 1,
     "referer": "facebook"
   },
+  "Substack": {
+    "domain": "substack.com",
+    "useragent": "googlebot"
+  },
   "Suomen Sotilas": {
     "domain": "suomensotilas.fi",
     "allow_cookies": 1,

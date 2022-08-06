@@ -1582,6 +1582,10 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
+  "Substack": {
+    domain: "substack.com",
+    useragent: "googlebot"
+  },
   "Suomen Sotilas": {
     domain: "suomensotilas.fi",
     allow_cookies: 1,

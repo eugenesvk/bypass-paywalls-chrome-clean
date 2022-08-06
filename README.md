@@ -173,6 +173,7 @@ Grouped in options:\
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [Sports Illustrated](https://www.si.com) -
+[Substack](https://substack.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Athletic](https://theathletic.com) -
 [The Banker](https://www.thebanker.com) -
