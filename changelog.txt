@@ -5,6 +5,7 @@ Post-release
 Add Limburger.nl
 Add Standaard.be
 Add SuomenSotilas.fi
+Add Welt.de
 Fix Australian Community Media (css)
 Fix Spiegel.de (Google webcache)
 Add Tagesspiegel.de

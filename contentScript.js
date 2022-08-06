@@ -720,12 +720,12 @@ else if (matchDomain('spiegel.de')) {
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div[data-area="body"]');
-      window.setTimeout(function () {
-        let lazy_images = document.querySelectorAll('img.lazyload[src^="data:image/"][data-src]');
-        for (let elem of lazy_images) {
-            elem.src = elem.getAttribute('data-src');
-        }
-      }, 1000);
+    window.setTimeout(function () {
+      let lazy_images = document.querySelectorAll('img.lazyload[src^="data:image/"][data-src]');
+      for (let elem of lazy_images) {
+        elem.src = elem.getAttribute('data-src');
+      }
+    }, 1000);
   }
 }
 
@@ -737,6 +737,30 @@ else if (matchDomain('tagesspiegel.de')) {
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div.Af, [class*="ts-paywall"]');
+  }
+}
+
+else if (matchDomain('welt.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div[data-premium-content-loader-id^="spinner-article-"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div[itemprop="articleBody"]');
+    window.setTimeout(function () {
+      let lazy_images = document.querySelectorAll('img[src*="/lazy-picture-placeholder-"][data-src]');
+      for (let elem of lazy_images) {
+        let source = elem.parentNode.querySelector('source[data-breakpoint="Large"][data-src-template]');
+        if (source)
+          elem.src = source.getAttribute('data-src-template');
+        else
+          elem.src = elem.getAttribute('data-src');
+      }
+      let teaser = document.querySelector('div[data-qa="Article.PremiumContent"] > div.c-article-text');
+      let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"]');
+      removeDOMElement(teaser, ...ads);
+    }, 1500);
   }
 }
 
@@ -4238,7 +4262,7 @@ function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail =
     }
     let parser = new DOMParser();
     window.setTimeout(function () {
-      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout'], ADD_TAGS: ['amp-img']}), 'text/html');
+      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout', 'itemprop'], ADD_TAGS: ['amp-img']}), 'text/html');
       //console.log(DOMPurify.removed);
       let article_new = doc.querySelector(selector_source);
       if (article_new) {

@@ -486,6 +486,7 @@ Grouped in options:\
 [Der Spiegel](https://www.spiegel.de) -
 [Der Tagesspiegel](https://www.tagesspiegel.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
+[Die Welt](https://www.welt.de) -
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
