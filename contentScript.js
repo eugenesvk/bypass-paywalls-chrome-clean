@@ -764,6 +764,21 @@ else if (matchDomain('welt.de')) {
   }
 }
 
+else if (matchDomain('wiwo.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.o-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.o-article__content');
+    window.setTimeout(function () {
+      let ads = document.querySelectorAll('div[class^="c-advertisment"]');
+      removeDOMElement(...ads);
+    }, 1000);
+  }
+}
+
 else if (matchDomain(de_westfalen_medien_domains)) {
   let url = window.location.href;
   if (url.includes('/amp/')) {
@@ -4262,7 +4277,7 @@ function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail =
     }
     let parser = new DOMParser();
     window.setTimeout(function () {
-      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout', 'itemprop'], ADD_TAGS: ['amp-img']}), 'text/html');
+      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout', 'itemprop'], ADD_TAGS: ['amp-img', 'iframe']}), 'text/html');
       //console.log(DOMPurify.removed);
       let article_new = doc.querySelector(selector_source);
       if (article_new) {

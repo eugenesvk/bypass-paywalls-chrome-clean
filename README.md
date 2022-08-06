@@ -503,7 +503,8 @@ Grouped in options:\
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
 [Volksstimme](https://www.volksstimme.de) -
-[Westdeutsche Zeitung](https://www.wz.de)
+[Westdeutsche Zeitung](https://www.wz.de) -
+[WirtschaftsWoche](https://www.wiwo.de)
 
 Grouped in options:\
 *Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
