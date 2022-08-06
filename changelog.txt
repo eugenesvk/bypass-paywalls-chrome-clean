@@ -6,11 +6,11 @@ Add Limburger.nl
 Add Standaard.be
 Add Substack
 Add SuomenSotilas.fi
+Add Tagesspiegel.de
 Add Welt.de
 Add Wiwo.de
 Fix Australian Community Media (css)
 Fix Spiegel.de (Google webcache)
-Add Tagesspiegel.de
 Fix The Athletic (css & amp)
 Fix TheTimes.co.uk (Google webcache)
 Grouping DPG Media (not ADR)

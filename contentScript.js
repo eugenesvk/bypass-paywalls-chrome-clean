@@ -731,12 +731,17 @@ else if (matchDomain('spiegel.de')) {
 
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.Rc6, .ts-paywall-blurred');
+  let paywall = document.querySelector('div.article--paid > div, .ts-paywall-blurred');
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.Af, [class*="ts-paywall"]');
+    replaceDomElementExt(url_cache, true, false, 'article, [class*="ts-paywall"]');
+    window.setTimeout(function () {
+      let ads = document.querySelectorAll('div[data-mobile-id]');
+      for (let elem of ads)
+        removeDOMElement(elem.parentNode);
+    }, 1000);
   }
 }
 
