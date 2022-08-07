@@ -2839,29 +2839,12 @@ else if (matchDomain('economictimes.com')) {
     window.setTimeout(function () {
       let paywall = document.querySelector('div#blocker_layer');
       let data_prime = document.querySelector('div[data-prime="1"]');
-      if ((paywall || data_prime) && dompurify_loaded) {
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if ((paywall || data_prime) && amphtml) {
         removeDOMElement(paywall);
         if (data_prime)
           data_prime.removeAttribute('data-prime');
-        let content = document.querySelector('div[id^="articlebody_"]');
-        if (content && content.classList.contains('paywall')) {
-          content.classList.remove('paywall');
-          window.location.reload(true);
-        }
-        let full_text = document.querySelector('div.paywall:not([id])');
-        if (content && full_text) {
-          content.innerText = '';
-          let parser = new DOMParser();
-          let html = parser.parseFromString('<div>' + DOMPurify.sanitize(full_text.innerHTML, {ADD_ATTR: ['frameborder'], ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
-          let article = html.querySelector('div');
-          content.appendChild(article);
-          removeDOMElement(full_text);
-          let data_adaptive = document.querySelector('div[data-adaptive="1"]');
-          if (data_adaptive)
-            data_adaptive.removeAttribute('data-adaptive');
-          let prime_banner = document.querySelector('div.q0AQz');
-          removeDOMElement(prime_banner);
-        }
+        window.location.href = amphtml.href;
       }
     }, 500);
   }

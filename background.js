@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'].concat(de_westfalen_medien_domains);
-const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'economictimes.com', 'golem.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'limburger.nl', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spiegel.de', 'stratfor.com', 'tagesspiegel.de', 'techinasia.com', 'thetimes.co.uk', 'timesofindia.com', 'vn.nl', 'welt.de', 'wiwo.de'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'golem.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'limburger.nl', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spiegel.de', 'stratfor.com', 'tagesspiegel.de', 'techinasia.com', 'thetimes.co.uk', 'timesofindia.com', 'vn.nl', 'welt.de', 'wiwo.de'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -999,6 +999,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain('abc.es', details.url) && mobile) &&
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
+    !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) &&
     !(matchUrlDomain('thetimes.co.uk', details.url) && !(details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//) || mobile)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
