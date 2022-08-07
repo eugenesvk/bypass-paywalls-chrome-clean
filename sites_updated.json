@@ -9,6 +9,11 @@
       }
     ]
   },
+  "Groene Amsterdammer": {
+    "domain": "groene.nl",
+    "remove_cookies_select_hold": ["accept-cookies", "popunder-hidden"],
+    "useragent": "googlebot"
+  },
   "Irish Independent (setCookie opt-in)": {
     "domain": "independent.ie",
     "allow_cookies": 1,

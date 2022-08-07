@@ -10,6 +10,7 @@ Add Tagesspiegel.de
 Add Welt.de
 Add Wiwo.de
 Fix Australian Community Media (css)
+Fix Groene.nl
 Fix Spiegel.de (Google webcache)
 Fix The Athletic (css & amp)
 Fix TheTimes.co.uk (Google webcache)

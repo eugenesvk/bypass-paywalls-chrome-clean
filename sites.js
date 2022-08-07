@@ -614,7 +614,8 @@ var defaultSites = {
   },
   "Groene Amsterdammer": {
     domain: "groene.nl",
-    remove_cookies_select_hold: ["accept-cookies", "popunder-hidden"]
+    remove_cookies_select_hold: ["accept-cookies", "popunder-hidden"],
+    useragent: "googlebot"
   },
   "Groupe Capitales Médias (+ regional/opt-in to custom sites)": {
     domain: "###_ca_gcm",
