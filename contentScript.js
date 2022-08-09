@@ -1989,6 +1989,8 @@ else if (matchDomain('ftm.nl')) {
 
 else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'])) {
   let url = window.location.href;
+  if (window.location.hostname.startsWith('m.'))
+    url = url.replace('m.', 'www.');
   let article_selector = 'div[data-mht-block="article-detail__article-main"]';
   if (matchDomain('standaard.be'))
     article_selector = 'article';
@@ -2032,6 +2034,8 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
 
 else if (matchDomain('limburger.nl')) {
   let url = window.location.href;
+  if (window.location.hostname.startsWith('m.'))
+    url = url.replace('m.', 'www.');
   let paywall = document.querySelector('div[data-cj-root="subscription-wall"]');
   if (paywall) {
     removeDOMElement(paywall);
