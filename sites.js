@@ -1,4 +1,12 @@
 var defaultSites = {
+  "Aachener Nachrichten": {
+    domain: "aachener-nachrichten.de",
+    allow_cookies: 1
+  },
+  "Aachener Zeitung": {
+    domain: "aachener-zeitung.de",
+    allow_cookies: 1
+  },
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,

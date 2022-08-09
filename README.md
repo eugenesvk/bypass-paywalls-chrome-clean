@@ -477,6 +477,8 @@ Grouped in options:\
 [Sud Ouest](https://www.sudouest.fr)
 
 ##### Germany/Austria
+[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
+[Aachener Zeitung](https://www.aachener-zeitung.de) -
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Automobilwoche](https://www.automobilwoche.de) -

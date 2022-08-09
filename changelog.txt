@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Aachener Nachrichten &Zeitung
 Remove World Politics Review (fix obsolete)
 
 * v2.7.9.0 (2022-08-07)
@@ -331,7 +332,7 @@ Fix The New Yorker (update)
 * v2.5.2.0 (2022-01-16)
 Add Mainichi Shimbun (Japan)
 Add TownNews sites (local USA; opt-in to custom sites)
-Remove Aachener Nachrichten/Zeitung (fix obsolete)
+Remove Aachener Nachrichten & Zeitung (fix obsolete)
 Remove De Tijd & L'Echo (fix obsolete)
 Fix Bloomberg (quotes)
 Fix McClatchy Group (amp-redirect & disable)
