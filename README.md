@@ -78,8 +78,7 @@ _* free/cached articles only._
 [The New York Times](https://www.nytimes.com) -
 [The Spectator World](https://spectatorworld.com) -
 [The Washington Post](https://www.washingtonpost.com) -
-[Time Magazine](https://time.com) -
-[World Politics Review](https://www.worldpoliticsreview.com)
+[Time Magazine](https://time.com)
 
 ##### Business
 [Adweek](https://www.adweek.com)* -

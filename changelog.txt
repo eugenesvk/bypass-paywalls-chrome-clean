@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove World Politics Review (fix obsolete)
 
 * v2.7.9.0 (2022-08-07)
 Add Limburger.nl
