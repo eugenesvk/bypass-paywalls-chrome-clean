@@ -5,7 +5,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com', 'thetimes.co.uk'].concat(de_westfalen_medien_domains);
+const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
 const dompurify_sites = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'golem.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'limburger.nl', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spiegel.de', 'stratfor.com', 'tagesspiegel.de', 'techinasia.com', 'thetimes.co.uk', 'timesofindia.com', 'vn.nl', 'welt.de', 'wiwo.de'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
@@ -34,6 +34,7 @@ var restrictions = {
   'statista.com': /^((?!\.statista\.com\/(outlook|study)\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
+  'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
   'timeshighereducation.com': /\.timeshighereducation\.com\/((features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/
 }
 
@@ -969,7 +970,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     allow_ext_source = allow_ext_source || bpc_amp_site ||
       (matchUrlDomain('elespanol.com', header_referer) && matchUrlDomain('eestatic.com', details.url)) ||
       (matchUrlDomain('elmercurio.com', header_referer) && matchUrlDomain('emol.cl', details.url)) ||
-      (matchUrlDomain('epaper.thetimes.co.uk', header_referer) && matchUrlDomain(['prcdn.co'], details.url)) ||
       (matchUrlDomain('law360.com', header_referer) && matchUrlDomain('law360news.com', details.url)) ||
       (matchUrlDomain('lesechos.fr', header_referer) && matchUrlDomain('lesechos.com', details.url)) ||
       (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
@@ -1001,7 +1001,6 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) &&
-    !(matchUrlDomain('thetimes.co.uk', details.url) && !(details.url.match(/\/epaper\.thetimes\.co\.uk\/article\//) || mobile)) &&
     !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));

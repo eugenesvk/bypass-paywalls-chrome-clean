@@ -1,38 +1,13 @@
 {
-  "Belfast Telegraph (setCookie opt-in)": {
-    "domain": "belfasttelegraph.co.uk",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.flip-pay\\.com\\/clients\\/inm\\/flip-pay\\.js)",
-    "cs_code": [{
-        "cond": "div#flip-pay[style]",
-        "rm_attrib": "style"
-      }
-    ]
-  },
   "Groene Amsterdammer": {
     "domain": "groene.nl",
     "remove_cookies_select_hold": ["accept-cookies", "popunder-hidden"],
     "useragent": "googlebot"
   },
-  "Irish Independent (setCookie opt-in)": {
-    "domain": "independent.ie",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.flip-pay\\.com\\/clients\\/inm\\/flip-pay\\.js)",
-    "cs_code": [{
-        "cond": "div#flip-pay[style]",
-        "rm_attrib": "style"
-      }
-    ]
-  },
-  "Law.com (free articles only)": {
-    "domain": "law.com",
-    "allow_cookies": 1,
-    "remove_cookies": 1,
-    "referer": "facebook"
-  },
   "Substack": {
     "domain": "substack.com",
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "new_site": 1
   },
   "Suomen Sotilas": {
     "domain": "suomensotilas.fi",
@@ -42,7 +17,8 @@
         "cond": "div.epfl-pw-obscured",
         "rm_class": "epfl-pw-obscured"
       }
-    ]
+    ],
+    "new_site": 1
   },
   "The Athletic": {
     "domain": "###_usa_theathletic",
@@ -56,10 +32,5 @@
         "rm_elem": 1
       }
     ]
-  },
-  "Winnipeg Free Press": {
-    "domain": "winnipegfreepress.com",
-    "allow_cookies": 1,
-    "block_regex": "(account\\.winnipegfreepress\\.com\\/api\\/v\\d\\/auth\\/identify|cdn\\.cxense\\.com\\/)"
   }
 }

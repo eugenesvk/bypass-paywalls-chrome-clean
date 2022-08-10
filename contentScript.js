@@ -39,7 +39,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'economictimes.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'substack.com', 'telegraph.co.uk', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'economictimes.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'substack.com', 'telegraph.co.uk', 'theatlantic.com', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -65,9 +65,9 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
       let ld_json_split = bg2csData.ld_json.split('|');
       let paywall_sel = ld_json_split[0];
       let article_sel = ld_json_split[1];
-      let paywall = document.querySelector(paywall_sel);
-      if (paywall) {
-        removeDOMElement(paywall);
+      let paywall = document.querySelectorAll(paywall_sel);
+      if (paywall.length) {
+        removeDOMElement(...paywall);
         let json_script = getArticleJsonScript();
         if (json_script) {
           let json_text = parseHtmlEntities(JSON.parse(json_script.text).articleBody);
@@ -92,9 +92,9 @@ if ((bg2csData !== undefined) && bg2csData.ld_google_webcache && dompurify_loade
       let ld_google_webcache_split = bg2csData.ld_google_webcache.split('|');
       let paywall_sel = ld_google_webcache_split[0];
       let article_sel = ld_google_webcache_split[1];
-      let paywall = document.querySelector(paywall_sel);
-      if (paywall) {
-        removeDOMElement(paywall);
+      let paywall = document.querySelectorAll(paywall_sel);
+      if (paywall.length) {
+        removeDOMElement(...paywall);
         let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
         replaceDomElementExt(url_cache, true, false, article_sel);
       }
@@ -2359,39 +2359,6 @@ else if (matchDomain('thetimes.co.uk')) {
         let ads = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
         removeDOMElement(...banners, ...ads);
       }, 1500);
-    }
-  } else {
-    if (url.includes('/textview')) {
-      let article_locks = document.querySelectorAll('article[aid] > div > div > a.readmore.dis[href="javascript:void(0)"]');
-      for (let elem of article_locks) {
-        let article = elem.closest('article[aid]');
-        if (article)
-          elem.href = 'article/' + article.getAttribute('aid');
-      }
-      let headers = document.querySelectorAll('article[aid] > header > hgroup > h1');
-      for (let elem of headers) {
-        let article = elem.closest('article[aid]');
-        if (article && !elem.innerHTML.includes('</a>')) {
-          let new_link = document.createElement('a');
-          new_link.href = 'article/' + article.getAttribute('aid');
-          new_link.innerText = elem.innerText;
-          elem.innerText = '';
-          elem.appendChild(new_link);
-        }
-      }
-      let continued_links = document.querySelectorAll('a.continued[href="javascript:void(0)"]');
-      for (let elem of continued_links) {
-        let pagenr = parseInt(elem.innerText.replace('Continued from ', ''));
-        if (pagenr)
-          elem.href = url.replace(/\/page\/(\d)+\/textview/, '/page/' + pagenr + '/textview');
-      }
-      let bottom_links = document.querySelectorAll('article > a[id^="athumb_"][article-id][href="javascript:void(0)"]');
-      for (let elem of bottom_links)
-        elem.href = 'article/' + elem.getAttribute('article-id');
-    } else {
-      let pages = document.querySelectorAll('div.page-left, div.page-right');
-      for (let page of pages)
-        page.style.height = 'auto';
     }
   }
 }

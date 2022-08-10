@@ -1864,8 +1864,7 @@ var defaultSites = {
   },
   "The Times (UK)": {
     domain: "thetimes.co.uk",
-    allow_cookies: 1,
-    useragent: "googlebot"
+    allow_cookies: 1
   },
   "The Times Literary Supplement": {
     domain: "the-tls.co.uk",
