@@ -1803,7 +1803,7 @@ var defaultSites = {
   "The New Republic": {
     domain: "newrepublic.com",
     allow_cookies: 1,
-    block_regex: /\.onecount\.net\/js\//
+    block_regex: /\/blink\.net\/.+\/blink-sdk\.js/
   },
   "The New Statesman": {
     domain: "newstatesman.com",

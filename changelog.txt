@@ -5,6 +5,7 @@ Post-release
 Add Aachener Nachrichten &Zeitung
 Remove World Politics Review (fix obsolete)
 Fix Limburger.nl & Mediahuis Belgie (mobile)
+Fix The New Republic (js)
 Fix TheTimes.co.uk (epaper-fix obsolete)
 Open options on grouping of (enabled) sites
 
