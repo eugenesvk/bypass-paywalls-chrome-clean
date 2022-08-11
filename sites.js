@@ -1,12 +1,4 @@
 var defaultSites = {
-  "Aachener Nachrichten": {
-    domain: "aachener-nachrichten.de",
-    allow_cookies: 1
-  },
-  "Aachener Zeitung": {
-    domain: "aachener-zeitung.de",
-    allow_cookies: 1
-  },
   "ABC.es": {
     domain: "abc.es",
     allow_cookies: 1,
@@ -337,20 +329,12 @@ var defaultSites = {
   "Dark Reading": {
     domain: "darkreading.com"
   },
-  "De Limburger": {
-    domain: "limburger.nl",
-    allow_cookies: 1
-  },
   "De Tijd": {
     domain: "tijd.be",
     referer: "google"
   },
   "Der Spiegel": {
     domain: "spiegel.de",
-    allow_cookies: 1
-  },
-  "Der Tagesspiegel": {
-    domain: "tagesspiegel.de",
     allow_cookies: 1
   },
   "Diario Financiero": {
@@ -362,10 +346,6 @@ var defaultSites = {
     domain: "rheinpfalz.de",
     allow_cookies: 1,
     useragent: "googlebot"
-  },
-  "Die Welt": {
-    domain: "welt.de",
-    allow_cookies: 1
   },
   "Die Zeit": {
     domain: "zeit.de",
@@ -610,10 +590,6 @@ var defaultSites = {
   "Globes": {
     domain: "globes.co.il",
     block_regex: /\.tinypass\.com\//
-  },
-  "Golem.de": {
-    domain: "golem.de",
-    allow_cookies: 1
   },
   "Griffith Review": {
     domain: "griffithreview.com",
@@ -1173,8 +1149,7 @@ var defaultSites = {
     group: [
       "gva.be",
       "hbvl.be",
-      "nieuwsblad.be",
-      "standaard.be"
+      "nieuwsblad.be"
     ],
     allow_cookies: 1
   },
@@ -2008,10 +1983,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(account\.winnipegfreepress\.com\/api\/v\d\/auth\/identify|cdn\.cxense\.com\/)/
   },
-  "WirtschaftsWoche": {
-    domain: "wiwo.de",
-    allow_cookies: 1
-  },
   "###_gr_au_nine_domains": {
     group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
@@ -2175,4 +2146,4 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // sites with no fix (background)
 var nl_dpg_media_nofix_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'hln.be', 'pzc.nl', 'tubantia.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'handelsblatt.com', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'gazzetta.it', 'handelsblatt.com', 'hln.be', 'ilmanifesto.it', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);

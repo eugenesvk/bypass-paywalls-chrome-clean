@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
-const dompurify_sites = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'golem.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'limburger.nl', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spiegel.de', 'stratfor.com', 'tagesspiegel.de', 'techinasia.com', 'thetimes.co.uk', 'timesofindia.com', 'vn.nl', 'welt.de', 'wiwo.de'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -26,7 +26,6 @@ var restrictions = {
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
-  'standaard.be': /^((?!\.standaard\.be\/plus\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'repubblica.it': /^((?!\/video\.repubblica\.it\/).)*$/,
