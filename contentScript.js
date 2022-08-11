@@ -136,19 +136,14 @@ function amp_iframes_replace(weblink = false, source = '') {
         width: 'auto',
         style: 'border: 0px;'
       });
-      amp_iframe.parentElement.insertBefore(elem, amp_iframe);
-      removeDOMElement(amp_iframe);
+      amp_iframe.parentNode.replaceChild(elem, amp_iframe);
     } else {
-      let video_link = document.querySelector('a#bpc_video_link');
-      if (!video_link) {
-        amp_iframe.removeAttribute('class');
-        elem = document.createElement('a');
-        elem.id = 'bpc_video_link';
-        elem.innerText = 'Video-link';
-        elem.setAttribute('href', amp_iframe.getAttribute('src'));
-        elem.setAttribute('target', '_blank');
-        amp_iframe.parentElement.insertBefore(elem, amp_iframe);
-      }
+      amp_iframe.removeAttribute('class');
+      elem = document.createElement('a');
+      elem.innerText = 'Media-link';
+      elem.setAttribute('href', amp_iframe.getAttribute('src'));
+      elem.setAttribute('target', '_blank');
+      amp_iframe.parentNode.replaceChild(elem, amp_iframe);
     }
   }
 }
@@ -310,10 +305,10 @@ else {
       let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
       let comments;
       if (window.location.hostname.startsWith('amp.')) {
-        amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
         comments = document.querySelector('#story-comments, .comments-wrapper');
       } else if (window.location.search.match(/(\?|&)amp/)) {
-        amp_unhide_subscr_section(amp_ads_sel, true, true, 'resourcesssl.newscdn.com.au');
+        amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
         comments = document.querySelector('#comments-load');
         let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
         removeDOMElement(...amp_iframe_sizers)

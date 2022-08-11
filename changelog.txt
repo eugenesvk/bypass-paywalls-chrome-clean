@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Aachener Nachrichten &Zeitung
 Remove World Politics Review (fix obsolete)
+Fix Australia News Corp (amp-iframe)
 Fix Limburger.nl & Mediahuis Belgie (mobile)
 Fix The New Republic (js)
 Fix TheTimes.co.uk (epaper-fix obsolete)
