@@ -2293,7 +2293,7 @@ else if (matchDomain('thetimes.co.uk')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com'])) {//south america
+} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -2425,6 +2425,24 @@ else if (matchDomain('lasegunda.com')) {
     let bt_readmore = document.querySelectorAll('div[id*="bt_readmore_"]');
     removeDOMElement(...bt_readmore);
   }
+}
+
+else if (matchDomain('valor.globo.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url;
+    replaceDomElementExt(url_cache, true, false, 'div.protected-content');
+  }
+  window.setTimeout(function () {
+    let skeleton_box = document.querySelector('div.glb-skeleton-box');
+    if (skeleton_box) {
+      skeleton_box.classList.remove('glb-skeleton-box');
+      skeleton_box.removeAttribute('style');
+    }
+  }, 1000);
 }
 
 else if (window.location.hostname.endsWith('.cl') && document.querySelector('meta[property="og:image"][content*="://impresa.soy-chile.cl/"]')) {

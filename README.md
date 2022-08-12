@@ -760,7 +760,8 @@ Grouped in options:\
 [Folha de S. Paulo](https://www.folha.uol.com.br) -
 [Grupo Abril](https://grupoabril.com.br) -
 [O Estado de S. Paulo](https://estadao.com.br) -
-[O Globo](https://oglobo.globo.com)
+[O Globo](https://oglobo.globo.com) -
+[Valor Econômico](https://valor.globo.com)*
 ##### Chile
 [Diario Financiero](https://www.df.cl) -
 [El Mercurio (+ regional/opt-in to custom sites)](https://digital.elmercurio.com) -

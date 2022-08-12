@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Valor Economico (Google webcache)
 Remove Limburger.nl & Standaard.be (fix obsolete)
 Remove Golem.de, Tagesspiegel.de, Welt.de & Wiwo.de (fix obsolete)
 Remove World Politics Review (fix obsolete)
