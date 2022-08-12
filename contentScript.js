@@ -1627,6 +1627,14 @@ else if (matchDomain('eastwest.eu')) {
   }
 }
 
+else if (matchDomain('gazzetta.it')) {
+  if (window.location.pathname.endsWith('_preview.shtml')) {
+    window.setTimeout(function () {
+      window.location.href = window.location.href.split('?')[0].replace('_preview', '') + '?gaa_at=g';
+    }, 500);
+  }
+}
+
 else if (matchDomain('ilfattoquotidiano.it')) {
   let url = window.location.href;
   if (url.includes('/amp/')) {

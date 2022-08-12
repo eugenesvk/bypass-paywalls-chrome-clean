@@ -539,6 +539,7 @@ Grouped in options:\
 [Il Tirreno](https://www.iltirreno.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
+[La Gazzetta dello Sport](https://www.gazzetta.it) -
 [La Nuova Sardegna](https://www.lanuovasardegna.it)
 
 Grouped in options:\
