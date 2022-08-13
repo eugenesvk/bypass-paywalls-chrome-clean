@@ -660,6 +660,7 @@
     "*://*.onecount.net/*",
     "*://*.pelcro.com/*",
     "*://*.piano.io/*",
+    "*://*.pico.tools/*",
     "*://*.poool.fr/*",
     "*://*.qiota.com/*",
     "*://*.tinypass.com/*",
@@ -698,5 +699,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.7.9.6"
+  "version": "2.7.9.7"
 }

@@ -1880,6 +1880,7 @@ else if (matchDomain('ftm.nl')) {
 else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be'])) {
   let paywall = document.querySelector('div[data-cj-root="subscription-wall"]');
   if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
     let main_content = document.querySelector('div[data-mht-block="article-detail__article-main"]');
     let json_script = main_content.querySelector('script');
     let json_str = json_script.text.substring(json_script.textContent.indexOf('{'));
@@ -3655,7 +3656,7 @@ else if (matchDomain('theathletic.com')) {
   if (!window.location.search.match(/(\?|&)amp/)) {
     let paywall = document.querySelector('div#slideup-paywall');
     if (paywall) {
-      let overlays = document.querySelectorAll('div[id*="overlay"], div.gPmuKa');
+      let overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');
       removeDOMElement(paywall, ...overlays);
       let body = document.querySelector('body');
       if (body) {

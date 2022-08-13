@@ -690,8 +690,8 @@ var block_js = [
   "*://*/*/ev-widgets.min.js*",
   "*://*/c/assets/pigeon.js*",
   "*://*/wp-content/*/ev-em.min.js*",
-  "*://*/wp-content/plugins/pico/includes/js/read-more.js*",
   "*://*/zephr/features*",
+  "*://api.pico.tools/*",
   "*://cdn.ampproject.org/v*/amp-access-*.*js",
   "*://cdn.ampproject.org/v*/amp-subscriptions-*.*js",
   "*://cdn.ampproject.org/v*/amp*-ad-*.*js",
@@ -711,7 +711,6 @@ function disableJavascriptOnListedSites() {
     if (!(isSiteEnabled(details)
          || (['script'].includes(details.type)
            && ((enabledSites.includes('###_wp_evolok') && details.url.match(/\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/))
-             || (enabledSites.includes('###_wp_pico') && details.url.includes('/wp-content/plugins/pico/includes/js/read-more.js'))
              || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
              || (enabledSites.includes('zephr.com') && details.url.includes('/zephr/features')))))
        || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'cambridge.org', 'japantimes.co.jp']), header_referer)) {

@@ -2012,7 +2012,7 @@ var defaultSites = {
   "Evolok": {
     domain: "evolok.net"
   },
-  "Evolok WordPress (opt-in to custom sites)": {
+  "Evolok WordPress": {
     domain: "###_wp_evolok"
   },
   "MatherAnalytics": {
@@ -2030,10 +2030,10 @@ var defaultSites = {
   "Piano.io": {
     domain: "piano.io"
   },
-  "Pico (WordPress plugin; opt-in to custom sites)": {
-    domain: "###_wp_pico"
+  "Pico.tools": {
+    domain: "pico.tools"
   },
-  "Pigeon (WordPress plugin; opt-in to custom sites)": {
+  "Pigeon (WordPress plugin)": {
     domain: "###_wp_pigeon"
   },
   "Poool.fr": {
