@@ -393,7 +393,7 @@ var defaultSites = {
   "El Español": {
     domain: "elespanol.com",
     allow_cookies: 1,
-    block_regex: /(\.eestatic\.com\/assets_js\/web\/v\d\/historia.*\.min\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
   "El Espectador": {
     domain: "elespectador.com",
