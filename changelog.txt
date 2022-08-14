@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.0.0 (2022-08-15)
 Add Gazzetta.it
 Add Valor Economico (Google webcache)
 Remove Limburger.nl & Standaard.be (fix obsolete)
