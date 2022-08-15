@@ -356,7 +356,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_de_westfalen_medien', '###_es_unidad', '###_it_gedi', '###_nl_dpg_media', '###_usa_genomeweb'];
+          let new_groups = ['###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_it_gedi', '###_nl_dpg_media', '###_usa_genomeweb'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();
@@ -1003,7 +1003,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
 if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'stylesheet'].includes(details.type)) {
   var mobile = details.requestHeaders.filter(x => x.name.toLowerCase() === "user-agent" && x.value.toLowerCase().includes("mobile")).length;
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
-    !(matchUrlDomain('abc.es', details.url) && mobile) &&
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) &&

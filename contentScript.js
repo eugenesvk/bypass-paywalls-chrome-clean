@@ -12,7 +12,7 @@ var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'm
 var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var es_epiberica_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'diariodemallorca.es', 'eldia.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'epe.es', 'farodevigo.es', 'informacion.es', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es', 'regio7.cat'];
-var es_grupo_vocento_domains = ['diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
+var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
 var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', 'lalsace.fr', 'ledauphine.com', 'lejsl.com', 'leprogres.fr', 'republicain-lorrain.fr', 'vosgesmatin.fr'];
@@ -39,7 +39,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['abc.es', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'economictimes.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'substack.com', 'telegraph.co.uk', 'theatlantic.com', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'economictimes.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'lanouvellerepublique.fr', 'lesechos.fr', 'mid-day.com', 'nytimes.com', 'nzherald.co.nz', 'scmp.com', 'seekingalpha.com', 'substack.com', 'telegraph.co.uk', 'theatlantic.com', 'thehindu.com', 'thetimes.co.uk', 'wsj.com'].concat(de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -125,7 +125,7 @@ if ((bg2csData !== undefined) && bg2csData.optin_setcookie) {
 
 function amp_iframes_replace(weblink = false, source = '') {
   let amp_iframes = document.querySelectorAll('amp-iframe' + (source ? '[src*="'+ source + '"]' : ''));
-  let elem;
+  let par, elem;
   for (let amp_iframe of amp_iframes) {
     if (!weblink) {
       elem = document.createElement('iframe');
@@ -138,12 +138,13 @@ function amp_iframes_replace(weblink = false, source = '') {
       });
       amp_iframe.parentNode.replaceChild(elem, amp_iframe);
     } else {
-      amp_iframe.removeAttribute('class');
+      par = document.createElement('p');
       elem = document.createElement('a');
       elem.innerText = 'Media-link';
       elem.setAttribute('href', amp_iframe.getAttribute('src'));
       elem.setAttribute('target', '_blank');
-      amp_iframe.parentNode.replaceChild(elem, amp_iframe);
+      par.appendChild(elem);
+      amp_iframe.parentNode.replaceChild(par, amp_iframe);
     }
   }
 }
@@ -1010,27 +1011,7 @@ else
 
 } else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
-if (matchDomain('abc.es')) {
-  let paywall = document.querySelector('div.voc-paywall');
-  if (window.location.pathname.endsWith('_amp.html')) {
-    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '', 'amp-ad, amp-embed');
-    removeDOMElement(paywall);
-    let body_top = document.querySelector('body#top');
-    if (body_top)
-      body_top.removeAttribute('id');
-  } else {
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    } else {
-      let banners = document.querySelectorAll('div.ev-em-modal, span.mega-superior');
-      removeDOMElement(...banners);
-    }
-  }
-}
-
-else if (matchDomain(['ara.cat', 'arabalears.cat'])) {
+if (matchDomain(['ara.cat', 'arabalears.cat'])) {
   let url = window.location.href;
   if (!window.location.pathname.endsWith('.amp.html')) {
     let paywall = document.querySelector('div.paywall');
@@ -1146,18 +1127,24 @@ else if (matchDomain('elperiodico.com')) {
 }
 
 else if (matchDomain(es_grupo_vocento_domains)) {
+  let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive');
   if (!window.location.pathname.endsWith('_amp.html')) {
-    let paywall = document.querySelector('.content-exclusive-bg, #cierre_suscripcion, ev-engagement[group-name^="paywall-"]');
     let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (!amphtml)
+      amphtml = {href: window.location.pathname.replace('.html', '_amp.html')};
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
-    } 
+    } else {
+      let banners = document.querySelectorAll('.voc-advertising, div.ev-em-modal, span.mega-superior');
+      removeDOMElement(...banners);
+    }
   } else {
-    if (!matchDomain('lavozdigital.es'))
-      amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed');
-    else
-      amp_unhide_subscr_section();
+    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed');
+    removeDOMElement(paywall);
+    let body_top = document.querySelector('body#top');
+    if (body_top)
+      body_top.removeAttribute('id');
   }
 }
 
@@ -1770,13 +1757,11 @@ else if (matchDomain('italiaoggi.it')) {
           let json_text = json.articleBody;
           let content = article_locked.querySelector('section');
           if (json_text && content) {
-            if (json_text && content) {
-              let parser = new DOMParser();
-              json_text = DOMPurify.sanitize(json_text).replace(/&amp;apos;/g, "'").replace(/;/g, '');
-              let doc = parser.parseFromString('<div><section>' + json_text + '</section></div>', 'text/html');
-              let content_new = doc.querySelector('div');
-              content.parentNode.replaceChild(content_new, content);
-            }
+            let parser = new DOMParser();
+            json_text = DOMPurify.sanitize(json_text).replace(/&amp;apos;/g, "'").replace(/;/g, '');
+            let doc = parser.parseFromString('<div><section>' + json_text + '</section></div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.parentNode.replaceChild(content_new, content);
           }
         }
       }

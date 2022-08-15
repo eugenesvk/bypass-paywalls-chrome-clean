@@ -1,10 +1,4 @@
 var defaultSites = {
-  "ABC.es": {
-    domain: "abc.es",
-    allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
-    useragent: "googlebot"
-  },
   "Advance Local": {
     domain: "###_usa_adv_local",
     allow_cookies: 1,
@@ -720,6 +714,7 @@ var defaultSites = {
   "Grupo Vocento": {
     domain: "###_es_grupo_vocento",
     group: [
+      "abc.es",
       "diariosur.es",
       "diariovasco.com",
       "elcomercio.es",
@@ -734,7 +729,7 @@ var defaultSites = {
       "lavozdigital.es"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
+    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Gruppo GEDI.it": {
     domain: "###_it_gedi",
@@ -1743,7 +1738,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.irishtimes\.com\/zephr\/features/
   },
-  "The Japan Times": {
+  "The Japan Times (recent/last 2 months articles only)": {
     domain: "japantimes.co.jp",
     block_regex: /cdn\.cxense\.com\//,
     remove_cookies_select_drop: ["xbc"]
@@ -1991,7 +1986,7 @@ var defaultSites = {
     group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
-  "* Block Paywall-scripts (opt-in to custom sites to enable also for non-listed sites)": {
+  "* Block Paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
     domain: "###"
   },
   "Amp-access": {

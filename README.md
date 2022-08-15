@@ -603,7 +603,6 @@ Grouped in options:\
 [Finance.si](https://www.finance.si)
 
 ##### Spain
-[ABC](https://www.abc.es) -
 [El Confidencial](https://www.elconfidencial.com) -
 [El Diario.es](https://www.eldiario.es) -
 [El Español](https://www.elespanol.com) -
@@ -630,7 +629,8 @@ Grouped in options:\
 [El Mundo](https://www.elmundo.es) -
 [Expansión](https://www.expansion.com) -
 [Marca](https://www.marca.com)\
-*Grupo Vocento* (ABC regional) sites like\
+*Grupo Vocento* sites like\
+[ABC](https://www.abc.es) -
 [Diario Vasco](https://www.diariovasco.com) -
 [El Comercio](https://www.elcomercio.es) -
 [El Correo](https://www.elcorreo.com) -
