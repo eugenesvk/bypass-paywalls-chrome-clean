@@ -494,6 +494,7 @@ Grouped in options:\
 [Krautreporter](https://krautreporter.de) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
+[Neue Westfälische](https://www.nw.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Nürnberger Nachrichten](https://www.nn.de) -
 [Piqd.de](https://www.piqd.de) -
