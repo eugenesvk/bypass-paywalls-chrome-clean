@@ -153,11 +153,13 @@ Grouped in options:\
 [StuDocu](https://www.studocu.com)
 
 ##### Magazines/Blogs
-[Medium](https://www.medium.com)*\
+[Medium](https://www.medium.com)* -
+[Substack](https://substack.com)\
 Grouped in options:\
 *Medium custom domains* like (opt-in to custom sites for unlisted)\
 [Better Programming](https://betterprogramming.pub) -
-[Towards Data Science](https://towardsdatascience.com)
+[Towards Data Science](https://towardsdatascience.com)\
+*Substack custom domains* (opt-in to custom sites)
 
 [Apollo Magazine](https://www.apollo-magazine.com) -
 [Artforum](https://www.artforum.com) -
@@ -172,7 +174,6 @@ Grouped in options:\
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [Sports Illustrated](https://www.si.com) -
-[Substack](https://substack.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Athletic](https://theathletic.com) -
 [The Intercept](https://theintercept.com) -
