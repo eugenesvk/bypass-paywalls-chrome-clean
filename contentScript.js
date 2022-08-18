@@ -1357,6 +1357,14 @@ else if (matchDomain('lavenir.net')) {
   removeDOMElement(...ads);
 }
 
+else if (matchDomain('lavie.fr')) {
+  let paywall = document.querySelector('div.bloc-payant');
+  removeDOMElement(paywall);
+  let overlay = document.querySelector('div.content-art[style]');
+  if (overlay)
+    overlay.removeAttribute('style');
+}
+
 else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
   let poool_banner = document.querySelector('#poool-container');
   let forbidden = document.querySelector('.forbidden');

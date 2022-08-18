@@ -5,6 +5,7 @@ Post-release
 Add Nw.de
 Add Substack custom domains (opt-in to custom sites)
 Fix El Correo & La Voz de Cadiz
+Fix LaVie.fr
 
 * v2.8.0.0 (2022-08-15)
 Add Gazzetta.it

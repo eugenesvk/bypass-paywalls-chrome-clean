@@ -9,6 +9,19 @@
       }
     ]
   },
+  "La Vie": {
+    "domain": "lavie.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/",
+    "cs_code": [{
+        "cond": "div.bloc-payant",
+        "rm_elem": 1
+      }, {
+        "cond": "div.content-art[style]",
+        "rm_attrib": "style"
+      }
+    ]
+  },
   "Neue Westfälische": {
     "domain": "nw.de",
     "allow_cookies": 1,
