@@ -4,8 +4,10 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Nw.de
 Add Substack custom domains (opt-in to custom sites)
+Fix Business Standard (mobile)
 Fix El Correo & La Voz de Cadiz
 Fix LaVie.fr
+Fix LiveMint (css)
 
 * v2.8.0.0 (2022-08-15)
 Add Gazzetta.it

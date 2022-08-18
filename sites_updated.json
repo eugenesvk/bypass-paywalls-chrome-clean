@@ -1,4 +1,10 @@
 {
+  "Business Standard": {
+    "domain": "business-standard.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "amp_redirect": "p.read-txt"
+  },
   "El Español": {
     "domain": "elespanol.com",
     "allow_cookies": 1,
@@ -19,6 +25,16 @@
       }, {
         "cond": "div.content-art[style]",
         "rm_attrib": "style"
+      }
+    ]
+  },
+  "LiveMint": {
+    "domain": "livemint.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.livemint\\.com\\/__js\\/lm_subscription_.+\\.js|\\.piano\\.io\\/api\\/tinypass\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": [{
+        "cond": "div.paywall",
+        "rm_class": "paywall"
       }
     ]
   },

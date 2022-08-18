@@ -1078,7 +1078,7 @@ var defaultSites = {
   "LiveMint": {
     domain: "livemint.com",
     allow_cookies: 1,
-    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|\.piano\.io\/api\/tinypass\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Loeb Classical Library": {
     domain: "loebclassics.com"
