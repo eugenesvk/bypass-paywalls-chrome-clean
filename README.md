@@ -757,14 +757,18 @@ Grouped in options:\
 [Clarín](https://www.clarin.com) -
 [La Nación](https://www.lanacion.com.ar)
 ##### Brazil
-[Crusoé](https://crusoe.uol.com.br) -
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
-[Folha de S. Paulo](https://www.folha.uol.com.br) -
 [Grupo Abril](https://grupoabril.com.br) -
 [O Estado de S. Paulo](https://estadao.com.br) -
 [O Globo](https://oglobo.globo.com) -
 [Valor Econômico](https://valor.globo.com)*
+
+Grouped in options:\
+*UOL* sites like\
+[Crusoé](https://crusoe.uol.com.br) -
+[Folha de S. Paulo](https://www.folha.uol.com.br) -
+[UOL](https://www.uol.com.br)
 ##### Chile
 [Diario Financiero](https://www.df.cl) -
 [El Mercurio (+ regional/opt-in to custom sites)](https://digital.elmercurio.com) -

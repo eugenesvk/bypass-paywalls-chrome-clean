@@ -306,10 +306,6 @@ var defaultSites = {
       }
     ]
   },
-  "Crusoé (setCookie opt-in)": {
-    domain: "crusoe.uol.com.br",
-    allow_cookies: 1
-  },
   "Dagens Industri": {
     domain: "di.se",
     allow_cookies: 1,
@@ -482,16 +478,6 @@ var defaultSites = {
   },
   "First Things": {
     domain: "firstthings.com"
-  },
-  "Folha de S. Paulo": {
-    domain: "###_br_folha",
-    group: [
-      "folha.uol.com.br",
-      "blogfolha.uol.com.br"
-    ],
-    allow_cookies: 1,
-    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
-    useragent: "googlebot"
   },
   "Follow the Money (ftm.nl)": {
     domain: "ftm.nl",
@@ -1934,6 +1920,12 @@ var defaultSites = {
     domain: "unherd.com",
     allow_cookies: 1,
     block_regex: /\.piano\.io\//
+  },
+  "UOL.com.br": {
+    domain: "uol.com.br",
+    allow_cookies: 1,
+    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|\.tinypass\.com|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    useragent: "googlebot"
   },
   "USA Today": {
     domain: "usatoday.com",

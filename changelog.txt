@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Nw.de
 Add Substack custom domains (opt-in to custom sites)
+Add UOL.com.br
 Fix Business Standard (mobile)
 Fix El Correo & La Voz de Cadiz
 Fix LaVie.fr
