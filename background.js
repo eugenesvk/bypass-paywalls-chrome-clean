@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
-const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'hs.fi', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -861,11 +861,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var es_epiberica_domain = (matchUrlDomain(es_epiberica_custom_domains, details.url) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
       if (es_epiberica_domain)
         es_epiberica_domains = customAddRules(es_epiberica_domains, {allow_cookies: 1}, blockedRegexes['epe.es']);
-    } else if (header_referer_hostname.endsWith('.fi')) {
-      // set user-agent to GoogleBot for additional Snamoma Media Finland (opt-in to custom sites)
-      var fi_sanoma_sndp_domain = (matchUrlDomain('sanoma-sndp.fi', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(fi_sanoma_domains, header_referer) && enabledSites.includes('###_fi_sanoma'));
-      if (fi_sanoma_sndp_domain)
-        fi_sanoma_domains = customAddRules(fi_sanoma_domains, {allow_cookies: 1}, '', 'googlebot');
     } else if (header_referer_hostname.endsWith('.nl')) {
       // block Evolok for Mediahuis Noord sites (opt-in to custom sites)
       var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));

@@ -5,6 +5,7 @@ Post-release
 Add Nw.de
 Add Substack custom domains (opt-in to custom sites)
 Add UOL.com.br
+Remove Sanoma Media Finland (fix obsolete)
 Fix Business Standard (mobile)
 Fix El Correo & La Voz de Cadiz
 Fix LaVie.fr

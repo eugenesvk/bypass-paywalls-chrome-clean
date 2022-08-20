@@ -1468,15 +1468,6 @@ var defaultSites = {
     domain: "sandiegouniontribune.com",
     block_regex: /(metering\.platform\.sandiegouniontribune\.com\/v\d\/meter|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
-  "Sanoma Media Finland (+ regional/opt-in to custom sites)": {
-    domain: "###_fi_sanoma",
-    group: [
-      "aamulehti.fi",
-      "hs.fi"
-    ],
-    allow_cookies: 1,
-    useragent: "googlebot",
-  },
   "Schleswig-Holsteinischer Zeitungsverlag": {
     domain: "shz.de",
     allow_cookies: 1,
@@ -2141,7 +2132,7 @@ var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // (fixed) custom domains (background)
-var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, fi_sanoma_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_mcc_domains, usa_mng_domains, usa_townnews_domains;
+var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_mcc_domains, usa_mng_domains, usa_townnews_domains;
 var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 
@@ -2155,7 +2146,6 @@ function init_custom_domains() {
   de_funke_medien_domains = grouped_sites['###_de_funke_medien'];
   de_madsack_domains = grouped_sites['###_de_madsack'];
   es_epiberica_domains = grouped_sites['###_es_epiberica'];
-  fi_sanoma_domains = grouped_sites['###_fi_sanoma'];
   medium_custom_domains = grouped_sites['###_medium_custom'];
   nl_mediahuis_noord_domains = [];
   substack_custom_domains = [];
@@ -2170,4 +2160,4 @@ init_custom_domains();
 
 // sites with no fix (background)
 var nl_dpg_media_nofix_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'hln.be', 'pzc.nl', 'tubantia.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);

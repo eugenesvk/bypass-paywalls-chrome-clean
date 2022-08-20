@@ -379,12 +379,9 @@ Grouped in options:\
 [Berlingske](https://www.berlingske.dk)
 
 ##### Finland
-Grouped in options:\
-*Sanoma Media Finland* sites like (opt-in to custom sites for unlisted/regional sites)\
-[Aamulehti](https://www.aamulehti.fi) -
-[Helsingin Sanomat](https://www.hs.fi) -
 [Suomen Sotilas](https://suomensotilas.fi)
 
+Grouped in options:\
 *Alma Talent* sites like\
 [Arvopaperi](https://www.arvopaperi.fi) -
 [Iltalehti](https://www.iltalehti.fi) -
