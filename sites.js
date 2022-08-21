@@ -2131,10 +2131,8 @@ var it_gedi_domains = grouped_sites['###_it_gedi'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
-// (fixed) custom domains (background)
+// custom domains (background)
 var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_mcc_domains, usa_mng_domains, usa_townnews_domains;
-var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
-var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 
 function init_custom_domains() {
   au_comm_media_domains = grouped_sites['###_au_comm_media'];

@@ -809,7 +809,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     return custom_domains;
   }
 
-  if (!matchUrlDomain(enabledSites.concat(disabledSites, excludedSites), header_referer)) {
+  if (!matchUrlDomain(excludedSites, header_referer)) {
 
   // remove cookies for sites medium platform (custom domains)
   var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com']), header_referer) && enabledSites.includes('###_medium_custom'));
@@ -817,11 +817,12 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     medium_custom_domains = customAddRules(medium_custom_domains);
   else {
     // remove cookies & set googlebot-useragent for sites substack platform (custom domains)
-    var substack_custom_domain = (matchUrlDomain('substack.com', details.url) && ['sub_frame', 'other'].includes(details.type) && !matchUrlDomain(substack_custom_domains.concat(['substack.com']), header_referer) && enabledSites.includes('###_substack_custom'));
+    var substack_custom_domain = (matchUrlDomain('substackcdn.com', details.url) && ['script', 'stylesheet'].includes(details.type) && !matchUrlDomain(substack_custom_domains.concat(['substack.com']), header_referer) && enabledSites.includes('###_substack_custom'));
     if (substack_custom_domain)
       substack_custom_domains = customAddRules(substack_custom_domains, '', '', 'googlebot');
   else {
     let header_referer_hostname = urlHost(header_referer);
+    let url_hostname = urlHost(details.url);
     if (header_referer_hostname.match(/\.(com|net)\.au$/)) {
       // block Piano.io for regional Australian Community Media sites (opt-in to custom sites)
       var au_comm_media_domain = (details.url.startsWith('https://' + header_referer_hostname + '/promotions/website_content_esov/') && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
@@ -852,13 +853,13 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
         de_funke_medien_domains = customAddRules(de_funke_medien_domains, {allow_cookies: 1}, blockedRegexes['waz.de'], 'googlebot');
       else {
         // block script for additional Madsack/RND sites (opt-in to custom sites)
-        var de_madsack_domain = (matchUrlDomain(de_madsack_custom_domains, details.url) && !matchUrlDomain(de_madsack_domains, header_referer) && enabledSites.includes('###_de_madsack'));
+        var de_madsack_domain = (matchUrlDomain('rndtech.de', details.url) && ['script', 'font'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de']), header_referer) && enabledSites.includes('###_de_madsack'));
         if (de_madsack_domain)
           de_madsack_domains = customAddRules(de_madsack_domains, {allow_cookies: 1}, blockedRegexes['haz.de']);
       }
     } else if (header_referer_hostname.match(/\.(es|cat)$/) || matchUrlDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'], header_referer)) {
       // block Piano.io for unlisted Grupo Prensa Ibérica (opt-in to custom sites)
-      var es_epiberica_domain = (matchUrlDomain(es_epiberica_custom_domains, details.url) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
+      var es_epiberica_domain = (url_hostname.startsWith('estaticos-cdn.') && ['script', 'font', 'stylesheet'].includes(details.type) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
       if (es_epiberica_domain)
         es_epiberica_domains = customAddRules(es_epiberica_domains, {allow_cookies: 1}, blockedRegexes['epe.es']);
     } else if (header_referer_hostname.endsWith('.nl')) {

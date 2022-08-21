@@ -688,6 +688,8 @@
     "*://*.postmedia.digital/*",
     "*://*.prcdn.co/*",
     "*://*.repstatic.it/*",
+    "*://*.rndtech.de/*",
+    "*://*.substackcdn.com/*",
     "*://*.soy-chile.cl/*",
     "*://*.static-chmedia.ch/*",
     "*://*.wallkit.net/*",
@@ -695,5 +697,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.0.6"
+  "version": "2.8.0.7"
 }
