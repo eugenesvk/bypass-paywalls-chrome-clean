@@ -38,6 +38,10 @@
       }
     ]
   },
+  "Los Angeles Times": {
+    "domain": "latimes.com",
+    "block_regex": "(metering\\.platform\\.latimes\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
+  },
   "Neue Westfälische": {
     "domain": "nw.de",
     "allow_cookies": 1,
@@ -50,5 +54,9 @@
       }
     ],
     "new_site": 1
+  },
+  "San Diego Union Tribune": {
+    "domain": "sandiegouniontribune.com",
+    "block_regex": "(metering\\.platform\\.sandiegouniontribune\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
   }
 }

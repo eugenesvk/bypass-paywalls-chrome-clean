@@ -867,7 +867,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));
       if (nl_mediahuis_noord_domain)
         nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, {allow_cookies: 1}, blockedRegexes['lc.nl']);
-    } else if (header_referer_hostname.match(/\.(ca|com|org)$/)) {
+    } else if (header_referer_hostname.match(/\.(ca|com|net|org)$/)) {
       // remove cookies for Groupe Capitales Médias sites
       var ca_gcm_domain = (matchUrlDomain('gcm.omerlocdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(ca_gcm_domains, header_referer) && enabledSites.includes('###_ca_gcm'));
       if (ca_gcm_domain)
