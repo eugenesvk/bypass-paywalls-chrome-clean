@@ -1771,7 +1771,8 @@ var defaultSites = {
   },
   "The New York Review of Books": {
     domain: "nybooks.com",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.nybooks\.com\/wp-admin\/admin-ajax\.php/
   },
   "The New York Times": {
     domain: "nytimes.com",
