@@ -1252,6 +1252,10 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "New Scientist": {
+    domain: "newscientist.com",
+    allow_cookies: 1
+  },
   "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
     domain: "###_usa_nymag",
     group: [
@@ -1290,7 +1294,7 @@ var defaultSites = {
     allow_cookies: 1,
     referer: "facebook"
   },
-  "Nikkei Asian Review": {
+  "Nikkei Asian Review (do not block Piano.io-script externally)": {
     domain: "asia.nikkei.com",
     remove_cookies_select_drop: ["xbc"]
   },
@@ -1723,7 +1727,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.irishtimes\.com\/zephr\/features/
   },
-  "The Japan Times (recent/last 2 months articles only)": {
+  "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
     domain: "japantimes.co.jp",
     block_regex: /cdn\.cxense\.com\//,
     remove_cookies_select_drop: ["xbc"]

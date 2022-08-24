@@ -418,6 +418,7 @@
     "*://*.newcastleherald.com.au/*",
     "*://*.newleftreview.org/*",
     "*://*.newrepublic.com/*",
+    "*://*.newscientist.com/*",
     "*://*.newsday.com/*",
     "*://*.newsobserver.com/*",
     "*://*.newstatesman.com/*",
@@ -697,5 +698,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.1.2"
+  "version": "2.8.1.3"
 }

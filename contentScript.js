@@ -2141,6 +2141,10 @@ else if (matchDomain('prospectmagazine.co.uk')) {
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'main');
   }
+  window.setTimeout(function () {
+    let ads = document.querySelectorAll('.ad-banner, .advert');
+    removeDOMElement(...ads);
+  }, 1000);
 }
 
 else if (matchDomain('spectator.co.uk')) {
@@ -3185,6 +3189,22 @@ else if (matchDomain('newrepublic.com')) {
   let pw_popups = document.querySelector('div#pwPopups');
   let ads = document.querySelectorAll('.ad-unit, .ad-container');
   removeDOMElement(pw_popups, ...ads);
+}
+
+else if (matchDomain('newscientist.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('#subscription-barrier');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.article-body');
+  }
+  window.setTimeout(function () {
+    let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src]');
+    for (let elem of lazy_images)
+      elem.src = elem.getAttribute('data-src').split('?')[0] + '?width=800';
+  }, 1000);
 }
 
 else if (matchDomain('newsday.com')) {

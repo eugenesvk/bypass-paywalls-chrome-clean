@@ -5,16 +5,6 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
     "amp_redirect": "p.read-txt"
   },
-  "El Español": {
-    "domain": "elespanol.com",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
-    "cs_code": [{
-        "cond": "div.full-suscriptor-container",
-        "rm_elem": 1
-      }
-    ]
-  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,
@@ -53,6 +43,12 @@
         "rm_elem": 1
       }
     ],
+    "new_site": 1
+  },
+  "New Scientist (no images as updated site)": {
+    "domain": "newscientist.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "#subscription-barrier|div.article-body",
     "new_site": 1
   },
   "San Diego Union Tribune": {
