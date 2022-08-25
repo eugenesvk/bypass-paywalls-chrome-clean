@@ -32,6 +32,26 @@
     "domain": "latimes.com",
     "block_regex": "(metering\\.platform\\.latimes\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
   },
+  "Madsack Mediengruppe": {
+    "domain": "###_de_madsack",
+    "group": [
+      "haz.de",
+      "kn-online.de",
+      "ln-online.de",
+      "lvz.de",
+      "maz-online.de",
+      "neuepresse.de",
+      "ostsee-zeitung.de",
+      "rnd.de"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|\\.piano\\.io\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "cs_code": [{
+        "cond": "div[class*=\"ArticleTeaserContainer\"]",
+        "rm_attrib": "class"
+      }
+    ]
+  },
   "Neue Westfälische": {
     "domain": "nw.de",
     "allow_cookies": 1,

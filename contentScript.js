@@ -740,6 +740,7 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
         if (json_script) {
           let json = JSON.parse(json_script.text);
           if (article && json) {
+            article.parentNode.removeAttribute('class');
             let json_text = json.articleBody;
             let article_new = document.createElement('span');
             let par = article.querySelector('p');
@@ -762,6 +763,11 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
     }
   } else if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_subscr_section('.pdb-ad-container, amp-embed');
+  } else {
+    window.setTimeout(function () {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      window.location.href = canonical.href;
+    }, 500);
   }
 }
 
