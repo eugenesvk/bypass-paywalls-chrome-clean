@@ -3230,30 +3230,8 @@ else if (matchDomain('nybooks.com')) {
 }
 
 else if (matchDomain('nytimes.com')) {
-  function nyt_main() {
-    navigator.storage.estimate = undefined;
-    webkitRequestFileSystem = function () {};
-  }
-  insert_script(nyt_main);
-  let preview_button = document.querySelector('.css-3s1ce0');
-  if (preview_button)
-    preview_button.click();
-  if (window.location.hostname === 'cooking.nytimes.com') {
-    let no_scroll = document.querySelectorAll('.nytc---modal-window---noScroll');
-    for (let elem of no_scroll)
-      elem.classList.remove('nytc---modal-window---noScroll');
-    let login = document.querySelector('div[class*="modal_modal-window-container"]:not([style="display:none;"])');
-    if (login) {
-      let close_button = login.querySelector('span[aria-label="close"]');
-      if (!close_button)
-        login.style = 'display:none;';
-    }
-  } else {
-    waitDOMElement('div[data-testid="inline-message"]', 'DIV', removeDOMElement, false);
-    waitDOMElement('div[id^="ad-"]', 'DIV', removeDOMElement, false);
-    waitDOMElement('div.expanded-dock', 'DIV', removeDOMElement, false);
-    csDoneOnce = true;
-  }
+  let banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock');
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain('nzherald.co.nz')) {
