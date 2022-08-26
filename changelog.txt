@@ -7,6 +7,7 @@ Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe
 Fix NYTimes (Cooking)
 Fix The New York Review of Books (timing)
+Fix amp: Business of Fashion, Le Parisien & Groupe SudOuest.fr
 
 * v2.8.1.0 (2022-08-21)
 Add Nw.de
