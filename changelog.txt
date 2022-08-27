@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add New Scientist
+Add The Chronicle of Philanthropy
 Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe
 Fix NYTimes (Cooking)

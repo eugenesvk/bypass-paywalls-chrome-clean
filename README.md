@@ -123,7 +123,6 @@ Grouped in options:\
 
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
-[Chronicle of Higher Education](https://www.chronicle.com) -
 [Dark Reading](https://www.darkreading.com) -
 [Discover Magazine](https://www.discovermagazine.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
@@ -139,7 +138,10 @@ Grouped in options:\
 *GenomeWeb* sites like\
 [360Dx](https://www.360dx.com) -
 [GenomeWeb](https://www.genomeweb.com) -
-[Precision Oncology News](https://www.precisiononcologynews.com)
+[Precision Oncology News](https://www.precisiononcologynews.com)\
+*The Chronicle* sites like\
+[The Chronicle of Higher Education](https://www.chronicle.com) -
+[The Chronicle of Philanthropy](https://www.philanthropy.com)
 
 ##### Encyclopedia/Book library/Knowledge base
 [BBC History Extra](https://www.historyextra.com) -

@@ -240,11 +240,6 @@ var defaultSites = {
   "Chemical & Engineering News": {
     domain: "cen.acs.org"
   },
-  "Chronicle of Higher Education": {
-    domain: "chronicle.com",
-    allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.chronicle\.com\/(common\/)?(che-auth0-user|script)\.js)/
-  },
   "Cicero.de": {
     domain: "cicero.de",
     allow_cookies: 1
@@ -1648,6 +1643,15 @@ var defaultSites = {
   "The Christian Science Monitor": {
     domain: "csmonitor.com",
     allow_cookies: 1
+  },
+  "The Chronicle of Higher Education (& Philanthropy)": {
+    domain: "###_usa_chronicle",
+    group: [
+      "chronicle.com",
+      "philanthropy.com"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.blueconic\.net\//
   },
   "The Daily Beast": {
     domain: "thedailybeast.com",

@@ -5,6 +5,19 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
     "amp_redirect": "p.read-txt"
   },
+  "Chronicle of Philanthropy": {
+    "domain": "philanthropy.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.blueconic\\.net\\/",
+    "cs_code": [{
+        "cond": "div[data-content-summary]",
+        "rm_elem": 1
+      }, {
+        "cond": "div[data-content-body]",
+        "rm_attrib": "data-content-body"
+      }
+    ]
+  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,

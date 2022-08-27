@@ -469,6 +469,7 @@
     "*://*.pelotonmagazine.com/*",
     "*://*.pennlive.com/*",
     "*://*.petitbleu.fr/*",
+    "*://*.philanthropy.com/*",
     "*://*.philosophynow.org/*",
     "*://*.pilotonline.com/*",
     "*://*.piqd.de/*",
@@ -698,5 +699,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.1.5"
+  "version": "2.8.1.6"
 }

@@ -2656,7 +2656,7 @@ else if (matchDomain('cen.acs.org')) {
   removeDOMElement(meteredBar);
 }
 
-else if (matchDomain('chronicle.com')) {
+else if (matchDomain(['chronicle.com', 'philanthropy.com'])) {
   let preview = document.querySelector('div[data-content-summary]');
   removeDOMElement(preview);
   let article_hidden = document.querySelector('div[data-content-body]');
