@@ -65,6 +65,11 @@
       }
     ]
   },
+  "Mexico News Daily": {
+    "domain": "mexiconewsdaily.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/api\\/tinypass\\.min\\.js"
+  },
   "Neue Westfälische": {
     "domain": "nw.de",
     "allow_cookies": 1,

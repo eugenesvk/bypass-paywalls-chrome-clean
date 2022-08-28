@@ -1280,8 +1280,8 @@ else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
 }
 
 else if (matchDomain('leparisien.fr')) {
+  let paywall = document.querySelector('div.paywall');
   if (window.location.pathname.startsWith('/amp/')) {
-    let paywall = document.querySelector('div.paywall');
     if (paywall) {
       let paywall_sticky = document.querySelector('div.paywall-sticky');
       removeDOMElement(paywall, paywall_sticky);
@@ -1293,7 +1293,6 @@ else if (matchDomain('leparisien.fr')) {
         mask.classList.remove('amp-premium-first-content');
     }
   } else {
-    let paywall = document.querySelector('div.paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (paywall && amphtml) {
       removeDOMElement(paywall);
@@ -1501,7 +1500,6 @@ else if (matchDomain('science-et-vie.com')) {
 }
 
 else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenees.fr'])) {
-  let url = window.location.href;
   let paywall = document.querySelectorAll('.visible-not-premium');
   if (paywall.length) {
     removeDOMElement(...paywall);

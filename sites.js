@@ -1185,7 +1185,7 @@ var defaultSites = {
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
     allow_cookies: 1,
-    block_regex: /\.mexiconewsdaily\.com\/c\/assets\/pigeon\.js/
+    block_regex: /\.piano\.io\/api\/tinypass\.min\.js/
   },
   "Mid-Day": {
     domain: "mid-day.com",

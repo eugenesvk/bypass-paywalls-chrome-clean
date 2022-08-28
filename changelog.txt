@@ -6,6 +6,7 @@ Add New Scientist
 Add The Chronicle of Philanthropy
 Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe
+Fix Mexico News Daily
 Fix NYTimes (Cooking)
 Fix The New York Review of Books (timing)
 Fix amp: Business of Fashion, Le Parisien & Groupe SudOuest.fr
