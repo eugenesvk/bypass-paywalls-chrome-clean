@@ -567,6 +567,7 @@
     "*://*.thedailybeast.com/*",
     "*://*.thediplomat.com/*",
     "*://*.theglobeandmail.com/*",
+    "*://*.thehill.com/*",
     "*://*.thehindu.com/*",
     "*://*.thehindubusinessline.com/*",
     "*://*.theinitium.com/*",
@@ -699,5 +700,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.1.6"
+  "version": "2.8.1.7"
 }

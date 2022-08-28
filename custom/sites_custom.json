@@ -161,11 +161,6 @@
     "block_regex": "\\.thefashionlaw\\.com\\/evolok\\/.+\\/ev-widgets\\.min\\.js",
     "domain": "thefashionlaw.com"
   },
-  "Thehill.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "domain": "thehill.com"
-  },
   "Thenational.scot": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",

@@ -254,6 +254,7 @@ Grouped in options:\
 [The Atlanta Journal-Constitution](https://www.ajc.com) -
 [The Boston Globe](https://www.bostonglobe.com) -
 [The Dallas Morning News](https://www.dallasnews.com) -
+[The Hill](https://thehill.com) -
 [The New Orleans Advocate/The Times-Picayune](https://www.nola.com) -
 [The Seattle Times](https://www.seattletimes.com) -
 [The Philadelphia Inquirer](https://www.inquirer.com)

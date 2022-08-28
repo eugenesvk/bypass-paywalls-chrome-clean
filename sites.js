@@ -1695,6 +1695,11 @@ var defaultSites = {
     domain: "theglobeandmail.com",
     block_regex: /(\.theglobeandmail\.com\/pf\/dist\/engine\/react\.js|smartwall\.theglobeandmail\.com\/)/
   },
+  "The Hill": {
+    domain: "thehill.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
+  },
   "The Hill Times": {
     domain: "hilltimes.com",
     allow_cookies: 1,

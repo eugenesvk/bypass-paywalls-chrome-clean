@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add New Scientist
 Add The Chronicle of Philanthropy
+Add The Hill
 Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe
 Fix Mexico News Daily
