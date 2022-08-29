@@ -258,7 +258,15 @@ var defaultSites = {
   },
   "Condé Nast magazines": {
     domain: "###_usa_conde_nast",
-    group: ["architecturaldigest.com", "bonappetit.com", "gq.com", "newyorker.com", "vanityfair.com", "vogue.com", "wired.com"],
+    group: [
+      "architecturaldigest.com",
+      "bonappetit.com",
+      "gq.com",
+      "newyorker.com",
+      "vanityfair.com",
+      "vogue.com",
+      "wired.com"
+    ],
     remove_cookies_select_drop: ["pay_ent_smp", "pay_ent_usmp"],
     block_regex: "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     useragent: "googlebot"
@@ -1855,7 +1863,7 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: /(\.(ca|com)\/api\/overlaydata|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "The Wall Street Journal": {
     domain: "wsj.com",

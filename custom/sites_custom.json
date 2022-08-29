@@ -18,6 +18,11 @@
   "Brainly.com": {
     "domain": "brainly.com"
   },
+  "Businessnews.com.au": {
+    "allow_cookies": 1,
+    "domain": "businessnews.com.au",
+    "useragent": "googlebot"
+  },
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",

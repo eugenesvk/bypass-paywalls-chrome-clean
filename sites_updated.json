@@ -108,5 +108,19 @@
     "domain": "nytimes.com",
     "allow_cookies": 1,
     "block_regex": "(meter-svc\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)"
+  },
+  "The Toronto Star (+ local TorStar sites)": {
+    "domain": "###_ca_torstar",
+    "group": [
+      "niagarafallsreview.ca",
+      "stcatharinesstandard.ca",
+      "thepeterboroughexaminer.com",
+      "therecord.com",
+      "thespec.com",
+      "thestar.com",
+      "wellandtribune.ca"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   }
 }

@@ -2638,7 +2638,7 @@ else if (matchDomain(ca_gcm_domains)) {
 else if (matchDomain(ca_torstar_domains)) {
   window.setTimeout(function () {
     let meter_banner = document.querySelector('.c-article-meter-banner');
-    let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot');
+    let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot, .ad-slot');
     removeDOMElement(meter_banner, ...ads);
     let end_of_article = document.querySelector('#end-of-article');
     if (end_of_article)
