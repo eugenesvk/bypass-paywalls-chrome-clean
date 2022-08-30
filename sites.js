@@ -319,9 +319,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.evolok\.net\/|nation\.africa\/resource\/themes\/nation-.+\/js\/.+\.js)/
   },
-  "Dark Reading": {
-    domain: "darkreading.com"
-  },
   "De Tijd": {
     domain: "tijd.be",
     referer: "google"

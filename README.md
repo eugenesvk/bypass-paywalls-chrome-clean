@@ -123,7 +123,6 @@ Grouped in options:\
 
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
-[Dark Reading](https://www.darkreading.com) -
 [Discover Magazine](https://www.discovermagazine.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
 [National Geographic USA](https://www.nationalgeographic.com) -
