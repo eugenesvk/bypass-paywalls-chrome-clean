@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Remove Dark Reading (no paywall)
 Fix Australian Community Media (overlay)
+Fix L'Opinion.fr
 Fix The Toronto Star
 
 * v2.8.2.0 (2022-08-28)

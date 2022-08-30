@@ -1458,6 +1458,14 @@ else if (matchDomain('loeildelaphotographie.com')) {
 else if (matchDomain('lopinion.fr')) {
   if (window.location.search.startsWith('?_amp=true'))
     amp_unhide_access_hide('="access"', '="NOT access"');
+  else {
+    let paywall = document.querySelector('div#poool-widget');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  }
 }
 
 else if (matchDomain('marianne.net')) {

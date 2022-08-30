@@ -44,6 +44,11 @@
       }
     ]
   },
+  "L'Opinion": {
+    "domain": "lopinion.fr",
+    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "amp_redirect": "div#poool-widget"
+  },
   "La Vie": {
     "domain": "lavie.fr",
     "allow_cookies": 1,
