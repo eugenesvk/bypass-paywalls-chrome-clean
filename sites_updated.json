@@ -1,4 +1,30 @@
 {
+  "Australian Community Media (daily)": {
+    "domain": "###_au_comm_media",
+    "group": [
+      "bendigoadvertiser.com.au",
+      "bordermail.com.au",
+      "canberratimes.com.au",
+      "centralwesterndaily.com.au",
+      "dailyadvertiser.com.au",
+      "dailyliberal.com.au",
+      "examiner.com.au",
+      "illawarramercury.com.au",
+      "newcastleherald.com.au",
+      "northerndailyleader.com.au",
+      "standard.net.au",
+      "theadvocate.com.au",
+      "thecourier.com.au",
+      "westernadvocate.com.au"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(cdn-au\\.piano\\.io\\/api\\/tinypass.+\\.js|cdn\\.cxense\\.com\\/)",
+    "cs_code": [{
+        "cond": "div.transition-all",
+        "rm_elem": 1
+      }
+    ]
+  },
   "Business Standard": {
     "domain": "business-standard.com",
     "allow_cookies": 1,

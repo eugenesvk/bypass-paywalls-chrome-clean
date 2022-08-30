@@ -292,12 +292,13 @@ else {
         subscriber_hider.classList.remove('subscriber-hider');
     }
     let blocker = document.querySelector('div.blocker');
+    let overlays = document.querySelectorAll('div.transition-all');
     let noscroll = document.querySelector('body[style]');
     if (noscroll)
       noscroll.removeAttribute('style');
     let story_generic_iframe = document.querySelector('.story-generic__iframe');
     let ads = document.querySelectorAll('.ad-placeholder, .sticky, [id*="-container"], #hindsight-ads-iframe');
-    removeDOMElement(story_generic_iframe, blocker, ...ads);
+    removeDOMElement(story_generic_iframe, blocker, ...overlays, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
     let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
