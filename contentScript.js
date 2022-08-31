@@ -292,10 +292,10 @@ else {
         subscriber_hider.classList.remove('subscriber-hider');
     }
     let blocker = document.querySelector('div.blocker');
-    let overlays = document.querySelectorAll('div.transition-all');
-    let noscroll = document.querySelector('body[style]');
-    if (noscroll)
-      noscroll.removeAttribute('style');
+    let overlays = document.querySelectorAll('div.transition-all, div[id^="headlessui-dialog"]');
+    let noscroll = document.querySelectorAll('html[style], body[style]');
+    for (let elem of noscroll)
+      elem.removeAttribute('style');
     let story_generic_iframe = document.querySelector('.story-generic__iframe');
     let ads = document.querySelectorAll('.ad-placeholder, .sticky, [id*="-container"], #hindsight-ads-iframe');
     removeDOMElement(story_generic_iframe, blocker, ...overlays, ...ads);

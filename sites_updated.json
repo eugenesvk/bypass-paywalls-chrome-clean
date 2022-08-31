@@ -20,7 +20,7 @@
     "allow_cookies": 1,
     "block_regex": "(cdn-au\\.piano\\.io\\/api\\/tinypass.+\\.js|cdn\\.cxense\\.com\\/)",
     "cs_code": [{
-        "cond": "div.transition-all",
+        "cond": "div.transition-all, div[id^=\"headlessui-dialog\"]",
         "rm_elem": 1
       }
     ]
