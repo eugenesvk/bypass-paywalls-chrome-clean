@@ -128,6 +128,7 @@ Grouped in options:\
 [National Geographic USA](https://www.nationalgeographic.com) -
 [Nautilus](https://nautil.us) -
 [New Scientist](https://www.newscientist.com) -
+[Popular Science](https://www.popsci.com) -
 [Science](https://www.science.org)* -
 [Scientific American](https://www.scientificamerican.com) -
 [Times Higher Education](https://www.timeshighereducation.com) -

@@ -1401,6 +1401,11 @@ var defaultSites = {
     domain: "politicaexterior.com",
     allow_cookies: 1
   },
+  "Popular Science": {
+    domain: "popsci.com",
+    allow_cookies: 1,
+    block_regex: /js\.pelcro\.com\//
+  },
   "Postmedia Network": {
     domain: "###_ca_postmedia",
     group: [
