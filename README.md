@@ -288,6 +288,7 @@ Grouped in options:\
 [San Francisco Chronicle](https://www.sfchronicle.com)\
 *Lee Enterprises Group* sites like (opt-in to custom sites for unlisted)\
 [Arizona Daily Star](https://tucson.com) -
+[Omaha World-Herald](https://omaha.com) -
 [Richmond Times-Dispatch](https://richmond.com) -
 [The Buffalo News](https://buffalonews.com) -
 [Tulsa World](https://tulsaworld.com) -

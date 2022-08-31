@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Omaha World-Herald (Lee Enterprises Group)
 Remove Dark Reading (no paywall)
 Fix Australian Community Media (overlay)
 Fix L'Opinion.fr

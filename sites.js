@@ -1040,6 +1040,7 @@ var defaultSites = {
     group: [
       "buffalonews.com",
       "journalnow.com",
+      "omaha.com",
       "richmond.com",
       "tucson.com",
       "tulsaworld.com"
