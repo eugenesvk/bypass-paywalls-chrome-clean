@@ -25,6 +25,12 @@
       }
     ]
   },
+  "AutoPlus.fr": {
+    "domain": "autoplus.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\\/",
+    "new_site": 1
+  },
   "Chronicle of Philanthropy": {
     "domain": "philanthropy.com",
     "allow_cookies": 1,

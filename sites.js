@@ -163,6 +163,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.automobilwoche\.de\/s3fs-public\/js\/js_.+\.js/
   },
+  "AutoPlus.fr": {
+    domain: "autoplus.fr",
+    allow_cookies: 1,
+    block_regex: /\.qiota\.com\//
+  },
   "Badische Neueste Nachrichten": {
     allow_cookies: 1,
     domain: "bnn.de",

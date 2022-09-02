@@ -402,6 +402,7 @@ Grouped in options:\
 ##### France/Wallonia
 [Alternatives Economiques](https://www.alternatives-economiques.fr) -
 [Atlantico](https://atlantico.fr) -
+[Auto Plus](https://www.autoplus.fr) -
 [Causeur](https://www.causeur.fr) -
 [Challenges](https://www.challenges.fr) -
 [Charlie Hebdo](https://charliehebdo.fr) -

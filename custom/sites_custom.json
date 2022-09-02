@@ -46,6 +46,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "eluniversal.com.mx"
   },
+  "Euromoney.com": {
+    "allow_cookies": 1,
+    "domain": "euromoney.com",
+    "useragent": "googlebot"
+  },
   "Fnweb.de": {
     "allow_cookies": 1,
     "domain": "fnweb.de",
@@ -74,6 +79,11 @@
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
+  },
+  "Internationaltaxreview.com": {
+    "allow_cookies": 1,
+    "domain": "internationaltaxreview.com",
+    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
   },
   "Kaleva.fi": {
     "allow_cookies": 1,

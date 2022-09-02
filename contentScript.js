@@ -1128,6 +1128,11 @@ else if (matchDomain('atlantico.fr')) {
     paywall.setAttribute('class', 'markup');
 }
 
+else if (matchDomain('autoplus.fr')) {
+  let ads = document.querySelectorAll('div.placeholder-pub_dfp');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('challenges.fr')) {
   if (window.location.pathname.endsWith('.amp')) {
     amp_unhide_access_hide('="paywall.access OR cha.access"', '="NOT (paywall.access OR cha.access)"');
