@@ -994,7 +994,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
-    !(matchUrlDomain('wsj.com', details.url) && enabledSites.includes('#options_disable_gb_wsj'));
+    !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));
 

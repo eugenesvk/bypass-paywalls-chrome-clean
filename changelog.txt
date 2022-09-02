@@ -9,6 +9,7 @@ Remove Dark Reading (no paywall)
 Fix Australian Community Media (overlay)
 Fix L'Opinion.fr
 Fix The Toronto Star
+Fix WSJ (mobile layout)
 
 * v2.8.2.0 (2022-08-28)
 Add New Scientist
