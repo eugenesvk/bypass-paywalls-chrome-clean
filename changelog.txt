@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.3.0 (2022-09-04)
 Add AutoPlus.fr
 Add Omaha World-Herald (Lee Enterprises Group)
 Add Popular Science
