@@ -1230,8 +1230,7 @@ var defaultSites = {
   "National Review": {
     domain: "nationalreview.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.nationalreview\.com\/script\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
-    useragent: "googlebot"
+    block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Nautilus": {
     domain: "nautil.us",
@@ -2090,9 +2089,6 @@ var defaultSites = {
   },
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
-  },
-  "The Globe and Mail premium-only (or when empty sections)": {
-    domain: "#options_optin_tgam_premium"
   },
 }
 

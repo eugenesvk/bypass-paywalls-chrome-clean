@@ -8,6 +8,7 @@ Add Popular Science
 Remove Dark Reading (no paywall)
 Fix Australian Community Media (overlay)
 Fix L'Opinion.fr
+Fix The Globe and Mail (images)
 Fix The Toronto Star
 Fix WSJ (mobile layout)
 

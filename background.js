@@ -21,6 +21,7 @@ var restrictions = {
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
+  'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
@@ -291,8 +292,6 @@ function set_rules(sites, sites_updated, sites_custom) {
       }
     }
   }
-  if (enabledSites.includes('#options_optin_tgam_premium'))
-    blockedRegexes['theglobeandmail.com'] = /smartwall\.theglobeandmail\.com\//;
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
   disableJavascriptOnListedSites();
@@ -653,14 +652,13 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.nautil.us/*", "*://*.theglobeandmail.com/*"];
+var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.nautil.us/*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];
   let excluded = (matchUrlDomain('crusoe.uol.com.br', details.url) && (optin_setcookie || !url_path.match(/\.br\/(diario|edicoes)\/.+/)))
   || (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
-  || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/))
-  || (matchUrlDomain('theglobeandmail.com', details.url) && (!enabledSites.includes('#options_optin_tgam_premium') || !details.url.includes('?rel=premium')));
+  || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/));
   if (!isSiteEnabled(details) || excluded)
     return;
   var headers = details.responseHeaders;
