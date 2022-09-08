@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add PEI Media sites (opt-in to custom sites)
+Fix Faz.net (Zeitung timing)
 Fix TownNews sites (css)
 
 * v2.8.3.0 (2022-09-04)

@@ -524,11 +524,10 @@ else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
     let paywall_z = document.querySelector('.c-red-carpet');
     if (paywall_z) {
-      let og_url = document.querySelector('meta[property="og:url"]');
+      removeDOMElement(paywall_z);
+      let og_url = document.querySelector('meta[property="og:url"][content]');
       if (og_url)
-        window.setTimeout(function () {
-          window.location.href = og_url.content;
-        }, 500);
+        window.location.href = og_url.content;
     }
     let sticky_advt = document.querySelector('.sticky-advt');
     removeDOMElement(sticky_advt);
