@@ -909,6 +909,13 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
                       !matchUrlDomain(usa_mng_domains, header_referer) && enabledSites.includes('###_usa_mng'));
                     if (usa_mng_domain)
                       usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);
+                    else if (header_referer_hostname.match(/\.com$/)) {
+                      // set googlebot-useragent for PEI Media sites
+					  //https://www.secondariesinvestor.com/wp-content/plugins/pragmatic-pei-rebranding/assets/img/si-logo.svg
+                      var usa_pei_domain = (details.url.match(/\.com\/wp-content\/plugins\/pragmatic-pei-rebranding\/assets\/img\/.+-logo\.svg$/) && ['image', 'xmlhttprequest'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_pei_domains, header_referer) && enabledSites.includes('###_usa_pei'));
+                      if (usa_pei_domain)
+                        usa_pei_domains = customAddRules(usa_pei_domains, {allow_cookies: 1}, '', 'googlebot');
+                    }
                   }
                 }
               }

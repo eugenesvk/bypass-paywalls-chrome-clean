@@ -55,7 +55,7 @@ Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypas
 #### Notes
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin).
 * You will be logged out for most of the sites you have checked.
-* Some sites need to redirect to an amp-page (add an exception in your `Redirect AMP to HTML` add-on).
+* Some sites need to redirect to an amp-page (add an exception in your `Redirect AMP to HTML` or `DuckDuckGo Privacy Essentials` add-on).
 
 ### List of supported websites
 
@@ -114,12 +114,15 @@ Grouped in options:\
 [Crain's Cleveland Business](https://www.crainscleveland.com) -
 [Crain's Detroit Business](https://www.crainsdetroit.com) -
 [Crain's New York Business](https://www.crainsnewyork.com) -
-[Modern Healthcare](https://www.modernhealthcare.com)\
+[Modern Healthcare](https://www.modernhealthcare.com)
+
 *NHST Media Group* sites like\
 [Intrafish](https://www.intrafish.com) -
 [Recharge](https://www.rechargenews.com) -
 [TradeWinds](https://www.tradewindsnews.com) -
 [Upstream](https://www.upstreamonline.com)
+
+*[PEI Media](https://www.thisispei.com)* sites (opt-in to custom sites)
 
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
