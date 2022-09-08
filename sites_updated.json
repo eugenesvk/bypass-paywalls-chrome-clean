@@ -31,84 +31,16 @@
     "block_regex": "\\.qiota\\.com\\/",
     "new_site": 1
   },
-  "Chronicle of Philanthropy": {
-    "domain": "philanthropy.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.blueconic\\.net\\/",
-    "cs_code": [{
-        "cond": "div[data-content-summary]",
-        "rm_elem": 1
-      }, {
-        "cond": "div[data-content-body]",
-        "rm_attrib": "data-content-body"
-      }
-    ]
-  },
   "L'Opinion": {
     "domain": "lopinion.fr",
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "amp_redirect": "div#poool-widget"
-  },
-  "Los Angeles Times": {
-    "domain": "latimes.com",
-    "block_regex": "(metering\\.platform\\.latimes\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
-  },
-  "Madsack Mediengruppe": {
-    "domain": "###_de_madsack",
-    "group": [
-      "haz.de",
-      "kn-online.de",
-      "ln-online.de",
-      "lvz.de",
-      "maz-online.de",
-      "neuepresse.de",
-      "ostsee-zeitung.de",
-      "rnd.de"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|\\.piano\\.io\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "cs_code": [{
-        "cond": "div[class*=\"ArticleTeaserContainer\"]",
-        "rm_attrib": "class"
-      }
-    ]
-  },
-  "Mexico News Daily": {
-    "domain": "mexiconewsdaily.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/api\\/tinypass\\.min\\.js"
-  },
-  "New Scientist (no images as updated site)": {
-    "domain": "newscientist.com",
-    "allow_cookies": 1,
-    "ld_google_webcache": "#subscription-barrier|div.article-body",
-    "new_site": 1
   },
   "Popular Science": {
     "domain": "popsci.com",
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com\\/",
     "new_site": 1
-  },
-  "San Diego Union Tribune": {
-    "domain": "sandiegouniontribune.com",
-    "block_regex": "(metering\\.platform\\.sandiegouniontribune\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
-  },
-  "The Hill": {
-    "domain": "thehill.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "new_site": 1
-  },
-  "The New York Review of Books": {
-    "domain": "nybooks.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.nybooks\\.com\\/wp-admin\\/admin-ajax\\.php"
-  },
-  "The New York Times": {
-    "domain": "nytimes.com",
-    "allow_cookies": 1,
-    "block_regex": "(meter-svc\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)"
   },
   "The Toronto Star (+ local TorStar sites)": {
     "domain": "###_ca_torstar",

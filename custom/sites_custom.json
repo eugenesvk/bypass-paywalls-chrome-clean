@@ -126,6 +126,10 @@
     "amp_redirect": "div[id^=\"media_paywall\"]",
     "domain": "nv.ua"
   },
+  "Penews.com": {
+    "domain": "penews.com",
+    "useragent": "googlebot"
+  },
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
