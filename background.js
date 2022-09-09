@@ -374,8 +374,11 @@ ext_api.storage.local.get({
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
-  if (enabledSites.includes('#options_optin_update_rules'))
+  if (enabledSites.includes('#options_optin_update_rules')) {
     check_sites_updated();
+    sites_custom_ext_json = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/custom/sites_custom.json';
+    check_sites_custom_ext();
+  } 
   if (optin_update)
     check_update();
 });
@@ -1168,6 +1171,22 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
 }, extraInfoSpec);
 // extraInfoSpec is ['blocking', 'requestHeaders'] + possible 'extraHeaders'
 
+function check_sites_custom_ext() {
+  fetch(sites_custom_ext_json)
+  .then(response => {
+    if (response.ok) {
+      response.json().then(json => {
+        customSitesExt = Object.values(json).map(x => x.domain);
+      })
+    }
+  }).catch(function (err) {
+    false;
+  });
+}
+
+var customSitesExt = [];
+var sites_custom_ext_json = 'custom/sites_custom.json';
+
 ext_api.tabs.onUpdated.addListener(function (tabId, info, tab) { updateBadge(tab); });
 ext_api.tabs.onActivated.addListener(function (activeInfo) { if (activeInfo.tabId) ext_api.tabs.get(activeInfo.tabId, updateBadge); });
 
@@ -1207,6 +1226,8 @@ function updateBadge(activeTab) {
         ext_api.browserAction.setBadgeText({text: badgeText});
       });
     } else {
+      if (matchUrlDomain(customSitesExt, currentUrl))
+        badgeText = '+C';
       if (color && badgeText)
         ext_api.browserAction.setBadgeBackgroundColor({color: color});
       ext_api.browserAction.setBadgeText({text: badgeText});

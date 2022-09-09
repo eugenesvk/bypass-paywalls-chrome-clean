@@ -1,4 +1,9 @@
 {
+  "60millions-mag.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/",
+    "domain": "60millions-mag.com"
+  },
   "Abqjournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.abqjournal\\.com\\/.+\\/abq-pw-manager\\.js",
@@ -41,6 +46,11 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
+  "Edweek.org": {
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com\\/",
+    "domain": "edweek.org"
+  },
   "Eluniversal.com.mx": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -58,7 +68,7 @@
   },
   "Gazette.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net",
+    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
     "domain": "gazette.com"
   },
   "Gplanet.co.il": {
@@ -151,6 +161,11 @@
   "Speld.nl": {
     "domain": "speld.nl"
   },
+  "Spokesman.com": {
+    "allow_cookies": 1,
+    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "domain": "spokesman.com"
+  },
   "Supchina.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -204,5 +219,10 @@
     "allow_cookies": 1,
     "domain": "vigilantcitizen.com",
     "random_ip": "all"
+  },
+  "Washingtontimes.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "domain": "washingtontimes.com"
   }
 }

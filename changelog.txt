@@ -5,6 +5,7 @@ Post-release
 Add PEI Media sites (opt-in to custom sites)
 Fix Faz.net (Zeitung timing)
 Fix TownNews sites (css)
+Update badge (notification: import as custom site)
 
 * v2.8.3.0 (2022-09-04)
 Add AutoPlus.fr

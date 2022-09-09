@@ -1817,8 +1817,8 @@ if (matchDomain('fd.nl')) {
 }
 
 else if (matchDomain('ftm.nl')) {
-  let banner_pp = document.querySelector('div.banner-pp');
-  removeDOMElement(banner_pp);
+  let banners = document.querySelectorAll('div.banner-pp, a.readmore');
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be'])) {
