@@ -197,7 +197,7 @@ var defaultSites = {
   "Berliner Zeitung": {
     domain: "berliner-zeitung.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+    useragent: "googlebot"
   },
   "Berlingske": {
     domain: "berlingske.dk",

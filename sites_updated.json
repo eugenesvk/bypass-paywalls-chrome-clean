@@ -31,6 +31,11 @@
     "block_regex": "\\.qiota\\.com\\/",
     "new_site": 1
   },
+  "Berliner Zeitung": {
+    "domain": "berliner-zeitung.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "L'Opinion": {
     "domain": "lopinion.fr",
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",

@@ -483,19 +483,8 @@ else if (matchDomain('automobilwoche.de')) {
 }
 
 else if (matchDomain('berliner-zeitung.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('.paywall-dialog-box');
-  if (url.split('?')[0].includes('.amp')) {
-    if (paywall) {
-      removeDOMElement(paywall);
-      amp_unhide_subscr_section('amp-ad, amp-embed, amp-fx-flying-carpet, div.amp-flying-carpet-text-border');
-    }
-  } else {
-    if (paywall) {
-      removeDOMElement(paywall);
-      window.location.href = url.split('?')[0] + '.amp';
-    }
-  }
+let ads = document.querySelectorAll('[id^="traffective-ad"], [class^="ad-slot_wrapper"], [class^="outbrain_container"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('cicero.de')) {
