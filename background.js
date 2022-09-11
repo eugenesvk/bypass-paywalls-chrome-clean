@@ -377,8 +377,8 @@ ext_api.storage.local.get({
   if (enabledSites.includes('#options_optin_update_rules')) {
     check_sites_updated();
     sites_custom_ext_json = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/custom/sites_custom.json';
-    check_sites_custom_ext();
   } 
+  check_sites_custom_ext();
   if (optin_update)
     check_update();
 });
