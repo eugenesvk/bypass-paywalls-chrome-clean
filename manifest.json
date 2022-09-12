@@ -57,6 +57,7 @@
     "webRequest",
     "webRequestBlocking",
     "*://*.360dx.com/*",
+    "*://*.60millions-mag.com/*",
     "*://*.abc.es/*",
     "*://*.abendblatt.de/*",
     "*://*.abril.com.br/*",
@@ -703,5 +704,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.4.0"
+  "version": "2.8.4.1"
 }

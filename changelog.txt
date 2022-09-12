@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add 60 Millions de consommateurs
 Add Private Equity News
 Fix Gruppo GEDI.it (login)
 

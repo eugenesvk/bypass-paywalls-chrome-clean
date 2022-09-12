@@ -1,4 +1,9 @@
 var defaultSites = {
+  "60 Millions de consommateurs": {
+    domain: "60millions-mag.com",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "Advance Local": {
     domain: "###_usa_adv_local",
     allow_cookies: 1,

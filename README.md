@@ -404,6 +404,7 @@ Grouped in options:\
 [Uusi Suomi](https://www.uusisuomi.fi)
 
 ##### France/Wallonia
+[60 Millions de consommateurs](https://www.60millions-mag.com) -
 [Alternatives Economiques](https://www.alternatives-economiques.fr) -
 [Atlantico](https://atlantico.fr) -
 [Auto Plus](https://www.autoplus.fr) -
