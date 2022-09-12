@@ -47,6 +47,10 @@
     "block_regex": "js\\.pelcro\\.com\\/",
     "new_site": 1
   },
+  "Private Equity News": {
+    "domain": "penews.com",
+    "useragent": "googlebot"
+  },
   "The Toronto Star (+ local TorStar sites)": {
     "domain": "###_ca_torstar",
     "group": [

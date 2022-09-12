@@ -1225,7 +1225,7 @@ function updateBadge(activeTab) {
         ext_api.browserAction.setBadgeText({text: badgeText});
       });
     } else {
-      if (matchUrlDomain(customSitesExt, currentUrl))
+      if (!badgeText && matchUrlDomain(customSitesExt, currentUrl))
         badgeText = '+C';
       if (color && badgeText)
         ext_api.browserAction.setBadgeBackgroundColor({color: color});

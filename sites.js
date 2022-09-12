@@ -1426,6 +1426,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "Private Equity News": {
+    domain: "penews.com",
+    useragent: "googlebot"
+  },
   "Prospect Magazine": {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1

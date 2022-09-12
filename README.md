@@ -370,6 +370,7 @@ Grouped in options:\
 [Irish Independent](https://www.independent.ie) -
 [London Review of Books](https://www.lrb.co.uk) -
 [New Left Review](https://newleftreview.org) -
+[Private Equity News](https://www.penews.com) -
 [Prospect Magazine](https://www.prospectmagazine.co.uk) -
 [The Banker](https://www.thebanker.com) -
 [The Economist](https://www.economist.com) -
