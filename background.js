@@ -716,7 +716,7 @@ function disableJavascriptOnListedSites() {
            && ((enabledSites.includes('###_wp_evolok') && details.url.match(/\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/))
              || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
              || (enabledSites.includes('zephr.com') && details.url.includes('/zephr/features')))))
-       || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'cambridge.org', 'japantimes.co.jp']), header_referer)) {
+       || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'businesspost.ie', 'cambridge.org', 'japantimes.co.jp']), header_referer)) {
       return;
     }
     return {

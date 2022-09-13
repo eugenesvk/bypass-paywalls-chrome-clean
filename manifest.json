@@ -118,6 +118,7 @@
     "*://*.business-standard.com/*",
     "*://*.businessinsider.com/*",
     "*://*.businessoffashion.com/*",
+    "*://*.businesspost.ie/*",
     "*://*.cairnspost.com.au/*",
     "*://*.calgaryherald.com/*",
     "*://*.canberratimes.com.au/*",
@@ -704,5 +705,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.4.1"
+  "version": "2.8.4.2"
 }

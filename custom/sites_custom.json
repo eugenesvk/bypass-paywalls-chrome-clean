@@ -41,6 +41,11 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
+  "Dailyherald.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "domain": "dailyherald.com"
+  },
   "Edweek.org": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com\\/",
