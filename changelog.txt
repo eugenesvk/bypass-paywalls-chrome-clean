@@ -5,6 +5,7 @@ Post-release
 Add 60 Millions de consommateurs
 Add BusinessPost.ie
 Add Private Equity News
+Fix Esprit.presse.fr
 Fix Gruppo GEDI.it (login)
 
 * v2.8.4.0 (2022-09-11)
@@ -971,7 +972,7 @@ Update grouped sites (popup-toggle)
 
 * v1.9.8.0 (2020-12-06)
 Add El Comercio, Ideal & La Voz de Cadiz (Spain)
-Add Esprit (France)
+Add Esprit.presse.fr
 Add Groupe Rossel (France/Belgium)
 Add The Spectator USA
 Remove Aftonbladet.se (fix obsolete)

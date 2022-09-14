@@ -450,7 +450,7 @@ var defaultSites = {
   "Esprit": {
     domain: "esprit.presse.fr",
     allow_cookies: 1,
-    random_ip: "all"
+    block_regex: /\.poool\.fr\//
   },
   "Estado de Minas": {
     domain: "em.com.br",

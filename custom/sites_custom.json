@@ -10,6 +10,11 @@
     "domain": "airmail.news",
     "useragent": "googlebot"
   },
+  "Asiamoney.com": {
+    "allow_cookies": 1,
+    "domain": "asiamoney.com",
+    "useragent": "googlebot"
+  },
   "Bauernzeitung.ch": {
     "allow_cookies": 1,
     "domain": "bauernzeitung.ch",
@@ -65,6 +70,11 @@
     "allow_cookies": 1,
     "domain": "fnweb.de",
     "useragent": "googlebot"
+  },
+  "Frieze.com": {
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com\\/",
+    "domain": "frieze.com"
   },
   "Gazette.com": {
     "allow_cookies": 1,

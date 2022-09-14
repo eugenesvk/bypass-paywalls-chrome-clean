@@ -1165,11 +1165,6 @@ else if (matchDomain('elle.fr')) {
   }
 }
 
-else if (matchDomain('esprit.presse.fr')) {
-  let paywall = document.querySelector('.panel-popup-paywall');
-  removeDOMElement(paywall);
-}
-
 else if (matchDomain(fr_groupe_ebra_domains)) {
   if (!window.location.pathname.startsWith('/amp/')) {
     let paywall = document.querySelector('div.preview');

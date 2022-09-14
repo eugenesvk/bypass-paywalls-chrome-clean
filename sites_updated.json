@@ -4,70 +4,18 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
-  "Australian Community Media (daily)": {
-    "domain": "###_au_comm_media",
-    "group": [
-      "bendigoadvertiser.com.au",
-      "bordermail.com.au",
-      "canberratimes.com.au",
-      "centralwesterndaily.com.au",
-      "dailyadvertiser.com.au",
-      "dailyliberal.com.au",
-      "examiner.com.au",
-      "illawarramercury.com.au",
-      "newcastleherald.com.au",
-      "northerndailyleader.com.au",
-      "standard.net.au",
-      "theadvocate.com.au",
-      "thecourier.com.au",
-      "westernadvocate.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(cdn-au\\.piano\\.io\\/api\\/tinypass.+\\.js|cdn\\.cxense\\.com\\/)",
-    "cs_code": [{
-        "cond": "div.transition-all, div[id^=\"headlessui-dialog\"]",
-        "rm_elem": 1
-      }
-    ]
-  },
-  "AutoPlus.fr": {
-    "domain": "autoplus.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/",
-    "new_site": 1
-  },
   "Berliner Zeitung": {
     "domain": "berliner-zeitung.de",
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
-  "L'Opinion": {
-    "domain": "lopinion.fr",
-    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "amp_redirect": "div#poool-widget"
-  },
-  "Popular Science": {
-    "domain": "popsci.com",
+  "Esprit": {
+    "domain": "esprit.presse.fr",
     "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com\\/",
-    "new_site": 1
+    "block_regex": "\\.poool\\.fr\\/"
   },
   "Private Equity News": {
     "domain": "penews.com",
     "useragent": "googlebot"
-  },
-  "The Toronto Star (+ local TorStar sites)": {
-    "domain": "###_ca_torstar",
-    "group": [
-      "niagarafallsreview.ca",
-      "stcatharinesstandard.ca",
-      "thepeterboroughexaminer.com",
-      "therecord.com",
-      "thespec.com",
-      "thestar.com",
-      "wellandtribune.ca"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   }
 }
