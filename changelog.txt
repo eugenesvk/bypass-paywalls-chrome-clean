@@ -7,6 +7,7 @@ Add BusinessPost.ie
 Add Private Equity News
 Fix Esprit.presse.fr
 Fix Gruppo GEDI.it (login)
+Fix The Spectator UK (no amp)
 
 * v2.8.4.0 (2022-09-11)
 Add PEI Media sites (opt-in to custom sites)

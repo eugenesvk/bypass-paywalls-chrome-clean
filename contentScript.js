@@ -1292,7 +1292,7 @@ else if (matchDomain('leparisien.fr')) {
 
 else if (matchDomain('lequipe.fr')) {
   let paywall = document.querySelectorAll('.Paywall, .Article__paywall');
-  if (paywall.length) {
+  if (window.location.pathname.includes('/Article/') && paywall.length) {
     let scripts = document.querySelectorAll('script:not([src], [type])');
     let json_script;
     for (let script of scripts) {
@@ -2175,18 +2175,26 @@ else if (matchDomain('prospectmagazine.co.uk')) {
 }
 
 else if (matchDomain('spectator.co.uk')) {
-  if (window.location.pathname.match(/\/amp(\/)?$/)) {
-    let banners = document.querySelectorAll('div[amp-access^="p.show"], div[amp-access*="NOT loggedIn"]');
-    removeDOMElement(...banners);
-  } else if (window.location.pathname.startsWith('/article/')) {
-    let paywall = document.querySelector('.HardPayWallContainer-module__overlay');
+  if (window.location.pathname.startsWith('/article/')) {
     let body_par = document.querySelector('p[class^="ContentPageBodyParagraph"]');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if ((paywall || !body_par) && amphtml) {
-      removeDOMElement(paywall);
-      window.setTimeout(function () {
-        window.location.href = amphtml.href;
-      }, 500);
+    if (!body_par && dompurify_loaded) {
+      csDoneOnce = true;
+      let url = window.location.href;
+      fetch(url)
+      .then(response => {
+        if (response.ok) {
+          response.text().then(html => {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(html) + '</div>', 'text/html');
+            let article = document.querySelector('main > div');
+            let article_new = doc.querySelector('main > div');
+            if (article_new) {
+              if (article)
+                article.appendChild(article_new);
+            }
+          })
+        }
+      })
     }
   }
 }
@@ -4004,6 +4012,8 @@ else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('
       elem.removeAttribute('style');
       elem.removeAttribute('class');
     }
+    let banners = document.querySelectorAll('div.subscription-required, div.redacted-overlay, div.tnt-ads-container');
+    removeDOMElement(...banners);
   }
 }
 
