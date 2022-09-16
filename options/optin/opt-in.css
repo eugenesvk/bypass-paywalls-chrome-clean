@@ -11,3 +11,14 @@ button {
 * {
   box-sizing: border-box;
 }
+
+a {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, button, a {
+    background-color: #313131;
+    color: #bfbfbf;
+  }
+}
