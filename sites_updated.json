@@ -24,6 +24,11 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js)"
   },
+  "L'Express": {
+    "domain": "lexpress.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\\/"
+  },
   "Private Equity News": {
     "domain": "penews.com",
     "useragent": "googlebot"

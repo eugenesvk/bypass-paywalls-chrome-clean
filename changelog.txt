@@ -9,6 +9,7 @@ Add Weltkunst.de
 Fix Esprit.presse.fr
 Fix Grupo El Comercio
 Fix Gruppo GEDI.it (login)
+Fix L'Express.fr
 Fix The Spectator UK (no amp)
 
 * v2.8.4.0 (2022-09-11)
@@ -762,7 +763,7 @@ Update badge (notification: update & custom permissions)
 
 * v2.1.8.0 (2021-04-25)
 Add Il Giorno (Italy)
-Add L'Express (France)
+Add L'Express.fr
 Add La Nazione (Italy)
 Add The Athletic
 Remove Rheinische Post Mediengruppe (fix obsolete)

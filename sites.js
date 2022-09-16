@@ -930,7 +930,7 @@ var defaultSites = {
   "L'Express": {
     domain: "lexpress.fr",
     allow_cookies: 1,
-    block_regex: /\.poool\.fr\//
+    block_regex: /\.qiota\.com\//
   },
   "L'Obs": {
     domain: "nouvelobs.com",
