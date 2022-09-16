@@ -1999,6 +1999,11 @@ var defaultSites = {
     domain: "watoday.com.au",
     group_rule: "###_gr_au_nine_domains"
   },
+  "Weltkunst": {
+    domain: "weltkunst.de",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Westdeutsche Zeitung": {
     allow_cookies: 1,
     domain: "wz.de",

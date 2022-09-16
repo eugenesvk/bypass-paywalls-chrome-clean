@@ -27,5 +27,10 @@
   "Private Equity News": {
     "domain": "penews.com",
     "useragent": "googlebot"
+  },
+  "Weltkunst": {
+    "domain": "weltkunst.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
   }
 }

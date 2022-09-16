@@ -511,6 +511,7 @@ Grouped in options:\
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de) -
 [Volksstimme](https://www.volksstimme.de) -
+[Weltkunst](https://www.weltkunst.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\

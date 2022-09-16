@@ -10,6 +10,9 @@
     "domain": "airmail.news",
     "useragent": "googlebot"
   },
+  "Arkansasonline.com": {
+    "domain": "arkansasonline.com"
+  },
   "Asiamoney.com": {
     "allow_cookies": 1,
     "domain": "asiamoney.com",

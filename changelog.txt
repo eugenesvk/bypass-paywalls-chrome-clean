@@ -5,6 +5,7 @@ Post-release
 Add 60 Millions de consommateurs
 Add BusinessPost.ie
 Add Private Equity News
+Add Weltkunst.de
 Fix Esprit.presse.fr
 Fix Grupo El Comercio
 Fix Gruppo GEDI.it (login)
