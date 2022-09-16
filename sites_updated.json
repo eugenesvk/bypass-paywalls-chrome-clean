@@ -14,6 +14,16 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
+  "Grupo El Comercio": {
+    "domain": "###_pe_grupo_elcomercio",
+    "group": [
+      "diariocorreo.pe",
+      "elcomercio.pe",
+      "gestion.pe"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js)"
+  },
   "Private Equity News": {
     "domain": "penews.com",
     "useragent": "googlebot"

@@ -685,7 +685,7 @@ var defaultSites = {
       "gestion.pe"
     ],
     allow_cookies: 1,
-    block_regex: "\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js"
+    block_regex: "(\\.tinypass\\.com\\/|\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js)"
   },
   "Grupo Prensa Ibérica": {
     domain: "###_es_epiberica",
@@ -2202,4 +2202,4 @@ init_custom_domains();
 
 // sites with no fix (background)
 var nl_dpg_media_nofix_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'hln.be', 'pzc.nl', 'tubantia.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nbr.co.nz', 'nieuwsblad.be', 'nknews.org', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);

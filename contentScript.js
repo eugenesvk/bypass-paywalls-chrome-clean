@@ -753,6 +753,8 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
         }
       }
     }
+    let ads = document.querySelectorAll('div[class^="Adstyled__AdWrapper"]');
+    removeDOMElement(...ads);
   } else if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_subscr_section('.pdb-ad-container, amp-embed');
   } else {
@@ -2266,12 +2268,15 @@ else if (matchDomain('crusoe.uol.com.br')) {
 }
 
 else if (matchDomain(pe_grupo_elcomercio_domains)) {
-  let paywall = document.querySelector('.story-content__nota-premium');
+  let paywall = document.querySelector('.paywall');
   if (paywall) {
-    paywall.classList.remove('story-content__nota-premium');
+    paywall.removeAttribute('class');
     paywall.removeAttribute('style');
+    let fade = document.querySelector('p.story-contents--fade');
+    if (fade)
+      fade.classList.remove('story-contents--fade');
   }
-  let ads = document.querySelectorAll('div[class*="_ads"]');
+  let ads = document.querySelectorAll('div[class^="content_gpt"]');
   removeDOMElement(...ads);
 }
 
