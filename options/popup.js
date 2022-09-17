@@ -76,7 +76,6 @@ function showArchiveLinks() {
           let elem = document.createElement('a');
           elem.innerText = key;
           elem.href = archive_array[key];
-          elem.style = 'color:black;';
           elem.target = '_blank';
           elem_div.appendChild(elem);
           archive_id.appendChild(elem_div);

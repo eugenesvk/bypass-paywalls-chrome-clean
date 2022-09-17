@@ -12,6 +12,7 @@ Fix Grupo El Comercio
 Fix Gruppo GEDI.it (login)
 Fix L'Express.fr
 Fix The Spectator UK (no amp)
+Update options: add dark mode support
 
 * v2.8.4.0 (2022-09-11)
 Add PEI Media sites (opt-in to custom sites)
