@@ -1804,6 +1804,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.thenewatlantis\.com\/.+\/thenewatlantis\/js\/(gate|donate)\.js/
   },
+  "The New European": {
+    domain: "theneweuropean.co.uk",
+    allow_cookies: 1,
+    block_regex: /cdn\.tinypass\.com\//
+  },
   "The New Republic": {
     domain: "newrepublic.com",
     allow_cookies: 1,

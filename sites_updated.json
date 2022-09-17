@@ -33,6 +33,21 @@
     "domain": "penews.com",
     "useragent": "googlebot"
   },
+  "The New European": {
+    "domain": "theneweuropean.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.tinypass\\.com\\/",
+    "cs_code": [{
+        "cond": "div[data-show-fade-on-noaccess]",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "div[data-show-has-access]",
+            "rm_attrib": "data-show-has-access"
+          }
+        ]
+      }
+    ]
+  },
   "Weltkunst": {
     "domain": "weltkunst.de",
     "allow_cookies": 1,

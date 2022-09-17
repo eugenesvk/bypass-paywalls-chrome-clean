@@ -2225,6 +2225,18 @@ else if (matchDomain('the-tls.co.uk')) {
   removeDOMElement(paywall);
 }
 
+else if (matchDomain('theneweuropean.co.uk')) {
+  let paywall = document.querySelector('div[data-show-fade-on-noaccess]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let content = document.querySelector('div[data-show-has-access]');
+    if (content)
+      content.removeAttribute('data-show-has-access');
+  }
+  let banners = document.querySelectorAll('div[data-show-subs-blocked]');
+  removeDOMElement(...banners);
+}
+
 else if (matchDomain('thetimes.co.uk')) {
   let url = window.location.href;
   if (window.location.hostname !== 'epaper.thetimes.co.uk') {
@@ -3629,7 +3641,8 @@ else if (matchDomain('theathletic.com')) {
     amp_unhide_access_hide('', '*="NOT granted"');
   }
   let apron = document.querySelector('div#free-apron-cta, div.slideup-free-apron-container');
-  removeDOMElement(apron);
+  let ads = document.querySelectorAll('div.ad-container');
+  removeDOMElement(apron, ...ads);
 }
 
 else if (matchDomain('theatlantic.com')) {

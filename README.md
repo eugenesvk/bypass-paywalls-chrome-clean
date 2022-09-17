@@ -377,6 +377,7 @@ Grouped in options:\
 [The Economist](https://www.economist.com) -
 [The Independent](https://www.independent.co.uk) -
 [The Irish Times](https://www.irishtimes.com) -
+[The New European](https://www.theneweuropean.co.uk) -
 [The New Statesman](https://www.newstatesman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
