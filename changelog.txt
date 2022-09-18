@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.5.0 (2022-09-18)
 Add 60 Millions de consommateurs
 Add BusinessPost.ie
 Add Madavor Media sites (opt-in to custom sites)
