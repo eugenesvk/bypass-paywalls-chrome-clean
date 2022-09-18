@@ -914,10 +914,16 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
                     if (usa_mng_domain)
                       usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);
                     else if (header_referer_hostname.match(/\.com$/)) {
-                      // set googlebot-useragent for PEI Media sites
-                      var usa_pei_domain = (details.url.match(/\.com\/wp-content\/plugins\/pragmatic-pei-rebranding\/assets\/img\/.+-logo\.svg$/) && ['image', 'xmlhttprequest'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_pei_domains, header_referer) && enabledSites.includes('###_usa_pei'));
-                      if (usa_pei_domain)
-                        usa_pei_domains = customAddRules(usa_pei_domains, {allow_cookies: 1}, '', 'googlebot');
+                      // block cookies for Madavor Media sites
+                      var usa_madavor_domain = (details.url.match(/\.com\/wp-content\/(plugins|themes)\/madavor-/) && ['script'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_madavor_domains, header_referer) && enabledSites.includes('###_usa_madavor'));
+                      if (usa_madavor_domain)
+                        usa_madavor_domains = customAddRules(usa_madavor_domains);
+                      else {
+                        // set googlebot-useragent for PEI Media sites
+                        var usa_pei_domain = (details.url.match(/\.com\/wp-content\/plugins\/pragmatic-pei-rebranding\/assets\/img\/.+-logo\.svg$/) && ['image', 'xmlhttprequest'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_pei_domains, header_referer) && enabledSites.includes('###_usa_pei'));
+                        if (usa_pei_domain)
+                          usa_pei_domains = customAddRules(usa_pei_domains, {allow_cookies: 1}, '', 'googlebot');
+                      }
                     }
                   }
                 }

@@ -2965,7 +2965,8 @@ else if (matchDomain('historyextra.com')) {
 
 else if (matchDomain(usa_hearst_comm_domains)) {
   let wrapper = document.querySelector('.belowMastheadWrapper');
-  removeDOMElement(wrapper);
+  let ads = document.querySelectorAll('div.adModule');
+  removeDOMElement(wrapper, ...ads);
 }
 
 else if (matchDomain('inc42.com')) {

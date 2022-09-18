@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add 60 Millions de consommateurs
 Add BusinessPost.ie
+Add Madavor Media sites (opt-in to custom sites)
 Add Private Equity News
 Add TheNewEuropean.co.uk
 Add Weltkunst.de

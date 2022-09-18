@@ -213,7 +213,9 @@ Grouped in options:\
 [Runner's World](https://www.runnersworld.com) -
 [The Hollywood Reporter](https://www.hollywoodreporter.com) -
 [Town & Country](https://www.townandcountrymag.com) -
-[Women's Health](https://www.womenshealthmag.com)\
+[Women's Health](https://www.womenshealthmag.com)
+
+*[Madavor Media](https://www.madavor.com)* sites (opt-in to custom sites)\
 *Outside magazines* sites like\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -

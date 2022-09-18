@@ -1097,6 +1097,9 @@ var defaultSites = {
     domain: "latimes.com",
     block_regex: /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
+  "Madavor Media (opt-in to custom sites)": {
+    domain: "###_usa_madavor"
+  },
   "Madsack Mediengruppe": {
     domain: "###_de_madsack",
     group: [
@@ -2185,7 +2188,7 @@ var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // custom domains (background)
-var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_mcc_domains, usa_mng_domains, usa_pei_domains, usa_townnews_domains;
+var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_madavor_domains, usa_mcc_domains, usa_mng_domains, usa_pei_domains, usa_townnews_domains;
 
 function init_custom_domains() {
   au_comm_media_domains = grouped_sites['###_au_comm_media'];
@@ -2203,6 +2206,7 @@ function init_custom_domains() {
   usa_gannett_domains = grouped_sites['###_usa_gannett'];
   usa_hearst_comm_domains = grouped_sites['###_usa_hearst_comm'];
   usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
+  usa_madavor_domains = [];
   usa_mcc_domains = grouped_sites['###_usa_mcc'];
   usa_mng_domains = grouped_sites['###_usa_mng'];
   usa_pei_domains = [];
