@@ -682,6 +682,7 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 var block_js = [
   "*://*.blueconic.net/*",
   "*://*.cxense.com/*",
+  "*://*.ensighten.com/*/Bootstrap.js*",
   "*://*.evolok.net/*",
   "*://*.newsmemory.com/?meter*",
   "*://*.onecount.net/*",
@@ -705,7 +706,7 @@ var block_js = [
   "*://js.matheranalytics.com/*",
   "*://js.pelcro.com/*",
   "*://loader-cdn.azureedge.net/prod/*/loader.min.js*",
-  "*://nexus.ensighten.com/*/Bootstrap.js*",
+											
 ];
 
 // Disable javascript for these sites/general paywall-scripts
@@ -885,9 +886,9 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
           if (usa_gannett_domain)
             usa_gannett_domains = customAddRules(usa_gannett_domains, '', blockedRegexes['azcentral.com'], 'googlebot', '', true);
           else {
-            var usa_hearst_comm_domain = (matchUrlDomain('treg.hearstnp.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(usa_hearst_comm_domains, header_referer) && enabledSites.includes('###_usa_hearst_comm'));
+            var usa_hearst_comm_domain = (matchUrlDomain('treg.hearstnp.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(usa_hearst_comm_domains.concat(['sfgate.com']), header_referer) && enabledSites.includes('###_usa_hearst_comm'));
             if (usa_hearst_comm_domain)
-              usa_hearst_comm_domains = customAddRules(usa_hearst_comm_domains, '', blockedRegexes['houstonchronicle.com']);
+              usa_hearst_comm_domains = customAddRules(usa_hearst_comm_domains, {allow_cookies: 1}, blockedRegexes['houstonchronicle.com']);
             else {
               // block script for additional Lee Enterprises sites (opt-in to custom sites)
               var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['script'].includes(details.type) &&

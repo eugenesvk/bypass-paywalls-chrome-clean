@@ -4,11 +4,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
-  "Berliner Zeitung": {
-    "domain": "berliner-zeitung.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
   "Esprit": {
     "domain": "esprit.presse.fr",
     "allow_cookies": 1,
@@ -23,6 +18,16 @@
     ],
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js)"
+  },
+  "Hearst Communications (newspapers)": {
+    "domain": "###_usa_hearst_comm",
+    "group": [
+      "expressnews.com",
+      "houstonchronicle.com",
+      "sfchronicle.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"
   },
   "L'Express": {
     "domain": "lexpress.fr",

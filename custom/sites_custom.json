@@ -89,6 +89,12 @@
     "domain": "gplanet.co.il",
     "ld_json": "div.subscription-form|div.content-inner"
   },
+  "Heidi.news": {
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/",
+    "domain": "heidi.news",
+    "useragent": "googlebot"
+  },
   "Heraldscotland.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",

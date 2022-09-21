@@ -950,6 +950,8 @@ else if (matchDomain('elconfidencial.com')) {
   let premium = document.querySelector('div.newsType__content--closed');
   if (premium)
     premium.classList.remove('newsType__content--closed');
+  let ads = document.querySelectorAll('div[id^="mega_"], div[id^="roba_"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('eldiario.es')) {
