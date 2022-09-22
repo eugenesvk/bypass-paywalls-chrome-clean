@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix Hearst Communications (newspapers)
+Fix The Athletic
 
 * v2.8.5.0 (2022-09-18)
 Add 60 Millions de consommateurs

@@ -38,6 +38,15 @@
     "domain": "penews.com",
     "useragent": "googlebot"
   },
+  "The Athletic": {
+    "domain": "###_usa_theathletic",
+    "group": [
+      "theathletic.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
+    "amp_redirect": "meta[content=\"article\"]"
+  },
   "The New European": {
     "domain": "theneweuropean.co.uk",
     "allow_cookies": 1,
