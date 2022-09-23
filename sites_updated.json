@@ -57,6 +57,25 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
     "amp_redirect": "meta[content=\"article\"]"
   },
+  "The Chronicle of Higher Education (& Philanthropy)": {
+    "domain": "###_usa_chronicle",
+    "group": [
+      "chronicle.com",
+      "philanthropy.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.blueconic\\.net\\/",
+    "cs_code": [{
+        "cond": "div.contentBody",
+        "rm_attrib": "data-content-body",
+        "elems": [{
+            "cond": "div.contentBody.hidden",
+            "rm_attrib": "hidden"
+          }
+        ]
+      }
+    ]
+  },
   "The New European": {
     "domain": "theneweuropean.co.uk",
     "allow_cookies": 1,

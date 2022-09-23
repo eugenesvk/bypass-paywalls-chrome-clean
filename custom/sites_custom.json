@@ -54,6 +54,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "dailyherald.com"
   },
+  "Die-glocke.de": {
+    "allow_cookies": 1,
+    "domain": "die-glocke.de",
+    "ld_google_webcache": "div.cardPw|div.mainContent"
+  },
   "Edweek.org": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com\\/",

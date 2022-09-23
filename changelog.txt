@@ -6,6 +6,7 @@ Add Groupe Centre France (opt-in to custom sites)
 Fix Business Standard
 Fix Hearst Communications (newspapers)
 Fix The Athletic
+Fix The Chronicle of Higher Education (& Philanthropy)
 
 * v2.8.5.0 (2022-09-18)
 Add 60 Millions de consommateurs

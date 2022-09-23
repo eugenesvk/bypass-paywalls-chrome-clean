@@ -2687,9 +2687,11 @@ else if (matchDomain('cen.acs.org')) {
 else if (matchDomain(['chronicle.com', 'philanthropy.com'])) {
   let preview = document.querySelector('div[data-content-summary]');
   removeDOMElement(preview);
-  let article_hidden = document.querySelector('div[data-content-body]');
-  if (article_hidden)
+  let article_hidden = document.querySelector('div.contentBody');
+  if (article_hidden) {
     article_hidden.removeAttribute('data-content-body');
+    article_hidden.removeAttribute('hidden');
+  }
 }
 
 else if (matchDomain('csmonitor.com')) {
