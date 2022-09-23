@@ -4,6 +4,16 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
+  "Business Standard": {
+    "domain": "business-standard.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "cs_code": [{
+        "cond": "div.story-content",
+        "rm_class": "story-content"
+      }
+    ]
+  },
   "Esprit": {
     "domain": "esprit.presse.fr",
     "allow_cookies": 1,
