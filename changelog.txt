@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Groupe Centre France (opt-in to custom sites)
+Fix Aftonbladet.se
 Fix Business Standard
 Fix Hearst Communications (newspapers)
 Fix The Athletic

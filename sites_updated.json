@@ -4,6 +4,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/"
   },
+  "Aftonbladet": {
+    "domain": "aftonbladet.se",
+    "allow_cookies": 1,
+    "useragent": "bingbot"
+  },
   "Business Standard": {
     "domain": "business-standard.com",
     "allow_cookies": 1,

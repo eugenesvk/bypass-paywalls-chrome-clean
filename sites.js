@@ -26,7 +26,7 @@ var defaultSites = {
   "Aftonbladet": {
     domain: "aftonbladet.se",
     allow_cookies: 1,
-    useragent: "googlebot"
+    useragent: "bingbot"
   },
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
