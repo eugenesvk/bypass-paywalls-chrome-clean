@@ -429,7 +429,6 @@ Grouped in options:\
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
 [La Libre](https://www.lalibre.be) -
-[La Montagne](https://www.lamontagne.fr) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
 [La Vie](https://www.lavie.fr) -
@@ -449,6 +448,8 @@ Grouped in options:\
 [Valeurs Actuelles](https://www.valeursactuelles.com)
 
 Grouped in options:\
+*Groupe Centre France* sites like (opt-in to custom sites for unlisted)\
+[La Montagne](https://www.lamontagne.fr)\
 *Groupe EBRA* sites like\
 [Dernières Nouvelles d'Alsace](https://www.dna.fr) -
 [L'Alsace](https://www.lalsace.fr) -

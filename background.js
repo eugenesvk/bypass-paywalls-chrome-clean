@@ -358,7 +358,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_it_gedi', '###_nl_dpg_media', '###_usa_chronicle', '###_usa_genomeweb'];
+          let new_groups = ['###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_fr_gcf', '###_it_gedi', '###_nl_dpg_media', '###_usa_chronicle', '###_usa_genomeweb'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) || (!enabledSites.includes('uol.com.br') && (enabledSites.includes('crusoe.uol.com.br') || enabledSites.includes('###_br_folha')));
           if (open_options)
             ext_api.runtime.openOptionsPage();
@@ -706,7 +706,6 @@ var block_js = [
   "*://js.matheranalytics.com/*",
   "*://js.pelcro.com/*",
   "*://loader-cdn.azureedge.net/prod/*/loader.min.js*",
-											
 ];
 
 // Disable javascript for these sites/general paywall-scripts
@@ -865,6 +864,11 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       var es_epiberica_domain = (url_hostname.startsWith('estaticos-cdn.') && ['script', 'font', 'stylesheet'].includes(details.type) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
       if (es_epiberica_domain)
         es_epiberica_domains = customAddRules(es_epiberica_domains, {allow_cookies: 1}, blockedRegexes['epe.es']);
+    } else if (header_referer_hostname.endsWith('.fr')) {
+      // block Poool.fr for Groupe Centre France sites (opt-in to custom sites)
+      var fr_gcf_domain = (details.url.match(/\.fr\/static\/bloc\/ripolinage\/header\/cf-header\//) && ['script', 'stylesheet'].includes(details.type) && !matchUrlDomain(fr_gcf_domains, header_referer) && enabledSites.includes('###_fr_gcf'));
+      if (fr_gcf_domain)
+        fr_gcf_domains = customAddRules(fr_gcf_domains, {allow_cookies: 1}, blockedRegexes['lamontagne.fr']);
     } else if (header_referer_hostname.endsWith('.nl')) {
       // block Evolok for Mediahuis Noord sites (opt-in to custom sites)
       var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));
