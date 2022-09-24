@@ -902,7 +902,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
               else {
                 // block script for TownNews sites (Blox CMS; opt-in to custom sites)
                 var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['script'].includes(details.type) &&
-                  !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
+                  !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com', 'nola.com', 'theadvocate.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
                 if (usa_townnews_domain)
                   usa_townnews_domains = customAddRules(usa_townnews_domains, '', /\.com\/shared-content\/art\/tncms\/user\/user\.js/);
                 else {

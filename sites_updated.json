@@ -53,6 +53,15 @@
     "domain": "penews.com",
     "useragent": "googlebot"
   },
+  "The (New Orleans) Advocate": {
+    "domain": "###_usa_theadvocate",
+    "group": [
+      "nola.com",
+      "theadvocate.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
+  },
   "The Athletic": {
     "domain": "###_usa_theathletic",
     "group": [

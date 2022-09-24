@@ -1247,7 +1247,7 @@ var defaultSites = {
   "National Review": {
     domain: "nationalreview.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "Nautilus": {
     domain: "nautil.us",
@@ -1622,7 +1622,7 @@ var defaultSites = {
       "theadvocate.com"
     ],
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|\.blueconic\.net\/|js\.matheranalytics\.com\/)/
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
   },
   "The Age": {
     domain: "theage.com.au",
@@ -1690,7 +1690,7 @@ var defaultSites = {
       "philanthropy.com"
     ],
     allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
   },
   "The Daily Beast": {
     domain: "thedailybeast.com",
@@ -1963,7 +1963,7 @@ var defaultSites = {
       "sun-sentinel.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.tribdss\.com\/|\.blueconic\.net\/|\.zephr\.com\/zephr-browser\/.+\/zephr-browser\.umd\.js)/
+    block_regex: "(\\.tribdss\\.com\\/|\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.zephr\\.com\\/zephr-browser\\/.+\\/zephr-browser\\.umd\\.js)"
   },
   "UnHerd": {
     domain: "unherd.com",
