@@ -1341,7 +1341,7 @@ var defaultSites = {
   },
   "O Estado de S. Paulo": {
     domain: "estadao.com.br",
-    block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "O Globo (& Valor Econômico; cached articles only)": {
     domain: "globo.com",

@@ -5,6 +5,7 @@ Post-release
 Add Groupe Centre France (opt-in to custom sites)
 Fix Aftonbladet.se
 Fix Business Standard
+Fix Estadao.com.br (amp)
 Fix Hearst Communications (newspapers)
 Fix The (New Orleans) Advocate
 Fix The Athletic
