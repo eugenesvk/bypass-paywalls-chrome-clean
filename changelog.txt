@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.6.0 (2022-09-25)
 Add Groupe Centre France (opt-in to custom sites)
 Fix Aftonbladet.se
 Fix Business Standard
