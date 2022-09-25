@@ -110,6 +110,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "inews.co.uk"
   },
+  "Interestingengineering.com": {
+    "allow_cookies": 1,
+    "domain": "interestingengineering.com",
+    "useragent": "googlebot"
+  },
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
@@ -256,4 +261,3 @@
     "domain": "washingtontimes.com"
   }
 }
-

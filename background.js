@@ -818,6 +818,11 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (medium_custom_domain)
     medium_custom_domains = customAddRules(medium_custom_domains);
   else {
+    // remove cookies for Leaky Paywall/WordPress sites (opt-in to custom sites)
+    var leaky_paywall_domain = (details.url.match(/\/leaky-paywall(-|\/)/) && ['script'].includes(details.type) && !matchUrlDomain(leaky_paywall_domains.concat(['griffithreview.com']), header_referer) && enabledSites.includes('###_wp_leaky_paywall'));
+    if (leaky_paywall_domain)
+      leaky_paywall_domains = customAddRules(leaky_paywall_domains);
+  else {
     // remove cookies & set googlebot-useragent for sites substack platform (custom domains)
     var substack_custom_domain = (matchUrlDomain('substackcdn.com', details.url) && ['script', 'stylesheet'].includes(details.type) && !matchUrlDomain(substack_custom_domains.concat(['substack.com']), header_referer) && enabledSites.includes('###_substack_custom'));
     if (substack_custom_domain)
@@ -937,6 +942,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
           }
         }
       }
+  }
   }
   }
   }

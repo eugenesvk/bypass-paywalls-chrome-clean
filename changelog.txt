@@ -10,6 +10,7 @@ Fix Hearst Communications (newspapers)
 Fix The (New Orleans) Advocate
 Fix The Athletic
 Fix The Chronicle of Higher Education (& Philanthropy)
+Update block general paywall script (Leaky Paywall/Wordpress)
 
 * v2.8.5.0 (2022-09-18)
 Add 60 Millions de consommateurs

@@ -88,7 +88,7 @@
         "cond": "div.contentBody",
         "rm_attrib": "data-content-body",
         "elems": [{
-            "cond": "div.contentBody.hidden",
+            "cond": "div.contentBody[hidden]",
             "rm_attrib": "hidden"
           }
         ]
