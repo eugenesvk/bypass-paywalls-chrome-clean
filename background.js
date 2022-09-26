@@ -25,6 +25,7 @@ var restrictions = {
   'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'lequipe.fr': /^((?!\.lequipe\.fr\/.+\/les-notes\/).)*$/,
+  'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
@@ -819,7 +820,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     medium_custom_domains = customAddRules(medium_custom_domains);
   else {
     // remove cookies for Leaky Paywall/WordPress sites (opt-in to custom sites)
-    var leaky_paywall_domain = (details.url.match(/\/leaky-paywall(-|\/)/) && ['script'].includes(details.type) && !matchUrlDomain(leaky_paywall_domains.concat(['griffithreview.com']), header_referer) && enabledSites.includes('###_wp_leaky_paywall'));
+    var leaky_paywall_domain = (details.url.match(/\/leaky-paywall(-|\/)/) && ['script'].includes(details.type) && !matchUrlDomain(leaky_paywall_domains.concat(['griffithreview.com', 'nknews.org']), header_referer) && enabledSites.includes('###_wp_leaky_paywall'));
     if (leaky_paywall_domain)
       leaky_paywall_domains = customAddRules(leaky_paywall_domains);
   else {

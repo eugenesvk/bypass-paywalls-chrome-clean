@@ -433,6 +433,7 @@
     "*://*.nieuwsblad.be/*",
     "*://*.nikkei.com/*",
     "*://*.nj.com/*",
+    "*://*.nknews.org/*",
     "*://*.nn.de/*",
     "*://*.nola.com/*",
     "*://*.noordhollandsdagblad.nl/*",
@@ -709,5 +710,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.6.0"
+  "version": "2.8.6.1"
 }

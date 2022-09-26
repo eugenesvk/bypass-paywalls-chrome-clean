@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Aachener Nachrichten & Zeitung
+Add NK News (free articles only)
 
 * v2.8.6.0 (2022-09-25)
 Add Groupe Centre France (opt-in to custom sites)
