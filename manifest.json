@@ -58,6 +58,8 @@
     "webRequestBlocking",
     "*://*.360dx.com/*",
     "*://*.60millions-mag.com/*",
+    "*://*.aachener-nachrichten.de/*",
+    "*://*.aachener-zeitung.de/*",
     "*://*.abc.es/*",
     "*://*.abendblatt.de/*",
     "*://*.abril.com.br/*",

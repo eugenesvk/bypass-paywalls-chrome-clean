@@ -4,6 +4,16 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
   },
+  "Aachener Nachrichten": {
+    domain: "aachener-nachrichten.de",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
+  "Aachener Zeitung": {
+    domain: "aachener-zeitung.de",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Advance Local": {
     domain: "###_usa_adv_local",
     allow_cookies: 1,
