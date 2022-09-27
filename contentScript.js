@@ -1171,7 +1171,7 @@ else if (matchDomain('elle.fr')) {
 }
 
 else if (matchDomain(fr_be_groupe_rossel)) {
-  let ads = document.querySelectorAll('div[id^="article_"], r-pub');
+  let ads = document.querySelectorAll('div[id^="article_"], r-pub, div#rossel-leader-top');
   removeDOMElement(...ads);
 }
 
@@ -3873,8 +3873,9 @@ else if (matchDomain(no_nhst_media_domains)) {
     window.setTimeout(function () {
       let paywall = document.querySelector('iframe#paywall-iframe');
       if (paywall && dompurify_loaded) {
+        let intro = document.querySelector('div.global-article-selector');
         let article = paywall.parentNode;
-        removeDOMElement(paywall);
+        removeDOMElement(paywall, intro);
         fetch(url)
         .then(response => {
           if (response.ok) {
