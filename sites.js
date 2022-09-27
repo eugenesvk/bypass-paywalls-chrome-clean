@@ -565,12 +565,17 @@ var defaultSites = {
     group: [
       "azcentral.com",
       "cincinnati.com",
+      "commercialappeal.com",
       "courier-journal.com",
+      "democratandchronicle.com",
       "detroitnews.com",
       "freep.com",
       "indystar.com",
       "jsonline.com",
+      "knoxnews.com",
+      "news-press.com",
       "northjersey.com",
+      "oklahoman.com",
       "statesman.com",
       "tennessean.com"
     ],

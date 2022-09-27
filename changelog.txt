@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Aachener Nachrichten & Zeitung
 Add NK News (free articles only)
+Add 5 more Gannett sites
 Fix NHST Media Group
 
 * v2.8.6.0 (2022-09-25)

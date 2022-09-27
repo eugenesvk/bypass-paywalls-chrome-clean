@@ -279,13 +279,18 @@ Grouped in options:\
 [The Republican](https://www.masslive.com)\
 *Gannett Group (local USA Today)* sites like (opt-in to custom sites for unlisted)\
 [Austin American-Statesman](https://www.statesman.com) -
+[Democrat and Chronicle](https://www.democratandchronicle.com) -
 [Detroit Free Press](https://www.freep.com) -
+[Knoxville News Sentinel](https://www.knoxnews.com) -
+[Memphis Commercial Appeal](https://www.commercialappeal.com) -
 [Milwaukee Journal Sentinel](https://www.jsonline.com) -
 [The Arizona Republic](https://www.azcentral.com) -
 [The Cincinnati Enquirer](http://www.cincinnati.com) -
 [The Courier-Journal](https://www.courier-journal.com) -
 [The Detroit News](https://www.detroitnews.com) -
 [The Indianapolis Star](https://www.indystar.com) -
+[The News-Press](https://www.news-press.com) -
+[The Oklahoman](https://www.oklahoman.com) -
 [The Record (North Jersey)](https://www.northjersey.com) -
 [The Tennessean](http://www.tennessean.com)\
 *Hearst Communications (newspapers)* sites like (opt-in to custom sites for unlisted)\
