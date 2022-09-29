@@ -304,23 +304,33 @@ else {
     // Australia News Corp
     let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
     if (matchDomain(au_news_corp_domains)) {
-      let header_ads = document.querySelector('.header_ads-container');
-      removeDOMElement(header_ads);
-      let figure_stretch = document.querySelectorAll('figure.stretch');
-      for (let elem of figure_stretch)
-        elem.classList.remove('stretch');
-      let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
-      let comments;
-      if (window.location.hostname.startsWith('amp.')) {
-        amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
-        comments = document.querySelector('#story-comments, .comments-wrapper');
-      } else if (window.location.search.match(/(\?|&)amp/)) {
-        amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
-        comments = document.querySelector('#comments-load');
-        let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
-        removeDOMElement(...amp_iframe_sizers)
+      if (window.location.hostname.startsWith('amp.') || window.location.search.match(/(\?|&)amp/)) {
+        let figure_stretch = document.querySelectorAll('figure.stretch');
+        for (let elem of figure_stretch)
+          elem.classList.remove('stretch');
+        let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
+        let comments;
+        if (window.location.hostname.startsWith('amp.')) {
+          amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
+          comments = document.querySelector('#story-comments, .comments-wrapper');
+        } else if (window.location.search.match(/(\?|&)amp/)) {
+          amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
+          comments = document.querySelector('#comments-load');
+          let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
+          removeDOMElement(...amp_iframe_sizers)
+        }
+        removeDOMElement(comments);
+      } else {
+        let ads = document.querySelectorAll('.header_ads-container, .ad-block');
+        removeDOMElement(...ads);
+        if (matchDomain('ntnews.com.au')) {
+          let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
+          for (let elem of lazy_images) {
+            elem.src = elem.getAttribute('data-src');
+            elem.classList.remove('lazyload');
+          }
+        }
       }
-      removeDOMElement(comments);
     } else {
       // Australian Seven West Media
       let swm_image = document.querySelector('img[src^="https://images.thewest.com.au"]');

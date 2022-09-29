@@ -143,11 +143,20 @@ var defaultSites = {
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
     exception: [{
+        domain: "codesports.com.au",
+        allow_cookies: 1,
+        block_regex: /\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js/
+      }, {
+        domain: "ntnews.com.au",
+        allow_cookies: 1,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
+        useragent: "googlebot"
+      }, {
         domain: "theaustralian.com.au",
         allow_cookies: 1,
-        block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
         useragent: "googlebot"
       }
     ]

@@ -6,6 +6,7 @@ Add Aachener Nachrichten & Zeitung
 Add NK News (free articles only)
 Add 5 more Gannett sites
 Fix NHST Media Group
+Fix NTNews.com.au
 
 * v2.8.6.0 (2022-09-25)
 Add Groupe Centre France (opt-in to custom sites)

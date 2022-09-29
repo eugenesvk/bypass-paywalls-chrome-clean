@@ -1,9 +1,4 @@
 {
-  "60 Millions de consommateurs": {
-    "domain": "60millions-mag.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
   "Aachener Nachrichten": {
     "domain": "aachener-nachrichten.de",
     "allow_cookies": 1,
@@ -29,21 +24,6 @@
       }
     ]
   },
-  "Esprit": {
-    "domain": "esprit.presse.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
-  "Grupo El Comercio": {
-    "domain": "###_pe_grupo_elcomercio",
-    "group": [
-      "diariocorreo.pe",
-      "elcomercio.pe",
-      "gestion.pe"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|\\/{domain}\\/pf\\/dist\\/engine\\/react\\.js)"
-  },
   "Hearst Communications (newspapers)": {
     "domain": "###_usa_hearst_comm",
     "group": [
@@ -54,19 +34,10 @@
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"
   },
-  "L'Express": {
-    "domain": "lexpress.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/"
-  },
   "O Estado de S. Paulo": {
     "domain": "estadao.com.br",
     "block_regex": "(acesso\\.estadao\\.com\\.br\\/paywall\\/.+\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "amp_unhide": 1
-  },
-  "Private Equity News": {
-    "domain": "penews.com",
-    "useragent": "googlebot"
   },
   "The (New Orleans) Advocate": {
     "domain": "###_usa_theadvocate",
@@ -104,25 +75,5 @@
         ]
       }
     ]
-  },
-  "The New European": {
-    "domain": "theneweuropean.co.uk",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.tinypass\\.com\\/",
-    "cs_code": [{
-        "cond": "div[data-show-fade-on-noaccess]",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "div[data-show-has-access]",
-            "rm_attrib": "data-show-has-access"
-          }
-        ]
-      }
-    ]
-  },
-  "Weltkunst": {
-    "domain": "weltkunst.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
   }
 }

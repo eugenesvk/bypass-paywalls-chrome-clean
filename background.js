@@ -1226,7 +1226,7 @@ function updateBadge(activeTab) {
       color = 'blue';
     } else if (matchUrlDomain(nofix_sites, currentUrl)) {
       badgeText = 'X';
-      color = 'gray';
+      color = 'silver';
     }
     if (ext_version_new)
       badgeText = '^' + badgeText;

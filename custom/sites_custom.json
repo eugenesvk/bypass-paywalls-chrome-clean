@@ -170,6 +170,11 @@
     "amp_redirect": "div[id^=\"media_paywall\"]",
     "domain": "nv.ua"
   },
+  "Odt.co.nz": {
+    "allow_cookies": 1,
+    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/scripts\\/tw\\.js",
+    "domain": "odt.co.nz"
+  },
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
@@ -182,11 +187,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
-  },
-  "Schweizer-illustrierte.ch": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "domain": "schweizer-illustrierte.ch"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,
