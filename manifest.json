@@ -80,6 +80,7 @@
     "*://*.ara.cat/*",
     "*://*.arabalears.cat/*",
     "*://*.architecturaldigest.com/*",
+    "*://*.arcinfo.ch/*",
     "*://*.artforum.com/*",
     "*://*.artnet.com/*",
     "*://*.arvopaperi.fi/*",
@@ -715,5 +716,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.6.3"
+  "version": "2.8.6.4"
 }

@@ -470,6 +470,47 @@ if (matchDomain('allgaeuer-zeitung.de')) {
   }
 }
 
+else if (matchDomain('arcinfo.ch')) {
+  let paywall = document.querySelector('section#paywall-articles');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let url = window.location.href;
+    let html = document.documentElement.outerHTML;
+    let json;
+    if (html.includes('window.__NUXT__='))
+      json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
+    let article_old = document.querySelector('section > div > div.html-content');
+    let article = document.querySelector('div.html-content');
+    if (article && json) {
+      let content = '';
+      if (json.includes('.text_1="'))
+        content = json.split('.text_1="')[1].split('";')[0];
+      else {
+        let parts = json.split('html:"');
+        let search = article.querySelector('p');
+        if (search) {
+          for (let part of parts) {
+            if (decodeHtmlText(part).includes(search.innerText.slice(20, 50))) {
+              content = part.split('",has_pre_content')[0];
+              break;
+            }
+          }
+        }
+      }
+      if (content) {
+        content = content.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/\\r\\n/g, '');
+        let parser = new DOMParser();
+        let content_new = parser.parseFromString('<div class="html-content">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
+        let article_top = article.parentNode.parentNode;
+        article_top.appendChild(content_new.querySelector('div'));
+        removeDOMElement(article.parentNode);
+      } else {
+        window.location.reload(true);
+      }
+    }
+  }
+}
+
 else if (matchDomain('augsburger-allgemeine.de')) {
   let url = window.location.href;
   if (!url.includes('-amp.html')) {
@@ -4332,6 +4373,13 @@ function parseHtmlEntities(encodedString) {
       let num = parseInt(numStr, 10);
       return String.fromCharCode(num);
   });
+}
+
+function decodeHtmlText(str) {
+  let parser = new DOMParser();
+  let doc = parser.parseFromString('<textarea>' + str + '</textarea>', 'text/html');
+  let dom = doc.querySelector('textarea');
+  return dom.value;
 }
 
 function encode_utf8(str) {

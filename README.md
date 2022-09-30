@@ -673,6 +673,7 @@ Grouped in options:\
 [NyTeknik](https://www.nyteknik.se)
 
 ##### Switzerland
+[ArcInfo](https://www.arcinfo.ch) -
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Neue Zürcher Zeitung (+ regional/opt-in to custom sites)](https://www.nzz.ch) -
