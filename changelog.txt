@@ -2,10 +2,10 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
-Add Aachener Nachrichten & Zeitung
 Add ArcInfo.ch
 Add Axios
 Add NK News (free articles only)
+Add Rheinische Post Mediengruppe
 Add 5 more Gannett sites
 Fix NHST Media Group
 Fix NTNews.com.au

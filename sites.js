@@ -4,16 +4,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
   },
-  "Aachener Nachrichten": {
-    domain: "aachener-nachrichten.de",
-    allow_cookies: 1,
-    useragent: "googlebot"
-  },
-  "Aachener Zeitung": {
-    domain: "aachener-zeitung.de",
-    allow_cookies: 1,
-    useragent: "googlebot"
-  },
   "Advance Local": {
     domain: "###_usa_adv_local",
     allow_cookies: 1,
@@ -1523,6 +1513,19 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "Rheinische Post Mediengruppe": {
+    domain: "###_de_rp_medien",
+    group: [
+      "aachener-nachrichten.de",
+      "aachener-zeitung.de",
+      "ga.de",
+      "rp-online.de",
+      "saarbruecker-zeitung.de",
+      "volksfreund.de"
+    ],
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "RugbyPass": {
     domain: "rugbypass.com",
     allow_cookies: 1,
@@ -2261,4 +2264,4 @@ init_custom_domains();
 
 // sites with no fix (background)
 var nl_dpg_media_nofix_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'hln.be', 'pzc.nl', 'tubantia.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nbr.co.nz', 'nieuwsblad.be', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'rp-online.de', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeunesafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nbr.co.nz', 'nieuwsblad.be', 'ouest-france.fr', 'politiken.dk', 'publico.pt', 'republic.ru', 'standaard.be', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'tagesspiegel.de', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(nl_dpg_media_nofix_domains);

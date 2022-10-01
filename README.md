@@ -497,8 +497,6 @@ Grouped in options:\
 [Sud Ouest](https://www.sudouest.fr)
 
 ##### Germany/Austria
-[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
-[Aachener Zeitung](https://www.aachener-zeitung.de) -
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
@@ -548,6 +546,13 @@ Grouped in options:\
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
 *Westfälische Mediengruppe* sites like\
+*Rheinische Post Mediengruppe* sites like
+[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
+[Aachener Zeitung](https://www.aachener-zeitung.de) -
+[General-Anzeiger Bonn](https://ga.de) -
+[Rheinische Post](https://rp-online.de) -
+[Saarbrücker Zeitung](http://www.saarbruecker-zeitung.de) -
+[Trierischer Volksfreund](http://www.volksfreund.de)\
 [Münstersche Zeitung](https://www.muensterschezeitung.de) -
 [Westfalen-Blatt](https://www.westfalen-blatt.de) -
 [Westfälische Nachrichten](https://www.wn.de)

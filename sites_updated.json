@@ -24,6 +24,11 @@
       }
     ]
   },
+  "General-Anzeiger Bonn": {
+    "domain": "ga.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Hearst Communications (newspapers)": {
     "domain": "###_usa_hearst_comm",
     "group": [
@@ -38,6 +43,16 @@
     "domain": "estadao.com.br",
     "block_regex": "(acesso\\.estadao\\.com\\.br\\/paywall\\/.+\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "amp_unhide": 1
+  },
+  "Rheinische Post": {
+    "domain": "rp-online.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
+  "Saarbrücker Zeitung": {
+    "domain": "saarbruecker-zeitung.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
   },
   "The (New Orleans) Advocate": {
     "domain": "###_usa_theadvocate",
@@ -75,5 +90,10 @@
         ]
       }
     ]
+  },
+  "Trierischer Volksfreund": {
+    "domain": "volksfreund.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
   }
 }
