@@ -1428,7 +1428,7 @@ else if (matchDomain('lesechos.fr')) {
   } else {
     window.setTimeout(function () {
       let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
-      let ad_blocks = document.querySelectorAll('[class*="jzxvkd"');
+      let ad_blocks = document.querySelectorAll('[class*="jzxvkd"]');
       for (let ad_block of ad_blocks)
         ad_block.setAttribute('style', 'display:none');
       if (abo_banner && dompurify_loaded) {
@@ -2550,6 +2550,15 @@ else if (matchDomain('asiatimes.com')) {
       replaceDomElementExt(url_amp, false, false, 'div.entry-content', '', 'article.ia2amp-article');
     }
   }
+}
+
+else if (matchDomain('axios.com')) {
+  let banners = document.querySelectorAll('div[data-vars-experiment="pro-paywall"], div[class^="Modal_paywallContainer"], .apexAd');
+  for (let elem of banners)
+    elem.style = 'display:none;';
+  let overlay = document.querySelector('html[style]');
+  if (overlay)
+    overlay.removeAttribute('style');
 }
 
 else if (matchDomain('barrons.com')) {

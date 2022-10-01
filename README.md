@@ -171,6 +171,7 @@ Grouped in options:\
 [Artforum](https://www.artforum.com) -
 [Artnet](https://www.artnet.com) -
 [Atavist Magazine](https://magazine.atavist.com) -
+[Axios](https://www.axios.com) -
 [Commentary Magazine](https://www.commentary.org) -
 [ESPN USA](https://www.espn.com) -
 [First Things](https://www.firstthings.com) -

@@ -196,6 +196,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
+  "Axios": {
+    domain: "axios.com",
+    allow_cookies: 1,
+    block_regex: "\.axios\.com\/api\/v\d\/licenses"
+  },
   "Badische Neueste Nachrichten": {
     allow_cookies: 1,
     domain: "bnn.de",

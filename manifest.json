@@ -91,6 +91,7 @@
     "*://*.automobilwoche.de/*",
     "*://*.autonews.com/*",
     "*://*.autoplus.fr/*",
+    "*://*.axios.com/*",
     "*://*.azcentral.com/*",
     "*://*.backpacker.com/*",
     "*://*.baltimoresun.com/*",
@@ -716,5 +717,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.6.4"
+  "version": "2.8.6.5"
 }
