@@ -2317,7 +2317,7 @@ else if (matchDomain('thetimes.co.uk')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -2440,8 +2440,8 @@ else if (matchDomain('blogfolha.uol.com.br')) {
 }
 
 else if (matchDomain('latercera.com')) {
-    let subscr_banner = document.querySelector('.empty');
-    removeDOMElement(subscr_banner);
+  let subscr_banner = document.querySelector('.empty');
+  removeDOMElement(subscr_banner);
 }
 
 else if (matchDomain('lasegunda.com')) {
@@ -2453,6 +2453,11 @@ else if (matchDomain('lasegunda.com')) {
     let bt_readmore = document.querySelectorAll('div[id*="bt_readmore_"]');
     removeDOMElement(...bt_readmore);
   }
+}
+
+else if (matchDomain('lavoz.com.ar')) {
+  let wrapperblock = document.querySelector('.wrapperblock');
+  removeDOMElement(wrapperblock);
 }
 
 else if (matchDomain('valor.globo.com')) {

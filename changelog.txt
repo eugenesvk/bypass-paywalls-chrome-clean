@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add ArcInfo.ch
 Add Axios
+Add LaVoz.com.ar
 Add NK News (free articles only)
 Add Rheinische Post Mediengruppe
 Add 5 more Gannett sites

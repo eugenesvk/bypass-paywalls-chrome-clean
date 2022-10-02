@@ -657,7 +657,7 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.nautil.us/*"];
+var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];

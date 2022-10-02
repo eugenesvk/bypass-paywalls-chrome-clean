@@ -352,6 +352,7 @@
     "*://*.laverdad.es/*",
     "*://*.lavie.fr/*",
     "*://*.lavoixdunord.fr/*",
+    "*://*.lavoz.com.ar/*",
     "*://*.lavozdigital.es/*",
     "*://*.law.com/*",
     "*://*.law360.com/*",
@@ -721,5 +722,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.6.6"
+  "version": "2.8.6.7"
 }

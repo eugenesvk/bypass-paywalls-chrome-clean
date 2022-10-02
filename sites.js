@@ -1031,6 +1031,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
   },
+  "La Voz del Interior": {
+    domain: "lavoz.com.ar",
+    allow_cookies: 1
+  },
   "Law.com (free articles only)": {
     domain: "law.com",
     allow_cookies: 1,
