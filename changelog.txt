@@ -7,6 +7,7 @@ Add Axios
 Add NK News (free articles only)
 Add Rheinische Post Mediengruppe
 Add 5 more Gannett sites
+Fix Clarin
 Fix NHST Media Group
 Fix NTNews.com.au
 

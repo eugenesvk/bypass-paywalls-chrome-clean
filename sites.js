@@ -280,7 +280,7 @@ var defaultSites = {
   "Clarín": {
     domain: "clarin.com",
     allow_cookies: 1,
-    block_regex: /\.clarin\.com\/commons\/js\/auth0\.js/
+    block_regex: /\.clarin\.com\/.+\/auth\d\.js/
   },
   "Commentary Magazine": {
     domain: "commentary.org",
