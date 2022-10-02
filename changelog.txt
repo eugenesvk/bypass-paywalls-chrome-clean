@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.7.0 (2022-10-02)
 Add ArcInfo.ch
 Add Axios
 Add LaVoz.com.ar
