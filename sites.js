@@ -321,7 +321,7 @@ var defaultSites = {
   },
   "Corriere dello Sport": {
     domain: "corrieredellosport.it",
-    allow_cookies: 1
+    remove_cookies_select_drop: ["paywall_articles"]
   },
   "Crain Communications": {
     domain: "###_usa_craincomm",

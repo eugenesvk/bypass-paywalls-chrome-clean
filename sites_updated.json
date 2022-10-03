@@ -29,6 +29,10 @@
     "allow_cookies": 1,
     "block_regex": "\\.clarin\\.com\\/.+\\/auth\\d\\.js"
   },
+  "Corriere dello Sport": {
+    "domain": "corrieredellosport.it",
+    "remove_cookies_select_drop": ["paywall_articles"]
+  },
   "General-Anzeiger Bonn": {
     "domain": "ga.de",
     "allow_cookies": 1,
