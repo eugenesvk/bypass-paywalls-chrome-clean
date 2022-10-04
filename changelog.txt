@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove Alma Talent sites (hold Iltalehti.fi)
 Fix Corriere dello Sport (subdomains)
 
 * v2.8.7.0 (2022-10-02)

@@ -394,24 +394,11 @@ Grouped in options:\
 [UnHerd](https://unherd.com)
 
 ##### Denmark
-
 [Berlingske](https://www.berlingske.dk)
 
 ##### Finland
-[Suomen Sotilas](https://suomensotilas.fi)
-
-Grouped in options:\
-*Alma Talent* sites like\
-[Arvopaperi](https://www.arvopaperi.fi) -
-[Iltalehti](https://www.iltalehti.fi) -
-[Kauppalehti](https://www.kauppalehti.fi) -
-[Markkinointi & Mainonta](https://www.marmai.fi) -
-[Mediuutiset](https://www.mediuutiset.fi) -
-[Mikrobitti](https://www.mikrobitti.fi) -
-[Talouselämä](https://www.talouselama.fi) -
-[Tekniikka & Talous](https://www.tekniikkatalous.fi) -
-[Tivi](https://www.tivi.fi) -
-[Uusi Suomi](https://www.uusisuomi.fi)
+[Suomen Sotilas](https://suomensotilas.fi) -
+[Iltalehti](https://www.iltalehti.fi)
 
 ##### France/Wallonia
 [60 Millions de consommateurs](https://www.60millions-mag.com) -

@@ -15,7 +15,6 @@ var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farode
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
-var fi_alma_talent_domains = ['arvopaperi.fi', 'iltalehti.fi', 'kauppalehti.fi', 'marmai.fi', 'mediuutiset.fi', 'mikrobitti.fi', 'talouselama.fi', 'tekniikkatalous.fi', 'tivi.fi', 'uusisuomi.fi'];
 var fr_be_groupe_rossel = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordeclair.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];
 var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', 'lalsace.fr', 'ledauphine.com', 'lejsl.com', 'leprogres.fr', 'republicain-lorrain.fr', 'vosgesmatin.fr'];
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
@@ -819,11 +818,11 @@ else
 
 } else if (window.location.hostname.match(/\.(dk|fi|no|se)$/)) {//denmark/finland/norway/sweden
 
-if (matchDomain(fi_alma_talent_domains)) {
+if (matchDomain('iltalehti.fi')) {
   let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad, div.iZivCJ');
   for (let ad of ads)
     ad.setAttribute('style', 'display:none;');
-  if (matchDomain('iltalehti.fi')) {
+  if (true) {
     let paywall = document.querySelector('div.faded-text');
     if (paywall && dompurify_loaded) {
       let scripts = document.querySelectorAll('script');
