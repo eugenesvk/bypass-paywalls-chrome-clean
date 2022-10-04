@@ -100,6 +100,11 @@
       }
     ]
   },
+  "The Washington Post": {
+    "domain": "washingtonpost.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
+  },
   "Trierischer Volksfreund": {
     "domain": "volksfreund.de",
     "allow_cookies": 1,
