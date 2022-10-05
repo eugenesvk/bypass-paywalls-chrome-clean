@@ -2158,6 +2158,11 @@ if (typeof browser === 'object') {
   let key = Object.keys(defaultSites).find(key => defaultSites[key].domain === '#options_restore_custom');
   if (key)
     delete defaultSites[key];
+  let key_au = Object.keys(defaultSites).find(key => defaultSites[key].domain === '###_au_news_corp');
+  if (key_au) {
+    let index = defaultSites[key_au].group.indexOf('ntnews.com.au');
+    defaultSites[key_au].group.splice(index, 1);
+  }
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {

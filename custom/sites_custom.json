@@ -183,6 +183,11 @@
     "domain": "pressandjournal.co.uk",
     "useragent": "googlebot"
   },
+  "Pressherald.com": {
+    "allow_cookies": 1,
+    "block_regex": "loader-cdn\\.azureedge\\.net",
+    "domain": "pressherald.com"
+  },
   "Reviewjournal.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",

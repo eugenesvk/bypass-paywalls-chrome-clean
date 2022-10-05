@@ -9,21 +9,6 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
-  "Aftonbladet": {
-    "domain": "aftonbladet.se",
-    "allow_cookies": 1,
-    "useragent": "bingbot"
-  },
-  "Business Standard": {
-    "domain": "business-standard.com",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "cs_code": [{
-        "cond": "div.story-content",
-        "rm_class": "story-content"
-      }
-    ]
-  },
   "Clarín": {
     "domain": "clarin.com",
     "allow_cookies": 1,
@@ -38,21 +23,6 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
-  "Hearst Communications (newspapers)": {
-    "domain": "###_usa_hearst_comm",
-    "group": [
-      "expressnews.com",
-      "houstonchronicle.com",
-      "sfchronicle.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"
-  },
-  "O Estado de S. Paulo": {
-    "domain": "estadao.com.br",
-    "block_regex": "(acesso\\.estadao\\.com\\.br\\/paywall\\/.+\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "amp_unhide": 1
-  },
   "Rheinische Post": {
     "domain": "rp-online.de",
     "allow_cookies": 1,
@@ -62,43 +32,6 @@
     "domain": "saarbruecker-zeitung.de",
     "allow_cookies": 1,
     "useragent": "googlebot"
-  },
-  "The (New Orleans) Advocate": {
-    "domain": "###_usa_theadvocate",
-    "group": [
-      "nola.com",
-      "theadvocate.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
-  },
-  "The Athletic": {
-    "domain": "###_usa_theathletic",
-    "group": [
-      "theathletic.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js",
-    "amp_redirect": "meta[content=\"article\"]"
-  },
-  "The Chronicle of Higher Education (& Philanthropy)": {
-    "domain": "###_usa_chronicle",
-    "group": [
-      "chronicle.com",
-      "philanthropy.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.blueconic\\.net\\/",
-    "cs_code": [{
-        "cond": "div.contentBody",
-        "rm_attrib": "data-content-body",
-        "elems": [{
-            "cond": "div.contentBody[hidden]",
-            "rm_attrib": "hidden"
-          }
-        ]
-      }
-    ]
   },
   "The Washington Post": {
     "domain": "washingtonpost.com",

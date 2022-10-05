@@ -700,7 +700,7 @@ Grouped in options:\
 [Geelong Advertiser](https://www.geelongadvertiser.com.au) -
 [Gold Coast Bulletin](https://www.goldcoastbulletin.com.au) -
 [Herald Sun](https://www.heraldsun.com.au) -
-[Northern Territory News](https://www.ntnews.com.au) -
+[Northern Territory News (Chrome-only)](https://www.ntnews.com.au) -
 [The Advertiser/AdelaideNow](https://www.adelaidenow.com.au) -
 [The Australian](https://www.theaustralian.com.au) -
 [The Chronicle](https://www.thechronicle.com.au) -
