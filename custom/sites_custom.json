@@ -165,6 +165,11 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "nationalobserver.com"
   },
+  "Newbostonpost.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\/newbostonpost\\.com\\/wp-content\\/themes\\/nbp\\/includes\\/paywall\\/js\\/main\\.js",
+    "domain": "newbostonpost.com"
+  },
   "Nv.ua": {
     "allow_cookies": 1,
     "amp_redirect": "div[id^=\"media_paywall\"]",
@@ -205,6 +210,10 @@
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net\\/",
     "domain": "spokesman.com"
+  },
+  "Sportsbusinessjournal.com": {
+    "domain": "sportsbusinessjournal.com",
+    "random_ip": "all"
   },
   "Supchina.com": {
     "allow_cookies": 1,

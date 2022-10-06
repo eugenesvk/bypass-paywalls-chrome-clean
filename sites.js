@@ -1342,10 +1342,6 @@ var defaultSites = {
     remove_cookies_select_drop: ["counter"],
     block_regex: /\.nrc\.nl\/paywall-api\/api\/zephr/
   },
-  "Nürnberger Nachrichten": {
-    domain: "nn.de",
-    block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/)/
-  },
   "NyTeknik": {
     domain: "nyteknik.se",
     allow_cookies: 1,

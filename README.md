@@ -502,7 +502,6 @@ Grouped in options:\
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
-[Nürnberger Nachrichten](https://www.nn.de) -
 [Piqd.de](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -

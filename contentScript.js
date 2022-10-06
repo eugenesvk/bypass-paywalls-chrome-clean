@@ -680,14 +680,6 @@ else if (matchDomain(['mz.de', 'volksstimme.de'])) {
   }
 }
 
-else if (matchDomain('nn.de')) {
-  let ad_billboard = document.querySelector('div#ad-Billboard');
-  if (ad_billboard && ad_billboard.parentNode)
-    removeDOMElement(ad_billboard.parentNode);
-  let ads = document.querySelectorAll('div[id^="clsdiv_"]');
-  removeDOMElement(...ads);
-}
-
 else if (matchDomain(['noz.de', 'nwzonline.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.match(/(-amp\.html|\/amp)$/)) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
