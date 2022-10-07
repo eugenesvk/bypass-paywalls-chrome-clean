@@ -33,6 +33,10 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
+  "The Critic": {
+    "domain": "thecritic.co.uk",
+    "block_regex": "\\.hadrianpaywall\\.com\\/"
+  },
   "The Washington Post": {
     "domain": "washingtonpost.com",
     "allow_cookies": 1,

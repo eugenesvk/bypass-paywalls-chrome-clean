@@ -574,6 +574,7 @@
     "*://*.thebanker.com/*",
     "*://*.thechronicle.com.au/*",
     "*://*.thecourier.com.au/*",
+    "*://*.thecritic.co.uk/*",
     "*://*.thecut.com/*",
     "*://*.thedailybeast.com/*",
     "*://*.thediplomat.com/*",
@@ -691,6 +692,7 @@
     "*://*.flip-pay.com/*",
     "*://*.funkedigital.de/*",
     "*://*.gannett-cdn.com/*",
+    "*://*.hadrianpaywall.com/*",
     "*://*.gitlab.com/magnolia1234/*",
     "*://*.hearstnp.com/*",
     "*://*.loader-cdn.azureedge.net/*",
@@ -712,5 +714,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.7.4"
+  "version": "2.8.7.5"
 }

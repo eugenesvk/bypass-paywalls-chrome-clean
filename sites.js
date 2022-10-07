@@ -1713,6 +1713,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
   },
+  "The Critic": {
+    domain: "thecritic.co.uk",
+    block_regex: /\.hadrianpaywall\.com\//
+  },
   "The Daily Beast": {
     domain: "thedailybeast.com",
     block_regex: /\.tinypass\.com\//

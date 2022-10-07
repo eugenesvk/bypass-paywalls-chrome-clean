@@ -382,6 +382,7 @@ Grouped in options:\
 [Private Equity News](https://www.penews.com) -
 [Prospect Magazine](https://www.prospectmagazine.co.uk) -
 [The Banker](https://www.thebanker.com) -
+[The Critic](https://thecritic.co.uk) -
 [The Economist](https://www.economist.com) -
 [The Independent](https://www.independent.co.uk) -
 [The Irish Times](https://www.irishtimes.com) -
