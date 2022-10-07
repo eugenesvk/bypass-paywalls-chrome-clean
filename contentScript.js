@@ -1780,9 +1780,7 @@ else if (matchDomain('rep.repubblica.it')) {
 }
 
 else if (matchDomain(it_gedi_domains)) {
-  if (matchDomain('huffingtonpost.it')) {
-    csDoneOnce = true;
-  } else if (matchDomain('lescienze.it')) {
+  if (matchDomain('lescienze.it')) {
     let paywall = document.querySelector('.paywall-adagio');
     if (paywall) {
       let body_paywall = document.querySelector('#detail-body-paywall');
@@ -1796,43 +1794,19 @@ else if (matchDomain(it_gedi_domains)) {
       csDoneOnce = true;
     }
   } else if (matchDomain('limesonline.com')) {
-    let url = window.location.href;
-    if (url.includes('prv=true')) {
+    if (window.location.search.includes('prv=true')) {
       window.setTimeout(function () {
-        window.location.href = url.split('?')[0];
+        window.location.href = window.location.pathname;
       }, 500);
     } else
       csDoneOnce = true;
   } else {
-    let url = window.location.href.split('?')[0];
-    if (!url.match(/\amp(\/)?$/)) {
-      let premium = document.querySelector('#paywall, iframe#__limio_frame');
-      if (premium) {
-        removeDOMElement(premium);
-        let amphtml = document.querySelector('link[rel="amphtml"]');
-        if (amphtml)
-          window.location.href = amphtml.href;
-      } else if (matchDomain('gelocal.it')) {
-        premium = document.querySelector('.paywall-adagio');
-        if (premium) {
-          removeDOMElement(premium);
-          window.setTimeout(function () {
-            let article_body = document.querySelector('div#article-body[style]');
-            if (article_body)
-              article_body.removeAttribute('style');
-          }, 1000);
-        }
-      }
+    if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let ads = document.querySelectorAll('div[id^="adv"]');
       removeDOMElement(...ads);
     } else {
-      if (matchDomain(['lastampa.it', 'www.repubblica.it'])) {
-        let paywall = document.querySelector('div[id^="paywall-banner"]');
-        removeDOMElement(paywall);
-        amp_unhide_subscr_section('amp-ad, amp-embed');
-      } else {
+      if (matchDomain('espresso.repubblica.it'))
         amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed')
-      }
     }
   }
 }

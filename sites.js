@@ -775,7 +775,7 @@ var defaultSites = {
   "Harper's Magazine": {
     domain: "harpers.org"
   },
-  "Harvard Business Review": {
+  "Harvard Business Review (free articles only)": {
     domain: "hbr.org",
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },

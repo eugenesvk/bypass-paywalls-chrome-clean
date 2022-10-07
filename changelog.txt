@@ -7,6 +7,7 @@ Remove Alma Talent sites (hold Iltalehti.fi)
 Remove NTNews.com.au (fix obsolete)
 Remove Nuernberger Nachrichten (fix obsolete)
 Fix Corriere dello Sport (subdomains)
+Fix GEDI.it (only Googlebot)
 Fix WaPo
 
 * v2.8.7.0 (2022-10-02)
