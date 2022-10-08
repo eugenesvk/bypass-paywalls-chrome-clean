@@ -167,7 +167,7 @@
   },
   "Newbostonpost.com": {
     "allow_cookies": 1,
-    "block_regex": "\\/newbostonpost\\.com\\/wp-content\\/themes\\/nbp\\/includes\\/paywall\\/js\\/main\\.js",
+    "block_regex": "\\/newbostonpost\\.com\\/.+\\/paywall\\/js\\/main\\.js",
     "domain": "newbostonpost.com"
   },
   "Nv.ua": {
@@ -278,3 +278,4 @@
     "domain": "washingtontimes.com"
   }
 }
+

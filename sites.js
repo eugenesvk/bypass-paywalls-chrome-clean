@@ -463,6 +463,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "Evening Standard (UK)": {
+    domain: "standard.co.uk",
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
   "Exame": {
     domain: "exame.com",
     block_regex: /\/exame\.com\/.+\/js\/pywll-dyn\.js/

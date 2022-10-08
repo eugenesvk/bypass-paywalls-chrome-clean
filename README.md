@@ -374,6 +374,7 @@ Grouped in options:\
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Business Post](https://www.businesspost.ie) -
+[Evening Standard](https://www.standard.co.uk) -
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
 [Investors' Chronicle](https://www.investorschronicle.co.uk) -

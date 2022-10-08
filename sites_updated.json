@@ -18,6 +18,11 @@
     "domain": "corrieredellosport.it",
     "remove_cookies_select_drop": ["paywall_articles"]
   },
+  "Evening Standard (UK)": {
+    "domain": "standard.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+  },
   "General-Anzeiger Bonn": {
     "domain": "ga.de",
     "allow_cookies": 1,

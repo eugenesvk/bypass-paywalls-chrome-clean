@@ -539,6 +539,7 @@
     "*://*.spglobal.com/*",
     "*://*.spiegel.de/*",
     "*://*.sportico.com/*",
+    "*://*.standard.co.uk/*",
     "*://*.standard.net.au/*",
     "*://*.star-telegram.com/*",
     "*://*.staradvertiser.com/*",
@@ -716,5 +717,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.7.6"
+  "version": "2.8.7.7"
 }
