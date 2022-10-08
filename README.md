@@ -127,6 +127,7 @@ Grouped in options:\
 ##### Tech/Science
 [Chemical & Engineering News](https://cen.acs.org) -
 [Discover Magazine](https://www.discovermagazine.com) -
+[Medscape](https://www.medscape.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
 [National Geographic USA](https://www.nationalgeographic.com) -
 [Nautilus](https://nautil.us) -

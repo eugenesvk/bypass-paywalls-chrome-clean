@@ -1218,6 +1218,11 @@ var defaultSites = {
       "towardsdatascience.com"
     ]
   },
+  "Medscape (regwall)": {
+    domain: "medscape.com",
+    allow_cookies: 1,
+    block_regex: /\.medscapestatic\.com\/.+\/medscape-library\.js/
+  },
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
     allow_cookies: 1,

@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Medscape
 Add The Critic (UK)
 Remove Alma Talent sites (hold Iltalehti.fi)
 Remove NTNews.com.au (fix obsolete)

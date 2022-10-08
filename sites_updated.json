@@ -23,6 +23,11 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
+  "Medscape (regwall)": {
+    "domain": "medscape.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.medscapestatic\\.com\\/.+\\/medscape-library\\.js"
+  },
   "Rheinische Post": {
     "domain": "rp-online.de",
     "allow_cookies": 1,

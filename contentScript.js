@@ -3198,6 +3198,11 @@ else if (matchDomain('medianama.com')) {
   csDoneOnce = true;
 }
 
+else if (matchDomain('medscape.com')) {
+  let ads = document.querySelectorAll('.AdUnit, [id^="ads-"]');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('mid-day.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_access_hide('="granted"', '="NOT granted"', 'amp-ad, amp-embed, [class*="BannerAd"]');
