@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.8.0 (2022-10-09)
 Add Evening Standard (UK)
 Add Medscape
 Add The Critic (UK)

@@ -203,6 +203,11 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "siliconrepublic.com"
   },
+  "Sltrib.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "domain": "sltrib.com"
+  },
   "Speld.nl": {
     "domain": "speld.nl"
   },
