@@ -473,35 +473,39 @@ else if (matchDomain('arcinfo.ch')) {
   let paywall = document.querySelector('section#paywall-articles');
   if (paywall && dompurify_loaded) {
     removeDOMElement(paywall);
-    let url = window.location.href;
+    let url = window.location.href.split(/[\?#]/)[0];
     let html = document.documentElement.outerHTML;
+    let og_url = document.querySelector('meta[name="og:url"][content]');
+    if (og_url && (og_url.content !== url))
+      window.location.reload(true);
     let json;
     if (html.includes('window.__NUXT__='))
-      json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
+      json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim().replace(/blocs:\[\{.*?\}\],/g, '');
     let article = document.querySelector('div.html-content');
+    let no_intro = false;
+    if (!article) {
+      article = document.querySelector('div.container-mobile-full');
+      no_intro = true;
+    }
     if (article && json) {
       let content = '';
       if (json.includes('text_1="'))
         content = json.split('text_1="').pop().split('";')[0];
       else {
         let parts = json.split('html:"');
-        let search = article.querySelector('p');
-        if (search) {
-          for (let part of parts) {
-            if (parseHtmlEntities(part).includes(search.innerText.slice(20, 50))) {
-              content = part.split('",has_pre_content')[0];
-              break;
-            }
-          }
-        }
+        content = parts.pop().split('",has_pre_content')[0];
       }
       if (content) {
         content = content.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/\\r\\n/g, '');
         let parser = new DOMParser();
         let content_new = parser.parseFromString('<div class="html-content">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
-        let article_top = article.parentNode.parentNode;
+        let article_top;
+        if (!no_intro) {
+          article_top = article.parentNode.parentNode;
+          removeDOMElement(article.parentNode);
+        } else
+          article_top = article;
         article_top.appendChild(content_new.querySelector('div'));
-        removeDOMElement(article.parentNode);
       } else {
         window.location.reload(true);
       }
