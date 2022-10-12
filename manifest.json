@@ -460,6 +460,7 @@
     "*://*.nzherald.co.nz/*",
     "*://*.nzz.ch/*",
     "*://*.observador.pt/*",
+    "*://*.ocbj.com/*",
     "*://*.ocregister.com/*",
     "*://*.oklahoman.com/*",
     "*://*.omaha.com/*",
@@ -521,9 +522,11 @@
     "*://*.sciencesetavenir.fr/*",
     "*://*.scientificamerican.com/*",
     "*://*.scmp.com/*",
+    "*://*.sdbj.com/*",
     "*://*.seattletimes.com/*",
     "*://*.seekingalpha.com/*",
     "*://*.sfchronicle.com/*",
+    "*://*.sfvbj.com/*",
     "*://*.shz.de/*",
     "*://*.si.com/*",
     "*://*.silive.com/*",
@@ -718,5 +721,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.8.3"
+  "version": "2.8.8.4"
 }

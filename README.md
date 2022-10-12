@@ -107,6 +107,12 @@ _* free articles only._
 [Vogue Business](https://www.voguebusiness.com)
 
 Grouped in options:\
+*California Business Journals* sites like\
+[Los Angeles Business Journal](https://labusinessjournal.com) -
+[Orange County Business Journal](https://www.ocbj.com) -
+[San Diego Business Journal](https://www.sdbj.com) -
+[San Fernando Valley Business Journal](https://www.sfvbj.com)
+
 *Crain Communications* sites like\
 [Ad Age](https://adage.com) -
 [Automotive News](https://www.autonews.com) -
@@ -247,7 +253,6 @@ Grouped in options:\
 
 ##### Local USA news
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
-[Los Angeles Business Journal](https://labusinessjournal.com) -
 [Los Angeles Times](https://www.latimes.com) -
 [Mountain View Voice](https://www.mv-voice.com) -
 [New York Magazine](https://www.nymag.com) (+ [Curbed](https://www.curbed.com), [Grub Street](https://www.grubstreet.com), [The Cut](https://www.thecut.com) & [Vulture](https://www.vulture.com)) -
