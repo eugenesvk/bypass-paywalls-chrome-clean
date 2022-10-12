@@ -1,18 +1,8 @@
 {
-  "Aachener Nachrichten": {
-    "domain": "aachener-nachrichten.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Aachener Zeitung": {
-    "domain": "aachener-zeitung.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Clarín": {
-    "domain": "clarin.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.clarin\\.com\\/.+\\/auth\\d\\.js"
+  "Bloomberg": {
+    "domain": "bloomberg.com",
+    "block_regex": "(\\.tinypass\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/(fence\\/plug-client|javelin\\/.+\\/transporter)\\/)",
+    "remove_cookies_select_drop": ["gatehouse_id"]
   },
   "Corriere dello Sport": {
     "domain": "corrieredellosport.it",
@@ -23,25 +13,10 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
-  "General-Anzeiger Bonn": {
-    "domain": "ga.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
   "Medscape (regwall)": {
     "domain": "medscape.com",
     "allow_cookies": 1,
     "block_regex": "\\.medscapestatic\\.com\\/.+\\/medscape-library\\.js"
-  },
-  "Rheinische Post": {
-    "domain": "rp-online.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Saarbrücker Zeitung": {
-    "domain": "saarbruecker-zeitung.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
   },
   "The Critic": {
     "domain": "thecritic.co.uk",
@@ -51,10 +26,5 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
-  },
-  "Trierischer Volksfreund": {
-    "domain": "volksfreund.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
   }
 }

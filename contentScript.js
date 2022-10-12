@@ -2563,15 +2563,14 @@ else if (matchDomain('bloomberg.com')) {
   function bloomberg_noscroll(node) {
     node.removeAttribute('data-paywall-overlay-status');
   }
-  waitDOMElement('div#fortress-paywall-container-root', 'DIV', removeDOMElement, true);
+  waitDOMElement('div[id^="fortress-"]', 'DIV', removeDOMElement, true);
   waitDOMAttribute('body', 'BODY', 'data-paywall-overlay-status', bloomberg_noscroll, true);
-  let paywall = document.querySelector('div#fortress-paywall-container-root');
-  let counter = document.querySelector('div#fortress-preblocked-container-root');
+  let paywall = document.querySelectorAll('div[id^="fortress-"]');
   let leaderboard = document.querySelector('div[id^="leaderboard"], div[class^="leaderboard"], div.canopy-container');
   let noscroll = document.querySelector('body[data-paywall-overlay-status]');
   if (noscroll)
     noscroll.removeAttribute('data-paywall-overlay-status');
-  removeDOMElement(paywall, counter, leaderboard);
+  removeDOMElement(...paywall, leaderboard);
   sessionStorage.clear();
   let url = window.location.href;
   if (url.match(/s\/\d{4}-/)) {

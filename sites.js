@@ -208,7 +208,7 @@ var defaultSites = {
   "Bloomberg": {
     domain: "bloomberg.com",
     block_regex: /(\.tinypass\.com\/|assets\.bwbx\.io\/s\d\/(fence\/plug-client|javelin\/.+\/transporter)\/)/,
-    remove_cookies_select_hold: ["bb_geo_info"]
+    remove_cookies_select_drop: ["gatehouse_id"]
   },
   "BQ Prime": {
     domain: "bqprime.com",

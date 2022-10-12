@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Fix ArcInfo.ch (refresh)
+Fix Bloomberg (edition)
 Fix The Hindu (geoId-fix redundant)
 
 * v2.8.8.0 (2022-10-09)
