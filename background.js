@@ -709,6 +709,7 @@ var block_js = [
   "*://js.matheranalytics.com/*",
   "*://js.pelcro.com/*",
   "*://loader-cdn.azureedge.net/prod/*/loader.min.js*",
+  "*://olytics.omeda.com/*",
 ];
 
 // Disable javascript for these sites/general paywall-scripts

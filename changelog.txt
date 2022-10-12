@@ -5,6 +5,7 @@ Post-release
 Fix ArcInfo.ch (refresh)
 Fix Bloomberg (edition)
 Fix The Hindu (geoId-fix redundant)
+Update block general paywall script (Omeda Olytics)
 
 * v2.8.8.0 (2022-10-09)
 Add Evening Standard (UK)

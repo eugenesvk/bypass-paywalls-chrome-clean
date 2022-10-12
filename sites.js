@@ -2108,6 +2108,9 @@ var defaultSites = {
   "NewsMemory": {
     domain: "newsmemory.com"
   },
+  "Omeda Olytics": {
+    domain: "omeda.com"
+  },
   "OneCount": {
     domain: "onecount.net"
   },
