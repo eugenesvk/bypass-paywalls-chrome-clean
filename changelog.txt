@@ -3,7 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add California Business Journals
-Fix ArcInfo.ch (refresh)
+Fix ArcInfo.ch (refresh & no tabId)
 Fix Bloomberg (edition)
 Fix The Hindu (geoId-fix redundant)
 Update block general paywall script (Omeda Olytics)

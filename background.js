@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
 const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
-const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(be_mediahuis_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
 var optin_setcookie = false;
@@ -1157,7 +1157,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
         }
       }
     });
-  } else { //El Mercurio Regionales, lequipe.fr
+  } else { //El Mercurio Regionales, lequipe.fr, arcinfo.ch
     ext_api.tabs.query({
       active: true,
       currentWindow: true
@@ -1166,7 +1166,7 @@ if (matchUrlDomain(change_headers, details.url) && !['font', 'image', 'styleshee
         let currentTab = tabs[0];
         if (isSiteEnabled(currentTab)) {
           let lib_file = 'lib/empty.js';
-          if (matchUrlDomain(['lequipe.fr'], currentTab.url))
+          if (matchUrlDomain(dompurify_sites, currentTab.url))
             lib_file = 'lib/purify.min.js';
           ext_api.tabs.executeScript({
             file: lib_file,

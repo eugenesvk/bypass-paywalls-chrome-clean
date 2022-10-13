@@ -473,10 +473,10 @@ else if (matchDomain('arcinfo.ch')) {
   let paywall = document.querySelector('section#paywall-articles');
   if (paywall && dompurify_loaded) {
     removeDOMElement(paywall);
-    let url = window.location.href.split(/[\?#]/)[0];
+    let url_id = window.location.href.split(/[\?#]/)[0].match(/\d+$/).pop();
     let html = document.documentElement.outerHTML;
     let og_url = document.querySelector('meta[name="og:url"][content]');
-    if (og_url && (og_url.content !== url))
+    if (og_url && (og_url.content.match(/\d+$/).pop() !== url_id))
       window.location.reload(true);
     let json;
     if (html.includes('window.__NUXT__='))
@@ -493,7 +493,9 @@ else if (matchDomain('arcinfo.ch')) {
         content = json.split('text_1="').pop().split('";')[0];
       else {
         let parts = json.split('html:"');
-        content = parts.pop().split('",has_pre_content')[0];
+        parts.splice(0, 1);
+        for (let part of parts)
+          content += part.split('",has_pre_content')[0];
       }
       if (content) {
         content = content.replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/\\r\\n/g, '');
