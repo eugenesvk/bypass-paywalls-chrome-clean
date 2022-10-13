@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add California Business Journals
+Remove Mediahuis Belgie (fix obsolete)
 Fix ArcInfo.ch (refresh & no tabId)
 Fix Bloomberg (edition)
 Fix The Hindu (geoId-fix redundant)
