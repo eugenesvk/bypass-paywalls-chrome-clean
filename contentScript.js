@@ -1798,13 +1798,37 @@ else if (matchDomain(it_gedi_domains)) {
       }, 500);
     } else
       csDoneOnce = true;
+  } else if (matchDomain('espresso.repubblica.it')) {
+    if (!window.location.pathname.match(/\amp(\/)?$/)) {
+      let paywall = document.querySelector('div#paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall && amphtml) {
+        removeDOMElement(paywall);
+        window.location.href = amphtml.href;
+      } else {
+        let inline_videos = document.querySelectorAll('div.responsive-video');
+        for (let video of inline_videos) {
+          let placeholder = video.querySelector('div.snappedPlaceholder');
+          if (placeholder)
+            placeholder.removeAttribute('class');
+          let iframe = video.querySelector('iframe[data-src]:not([src])');
+          if (iframe) {
+            iframe.src = iframe.getAttribute('data-src');
+            let elem = document.createElement('a');
+            elem.href = iframe.getAttribute('data-src');
+            elem.innerText = '>>> external video-link';
+            elem.target = '_blank';
+            video.parentNode.appendChild(elem);
+          }
+        }
+      }
+    } else {
+      amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed');
+    }
   } else {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let ads = document.querySelectorAll('div[id^="adv"]');
       removeDOMElement(...ads);
-    } else {
-      if (matchDomain('espresso.repubblica.it'))
-        amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed')
     }
   }
 }

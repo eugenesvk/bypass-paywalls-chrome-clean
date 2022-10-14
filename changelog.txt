@@ -8,6 +8,7 @@ Remove Mediahuis Belgie (fix obsolete)
 Fix ArcInfo.ch (refresh & no tabId)
 Fix Australia News Corp (Googlebot images)
 Fix Bloomberg (edition)
+Fix Espresso.repubblica.it (video)
 Fix The Hindu (geoId-fix redundant)
 Update block general paywall script (Omeda Olytics)
 
