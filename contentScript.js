@@ -320,15 +320,8 @@ else {
         }
         removeDOMElement(comments);
       } else {
-        let ads = document.querySelectorAll('.header_ads-container, .ad-block');
+        let ads = document.querySelectorAll('.header_ads-container, .ad-block, .ad-container');
         removeDOMElement(...ads);
-        if (matchDomain('ntnews.com.au')) {
-          let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
-          for (let elem of lazy_images) {
-            elem.src = elem.getAttribute('data-src');
-            elem.classList.remove('lazyload');
-          }
-        }
       }
     } else {
       // Australian Seven West Media

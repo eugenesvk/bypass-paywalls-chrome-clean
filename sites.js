@@ -115,12 +115,8 @@ var defaultSites = {
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
+    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
     exception: [{
-        domain: "codesports.com.au",
-        allow_cookies: 1,
-        block_regex: /\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js/
-      }, {
         domain: "ntnews.com.au",
         allow_cookies: 1,
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
@@ -2170,11 +2166,6 @@ if (typeof browser === 'object') {
   let key = Object.keys(defaultSites).find(key => defaultSites[key].domain === '#options_restore_custom');
   if (key)
     delete defaultSites[key];
-  let key_au = Object.keys(defaultSites).find(key => defaultSites[key].domain === '###_au_news_corp');
-  if (key_au) {
-    let index = defaultSites[key_au].group.indexOf('ntnews.com.au');
-    defaultSites[key_au].group.splice(index, 1);
-  }
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {

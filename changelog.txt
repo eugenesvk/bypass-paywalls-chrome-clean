@@ -3,8 +3,10 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add California Business Journals
+Add NTNews.com.au
 Remove Mediahuis Belgie (fix obsolete)
 Fix ArcInfo.ch (refresh & no tabId)
+Fix Australia News Corp (Googlebot images)
 Fix Bloomberg (edition)
 Fix The Hindu (geoId-fix redundant)
 Update block general paywall script (Omeda Olytics)
