@@ -9,6 +9,7 @@ Fix ArcInfo.ch (refresh & no tabId)
 Fix Australia News Corp (Googlebot images)
 Fix Bloomberg (edition)
 Fix Espresso.repubblica.it (video)
+Fix The Globe and Mail (only premium)
 Fix The Hindu (geoId-fix redundant)
 Update block general paywall script (Omeda Olytics)
 

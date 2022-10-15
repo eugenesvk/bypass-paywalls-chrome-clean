@@ -3674,14 +3674,22 @@ else if (matchDomain('thediplomat.com')) {
 }
 
 else if (matchDomain('theglobeandmail.com')) {
-  let article_body_subscribed = document.querySelector('.c-article-body--subscribed');
-  if (article_body_subscribed)
-    article_body_subscribed.removeAttribute('class');
-  let lazy_images = document.querySelectorAll('img.lazyimage[src^="data:image/"][data-src]');
-  for (let elem of lazy_images)
-    elem.src = elem.getAttribute('data-src');
+  let paywall = document.querySelector('div.c-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let url = window.location.href.split('?')[0];
+    window.location.href = url + '?rel=premium';
+  } else {
+    let article_body_subscribed = document.querySelector('.c-article-body--subscribed');
+    if (article_body_subscribed)
+      article_body_subscribed.removeAttribute('class');
+    let lazy_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
+    for (let elem of lazy_images)
+      elem.src = elem.getAttribute('data-src');
+  }
   let banners = document.querySelectorAll('div.c-ad, div#subscription-pencil-area, div.marketing-container-wrapper');
-  removeDOMElement(...banners);
+  for (let banner of banners)
+    banner.style = 'display:none;';
 }
 
 else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {

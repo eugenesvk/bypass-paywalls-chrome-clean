@@ -5,7 +5,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
+const cs_limit_except = ['elespanol.com', 'faz.net', 'globeandmail.com', 'nation.africa', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
 var currentTabUrl = '';
 var csDone = false;
@@ -659,13 +659,14 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*"];
+var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*", "*://*.theglobeandmail.com/*/article-*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];
   let excluded = (matchUrlDomain('crusoe.uol.com.br', details.url) && (optin_setcookie || !url_path.match(/\.br\/(diario|edicoes)\/.+/)))
   || (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
-  || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/));
+  || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/))
+  || (matchUrlDomain('theglobeandmail.com', details.url) && !details.url.includes('?rel=premium'));
   if (!isSiteEnabled(details) || excluded)
     return;
   var headers = details.responseHeaders;
