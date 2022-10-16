@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.8.9.0 (2022-10-16)
 Add Albuquerque Journal
 Add California Business Journals
 Add iNews.co.uk
