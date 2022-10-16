@@ -1,4 +1,9 @@
 {
+  "Abqjournal.com": {
+    "domain": "abqjournal.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.abqjournal\\.com\\/.+\\/abq-pw-manager\\.js"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "block_regex": "(\\.tinypass\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/(fence\\/plug-client|javelin\\/.+\\/transporter)\\/)",

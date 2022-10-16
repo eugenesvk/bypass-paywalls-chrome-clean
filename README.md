@@ -252,6 +252,7 @@ Grouped in options:\
 [WWD](https://wwd.com)
 
 ##### Local USA news
+[Albuquerque Journal](https://www.abqjournal.com) -
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
 [Los Angeles Times](https://www.latimes.com) -
 [Mountain View Voice](https://www.mv-voice.com) -

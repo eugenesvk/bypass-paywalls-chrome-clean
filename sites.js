@@ -28,6 +28,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "bingbot"
   },
+  "Albuquerque Journal": {
+    domain: "abqjournal.com",
+    allow_cookies: 1,
+    block_regex: /\.abqjournal\.com\/.+\/abq-pw-manager\.js/
+  },
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
     allow_cookies: 1,
