@@ -105,11 +105,6 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "heraldscotland.com"
   },
-  "Inews.co.uk": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "domain": "inews.co.uk"
-  },
   "Interestingengineering.com": {
     "allow_cookies": 1,
     "domain": "interestingengineering.com",

@@ -382,6 +382,7 @@ Grouped in options:\
 [Evening Standard](https://www.standard.co.uk) -
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
+[iNews](https://inews.co.uk) -
 [Investors' Chronicle](https://www.investorschronicle.co.uk) -
 [Irish Independent](https://www.independent.ie) -
 [London Review of Books](https://www.lrb.co.uk) -

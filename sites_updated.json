@@ -13,6 +13,11 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
+  "Inews.co.uk": {
+    "domain": "inews.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/"
+  },
   "Medscape (regwall)": {
     "domain": "medscape.com",
     "allow_cookies": 1,

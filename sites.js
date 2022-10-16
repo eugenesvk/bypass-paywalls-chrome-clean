@@ -882,6 +882,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
+  "iNews (UK)": {
+    domain: "inews.co.uk",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
+  },
   "Initium Media": {
     domain: "theinitium.com",
     allow_cookies: 1,
