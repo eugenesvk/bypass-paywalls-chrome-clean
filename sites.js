@@ -452,8 +452,7 @@ var defaultSites = {
   },
   "ESPN USA (news only)": {
     domain: "espn.com",
-    allow_cookies: 1,
-    random_ip: "eu"
+    allow_cookies: 1
   },
   "Esprit": {
     domain: "esprit.presse.fr",
@@ -839,7 +838,8 @@ var defaultSites = {
   },
   "Honolulu Star-Advertiser": {
     domain: "staradvertiser.com",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /js\.matheranalytics\.com\//
   },
   "Il Fatto Quotidiano": {
     domain: "ilfattoquotidiano.it",
@@ -1000,7 +1000,7 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "La Nación": {
+  "La Nación (free articles only)": {
     domain: "lanacion.com.ar"
   },
   "La Nouvelle République du Centre-Ouest": {

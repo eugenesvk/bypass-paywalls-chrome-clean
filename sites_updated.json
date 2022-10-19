@@ -9,28 +9,10 @@
     "block_regex": "(\\.tinypass\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/(fence\\/plug-client|javelin\\/.+\\/transporter)\\/)",
     "remove_cookies_select_drop": ["gatehouse_id"]
   },
-  "Corriere dello Sport": {
-    "domain": "corrieredellosport.it",
-    "remove_cookies_select_drop": ["paywall_articles"]
-  },
-  "Evening Standard (UK)": {
-    "domain": "standard.co.uk",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
-  },
   "Inews.co.uk": {
     "domain": "inews.co.uk",
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/"
-  },
-  "Medscape (regwall)": {
-    "domain": "medscape.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.medscapestatic\\.com\\/.+\\/medscape-library\\.js"
-  },
-  "The Critic": {
-    "domain": "thecritic.co.uk",
-    "block_regex": "\\.hadrianpaywall\\.com\\/"
   },
   "The Washington Post": {
     "domain": "washingtonpost.com",

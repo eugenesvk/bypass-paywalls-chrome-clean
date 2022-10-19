@@ -43,6 +43,11 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
+  "Correiodopovo.com.br": {
+    "allow_cookies": 1,
+    "block_regex": "paywall\\.correiodopovo\\.com\\.br",
+    "domain": "correiodopovo.com.br"
+  },
   "Dailyherald.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
@@ -98,6 +103,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
     "domain": "heraldscotland.com"
+  },
+  "Ilglobo.com": {
+    "allow_cookies": 1,
+    "domain": "ilglobo.com",
+    "useragent": "googlebot"
   },
   "Interestingengineering.com": {
     "allow_cookies": 1,

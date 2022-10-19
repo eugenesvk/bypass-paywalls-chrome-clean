@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix ESPN USA (link to archive.is)
 
 * v2.8.9.0 (2022-10-16)
 Add Albuquerque Journal

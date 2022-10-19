@@ -810,8 +810,7 @@ else
 
 if (matchDomain('iltalehti.fi')) {
   let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad, div.iZivCJ');
-  for (let ad of ads)
-    ad.setAttribute('style', 'display:none;');
+  hideDOMElement(...ads);
   if (true) {
     let paywall = document.querySelector('div.faded-text');
     if (paywall && dompurify_loaded) {
@@ -1171,8 +1170,7 @@ else if (matchDomain('challenges.fr')) {
     amp_unhide_access_hide('="paywall.access OR cha.access"', '="NOT (paywall.access OR cha.access)"');
   } else {
     let amorce = document.querySelector('.user-paying-amorce');
-    if (amorce)
-      amorce.setAttribute('style', 'display:none !important');
+    hideDOMElement(amorce);
     let content = document.querySelectorAll('.user-paying-content');
     for (let elem of content) {
       elem.classList.remove('user-paying-content');
@@ -1418,8 +1416,7 @@ else if (matchDomain('lesechos.fr')) {
     window.setTimeout(function () {
       let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
       let ad_blocks = document.querySelectorAll('[class*="jzxvkd"]');
-      for (let ad_block of ad_blocks)
-        ad_block.setAttribute('style', 'display:none');
+      hideDOMElement(...ad_blocks);
       if (abo_banner && dompurify_loaded) {
         removeDOMElement(abo_banner);
         let url = window.location.href;
@@ -2437,8 +2434,7 @@ else if (matchDomain('asiatimes.com')) {
 
 else if (matchDomain('axios.com')) {
   let banners = document.querySelectorAll('div[data-vars-experiment="pro-paywall"], div[class^="Modal_paywallContainer"], .apexAd');
-  for (let elem of banners)
-    elem.style = 'display:none;';
+  hideDOMElement(...banners);
   let overlay = document.querySelector('html[style]');
   if (overlay)
     overlay.removeAttribute('style');
@@ -2480,13 +2476,13 @@ else if (matchDomain('bloomberg.com')) {
   let noscroll = document.querySelector('body[data-paywall-overlay-status]');
   if (noscroll)
     noscroll.removeAttribute('data-paywall-overlay-status');
-  removeDOMElement(...paywall, leaderboard);
+  hideDOMElement(...paywall, leaderboard);
   sessionStorage.clear();
   let url = window.location.href;
   if (url.match(/s\/\d{4}-/)) {
     let page_ad = document.querySelectorAll('div.page-ad, div[data-ad-placeholder], div[class*="-ad-top"]');
     let reg_ui_client = document.querySelector('div#reg-ui-client');
-    removeDOMElement(leaderboard, ...page_ad, reg_ui_client);
+    hideDOMElement(...page_ad, reg_ui_client);
     let hidden_images = document.querySelectorAll('img.lazy-img__image[src][data-native-src]');
     for (let hidden_image of hidden_images) {
       if (hidden_image.src.match(/\/(60|150)x-1\.(png|jpg)$/))
@@ -2620,11 +2616,9 @@ else if (matchDomain(ca_torstar_domains)) {
     let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot, .ad-slot');
     removeDOMElement(meter_banner, ...ads);
     let end_of_article = document.querySelector('#end-of-article');
-    if (end_of_article)
-      end_of_article.setAttribute('style', 'display:none;');
+    hideDOMElement(end_of_article);
     let rightrail = document.querySelector('.c-article-body__rightrail');
-    if (rightrail)
-      rightrail.setAttribute('style', 'display:none;');
+    hideDOMElement(rightrail);
   }, 500);
 }
 
@@ -2678,8 +2672,7 @@ else if (matchDomain('discovermagazine.com')) {
     if (mammoth)
       window.location.reload();
     let banner = document.querySelector('div.dPURIw');
-    if (banner)
-      banner.setAttribute('style', 'display:none;');
+    hideDOMElement(banner);
   }, 1000);
 }
 
@@ -2770,6 +2763,17 @@ else if (matchDomain('entrepreneur.com')) {
     let hidden_images = document.querySelectorAll('img.lazy[src*="blur"][data-src]');
     for (let hidden_image of hidden_images)
       hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
+  }
+}
+
+else if (matchDomain('espn.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('aside.espn-plus-container-wrapper');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article-body');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
   }
 }
 
@@ -3688,8 +3692,7 @@ else if (matchDomain('theglobeandmail.com')) {
       elem.src = elem.getAttribute('data-src');
   }
   let banners = document.querySelectorAll('div.c-ad, div#subscription-pencil-area, div.marketing-container-wrapper');
-  for (let banner of banners)
-    banner.style = 'display:none;';
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
@@ -4042,6 +4045,13 @@ function removeDOMElement(...elements) {
   for (let element of elements) {
     if (element)
       element.remove();
+  }
+}
+
+function hideDOMElement(...elements) {
+  for (let element of elements) {
+    if (element)
+      element.style = 'display:none !important;';
   }
 }
 
