@@ -754,7 +754,14 @@ var defaultSites = {
       "lavozdigital.es"
     ],
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+    exception: [{
+        domain: "abc.es",
+        allow_cookies: 1,
+        block_regex: /(\.evolok\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+        useragent: "googlebot"
+      }
+    ]
   },
   "Gruppo GEDI.it": {
     domain: "###_it_gedi",

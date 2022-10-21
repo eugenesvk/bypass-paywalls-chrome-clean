@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix ABC.es (Sevilla)
 Fix ESPN USA (link to archive.is)
 Fix The Athletic (css)
 

@@ -1075,7 +1075,7 @@ else if (matchDomain('elperiodico.com')) {
 }
 
 else if (matchDomain(es_grupo_vocento_domains)) {
-  let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive');
+  let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style="display: none;"])');
   if (!window.location.pathname.endsWith('_amp.html')) {
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (!amphtml)

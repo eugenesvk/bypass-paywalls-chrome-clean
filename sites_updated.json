@@ -9,6 +9,34 @@
     "block_regex": "(\\.tinypass\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/(fence\\/plug-client|javelin\\/.+\\/transporter)\\/)",
     "remove_cookies_select_drop": ["gatehouse_id"]
   },
+  "Grupo Vocento": {
+    "domain": "###_es_grupo_vocento",
+    "group": [
+      "abc.es",
+      "diariosur.es",
+      "diariovasco.com",
+      "elcomercio.es",
+      "elcorreo.com",
+      "eldiariomontanes.es",
+      "elnortedecastilla.es",
+      "hoy.es",
+      "ideal.es",
+      "larioja.com",
+      "lasprovincias.es",
+      "laverdad.es",
+      "lavozdigital.es"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "exception": [{
+        "domain": "abc.es",
+        "allow_cookies": 1,
+        "block_regex": "(\\.evolok\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+        "useragent": "googlebot",
+        "amp_redirect": ".cierre-suscripcion:not([style=\"display: none;\"]"
+      }
+    ]
+  },
   "Inews.co.uk": {
     "domain": "inews.co.uk",
     "allow_cookies": 1,
