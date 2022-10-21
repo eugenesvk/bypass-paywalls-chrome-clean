@@ -3585,13 +3585,24 @@ else if (matchDomain('the-american-interest.com')) {
 
 else if (matchDomain('theathletic.com')) {
   if (!window.location.search.match(/(\?|&)amp/)) {
-    let paywall = document.querySelector('meta[content="article"]');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.setTimeout(function () {
-        window.location.href = amphtml.href;
-      }, 1000);
+    let paywall = document.querySelector('div#slideup-paywall');
+    if (paywall) {
+      let overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');
+      removeDOMElement(paywall, ...overlays);
+      let body = document.querySelector('body');
+      if (body) {
+        body.style.overflow = 'visible';
+        body.style.position = 'relative';
+      }
+    } else {
+      let headline_paywall = document.querySelectorAll('a.headline-paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (headline_paywall.length && amphtml) {
+        removeDOMElement(...headline_paywall);
+        window.setTimeout(function () {
+          window.location.href = amphtml.href;
+        }, 1000);
+      }
     }
   } else {
     amp_unhide_subscr_section();
