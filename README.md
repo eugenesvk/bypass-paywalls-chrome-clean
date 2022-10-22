@@ -680,12 +680,6 @@ Grouped in options:\
 [Neue Zürcher Zeitung (+ regional/opt-in to custom sites)](https://www.nzz.ch) -
 [The Market](https://themarket.ch)
 
-#### Africa
-
-###### Kenya
-
-[Daily Nation](https://nation.africa)
-
 #### Australia/New Zealand
 
 [Brisbane Times](https://www.brisbanetimes.com.au) -

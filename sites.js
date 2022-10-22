@@ -337,11 +337,6 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "Daily Nation": {
-    domain: "nation.africa",
-    allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|nation\.africa\/resource\/themes\/nation-.+\/js\/.+\.js)/
-  },
   "De Tijd": {
     domain: "tijd.be",
     referer: "google"
