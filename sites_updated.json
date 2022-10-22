@@ -42,6 +42,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/"
   },
+  "L'Humanité": {
+    "domain": "humanite.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\\/"
+  },
   "The Washington Post": {
     "domain": "washingtonpost.com",
     "allow_cookies": 1,

@@ -1256,6 +1256,19 @@ else if (matchDomain('franc-tireur.fr')) {
   removeDOMElement(paywall);
 }
 
+else if (matchDomain('humanite.fr')) {
+  if (window.location.search.startsWith('?amp')) {
+    let qiota_script = document.querySelector('amp-script[src^="https://www.qiota.com/"]');
+    if (qiota_script) {
+      let amphtml_fill_content = qiota_script.querySelector('div.i-amphtml-fill-content');
+      if (amphtml_fill_content)
+        amphtml_fill_content.removeAttribute('class');
+      let i_amphtml_sizer = qiota_script.querySelector('i-amphtml-sizer');
+      removeDOMElement(i_amphtml_sizer);
+    }
+  }
+}
+
 else if (matchDomain('journaldunet.com')) {
   let reg_wall = document.querySelector('.reg_wall');
   removeDOMElement(reg_wall);
