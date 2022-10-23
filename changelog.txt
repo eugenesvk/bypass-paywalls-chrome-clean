@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Humanite.fr
+Add Philonomist (text)
 Remove Daily Nation (no paywall)
 Fix ABC.es (Sevilla)
 Fix ESPN USA (link to archive.is)

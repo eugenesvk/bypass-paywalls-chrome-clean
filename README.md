@@ -449,6 +449,7 @@ Grouped in options:\
 [Les Inrockuptibles](https://www.lesinrocks.com) -
 [Marianne](https://www.marianne.net) -
 [Paris Match](https://www.parismatch.com) -
+[Philonomist (fr/en)](https://www.philonomist.com) -
 [Science & Vie](https://www.science-et-vie.com) -
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
 [Télérama](https://www.telerama.fr) -

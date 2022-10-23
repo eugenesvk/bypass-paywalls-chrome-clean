@@ -1439,6 +1439,10 @@ var defaultSites = {
     ],
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
+  "Philonomist": {
+    domain: "philonomist.com",
+    allow_cookies: 1
+  },
   "Philosophy Now": {
     domain: "philosophynow.org"
   },
