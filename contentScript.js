@@ -3136,18 +3136,6 @@ else if (matchDomain('marketwatch.com')) {
   removeDOMElement(...ads);
 }
 
-else if (matchDomain('medianama.com')) {
-  window.setTimeout(function () {
-    let modal = document.querySelector('div.modal');
-    removeDOMElement(modal);
-  }, 500);
-  function medianama_height(node) {
-    node.removeAttribute('style');
-  }
-  waitDOMAttribute('div.zox-post-body', 'DIV', 'style', medianama_height, true);
-  csDoneOnce = true;
-}
-
 else if (matchDomain('medscape.com')) {
   let ads = document.querySelectorAll('.AdUnit, [id^="ads-"]');
   removeDOMElement(...ads);

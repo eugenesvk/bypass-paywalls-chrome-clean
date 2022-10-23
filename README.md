@@ -752,7 +752,6 @@ Grouped in options:\
 [India Today](https://www.indiatoday.in) -
 [Live Law](https://www.livelaw.in) -
 [LiveMint](https://www.livemint.com) -
-[MediaNama](https://www.medianama.com) -
 [Mid-Day](https://www.mid-day.com) -
 [Outlook](https://www.outlookindia.com) -
 [Outlook Business](https://www.outlookbusiness.com) -

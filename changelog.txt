@@ -5,6 +5,7 @@ Post-release
 Add Humanite.fr
 Add Philonomist (text)
 Remove Daily Nation (no paywall)
+Remove MediaNama (fix obsolete)
 Fix ABC.es (Sevilla)
 Fix ESPN USA (link to archive.is)
 Fix The Athletic (css)
