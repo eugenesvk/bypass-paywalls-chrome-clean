@@ -1901,6 +1901,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.seattletimes\.com\/wp-content\/.+\/st-(advertising|blocking)-bundle\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "The Scotsman": {
+    domain: "scotsman.com",
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
   "The Spectator (UK)": {
     domain: "spectator.co.uk",
     block_regex: /\.tinypass\.com\//

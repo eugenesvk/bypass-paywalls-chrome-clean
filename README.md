@@ -400,6 +400,7 @@ Grouped in options:\
 [The Irish Times](https://www.irishtimes.com) -
 [The New European](https://www.theneweuropean.co.uk) -
 [The New Statesman](https://www.newstatesman.com) -
+[The Scotsman](https://www.scotsman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
 [The Times (link to archive.today)](https://www.thetimes.co.uk) -

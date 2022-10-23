@@ -1486,7 +1486,7 @@ else if (matchDomain('lesinrocks.com')) {
 }
 
 else if (matchDomain('lexpress.fr')) {
-  let ads = document.querySelectorAll('div.block_pub, div.bottom-bar-full, div.pub_content_display, div.ban-bottom');
+  let ads = document.querySelectorAll('div[class^="block_pub"], div.bottom-bar-full, div.tead, div.ban-bottom');
   removeDOMElement(...ads);
 }
 
@@ -2103,7 +2103,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ie|uk)$/)) {//united kingdom/ireland
+} else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['scotsman.com'])) {//united kingdom/ireland
 
 if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   let flip_pay = document.querySelector('div#flip-pay[style]');
@@ -2142,6 +2142,14 @@ else if (matchDomain('prospectmagazine.co.uk')) {
     let ads = document.querySelectorAll('.ad-banner, .advert');
     removeDOMElement(...ads);
   }, 1000);
+}
+
+else if (matchDomain('scotsman.com')) {
+  let premium = document.querySelector('div.premium.no-entitlement');
+  if (premium)
+    premium.classList.remove('no-entitlement');
+  let ads = document.querySelectorAll('div[class^="MarkupAds__Container-"], div[class^="Dailymotion__Wrapper-"], div.OUTBRAIN');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('spectator.co.uk')) {

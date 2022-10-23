@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Humanite.fr
 Add Philonomist (text)
+Add The Scotsman
 Remove Daily Nation (no paywall)
 Remove MediaNama (fix obsolete)
 Fix ABC.es (Sevilla)

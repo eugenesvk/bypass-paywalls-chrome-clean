@@ -521,6 +521,7 @@
     "*://*.sciencesetavenir.fr/*",
     "*://*.scientificamerican.com/*",
     "*://*.scmp.com/*",
+    "*://*.scotsman.com/*",
     "*://*.sdbj.com/*",
     "*://*.seattletimes.com/*",
     "*://*.seekingalpha.com/*",
@@ -720,5 +721,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.8.9.5"
+  "version": "2.8.9.6"
 }

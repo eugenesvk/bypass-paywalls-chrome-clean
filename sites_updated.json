@@ -47,6 +47,16 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com\\/"
   },
+  "The Scotsman": {
+    "domain": "scotsman.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": [{
+        "cond": "div.premium.no-entitlement",
+        "rm_class": "no-entitlement"
+      }
+    ]
+  },
   "The Washington Post": {
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
