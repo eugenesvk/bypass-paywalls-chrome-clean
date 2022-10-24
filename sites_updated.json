@@ -9,6 +9,11 @@
     "block_regex": "(\\.tinypass\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/(fence\\/plug-client|javelin\\/.+\\/transporter)\\/)",
     "remove_cookies_select_drop": ["gatehouse_id"]
   },
+  "Dn.no": {
+    "domain": "dn.no",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Grupo Vocento": {
     "domain": "###_es_grupo_vocento",
     "group": [

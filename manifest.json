@@ -183,6 +183,7 @@
     "*://*.diariovasco.com/*",
     "*://*.digiday.com/*",
     "*://*.discovermagazine.com/*",
+    "*://*.dn.no/*",
     "*://*.dna.fr/*",
     "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
@@ -219,6 +220,7 @@
     "*://*.estrepublicain.fr/*",
     "*://*.euobserver.com/*",
     "*://*.eurekareport.com.au/*",
+    "*://*.europower-energi.no/*",
     "*://*.exame.com/*",
     "*://*.examiner.com.au/*",
     "*://*.expansion.com/*",
@@ -230,6 +232,7 @@
     "*://*.financialexpress.com/*",
     "*://*.financialpost.com/*",
     "*://*.firstthings.com/*",
+    "*://*.fiskeribladet.no/*",
     "*://*.fnlondon.com/*",
     "*://*.forbes.com/*",
     "*://*.foreignaffairs.com/*",
@@ -307,6 +310,7 @@
     "*://*.intelligentinvestor.com.au/*",
     "*://*.internazionale.it/*",
     "*://*.intrafish.com/*",
+    "*://*.intrafish.no/*",
     "*://*.investorschronicle.co.uk/*",
     "*://*.ipolitics.ca/*",
     "*://*.irishtimes.com/*",
@@ -722,5 +726,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.0.1"
+  "version": "2.9.0.2"
 }

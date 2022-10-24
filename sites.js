@@ -1334,13 +1334,17 @@ var defaultSites = {
   "NHST Media Group": {
     domain: "###_no_nhst_media",
     group: [
+      "dn.no",
+      "europower-energi.no",
+      "fiskeribladet.no",
       "intrafish.com",
+      "intrafish.no",
       "rechargenews.com",
       "tradewindsnews.com",
       "upstreamonline.com"
     ],
     allow_cookies: 1,
-    referer: "facebook"
+    useragent: "googlebot"
   },
   "Nikkei Asian Review (do not block Piano.io-script externally)": {
     domain: "asia.nikkei.com",

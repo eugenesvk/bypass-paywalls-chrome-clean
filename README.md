@@ -125,12 +125,6 @@ Grouped in options:\
 [Crain's New York Business](https://www.crainsnewyork.com) -
 [Modern Healthcare](https://www.modernhealthcare.com)
 
-*NHST Media Group* sites like\
-[Intrafish](https://www.intrafish.com) -
-[Recharge](https://www.rechargenews.com) -
-[TradeWinds](https://www.tradewindsnews.com) -
-[Upstream](https://www.upstreamonline.com)
-
 *[PEI Media](https://www.thisispei.com)* sites (opt-in to custom sites)
 
 ##### Tech/Science
@@ -622,6 +616,18 @@ Grouped in options:\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)
+
+#### Norway
+Grouped in options:\
+*NHST Media Group* sites like\
+[DN](https://www.dn.no) -
+[Europower](https://www.europower-energi.no) -
+[Fiskeribladet](https://www.fiskeribladet.no) -
+[Intrafish](https://www.intrafish.com) -
+[Intrafish.no](https://www.intrafish.no) -
+[Recharge](https://www.rechargenews.com) -
+[TradeWinds](https://www.tradewindsnews.com) -
+[Upstream](https://www.upstreamonline.com)
 
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
