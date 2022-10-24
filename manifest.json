@@ -726,5 +726,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.0.2"
+  "version": "2.9.0.3"
 }

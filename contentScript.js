@@ -2480,11 +2480,15 @@ else if (matchDomain('asiatimes.com')) {
 }
 
 else if (matchDomain('axios.com')) {
-  let banners = document.querySelectorAll('div[data-vars-experiment="pro-paywall"], div[class^="Modal_paywallContainer"], .apexAd');
+  function axios_noscroll(node) {
+    node.removeAttribute('style');
+    let overlay = document.querySelector('div[class^="Modal_paywallContainer"]');
+    hideDOMElement(overlay);
+  }
+  waitDOMAttribute('html', 'HTML', 'style', axios_noscroll, true);
+  let banners = document.querySelectorAll('div[data-vars-experiment="pro-paywall"], .apexAd');
   hideDOMElement(...banners);
-  let overlay = document.querySelector('html[style]');
-  if (overlay)
-    overlay.removeAttribute('style');
+  csDoneOnce = true;
 }
 
 else if (matchDomain('barrons.com')) {
