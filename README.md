@@ -393,6 +393,7 @@ Grouped in options:\
 [New Left Review](https://newleftreview.org) -
 [Private Equity News](https://www.penews.com) -
 [Prospect Magazine](https://www.prospectmagazine.co.uk) -
+[Tes Magazine](https://www.tes.com/magazine) -
 [The Banker](https://www.thebanker.com) -
 [The Critic](https://thecritic.co.uk) -
 [The Economist](https://www.economist.com) -

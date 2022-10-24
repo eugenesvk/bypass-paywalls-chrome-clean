@@ -567,6 +567,7 @@
     "*://*.telegraph.co.uk/*",
     "*://*.telerama.fr/*",
     "*://*.tennessean.com/*",
+    "*://*.tes.com/*",
     "*://*.the-american-interest.com/*",
     "*://*.the-tls.co.uk/*",
     "*://*.theadvocate.com.au/*",
@@ -721,5 +722,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.0.0"
+  "version": "2.9.0.1"
 }

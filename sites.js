@@ -1628,7 +1628,7 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
-  "Substack": {
+  "Substack (paywall-content only)": {
     domain: "substack.com",
     useragent: "googlebot"
   },
@@ -1657,6 +1657,10 @@ var defaultSites = {
     domain: "telerama.fr",
     allow_cookies: 1,
     useragent: "googlebot"
+  },
+  "Tes Magazine": {
+    domain: "tes.com",
+    remove_cookies_select_drop: ["tg_paywall"]
   },
   "The (New Orleans) Advocate": {
     domain: "###_usa_theadvocate",

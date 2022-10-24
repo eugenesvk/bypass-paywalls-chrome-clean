@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Tes Magazine
 
 * v2.9.0.0 (2022-10-23)
 Add Humanite.fr

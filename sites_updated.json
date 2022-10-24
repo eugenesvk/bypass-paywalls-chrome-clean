@@ -47,6 +47,16 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com\\/"
   },
+  "Tes Magazine": {
+    "domain": "tes.com",
+    "remove_cookies_select_drop": ["tg_paywall"],
+    "cs_code": [{
+        "cond": "div.js-paywall-info",
+        "rm_elem": 1
+      }
+    ],
+    "new_site": 1
+  },
   "The Scotsman": {
     "domain": "scotsman.com",
     "allow_cookies": 1,
@@ -55,7 +65,8 @@
         "cond": "div.premium.no-entitlement",
         "rm_class": "no-entitlement"
       }
-    ]
+    ],
+    "new_site": 1
   },
   "The Washington Post": {
     "domain": "washingtonpost.com",
