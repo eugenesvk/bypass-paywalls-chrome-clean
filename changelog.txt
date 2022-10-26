@@ -6,6 +6,7 @@ Add 4 more NHST Media Group sites
 Add Citywire
 Add Tes Magazine
 Fix Axios (overlay)
+Fix Knack.be, LeVif.be & Kw.be (overlay)
 
 * v2.9.0.0 (2022-10-23)
 Add Humanite.fr

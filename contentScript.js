@@ -1888,11 +1888,14 @@ else if (matchDomain(['knack.be', 'kw.be', 'levif.be'])) {
   let paywall = document.querySelector('div[id*="wall-modal"]');
   if (paywall) {
     removeDOMElement(paywall);
+    let html = document.querySelector('html[class]');
+    if (html)
+      html.removeAttribute('class');
     function knack_noscroll(node) {
       node.removeAttribute('style');
       node.removeAttribute('class');
     }
-    waitDOMAttribute('html', 'html', 'style', knack_noscroll, true);
+    waitDOMAttribute('html', 'html', 'class', knack_noscroll, true);
     let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
     removeDOMElement(...intro);
   }
