@@ -377,6 +377,7 @@ Grouped in options:\
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Business Post](https://www.businesspost.ie) -
+[Citywire](https://www.citywire.com) -
 [Evening Standard](https://www.standard.co.uk) -
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
@@ -617,7 +618,7 @@ Grouped in options:\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)
 
-#### Norway
+##### Norway
 Grouped in options:\
 *NHST Media Group* sites like\
 [DN](https://www.dn.no) -
@@ -690,7 +691,7 @@ Grouped in options:\
 [Neue Zürcher Zeitung (+ regional/opt-in to custom sites)](https://www.nzz.ch) -
 [The Market](https://themarket.ch)
 
-#### Australia/New Zealand
+##### Australia/New Zealand
 
 [Brisbane Times](https://www.brisbanetimes.com.au) -
 [Eureka Report](https://www.eurekareport.com.au) -
@@ -737,7 +738,7 @@ Grouped in options:\
 [The Standard](https://www.standard.net.au) -
 [Western Advocate](https://www.westernadvocate.com.au)
 
-#### East Asia
+##### East Asia
 [Asia Times](https://asiatimes.com) -
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -
 [Harvard Business Review China](https://www.hbrchina.org) -
@@ -752,7 +753,7 @@ Grouped in options:\
 [The Japan Times](https://www.japantimes.co.jp) -
 [The Star Malaysia](https://www.thestar.com.my)
 
-#### India
+##### India
 [BQ Prime](https://www.bqprime.com) -
 [Business Standard](https://www.business-standard.com) -
 [Hindustan Times](https://www.hindustantimes.com) -
@@ -770,7 +771,7 @@ Grouped in options:\
 [The Indian Express](https://indianexpress.com) -
 [Times of India](https://timesofindia.indiatimes.com)
 
-#### Israel
+##### Israel
 [Globes](https://www.globes.co.il) -
 [Haaretz.co.il](https://www.haaretz.co.il) -
 [Haaretz.com](https://www.haaretz.com) -

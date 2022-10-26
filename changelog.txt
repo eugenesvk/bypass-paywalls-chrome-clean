@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add 4 more NHST Media Group sites
+Add Citywire
 Add Tes Magazine
 Fix Axios (overlay)
 

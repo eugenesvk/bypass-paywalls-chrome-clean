@@ -140,6 +140,7 @@
     "*://*.chronicle.com/*",
     "*://*.cicero.de/*",
     "*://*.cincinnati.com/*",
+    "*://*.citywire.com/*",
     "*://*.clarin.com/*",
     "*://*.cleaneatingmag.com/*",
     "*://*.cleveland.com/*",
@@ -726,5 +727,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.0.3"
+  "version": "2.9.0.4"
 }

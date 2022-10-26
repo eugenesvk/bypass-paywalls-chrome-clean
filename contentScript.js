@@ -2103,12 +2103,29 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['scotsman.com', 'tes.com'])) {//united kingdom/ireland
+} else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['citywire.com', 'ft.com', 'scotsman.com', 'tes.com'])) {//united kingdom/ireland
 
 if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   let flip_pay = document.querySelector('div#flip-pay[style]');
   if (flip_pay)
     flip_pay.removeAttribute('style');
+}
+
+else if (matchDomain('citywire.com')) {
+  removeClassesList(['article-locked', 'm-article--locked', 'm-media-container--locked', 'm-article__body--locked']);
+  let banners = document.querySelectorAll('registration-widget, div.alert--locked');
+  removeDOMElement(...banners);
+}
+
+else if (matchDomain('ft.com')) {
+  if (window.location.hostname.startsWith('amp.')) {
+    amp_unhide_subscr_section('.ad-container, amp-ad');
+  } else {
+    let cookie_banner = document.querySelector('.o-cookie-message');
+    let ribbon = document.querySelector('.js-article-ribbon');
+    let ads = document.querySelector('.o-ads');
+    removeDOMElement(cookie_banner, ribbon, ads);
+  }
 }
 
 else if (matchDomain('independent.co.uk')) {
@@ -2891,17 +2908,6 @@ else if (matchDomain('fortune.com')) {
   } else {
     if (paywall)
       paywall.removeAttribute('class');
-  }
-}
-
-else if (matchDomain('ft.com')) {
-  if (window.location.hostname.startsWith('amp.')) {
-    amp_unhide_subscr_section('.ad-container, amp-ad');
-  } else {
-    let cookie_banner = document.querySelector('.o-cookie-message');
-    let ribbon = document.querySelector('.js-article-ribbon');
-    let ads = document.querySelector('.o-ads');
-    removeDOMElement(cookie_banner, ribbon, ads);
   }
 }
 
@@ -4207,6 +4213,14 @@ function removeClassesByPrefix(el, prefix) {
   for (let el_class of el_classes) {
     if (el_class.startsWith(prefix))
       el_classes.remove(el_class);
+  }
+}
+
+function removeClassesList(list) {
+  for (let class_item of list) {
+    let elems = document.querySelectorAll('.' + class_item);
+    for (let elem of elems)
+      elem.classList.remove(class_item);
   }
 }
 

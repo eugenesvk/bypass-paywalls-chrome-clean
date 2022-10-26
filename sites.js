@@ -267,6 +267,10 @@ var defaultSites = {
     domain: "cicero.de",
     allow_cookies: 1
   },
+  "Citywire": {
+    domain: "citywire.com",
+    allow_cookies: 1
+  },
   "Clarín": {
     domain: "clarin.com",
     allow_cookies: 1,
@@ -1217,7 +1221,7 @@ var defaultSites = {
       "twincities.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader-wp\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Medium (free articles only)": {
     domain: "medium.com",
