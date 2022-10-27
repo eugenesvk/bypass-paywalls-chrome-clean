@@ -659,13 +659,14 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   ['blocking', 'responseHeaders']);
 
 // block inline script
-var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*", "*://*.theglobeandmail.com/*/article-*"];
+var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*", "*://*.rugbypass.com/*", "*://*.theglobeandmail.com/*/article-*"];
 if (block_js_inline.length) 
 ext_api.webRequest.onHeadersReceived.addListener(function (details) {
   let url_path = details.url.split('?')[0];
   let excluded = (matchUrlDomain('crusoe.uol.com.br', details.url) && (optin_setcookie || !url_path.match(/\.br\/(diario|edicoes)\/.+/)))
   || (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
   || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/))
+  || (matchUrlDomain('rugbypass.com', details.url) && !details.url.includes('.com/plus/'))
   || (matchUrlDomain('theglobeandmail.com', details.url) && !details.url.includes('?rel=premium'));
   if (!isSiteEnabled(details) || excluded)
     return;
