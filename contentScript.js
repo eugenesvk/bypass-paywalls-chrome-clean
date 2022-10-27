@@ -724,6 +724,17 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
+else if (matchDomain('tagesspiegel.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.article--paid > div.Mb8');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article--paid');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+}
+
 else if (matchDomain(de_westfalen_medien_domains)) {
   let url = window.location.href;
   if (url.includes('/amp/')) {

@@ -399,7 +399,7 @@ Grouped in options:\
 [The Scotsman](https://www.scotsman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
-[The Times (link to archive.today)](https://www.thetimes.co.uk) -
+[The Times (link to archive.is)](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk) -
 [UnHerd](https://unherd.com)
 
@@ -502,7 +502,8 @@ Grouped in options:\
 [Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Cicero](https://www.cicero.de) -
-[Der Spiegel (link to archive.today)](https://www.spiegel.de) -
+[Der Spiegel (link to archive.is)](https://www.spiegel.de) -
+[Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -

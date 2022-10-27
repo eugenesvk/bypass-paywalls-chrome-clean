@@ -240,7 +240,7 @@
   },
   "Theepochtimes.com": {
     "allow_cookies": 1,
-    "block_regex": "subs\\.youmaker\\.com",
+    "block_regex": "subs\\.theepochtimes\\.com\\/lib\\/api\\.bundle\\.js",
     "domain": "theepochtimes.com"
   },
   "Thefashionlaw.com": {
