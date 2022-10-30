@@ -1277,6 +1277,9 @@ else if (matchDomain('humanite.fr')) {
       let i_amphtml_sizer = qiota_script.querySelector('i-amphtml-sizer');
       removeDOMElement(i_amphtml_sizer);
     }
+  } else {
+    let banner = document.querySelector('div.qiota');
+    removeDOMElement(banner);
   }
 }
 

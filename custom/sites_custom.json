@@ -40,6 +40,11 @@
     "domain": "christianitytoday.com",
     "useragent": "googlebot"
   },
+  "Columbian.com": {
+    "allow_cookies": 1,
+    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "domain": "columbian.com"
+  },
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
@@ -122,6 +127,11 @@
     "allow_cookies": 1,
     "domain": "internationaltaxreview.com",
     "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
+  },
+  "Irishexaminer.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage\\/",
+    "domain": "irishexaminer.com"
   },
   "Kaleva.fi": {
     "allow_cookies": 1,

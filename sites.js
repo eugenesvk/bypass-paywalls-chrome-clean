@@ -1390,6 +1390,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Outdoor Life": {
+    domain: "outdoorlife.com",
+    allow_cookies: 1,
+    block_regex: /js\.pelcro\.com\//
+  },
   "Outlook Business": {
     domain: "outlookbusiness.com",
     allow_cookies: 1
@@ -1644,7 +1649,7 @@ var defaultSites = {
     domain: "substack.com",
     useragent: "googlebot"
   },
-  "Substack custom domains (opt-in to custom sites)": {
+  "Substack custom domains (paywall-content only; opt-in to custom sites)": {
     domain: "###_substack_custom"
   },
   "Suomen Sotilas": {

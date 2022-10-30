@@ -471,6 +471,7 @@
     "*://*.orlandosentinel.com/*",
     "*://*.ostsee-zeitung.de/*",
     "*://*.otz.de/*",
+    "*://*.outdoorlife.com/*",
     "*://*.outlookbusiness.com/*",
     "*://*.outlookindia.com/*",
     "*://*.outsideonline.com/*",
@@ -728,5 +729,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.0.6"
+  "version": "2.9.0.7"
 }

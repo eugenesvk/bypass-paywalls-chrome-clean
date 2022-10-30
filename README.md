@@ -6,12 +6,12 @@ Weekly updates are released for fixes and new sites.
 
 * [Installation](#installation)
 * [Update](#update)
+* [Troubleshooting](#troubleshooting)
 * [List of supported websites](#list-of-supported-websites)
 * [Sites with limited number of free articles](#sites-with-limited-number-of-free-articles)
 * [New site requests](#new-site-requests)
 * [Add custom site](#add-custom-site)
 * [Add excluded site](#add-excluded-site)
-* [Troubleshooting](#troubleshooting)
 * [Changelog-releases](#changelog-releases)
 * [License](#license)
 * [Disclaimer](#disclaimer)
@@ -55,10 +55,16 @@ Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-ch
 #### iOS/iPadOS
 Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
 
-#### Notes
-* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin).
-* You will be logged out for most of the sites you have checked.
+### Troubleshooting
+* If a site doesn't work, first try to turn off your adblocker (or other extension) and refresh page.
+* Make sure the (new) site is checked under Options.
+* Clear cookies by add-on's icon and grant permission for site (or opt-in to custom sites)
+* You will be logged out for most of the sites you have enabled.
+* Make sure you're running the latest version of Bypass Paywalls Clean.
 * Some sites need to redirect to an amp-page (add an exception in your `Redirect AMP to HTML` or `DuckDuckGo Privacy Essentials` add-on).
+* If none of these work, you can [submit an issue](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues).
+* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin).
+* If you live in the EU, also consider adding these filters to your adblocker (in order to remove cookie warnings): [Easylist Cookies](https://secure.fanboy.co.nz/fanboy-cookiemonster.txt) | [I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp). Some sites need to set a consent-cookie for (social) media.
 
 ### List of supported websites
 
@@ -180,6 +186,7 @@ Grouped in options:\
 [ESPN USA](https://www.espn.com) -
 [First Things](https://www.firstthings.com) -
 [National Review](https://www.nationalreview.com) -
+[Outdoor Life](https://www.outdoorlife.com) -
 [Puck.news](https://puck.news) -
 [RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -
@@ -849,15 +856,6 @@ Then you need to install the 'custom' add-on version (with access to all sites):
 ### Add excluded site
 Add excluded sites/domains (for your subscriptions).\
 You can also exclude a specific domain which is grouped in options.
-
-### Troubleshooting
-* This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin).
-* If a site doesn't work, try turning off uBlock and refreshing.
-* Make sure the (new) site is checked under Options.
-* You will be logged out for most of the sites you have checked.
-* Make sure you're running the latest version of Bypass Paywalls Clean.
-* If none of these work, you can [submit an issue](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues).
-* If you live in the EU, also consider adding these filters to your adblocker (in order to remove cookie warnings): [Easylist Cookies](https://easylist-downloads.adblockplus.org/easylist-cookie.txt) | [I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp). Some sites need to set a consent-cookie for (social) media.
 
 ### Changelog-releases
 * Visit the [changelog page](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/changelog.txt).

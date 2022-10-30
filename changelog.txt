@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add 4 more NHST Media Group sites
 Add Citywire
+Add Outdoor Life
 Add Tagesspiegel.de (link to archive.is)
 Add Tes Magazine
 Fix Axios (overlay)

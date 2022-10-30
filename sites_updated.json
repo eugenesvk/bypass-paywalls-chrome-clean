@@ -37,6 +37,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com\\/"
   },
+  "Outdoor Life": {
+    "domain": "outdoorlife.com",
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com\\/"
+  },
   "Tes Magazine": {
     "domain": "tes.com",
     "remove_cookies_select_drop": ["tg_paywall"],
