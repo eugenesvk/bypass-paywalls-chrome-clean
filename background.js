@@ -719,7 +719,7 @@ function disableJavascriptOnListedSites() {
   ext_api.webRequest.onBeforeRequest.addListener(function (details) {
     let header_referer = details.originUrl ? details.originUrl : details.initiator;
     if (!(isSiteEnabled(details)
-         || (['script'].includes(details.type)
+         || (['script', 'xmlhttprequest'].includes(details.type)
            && ((enabledSites.includes('###_wp_evolok') && details.url.match(/\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/))
              || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
              || (enabledSites.includes('zephr.com') && details.url.includes('/zephr/features')))))

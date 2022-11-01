@@ -184,6 +184,11 @@
     "amp_redirect": "div[id^=\"media_paywall\"]",
     "domain": "nv.ua"
   },
+  "Nysun.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.nysun\\.com\\/zephr\\/features",
+    "domain": "nysun.com"
+  },
   "Odt.co.nz": {
     "allow_cookies": 1,
     "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/scripts\\/tw\\.js",
@@ -292,4 +297,3 @@
     "domain": "washingtontimes.com"
   }
 }
-

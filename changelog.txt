@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Update block general paywall script (fix Zephr-local)
 
 * v2.9.1.0 (2022-10-30)
 Add 4 more NHST Media Group sites
