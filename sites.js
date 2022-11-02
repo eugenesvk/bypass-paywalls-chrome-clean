@@ -1129,7 +1129,7 @@ var defaultSites = {
   "LiveMint": {
     domain: "livemint.com",
     allow_cookies: 1,
-    block_regex: /(\.livemint\.com\/__js\/lm_subscription_.+\.js|\.piano\.io\/api\/tinypass\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.livemint\.com\/__js\/lm_subscription|\.piano\.io\/api\/tinypass\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Loeb Classical Library": {
     domain: "loebclassics.com"
@@ -1225,7 +1225,7 @@ var defaultSites = {
       "twincities.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\.com\/.+\/loader-wp\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\/loader-wp\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Mediapart.fr": {
     domain: "mediapart.fr",
@@ -1835,7 +1835,7 @@ var defaultSites = {
   "The Indian Express": {
     domain: "indianexpress.com",
     allow_cookies: 1,
-    block_regex: /(\/indianexpress\.com\/.+\/indianexpress\/js\/(evolok\/.+|min\/premiumContent)\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\/indianexpress\.com\/.+\/(evolok\/.+|premiumContent)\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Intercept": {
     domain: "theintercept.com",
@@ -2050,7 +2050,7 @@ var defaultSites = {
   "UOL.com.br": {
     domain: "uol.com.br",
     allow_cookies: 1,
-    block_regex: /(\.folha\.uol\.com\.br\/paywall\/js\/|paywall\.folha\.uol\.com\.br\/|\.tinypass\.com|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    block_regex: /(paywall\.folha\.uol\.com\.br\/|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
   "USA Today": {
@@ -2121,70 +2121,115 @@ var defaultSites = {
     domain: "###"
   },
   "Amp-access": {
-    domain: "cdn.ampproject.org"
+    domain: "cdn.ampproject.org",
+    allow_cookies: 1,
+    block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
+    excluded_domains: ["cambridge.org"]
   },
   "AzureEdge": {
-    domain: "loader-cdn.azureedge.net"
+    domain: "loader-cdn.azureedge.net",
+    allow_cookies: 1,
+    block_regex_general: /loader-cdn\.azureedge\.net\//
   },
   "BlueConic": {
-    domain: "blueconic.net"
+    domain: "blueconic.net",
+    allow_cookies: 1,
+    block_regex_general: /\.blueconic\.net\//
   },
   "Cxense": {
-    domain: "cxense.com"
+    domain: "cxense.com",
+    allow_cookies: 1,
+    block_regex_general: /cdn\.cxense\.com\//
   },
   "Ensighten": {
-    domain: "ensighten.com"
+    domain: "ensighten.com",
+    allow_cookies: 1,
+    block_regex_general: /\.ensighten\.com\/.+\/Bootstrap\.js/
   },
   "Evolok": {
-    domain: "evolok.net"
+    domain: "evolok.net",
+    allow_cookies: 1,
+    block_regex_general: /\.evolok\.net\//
   },
   "Evolok WordPress": {
-    domain: "###_wp_evolok"
+    domain: "###_wp_evolok",
+    allow_cookies: 1,
+    block_regex_general: /\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/
   },
   "Leaky Paywall (WordPress plugin)": {
-    domain: "###_wp_leaky_paywall"
+    domain: "###_wp_leaky_paywall",
+    allow_cookies: 1,
   },
   "MatherAnalytics": {
-    domain: "matheranalytics.com"
+    domain: "matheranalytics.com",
+    allow_cookies: 1,
+    block_regex_general: /js\.matheranalytics.com\//
   },
   "NewsMemory": {
-    domain: "newsmemory.com"
+    domain: "newsmemory.com",
+    allow_cookies: 1,
+    block_regex_general: /\.newsmemory\.com\/\?meter/
   },
   "Omeda Olytics": {
-    domain: "omeda.com"
+    domain: "omeda.com",
+    allow_cookies: 1,
+    block_regex_general: /olytics\.omeda\.com\//
   },
   "OneCount": {
-    domain: "onecount.net"
+    domain: "onecount.net",
+    allow_cookies: 1,
+    block_regex_general: /\.onecount\.net\//
   },
   "Pelcro": {
-    domain: "pelcro.com"
+    domain: "pelcro.com",
+    allow_cookies: 1,
+    block_regex_general: /js\.pelcro\.com\//
   },
   "Piano.io": {
-    domain: "piano.io"
+    domain: "piano.io",
+    allow_cookies: 1,
+    block_regex_general: /\.piano\.io\//,
+    excluded_domains: ["asia.nikkei.com", "businesspost.ie", "japantimes.co.jp"]
   },
   "Pico.tools": {
-    domain: "pico.tools"
+    domain: "pico.tools",
+    allow_cookies: 1,
+    block_regex_general: /api\.pico.tools\//
   },
   "Pigeon (WordPress plugin)": {
-    domain: "###_wp_pigeon"
+    domain: "###_wp_pigeon",
+    allow_cookies: 1,
+    block_regex_general: /\/c\/assets\/pigeon\.js/
   },
   "Poool.fr": {
-    domain: "poool.fr"
+    domain: "poool.fr",
+    allow_cookies: 1,
+    block_regex_general: /\.blueconic\.net\//
   },
   "Qiota": {
-    domain: "qiota.com"
+    domain: "qiota.com",
+    allow_cookies: 1,
+    block_regex_general: /\.qiota\.com\//
   },
   "TinyPass": {
-    domain: "tinypass.com"
+    domain: "tinypass.com",
+    allow_cookies: 1,
+    block_regex_general: /cdn\.tinypass\.com\//
   },
   "TribDss": {
-    domain: "tribdss.com"
+    domain: "tribdss.com",
+    allow_cookies: 1,
+    block_regex_general: /\.tribdss\.com\//
   },
   "Weborama.fr": {
-    domain: "weborama.fr"
+    domain: "weborama.fr",
+    allow_cookies: 1,
+    block_regex_general: /\.weborama\.fr\//
   },
   "Zephr": {
-    domain: "zephr.com"
+    domain: "zephr.com",
+    allow_cookies: 1,
+    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/features)/
   },
   "* BPC settings": {
     domain: "###"

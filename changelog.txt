@@ -3,7 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Mediapart.fr
-Update block general paywall script (fix Zephr-local)
+Update block general paywall script (fix Zephr-local & config sites.js)
 
 * v2.9.1.0 (2022-10-30)
 Add 4 more NHST Media Group sites

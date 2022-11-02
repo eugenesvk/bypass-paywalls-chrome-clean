@@ -65,6 +65,8 @@ var change_headers;
 
 // block paywall-scripts individually
 var blockedRegexes = {};
+var blockedRegexesDomains = [];
+var blockedRegexesGeneral = {};
 
 // unhide text on amp-page
 var amp_unhide;
@@ -101,6 +103,8 @@ function initSetRules() {
   block_js_custom = [];
   block_js_custom_ext = [];
   blockedRegexes = {};
+  blockedRegexesDomains = [];
+  blockedRegexesGeneral = {};
   init_custom_domains();
 }
 
@@ -236,6 +240,11 @@ function set_rules(sites, sites_updated, sites_custom) {
             }
           }
         }
+        if (rule.hasOwnProperty('block_regex_general')) {
+          if (rule.block_regex_general instanceof RegExp)
+            blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
+          blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
+        }
         if (rule.useragent) {
           switch (rule.useragent) {
           case 'googlebot':
@@ -294,9 +303,9 @@ function set_rules(sites, sites_updated, sites_custom) {
       }
     }
   }
+  blockedRegexesDomains = Object.keys(blockedRegexes);
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
-  disableJavascriptOnListedSites();
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -481,9 +490,6 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     if (key === 'optInUpdate') {
       optin_update = storageChange.newValue;
     }
-    // reset disableJavascriptOnListedSites eventListener
-    ext_api.webRequest.onBeforeRequest.removeListener(disableJavascriptOnListedSites);
-    ext_api.webRequest.handlerBehaviorChanged();
 
     // Refresh the current tab
     refreshCurrentTab();
@@ -684,58 +690,6 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 },
   ['blocking', 'responseHeaders']);
 
-var block_js = [
-  "*://*.blueconic.net/*",
-  "*://*.cxense.com/*",
-  "*://*.ensighten.com/*/Bootstrap.js*",
-  "*://*.evolok.net/*",
-  "*://*.newsmemory.com/?meter*",
-  "*://*.onecount.net/*",
-  "*://*.piano.io/*",
-  "*://*.poool.fr/*",
-  "*://*.qiota.com/*",
-  "*://*.tribdss.com/*",
-  "*://*.weborama.fr/*",
-  "*://*.zephr.com/zephr-browser/*",
-  "*://*/*/ev-widgets.min.js*",
-  "*://*/c/assets/pigeon.js*",
-  "*://*/wp-content/*/ev-em.min.js*",
-  "*://*/zephr/features*",
-  "*://api.pico.tools/*",
-  "*://cdn.ampproject.org/v*/amp-access-*.*js",
-  "*://cdn.ampproject.org/v*/amp-subscriptions-*.*js",
-  "*://cdn.ampproject.org/v*/amp*-ad-*.*js",
-  "*://cdn.ampproject.org/v*/amp-analytics-*.*js",
-  "*://cdn.ampproject.org/v*/amp-fx-flying-carpet-*.*js",
-  "*://cdn.tinypass.com/*",
-  "*://js.matheranalytics.com/*",
-  "*://js.pelcro.com/*",
-  "*://loader-cdn.azureedge.net/prod/*/loader.min.js*",
-  "*://olytics.omeda.com/*",
-];
-
-// Disable javascript for these sites/general paywall-scripts
-function disableJavascriptOnListedSites() {
-  ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-    let header_referer = details.originUrl ? details.originUrl : details.initiator;
-    if (!(isSiteEnabled(details)
-         || (['script', 'xmlhttprequest'].includes(details.type)
-           && ((enabledSites.includes('###_wp_evolok') && details.url.match(/\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/))
-             || (enabledSites.includes('###_wp_pigeon') && details.url.includes('/c/assets/pigeon.js'))
-             || (enabledSites.includes('zephr.com') && details.url.includes('/zephr/features')))))
-       || matchUrlDomain(excludedSites.concat(disabledSites, ['asia.nikkei.com', 'businesspost.ie', 'cambridge.org', 'japantimes.co.jp']), header_referer)) {
-      return;
-    }
-    return {
-      cancel: true
-    };
-  }, {
-    urls: block_js,
-    types: ["script", "xmlhttprequest"]
-  },
-    ["blocking"]);
-}
-
 if (typeof browser !== 'object') {
 var focus_changed = false;
 ext_api.windows.onFocusChanged.addListener((windowId) => {
@@ -792,6 +746,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
         custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
       blockedRegexes[custom_domain] = custom_block_regex;
+      blockedRegexesDomains = Object.keys(blockedRegexes);
     }
     if (custom_useragent) {
       if (custom_useragent === 'googlebot') {
@@ -956,16 +911,26 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   } // not in excludedSites
 
   // block external javascript for custom sites (optional)
-  var domain_blockjs_ext = matchUrlDomain(block_js_custom_ext, header_referer);
-  if (domain_blockjs_ext && !matchUrlDomain(domain_blockjs_ext, details.url) && details.type === 'script' && isSiteEnabled({url: header_referer})) {
-    return { cancel: true };
+  if (['script'].includes(details.type)) {
+    let domain_blockjs_ext = matchUrlDomain(block_js_custom_ext, header_referer);
+    if (domain_blockjs_ext && !matchUrlDomain(domain_blockjs_ext, details.url) && isSiteEnabled({url: header_referer}))
+      return { cancel: true };
   }
 
   // check for blocked regular expression: domain enabled, match regex, block on an internal or external regex
-  var blockedDomains = Object.keys(blockedRegexes);
-  var domain = matchUrlDomain(blockedDomains, header_referer);
-  if (domain && details.url.match(blockedRegexes[domain]) && isSiteEnabled({url: header_referer}))
-    return { cancel: true };
+  if (['script', 'xmlhttprequest'].includes(details.type)) {
+    let domain = matchUrlDomain(blockedRegexesDomains, header_referer);
+    if (domain && details.url.match(blockedRegexes[domain]) && isSiteEnabled({url: header_referer}))
+      return { cancel: true };
+  }
+
+  // block general paywall scripts
+  if (['script', 'xmlhttprequest'].includes(details.type)) {
+    for (let domain in blockedRegexesGeneral) {
+      if (details.url.match(blockedRegexesGeneral[domain].block_regex) && !(matchUrlDomain(excludedSites.concat(blockedRegexesGeneral[domain].excluded_domains), header_referer)))
+        return { cancel: true };
+    }
+  }
 
   // load toggleIcon.js (icon for dark or incognito mode in Chrome))
   if (typeof browser !== 'object' && ['main_frame', 'xmlhttprequest'].includes(details.type)) {
