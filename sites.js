@@ -425,6 +425,7 @@ var defaultSites = {
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
+    block_js_inline: /\.elpais\.com\/.+\.html/,
     block_regex: /(\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "El Periódico (de Catalunya)": {
@@ -1052,7 +1053,8 @@ var defaultSites = {
   },
   "La Voz del Interior": {
     domain: "lavoz.com.ar",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_js_inline: /\.lavoz\.com\.ar/
   },
   "Law.com (free articles only)": {
     domain: "law.com",
@@ -1289,7 +1291,8 @@ var defaultSites = {
   },
   "Nautilus": {
     domain: "nautil.us",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_js_inline: /\/nautil\.us\/((\w)+(\-)+){3,}/
   },
   "Neue Osnabrücker Zeitung": {
     domain: "noz.de",
@@ -1554,6 +1557,7 @@ var defaultSites = {
   "RugbyPass": {
     domain: "rugbypass.com",
     allow_cookies: 1,
+    block_js_inline: /\.rugbypass\.com\/plus\//,
     block_regex: /\.tinypass\.com\//
   },
   "S&P Global": {
@@ -1804,6 +1808,7 @@ var defaultSites = {
   },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
+    block_js_inline: /\.theglobeandmail\.com\/.+\/article-.+\?rel=premium/,
     block_regex: /smartwall\.theglobeandmail\.com\//
   },
   "The Hill": {
@@ -2050,6 +2055,7 @@ var defaultSites = {
   "UOL.com.br": {
     domain: "uol.com.br",
     allow_cookies: 1,
+    block_js_inline: /crusoe\.uol\.com\.br\/(diario|edicoes)\/.+/,
     block_regex: /(paywall\.folha\.uol\.com\.br\/|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },

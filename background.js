@@ -63,10 +63,12 @@ var use_random_ip = [];
 // concat all sites with change of headers (useragent, referer or random ip)
 var change_headers;
 
-// block paywall-scripts individually
+// block paywall-scripts
 var blockedRegexes = {};
 var blockedRegexesDomains = [];
 var blockedRegexesGeneral = {};
+var blockedJsInline = {};
+var blockedJsInlineDomains = [];
 
 // unhide text on amp-page
 var amp_unhide;
@@ -105,6 +107,8 @@ function initSetRules() {
   blockedRegexes = {};
   blockedRegexesDomains = [];
   blockedRegexesGeneral = {};
+  blockedJsInline = {};
+  blockedJsInlineDomains = [];
   init_custom_domains();
 }
 
@@ -245,6 +249,10 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
           blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
         }
+        if (rule.hasOwnProperty('block_js_inline')) {
+          if (rule.block_js_inline instanceof RegExp)
+            blockedJsInline[domain] = rule.block_js_inline;
+        }
         if (rule.useragent) {
           switch (rule.useragent) {
           case 'googlebot':
@@ -304,8 +312,10 @@ function set_rules(sites, sites_updated, sites_custom) {
     }
   }
   blockedRegexesDomains = Object.keys(blockedRegexes);
+  blockedJsInlineDomains = Object.keys(blockedJsInline);
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  disableJavascriptInline();
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -664,31 +674,33 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 },
   ['blocking', 'responseHeaders']);
 
-// block inline script
-var block_js_inline = ["*://*.crusoe.uol.com.br/*", "*://*.elpais.com/*", "*://*.lavoz.com.ar/*", "*://*.nautil.us/*", "*://*.rugbypass.com/*", "*://*.theglobeandmail.com/*/article-*"];
-if (block_js_inline.length) 
-ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-  let url_path = details.url.split('?')[0];
-  let excluded = (matchUrlDomain('crusoe.uol.com.br', details.url) && (optin_setcookie || !url_path.match(/\.br\/(diario|edicoes)\/.+/)))
-  || (matchUrlDomain('elpais.com', details.url) && (url_path.includes('/elpais.com') || !url_path.includes('.html')))
-  || (matchUrlDomain('nautil.us', details.url) && !details.url.match(/((\w)+(\-)+){3,}/))
-  || (matchUrlDomain('rugbypass.com', details.url) && !details.url.includes('.com/plus/'))
-  || (matchUrlDomain('theglobeandmail.com', details.url) && !details.url.includes('?rel=premium'));
-  if (!isSiteEnabled(details) || excluded)
-    return;
-  var headers = details.responseHeaders;
-  headers.push({
-    'name': 'Content-Security-Policy',
-    'value': "script-src *;"
-  });
-  return {
-    responseHeaders: headers
-  };
-}, {
-  'types': ['main_frame', 'sub_frame'],
-  'urls': block_js_inline
-},
-  ['blocking', 'responseHeaders']);
+function disableJavascriptInline() {
+  // block inline script
+  var block_js_inline = [];
+  for (let domain in blockedJsInline)
+    block_js_inline.push("*://*." + domain + "/*");
+  if (block_js_inline.length)
+    ext_api.webRequest.onHeadersReceived.addListener(function (details) {
+      let domain = matchUrlDomain(blockedJsInlineDomains, details.url);
+      let matched = domain && details.url.match(blockedJsInline[domain]);
+      if (matched && optin_setcookie && ['uol.com.br'].includes(domain))
+        matched = false;
+      if (!isSiteEnabled(details) || !matched)
+        return;
+      var headers = details.responseHeaders;
+      headers.push({
+        'name': 'Content-Security-Policy',
+        'value': "script-src *;"
+      });
+      return {
+        responseHeaders: headers
+      };
+    }, {
+      'types': ['main_frame', 'sub_frame'],
+      'urls': block_js_inline
+    },
+      ['blocking', 'responseHeaders']);
+}
 
 if (typeof browser !== 'object') {
 var focus_changed = false;
@@ -927,7 +939,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   // block general paywall scripts
   if (['script', 'xmlhttprequest'].includes(details.type)) {
     for (let domain in blockedRegexesGeneral) {
-      if (details.url.match(blockedRegexesGeneral[domain].block_regex) && !(matchUrlDomain(excludedSites.concat(blockedRegexesGeneral[domain].excluded_domains), header_referer)))
+      if (details.url.match(blockedRegexesGeneral[domain].block_regex) && !(matchUrlDomain(excludedSites.concat(disabledSites, blockedRegexesGeneral[domain].excluded_domains), header_referer)))
         return { cancel: true };
     }
   }
