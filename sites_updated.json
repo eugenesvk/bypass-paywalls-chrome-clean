@@ -7,7 +7,7 @@
   "Mediapart.fr": {
     "domain": "mediapart.fr",
     "allow_cookies": 1,
-    "ld_google_webcache": "div[id^=\"paywall_\"]|div.paywall-restricted-content",
+    "ld_google_webcache": "div[id^=\"paywall_\"], div.offre-basique|div.paywall-restricted-content, div.content-article",
     "new_site": 1
   },
   "Outdoor Life": {

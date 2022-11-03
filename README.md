@@ -452,7 +452,7 @@ Grouped in options:\
 [Les Échos](https://www.lesechos.fr) -
 [Les Inrockuptibles](https://www.lesinrocks.com) -
 [Marianne](https://www.marianne.net) -
-[Mediapart](https://www.mediapart.fr) -
+[Mediapart (fr/en/es)](https://www.mediapart.fr) -
 [Paris Match](https://www.parismatch.com) -
 [Philonomist (fr/en)](https://www.philonomist.com) -
 [Science & Vie](https://www.science-et-vie.com) -
