@@ -951,10 +951,14 @@ if (matchDomain('iltalehti.fi')) {
 }
 
 else if (matchDomain('nyteknik.se')) {
-  // plus code in contentScript_once.js
   let locked_article = document.querySelector('div.locked-article');
   if (locked_article)
     locked_article.classList.remove('locked-article');
+  window.setTimeout(function () {
+    let hidden_images = document.querySelectorAll('img[src=""][data-proxy-image]');
+    for (let hidden_image of hidden_images)
+      hidden_image.setAttribute('src', hidden_image.getAttribute('data-proxy-image').replace('_320', '_640'));
+  }, 2000);
 }
 
 else if (matchDomain('suomensotilas.fi')) {
@@ -3078,7 +3082,42 @@ else if (matchDomain('infzm.com')) {
 }
 
 else if (matchDomain('inkl.com')) {
-  // plus code in contentScript_once.js
+  let menu_btn = document.querySelector('div.left-buttons-container button.menu-btn');
+  if (!menu_btn) {
+    let article_container = document.querySelector('div.article-content-container');
+    if (article_container) {
+      article_container.setAttribute('style', 'overflow: visible; max-height: none;');
+      let figures = document.querySelectorAll('figure');
+      for (let figure of figures)
+        figure.setAttribute('style', 'display:block !important;');
+    }
+    let gradient_container = document.querySelector('div.gradient-container');
+    if (gradient_container)
+      gradient_container.setAttribute('style', 'height:auto;');
+    let locked = document.querySelector('div.locked');
+    if (locked)
+      locked.classList.remove('locked');
+  }
+  let what_is_inkl = document.querySelector('.what-is-inkl-container, .features-panel');
+  let signup = document.querySelector('.article-signup-container, .locked-sign-up-container');
+  removeDOMElement(what_is_inkl, signup);
+  let dismiss_button = document.querySelector('div.dismiss-button-container button.btn');
+  if (dismiss_button)
+    dismiss_button.click();
+  let shared_banner = document.querySelector('div.shared-article-inline-banner');
+  removeDOMElement(shared_banner);
+  let dive_deeper_summary_bodies = document.querySelectorAll('div.dive-deeper-container div.summary-body');
+  if (dive_deeper_summary_bodies) {
+    for (let summary_body of dive_deeper_summary_bodies) {
+      if (!summary_body.querySelector('a')) {
+        let ng_click = summary_body.getAttribute('ng-click').replace("showArticle('", '').replace("')", '');
+        let weblink = document.createElement('a');
+        weblink.text = 'open';
+        weblink.href = 'https://www.inkl.com/news/' + ng_click;
+        summary_body.appendChild(weblink);
+      }
+    }
+  }
 }
 
 else if (matchDomain('ipolitics.ca')) {
@@ -3210,19 +3249,30 @@ else if (matchDomain('mid-day.com')) {
 }
 
 else if (matchDomain('nationalgeographic.com')) {
-  // plus code in contentScript_once.js
-  let url = window.location.href;
-  let subscribed = document.querySelector('.Article__Content--gated');
-  let overlay = document.querySelector('.Article__Content__Overlay--gated');
-  let msg = document.querySelector('div#bpc_archive');
-  if (subscribed && !msg) {
-    subscribed.appendChild(archiveLink(url));
-    subscribed.setAttribute('style', 'overflow: visible !important;');
-    if (overlay)
-      overlay.classList.remove('Article__Content__Overlay--gated');
+  function natgeo_func(node) {
+    removeDOMElement(node);
+    let body = document.querySelector('body[class]');
+    if (body) {
+      body.removeAttribute('class');
+      body.removeAttribute('style');
+    }
   }
-  let ads = document.querySelectorAll('div.ad-slot');
-  removeDOMElement(...ads);
+  waitDOMElement('div[id^="fittPortal"]', 'DIV', natgeo_func, false);
+  csDoneOnce = true;
+  window.setTimeout(function () {
+    let url = window.location.href;
+    let subscribed = document.querySelector('.Article__Content--gated');
+    let overlay = document.querySelector('.Article__Content__Overlay--gated');
+    let msg = document.querySelector('div#bpc_archive');
+    if (subscribed && !msg) {
+      subscribed.appendChild(archiveLink(url));
+      subscribed.setAttribute('style', 'overflow: visible !important;');
+      if (overlay)
+        overlay.classList.remove('Article__Content__Overlay--gated');
+    }
+    let ads = document.querySelectorAll('div.ad-slot');
+    removeDOMElement(...ads);
+  }, 1000);
 }
 
 else if (matchDomain('nationalreview.com')) {
@@ -3239,7 +3289,6 @@ else if (matchDomain('nationalreview.com')) {
 }
 
 else if (matchDomain('nautil.us')) {
-  // plus code in contentScript_once.js
   let hidden_images = document.querySelectorAll('img[src^="data:image"][data-src]');
   for (let hidden_image of hidden_images)
     hidden_image.src = hidden_image.getAttribute('data-src');
@@ -3318,7 +3367,13 @@ else if (matchDomain('nytimes.com')) {
 }
 
 else if (matchDomain('nzherald.co.nz')) {
-  // plus code in contentScript_once.js
+  function nzherald_main() {
+    if (window.Fusion)
+      window.Fusion.globalContent.isPremium = false;
+  }
+  window.setTimeout(function () {
+    insert_script(nzherald_main);
+  }, 100);
   let article_content = document.querySelector('.article__content');
   if (article_content) {
     let premium = document.querySelector('span.ellipsis');
@@ -4072,8 +4127,6 @@ else
 
 if ((csDone && (bg2csData !== undefined)) || csDoneOnce) {
   addDivBpcDone();
-  if (csDone && (bg2csData !== undefined) && !bg2csData.amp_unhide)
-    ext_api.runtime.sendMessage({csDone: true});
 }
 
 } // end div_bpc_done

@@ -39,11 +39,6 @@
   ],
   "content_scripts": [{
       "matches": [
-        "*://*.inkl.com/*",
-        "*://*.nationalgeographic.com/*",
-        "*://*.nautil.us/*",
-        "*://*.nyteknik.se/*",
-        "*://*.nzherald.co.nz/*",
         "*://*.gitlab.com/magnolia1234"
       ],
       "run_at": "document_start",
@@ -701,7 +696,6 @@
     "*://*.bwbx.io/*",
     "*://*.cedsdigital.it/*",
     "*://*.corriereobjects.it/*",
-    "*://*.eestatic.com/*",
     "*://*.emol.cl/*",
     "*://*.ensighten.com/*",
     "*://*.flip-pay.com/*",
@@ -714,21 +708,17 @@
     "*://*.mcclatchy.com/*",
     "*://*.mcclatchyinteractive.com/*",
     "*://*.medscapestatic.com/*",
-    "*://*.natgeofe.com/*",
     "*://*.ndcmediagroep.nl/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
     "*://*.postmedia.digital/*",
-    "*://*.prcdn.co/*",
-    "*://*.repstatic.it/*",
     "*://*.rndtech.de/*",
     "*://*.substackcdn.com/*",
     "*://*.soy-chile.cl/*",
     "*://*.static-chmedia.ch/*",
     "*://*.wallkit.net/*",
-    "*://*.wsj.net/*",
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.1.5"
+  "version": "2.9.1.6"
 }

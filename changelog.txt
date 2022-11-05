@@ -5,6 +5,7 @@ Post-release
 Add Mediapart.fr
 Update block general paywall script (fix Zephr-local & config sites.js)
 Update block inline script (config sites.js)
+Update contentScript & remove cookies (fixed runs)
 
 * v2.9.1.0 (2022-10-30)
 Add 4 more NHST Media Group sites

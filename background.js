@@ -5,10 +5,7 @@ var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 
-const cs_limit_except = ['elespanol.com', 'faz.net', 'globeandmail.com', 'nationalgeographic.com'].concat(de_westfalen_medien_domains);
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'mediapart.fr', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains);
-var currentTabUrl = '';
-var csDone = false;
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
@@ -238,7 +235,7 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexes[domain] = rule.block_regex;
           else {
             try {
-              blockedRegexes[domain] = new RegExp(rule.block_regex.replace(/{domain}/g, domain.replace(/\./g, '\\.').replace(/(^\/|\/$)/g, '')));
+              blockedRegexes[domain] = new RegExp(rule.block_regex.replace(/{domain}/g, domain.replace(/\./g, '\\.')).replace(/(^\/|\/$)/g, ''));
             } catch (e) {
               false;
             }
@@ -247,11 +244,25 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (rule.hasOwnProperty('block_regex_general')) {
           if (rule.block_regex_general instanceof RegExp)
             blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
+          else {
+            try {
+              blockedRegexesGeneral[domain] = new RegExp(rule.block_regex_general.replace(/(^\/|\/$)/g, ''));
+            } catch (e) {
+              false;
+            }
+          }
           blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
         }
         if (rule.hasOwnProperty('block_js_inline')) {
           if (rule.block_js_inline instanceof RegExp)
             blockedJsInline[domain] = rule.block_js_inline;
+          else {
+            try {
+              blockedJsInline[domain] = new RegExp(rule.block_js_inline.replace(/{domain}/g, domain.replace(/\./g, '\\.')).replace(/(^\/|\/$)/g, ''));
+            } catch (e) {
+              false;
+            }
+          }
         }
         if (rule.useragent) {
           switch (rule.useragent) {
@@ -313,9 +324,9 @@ function set_rules(sites, sites_updated, sites_custom) {
   }
   blockedRegexesDomains = Object.keys(blockedRegexes);
   blockedJsInlineDomains = Object.keys(blockedJsInline);
+  disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
   change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
-  disableJavascriptInline();
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -674,55 +685,110 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 },
   ['blocking', 'responseHeaders']);
 
+function blockJsInlineListener(details) {
+  let domain = matchUrlDomain(blockedJsInlineDomains, details.url);
+  let matched = domain && details.url.match(blockedJsInline[domain]);
+  if (matched && optin_setcookie && ['uol.com.br'].includes(domain))
+    matched = false;
+  if (!isSiteEnabled(details) || !matched)
+    return;
+  var headers = details.responseHeaders;
+  headers.push({
+    'name': 'Content-Security-Policy',
+    'value': "script-src *;"
+  });
+  return {
+    responseHeaders: headers
+  };
+}
+
 function disableJavascriptInline() {
   // block inline script
-  var block_js_inline = [];
+  ext_api.webRequest.onHeadersReceived.removeListener(blockJsInlineListener);
+  var block_js_inline_urls = [];
   for (let domain in blockedJsInline)
-    block_js_inline.push("*://*." + domain + "/*");
-  if (block_js_inline.length)
-    ext_api.webRequest.onHeadersReceived.addListener(function (details) {
-      let domain = matchUrlDomain(blockedJsInlineDomains, details.url);
-      let matched = domain && details.url.match(blockedJsInline[domain]);
-      if (matched && optin_setcookie && ['uol.com.br'].includes(domain))
-        matched = false;
-      if (!isSiteEnabled(details) || !matched)
-        return;
-      var headers = details.responseHeaders;
-      headers.push({
-        'name': 'Content-Security-Policy',
-        'value': "script-src *;"
-      });
-      return {
-        responseHeaders: headers
-      };
-    }, {
+    block_js_inline_urls.push("*://*." + domain + "/*");
+  if (block_js_inline_urls.length)
+    ext_api.webRequest.onHeadersReceived.addListener(blockJsInlineListener, {
       'types': ['main_frame', 'sub_frame'],
-      'urls': block_js_inline
+      'urls': block_js_inline_urls
     },
       ['blocking', 'responseHeaders']);
 }
 
 if (typeof browser !== 'object') {
-var focus_changed = false;
-ext_api.windows.onFocusChanged.addListener((windowId) => {
-  if (windowId > 0)
-    focus_changed = true;
-});
+  var focus_changed = false;
+  ext_api.windows.onFocusChanged.addListener((windowId) => {
+    if (windowId > 0)
+      focus_changed = true;
+  });
 }
 
+ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && /^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+    let tab_runs = 5;
+    for (let n = 0; n < tab_runs; n++) {
+      let url = tab.url;
+      let rc_domain = matchUrlDomain(remove_cookies, url);
+      let rc_domain_enabled = rc_domain && enabledSites.includes(rc_domain);
+      let lib_file = 'lib/empty.js';
+      if (matchUrlDomain(dompurify_sites, url))
+        lib_file = 'lib/purify.min.js';
+      var bg2csData = {
+        optin_setcookie: optin_setcookie,
+        amp_unhide: matchUrlDomain(amp_unhide, url)
+      };
+      let amp_redirect_domain = '';
+      if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url))
+        bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
+      let cs_code_domain = '';
+      if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), url))
+        bg2csData.cs_code = cs_code[cs_code_domain];
+      let ld_json_domain = '';
+      if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), url))
+        bg2csData.ld_json = ld_json[ld_json_domain];
+      let ld_google_webcache_domain = '';
+      if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url))
+        bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
+      setTimeout(function () {
+        ext_api.tabs.executeScript(tabId, {
+          code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
+        }, function () {
+          ext_api.tabs.executeScript(tabId, {
+            file: lib_file,
+            runAt: 'document_start'
+          }, function () {
+            ext_api.tabs.executeScript(tabId, {
+              file: 'contentScript.js',
+              runAt: 'document_start'
+            }, function (res) {
+              if (ext_api.runtime.lastError || res[0]) {
+                return;
+              }
+            })
+          });
+        });
+        if (rc_domain_enabled) {
+          remove_cookies_fn(rc_domain, true);
+        }
+      }, n * 1000 / tab_runs);
+    }
+  }
+});
+
+setInterval(function () {
+  let current_date_str = currentDateStr();
+  if (last_date_str < current_date_str) {
+    bpc_count_daily_users(current_date_str);
+    last_date_str = current_date_str;
+  }
+}, 60 * 60 * 1000);
+	  
 var extraInfoSpec = ['blocking', 'requestHeaders'];
 if (ext_api.webRequest.OnBeforeSendHeadersOptions.hasOwnProperty('EXTRA_HEADERS'))
   extraInfoSpec.push('extraHeaders');
 
 ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
-  if (details.type === 'main_frame') {
-    let current_date_str = currentDateStr();
-    if (last_date_str < current_date_str) {
-      bpc_count_daily_users(current_date_str);
-      last_date_str = current_date_str;
-    }
-  }
-
   var requestHeaders = details.requestHeaders;
 
   var header_referer = '';
@@ -963,24 +1029,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     });
   }
 
-  let allow_ext_source = medium_custom_domain;
-  let bpc_amp_site = false;
-
-  if (isSiteEnabled({url: header_referer}) && ['script', 'xmlhttprequest', 'image'].includes(details.type)) {
-    bpc_amp_site = matchUrlDomain('cdn.ampproject.org', details.url);
-    allow_ext_source = allow_ext_source || bpc_amp_site ||
-      (matchUrlDomain('elespanol.com', header_referer) && matchUrlDomain('eestatic.com', details.url)) ||
-      (matchUrlDomain('elmercurio.com', header_referer) && matchUrlDomain('emol.cl', details.url)) ||
-      (matchUrlDomain('law360.com', header_referer) && matchUrlDomain('law360news.com', details.url)) ||
-      (matchUrlDomain('lesechos.fr', header_referer) && matchUrlDomain('lesechos.com', details.url)) ||
-      (matchUrlDomain('marketwatch.com', header_referer) && matchUrlDomain('wsj.net', details.url)) ||
-      (matchUrlDomain('nationalgeographic.com', header_referer) && matchUrlDomain('natgeofe.com', details.url)) ||
-      (matchUrlDomain('usatoday.com', header_referer) && matchUrlDomain('gannett-cdn.com', details.url)) ||
-      (matchUrlDomain(ca_gcm_domains, header_referer) && matchUrlDomain('gcm.omerlocdn.com', details.url)) ||
-      (matchUrlDomain(it_gedi_domains, header_referer) && matchUrlDomain(['repstatic.it'], details.url));
-  }
-
-  if (!isSiteEnabled(details) && !allow_ext_source) {
+  if (!isSiteEnabled(details)) {
     return;
   }
 
@@ -989,8 +1038,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
   if (domain_blockjs && matchUrlDomain(domain_blockjs, details.url) && details.type === 'script') {
     return { cancel: true };
   }
-
-  var tabId = details.tabId;
 
   var useUserAgentMobile = false;
   var setReferer = false;
@@ -1092,82 +1139,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
         requestHeader.value = '';
       }
       return requestHeader;
-    });
-  }
-
-  if (tabId !== -1) {
-    ext_api.tabs.get(tabId, function (currentTab) {
-      if (!ext_api.runtime.lastError && currentTab && (isSiteEnabled(currentTab) || medium_custom_domain)) {
-        if (currentTab.url !== currentTabUrl) {
-          csDone = false;
-          currentTabUrl = currentTab.url;
-        }
-        if ((!['font', 'stylesheet'].includes(details.type) || matchUrlDomain(cs_limit_except, currentTabUrl)) && !csDone) {
-          let lib_file = 'lib/empty.js';
-          if (matchUrlDomain(dompurify_sites, currentTabUrl))
-            lib_file = 'lib/purify.min.js';
-          var bg2csData = {
-            optin_setcookie: optin_setcookie,
-            amp_unhide: matchUrlDomain(amp_unhide, currentTabUrl)
-          };
-          let amp_redirect_domain = '';
-          if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), currentTabUrl))
-            bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
-          let cs_code_domain = '';
-          if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), currentTabUrl))
-            bg2csData.cs_code = cs_code[cs_code_domain];
-          let ld_json_domain = '';
-          if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), currentTabUrl))
-            bg2csData.ld_json = ld_json[ld_json_domain];
-          let ld_google_webcache_domain = '';
-          if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), currentTabUrl))
-            bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
-          ext_api.tabs.executeScript(tabId, {
-            code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
-          }, function () {
-            ext_api.tabs.executeScript(tabId, {
-              file: lib_file,
-              runAt: 'document_start'
-            }, function () {
-              ext_api.tabs.executeScript(tabId, {
-                file: 'contentScript.js',
-                runAt: 'document_start'
-              }, function (res) {
-                if (ext_api.runtime.lastError || res[0]) {
-                  return;
-                }
-              })
-            });
-          });
-        }
-      }
-    });
-  } else { //El Mercurio Regionales, lequipe.fr, arcinfo.ch
-    ext_api.tabs.query({
-      active: true,
-      currentWindow: true
-    }, function (tabs) {
-      if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-        let currentTab = tabs[0];
-        if (isSiteEnabled(currentTab)) {
-          let lib_file = 'lib/empty.js';
-          if (matchUrlDomain(dompurify_sites, currentTab.url))
-            lib_file = 'lib/purify.min.js';
-          ext_api.tabs.executeScript({
-            file: lib_file,
-            runAt: 'document_start'
-          }, function () {
-            ext_api.tabs.executeScript({
-              file: 'contentScript.js',
-              runAt: 'document_start'
-            }, function (res) {
-              if (ext_api.runtime.lastError || res[0]) {
-                return;
-              }
-            })
-          });
-        }
-      }
     });
   }
 
@@ -1372,19 +1343,6 @@ function remove_cookies_fn(domainVar, exclusions = false) {
   })
 }
 
-// remove cookies after page load
-ext_api.webRequest.onCompleted.addListener(function (details) {
-  let domain = matchUrlDomain(remove_cookies, details.url);
-  let types = ['main_frame', 'sub_frame', 'xmlhttprequest', 'other'];
-  if (['medium.com'].concat(medium_custom_domains).includes(domain))
-    types = ['main_frame', 'image'];
-  if (domain && types.includes(details.type) && enabledSites.includes(domain)) {
-    remove_cookies_fn(domain, true);
-  }
-}, {
-  urls: ["<all_urls>"]
-});
-
 function clear_cookies() {
   ext_api.tabs.query({
     active: true,
@@ -1458,20 +1416,22 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
             html = decode_utf8(atob(html));
             message.data.selector_source = 'body';
           }
-          let parser = new DOMParser();
-          let doc = parser.parseFromString(html, 'text/html');
-          let article_new = doc.querySelector(message.data.selector_source);
-          if (article_new) {
-            message.data.html = article_new.outerHTML;
-            ext_api.tabs.query({
-              active: true,
-              currentWindow: true
-            }, function (tabs) {
-              if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-                ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-              }
-            });
+          message.data.html = html;
+          if (typeof DOMParser === 'function') {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(html, 'text/html');
+            let article_new = doc.querySelector(message.data.selector_source);
+            if (article_new)
+              message.data.html = article_new.outerHTML;
           }
+          ext_api.tabs.query({
+            active: true,
+            currentWindow: true
+          }, function (tabs) {
+            if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+              ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
+            }
+          });
         });
       }
     }).catch(function (err) {
@@ -1493,10 +1453,6 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       ext_api.browserAction.setIcon(icon_path);
       chrome_scheme = message.scheme;
       focus_changed = false;
-  }
-  if (message.csDone) {
-    csDone = true;
-    //console.log('msg.csDone: ' + csDone);
   }
 });
 
