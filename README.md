@@ -273,6 +273,7 @@ Grouped in options:\
 [The Dallas Morning News](https://www.dallasnews.com) -
 [The Hill](https://thehill.com) -
 [The New Orleans Advocate/The Times-Picayune](https://www.nola.com) -
+[The New York Sun](https://www.nysun.com) -
 [The Seattle Times](https://www.seattletimes.com) -
 [The Philadelphia Inquirer](https://www.inquirer.com)
 

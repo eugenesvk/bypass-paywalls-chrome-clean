@@ -1,9 +1,4 @@
 {
-  "Airmail.news": {
-    "allow_cookies": 1,
-    "domain": "airmail.news",
-    "useragent": "googlebot"
-  },
   "Arkansasonline.com": {
     "domain": "arkansasonline.com"
   },
@@ -183,11 +178,6 @@
     "allow_cookies": 1,
     "amp_redirect": "div[id^=\"media_paywall\"]",
     "domain": "nv.ua"
-  },
-  "Nysun.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.nysun\\.com\\/zephr\\/features",
-    "domain": "nysun.com"
   },
   "Odt.co.nz": {
     "allow_cookies": 1,

@@ -25,6 +25,11 @@
     ],
     "new_site": 1
   },
+  "The New York Sun": {
+    "domain": "nysun.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.nysun\\.com\\/zephr\\/features"
+  },
   "The Washington Post": {
     "domain": "washingtonpost.com",
     "allow_cookies": 1,

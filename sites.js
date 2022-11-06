@@ -1908,6 +1908,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.nybooks\.com\/wp-admin\/admin-ajax\.php/
   },
+  "The New York Sun": {
+    domain: "nysun.com",
+    allow_cookies: 1,
+    block_regex: /\.nysun\.com\/zephr\/features/
+  },
   "The New York Times": {
     domain: "nytimes.com",
     allow_cookies: 1,
