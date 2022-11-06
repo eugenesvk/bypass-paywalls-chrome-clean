@@ -600,7 +600,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /crain-platform-.+-prod\.s3\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
   },
-  "Glassdoor": {
+  "Glassdoor (regwall)": {
     domain: "glassdoor.com"
   },
   "Globes": {
@@ -2128,7 +2128,7 @@ var defaultSites = {
     group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
-  "* Block Paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
+  "* Block general paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
     domain: "###"
   },
   "Amp-access": {

@@ -726,31 +726,32 @@ if (typeof browser !== 'object') {
 
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status === 'complete' && /^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+    let url = tab.url;
+    let rc_domain = matchUrlDomain(remove_cookies, url);
+    let rc_domain_enabled = rc_domain && enabledSites.includes(rc_domain);
+    let lib_file = 'lib/empty.js';
+    if (matchUrlDomain(dompurify_sites, url))
+      lib_file = 'lib/purify.min.js';
+    var bg2csData = {
+      optin_setcookie: optin_setcookie,
+      amp_unhide: matchUrlDomain(amp_unhide, url)
+    };
+    let amp_redirect_domain = '';
+    if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url))
+      bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
+    let cs_code_domain = '';
+    if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), url))
+      bg2csData.cs_code = cs_code[cs_code_domain];
+    let ld_json_domain = '';
+    if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), url))
+      bg2csData.ld_json = ld_json[ld_json_domain];
+    let ld_google_webcache_domain = '';
+    if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url))
+      bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
     let tab_runs = 5;
     for (let n = 0; n < tab_runs; n++) {
-      let url = tab.url;
-      let rc_domain = matchUrlDomain(remove_cookies, url);
-      let rc_domain_enabled = rc_domain && enabledSites.includes(rc_domain);
-      let lib_file = 'lib/empty.js';
-      if (matchUrlDomain(dompurify_sites, url))
-        lib_file = 'lib/purify.min.js';
-      var bg2csData = {
-        optin_setcookie: optin_setcookie,
-        amp_unhide: matchUrlDomain(amp_unhide, url)
-      };
-      let amp_redirect_domain = '';
-      if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url))
-        bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
-      let cs_code_domain = '';
-      if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), url))
-        bg2csData.cs_code = cs_code[cs_code_domain];
-      let ld_json_domain = '';
-      if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), url))
-        bg2csData.ld_json = ld_json[ld_json_domain];
-      let ld_google_webcache_domain = '';
-      if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url))
-        bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
       setTimeout(function () {
+        // run contentScript.js on page
         ext_api.tabs.executeScript(tabId, {
           code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
         }, function () {
@@ -768,10 +769,24 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
             })
           });
         });
+        // remove cookies after page load
         if (rc_domain_enabled) {
           remove_cookies_fn(rc_domain, true);
         }
       }, n * 1000 / tab_runs);
+    }
+  }
+  if (changeInfo.status === 'complete') {
+    // load toggleIcon.js (icon for dark or incognito mode in Chrome))
+    if (typeof browser !== 'object') {
+      ext_api.tabs.executeScript(tabId, {
+        file: 'options/toggleIcon.js',
+        runAt: 'document_start'
+      }, function (res) {
+        if (ext_api.runtime.lastError || res[0]) {
+          return;
+        }
+      });
     }
   }
 });
@@ -1008,25 +1023,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       if (details.url.match(blockedRegexesGeneral[domain].block_regex) && !(matchUrlDomain(excludedSites.concat(disabledSites, blockedRegexesGeneral[domain].excluded_domains), header_referer)))
         return { cancel: true };
     }
-  }
-
-  // load toggleIcon.js (icon for dark or incognito mode in Chrome))
-  if (typeof browser !== 'object' && ['main_frame', 'xmlhttprequest'].includes(details.type)) {
-    ext_api.tabs.query({
-      active: true,
-      currentWindow: true
-    }, function (tabs) {
-      if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-        ext_api.tabs.executeScript({
-          file: 'options/toggleIcon.js',
-          runAt: 'document_start'
-        }, function (res) {
-          if (ext_api.runtime.lastError || res[0]) {
-            return;
-          }
-        });
-      }
-    });
   }
 
   if (!isSiteEnabled(details)) {

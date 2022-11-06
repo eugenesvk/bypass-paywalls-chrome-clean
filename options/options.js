@@ -59,17 +59,17 @@ function renderOptions() {
     var site_types = {
       "updated": {
         sites: sites_updated,
-        title: '* Updated (new) Sites (opt-in to custom sites)',
+        title: '* Updated (new) sites (opt-in to custom sites)',
         default_sites: false
       },
       "default": {
         sites: defaultSites,
-        title: '* Default Sites',
+        title: '* Default sites',
         default_sites: true
       },
       "custom": {
         sites: sites_custom,
-        title: '* Custom (new) Sites',
+        title: '* Custom (new) sites',
         default_sites: false
       }
     };
