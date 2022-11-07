@@ -1903,6 +1903,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.newstatesman\.com\/.+\/nsmg-evolok-paywall\/.+\.js/
   },
+  "The New York Post": {
+    domain: "nypost.com",
+    allow_cookies: 1,
+    block_regex: /\.nypost\.com\/zephr\/feature/
+  },
   "The New York Review of Books": {
     domain: "nybooks.com",
     allow_cookies: 1,

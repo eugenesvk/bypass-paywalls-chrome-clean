@@ -25,6 +25,11 @@
     ],
     "new_site": 1
   },
+  "The New York Post": {
+    "domain": "nypost.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.nypost\\.com\\/zephr\\/feature"
+  },
   "The New York Sun": {
     "domain": "nysun.com",
     "allow_cookies": 1,
@@ -34,10 +39,5 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
-  },
-  "Zephr2": {
-    "domain": "zephr.com",
-    "allow_cookies": 1,
-    "block_regex_general": "(\\.zephr\\.com\\/zephr-browser\\/|\\/zephr\\/feature)"
   }
 }
