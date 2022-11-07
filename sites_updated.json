@@ -34,5 +34,10 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
+  },
+  "Zephr2": {
+    "domain": "zephr.com",
+    "allow_cookies": 1,
+    "block_regex_general": "(\\.zephr\\.com\\/zephr-browser\\/|\\/zephr\\/feature)"
   }
 }

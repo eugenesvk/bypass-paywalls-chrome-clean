@@ -1749,7 +1749,7 @@ var defaultSites = {
   "The Business of Fashion": {
     domain: "businessoffashion.com",
     allow_cookies: 1,
-    block_regex: /(\.businessoffashion\.com\/zephr\/features|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.businessoffashion\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Christian Science Monitor": {
     domain: "csmonitor.com",
@@ -1850,7 +1850,7 @@ var defaultSites = {
   "The Irish Times": {
     domain: "irishtimes.com",
     allow_cookies: 1,
-    block_regex: /\.irishtimes\.com\/zephr\/features/
+    block_regex: /\.irishtimes\.com\/zephr\/feature/
   },
   "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
     domain: "japantimes.co.jp",
@@ -1911,7 +1911,7 @@ var defaultSites = {
   "The New York Sun": {
     domain: "nysun.com",
     allow_cookies: 1,
-    block_regex: /\.nysun\.com\/zephr\/features/
+    block_regex: /\.nysun\.com\/zephr\/feature/
   },
   "The New York Times": {
     domain: "nytimes.com",
@@ -2240,7 +2240,7 @@ var defaultSites = {
   "Zephr": {
     domain: "zephr.com",
     allow_cookies: 1,
-    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/features)/
+    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/
   },
   "* BPC settings": {
     domain: "###"

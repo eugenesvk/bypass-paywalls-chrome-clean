@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Update block general paywall script (update Zephr-local)
 
 * v2.9.2.0 (2022-11-06)
 Add Mediapart.fr
