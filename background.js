@@ -246,7 +246,7 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
           else {
             try {
-              blockedRegexesGeneral[domain] = new RegExp(rule.block_regex_general.replace(/(^\/|\/$)/g, ''));
+              blockedRegexesGeneral[domain] = {block_regex: new RegExp(rule.block_regex_general.replace(/(^\/|\/$)/g, ''))};
             } catch (e) {
               false;
             }

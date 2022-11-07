@@ -2,6 +2,9 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.9.2.2 (2022-11-07)
+Hotfix update rules (general paywall script)
 Update block general paywall script (update Zephr-local)
 
 * v2.9.2.0 (2022-11-06)
