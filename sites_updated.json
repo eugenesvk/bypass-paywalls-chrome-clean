@@ -1,4 +1,10 @@
 {
+  "Correio da Manhã": {
+    "domain": "cmjornal.pt",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(subscriptions|consent)-.+\\.js",
+    "amp_unhide": 1
+  },
   "Dn.no": {
     "domain": "dn.no",
     "allow_cookies": 1,

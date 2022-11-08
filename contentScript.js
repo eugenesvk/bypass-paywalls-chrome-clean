@@ -994,7 +994,7 @@ else if (matchDomain('cmjornal.pt')) {
       window.location.href = amphtml.href;
     }
   } else {
-    amp_unhide_access_hide('="subscriber"', '="NOT subscriber"', 'amp-ad, amp-embed, #flying-carpet-wrapper');
+    amp_unhide_subscr_section('amp-ad, amp-embed');
     let amp_links = document.querySelectorAll('a[href^="https://www-cmjornal-pt.cdn.ampproject.org/c/s/"]');
     for (let amp_link of amp_links)
       amp_link.href = amp_link.href.replace('www-cmjornal-pt.cdn.ampproject.org/c/s/', '');

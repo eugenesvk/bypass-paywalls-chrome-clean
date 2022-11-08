@@ -306,7 +306,7 @@ var defaultSites = {
   "Correio da Manhã": {
     domain: "cmjornal.pt",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(subscriptions|consent)-.+\.js/
   },
   "Corriere della Sera": {
     domain: "corriere.it",
