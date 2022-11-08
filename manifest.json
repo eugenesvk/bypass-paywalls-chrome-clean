@@ -500,6 +500,7 @@
     "*://*.quotidianodipuglia.it/*",
     "*://*.qz.com/*",
     "*://*.rechargenews.com/*",
+    "*://*.record.pt/*",
     "*://*.repubblica.it/*",
     "*://*.republicain-lorrain.fr/*",
     "*://*.reuters.com/*",
@@ -720,5 +721,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.2.3"
+  "version": "2.9.2.4"
 }

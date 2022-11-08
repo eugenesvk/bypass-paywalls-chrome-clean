@@ -21,6 +21,13 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com\\/"
   },
+  "Record.pt": {
+    "domain": "record.pt",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(subscriptions|consent)-.+\\.js",
+    "amp_unhide": 1,
+    "new_site": 1
+  },
   "Tes Magazine": {
     "domain": "tes.com",
     "remove_cookies_select_drop": ["tg_paywall"],

@@ -643,7 +643,8 @@ Grouped in options:\
 
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
-[Observador](https://observador.pt)
+[Observador](https://observador.pt) -
+[Record](https://www.record.pt)
 
 ##### Slovenia
 [Finance.si](https://www.finance.si)

@@ -1531,6 +1531,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Record.pt": {
+    domain: "record.pt",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(subscriptions|consent)-.+\.js/
+  },
   "Reuters": {
     domain: "reuters.com",
     allow_cookies: 1,

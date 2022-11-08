@@ -984,8 +984,9 @@ if (matchDomain(['ara.cat', 'arabalears.cat'])) {
   }
 }
 
-else if (matchDomain('cmjornal.pt')) {
-  let paywall = document.querySelector('.bloqueio_exclusivos');
+else if (matchDomain(['cmjornal.pt', 'record.pt'])) {
+  let paywall = document.querySelector('.bloqueio_exclusivos, .container_assinatura');
+  console.log(paywall);
   let amphtml = document.querySelector('link[rel="amphtml"]');
   let url = window.location.href;
   if (!url.includes('/amp/')) {
@@ -994,7 +995,7 @@ else if (matchDomain('cmjornal.pt')) {
       window.location.href = amphtml.href;
     }
   } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed');
+    amp_unhide_subscr_section('amp-ad, amp-embed, amp-consent');
     let amp_links = document.querySelectorAll('a[href^="https://www-cmjornal-pt.cdn.ampproject.org/c/s/"]');
     for (let amp_link of amp_links)
       amp_link.href = amp_link.href.replace('www-cmjornal-pt.cdn.ampproject.org/c/s/', '');

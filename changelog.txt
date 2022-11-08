@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Record.pt
 Add The New York Post
 Fix Cmjornal.pt
 
