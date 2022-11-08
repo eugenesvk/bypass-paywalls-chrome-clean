@@ -4,6 +4,9 @@ var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 var manifestData = ext_api.runtime.getManifest();
 var ext_name = manifestData.name;
 var ext_version = manifestData.version;
+var navigator_ua = navigator.userAgent;
+var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
+var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser');
 
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'mediapart.fr', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains);
 var optin_setcookie = false;
@@ -392,7 +395,7 @@ ext_api.storage.local.get({
           let new_groups = ['###_de_rp_medien', '###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_fr_gcf', '###_it_gedi', '###_nl_dpg_media', '###_usa_cbj', '###_usa_chronicle', '###_usa_genomeweb'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)))
              || (!enabledSites.includes('uol.com.br') && (enabledSites.includes('crusoe.uol.com.br') || enabledSites.includes('###_br_folha')))
-             || (!enabledSites.includes('iltalehti.fi') && enabledSites('###_fi_alma_talent'));
+             || (!enabledSites.includes('iltalehti.fi') && enabledSites.includes('###_fi_alma_talent'));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }
@@ -724,8 +727,8 @@ if (typeof browser !== 'object') {
   });
 }
 
-ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && /^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+  function runOnTab(tab) {
+    let tabId = tab.id;
     let url = tab.url;
     let rc_domain = matchUrlDomain(remove_cookies, url);
     let rc_domain_enabled = rc_domain && enabledSites.includes(rc_domain);
@@ -776,6 +779,12 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       }, n * 1000 / tab_runs);
     }
   }
+
+if (!kiwi_browser) {
+ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && /^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+    runOnTab(tab);
+  }
   if (changeInfo.status === 'complete') {
     // load toggleIcon.js (icon for dark or incognito mode in Chrome))
     if (typeof browser !== 'object') {
@@ -790,6 +799,7 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
+}
 
 setInterval(function () {
   let current_date_str = currentDateStr();
@@ -1136,6 +1146,33 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       }
       return requestHeader;
     });
+  }
+
+  if (kiwi_browser) {
+    let tabId = details.tabId;
+    if (tabId !== -1) {
+      if (['main_frame', 'sub_frame'].includes(details.type)) {
+        ext_api.tabs.get(tabId, function (tab) {
+          if (!ext_api.runtime.lastError && tab && isSiteEnabled(tab)) {
+            runOnTab(tab);
+          }
+        });
+      }
+    } else {
+      if (['xmlhttprequest'].includes(details.type)) {
+        ext_api.tabs.query({
+          active: true,
+          currentWindow: true
+        }, function (tabs) {
+          if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+            let tab = tabs[0];
+            if (isSiteEnabled(tab)) {
+              runOnTab(tab);
+            }
+          }
+        });
+      }
+    }
   }
 
   return { requestHeaders: requestHeaders };
