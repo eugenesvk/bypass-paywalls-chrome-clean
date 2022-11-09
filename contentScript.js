@@ -726,7 +726,7 @@ else if (matchDomain('spiegel.de')) {
 
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.article--paid > div.Mb8');
+  let paywall = document.querySelector('div.article--paid > div');
   if (paywall) {
     removeDOMElement(paywall);
     let article = document.querySelector('div.article--paid');

@@ -5,6 +5,7 @@ Post-release
 Add Record.pt
 Add The New York Post
 Fix Cmjornal.pt
+Fix Tagesspiegel.de (link to archive.is)
 Fix for Kiwi Browser/Android (Chrome-synch)
 
 * v2.9.2.2 (2022-11-07)
