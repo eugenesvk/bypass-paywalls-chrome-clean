@@ -606,6 +606,7 @@ Grouped in options:\
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
+[Het Laatste Nieuws (link to archive.is))](https://www.hln.be) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
@@ -613,6 +614,15 @@ Grouped in options:\
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
+Algemeen Dagblad (+ regional; link to archive.is) sites like
+[Algemeen Dagblad](https://www.ad.nl) -
+[BN DeStem](https://www.bndestem.nl) -
+[Brabants Dagblad](https://www.bd.nl) -
+[Eindhovens Dagblad](https://www.ed.nl) -
+[Gelderlander](https://www.gelderlander.nl) -
+[PZC](https://www.pzc.nl) -
+[Stentor](https://www.destentor.nl) -
+[Tubantia](https://tubantia.nl)\
 *DPG Media (not ADR)* sites like\
 [De Morgen](https://www.demorgen.be) -
 [De Volkskrant](https://www.volkskrant.nl) -

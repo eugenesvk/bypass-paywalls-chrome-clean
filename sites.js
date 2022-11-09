@@ -33,6 +33,20 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.abqjournal\.com\/.+\/abq-pw-manager\.js/
   },
+  "Algemeen Dagblad (+ regional; link to archive.is)": {
+    domain: "###_nl_dpg_adr",
+    allow_cookies: 1,
+    group: [
+      "ad.nl",
+      "bd.nl",
+      "bndestem.nl",
+      "destentor.nl",
+      "ed.nl",
+      "gelderlander.nl",
+      "pzc.nl",
+      "tubantia.nl"
+    ]
+  },
   "Allgäuer Zeitung": {
     domain: "allgaeuer-zeitung.de",
     allow_cookies: 1,
@@ -345,11 +359,11 @@ var defaultSites = {
     domain: "tijd.be",
     referer: "google"
   },
-  "Der Spiegel": {
+  "Der Spiegel (link to archive.is)": {
     domain: "spiegel.de",
     allow_cookies: 1
   },
-  "Der Tagesspiegel": {
+  "Der Tagesspiegel (link to archive.is)": {
     domain: "tagesspiegel.de",
     allow_cookies: 1
   },
@@ -454,7 +468,7 @@ var defaultSites = {
     domain: "entrepreneur.com",
     allow_cookies: 1
   },
-  "ESPN USA (news only)": {
+  "ESPN USA (news only; link to archive.is))": {
     domain: "espn.com",
     allow_cookies: 1
   },
@@ -841,6 +855,10 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /\.ensighten\.com\/.+\/Bootstrap\.js/
+  },
+  "Het Laatste Nieuws (link to archive.is)": {
+    domain: "hln.be",
+    allow_cookies: 1
   },
   "Hindustan Times": {
     domain: "hindustantimes.com",
@@ -1976,7 +1994,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "The Times (UK)": {
+  "The Times (UK; link to archive.is))": {
     domain: "thetimes.co.uk",
     allow_cookies: 1
   },
@@ -2370,5 +2388,4 @@ init_custom_domains();
 
 // sites with no fix (background)
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
-var nl_dpg_media_nofix_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'hln.be', 'pzc.nl', 'tubantia.nl'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'ouest-france.fr', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains, nl_dpg_media_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'ouest-france.fr', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains);

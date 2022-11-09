@@ -24,6 +24,7 @@ var it_gedi_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'ita
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
+var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'pzc.nl', 'tubantia.nl'];
 var nl_dpg_media_domains = ['demorgen.be', 'humo.be', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
 var no_nhst_media_domains = ['dn.no', 'europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
@@ -2020,6 +2021,17 @@ else if (matchDomain(nl_mediahuis_region_domains)) {
       }
     }
   }, 500);
+}
+
+else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#remaining-paid-content');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article__body');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
 }
 
 else if (matchDomain(nl_dpg_media_domains)) {
