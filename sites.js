@@ -1367,7 +1367,6 @@ var defaultSites = {
   "NHST Media Group": {
     domain: "###_no_nhst_media",
     group: [
-      "dn.no",
       "europower-energi.no",
       "fiskeribladet.no",
       "intrafish.com",
@@ -1377,7 +1376,7 @@ var defaultSites = {
       "upstreamonline.com"
     ],
     allow_cookies: 1,
-    useragent: "googlebot"
+    referer: "facebook"
   },
   "Nikkei Asian Review (do not block Piano.io-script externally)": {
     domain: "asia.nikkei.com",
@@ -2388,4 +2387,4 @@ init_custom_domains();
 
 // sites with no fix (background)
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'ouest-france.fr', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.no', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'ouest-france.fr', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains);

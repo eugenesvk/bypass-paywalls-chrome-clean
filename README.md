@@ -642,7 +642,6 @@ Algemeen Dagblad (+ regional; link to archive.is) sites like
 ##### Norway
 Grouped in options:\
 *NHST Media Group* sites like\
-[DN](https://www.dn.no) -
 [Europower](https://www.europower-energi.no) -
 [Fiskeribladet](https://www.fiskeribladet.no) -
 [Intrafish](https://www.intrafish.com) -

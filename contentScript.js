@@ -26,7 +26,7 @@ var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'pzc.nl', 'tubantia.nl'];
 var nl_dpg_media_domains = ['demorgen.be', 'humo.be', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
-var no_nhst_media_domains = ['dn.no', 'europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
+var no_nhst_media_domains = ['europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
@@ -818,7 +818,7 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(dk|fi|no|se)$/)) {//denmark/finland/norway/sweden
+} else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/norway/sweden
 
 if (matchDomain('iltalehti.fi')) {
   let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad, div.iZivCJ');
@@ -3951,8 +3951,9 @@ else if (matchDomain(timesofindia_domains)) {
   }
 }
 
-else if (matchDomain('tradewindsnews.com')) {
-  if (window.location.pathname.startsWith('/markets/')) {
+else if (matchDomain(no_nhst_media_domains)) {
+  let url = window.location.href;
+  if (url.includes('.tradewindsnews.com/markets/')) {
     let paywall = document.querySelector('iframe[src]');
     removeDOMElement(paywall);
     let overflow = document.querySelector('body[style]');
@@ -3961,6 +3962,37 @@ else if (matchDomain('tradewindsnews.com')) {
     let blurred = document.querySelector('body > div[style]');
     if (blurred)
       blurred.removeAttribute('style');
+  } else {
+    window.setTimeout(function () {
+      let paywall = document.querySelector('iframe#paywall-iframe');
+      if (paywall) {
+        let intro = document.querySelector('div.global-article-selector');
+        let article = paywall.parentNode;
+        removeDOMElement(paywall, intro);
+        fetch(url)
+        .then(response => {
+          if (response.ok) {
+            response.text().then(html => {
+              let split1 = html.split('window.__INITIAL_STATE__=')[1];
+              let state = (split1.split('};')[0] + '}').split('</script>')[0];
+              if (state) {
+                let json = JSON.parse(state);
+                if (json) {
+                  let json_text = json.article.body;
+                  let parser = new DOMParser();
+                  let doc = parser.parseFromString('<div>' + json_text + '</div>', 'text/html');
+                  let article_new = doc.querySelector('div');
+                  if (article_new) {
+                    if (article)
+                      article.appendChild(article_new);
+                  }
+                }
+              }
+            })
+          }
+        })
+      }
+    }, 500);
   }
 }
 
