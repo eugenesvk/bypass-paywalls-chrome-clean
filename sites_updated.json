@@ -11,6 +11,20 @@
     "ld_google_webcache": "div[id^=\"paywall_\"], div.offre-basique|div.paywall-restricted-content, div.content-article",
     "new_site": 1
   },
+  "Public.fr": {
+    "domain": "public.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/",
+    "cs_code": [{
+        "cond": "#poool-widget-content",
+        "rm_elem": 1
+      }, {
+        "cond": ".cnt[data-poool-mode=\"hide\"]",
+        "rm_attrib": "data-poool-mode"
+      }
+    ],
+    "new_site": 1
+  },
   "Record.pt": {
     "domain": "record.pt",
     "allow_cookies": 1,

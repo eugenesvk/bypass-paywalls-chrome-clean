@@ -3,9 +3,10 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Ad.nl (+ regional) & Hln.be
+Add Public.fr
 Add Record.pt
 Add The New York Post
-Remove Dn.no
+Remove Dn.no (fix obsolete)
 Fix Cmjornal.pt
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix NHST Media Group

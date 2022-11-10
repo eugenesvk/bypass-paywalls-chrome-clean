@@ -1522,6 +1522,11 @@ var defaultSites = {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1
   },
+  "Public.fr": {
+    domain: "public.fr",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "Puck.news": {
     domain: "puck.news",
     allow_cookies: 1

@@ -457,6 +457,7 @@ Grouped in options:\
 [Mediapart (fr/en/es)](https://www.mediapart.fr) -
 [Paris Match](https://www.parismatch.com) -
 [Philonomist (fr/en)](https://www.philonomist.com) -
+[Public](https://www.public.fr) -
 [Science & Vie](https://www.science-et-vie.com) -
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
 [Télérama](https://www.telerama.fr) -

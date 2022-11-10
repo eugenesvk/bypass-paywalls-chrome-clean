@@ -18,14 +18,18 @@ function show_update(ext_version_new, check = true) {
           ext_version_new: ext_version_new
         });
         anchorEl = document.createElement('a');
-        anchorEl.innerText = 'New release v' + ext_version_new;
         if (manifestData.applications && manifestData.applications.gecko.id.includes('magnolia')) {
           if (installType === 'development')
             anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean';
-          else
+          else {
             anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/releases';
+            ext_version_new = ext_version_new.replace(/\d$/, '0');
+          }
         } else
           anchorEl.href = 'https://addons.mozilla.org/en-US/firefox/addon/bypass-paywalls-clean';
+        if (installType !== 'development')
+          ext_version_new = ext_version_new.replace(/\d$/, '0');
+        anchorEl.innerText = 'New release v' + ext_version_new;
         anchorEl.target = '_blank';
         versionString_new.appendChild(anchorEl);
         if (!manifestData.name.includes('Clean')) {

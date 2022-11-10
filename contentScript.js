@@ -1337,11 +1337,12 @@ else if (matchDomain('lavie.fr')) {
     overlay.removeAttribute('style');
 }
 
-else if (matchDomain(['lejdd.fr', 'parismatch.com'])) {
+else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
   let poool_banner = document.querySelector('#poool-container');
+  let poool_widget = document.querySelector('#poool-widget-content');
   let forbidden = document.querySelector('.forbidden');
   let ads = document.querySelectorAll('div[class^="lmn-"]');
-  removeDOMElement(poool_banner, forbidden, ...ads);
+  removeDOMElement(poool_banner, poool_widget, forbidden, ...ads);
   let bottom_hide = document.querySelector('.cnt[data-poool-mode="hide"]');
   if (bottom_hide) {
     bottom_hide.removeAttribute('data-poool-mode');
@@ -3965,7 +3966,7 @@ else if (matchDomain(no_nhst_media_domains)) {
   } else {
     window.setTimeout(function () {
       let paywall = document.querySelector('iframe#paywall-iframe');
-      if (paywall) {
+      if (paywall && dompurify_loaded) {
         let intro = document.querySelector('div.global-article-selector');
         let article = paywall.parentNode;
         removeDOMElement(paywall, intro);
@@ -3980,7 +3981,7 @@ else if (matchDomain(no_nhst_media_domains)) {
                 if (json) {
                   let json_text = json.article.body;
                   let parser = new DOMParser();
-                  let doc = parser.parseFromString('<div>' + json_text + '</div>', 'text/html');
+                  let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_ATTR: ['itemprop'], ADD_TAGS: ['link']}) + '</div>', 'text/html');
                   let article_new = doc.querySelector('div');
                   if (article_new) {
                     if (article)

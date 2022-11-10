@@ -500,6 +500,7 @@
     "*://*.precisiononcologynews.com/*",
     "*://*.prevention.com/*",
     "*://*.prospectmagazine.co.uk/*",
+    "*://*.public.fr/*",
     "*://*.puck.news/*",
     "*://*.pzc.nl/*",
     "*://*.quora.com/*",
@@ -729,5 +730,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.2.6"
+  "version": "2.9.2.7"
 }
