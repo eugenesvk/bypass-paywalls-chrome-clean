@@ -6,7 +6,6 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
-var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser');
 
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'mediapart.fr', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'spectator.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
@@ -780,12 +779,12 @@ if (typeof browser !== 'object') {
     }
   }
 
-if (!kiwi_browser) {
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete' && /^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
-    runOnTab(tab);
-  }
-  if (changeInfo.status === 'complete') {
+  let tab_status = changeInfo.status;
+  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url)) {
+    if (/^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+      runOnTab(tab);
+    }
     // load toggleIcon.js (icon for dark or incognito mode in Chrome))
     if (typeof browser !== 'object') {
       ext_api.tabs.executeScript(tabId, {
@@ -799,7 +798,6 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
-}
 
 setInterval(function () {
   let current_date_str = currentDateStr();
@@ -1146,33 +1144,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       }
       return requestHeader;
     });
-  }
-
-  if (kiwi_browser) {
-    let tabId = details.tabId;
-    if (tabId !== -1) {
-      if (['main_frame', 'sub_frame'].includes(details.type)) {
-        ext_api.tabs.get(tabId, function (tab) {
-          if (!ext_api.runtime.lastError && tab && isSiteEnabled(tab)) {
-            runOnTab(tab);
-          }
-        });
-      }
-    } else {
-      if (['xmlhttprequest'].includes(details.type)) {
-        ext_api.tabs.query({
-          active: true,
-          currentWindow: true
-        }, function (tabs) {
-          if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-            let tab = tabs[0];
-            if (isSiteEnabled(tab)) {
-              runOnTab(tab);
-            }
-          }
-        });
-      }
-    }
   }
 
   return { requestHeaders: requestHeaders };
