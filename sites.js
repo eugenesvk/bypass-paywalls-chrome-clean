@@ -1023,7 +1023,7 @@ var defaultSites = {
   "La Croix": {
     domain: "la-croix.com",
     allow_cookies: 1,
-    block_regex: /(\.la-croix\.com\/build\/lacroix\/article.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.la-croix\.com\/build\/.+\/paywall.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "La Gazzetta dello Sport": {
     domain: "gazzetta.it",

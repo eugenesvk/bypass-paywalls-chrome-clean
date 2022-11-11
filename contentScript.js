@@ -1301,9 +1301,8 @@ else if (matchDomain('journaldunet.com')) {
 else if (matchDomain('la-croix.com')) {
   let url = window.location.href;
   if (!url.includes('la-croix.com/amp/')) {
-    let hidden_images = document.querySelectorAll('source[srcset]');
-    for (let elem of hidden_images)
-      elem.removeAttribute('srcset');
+    let ads = document.querySelectorAll('div[class^="ads-wrapper-"]');
+    removeDOMElement(...ads);
   } else {
     let paywall_block = document.querySelector('#paywall_block');
     let amp_ads = document.querySelectorAll('amp-ad, amp-embed');

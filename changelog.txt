@@ -9,6 +9,7 @@ Add The New York Post
 Remove Dn.no (fix obsolete)
 Fix Cmjornal.pt
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
+Fix La Croix
 Fix NHST Media Group
 Fix Tagesspiegel.de (link to archive.is)
 Fix for Kiwi Browser/Android (Chrome-synch)
