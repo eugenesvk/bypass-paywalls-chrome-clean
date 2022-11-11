@@ -10,6 +10,7 @@ Remove Dn.no (fix obsolete)
 Remove GElocal.it & Huffintonpost.it (fix obsolete)
 Remove Il Secolo XIX, La Stampa & Limes Online (fix obsolete)
 Fix Cmjornal.pt
+Fix Grupo Vocento
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix La Croix
 Fix NHST Media Group
@@ -739,7 +740,7 @@ Remove Le Un (fix obsolete)
 Fix Australia Nine sites
 Fix Commentary Magazine (new domain)
 Fix Gestion & El Comercio (Peru)
-Fix Grupo Vocento (Spain)
+Fix Grupo Vocento
 Fix Financial News (London)
 Fix The Athletic (podcast)
 Fix WSJ (amp homepage link)
@@ -1091,7 +1092,7 @@ Update popup (Twitter)
 
 * v1.9.7.0 (2020-11-27)
 Add Alma Talent sites (Finland)
-Add El Periodico de Catalunya (Spain)
+Add El Periodico de Catalunya
 Add Grupo Vocento (Spain, regional daily)
 Add La Croix (France)
 Add The Hindu BusinessLine (India)
