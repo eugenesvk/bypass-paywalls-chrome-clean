@@ -2207,28 +2207,8 @@ else if (matchDomain('scotsman.com')) {
 }
 
 else if (matchDomain('spectator.co.uk')) {
-  if (window.location.pathname.startsWith('/article/')) {
-    let body_par = document.querySelector('p[class^="ContentPageBodyParagraph"]');
-    if (!body_par && dompurify_loaded) {
-      csDoneOnce = true;
-      let url = window.location.href;
-      fetch(url)
-      .then(response => {
-        if (response.ok) {
-          response.text().then(html => {
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(html) + '</div>', 'text/html');
-            let article = document.querySelector('main > div');
-            let article_new = doc.querySelector('main > div');
-            if (article_new) {
-              if (article)
-                article.appendChild(article_new);
-            }
-          })
-        }
-      })
-    }
-  }
+  let banner = document.querySelector('#subscribe-ribbon');
+  removeDOMElement(banner);
 }
 
 else if (matchDomain('telegraph.co.uk')) {

@@ -15,6 +15,7 @@ Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix La Croix
 Fix NHST Media Group
 Fix Tagesspiegel.de (link to archive.is)
+Fix The Spectator UK
 Fix for Kiwi Browser/Android (Chrome-synch)
 
 * v2.9.2.2 (2022-11-07)

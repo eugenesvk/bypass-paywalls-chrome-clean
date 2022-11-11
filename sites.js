@@ -1965,7 +1965,7 @@ var defaultSites = {
   },
   "The Spectator (UK)": {
     domain: "spectator.co.uk",
-    block_regex: /\.tinypass\.com\//
+    useragent: "googlebot"
   },
   "The Spectator Australia": {
     domain: "spectator.com.au",
