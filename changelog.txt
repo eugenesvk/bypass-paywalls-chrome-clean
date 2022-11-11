@@ -7,6 +7,8 @@ Add Public.fr
 Add Record.pt
 Add The New York Post
 Remove Dn.no (fix obsolete)
+Remove GElocal.it & Huffintonpost.it (fix obsolete)
+Remove Il Secolo XIX, La Stampa & Limes Online (fix obsolete)
 Fix Cmjornal.pt
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
 Fix La Croix

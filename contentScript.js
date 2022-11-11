@@ -20,7 +20,7 @@ var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', '
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
-var it_gedi_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'italian.tech', 'lastampa.it', 'lescienze.it', 'limesonline.com', 'repubblica.it'];
+var it_gedi_domains = ['italian.tech', 'lescienze.it', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
@@ -1851,15 +1851,7 @@ else if (matchDomain(it_gedi_domains)) {
         elem.removeAttribute('hidden');
         elem.removeAttribute('style');
       }
-      csDoneOnce = true;
     }
-  } else if (matchDomain('limesonline.com')) {
-    if (window.location.search.includes('prv=true')) {
-      window.setTimeout(function () {
-        window.location.href = window.location.pathname;
-      }, 500);
-    } else
-      csDoneOnce = true;
   } else if (matchDomain('espresso.repubblica.it')) {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let paywall = document.querySelector('div#paywall');

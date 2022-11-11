@@ -784,14 +784,10 @@ var defaultSites = {
   "Gruppo GEDI.it": {
     domain: "###_it_gedi",
     group: [
-      "gelocal.it",
-      "huffingtonpost.it",
-      "ilsecoloxix.it",
       "italian.tech",
-      "lastampa.it",
       "lescienze.it",
-      "limesonline.com",
-      "repubblica.it"],
+      "repubblica.it"
+    ],
     allow_cookies: 1,
     block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/,
     useragent: "googlebot"
@@ -2392,4 +2388,5 @@ init_custom_domains();
 
 // sites with no fix (background)
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
+var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com'];
 var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'cnbc.com', 'courrierinternational.com', 'dn.no', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'handelsblatt.com', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavozdegalicia.es', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'ouest-france.fr', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'statnews.com', 'stern.de', 'straitstimes.com', 'sueddeutsche.de', 'tagesanzeiger.ch', 'the-ken.com', 'theinformation.com', ' themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains);

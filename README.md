@@ -583,19 +583,16 @@ Grouped in options:\
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
-[GElocal.it](https://quotidiani.gelocal.it) -
-[Huffingtonpost.it](https://www.huffingtonpost.it) -
-[Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Italian.tech](https://www.italian.tech) -
 [La Repubblica](https://www.repubblica.it) -
-[La Stampa](https://www.lastampa.it) -
-[Le Scienze](https://www.lescienze.it) -
-[LimesOnline (it/en)](https://www.limesonline.com)\
+[Le Scienze](https://www.lescienze.it)
+
 [Il Messaggero](https://www.ilmessaggero.it) and regional sites like
 [Corriere Adriatico](https://www.corriereadriatico.it) -
 [Il Gazzettino](https://www.ilgazzettino.it) -
 [Il Mattino](https://www.ilmattino.it) -
-[Quotidiano di Puglia](https://www.quotidianodipuglia.it)\
+[Quotidiano di Puglia](https://www.quotidianodipuglia.it)
+
 [Quotidiano Nazionale](https://www.quotidiano.net) and regional sites like
 [Il Giorno](https://www.ilgiorno.it) -
 [Il Resto del Carlino](https://www.ilrestodelcarlino.it) -
@@ -615,7 +612,7 @@ Grouped in options:\
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
-Algemeen Dagblad (+ regional; link to archive.is) sites like
+Algemeen Dagblad (+ regional; link to archive.is) sites like\
 [Algemeen Dagblad](https://www.ad.nl) -
 [BN DeStem](https://www.bndestem.nl) -
 [Brabants Dagblad](https://www.bd.nl) -
