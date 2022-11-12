@@ -628,6 +628,9 @@ Algemeen Dagblad (+ regional; link to archive.is) sites like\
 [Humo](https://www.humo.be) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
+*Mediahuis België* sites like\
+[De Standaard](https://www.standaard.be) -
+[Het Nieuwsblad](https://www.nieuwsblad.be)\
 *Mediahuis Nederland Regional* sites like\
 [Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -
