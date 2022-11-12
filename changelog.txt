@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Ad.nl (+ regional) & Hln.be
+Add Field & Stream
 Add Public.fr
 Add Record.pt
 Add The New York Post

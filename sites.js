@@ -501,6 +501,10 @@ var defaultSites = {
     domain: "exame.com",
     block_regex: /\/exame\.com\/.+\/js\/pywll-dyn\.js/
   },
+  "Field & Stream": {
+    domain: "fieldandstream.com",
+    allow_cookies: 1
+  },
   "Finance.si": {
     domain: "finance.si",
     allow_cookies: 1,

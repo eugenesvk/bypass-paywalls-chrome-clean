@@ -228,6 +228,7 @@
     "*://*.farodevigo.es/*",
     "*://*.faz.net/*",
     "*://*.fd.nl/*",
+    "*://*.fieldandstream.com/*",
     "*://*.finance.si/*",
     "*://*.financialexpress.com/*",
     "*://*.financialpost.com/*",
@@ -725,5 +726,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.2.8"
+  "version": "2.9.2.9"
 }

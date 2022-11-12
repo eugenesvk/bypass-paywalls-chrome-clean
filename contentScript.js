@@ -1883,7 +1883,8 @@ else if (matchDomain(it_gedi_domains)) {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let ads = document.querySelectorAll('div[id^="adv"]');
       removeDOMElement(...ads);
-    }
+    } else
+      ampToHtml();
   }
 }
 
@@ -2862,6 +2863,14 @@ else if (matchDomain('espn.com')) {
   }
 }
 
+else if (matchDomain('fieldandstream.com')) {
+  let overlay = document.querySelectorAll('div[class^="mailmunch-"]');
+  removeDOMElement(...overlay);
+  let noscroll = document.querySelector('html.mailmunch-pop-open');
+  if (noscroll)
+    noscroll.removeAttribute('class');
+}
+
 else if (matchDomain('financialexpress.com')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall)
@@ -3120,6 +3129,9 @@ else if (matchDomain('ipolitics.ca')) {
           let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
           let content_new = doc.querySelector('div');
           article.appendChild(content_new);
+          let locked = document.querySelector('div.locked');
+          if (locked)
+            locked.classList.remove('locked');
         }
       }
     }

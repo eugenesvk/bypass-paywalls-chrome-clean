@@ -184,6 +184,7 @@ Grouped in options:\
 [Axios](https://www.axios.com) -
 [Commentary Magazine](https://www.commentary.org) -
 [ESPN USA](https://www.espn.com) -
+[Field & Stream](https://www.fieldandstream.com) -
 [First Things](https://www.firstthings.com) -
 [National Review](https://www.nationalreview.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
