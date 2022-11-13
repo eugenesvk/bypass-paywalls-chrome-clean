@@ -29,6 +29,11 @@
     "ld_google_webcache": "div[id^=\"paywall_\"], div.offre-basique|div.paywall-restricted-content, div.content-article",
     "new_site": 1
   },
+  "Philosophie Magazine": {
+    "domain": "philomag.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/"
+  },
   "Public.fr": {
     "domain": "public.fr",
     "allow_cookies": 1,

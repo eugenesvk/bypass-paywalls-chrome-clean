@@ -1483,6 +1483,11 @@ var defaultSites = {
     domain: "philonomist.com",
     allow_cookies: 1
   },
+  "Philosophie Magazine": {
+    domain: "philomag.com",
+    allow_cookies: 1,
+    block_regex: /\.poool\.fr\//
+  },
   "Philosophy Now": {
     domain: "philosophynow.org"
   },
@@ -2250,7 +2255,7 @@ var defaultSites = {
   "Poool.fr": {
     domain: "poool.fr",
     allow_cookies: 1,
-    block_regex_general: /\.blueconic\.net\//
+    block_regex_general: /\.poool\.fr\//
   },
   "Qiota": {
     domain: "qiota.com",
