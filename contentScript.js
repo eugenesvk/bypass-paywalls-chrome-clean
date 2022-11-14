@@ -2980,17 +2980,15 @@ else if (matchDomain('hbrchina.org')) {
 }
 
 else if (matchDomain('hilltimes.com')) {
-  let paywall = document.querySelector('div.paywallcont');
+  let paywall = document.querySelector('div[class^="paywallcont"]');
   if (paywall) {
     removeDOMElement(paywall);
-    let json_script = getArticleJsonScript();
-    if (json_script) {
-      let json = JSON.parse(json_script.text).filter(x => x.articleBody)[0];
-      if (json) {
-        let json_text = parseHtmlEntities(json.articleBody).replace(/(\.|\%)\s{3,}/g, "$&\r\n\r\n");
-        let content = document.querySelector('div#xorg');
-        if (json_text && content)
-          content.innerText = '\r\n' + json_text;
+    let content = document.querySelector('meta[property="og:description"][content]');
+    if (content) {
+      let article = document.querySelector('div#fadebg');
+      if (article) {
+        article.innerText = parseHtmlEntities(content.content);
+        article.removeAttribute('id');
       }
     }
   }
@@ -4117,6 +4115,20 @@ else if (matchDomain('wsj.com')) {
   }
 }
 
+else if (matchDomain('substack.com') || document.querySelector('script[src^="https://substackcdn.com/min/main.bundle.js"]')) {
+  let paywall = document.querySelector('div.paywall:not(.modal-paywall)');
+  if (paywall) {
+    let article = document.querySelector('div.available-content');
+    if (article) {
+      let msg = document.createElement('div');
+      msg.innerText = 'BPC > no fix !';
+      msg.setAttribute('style', 'margin: 20px; width: 20em; font-weight: bold; color: red;');
+      article.insertBefore(msg, article.firstChild);
+    }
+    csDoneOnce = true;
+  }
+}
+
 else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('a[href^="https://bloxcms.com"][title^="BLOX"]')) {
   if (window.location.pathname.endsWith('.amp.html')) {
     amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"', 'amp-ad, amp-embed, .amp-ads-container');
@@ -4311,7 +4323,7 @@ function ampToHtml() {
   window.setTimeout(function () {
     let canonical = document.querySelector('link[rel="canonical"]');
     window.location.href = canonical.href;
-  }, 500);
+  }, 1000);
 }
 
 function archiveLink(url, text_fail = 'BPC > Full article text:\r\n') {
