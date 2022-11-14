@@ -144,6 +144,7 @@
     "*://*.cleveland.com/*",
     "*://*.climbing.com/*",
     "*://*.cmjornal.pt/*",
+    "*://*.cnbc.com/*",
     "*://*.codesports.com.au/*",
     "*://*.commentary.org/*",
     "*://*.commercialappeal.com/*",
@@ -729,5 +730,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.3.1"
+  "version": "2.9.3.2"
 }

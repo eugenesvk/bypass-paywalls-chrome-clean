@@ -2738,6 +2738,21 @@ else if (matchDomain(['chronicle.com', 'philanthropy.com'])) {
   }
 }
 
+else if (matchDomain('cnbc.com')) {
+  let paywall = document.querySelector('div.ArticleGate-proGate');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.ArticleBody-articleBody');
+    if (article)
+      article.style = "margin: 20px 0px; font-family: Lyon,Helvetica,Arial,sans-serif; font-size: 18px; line-height: 1.66";
+    let span_hidden = document.querySelectorAll('span[hidden]');
+    for (let elem of span_hidden) {
+      elem.removeAttribute('hidden');
+      elem.removeAttribute('class');
+    }
+  }
+}
+
 else if (matchDomain('csmonitor.com')) {
   let paywall = document.querySelector('div.paywall');
   removeDOMElement(paywall);

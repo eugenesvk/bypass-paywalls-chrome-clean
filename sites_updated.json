@@ -1,4 +1,22 @@
 {
+  "CNBC": {
+    "domain": "cnbc.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "cs_code": [{
+        "cond": "div.ArticleGate-proGate",
+        "rm_elem": 1,
+        "elems": [{
+            "cond": "span[hidden]",
+            "rm_attrib": "class"
+          }, {
+            "cond": "span[hidden]",
+            "rm_attrib": "hidden"
+          }
+        ]
+    }],
+    "new_site": 1
+  },
   "Correio da Manhã": {
     "domain": "cmjornal.pt",
     "allow_cookies": 1,

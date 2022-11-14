@@ -96,6 +96,7 @@ _* free articles only._
 [Barron's](https://www.barrons.com) -
 [Bloomberg](https://www.bloomberg.com) -
 [Business Insider](https://www.businessinsider.com) -
+[CNBC](https://www.cnbc.com) -
 [Digiday](https://digiday.com) -
 [Entrepreneur](https://www.entrepreneur.com) -
 [Forbes](https://www.forbes.com) -
