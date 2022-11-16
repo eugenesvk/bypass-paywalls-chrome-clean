@@ -3472,6 +3472,17 @@ else if (matchDomain('outlookindia.com')) {
   }
 }
 
+else if (matchDomain('project-syndicate.org')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall--base');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div[data-page-area="article-body"]');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+}
+
 else if (matchDomain('puck.news')) {
   let paywall = document.querySelector('.paywall');
   if (paywall) {

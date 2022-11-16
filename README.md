@@ -189,6 +189,7 @@ Grouped in options:\
 [First Things](https://www.firstthings.com) -
 [National Review](https://www.nationalreview.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
+[Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -
 [Puck.news](https://puck.news) -
 [RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -

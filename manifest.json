@@ -498,6 +498,7 @@
     "*://*.post-gazette.com/*",
     "*://*.precisiononcologynews.com/*",
     "*://*.prevention.com/*",
+    "*://*.project-syndicate.org/*",
     "*://*.prospectmagazine.co.uk/*",
     "*://*.public.fr/*",
     "*://*.puck.news/*",
@@ -730,5 +731,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.3.2"
+  "version": "2.9.3.3"
 }

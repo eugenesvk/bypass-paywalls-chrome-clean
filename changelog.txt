@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add CNBC (Pro text)
+Add Project Syndicate (link to archive.is)
 Fix The Hill Times (text)
 
 * v2.9.3.0 (2022-11-13)

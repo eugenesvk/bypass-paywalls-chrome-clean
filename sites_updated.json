@@ -41,12 +41,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\.la-croix\\.com\\/build\\/.+\\/paywall.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
-  "Mediapart.fr": {
-    "domain": "mediapart.fr",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div[id^=\"paywall_\"], div.offre-basique|div.paywall-restricted-content, div.content-article",
-    "new_site": 1
-  },
   "Philosophie Magazine": {
     "domain": "philomag.com",
     "allow_cookies": 1,
@@ -77,11 +71,6 @@
     "domain": "nypost.com",
     "allow_cookies": 1,
     "block_regex": "\\.nypost\\.com\\/zephr\\/feature"
-  },
-  "The New York Sun": {
-    "domain": "nysun.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.nysun\\.com\\/zephr\\/features"
   },
   "The Spectator (UK)": {
     "domain": "spectator.co.uk",
