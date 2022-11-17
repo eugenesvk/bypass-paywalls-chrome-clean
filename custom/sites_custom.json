@@ -145,7 +145,7 @@
   },
   "Lyrik.fr": {
     "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com",
+    "block_regex": "\\.qiota\\.com\\/",
     "domain": "lyrik.fr"
   },
   "Mailplus.co.uk": {
@@ -181,7 +181,7 @@
   },
   "Odt.co.nz": {
     "allow_cookies": 1,
-    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/scripts\\/tw\\.js",
+    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall\\/",
     "domain": "odt.co.nz"
   },
   "Physicsworld.com": {
@@ -194,22 +194,22 @@
   },
   "Pressherald.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net",
+    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
     "domain": "pressherald.com"
   },
   "Reviewjournal.com": {
     "allow_cookies": 1,
-    "block_regex": "js\\.matheranalytics\\.com",
+    "block_regex": "js\\.matheranalytics\\.com\\/",
     "domain": "reviewjournal.com"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com",
+    "block_regex": "js\\.pelcro\\.com\\/",
     "domain": "siliconrepublic.com"
   },
   "Sltrib.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
+    "block_regex": "\\.tinypass\\.com\\/",
     "domain": "sltrib.com"
   },
   "Speld.nl": {

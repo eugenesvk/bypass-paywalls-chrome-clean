@@ -6,6 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
+var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser');
 
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'mediapart.fr', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
@@ -21,7 +22,6 @@ var restrictions = {
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
-  'faz.net': /^((?!\.faz\.net\/aktuell\/(\?switchfaznet)?$).)*$/,
   'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'lequipe.fr': /^((?!\.lequipe\.fr\/.+\/les-notes\/).)*$/,
   'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
@@ -157,6 +157,12 @@ function check_sites_updated() {
   });
 }
 
+function prep_regex_str(str, domain = '') {
+  if (domain)
+    str = str.replace(/{domain}/g, domain.replace(/\./g, '\\.'));
+  return str.replace(/^\//, '').replace(/\/\//g, '/').replace(/([^\\])\/$/, "$1")
+}
+
 function set_rules(sites, sites_updated, sites_custom) {
   initSetRules();
   for (let site in sites) {
@@ -212,7 +218,7 @@ function set_rules(sites, sites_updated, sites_custom) {
               if (rule.hasOwnProperty('block_regex')) {
                 if (block_regex_default instanceof RegExp)
                   block_regex_default = block_regex_default.source;
-                rule.block_regex = '(' + block_regex_default + '|' + rule.block_regex.replace(/(^\/|\/$)/g, '') + ')';
+                rule.block_regex = '(' + block_regex_default + '|' + prep_regex_str(rule.block_regex, domain) + ')';
               } else
                 rule.block_regex = block_regex_default;
             }
@@ -237,9 +243,9 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexes[domain] = rule.block_regex;
           else {
             try {
-              blockedRegexes[domain] = new RegExp(rule.block_regex.replace(/{domain}/g, domain.replace(/\./g, '\\.')).replace(/(^\/|\/$)/g, ''));
+              blockedRegexes[domain] = new RegExp(prep_regex_str(rule.block_regex, domain));
             } catch (e) {
-              false;
+              console.log(`regex not valid, error: ${e}`);
             }
           }
         }
@@ -248,9 +254,9 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
           else {
             try {
-              blockedRegexesGeneral[domain] = {block_regex: new RegExp(rule.block_regex_general.replace(/(^\/|\/$)/g, ''))};
+              blockedRegexesGeneral[domain] = {block_regex: new RegExp(prep_regex_str(rule.block_regex_general, domain))};
             } catch (e) {
-              false;
+              console.log(`regex not valid, error: ${e}`);
             }
           }
           blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
@@ -260,9 +266,9 @@ function set_rules(sites, sites_updated, sites_custom) {
             blockedJsInline[domain] = rule.block_js_inline;
           else {
             try {
-              blockedJsInline[domain] = new RegExp(rule.block_js_inline.replace(/{domain}/g, domain.replace(/\./g, '\\.')).replace(/(^\/|\/$)/g, ''));
+              blockedJsInline[domain] = new RegExp(prep_regex_str(rule.block_js_inline, domain));
             } catch (e) {
-              false;
+              console.log(`regex not valid, error: ${e}`);
             }
           }
         }
@@ -781,7 +787,7 @@ if (typeof browser !== 'object') {
 
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
-  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url)) {
+  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url) || kiwi_browser) {
     if (/^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
       runOnTab(tab);
     }

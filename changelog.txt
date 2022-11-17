@@ -4,7 +4,9 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add CNBC (Pro text)
 Add Project Syndicate (link to archive.is)
+Fix Madsack Mediengruppe
 Fix The Hill Times (text)
+Fix custom sites (block_regex)
 
 * v2.9.3.0 (2022-11-13)
 Add Ad.nl (+ regional) & Hln.be (link to archive.is)

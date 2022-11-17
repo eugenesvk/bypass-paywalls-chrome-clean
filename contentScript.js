@@ -623,7 +623,8 @@ else if (matchDomain('faz.net')) {
       }
     }
     let lay_paysocial = document.querySelector('div.lay-PaySocial');
-    removeDOMElement(lay_paysocial);
+    let ads = document.querySelectorAll('div.iqadtile_wrapper');
+    removeDOMElement(lay_paysocial, ...ads);
   }
 }
 
@@ -775,17 +776,17 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
       let paidcontent_reg = document.querySelector('div.pdb-article-paidcontent-registration');
       removeDOMElement(paidcontent_reg);
     } else {
-      let paywall = document.querySelector('div.paywall');
+      let paywall = document.querySelector('div.paywalledContent');
       if (paywall) {
+        paywall.removeAttribute('class');
         let gradient = document.querySelector('div[class^="ArticleContentLoaderstyled__Gradient"]');
         let loading = document.querySelector('#article > svg');
-        removeDOMElement(paywall, gradient, loading);
-        let article = document.querySelector('div[class*="ArticleTeaserContainer"] > div:not([class])');
+        removeDOMElement(gradient, loading);
+        let article = paywall.querySelector('div:not([class])');
         let json_script = getArticleJsonScript();
         if (json_script) {
           let json = JSON.parse(json_script.text);
           if (article && json) {
-            article.parentNode.removeAttribute('class');
             let json_text = json.articleBody;
             let article_new = document.createElement('span');
             let par = article.querySelector('p');
