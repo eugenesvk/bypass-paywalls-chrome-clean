@@ -3503,6 +3503,28 @@ else if (matchDomain('quora.com')) {
   let mask_image = document.querySelector('div.ePDXbR');
   if (mask_image)
     mask_image.classList.remove('ePDXbR');
+  let read_more_buttons = document.querySelectorAll('button.puppeteer_test_read_more_button');
+  for (let elem of read_more_buttons)
+    elem.click();
+  let overlay_cards = document.querySelectorAll('div[class*="OverlayCard"]');
+  for (let elem of overlay_cards)
+    elem.removeAttribute('class');
+  window.setTimeout(function () {
+    let answers = document.querySelectorAll('div[class*="dom_annotate_question_answer_item_"]');
+    for (let answer of answers) {
+      let wall = answer.querySelector('div.content-monetization-wall');
+      if (wall) {
+        wall.classList.remove('content-monetization-wall');
+        let timestamp_link = answer.querySelector('a.answer_timestamp[href]');
+        if (timestamp_link) {
+          let answer_link = document.createElement('a');
+          answer_link.innerText = 'BPC > open Quora+ answer';
+          answer_link.href = timestamp_link.href;
+          wall.appendChild(answer_link);
+        }
+      }
+    }
+  }, 500);
 }
 
 else if (matchDomain('qz.com')) {
@@ -3555,13 +3577,18 @@ else if (matchDomain('scmp.com')) {
 }
 
 else if (matchDomain('seekingalpha.com')) {
-  let url = window.location.href;
-  let locked = document.querySelector('div[data-test-id="post-locked-banner"]');
-  if (locked && !url.includes('/amp/')) {
-    window.setTimeout(function () {
-      window.location.href = url.replace('seekingalpha.com/', 'seekingalpha.com/amp/');
-    }, 500);
-  } else if (url.includes('/amp/')) {
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let locked = document.querySelector('div[data-test-id="post-locked-banner"]');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (locked && amphtml) {
+      locked.removeAttribute('data-test-id');
+      window.location.href = amphtml.href;
+    } else {
+      let read_more = document.querySelector('button[id^="continueReadingButton"]');
+      if (read_more)
+        read_more.click();
+    }
+  } else {
     amp_unhide_access_hide('*="premium_access OR"', '', '.ad-wrap');
     let paywall = document.querySelector('[class*="paywall-container"]');
     removeDOMElement(paywall);

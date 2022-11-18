@@ -1553,9 +1553,8 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
-  "Quora (not plus)": {
+  "Quora (regwall)": {
     domain: "quora.com",
-    allow_cookies: 1,
     useragent: "googlebot"
   },
   "Quotidiano.net (+ regional)": {
