@@ -616,7 +616,7 @@ Grouped in options:\
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
-Algemeen Dagblad (+ regional; link to archive.is) sites like\
+*Algemeen Dagblad (+ regional; link to archive.is)* sites like\
 [Algemeen Dagblad](https://www.ad.nl) -
 [BN DeStem](https://www.bndestem.nl) -
 [Brabants Dagblad](https://www.bd.nl) -
@@ -631,7 +631,7 @@ Algemeen Dagblad (+ regional; link to archive.is) sites like\
 [Humo](https://www.humo.be) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
-*Mediahuis België* sites like\
+*Mediahuis België (link to archive.is)* sites like\
 [De Standaard](https://www.standaard.be) -
 [Het Nieuwsblad](https://www.nieuwsblad.be)\
 *Mediahuis Nederland Regional* sites like\
@@ -707,6 +707,7 @@ Grouped in options:\
 
 ##### Sweden
 [Aftonbladet](https://www.aftonbladet.se) -
+[Dagens ETC](https://www.etc.se) -
 [Dagens Industri](https://www.di.se) -
 [NyTeknik](https://www.nyteknik.se)
 

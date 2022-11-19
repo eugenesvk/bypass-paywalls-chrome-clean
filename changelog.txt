@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add CNBC (Pro text)
+Add Etc.se
 Add Project Syndicate (link to archive.is)
 Fix Madsack Mediengruppe
 Fix Quora (plus-link)

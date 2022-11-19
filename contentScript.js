@@ -821,7 +821,31 @@ else
 
 } else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/norway/sweden
 
-if (matchDomain('iltalehti.fi')) {
+if (matchDomain('etc.se')) {
+  let paywall = document.querySelector('div.paywalled');
+  if (paywall) {
+    paywall.removeAttribute('class');
+    let gradient = document.querySelector('div.bg-gradient-white');
+    if (gradient)
+      gradient.removeAttribute('class');
+    let footer = document.querySelector('footer');
+    removeDOMElement(footer.parentNode);
+  }
+  let ads = document.querySelectorAll('div[class$="-ad"]');
+  removeDOMElement(...ads);
+  let video_iframes = document.querySelectorAll('div.embed-block > iframe[width][height]');
+  for (let elem of video_iframes) {
+    if (elem.width > 1000) {
+      let ratio = elem.width / 640;
+      if (window.navigator.userAgent.toLowerCase().includes('mobile'))
+        ratio = elem.width / 320;
+      elem.width = elem.width / ratio;
+      elem.height = elem.height / ratio;
+    }
+  }
+}
+
+else if (matchDomain('iltalehti.fi')) {
   let ads = document.querySelectorAll('div[class^="p2m385-"], div#anop-container, .ad, div.iZivCJ');
   hideDOMElement(...ads);
   if (true) {

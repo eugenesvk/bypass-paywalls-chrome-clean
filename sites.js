@@ -355,6 +355,10 @@ var defaultSites = {
       }
     ]
   },
+  "Dagens ETC": {
+    domain: "etc.se",
+    allow_cookies: 1
+  },
   "Dagens Industri": {
     domain: "di.se",
     allow_cookies: 1,
