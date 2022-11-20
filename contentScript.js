@@ -819,7 +819,7 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/norway/sweden
+} else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/sweden
 
 if (matchDomain('etc.se')) {
   let paywall = document.querySelector('div.paywalled');

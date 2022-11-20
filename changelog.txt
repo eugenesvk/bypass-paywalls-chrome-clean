@@ -5,6 +5,7 @@ Post-release
 Add CNBC (Pro text)
 Add Etc.se
 Add Project Syndicate (link to archive.is)
+Remove Haaretz.co.il & The Marker (fix obsolete)
 Fix Madsack Mediengruppe
 Fix Quora (plus-link)
 Fix The Hill Times (text)
