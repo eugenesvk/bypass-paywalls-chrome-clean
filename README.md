@@ -800,8 +800,10 @@ Grouped in options:\
 
 ##### Israel
 [Globes](https://www.globes.co.il) -
+[Haaretz.co.il](https://www.haaretz.co.il) -
 [Haaretz.com](https://www.haaretz.com) -
-[The Jerusalem Post](https://www.jpost.com)
+[The Jerusalem Post](https://www.jpost.com) -
+[The Marker](https://www.themarker.com)
 
 #### Latin America
 

@@ -53,7 +53,7 @@ var remove_cookies = [];
 var remove_cookies_select_hold, remove_cookies_select_drop;
 
 // Set User-Agent
-var use_google_bot, use_bing_bot;
+var use_google_bot, use_bing_bot, use_msn_bot;
 // Set Referer
 var use_facebook_referer, use_google_referer, use_twitter_referer;
 // Set random IP-address
@@ -91,6 +91,7 @@ function initSetRules() {
   remove_cookies_select_hold = {};
   use_google_bot = [];
   use_bing_bot = [];
+  use_msn_bot = [];
   use_facebook_referer = [];
   use_google_referer = [];
   use_twitter_referer = [];
@@ -111,11 +112,14 @@ function initSetRules() {
   init_custom_domains();
 }
 
-const userAgentDesktopG = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-const userAgentMobileG = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)"
+const userAgentDesktopG = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
+const userAgentMobileG = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)";
 
-const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
-const userAgentMobileB = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
+const userAgentMobileB = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
+
+const userAgentDesktopM = 'Mozilla/5.0 (compatible; MSNbot/1.1; +http://search.msn.com/msnbot.htm)';
+const userAgentMobileM = 'Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; MSNbot/1.1 +http://search.msn.com/msnbot.htm)';
 
 var enabledSites = [];
 var disabledSites = [];
@@ -282,6 +286,10 @@ function set_rules(sites, sites_updated, sites_custom) {
             if (!use_bing_bot.includes(domain))
               use_bing_bot.push(domain);
             break;
+          case 'msnbot':
+            if (!use_msn_bot.includes(domain))
+              use_msn_bot.push(domain);
+            break;
           }
         }
         if (rule.referer) {
@@ -334,7 +342,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_msn_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -785,9 +793,10 @@ if (typeof browser !== 'object') {
     }
   }
 
+if (!kiwi_browser) {
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
-  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url) || kiwi_browser) {
+  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url)) {
     if (/^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
       runOnTab(tab);
     }
@@ -804,6 +813,7 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
+}
 
 setInterval(function () {
   let current_date_str = currentDateStr();
@@ -1068,6 +1078,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));
+  var msnbotEnabled = matchUrlDomain(use_msn_bot, details.url);
 
   // if referer exists, set it
   requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -1127,6 +1138,14 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     })
   }
 
+  // override User-Agent to use Msnbot
+  if (msnbotEnabled) {
+    requestHeaders.push({
+      "name": "User-Agent",
+      "value": useUserAgentMobile ? userAgentMobileM : userAgentDesktopM
+    })
+  }
+
   // random IP for sites in use_random_ip
   let domain_random;
   if (domain_random = matchUrlDomain(use_random_ip, details.url)) {
@@ -1150,6 +1169,33 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       }
       return requestHeader;
     });
+  }
+
+  if (kiwi_browser) {
+    let tabId = details.tabId;
+    if (tabId !== -1) {
+      if (['main_frame', 'sub_frame'].includes(details.type)) {
+        ext_api.tabs.get(tabId, function (tab) {
+          if (!ext_api.runtime.lastError && tab && isSiteEnabled(tab)) {
+            runOnTab(tab);
+          }
+        });
+      }
+    } else {
+      if (['xmlhttprequest'].includes(details.type)) {
+        ext_api.tabs.query({
+          active: true,
+          currentWindow: true
+        }, function (tabs) {
+          if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+            let tab = tabs[0];
+            if (isSiteEnabled(tab)) {
+              runOnTab(tab);
+            }
+          }
+        });
+      }
+    }
   }
 
   return { requestHeaders: requestHeaders };
