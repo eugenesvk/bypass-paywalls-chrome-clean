@@ -169,6 +169,18 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|cdn\.cxense\.com\/)/
   },
+  "Australia Nine Entertainment": {
+    domain: "###_au_nine_ent",
+    group: [
+      "afr.com",
+      "brisbanetimes.com.au",
+      "smh.com.au",
+      "theage.com.au",
+      "watoday.com.au"
+    ],
+    allow_cookies: 1,
+    block_regex: "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
+  },
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,
@@ -229,10 +241,6 @@ var defaultSites = {
     domain: "bqprime.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
-  },
-  "Brisbane Times": {
-    domain: "brisbanetimes.com.au",
-    group_rule: "###_gr_au_nine_domains"
   },
   "Business Insider": {
     domain: "businessinsider.com",
@@ -1736,10 +1744,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
   },
-  "The Age": {
-    domain: "theage.com.au",
-    group_rule: "###_gr_au_nine_domains"
-  },
   "The American Interest": {
     domain: "the-american-interest.com",
     allow_cookies: 1
@@ -2002,10 +2006,6 @@ var defaultSites = {
     domain: "thestar.com.my",
     block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/)/
   },
-  "The Sydney Morning Herald": {
-    domain: "smh.com.au",
-    group_rule: "###_gr_au_nine_domains"
-  },
   "The Telegraph": {
     domain: "telegraph.co.uk",
     allow_cookies: 1,
@@ -2140,10 +2140,6 @@ var defaultSites = {
     domain: "vn.nl",
     allow_cookies: 1
   },
-  "WAtoday": {
-    domain: "watoday.com.au",
-    group_rule: "###_gr_au_nine_domains"
-  },
   "Weltkunst": {
     domain: "weltkunst.de",
     allow_cookies: 1,
@@ -2168,10 +2164,6 @@ var defaultSites = {
     domain: "winnipegfreepress.com",
     allow_cookies: 1,
     block_regex: /(account\.winnipegfreepress\.com\/api\/v\d\/auth\/identify|cdn\.cxense\.com\/)/
-  },
-  "###_gr_au_nine_domains": {
-    group_rule_domains: ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "* Block general paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
     domain: "###"

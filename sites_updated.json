@@ -89,5 +89,10 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
+  },
+  "###_gr_au_nine_domains": {
+    "group_rule_domains": ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
+    "allow_cookies": 1,
+    "block_regex": "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
   }
 }
