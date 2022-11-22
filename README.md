@@ -447,7 +447,6 @@ Grouped in options:\
 [La Libre](https://www.lalibre.be) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
-[La Vie](https://www.lavie.fr) -
 [Le Journal du Dimanche](https://lejdd.fr) -
 [Le Journal du Net](https://www.journaldunet.com) -
 [Le Nouvel Economiste](https://www.lenouveleconomiste.fr) -

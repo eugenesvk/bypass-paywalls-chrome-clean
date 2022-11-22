@@ -354,7 +354,6 @@
     "*://*.lavanguardia.com/*",
     "*://*.lavenir.net/*",
     "*://*.laverdad.es/*",
-    "*://*.lavie.fr/*",
     "*://*.lavoixdunord.fr/*",
     "*://*.lavoz.com.ar/*",
     "*://*.lavozdigital.es/*",
@@ -732,5 +731,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.4.1"
+  "version": "2.9.4.2"
 }

@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Haaretz.co.il & The Marker
+Remove LaVie.fr
 
 * v2.9.4.0 (2022-11-20)
 Add CNBC (Pro text)
