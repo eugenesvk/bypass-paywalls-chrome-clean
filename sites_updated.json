@@ -50,6 +50,11 @@
     "allow_cookies": 1,
     "block_regex": "(\\.la-croix\\.com\\/build\\/.+\\/paywall.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
+  "La Vanguardia": {
+    "domain": "lavanguardia.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
+  },
   "Philosophie Magazine": {
     "domain": "philomag.com",
     "allow_cookies": 1,

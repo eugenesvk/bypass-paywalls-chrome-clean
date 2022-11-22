@@ -996,7 +996,7 @@ else if (matchDomain('suomensotilas.fi')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'lavanguardia.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain(['ara.cat', 'arabalears.cat'])) {
   let url = window.location.href;
@@ -1150,6 +1150,11 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
     let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.sidebar--sticky__space, div[data-bbnx-id*="cxense"]');
     removeDOMElement(...ads);
   }
+}
+
+else if (matchDomain('lavanguardia.com')) {
+  let ads = document.querySelectorAll('span.content-ad, span.hidden-ad');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('observador.pt')) {

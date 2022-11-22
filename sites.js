@@ -1071,7 +1071,7 @@ var defaultSites = {
   "La Vanguardia": {
     domain: "lavanguardia.com",
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/(js\/)?godo-)/
+    block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
   },
   "La Voz del Interior": {
     domain: "lavoz.com.ar",

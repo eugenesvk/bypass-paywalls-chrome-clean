@@ -5,6 +5,7 @@ Post-release
 Add Haaretz.co.il & The Marker
 Remove LaVie.fr
 Fix & grouping Australia Nine Entertainment
+Fix La Vanguardia (images)
 
 * v2.9.4.0 (2022-11-20)
 Add CNBC (Pro text)
