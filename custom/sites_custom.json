@@ -123,6 +123,11 @@
     "domain": "internationaltaxreview.com",
     "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
   },
+  "Investmentweek.co.uk": {
+    "allow_cookies": 1,
+    "domain": "investmentweek.co.uk",
+    "ld_google_webcache": "div#d-wrapper|div.article-content"
+  },
   "Irishexaminer.com": {
     "allow_cookies": 1,
     "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage\\/",

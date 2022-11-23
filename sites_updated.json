@@ -17,12 +17,6 @@
     }],
     "new_site": 1
   },
-  "Correio da Manhã": {
-    "domain": "cmjornal.pt",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(subscriptions|consent)-.+\\.js",
-    "amp_unhide": 1
-  },
   "Dagens ETC": {
     "domain": "etc.se",
     "allow_cookies": 1,
@@ -32,59 +26,10 @@
     }],
     "new_site": 1
   },
-  "Field & Stream": {
-    "domain": "fieldandstream.com",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "div[class^=\"mailmunch-\"]",
-        "rm_elem": 1
-      }, {
-        "cond": "html[class]",
-        "rm_attrib": "class"
-      }
-    ],
-    "new_site": 1
-  },
-  "La Croix": {
-    "domain": "la-croix.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.la-croix\\.com\\/build\\/.+\\/paywall.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
-  },
   "La Vanguardia": {
     "domain": "lavanguardia.com",
     "allow_cookies": 1,
     "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
-  },
-  "Philosophie Magazine": {
-    "domain": "philomag.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/"
-  },
-  "Public.fr": {
-    "domain": "public.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/",
-    "cs_code": [{
-        "cond": "#poool-widget-content",
-        "rm_elem": 1
-      }, {
-        "cond": ".cnt[data-poool-mode=\"hide\"]",
-        "rm_attrib": "data-poool-mode"
-      }
-    ],
-    "new_site": 1
-  },
-  "Record.pt": {
-    "domain": "record.pt",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-(subscriptions|consent)-.+\\.js",
-    "amp_unhide": 1,
-    "new_site": 1
-  },
-  "The New York Post": {
-    "domain": "nypost.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.nypost\\.com\\/zephr\\/feature"
   },
   "The Spectator (UK)": {
     "domain": "spectator.co.uk",

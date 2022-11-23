@@ -706,6 +706,16 @@ else if (matchDomain('nw.de')) {
   }
 }
 
+else if (matchDomain('nzz.ch')) {
+  if (!window.location.href.includes('/amp/')) {
+    let ads = document.querySelectorAll('div.resor');
+    removeDOMElement(...ads);
+  } else {
+    let amp_ads = document.querySelectorAll('amp-ad');
+    removeDOMElement(...amp_ads);
+  }
+}
+
 else if (matchDomain('rheinpfalz.de')) {
   let url = window.location.href;
   if (url.includes('reduced=true')) {
@@ -814,6 +824,12 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
   } else {
     ampToHtml();
   }
+}
+
+else if (document.querySelector('script[src^="https://assets.static-chmedia.ch/"]')) {// nzz.ch regional/CH Media
+  let infobox_body = document.querySelector('div.infobox__body');
+  if (infobox_body)
+    infobox_body.removeAttribute('class');
 }
 
 else
