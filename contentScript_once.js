@@ -25,6 +25,16 @@ if (matchDomain('gitlab.com')) {
   }, 1000);
 }
 
+else if (matchDomain('nzherald.co.nz')) {
+  function nzherald_main() {
+    if (window.Fusion)
+      window.Fusion.globalContent.isPremium = false;
+  }
+  window.setTimeout(function () {
+    insert_script(nzherald_main);
+  }, 100);
+}
+
 function matchDomain(domains, hostname) {
   var matched_domain = false;
   if (!hostname)
@@ -33,4 +43,15 @@ function matchDomain(domains, hostname) {
     domains = [domains];
   domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matched_domain = domain));
   return matched_domain;
+}
+
+function insert_script(func, insertAfterDom) {
+  let bpc_script = document.querySelector('script#bpc_script');
+  if (!bpc_script) {
+    let script = document.createElement('script');
+    script.setAttribute('id', 'bpc_script');
+    script.appendChild(document.createTextNode('(' + func + ')();'));
+    let insertAfter = insertAfterDom ? insertAfterDom : (document.body || document.head || document.documentElement);
+    insertAfter.appendChild(script);
+  }
 }

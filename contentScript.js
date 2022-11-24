@@ -2480,10 +2480,10 @@ else if (matchDomain('valor.globo.com')) {
     replaceDomElementExt(url_cache, true, false, 'div.protected-content');
   }
   window.setTimeout(function () {
-    let skeleton_box = document.querySelector('div.glb-skeleton-box');
-    if (skeleton_box) {
-      skeleton_box.classList.remove('glb-skeleton-box');
-      skeleton_box.removeAttribute('style');
+    let skeleton_box = document.querySelectorAll('div.glb-skeleton-box');
+    for (let elem of skeleton_box) {
+      elem.classList.remove('glb-skeleton-box');
+      elem.removeAttribute('style');
     }
   }, 1000);
 }
@@ -3430,13 +3430,7 @@ else if (matchDomain('nytimes.com')) {
 }
 
 else if (matchDomain('nzherald.co.nz')) {
-  function nzherald_main() {
-    if (window.Fusion)
-      window.Fusion.globalContent.isPremium = false;
-  }
-  window.setTimeout(function () {
-    insert_script(nzherald_main);
-  }, 100);
+  // plus code in contentScript_once.js (timing)
   let article_content = document.querySelector('.article__content');
   if (article_content) {
     let premium = document.querySelector('span.ellipsis');
@@ -3922,18 +3916,21 @@ else if (matchDomain('theglobeandmail.com')) {
 }
 
 else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
-  let counter = document.querySelector('#test');
-  removeDOMElement(counter);
+  if (!window.location.pathname.endsWith('/amp/')) {
+    let counter = document.querySelector('#test');
+    let ads = document.querySelectorAll('.ad, .article-ad, .dfp-ad');
+    removeDOMElement(counter, ...ads);
+  } else {
+    let ads = document.querySelectorAll('amp-ad, amp-embed, [class^="height"], [class^="advt"], [id^="piano"]');
+    removeDOMElement(...ads);
+  }
   function hindu_main() {
-    document.addEventListener('bpc_event', function (e) {
-      if (window) {
-        window.Adblock = false;
-        window.isNonSubcribed = false;
-      }
-    })
+    if (window) {
+      window.Adblock = false;
+      window.isNonSubcribed = false;
+    }
   }
   insert_script(hindu_main);
-  document.dispatchEvent(new CustomEvent('bpc_event', {}));
 }
 
 else if (matchDomain('theinitium.com')) {

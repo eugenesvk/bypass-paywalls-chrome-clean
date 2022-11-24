@@ -6,6 +6,7 @@ Add Haaretz.co.il & The Marker
 Remove LaVie.fr
 Fix & grouping Australia Nine Entertainment
 Fix La Vanguardia (images)
+Fix NzHerald (timing)
 Fix Nzz.ch regional (css)
 
 * v2.9.4.0 (2022-11-20)

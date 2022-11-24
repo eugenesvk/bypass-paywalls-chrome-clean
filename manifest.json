@@ -39,7 +39,8 @@
   ],
   "content_scripts": [{
       "matches": [
-        "*://*.gitlab.com/magnolia1234"
+        "*://*.gitlab.com/magnolia1234",
+        "*://*.nzherald.co.nz/*"
       ],
       "run_at": "document_start",
       "js": ["contentScript_once.js"]
@@ -731,5 +732,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.4.4"
+  "version": "2.9.4.5"
 }
