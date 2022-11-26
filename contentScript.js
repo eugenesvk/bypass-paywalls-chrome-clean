@@ -1591,17 +1591,6 @@ else if (matchDomain('marianne.net')) {
   }
 }
 
-else if (matchDomain('mediapart.fr')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div[id^="paywall_"], div.offre-basique');
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.paywall-restricted-content, div.content-article');
-  }
-}
-
 else if (matchDomain('nouvelobs.com')) {
   let paywall = document.querySelector('.paywall');
   removeDOMElement(paywall);

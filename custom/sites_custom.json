@@ -143,6 +143,11 @@
     "domain": "lindipendente.online",
     "useragent": "googlebot"
   },
+  "Lkz.de": {
+    "allow_cookies": 1,
+    "domain": "lkz.de",
+    "useragent": "googlebot"
+  },
   "Lsa-conso.fr": {
     "allow_cookies": 1,
     "domain": "lsa-conso.fr",
@@ -228,6 +233,11 @@
   "Sportsbusinessjournal.com": {
     "domain": "sportsbusinessjournal.com",
     "random_ip": "all"
+  },
+  "Stimme.de": {
+    "allow_cookies": 1,
+    "domain": "stimme.de",
+    "ld_google_webcache": "div.paywall-product-box|div.art-text"
   },
   "Supchina.com": {
     "allow_cookies": 1,

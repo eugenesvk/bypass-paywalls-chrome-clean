@@ -456,7 +456,6 @@ Grouped in options:\
 [Les Échos](https://www.lesechos.fr) -
 [Les Inrockuptibles](https://www.lesinrocks.com) -
 [Marianne](https://www.marianne.net) -
-[Mediapart (fr/en/es)](https://www.mediapart.fr) -
 [Paris Match](https://www.parismatch.com) -
 [Philonomist (fr/en)](https://www.philonomist.com) -
 [Philosophie Magazine](https://www.philomag.com) -

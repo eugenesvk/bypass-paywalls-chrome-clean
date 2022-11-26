@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Haaretz.co.il & The Marker
 Remove LaVie.fr
+Remove Mediapart.fr
 Fix & grouping Australia Nine Entertainment
 Fix La Vanguardia (images)
 Fix NzHerald (timing)
