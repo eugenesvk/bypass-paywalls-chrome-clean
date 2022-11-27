@@ -2,11 +2,12 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove BusinessPost.ie (fix obsolete)
 
 * v2.9.5.0 (2022-11-27)
 Add Haaretz.co.il & The Marker
-Remove LaVie.fr
-Remove Mediapart.fr
+Remove LaVie.fr (fix obsolete)
+Remove Mediapart.fr (fix obsolete)
 Fix & grouping Australia Nine Entertainment
 Fix La Vanguardia (images)
 Fix NzHerald (timing)

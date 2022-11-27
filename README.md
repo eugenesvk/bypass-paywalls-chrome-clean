@@ -388,7 +388,6 @@ Grouped in options:\
 
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
-[Business Post](https://www.businesspost.ie) -
 [Citywire](https://www.citywire.com) -
 [Evening Standard](https://www.standard.co.uk) -
 [Financial News](https://www.fnlondon.com) -
