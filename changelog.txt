@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.9.5.0 (2022-11-27)
 Add Haaretz.co.il & The Marker
 Remove LaVie.fr
 Remove Mediapart.fr
