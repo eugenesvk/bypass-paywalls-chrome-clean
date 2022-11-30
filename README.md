@@ -456,7 +456,6 @@ Grouped in options:\
 [Les Inrockuptibles](https://www.lesinrocks.com) -
 [Marianne](https://www.marianne.net) -
 [Paris Match](https://www.parismatch.com) -
-[Philonomist (fr/en)](https://www.philonomist.com) -
 [Philosophie Magazine](https://www.philomag.com) -
 [Public](https://www.public.fr) -
 [Science & Vie](https://www.science-et-vie.com) -

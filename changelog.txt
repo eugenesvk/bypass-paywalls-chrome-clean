@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Welt.de (link to archive.is)
 Remove BusinessPost.ie (fix obsolete)
+Remove Philonomist (fix obsolete)
 
 * v2.9.5.0 (2022-11-27)
 Add Haaretz.co.il & The Marker

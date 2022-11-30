@@ -486,7 +486,6 @@
     "*://*.petitbleu.fr/*",
     "*://*.philanthropy.com/*",
     "*://*.philomag.com/*",
-    "*://*.philonomist.com/*",
     "*://*.philosophynow.org/*",
     "*://*.pilotonline.com/*",
     "*://*.piqd.de/*",
@@ -731,5 +730,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.5.1"
+  "version": "2.9.5.2"
 }
