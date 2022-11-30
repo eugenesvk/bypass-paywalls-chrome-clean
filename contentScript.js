@@ -9,7 +9,7 @@ var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca',
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
-var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
+var de_madsack_custom_domains = ['aller-zeitung.de', 'dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'op-marburg.de', 'paz-online.de', 'sn-online.de', 'waz-online.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
@@ -50,7 +50,7 @@ function getArticleJsonScript() {
   let scripts = document.querySelectorAll('script[type="application/ld+json"]');
   let json_script;
   for (let script of scripts) {
-    if (script.innerText.includes('articleBody')) {
+    if (script.innerText.match(/"(articleBody|text)":/)) {
       json_script = script;
       break;
     }
@@ -72,13 +72,18 @@ if ((bg2csData !== undefined) && bg2csData.ld_json && dompurify_loaded) {
         removeDOMElement(...paywall);
         let json_script = getArticleJsonScript();
         if (json_script) {
-          let json_text = parseHtmlEntities(JSON.parse(json_script.text).articleBody);
-          let content = document.querySelector(article_sel);
-          if (json_text && content) {
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
-            let content_new = doc.querySelector('div');
-            content.parentNode.replaceChild(content_new, content);
+          try {
+            let json = JSON.parse(json_script.text);
+            let json_text = parseHtmlEntities(json.articleBody ? json.articleBody : json.text);
+            let content = document.querySelector(article_sel);
+            if (json_text && content) {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              let content_new = doc.querySelector('div');
+              content.parentNode.replaceChild(content_new, content);
+            }
+          } catch (err) {
+            console.log(err);
           }
         }
       }
@@ -745,6 +750,19 @@ else if (matchDomain('tagesspiegel.de')) {
     if (article)
       article.insertBefore(archiveLink(url), article.firstChild);
   }
+}
+
+else if (matchDomain('welt.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div[data-premium-content-loader-id^="spinner-article-"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div[data-qa="Article.PremiumContent"]');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+  let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain(de_westfalen_medien_domains)) {

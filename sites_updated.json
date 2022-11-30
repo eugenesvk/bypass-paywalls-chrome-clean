@@ -1,31 +1,4 @@
 {
-  "CNBC": {
-    "domain": "cnbc.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "cs_code": [{
-        "cond": "div.ArticleGate-proGate",
-        "rm_elem": 1,
-        "elems": [{
-            "cond": "span[hidden]",
-            "rm_attrib": "class"
-          }, {
-            "cond": "span[hidden]",
-            "rm_attrib": "hidden"
-          }
-        ]
-    }],
-    "new_site": 1
-  },
-  "Dagens ETC": {
-    "domain": "etc.se",
-    "allow_cookies": 1,
-    "cs_code": [{
-        "cond": "div.paywalled",
-        "rm_attrib": "class"
-    }],
-    "new_site": 1
-  },
   "La Vanguardia": {
     "domain": "lavanguardia.com",
     "allow_cookies": 1,
