@@ -1647,6 +1647,27 @@ else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenee
   }, 500);
 }
 
+else if (matchDomain('lamontagne.fr') || document.querySelector('ul.list-inline > li > a[href="https://www.centrefrance.com/"]')) {// Groupe Centre France
+  let paywall = document.querySelector('div#poool-widget');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = json.articleBody;
+        let content = document.querySelector('div.entry-content');
+        if (json_text && content) {
+          content.innerHTML = '';
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          content.appendChild(article_new);
+        }
+      }
+    }
+  }
+}
+
 else
   csDone = true;
 

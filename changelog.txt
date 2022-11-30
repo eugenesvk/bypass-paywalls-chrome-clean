@@ -5,6 +5,7 @@ Post-release
 Add Welt.de (link to archive.is)
 Remove BusinessPost.ie (fix obsolete)
 Remove Philonomist (fix obsolete)
+Fix Groupe Centre France (text)
 
 * v2.9.5.0 (2022-11-27)
 Add Haaretz.co.il & The Marker

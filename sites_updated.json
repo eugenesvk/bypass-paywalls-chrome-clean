@@ -1,4 +1,13 @@
 {
+  "Groupe Centre France": {
+    "domain": "###_fr_gcf",
+    "group": [
+      "lamontagne.fr"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr\\/",
+    "ld_json": "div#poool-widget|div.entry-content"
+  },
   "La Vanguardia": {
     "domain": "lavanguardia.com",
     "allow_cookies": 1,
