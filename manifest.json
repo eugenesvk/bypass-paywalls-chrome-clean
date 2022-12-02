@@ -184,6 +184,7 @@
     "*://*.diariovasco.com/*",
     "*://*.digiday.com/*",
     "*://*.discovermagazine.com/*",
+    "*://*.dn.no/*",
     "*://*.dna.fr/*",
     "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
@@ -730,5 +731,5 @@
     "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.5.2"
+  "version": "2.9.5.3"
 }

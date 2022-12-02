@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add DN.no
 Add Welt.de (link to archive.is)
 Remove BusinessPost.ie (fix obsolete)
 Remove Philonomist (fix obsolete)
@@ -34,7 +35,7 @@ Add Philomag.com
 Add Public.fr
 Add Record.pt
 Add The New York Post
-Remove Dn.no (fix obsolete)
+Remove DN.no (fix obsolete)
 Remove GElocal.it & Huffintonpost.it (fix obsolete)
 Remove Il Secolo XIX, La Stampa & Limes Online (fix obsolete)
 Fix Cmjornal.pt
