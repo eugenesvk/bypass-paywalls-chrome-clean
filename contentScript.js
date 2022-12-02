@@ -754,6 +754,17 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
+else if (matchDomain('sueddeutsche.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('offer-page, div.offer-page');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article, main > section > div > p');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+}
+
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.article--paid > div');
