@@ -3084,6 +3084,16 @@ else if (matchDomain('harpers.org')) {
 else if (matchDomain('hbr.org')) {
   let popup = document.querySelector('.persistent-banner');
   removeDOMElement(popup);
+  let paywall = document.querySelector('site-paywall');
+  if (paywall) {//legacy
+    removeDOMElement(paywall);
+    let intro = document.querySelector('.article-ideainbrief');
+    if (intro)
+      intro.removeAttribute('class');
+    let main_hidden = document.querySelector('div#main[style]');
+    if (main_hidden)
+      main_hidden.removeAttribute('style');
+  }
 }
 
 else if (matchDomain('hbrchina.org')) {

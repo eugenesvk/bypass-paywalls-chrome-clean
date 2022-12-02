@@ -910,7 +910,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
     let url_hostname = urlHost(details.url);
     if (header_referer_hostname.match(/\.(com|net)\.au$/)) {
       // block Piano.io for regional Australian Community Media sites (opt-in to custom sites)
-      var au_comm_media_domain = (details.url.startsWith('https://' + header_referer_hostname + '/promotions/website_content_esov/') && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
+      var au_comm_media_domain = (details.url.match(/\.au\/story\/(\d){7,}/) && ['main_frame'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
       if (au_comm_media_domain)
         au_comm_media_domains = customAddRules(au_comm_media_domains, {allow_cookies: 1}, blockedRegexes['canberratimes.com.au']);
       else if (header_referer_hostname.endsWith('.com.au')) {

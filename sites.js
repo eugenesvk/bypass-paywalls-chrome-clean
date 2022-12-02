@@ -167,7 +167,7 @@ var defaultSites = {
       "westernadvocate.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(cdn-au\.piano\.io\/api\/tinypass.+\.js|cdn\.cxense\.com\/)/
+    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/)/
   },
   "Australia Nine Entertainment": {
     domain: "###_au_nine_ent",
@@ -828,7 +828,7 @@ var defaultSites = {
   "Harper's Magazine": {
     domain: "harpers.org"
   },
-  "Harvard Business Review (free articles only)": {
+  "Harvard Business Review": {
     domain: "hbr.org",
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },

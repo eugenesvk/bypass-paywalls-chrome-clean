@@ -7,6 +7,7 @@ Add Sueddeutsche Zeitung (link to archive.is)
 Add Welt.de (link to archive.is)
 Remove BusinessPost.ie (fix obsolete)
 Remove Philonomist (fix obsolete)
+Fix Australian Community Media (identify on url)
 Fix Groupe Centre France (text)
 
 * v2.9.5.0 (2022-11-27)
@@ -1494,7 +1495,7 @@ Include sites from local js-file (maintenance)
 Update Options - new release check
 
 * v1.6.4.4 (2020-02-20)
-Add Australian Community Media daily newspapers
+Add Australian Community Media (daily)
 Add Clarin (Argentina)
 Add WAtoday (Australia)
 Fix TheNation paywall-script block

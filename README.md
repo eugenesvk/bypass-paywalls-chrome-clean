@@ -101,7 +101,7 @@ _* free articles only._
 [Entrepreneur](https://www.entrepreneur.com) -
 [Forbes](https://www.forbes.com) -
 [Fortune](https://fortune.com) -
-[Harvard Business Review](https://www.hbr.org)* -
+[Harvard Business Review](https://www.hbr.org) -
 [Inc.com](https://www.inc.com) -
 [Law.com](https://www.law.com)* -
 [Law360](https://www.law360.com)* -
