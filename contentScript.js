@@ -2800,10 +2800,14 @@ else if (matchDomain('cen.acs.org')) {
 else if (matchDomain(['chronicle.com', 'philanthropy.com'])) {
   let preview = document.querySelector('div[data-content-summary]');
   removeDOMElement(preview);
-  let article_hidden = document.querySelector('div.contentBody');
+  let article_hidden = document.querySelector('div.contentBody[hidden]');
   if (article_hidden) {
-    article_hidden.removeAttribute('data-content-body');
-    article_hidden.removeAttribute('hidden');
+    let attributes = article_hidden.attributes;
+    for (let elem of attributes) {
+      let name = elem.name;
+      if (name !== 'class')
+        article_hidden.removeAttribute(name);
+    }
   }
 }
 
