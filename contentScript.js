@@ -1855,10 +1855,12 @@ else if (matchDomain(it_ilmessaggero_domains)) {
 
 else if (matchDomain(it_quotidiano_domains)) {
   if (window.location.pathname.endsWith('/amp')) {
-    amp_unhide_access_hide('="c.customGranted"', '="NOT c.customGranted"', 'amp-ad, amp-fx-flying-carpet');
+    amp_unhide_access_hide('="c.customGranted"', '="NOT c.customGranted"', 'amp-ad, amp-embed, amp-fx-flying-carpet, .watermark-adv');
   } else {
     let paywall = document.querySelector('div[data-testid="paywall-container"]');
     let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (!amphtml)
+      amphtml = {href: window.location.pathname + '/amp'};
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;

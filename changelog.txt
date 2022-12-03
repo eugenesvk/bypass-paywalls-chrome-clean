@@ -9,6 +9,7 @@ Remove BusinessPost.ie (fix obsolete)
 Remove Philonomist (fix obsolete)
 Fix Australian Community Media (identify on url)
 Fix Groupe Centre France (text)
+Fix Quotidiano.net (no amp)
 Fix The Chronicle of Higher Education (css)
 
 * v2.9.5.0 (2022-11-27)
