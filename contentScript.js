@@ -3899,8 +3899,8 @@ else if (matchDomain('theathletic.com')) {
 }
 
 else if (matchDomain('theatlantic.com')) {
-  let banner = document.querySelector('.c-nudge__container,.c-non-metered-nudge');
-  removeDOMElement(banner);
+  let banners = document.querySelectorAll('.c-nudge__container, .c-non-metered-nudge, div[class^="ArticleInjector_"]');
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain('thedailybeast.com')) {

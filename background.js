@@ -793,11 +793,10 @@ if (typeof browser !== 'object') {
     }
   }
 
-if (!kiwi_browser) {
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
-  if ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url)) {
-    if (/^http/.test(tab.url) && matchUrlDomain(enabledSites, tab.url)) {
+  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url))) {
+    if (matchUrlDomain(enabledSites, tab.url)) {
       runOnTab(tab);
     }
     // load toggleIcon.js (icon for dark or incognito mode in Chrome))
@@ -813,7 +812,6 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
   }
 });
-}
 
 setInterval(function () {
   let current_date_str = currentDateStr();
@@ -1187,7 +1185,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
           active: true,
           currentWindow: true
         }, function (tabs) {
-          if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+          if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
             let tab = tabs[0];
             if (isSiteEnabled(tab)) {
               runOnTab(tab);
@@ -1298,7 +1296,7 @@ function site_switch() {
     active: true,
     currentWindow: true
   }, function (tabs) {
-    if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
       let currentUrl = tabs[0].url;
       let isDefaultSite = matchUrlDomain(defaultSites_grouped_domains, currentUrl);
       if (!isDefaultSite) {
@@ -1351,7 +1349,7 @@ function remove_cookies_fn(domainVar, exclusions = false) {
       active: true,
       currentWindow: true
     }, function (tabs) {
-      if (!ext_api.runtime.lastError && tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+      if (!ext_api.runtime.lastError && tabs && tabs[0] && /^http/.test(tabs[0].url)) {
         let tabId = tabs[0].id;
         let storeId = '0';
         for (let store of cookieStores) {
@@ -1404,7 +1402,7 @@ function clear_cookies() {
     active: true,
     currentWindow: true
   }, function (tabs) {
-    if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
       ext_api.tabs.executeScript({
         file: 'options/clearCookies.js',
         runAt: 'document_start'
@@ -1426,8 +1424,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     clear_cookies();
   }
   // clear cookies for domain
-  if (message.domain) {
-    remove_cookies_fn(message.domain);
+  if (message.request === 'clear_cookies_domain' && message.data) {
+    remove_cookies_fn(message.data.domain);
   }
   if (message.request === 'site_switch') {
     site_switch();
@@ -1440,23 +1438,23 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       active: true,
       currentWindow: true
     }, function (tabs) {
-      if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+      if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
         let currentUrl = tabs[0].url;
         let domain;
         let isExcludedSite = matchUrlDomain(excludedSites, currentUrl);
         if (!isExcludedSite) {
-          let isDefaultSiteGrouped = matchUrlDomain(defaultSites_domains, currentUrl);
           let isDefaultSite = matchUrlDomain(defaultSites_domains, currentUrl);
           let isCustomSite = matchUrlDomain(Object.values(customSites_domains), currentUrl);
-          domain = isDefaultSiteGrouped || (!isDefaultSite && isCustomSite);
+          domain = isDefaultSite || isCustomSite;
+          if (domain)
+            ext_api.runtime.sendMessage({
+              msg: "popup_show_toggle",
+              data: {
+                domain: domain,
+                enabled: enabledSites.includes(domain)
+              }
+            });
         }
-        ext_api.runtime.sendMessage({
-          msg: "popup_show_toggle",
-          data: {
-            domain: domain,
-            enabled: enabledSites.includes(domain)
-          }
-        });
       }
     });
   }
@@ -1484,7 +1482,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
             active: true,
             currentWindow: true
           }, function (tabs) {
-            if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+            if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
               ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
             }
           });
@@ -1496,7 +1494,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
         active: true,
         currentWindow: true
       }, function (tabs) {
-        if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+        if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
           ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
         }
       });
@@ -1576,7 +1574,7 @@ function matchDomain(domains, hostname = '') {
 }
 
 function urlHost(url) {
-  if (url && url.startsWith('http')) {
+  if (/^http/.test(url)) {
     try {
       return new URL(url).hostname;
     } catch (e) {
@@ -1628,7 +1626,7 @@ function refreshCurrentTab() {
     active: true,
     currentWindow: true
   }, function (tabs) {
-    if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
+    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
       if (ext_api.runtime.lastError)
         return;
       ext_api.tabs.update(tabs[0].id, {

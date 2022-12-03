@@ -13,6 +13,11 @@
     "allow_cookies": 1,
     "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
   },
+  "The Atlantic": {
+    "domain": "theatlantic.com",
+    "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/[567].+\\.js",
+    "remove_cookies_select_drop": ["articleViews"]
+  },
   "The Spectator (UK)": {
     "domain": "spectator.co.uk",
     "useragent": "googlebot"

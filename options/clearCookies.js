@@ -7,7 +7,10 @@ var cookie_domain = getCookieDomain(document.domain);
 
 // send domain to background.js (to clear cookies)
 ext_api.runtime.sendMessage({
+  request: 'clear_cookies_domain',
+  data: {
     domain: cookie_domain
+  }
 });
 
 function getCookieDomain(hostname) {

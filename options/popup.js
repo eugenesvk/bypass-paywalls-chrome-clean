@@ -13,7 +13,7 @@ function popup_show_toggle(domain, enabled) {
     labelEl.appendChild(inputEl);
     let spanEl = document.createElement('span');
     spanEl.setAttribute('class', 'slider round');
-    spanEl.setAttribute('title', 'en/disable current site in BPC');
+    spanEl.setAttribute('title', 'en/disable current site/group in BPC');
     labelEl.appendChild(spanEl);
     site_switch_span.appendChild(labelEl);
     document.getElementById("site_switch").addEventListener('click', function () {
