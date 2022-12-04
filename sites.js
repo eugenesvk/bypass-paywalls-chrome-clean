@@ -2170,7 +2170,7 @@ var defaultSites = {
   "Amp-access": {
     domain: "cdn.ampproject.org",
     allow_cookies: 1,
-    block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
+    block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|(.+-)?ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
     excluded_domains: ["cambridge.org"]
   },
   "AzureEdge": {

@@ -2757,7 +2757,7 @@ else if (matchDomain('business-standard.com')) {
     let ads = document.querySelectorAll('div[class*="adv-"]');
     removeDOMElement(...ads);
   } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed, .block-cont-amp, #divnonpaidcontent, div > div.article_image, div[subscriptions-actions], .reader');
+    amp_unhide_subscr_section('amp-ad, amp-embed, .block-cont-amp, #divnonpaidcontent, section > div.article_image, div[subscriptions-actions], .reader');
   }
 }
 
@@ -3869,7 +3869,7 @@ else if (matchDomain('the-american-interest.com')) {
 }
 
 else if (matchDomain('theathletic.com')) {
-  if (!window.location.search.match(/(\?|&)amp/)) {
+  if (!(window.location.search.match(/(\?|&)amp/) && !document.querySelector('link[rel="amphtml"]'))) {
     let paywall = document.querySelector('div#slideup-paywall');
     if (paywall) {
       let overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');

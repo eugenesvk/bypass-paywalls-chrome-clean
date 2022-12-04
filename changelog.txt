@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.9.6.0 (2022-12-04)
 Add DN.no
 Add Sueddeutsche Zeitung (link to archive.is)
 Add Welt.de (link to archive.is)
