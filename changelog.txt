@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Business Standard (images)
+Fix DN.no (images)
 Fix The Athletic (regwall)
 
 * v2.9.6.0 (2022-12-04)

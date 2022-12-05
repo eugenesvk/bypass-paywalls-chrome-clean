@@ -2758,6 +2758,15 @@ else if (matchDomain('business-standard.com')) {
     removeDOMElement(...ads);
   } else {
     amp_unhide_subscr_section('amp-ad, amp-embed, .block-cont-amp, #divnonpaidcontent, section > div.article_image, div[subscriptions-actions], .reader');
+    let hidden_images = document.querySelectorAll('p > amp-img[src][width]');
+    for (let elem of hidden_images) {
+      let img = document.createElement('img');
+      img.src = elem.getAttribute('src');
+      elem.parentNode.replaceChild(img, elem);
+    }
+    let author_image = document.querySelector('amp-img > img[src*="/bs/img/author/"]');
+    if (author_image)
+      author_image.removeAttribute('class');
   }
 }
 
@@ -2872,14 +2881,13 @@ else if (matchDomain('dn.no')) {
   let paywall = document.querySelector('div#dn-ncp-popup, div.paywall, iframe[title="Paywall"]');
   if (paywall) {
     removeDOMElement(paywall);
-    csDoneOnce = true;
-    let article_sel = 'section.article-main-content';
+    let article_sel = 'article';
     let article = document.querySelector(article_sel);
     if (article) {
       let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
       replaceDomElementExt(url_cache, true, false, article_sel);
     } else {
-      article = document.querySelector('article, main#main-story, main.lp_article_content');
+      article = document.querySelector('main#main-story, main.lp_article_content');
       if (article)
         article.insertBefore(googleWebcacheLink(url), article.firstChild);
     }
@@ -2891,6 +2899,14 @@ else if (matchDomain('dn.no')) {
     let infobox_content = document.querySelector('div.infobox__content');
     if (infobox_content)
       infobox_content.removeAttribute('class');
+    let lazy_images = document.querySelectorAll('img[class*="lazy"][data-srcset]:not([src])');
+    for (let elem of lazy_images) {
+      elem.src = elem.getAttribute('data-srcset').split(' ')[0];
+      if (elem.classList.contains('lazy'))
+        elem.classList.remove('lazy');
+      else
+        elem.removeAttribute('class');
+    }
     let ads = document.querySelectorAll('div[id^="googlead-"]');
     removeDOMElement(...ads);
   }, 1000);
