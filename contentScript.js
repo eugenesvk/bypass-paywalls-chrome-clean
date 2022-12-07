@@ -3316,13 +3316,6 @@ else if (matchDomain(['latimes.com', 'sandiegouniontribune.com'])) {
   }
 }
 
-else if (matchDomain('law360.com')) {
-  window.setTimeout(function () {
-    let modal = document.querySelectorAll('div#NewsletterModal, div.modal-backdrop');
-    removeDOMElement(...modal);
-  }, 500);
-}
-
 else if (matchDomain('ledevoir.com')) {
   let counter = document.querySelector('.paywall-breakpoint-wrapper');
   removeDOMElement(counter);

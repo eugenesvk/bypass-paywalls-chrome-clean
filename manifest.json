@@ -359,7 +359,6 @@
     "*://*.lavoz.com.ar/*",
     "*://*.lavozdigital.es/*",
     "*://*.law.com/*",
-    "*://*.law360.com/*",
     "*://*.lc.nl/*",
     "*://*.lecho.be/*",
     "*://*.ledauphine.com/*",
@@ -719,5 +718,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.6.3"
+  "version": "2.9.6.4"
 }

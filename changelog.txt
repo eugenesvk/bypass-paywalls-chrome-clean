@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Remove Law360 (fix obsolete)
 Fix Business Standard (images)
 Fix DN.no (images)
 Fix Noz.de (no amp)
