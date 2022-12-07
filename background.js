@@ -8,6 +8,10 @@ var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
 var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser');
 
+if (typeof ext_api.action !== 'object') {
+  ext_api.action = ext_api.browserAction;
+}
+
 const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'dn.no', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'stratfor.com', 'techinasia.com', 'timesofindia.com', 'valor.globo.com', 'vn.nl'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
 var optin_update = true;
@@ -109,7 +113,7 @@ function initSetRules() {
   blockedRegexesGeneral = {};
   blockedJsInline = {};
   blockedJsInlineDomains = [];
-  init_custom_domains();
+  init_custom_flex_domains();
 }
 
 const userAgentDesktopG = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
@@ -366,7 +370,7 @@ ext_api.storage.local.get({
   sites: {},
   sites_default: Object.keys(defaultSites).filter(x => defaultSites[x].domain && !defaultSites[x].domain.match(/^(#options_|###$)/)),
   sites_custom: {},
-  sites_updated: {},		 
+  sites_updated: {},
   sites_excluded: [],
   ext_version_old: '2.3.9.0',
   optIn: false,
@@ -495,7 +499,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
         }
       } else
         set_rules(optionSites, updatedSites, customSites);
-    }											
+    }
     if (key === 'sites_excluded') {
       var sites_excluded = storageChange.newValue ? storageChange.newValue : [];
       var sites_excluded_old = storageChange.oldValue ? storageChange.oldValue : [];
@@ -793,11 +797,19 @@ if (typeof browser !== 'object') {
     }
   }
 
-ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  let tab_status = changeInfo.status;
-  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url))) {
-    if (matchUrlDomain(enabledSites, tab.url)) {
-      runOnTab(tab);
+  function runOnTab_once(tab) {
+    let tabId = tab.id;
+    let url = tab.url;
+    // load contentScript_once.js to identify custom site (flex) of group
+    if (!(matchUrlDomain(custom_flex_domains.concat(custom_flex_not_domains, customSites_domains, updatedSites_domains_new, excludedSites), url) || matchUrlDomain(defaultSites_domains, url))) {
+      ext_api.tabs.executeScript(tabId, {
+        file: 'contentScript_once.js',
+        runAt: 'document_start'
+      }, function (res) {
+        if (ext_api.runtime.lastError || res[0]) {
+          return;
+        }
+      });
     }
     // load toggleIcon.js (icon for dark or incognito mode in Chrome))
     if (typeof browser !== 'object') {
@@ -811,6 +823,15 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       });
     }
   }
+
+ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  let tab_status = changeInfo.status;
+  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url))) {
+    if (matchUrlDomain(enabledSites, tab.url)) {
+      runOnTab(tab);
+    }
+    runOnTab_once(tab);
+  }
 });
 
 setInterval(function () {
@@ -820,7 +841,7 @@ setInterval(function () {
     last_date_str = current_date_str;
   }
 }, 60 * 60 * 1000);
-	  
+
 var extraInfoSpec = ['blocking', 'requestHeaders'];
 if (ext_api.webRequest.OnBeforeSendHeadersOptions.hasOwnProperty('EXTRA_HEADERS'))
   extraInfoSpec.push('extraHeaders');
@@ -848,182 +869,6 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function(details) {
       }
     }
   }
-
-  function customAddRules(custom_domains, custom_cookies = '', custom_block_regex = '', custom_useragent = '', custom_referer = '', custom_amp_unhide = false) {
-    let custom_domain = urlHost(header_referer).replace(/^(www|m|account|amp|edition|eu)\./, '');
-    if (custom_cookies) {
-      if (custom_cookies.allow_cookies && !allow_cookies.includes(custom_domain))
-        allow_cookies.push(custom_domain);
-      if (custom_cookies.remove_cookies && !remove_cookies.includes(custom_domain))
-        remove_cookies.push(custom_domain);
-    }
-    if (custom_block_regex) {
-      if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
-        custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
-      blockedRegexes[custom_domain] = custom_block_regex;
-      blockedRegexesDomains = Object.keys(blockedRegexes);
-    }
-    if (custom_useragent) {
-      if (custom_useragent === 'googlebot') {
-        if (!use_google_bot.includes(custom_domain))
-          use_google_bot.push(custom_domain);
-        change_headers.push(custom_domain);
-      }
-    }
-    if (custom_referer) {
-      if (custom_referer === 'twitter') {
-        if (!use_twitter_referer.includes(custom_domain))
-          use_twitter_referer.push(custom_domain);
-        change_headers.push(custom_domain);
-      }
-    }
-    if (custom_amp_unhide) {
-      if (!amp_unhide.includes(custom_domain))
-        amp_unhide.push(custom_domain);
-    }
-    custom_domains.push(custom_domain);
-    if (!enabledSites.includes(custom_domain))
-      enabledSites.push(custom_domain);
-    return custom_domains;
-  }
-
-  if (!matchUrlDomain(excludedSites, header_referer)) {
-
-  // remove cookies for sites medium platform (custom domains)
-  var medium_custom_domain = (matchUrlDomain('cdn-client.medium.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(medium_custom_domains.concat(['medium.com']), header_referer) && enabledSites.includes('###_medium_custom'));
-  if (medium_custom_domain)
-    medium_custom_domains = customAddRules(medium_custom_domains);
-  else {
-    // remove cookies for Leaky Paywall/WordPress sites (opt-in to custom sites)
-    var leaky_paywall_domain = (details.url.match(/\/leaky-paywall(-|\/)/) && ['script'].includes(details.type) && !matchUrlDomain(leaky_paywall_domains.concat(['griffithreview.com', 'nknews.org']), header_referer) && enabledSites.includes('###_wp_leaky_paywall'));
-    if (leaky_paywall_domain)
-      leaky_paywall_domains = customAddRules(leaky_paywall_domains);
-  else {
-    // remove cookies & set googlebot-useragent for sites substack platform (custom domains)
-    var substack_custom_domain = (matchUrlDomain('substackcdn.com', details.url) && ['script', 'stylesheet'].includes(details.type) && !matchUrlDomain(substack_custom_domains.concat(['substack.com']), header_referer) && enabledSites.includes('###_substack_custom'));
-    if (substack_custom_domain)
-      substack_custom_domains = customAddRules(substack_custom_domains, '', '', 'googlebot');
-  else {
-    let header_referer_hostname = urlHost(header_referer);
-    let url_hostname = urlHost(details.url);
-    if (header_referer_hostname.match(/\.(com|net)\.au$/)) {
-      // block Piano.io for regional Australian Community Media sites (opt-in to custom sites)
-      var au_comm_media_domain = (details.url.match(/\.au\/story\/(\d){7,}/) && ['main_frame'].includes(details.type) && !matchUrlDomain(au_comm_media_domains, header_referer) && enabledSites.includes('###_au_comm_media'));
-      if (au_comm_media_domain)
-        au_comm_media_domains = customAddRules(au_comm_media_domains, {allow_cookies: 1}, blockedRegexes['canberratimes.com.au']);
-      else if (header_referer_hostname.endsWith('.com.au')) {
-        // enable regional The West Australian sites (opt-in to custom sites)
-        var au_thewest_domain = (details.url.startsWith('https://images.thewest.com.au/') && ['image'].includes(details.type) &&
-          !matchUrlDomain(au_thewest_domains, header_referer) && enabledSites.includes('thewest.com.au'));
-        if (au_thewest_domain)
-          au_thewest_domains = customAddRules(au_thewest_domains, {allow_cookies: 1});
-      }
-    } else if (header_referer_hostname.endsWith('.ch')) {
-      // set googlebot-useragent for regional nzz.ch sites (opt-in to custom sites)
-      var ch_media_domain = (matchUrlDomain('static-chmedia.ch', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ch_media_domains, header_referer) && enabledSites.includes('nzz.ch'));
-      if (ch_media_domain)
-        ch_media_domains = customAddRules(ch_media_domains, {allow_cookies: 1}, blockedRegexes['nzz.ch'], 'googlebot');
-    } else if (header_referer_hostname.endsWith('.cl')) {
-      // block scripts for regional El Mercurio sites (opt-in to custom sites)
-      var cl_emol_region_domain = (matchUrlDomain('impresa.soy-chile.cl', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(cl_emol_region_domains, header_referer) && enabledSites.includes('elmercurio.com'));
-      if (cl_emol_region_domain) {
-        cl_emol_region_domains = customAddRules(cl_emol_region_domains, '', "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)");
-      }
-    } else if (header_referer_hostname.endsWith('.de')) {
-      // set googlebot-useragent for additional Funke sites (opt-in to custom sites)
-      var de_funke_domain = (matchUrlDomain('funkedigital.de', details.url) && ['script'].includes(details.type) && !matchUrlDomain(de_funke_medien_domains, header_referer) && enabledSites.includes('###_de_funke_medien'));
-      if (de_funke_domain)
-        de_funke_medien_domains = customAddRules(de_funke_medien_domains, {allow_cookies: 1}, blockedRegexes['waz.de'], 'googlebot');
-      else {
-        // block script for additional Madsack/RND sites (opt-in to custom sites)
-        var de_madsack_domain = (matchUrlDomain('rndtech.de', details.url) && ['script', 'font'].includes(details.type) && !matchUrlDomain(de_madsack_domains.concat(['madsack.de', 'madsack-medien-campus.de']), header_referer) && enabledSites.includes('###_de_madsack'));
-        if (de_madsack_domain)
-          de_madsack_domains = customAddRules(de_madsack_domains, {allow_cookies: 1}, blockedRegexes['haz.de']);
-      }
-    } else if (header_referer_hostname.match(/\.(es|cat)$/) || matchUrlDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'], header_referer)) {
-      // block Piano.io for unlisted Grupo Prensa Ibérica (opt-in to custom sites)
-      var es_epiberica_domain = (url_hostname.startsWith('estaticos-cdn.') && ['script', 'font', 'stylesheet'].includes(details.type) && !matchUrlDomain(es_epiberica_domains, header_referer) && enabledSites.includes('###_es_epiberica'));
-      if (es_epiberica_domain)
-        es_epiberica_domains = customAddRules(es_epiberica_domains, {allow_cookies: 1}, blockedRegexes['epe.es']);
-    } else if (header_referer_hostname.endsWith('.fr')) {
-      // block Poool.fr for Groupe Centre France sites (opt-in to custom sites)
-      var fr_gcf_domain = (details.url.match(/\.fr\/static\/bloc\/ripolinage\/header\/cf-header\//) && ['script', 'stylesheet'].includes(details.type) && !matchUrlDomain(fr_gcf_domains, header_referer) && enabledSites.includes('###_fr_gcf'));
-      if (fr_gcf_domain)
-        fr_gcf_domains = customAddRules(fr_gcf_domains, {allow_cookies: 1}, blockedRegexes['lamontagne.fr']);
-    } else if (header_referer_hostname.endsWith('.nl')) {
-      // block Evolok for Mediahuis Noord sites (opt-in to custom sites)
-      var nl_mediahuis_noord_domain = (matchUrlDomain('ndcmediagroep.nl', details.url) && ['script'].includes(details.type) && !matchUrlDomain(nl_mediahuis_noord_domains, header_referer) && enabledSites.includes('###_nl_mediahuis_noord'));
-      if (nl_mediahuis_noord_domain)
-        nl_mediahuis_noord_domains = customAddRules(nl_mediahuis_noord_domains, {allow_cookies: 1}, blockedRegexes['lc.nl']);
-    } else if (header_referer_hostname.match(/\.(ca|com|net|org)$/)) {
-      // remove cookies for Groupe Capitales Médias sites
-      var ca_gcm_domain = (matchUrlDomain('gcm.omerlocdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(ca_gcm_domains, header_referer) && enabledSites.includes('###_ca_gcm'));
-      if (ca_gcm_domain)
-        ca_gcm_domains = customAddRules(ca_gcm_domains, {allow_cookies: 1, remove_cookies: 1});
-      else {
-        // block TinyPass for Postmedia Network sites
-        var ca_postmedia_domain = (matchUrlDomain('postmedia.digital', details.url) && ['script'].includes(details.type) && !matchUrlDomain(ca_postmedia_domains.concat(['canada.com', 'canoe.com', 'driving.ca']), header_referer) && enabledSites.includes('###_ca_postmedia'));
-        if (ca_postmedia_domain)
-          ca_postmedia_domains = customAddRules(ca_postmedia_domains, {allow_cookies: 1}, blockedRegexes['nationalpost.com']);
-        else {
-          // set googlebot-useragent for Gannett sites
-          var usa_gannett_domain = (matchUrlDomain('gannett-cdn.com', details.url) && ['xmlhttprequest'].includes(details.type) && !matchUrlDomain(usa_gannett_domains.concat(['usatoday.com']), header_referer) && enabledSites.includes('###_usa_gannett'));
-          if (usa_gannett_domain)
-            usa_gannett_domains = customAddRules(usa_gannett_domains, '', blockedRegexes['azcentral.com'], 'googlebot', '', true);
-          else {
-            var usa_hearst_comm_domain = (matchUrlDomain('treg.hearstnp.com', details.url) && ['script'].includes(details.type) && !matchUrlDomain(usa_hearst_comm_domains.concat(['sfgate.com']), header_referer) && enabledSites.includes('###_usa_hearst_comm'));
-            if (usa_hearst_comm_domain)
-              usa_hearst_comm_domains = customAddRules(usa_hearst_comm_domains, {allow_cookies: 1}, blockedRegexes['houstonchronicle.com']);
-            else {
-              // block script for additional Lee Enterprises sites (opt-in to custom sites)
-              var usa_lee_ent_domain = (details.url.match(/\.townnews\.com\/(central\.)?leetemplates\.com\//) && ['script'].includes(details.type) &&
-                !matchUrlDomain(usa_lee_ent_domains, header_referer) && enabledSites.includes('###_usa_lee_ent'));
-              if (usa_lee_ent_domain)
-                usa_lee_ent_domains = customAddRules(usa_lee_ent_domains, '', blockedRegexes['buffalonews.com']);
-              else {
-                // block script for TownNews sites (Blox CMS; opt-in to custom sites)
-                var usa_townnews_domain = (details.url.match(/\.townnews\.com\/.+\/tncms\//) && ['script'].includes(details.type) &&
-                  !matchUrlDomain(usa_townnews_domains.concat(usa_lee_ent_domains, ['townnews.com', 'galvnews.com', 'nola.com', 'theadvocate.com']), header_referer) && enabledSites.includes('###_usa_townnews'));
-                if (usa_townnews_domain)
-                  usa_townnews_domains = customAddRules(usa_townnews_domains, '', /\.com\/shared-content\/art\/tncms\/user\/user\.js/);
-                else {
-                  // block script for additional McClatchy sites (opt-in to custom sites)
-                  var usa_mcc_domain = (((matchUrlDomain('mcclatchyinteractive.com', details.url) && ['script'].includes(details.type)) ||
-                      (matchUrlDomain('mcclatchy.com', details.url) && ['image'].includes(details.type))) &&
-                    !matchUrlDomain(usa_mcc_domains.concat(['mcclatchy.com']), header_referer) && enabledSites.includes('###_usa_mcc'));
-                  if (usa_mcc_domain)
-                    usa_mcc_domains = customAddRules(usa_mcc_domains, '', blockedRegexes['bnd.com']);
-                  else {
-                    // block script for additional MediaNews Group sites (opt-in to custom sites)
-                    var usa_mng_domain = (details.url.match(/\.com\/wp-content\/plugins\/dfm(-|_).+\.js/) && ['script'].includes(details.type) &&
-                      !matchUrlDomain(usa_mng_domains, header_referer) && enabledSites.includes('###_usa_mng'));
-                    if (usa_mng_domain)
-                      usa_mng_domains = customAddRules(usa_mng_domains, '', blockedRegexes['denverpost.com']);
-                    else if (header_referer_hostname.match(/\.com$/)) {
-                      // block cookies for Madavor Media sites
-                      var usa_madavor_domain = (details.url.match(/\.com\/wp-content\/(plugins|themes)\/madavor-/) && ['script'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_madavor_domains, header_referer) && enabledSites.includes('###_usa_madavor'));
-                      if (usa_madavor_domain)
-                        usa_madavor_domains = customAddRules(usa_madavor_domains);
-                      else {
-                        // set googlebot-useragent for PEI Media sites
-                        var usa_pei_domain = (details.url.match(/\.com\/wp-content\/plugins\/pragmatic-pei-rebranding\/assets\/img\/.+-logo\.svg$/) && ['image', 'xmlhttprequest'].includes(details.type) && details.url.includes(header_referer_hostname) && !matchUrlDomain(usa_pei_domains, header_referer) && enabledSites.includes('###_usa_pei'));
-                        if (usa_pei_domain)
-                          usa_pei_domains = customAddRules(usa_pei_domains, {allow_cookies: 1}, '', 'googlebot');
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-  }
-  }
-  }
-  }
-
-  } // not in excludedSites
 
   // block external javascript for custom sites (optional)
   if (['script'].includes(details.type)) {
@@ -1177,6 +1022,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
           if (!ext_api.runtime.lastError && tab && isSiteEnabled(tab)) {
             runOnTab(tab);
           }
+          runOnTab_once(tab);
         });
       }
     } else {
@@ -1190,6 +1036,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
             if (isSiteEnabled(tab)) {
               runOnTab(tab);
             }
+            runOnTab_once(tab);
           }
         });
       }
@@ -1198,7 +1045,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
 
   return { requestHeaders: requestHeaders };
 }, {
-  urls: ['<all_urls>']
+  urls: ['*://*/*']
 }, extraInfoSpec);
 // extraInfoSpec is ['blocking', 'requestHeaders'] + possible 'extraHeaders'
 
@@ -1253,18 +1100,18 @@ function updateBadge(activeTab) {
         if (!result)
           badgeText = enabledSites.includes(isCustomSite || isUpdatedSite) ? 'C' : '';
         if (color && badgeText)
-          ext_api.browserAction.setBadgeBackgroundColor({color: color});
-        ext_api.browserAction.setBadgeText({text: badgeText});
+          ext_api.action.setBadgeBackgroundColor({color: color});
+        ext_api.action.setBadgeText({text: badgeText});
       });
     } else {
       if (!badgeText && matchUrlDomain(customSitesExt, currentUrl))
         badgeText = '+C';
       if (color && badgeText)
-        ext_api.browserAction.setBadgeBackgroundColor({color: color});
-      ext_api.browserAction.setBadgeText({text: badgeText});
+        ext_api.action.setBadgeBackgroundColor({color: color});
+      ext_api.action.setBadgeText({text: badgeText});
     }
   } else
-      ext_api.browserAction.setBadgeText({text: badgeText});
+      ext_api.action.setBadgeText({text: badgeText});
 }
 
 var ext_version_new;
@@ -1418,6 +1265,44 @@ function clear_cookies() {
   });
 }
 
+  function customAddRules(custom_domain, rules) {
+    if (rules.allow_cookies && !allow_cookies.includes(custom_domain))
+      allow_cookies.push(custom_domain);
+    if (rules.remove_cookies && !remove_cookies.includes(custom_domain))
+      remove_cookies.push(custom_domain);
+    let custom_block_regex = rules.block_regex;
+    if (custom_block_regex) {
+      if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
+        custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
+      blockedRegexes[custom_domain] = custom_block_regex;
+      blockedRegexesDomains = Object.keys(blockedRegexes);
+    }
+    let custom_useragent = rules.useragent;
+    if (custom_useragent) {
+      if (custom_useragent === 'googlebot') {
+        if (!use_google_bot.includes(custom_domain))
+          use_google_bot.push(custom_domain);
+        change_headers.push(custom_domain);
+      }
+    }
+    let custom_referer = rules.referer;
+    if (custom_referer) {
+      if (custom_referer === 'twitter') {
+        if (!use_twitter_referer.includes(custom_domain))
+          use_twitter_referer.push(custom_domain);
+        change_headers.push(custom_domain);
+      }
+    }
+    let custom_amp_unhide = rules.amp_unhide;
+    if (custom_amp_unhide) {
+      if (!amp_unhide.includes(custom_domain))
+        amp_unhide.push(custom_domain);
+    }
+    custom_flex_domains.push(custom_domain);
+    if (!enabledSites.includes(custom_domain))
+      enabledSites.push(custom_domain);
+  }
+
 var chrome_scheme = 'light';
 ext_api.runtime.onMessage.addListener(function (message, sender) {
   if (message.request === 'clear_cookies') {
@@ -1426,6 +1311,27 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
   // clear cookies for domain
   if (message.request === 'clear_cookies_domain' && message.data) {
     remove_cookies_fn(message.data.domain);
+  }
+  if (message.request === 'custom_domain' && message.data) {
+    let custom_domain = message.data.domain;
+    let group = message.data.group;
+    if (group) {
+      if (enabledSites.includes(group) && custom_domain && !custom_flex_domains.includes(custom_domain)) {
+        let rules;
+        if (group === 'elmercurio.com')
+          rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
+        else {
+          rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
+          if (group === '###_usa_gannett')
+            rules.amp_unhide = 1;
+        }
+        if (rules) {
+          customAddRules(custom_domain, rules);
+        }
+      }
+    } else if (custom_domain) {
+      custom_flex_not_domains.push(custom_domain);
+    }
   }
   if (message.request === 'site_switch') {
     site_switch();
@@ -1504,7 +1410,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       let icon_path = {path: {'128': 'bypass.png'}};
       if (message.scheme === 'dark')
           icon_path = {path: {'128': 'bypass-dark.png'}};
-      ext_api.browserAction.setIcon(icon_path);
+      ext_api.action.setIcon(icon_path);
       chrome_scheme = message.scheme;
       focus_changed = false;
   }
@@ -1522,27 +1428,6 @@ ext_api.storage.local.get(["optInShown", "customShown"], function (result) {
     });
   }
 });
-
-// restore custom sites opt-in on reload (chrome-only, load upacked)
-if (typeof browser !== 'object') {
-  ext_api.storage.local.get({
-    sites: {},
-    customOptIn: false
-  }, function (result) {
-    let options_restore_custom = Object.values(result.sites).includes('#options_restore_custom');
-    if (result.customOptIn && options_restore_custom) {
-      ext_api.permissions.contains({
-        origins: ["<all_urls>"]
-      }, function (result_perm) {
-        if (!result_perm) {
-          ext_api.tabs.create({
-            url: "options/optin/opt-in.html"
-          });
-        }
-      });
-    }
-  });
-}
 
 function filterObject(obj, filterFn, mapFn = function (val, key) {
   return [key, val];
@@ -1586,6 +1471,10 @@ function urlHost(url) {
 
 function matchUrlDomain(domains, url) {
   return matchDomain(domains, urlHost(url));
+}
+
+function prepHostname(hostname) {
+  return hostname.replace(/^(www|m|account|amp(\d)?|edition|eu|mobil|wap)\./, '');
 }
 
 function getParameterByName(name, url) {

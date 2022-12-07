@@ -1171,7 +1171,8 @@ var defaultSites = {
     block_regex: /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Madavor Media (opt-in to custom sites)": {
-    domain: "###_usa_madavor"
+    domain: "###_usa_madavor",
+    group: []
   },
   "Madsack Mediengruppe": {
     domain: "###_de_madsack",
@@ -1474,7 +1475,10 @@ var defaultSites = {
     block_regex: /\.poool\.fr\//
   },
   "PEI Media (opt-in to custom sites)": {
-    domain: "###_usa_pei"
+    domain: "###_usa_pei",
+    group: [],
+    allow_cookies: 1,
+    useragent: "googlebot"
   },
   "Penske Media Corporation": {
     domain: "###_usa_penske_media",
@@ -1701,7 +1705,9 @@ var defaultSites = {
     useragent: "googlebot"
   },
   "Substack custom domains (paywall-content only; opt-in to custom sites)": {
-    domain: "###_substack_custom"
+    domain: "###_substack_custom",
+    group: [],
+    useragent: "googlebot"
   },
   "Süddeutsche Zeitung (link to archive.is)": {
     domain: "sueddeutsche.de",
@@ -2077,7 +2083,9 @@ var defaultSites = {
     ]
   },
   "TownNews sites (Blox CMS)": {
-    domain: "###_usa_townnews"
+    domain: "###_usa_townnews",
+    group: [],
+    block_regex: /\.com\/shared-content\/art\/tncms\/user\/user\.js/
   },
   "Tribune Publishing Company": {
     domain: "###_usa_tribune",
@@ -2205,7 +2213,7 @@ var defaultSites = {
   },
   "Leaky Paywall (WordPress plugin)": {
     domain: "###_wp_leaky_paywall",
-    allow_cookies: 1,
+    group: [],
   },
   "MatherAnalytics": {
     domain: "matheranalytics.com",
@@ -2245,6 +2253,7 @@ var defaultSites = {
   },
   "Pigeon (WordPress plugin)": {
     domain: "###_wp_pigeon",
+    group: [],
     allow_cookies: 1,
     block_regex_general: /\/c\/assets\/pigeon\.js/
   },
@@ -2290,21 +2299,12 @@ var defaultSites = {
   "Check for update rules at startup": {
     domain: "#options_optin_update_rules"
   },
-  "Restore opt-in for custom sites (on reload; load unpacked)": {
-    domain: "#options_restore_custom"
-  },
   "Barron's - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_barrons"
   },
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
   },
-}
-
-if (typeof browser === 'object') {
-  let key = Object.keys(defaultSites).find(key => defaultSites[key].domain === '#options_restore_custom');
-  if (key)
-    delete defaultSites[key];
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {
@@ -2359,41 +2359,31 @@ expandSiteRules(defaultSites);
 
 // grouped domains (background)
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
-var de_westfalen_medien_domains = grouped_sites['###_de_westfalen_medien'];
 var es_grupo_vocento_domains = grouped_sites['###_es_grupo_vocento'];
-var fr_groupe_sud_ouest_domains = grouped_sites['###_fr_groupe_sud_ouest'];
 var it_gedi_domains = grouped_sites['###_it_gedi'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // custom domains (background)
-var au_comm_media_domains, au_thewest_domains, ca_gcm_domains, ca_postmedia_domains, ch_media_domains, cl_emol_region_domains, de_funke_medien_domains, de_madsack_domains, es_epiberica_domains, fr_gcf_domains, leaky_paywall_domains, medium_custom_domains, nl_mediahuis_noord_domains, substack_custom_domains, usa_gannett_domains, usa_hearst_comm_domains, usa_lee_ent_domains, usa_madavor_domains, usa_mcc_domains, usa_mng_domains, usa_pei_domains, usa_townnews_domains;
-
-function init_custom_domains() {
-  au_comm_media_domains = grouped_sites['###_au_comm_media'];
-  au_thewest_domains = ['thewest.com.au'];
-  ca_gcm_domains = grouped_sites['###_ca_gcm'];
-  ca_postmedia_domains = grouped_sites['###_ca_postmedia'];
-  ch_media_domains = [];
-  cl_emol_region_domains = [];
-  de_funke_medien_domains = grouped_sites['###_de_funke_medien'];
-  de_madsack_domains = grouped_sites['###_de_madsack'];
-  es_epiberica_domains = grouped_sites['###_es_epiberica'];
-  fr_gcf_domains = grouped_sites['###_fr_gcf'];
-  leaky_paywall_domains = [];
-  medium_custom_domains = grouped_sites['###_medium_custom'];
-  nl_mediahuis_noord_domains = [];
-  substack_custom_domains = [];
-  usa_gannett_domains = grouped_sites['###_usa_gannett'];
-  usa_hearst_comm_domains = grouped_sites['###_usa_hearst_comm'];
-  usa_lee_ent_domains = grouped_sites['###_usa_lee_ent'];
-  usa_madavor_domains = [];
-  usa_mcc_domains = grouped_sites['###_usa_mcc'];
-  usa_mng_domains = grouped_sites['###_usa_mng'];
-  usa_pei_domains = [];
-  usa_townnews_domains = [];
+var custom_flex_not = {
+  "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
+  "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
+  "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
+  "###_medium_custom": ["medium.com"],
+  "###_substack_custom": ["substack.com"],
+  "###_usa_gannett": ["usatoday.com"],
+  "###_usa_hearst_comm": ["sfgate.com"],
+  "###_usa_mcc": ["mcclatchy.com"],
+  "###_usa_townnews": ["townnews.com", "galvnews.com", "nola.com", "theadvocate.com"]
 }
-init_custom_domains();
+var custom_flex_domains;
+var custom_flex_not_domains;
+
+function init_custom_flex_domains() {
+  custom_flex_domains = [];
+  custom_flex_not_domains = [].concat.apply([], Object.values(custom_flex_not));
+}
+init_custom_flex_domains();
 
 // sites with no fix (background)
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be'];

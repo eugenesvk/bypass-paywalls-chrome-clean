@@ -244,7 +244,7 @@ if ((bg2csData !== undefined) && bg2csData.cs_code) {
 
 // Content workarounds/domain
 
-if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src^="https://cdn-client.medium.com/"]')) {
+if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src*=".medium.com/"]')) {
   let paywall = document.querySelector('div#paywall-background-color');
   removeDOMElement(paywall);
   if (paywall) {

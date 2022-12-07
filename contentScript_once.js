@@ -1,4 +1,5 @@
-//"use strict";
+//'use strict';
+var ext_api = (typeof browser === 'object') ? browser : chrome;
 
 if (matchDomain('gitlab.com')) {
   window.setTimeout(function () {
@@ -35,6 +36,83 @@ else if (matchDomain('nzherald.co.nz')) {
   }, 100);
 }
 
+else {
+window.setTimeout(function () {
+
+  let hostname = window.location.hostname;
+  let custom_domain = prepHostname(hostname);
+  let group;
+  if (hostname) {
+    if (document.querySelector('script[src*=".medium.com/"]'))
+      group = '###_medium_custom';
+    else if (document.querySelector('script[src*="/leaky-paywall/"], script[src*="/leaky-paywall-"]'))
+      group = '###_wp_leaky_paywall';
+    else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
+      group = '###_substack_custom';
+    else if (hostname.match(/\.(com|net)\.au$/)) {
+      if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
+        group = '###_au_comm_media';
+      else if (hostname.endsWith('.com.au')) {
+        if (document.querySelector('link[href*="/thewest.com.au/"]'))
+          group = 'thewest.com.au';
+      }
+    } else if (hostname.endsWith('.ch')) {
+      if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
+        group = 'nzz.ch';
+    } else if (hostname.endsWith('.cl')) {
+      if (document.querySelector('meta[content*="/impresa.soy-chile.cl/"]'))
+        group = 'elmercurio.com';
+    } else if (hostname.endsWith('.de')) {
+      if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))
+        group = '###_de_funke_medien';
+      else if (document.querySelector('link[href*=".rndtech.de/"]'))
+        group = '###_de_madsack';
+    } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
+      if (document.querySelector('link[href*="/estaticos-cdn."]'))
+        group = '###_es_epiberica';
+    } else if (hostname.endsWith('.fr')) {
+      if (document.querySelector('link[href*=".fr/static/bloc/ripolinage/header/cf-header/"]'))
+        group = '###_fr_gcf';
+    } else if (hostname.endsWith('.nl')) {
+      if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
+        group = '###_nl_mediahuis_noord';
+    } else if (hostname.match(/\.(ca|com|net|org)$/)) {
+      if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
+        group = '###_ca_gcm';
+      else if (document.querySelector('script[src*=".postmedia.digital/"], meta[content*=".postmedia.digital/"]'))
+        group = '###_ca_postmedia';
+      else if (document.querySelector('img[srcset*=".gannett-cdn.com/"]'))
+        group = '###_usa_gannett';
+      else if (document.querySelector('script[src*="/treg.hearstnp.com/"]'))
+        group = '###_usa_hearst_comm';
+      else if (document.querySelector('script[src*=".townnews.com/"][src*="leetemplates.com/'))
+        group = '###_usa_lee_ent';
+      else if (document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]'))
+        group = '###_usa_townnews';
+      else if (document.querySelector('meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"]'))
+        group = '###_usa_mcc';
+      else if (document.querySelector('script[src*=".com/wp-content/plugins/dfm"]'))
+        group = '###_usa_mng';
+      else if (hostname.match(/\.com$/)) {
+        if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
+          group = '###_usa_madavor';
+        else if (document.querySelector('script#wp-parsely-pei-events-js'))
+          group = '###_usa_pei';
+      }
+    }
+
+    ext_api.runtime.sendMessage({
+      request: 'custom_domain',
+      data: {
+        domain: custom_domain,
+        group: group
+      }
+    });
+  }
+
+}, 1000);	
+}
+
 function matchDomain(domains, hostname) {
   var matched_domain = false;
   if (!hostname)
@@ -43,6 +121,10 @@ function matchDomain(domains, hostname) {
     domains = [domains];
   domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matched_domain = domain));
   return matched_domain;
+}
+
+function prepHostname(hostname) {
+  return hostname.replace(/^(www|m|account|amp(\d)?|edition|eu|mobil|wap)\./, '');
 }
 
 function insert_script(func, insertAfterDom) {

@@ -35,7 +35,7 @@
     "page": "options/options.html"
   },
   "optional_permissions": [
-    "<all_urls>"
+    "*://*/*"
   ],
   "content_scripts": [{
       "matches": [
@@ -632,7 +632,6 @@
     "*://*.torontosun.com/*",
     "*://*.towardsdatascience.com/*",
     "*://*.townandcountrymag.com/*",
-    "*://*.townnews.com/*",
     "*://*.townsvillebulletin.com.au/*",
     "*://*.tradewindsnews.com/*",
     "*://*.trailrunnermag.com/*",
@@ -688,7 +687,9 @@
     "*://*.ampproject.org/*",
     "*://*.blueconic.net/*",
     "*://*.cxense.com/*",
+    "*://*.ensighten.com/*",
     "*://*.evolok.net/*",
+    "*://*.loader-cdn.azureedge.net/*",
     "*://*.matheranalytics.com/*",
     "*://*.newsmemory.com/*",
     "*://*.omeda.com/*",
@@ -709,28 +710,14 @@
     "*://*.cedsdigital.it/*",
     "*://*.corriereobjects.it/*",
     "*://*.emol.cl/*",
-    "*://*.ensighten.com/*",
     "*://*.flip-pay.com/*",
-    "*://*.funkedigital.de/*",
-    "*://*.gannett-cdn.com/*",
     "*://*.gitlab.com/magnolia1234/*",
     "*://*.hadrianpaywall.com/*",
-    "*://*.hearstnp.com/*",
-    "*://*.loader-cdn.azureedge.net/*",
-    "*://*.mcclatchy.com/*",
-    "*://*.mcclatchyinteractive.com/*",
     "*://*.medscapestatic.com/*",
-    "*://*.ndcmediagroep.nl/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
-    "*://*.postmedia.digital/*",
-    "*://*.rndtech.de/*",
-    "*://*.soy-chile.cl/*",
-    "*://*.static-chmedia.ch/*",
-    "*://*.substackcdn.com/*",
     "*://*.wallkit.net/*",
-    "*://gcm.omerlocdn.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.6.2"
+  "version": "2.9.6.3"
 }

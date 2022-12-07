@@ -8,11 +8,6 @@
     "block_regex": "\\.poool\\.fr\\/",
     "ld_json": "div#poool-widget|div.entry-content"
   },
-  "La Vanguardia": {
-    "domain": "lavanguardia.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
-  },
   "The Atlantic": {
     "domain": "theatlantic.com",
     "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/[567].+\\.js",
@@ -26,10 +21,5 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
-  },
-  "###_gr_au_nine_domains": {
-    "group_rule_domains": ["brisbanetimes.com.au", "smh.com.au", "theage.com.au", "watoday.com.au"],
-    "allow_cookies": 1,
-    "block_regex": "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
   }
 }

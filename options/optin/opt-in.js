@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
 
     document.querySelector('#custom-enable').addEventListener('click', function (event) {
         ext_api.permissions.request({
-            origins: ["<all_urls>"]
+            origins: ["*://*/*"]
         }, function (granted) {
             if (granted) {
                 custom_enabled.innerText = 'YES';
@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
 
     document.querySelector('#custom-disable').addEventListener('click', function (event) {
         ext_api.permissions.remove({
-            origins: ["<all_urls>"]
+            origins: ["<all_urls>", "*://*/*"]
         }, function (removed) {
             if (removed) {
                 custom_enabled.innerText = 'NO';
