@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix Business Standard (images)
 Fix DN.no (images)
+Fix Noz.de (no amp)
 Fix The Athletic (regwall)
 Update custom flex sites (identify on dom)
 

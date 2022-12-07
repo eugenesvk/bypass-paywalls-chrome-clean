@@ -694,6 +694,9 @@ else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
+    } else {
+      let ads = document.querySelectorAll('div.nozmhn_ad');
+      removeDOMElement(...ads);
     }
   }
 }

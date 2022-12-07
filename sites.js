@@ -1328,7 +1328,8 @@ var defaultSites = {
   "Neue Osnabrücker Zeitung": {
     domain: "noz.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
+    useragent: "googlebot"
   },
   "Neue Westfälische": {
     domain: "nw.de",
