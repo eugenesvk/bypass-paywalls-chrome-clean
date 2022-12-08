@@ -3520,13 +3520,14 @@ else if (matchDomain('nytimes.com')) {
 else if (matchDomain('nzherald.co.nz')) {
   // plus code in contentScript_once.js (timing)
   let article_content = document.querySelector('.article__content');
-  if (article_content) {
-    let premium = document.querySelector('span.ellipsis');
-    if (premium && dompurify_loaded) {
-      premium.classList.remove('ellipsis');
-      let article_offer = document.querySelector('.article-offer');
+  if (article_content) {//redundant
+    let article_offer = document.querySelector('.article-offer');
+    if (article_offer && dompurify_loaded) {
       removeDOMElement(article_offer);
-      let css_selector = article_content.querySelectorAll('p[style]')[1].getAttribute('class');
+      let premium = document.querySelector('span.ellipsis');
+      if (premium)
+        premium.classList.remove('ellipsis');
+      let css_selector = article_content.querySelectorAll('p[style][class]')[1].getAttribute('class');
       let hidden_not_pars = article_content.querySelectorAll('.' + css_selector + ':not(p)');
       for (let hidden_not_par of hidden_not_pars) {
         hidden_not_par.classList.remove(css_selector);
@@ -3546,7 +3547,8 @@ else if (matchDomain('nzherald.co.nz')) {
     }
   }
   let premium_toaster = document.querySelector('#premium-toaster');
-  removeDOMElement(premium_toaster);
+  let ads = document.querySelectorAll('.ad');
+  removeDOMElement(premium_toaster, ...ads);
 }
 
 else if (matchDomain('outlookbusiness.com')) {
@@ -4293,8 +4295,9 @@ else if (matchDomain('wsj.com')) {
 
 else if (matchDomain('substack.com') || document.querySelector('script[src^="https://substackcdn.com/min/main.bundle.js"]')) {
   let paywall = document.querySelector('div.paywall:not(.modal-paywall)');
+  let article_sel = 'div.available-content';
   if (paywall) {
-    let article = document.querySelector('div.available-content');
+    let article = document.querySelector(article_sel);
     if (article) {
       let msg = document.createElement('div');
       msg.innerText = 'BPC > no fix !';
@@ -4302,6 +4305,13 @@ else if (matchDomain('substack.com') || document.querySelector('script[src^="htt
       article.insertBefore(msg, article.firstChild);
     }
     csDoneOnce = true;
+  } else {
+    let lock = document.querySelector('path.lock-body');
+    let paywall_content_sel = 'div.paywall-content';
+    let redundant_sel = lock ? article_sel : paywall_content_sel;
+    let redundant_elem = document.querySelector(redundant_sel);
+    removeDOMElement(redundant_elem);
+    waitDOMElement(redundant_sel, 'DIV', removeDOMElement, true);
   }
 }
 
