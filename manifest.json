@@ -268,6 +268,7 @@
     "*://*.haaretz.co.il/*",
     "*://*.haaretz.com/*",
     "*://*.haarlemsdagblad.nl/*",
+    "*://*.handelsblatt.com/*",
     "*://*.handelszeitung.ch/*",
     "*://*.harpers.org/*",
     "*://*.haz.de/*",
@@ -718,5 +719,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.6.5"
+  "version": "2.9.6.6"
 }

@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Handelsblatt
 Remove Law360 (fix obsolete)
 Fix Business Standard (images)
 Fix DN.no (images)
