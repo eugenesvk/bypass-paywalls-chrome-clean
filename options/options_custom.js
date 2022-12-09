@@ -1,7 +1,7 @@
 var ext_api = chrome || browser;
 var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 
-var useragent_options = ['', 'googlebot', 'bingbot'];
+var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
 var random_ip_options = ['', 'all', 'eu'];
 

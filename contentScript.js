@@ -1589,7 +1589,7 @@ else if (matchDomain('lesinrocks.com')) {
 }
 
 else if (matchDomain('lexpress.fr')) {
-  let ads = document.querySelectorAll('div[class^="block_pub"], div.bottom-bar-full, div.tead, div.ban-bottom');
+  let ads = document.querySelectorAll('div[class^="block_pub"], div.bottom-bar-full, div.tead, div.ban-bottom, div.placeholder--ban-atf');
   removeDOMElement(...ads);
 }
 

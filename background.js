@@ -58,7 +58,7 @@ var remove_cookies = [];
 var remove_cookies_select_hold, remove_cookies_select_drop;
 
 // Set User-Agent
-var use_google_bot, use_bing_bot, use_msn_bot;
+var use_google_bot, use_bing_bot, use_facebook_bot;
 // Set Referer
 var use_facebook_referer, use_google_referer, use_twitter_referer;
 // Set random IP-address
@@ -96,7 +96,7 @@ function initSetRules() {
   remove_cookies_select_hold = {};
   use_google_bot = [];
   use_bing_bot = [];
-  use_msn_bot = [];
+  use_facebook_bot = [];
   use_facebook_referer = [];
   use_google_referer = [];
   use_twitter_referer = [];
@@ -123,8 +123,7 @@ const userAgentMobileG = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible ;
 const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
 const userAgentMobileB = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
 
-const userAgentDesktopM = 'Mozilla/5.0 (compatible; MSNbot/1.1; +http://search.msn.com/msnbot.htm)';
-const userAgentMobileM = 'Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; MSNbot/1.1 +http://search.msn.com/msnbot.htm)';
+const userAgentDesktopF = 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
 
 var enabledSites = [];
 var disabledSites = [];
@@ -291,9 +290,9 @@ function set_rules(sites, sites_updated, sites_custom) {
             if (!use_bing_bot.includes(domain))
               use_bing_bot.push(domain);
             break;
-          case 'msnbot':
-            if (!use_msn_bot.includes(domain))
-              use_msn_bot.push(domain);
+          case 'facebookbot':
+            if (!use_facebook_bot.includes(domain))
+              use_facebook_bot.push(domain);
             break;
           }
         }
@@ -347,7 +346,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_msn_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -922,7 +921,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));
-  var msnbotEnabled = matchUrlDomain(use_msn_bot, details.url);
+  var facebookbotEnabled = matchUrlDomain(use_facebook_bot, details.url);
 
   // if referer exists, set it
   requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -982,11 +981,11 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     })
   }
 
-  // override User-Agent to use Msnbot
-  if (msnbotEnabled) {
+  // override User-Agent to use Facebookbot
+  if (facebookbotEnabled) {
     requestHeaders.push({
       "name": "User-Agent",
-      "value": useUserAgentMobile ? userAgentMobileM : userAgentDesktopM
+      "value": userAgentDesktopF
     })
   }
 

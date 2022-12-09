@@ -9,6 +9,7 @@ Fix Noz.de (no amp)
 Fix Substack (redundant text)
 Fix The Athletic (regwall)
 Update custom flex sites (identify on dom)
+Update custom sites (set useragent Facebookbot)
 
 * v2.9.6.0 (2022-12-04)
 Add DN.no

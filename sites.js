@@ -818,7 +818,7 @@ var defaultSites = {
   "Haaretz": {
     domain: "haaretz.co.il",
     allow_cookies: 1,
-    useragent: "msnbot"
+    useragent: "facebookbot"
   },
   "Handelszeitung.ch": {
     allow_cookies: 1,
@@ -1914,7 +1914,7 @@ var defaultSites = {
   "The Marker": {
     domain: "themarker.com",
     allow_cookies: 1,
-    useragent: "msnbot"
+    useragent: "facebookbot"
   },
   "The Market.ch": {
     domain: "themarket.ch",
