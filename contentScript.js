@@ -307,7 +307,7 @@ else {
     removeDOMElement(story_generic_iframe, blocker, ...overlays, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
-    let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
+    let au_news_corp_domains = ['adelaidenow.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'heraldsun.com.au', 'theaustralian.com.au', 'themercury.com.au'];
     if (matchDomain(au_news_corp_domains)) {
       if (window.location.hostname.startsWith('amp.') || window.location.search.match(/(\?|&)amp/)) {
         let figure_stretch = document.querySelectorAll('figure.stretch');
@@ -326,6 +326,13 @@ else {
         }
         removeDOMElement(comments);
       } else {
+        if (matchDomain('codesports.com.au')) {
+          let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
+          for (let elem of lazy_images) {
+            elem.src = elem.getAttribute('data-src');
+            elem.classList.remove('lazyload');
+          }
+        }
         let ads = document.querySelectorAll('.header_ads-container, .ad-block, .ad-container');
         removeDOMElement(...ads);
       }

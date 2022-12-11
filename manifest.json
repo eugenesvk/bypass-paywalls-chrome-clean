@@ -121,7 +121,6 @@
     "*://*.business-standard.com/*",
     "*://*.businessinsider.com/*",
     "*://*.businessoffashion.com/*",
-    "*://*.cairnspost.com.au/*",
     "*://*.calgaryherald.com/*",
     "*://*.canberratimes.com.au/*",
     "*://*.capitalgazette.com/*",
@@ -250,14 +249,12 @@
     "*://*.ftm.nl/*",
     "*://*.ga.de/*",
     "*://*.gazzetta.it/*",
-    "*://*.geelongadvertiser.com.au/*",
     "*://*.gelderlander.nl/*",
     "*://*.genomeweb.com/*",
     "*://*.gestion.pe/*",
     "*://*.glassdoor.com/*",
     "*://*.globes.co.il/*",
     "*://*.globo.com/*",
-    "*://*.goldcoastbulletin.com.au/*",
     "*://*.goodhousekeeping.com/*",
     "*://*.gooieneemlander.nl/*",
     "*://*.gq.com/*",
@@ -591,7 +588,6 @@
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
     "*://*.thebanker.com/*",
-    "*://*.thechronicle.com.au/*",
     "*://*.thecourier.com.au/*",
     "*://*.thecritic.co.uk/*",
     "*://*.thecut.com/*",
@@ -632,7 +628,6 @@
     "*://*.torontosun.com/*",
     "*://*.towardsdatascience.com/*",
     "*://*.townandcountrymag.com/*",
-    "*://*.townsvillebulletin.com.au/*",
     "*://*.tradewindsnews.com/*",
     "*://*.trailrunnermag.com/*",
     "*://*.tri-cityherald.com/*",
@@ -666,7 +661,6 @@
     "*://*.washingtonpost.com/*",
     "*://*.watoday.com.au/*",
     "*://*.waz.de/*",
-    "*://*.weeklytimesnow.com.au/*",
     "*://*.wellandtribune.ca/*",
     "*://*.welt.de/*",
     "*://*.weltkunst.de/*",
@@ -719,5 +713,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.6.6"
+  "version": "2.9.6.7"
 }

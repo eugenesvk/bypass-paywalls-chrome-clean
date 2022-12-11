@@ -115,38 +115,28 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "Australia News Corp": {
+  "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
     domain: "###_au_news_corp",
     group: [
       "adelaidenow.com.au",
-      "cairnspost.com.au",
       "codesports.com.au",
       "couriermail.com.au",
       "dailytelegraph.com.au",
-      "geelongadvertiser.com.au",
-      "goldcoastbulletin.com.au",
       "heraldsun.com.au",
       "ntnews.com.au",
       "theaustralian.com.au",
-      "thechronicle.com.au",
-      "themercury.com.au",
-      "townsvillebulletin.com.au",
-      "weeklytimesnow.com.au"
+      "themercury.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(\.com\.au\/remote\/identity\/rampart\/latest\/rampart\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
     exception: [{
-        domain: "ntnews.com.au",
+        domain: "codesports.com.au",
         allow_cookies: 1,
-        block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
-        useragent: "googlebot"
-      }, {
-        domain: "theaustralian.com.au",
-        allow_cookies: 1,
-        block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
-        useragent: "googlebot"
+        block_js_inline: /\.codesports\.com\.au\/.+\/news-story\//,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }
-    ]
+    ],
+    useragent: "googlebot"
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",
@@ -201,7 +191,7 @@ var defaultSites = {
     domain: "bnn.de",
     useragent: "googlebot"
   },
-  "Barron's": {
+  "Barron's (when blocked disable Googlebot in BPC-settings)": {
     domain: "barrons.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
@@ -2038,7 +2028,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
-  "The Wall Street Journal": {
+  "The Wall Street Journal (when blocked disable Googlebot in BPC-settings)": {
     domain: "wsj.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
@@ -2299,6 +2289,9 @@ var defaultSites = {
   "Check for update rules at startup": {
     domain: "#options_optin_update_rules"
   },
+  "Australia News Corp - no Googlebot (blocked)": {
+    domain: "#options_disable_gb_au_news_corp"
+  },
   "Barron's - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_barrons"
   },
@@ -2386,6 +2379,7 @@ function init_custom_flex_domains() {
 init_custom_flex_domains();
 
 // sites with no fix (background)
+var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(be_mediahuis_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);

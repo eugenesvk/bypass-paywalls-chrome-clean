@@ -3,8 +3,10 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Handelsblatt
+Remove 6 Australia News Corp sites (fix obsolete)
 Remove Law360 (fix obsolete)
 Fix Business Standard (images)
+Fix Codesports.com.au (js)
 Fix DN.no (images)
 Fix Noz.de (no amp)
 Fix Substack (redundant text)
