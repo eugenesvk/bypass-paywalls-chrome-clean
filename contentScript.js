@@ -3736,11 +3736,13 @@ else if (matchDomain('slideshare.net')) {
 }
 
 else if (matchDomain('sloanreview.mit.edu')) {
-  let paywall = document.querySelector('div.paywall-blinder');
-  removeDOMElement(paywall);
+  let url = window.location.href;
+  let paywall = document.querySelector('body.is-paywall');
   if (paywall) {
-    ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+    paywall.classList.remove('is-paywall');
     csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div#article-content');
   }
 }
 

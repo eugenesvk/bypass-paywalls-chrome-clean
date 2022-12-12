@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix MIT Sloan Management Review
 
 * v2.9.7.0 (2022-12-11)
 Add Handelsblatt

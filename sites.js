@@ -1284,8 +1284,7 @@ var defaultSites = {
   },
   "MIT Sloan Management Review": {
     domain: "sloanreview.mit.edu",
-    block_regex: /(\.tinypass\.com\/|\/sloanreview\.mit\.edu\/.+\/welcome-ad\.js)/,
-    referer: "facebook"
+    block_regex: /(\.tinypass\.com\/|\/sloanreview\.mit\.edu\/.+\/welcome-ad\.js)/
   },
   "MIT Technology Review": {
     domain: "technologyreview.com",
