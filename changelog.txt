@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.9.7.0 (2022-12-11)
 Add Handelsblatt
 Remove 6 Australia News Corp sites (fix obsolete)
 Remove Law360 (fix obsolete)
