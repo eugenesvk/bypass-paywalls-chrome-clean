@@ -2071,11 +2071,6 @@ var defaultSites = {
       }
     ]
   },
-  "TownNews sites (Blox CMS)": {
-    domain: "###_usa_townnews",
-    group: [],
-    block_regex: /\.com\/shared-content\/art\/tncms\/user\/user\.js/
-  },
   "Tribune Publishing Company": {
     domain: "###_usa_tribune",
     group: [
@@ -2242,7 +2237,6 @@ var defaultSites = {
   },
   "Pigeon (WordPress plugin)": {
     domain: "###_wp_pigeon",
-    group: [],
     allow_cookies: 1,
     block_regex_general: /\/c\/assets\/pigeon\.js/
   },
@@ -2260,6 +2254,10 @@ var defaultSites = {
     domain: "tinypass.com",
     allow_cookies: 1,
     block_regex_general: /cdn\.tinypass\.com\//
+  },
+  "TownNews sites (Blox CMS; not encrypted)": {
+    domain: "###_usa_townnews",
+    block_regex_general: /\.com\/shared-content\/art\/tncms\/user\/user\.js/
   },
   "TribDss": {
     domain: "tribdss.com",
@@ -2366,7 +2364,7 @@ var custom_flex_not = {
   "###_usa_gannett": ["usatoday.com"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
-  "###_usa_townnews": ["townnews.com", "galvnews.com", "nola.com", "theadvocate.com"]
+  "###_usa_townnews": ["townnews.com", "nola.com", "theadvocate.com"]
 }
 var custom_flex_domains;
 var custom_flex_not_domains;
