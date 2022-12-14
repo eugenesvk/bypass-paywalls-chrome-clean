@@ -78,6 +78,11 @@
     "domain": "fnweb.de",
     "useragent": "googlebot"
   },
+  "Freitag.de": {
+    "allow_cookies": 1,
+    "domain": "freitag.de",
+    "ld_json": "div.qa-paywall|div#x-article-text"
+  },
   "Frieze.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com\\/",
@@ -193,6 +198,11 @@
     "allow_cookies": 1,
     "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall\\/",
     "domain": "odt.co.nz"
+  },
+  "Oz-online.de": {
+    "allow_cookies": 1,
+    "domain": "oz-online.de",
+    "ld_json": "div.paywall|div.pointer-events-none"
   },
   "Physicsworld.com": {
     "domain": "physicsworld.com"

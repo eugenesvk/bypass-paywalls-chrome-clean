@@ -1255,12 +1255,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\/loader-wp\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "Medium (free articles only)": {
+  "Medium": {
     domain: "medium.com",
     allow_cookies: 1,
     remove_cookies: 1
   },
-  "Medium custom domains (free articles only; opt-in to custom sites)": {
+  "Medium custom domains (opt-in to custom sites)": {
     domain: "###_medium_custom",
     "group": [
       "betterprogramming.pub",

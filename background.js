@@ -533,7 +533,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     }
 
     // Refresh the current tab
-    refreshCurrentTab();
+    ext_api.tabs.reload({bypassCache: true});
   }
 });
 
@@ -1302,6 +1302,7 @@ function clear_cookies() {
     custom_flex_domains.push(custom_domain);
     if (!enabledSites.includes(custom_domain))
       enabledSites.push(custom_domain);
+    ext_api.tabs.reload({bypassCache: true});
   }
 
 var chrome_scheme = 'light';
@@ -1366,7 +1367,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     });
   }
   if (message.request === 'refreshCurrentTab') {
-    refreshCurrentTab();
+    ext_api.tabs.reload({bypassCache: true});
   }
   if (message.request === 'getExtSrc' && message.data) {
     fetch(message.data.url)
@@ -1508,20 +1509,4 @@ function randomIP(range_low = 0, range_high = 223) {
       rndmIP.push(randomInt(255) + 1);
   }
   return rndmIP.join('.');
-}
-
-// Refresh the current tab
-function refreshCurrentTab() {
-  ext_api.tabs.query({
-    active: true,
-    currentWindow: true
-  }, function (tabs) {
-    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
-      if (ext_api.runtime.lastError)
-        return;
-      ext_api.tabs.update(tabs[0].id, {
-        url: tabs[0].url
-      });
-    }
-  });
 }

@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix MIT Sloan Management Review
 Update block general paywall script (TownNews & fix Pigeon)
+Update custom flex sites (identify main domain)
 
 * v2.9.7.0 (2022-12-11)
 Add Handelsblatt

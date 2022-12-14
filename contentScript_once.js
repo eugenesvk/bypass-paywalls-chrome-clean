@@ -40,10 +40,10 @@ else {
 window.setTimeout(function () {
 
   let hostname = window.location.hostname;
-  let custom_domain = prepHostname(hostname);
+  let custom_domain = getCookieDomain(hostname);
   let group;
   if (hostname) {
-    if (document.querySelector('script[src*=".medium.com/"]'))
+    if (document.querySelector('script[src*=".medium.com/"]') || matchDomain(['plainenglish.io']))
       group = '###_medium_custom';
     else if (document.querySelector('script[src*="/leaky-paywall/"], script[src*="/leaky-paywall-"]'))
       group = '###_wp_leaky_paywall';
@@ -123,8 +123,17 @@ function matchDomain(domains, hostname) {
   return matched_domain;
 }
 
-function prepHostname(hostname) {
-  return hostname.replace(/^(www|m|account|amp(\d)?|edition|eu|mobil|wap)\./, '');
+function getCookieDomain(hostname) {
+  let domain = hostname;
+  let n = 0;
+  let parts = hostname.split('.');
+  let str = '_gd' + (new Date()).getTime();
+  while (n < (parts.length - 1) && document.cookie.indexOf(str + '=' + str) == -1) {
+    domain = parts.slice(-1 - (++n)).join('.');
+    document.cookie = str + "=" + str + ";domain=" + domain + ";";
+  }
+  document.cookie = str + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=" + domain + ";";
+  return domain;
 }
 
 function insert_script(func, insertAfterDom) {
