@@ -533,7 +533,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     }
 
     // Refresh the current tab
-    ext_api.tabs.reload({bypassCache: true});
+    refreshCurrentTab();
   }
 });
 
@@ -752,10 +752,11 @@ if (typeof browser !== 'object') {
     let lib_file = 'lib/empty.js';
     if (matchUrlDomain(dompurify_sites, url))
       lib_file = 'lib/purify.min.js';
-    var bg2csData = {
-      optin_setcookie: optin_setcookie,
-      amp_unhide: matchUrlDomain(amp_unhide, url)
-    };
+    var bg2csData = {};
+    if (optin_setcookie && matchUrlDomain(['crusoe.uol.com.br'], url))
+      bg2csData.optin_setcookie = 1;
+    if (matchUrlDomain(amp_unhide, url))
+      bg2csData.amp_unhide = 1;
     let amp_redirect_domain = '';
     if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url))
       bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
@@ -773,27 +774,29 @@ if (typeof browser !== 'object') {
       setTimeout(function () {
         // run contentScript.js on page
         ext_api.tabs.executeScript(tabId, {
-          code: 'var bg2csData = ' + JSON.stringify(bg2csData) + ';'
+          file: lib_file,
+          runAt: 'document_start'
         }, function () {
           ext_api.tabs.executeScript(tabId, {
-            file: lib_file,
+            file: 'contentScript.js',
             runAt: 'document_start'
-          }, function () {
-            ext_api.tabs.executeScript(tabId, {
-              file: 'contentScript.js',
-              runAt: 'document_start'
-            }, function (res) {
-              if (ext_api.runtime.lastError || res[0]) {
-                return;
-              }
-            })
-          });
+          }, function (res) {
+            if (ext_api.runtime.lastError || res[0]) {
+              return;
+            }
+          })
         });
+        // send bg2csData to contentScript.js
+        if (Object.keys(bg2csData).length) {
+          setTimeout(function () {
+            ext_api.tabs.sendMessage(tabId, {msg: "bg2cs", data: bg2csData});
+          }, 500);
+        }
         // remove cookies after page load
         if (rc_domain_enabled) {
           remove_cookies_fn(rc_domain, true);
         }
-      }, n * 1000 / tab_runs);
+      }, n * 200);
     }
   }
 
@@ -1509,4 +1512,20 @@ function randomIP(range_low = 0, range_high = 223) {
       rndmIP.push(randomInt(255) + 1);
   }
   return rndmIP.join('.');
+}
+
+// Refresh the current tab (http)
+function refreshCurrentTab() {
+  ext_api.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function (tabs) {
+    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
+      if (ext_api.runtime.lastError)
+        return;
+      ext_api.tabs.update(tabs[0].id, {
+        url: tabs[0].url
+      });
+    }
+  });
 }
