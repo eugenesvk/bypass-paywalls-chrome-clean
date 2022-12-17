@@ -1001,7 +1001,7 @@ var defaultSites = {
   "L'Express": {
     domain: "lexpress.fr",
     allow_cookies: 1,
-    block_regex: /\.qiota\.com\/data\/.+\/data\.json/
+    block_regex: /\.qiota\.com\/data/
   },
   "L'Humanité": {
     domain: "humanite.fr",
@@ -1315,8 +1315,13 @@ var defaultSites = {
     allow_cookies: 1,
     block_js_inline: /\/nautil\.us\/((\w)+(\-)+){3,}/
   },
-  "Neue Osnabrücker Zeitung": {
-    domain: "noz.de",
+  "NOZ/MHN Mediengruppe": {
+    domain: "###_de_noz_mhn",
+    group: [
+      "noz.de",
+      "shz.de",
+      "svz.de"
+    ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
@@ -1609,16 +1614,6 @@ var defaultSites = {
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
     block_regex: /(metering\.platform\.sandiegouniontribune\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
-  },
-  "Schleswig-Holsteinischer Zeitungsverlag": {
-    domain: "shz.de",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
-  },
-  "Schweriner Volkszeitung": {
-    domain: "svz.de",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Science (free articles only)": {
     domain: "science.org",
@@ -2248,8 +2243,7 @@ var defaultSites = {
   "Qiota": {
     domain: "qiota.com",
     allow_cookies: 1,
-    block_regex_general: /\.qiota\.com\//,
-    excluded_domains: ["lexpress.fr"]
+    block_regex_general: /\.qiota\.com\/data/
   },
   "TinyPass": {
     domain: "tinypass.com",

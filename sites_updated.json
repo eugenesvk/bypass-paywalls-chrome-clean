@@ -2,7 +2,7 @@
   "L'Express": {
     "domain": "lexpress.fr",
     "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/data\\/.+\\/data\\.json"
+    "block_regex": "\\.qiota\\.com\\/data"
   },
   "Neue Osnabrücker Zeitung": {
     "domain": "noz.de",
@@ -23,7 +23,6 @@
   "Qiota": {
     "domain": "qiota.com",
     "allow_cookies": 1,
-    "block_regex_general": "\\.qiota\\.com\\/",
-    "excluded_domains": ["lexpress.fr"]
+    "block_regex_general": "\\.qiota\\.com\\/data"
   }
 }

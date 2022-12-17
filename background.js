@@ -409,7 +409,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_au_nine_ent', '###_de_rp_medien', '###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_fr_gcf', '###_it_gedi', '###_nl_dpg_media', '###_usa_cbj', '###_usa_chronicle', '###_usa_genomeweb'];
+          let new_groups = ['###_au_nine_ent', '###_de_noz_mhn', '###_de_rp_medien', '###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_fr_gcf', '###_it_gedi', '###_nl_dpg_media', '###_usa_cbj', '###_usa_chronicle', '###_usa_genomeweb'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)))
              || (!enabledSites.includes('uol.com.br') && (enabledSites.includes('crusoe.uol.com.br') || enabledSites.includes('###_br_folha')))
              || (!enabledSites.includes('iltalehti.fi') && enabledSites.includes('###_fi_alma_talent'));

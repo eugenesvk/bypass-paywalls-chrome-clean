@@ -524,13 +524,10 @@ Grouped in options:\
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
-[Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Piqd.de](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
-[Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
-[Schweriner Volkszeitung](https://www.svz.de) -
 [Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -
 [Weltkunst](https://www.weltkunst.de) -
@@ -557,6 +554,10 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
+*NOZ/MHN Mediengruppe* sites like\
+[Neue Osnabrücker Zeitung](https://www.noz.de) -
+[Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
+[Schweriner Volkszeitung](https://www.svz.de)\
 *Rheinische Post Mediengruppe* sites like
 [Aachener Nachrichten](https://www.aachener-nachrichten.de) -
 [Aachener Zeitung](https://www.aachener-zeitung.de) -

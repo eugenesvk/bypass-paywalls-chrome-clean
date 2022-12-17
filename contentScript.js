@@ -649,15 +649,8 @@ else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
   } else {
-    let paywall = document.querySelector('.paywall');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    } else {
-      let ads = document.querySelectorAll('div.nozmhn_ad');
-      removeDOMElement(...ads);
-    }
+    let ads = document.querySelectorAll('div.nozmhn_ad');
+    removeDOMElement(...ads);
   }
 }
 
