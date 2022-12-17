@@ -169,7 +169,7 @@ Grouped in options:\
 [StuDocu](https://www.studocu.com)
 
 ##### Magazines/Blogs
-[Medium](https://www.medium.com)* -
+[Medium](https://www.medium.com) -
 [Substack](https://substack.com)\
 Grouped in options:\
 *Medium custom domains* like (opt-in to custom sites for unlisted)\

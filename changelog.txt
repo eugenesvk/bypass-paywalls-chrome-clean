@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix L'Express.fr
 Fix MIT Sloan Management Review
 Update block general paywall script (TownNews & fix Pigeon)
 Update custom flex sites (identify main domain)

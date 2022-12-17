@@ -1,4 +1,9 @@
 {
+  "L'Express": {
+    "domain": "lexpress.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\\/data\\/.+\\/data\\.json"
+  },
   "Neue Osnabrücker Zeitung": {
     "domain": "noz.de",
     "allow_cookies": 1,
@@ -14,5 +19,11 @@
     "domain": "washingtonpost.com",
     "allow_cookies": 1,
     "block_regex": "\\.washingtonpost\\.com\\/tetro\\/metering\\/evaluate"
+  },
+  "Qiota": {
+    "domain": "qiota.com",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.qiota\\.com\\/",
+    "excluded_domains": ["lexpress.fr"]
   }
 }

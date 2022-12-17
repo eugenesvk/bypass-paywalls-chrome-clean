@@ -741,7 +741,7 @@ else if (matchDomain('tagesspiegel.de')) {
 
 else if (matchDomain('welt.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div[data-premium-content-loader-id^="spinner-article-"]');
+  let paywall = document.querySelector('div.contains_walled_content');
   if (paywall) {
     removeDOMElement(paywall);
     let article = document.querySelector('div[data-qa="Article.PremiumContent"]');
@@ -4321,7 +4321,7 @@ else if ((domain = matchDomain(usa_mcc_domains)) ||
 
 else if (matchDomain(usa_mng_domains) || (window.location.href.match(/\.com\/(\d){4}\/(\d){2}\/(\d){2}\/.+\/amp\//) && document.querySelector('amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))) {
   if (window.location.pathname.endsWith('/amp/')) {
-    amp_unhide_subscr_section('amp-ad, amp-embed');
+    amp_unhide_subscr_section('amp-ad, amp-embed, div.ampWrapperInside');
   }
 }
 

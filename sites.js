@@ -1001,7 +1001,7 @@ var defaultSites = {
   "L'Express": {
     domain: "lexpress.fr",
     allow_cookies: 1,
-    block_regex: /\.qiota\.com\//
+    block_regex: /\.qiota\.com\/data\/.+\/data\.json/
   },
   "L'Humanité": {
     domain: "humanite.fr",
@@ -2248,7 +2248,8 @@ var defaultSites = {
   "Qiota": {
     domain: "qiota.com",
     allow_cookies: 1,
-    block_regex_general: /\.qiota\.com\//
+    block_regex_general: /\.qiota\.com\//,
+    excluded_domains: ["lexpress.fr"]
   },
   "TinyPass": {
     domain: "tinypass.com",
