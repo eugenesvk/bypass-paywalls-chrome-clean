@@ -1784,6 +1784,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.businessoffashion\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "The Caravan": {
+    domain: "caravanmagazine.in",
+    allow_cookies: 1
+  },
   "The Christian Science Monitor": {
     domain: "csmonitor.com",
     allow_cookies: 1
@@ -2374,4 +2378,4 @@ init_custom_flex_domains();
 var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);

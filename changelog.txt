@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add CaravanMagazine.in
 Fix L'Express.fr
 Fix MIT Sloan Management Review
 Fix Noz.de (no amp)

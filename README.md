@@ -786,6 +786,7 @@ Grouped in options:\
 [Mid-Day](https://www.mid-day.com) -
 [Outlook](https://www.outlookindia.com) -
 [Outlook Business](https://www.outlookbusiness.com) -
+[The Caravan](https://caravanmagazine.in) -
 [The Economic Times (ET Prime)](https://economictimes.indiatimes.com) -
 [The Financial Express](https://www.financialexpress.com) -
 [The Hindu](https://www.thehindu.com) -

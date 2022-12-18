@@ -124,6 +124,7 @@
     "*://*.calgaryherald.com/*",
     "*://*.canberratimes.com.au/*",
     "*://*.capitalgazette.com/*",
+    "*://*.caravanmagazine.in/*",
     "*://*.causeur.fr/*",
     "*://*.cen.acs.org/*",
     "*://*.centralwesterndaily.com.au/*",
@@ -713,5 +714,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.7.8"
+  "version": "2.9.7.9"
 }

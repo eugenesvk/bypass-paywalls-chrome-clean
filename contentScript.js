@@ -2759,6 +2759,19 @@ else if (matchDomain(ca_torstar_domains)) {
   }, 500);
 }
 
+else if (matchDomain('caravanmagazine.in')) {
+  if (!window.location.href.startsWith('/amp/')) {
+    let paywall = document.querySelector('div.subscribe-plan');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (!amphtml)
+      amphtml = {href: '/amp' + window.location.pathname};
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  }
+}
+
 else if (matchDomain('cen.acs.org')) {
   let meteredBar = document.querySelector('.meteredBar');
   removeDOMElement(meteredBar);
@@ -4298,7 +4311,7 @@ else if ((domain = matchDomain(usa_mcc_domains)) ||
       window.location.href = 'https://amp.' + domain + '/article' + url.split('resume=')[1].split(/[#&]/)[0] + '.html';
     }, 500);
   } else if (url.includes('amp.' + domain + '/')) {
-    amp_unhide_subscr_section();
+    amp_unhide_subscr_section('amp-ad, amp-embed', false);
     let subscr_tag = document.querySelector('div#subscriber-exclusive-tag');
     let amp_players = document.querySelectorAll('amp-connatix-player');
     removeDOMElement(subscr_tag, ...amp_players);

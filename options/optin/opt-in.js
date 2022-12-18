@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
 
     document.querySelector('#custom-disable').addEventListener('click', function (event) {
         ext_api.permissions.remove({
-            origins: ["<all_urls>", "*://*/*"]
+            origins: ["*://*/*"]
         }, function (removed) {
             if (removed) {
                 custom_enabled.innerText = 'NO';
