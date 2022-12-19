@@ -2155,6 +2155,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(account\.winnipegfreepress\.com\/api\/v\d\/auth\/identify|cdn\.cxense\.com\/)/
   },
+  "WirtschaftsWoche": {
+    domain: "wiwo.de",
+    allow_cookies: 1,
+    useragent: "facebookbot"
+  },
   "* Block general paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
     domain: "###"
   },

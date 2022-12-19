@@ -531,7 +531,8 @@ Grouped in options:\
 [Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -
 [Weltkunst](https://www.weltkunst.de) -
-[Westdeutsche Zeitung](https://www.wz.de)
+[Westdeutsche Zeitung](https://www.wz.de) -
+[WirtschaftsWoche](https://www.wiwo.de)
 
 Grouped in options:\
 *Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
