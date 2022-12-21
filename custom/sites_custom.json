@@ -27,7 +27,7 @@
   },
   "Chicago.suntimes.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "chicago.suntimes.com"
   },
   "Christianitytoday.com": {
@@ -37,7 +37,7 @@
   },
   "Columbian.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "columbian.com"
   },
   "Connexionfrance.com": {
@@ -50,8 +50,13 @@
   },
   "Dailyherald.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "dailyherald.com"
+  },
+  "Diabeteshealth.co.in": {
+    "allow_cookies": 1,
+    "domain": "diabeteshealth.co.in",
+    "ld_json": "div#paywall-banner|div[class^='text-story-m_gap']"
   },
   "Die-glocke.de": {
     "allow_cookies": 1,
@@ -60,12 +65,12 @@
   },
   "Edweek.org": {
     "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com\\/",
+    "block_regex": "js\\.pelcro\\.com",
     "domain": "edweek.org"
   },
   "Eluniversal.com.mx": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "eluniversal.com.mx"
   },
   "Euromoney.com": {
@@ -85,12 +90,12 @@
   },
   "Frieze.com": {
     "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com\\/",
+    "block_regex": "js\\.pelcro\\.com",
     "domain": "frieze.com"
   },
   "Gazette.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "gazette.com"
   },
   "Gplanet.co.il": {
@@ -100,13 +105,13 @@
   },
   "Heidi.news": {
     "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/",
+    "block_regex": "\\.piano\\.io",
     "domain": "heidi.news",
     "useragent": "googlebot"
   },
   "Heraldscotland.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
   "Ilglobo.com": {
@@ -135,7 +140,7 @@
   },
   "Irishexaminer.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage\\/",
+    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
     "domain": "irishexaminer.com"
   },
   "Kaleva.fi": {
@@ -160,12 +165,12 @@
   },
   "Lyrik.fr": {
     "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/",
+    "block_regex": "\\.qiota\\.com",
     "domain": "lyrik.fr"
   },
   "Mailplus.co.uk": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "mailplus.co.uk"
   },
   "Mannheimer-morgen.de": {
@@ -181,7 +186,7 @@
   },
   "Nationalobserver.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "nationalobserver.com"
   },
   "Newbostonpost.com": {
@@ -191,12 +196,12 @@
   },
   "Nv.ua": {
     "allow_cookies": 1,
-    "amp_redirect": "div[id^=\"media_paywall\"]",
+    "amp_redirect": "div[id^='media_paywall']",
     "domain": "nv.ua"
   },
   "Odt.co.nz": {
     "allow_cookies": 1,
-    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall\\/",
+    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall",
     "domain": "odt.co.nz"
   },
   "Oz-online.de": {
@@ -214,30 +219,35 @@
   },
   "Pressherald.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "pressherald.com"
   },
   "Reviewjournal.com": {
     "allow_cookies": 1,
-    "block_regex": "js\\.matheranalytics\\.com\\/",
+    "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com\\/",
+    "block_regex": "js\\.pelcro\\.com",
     "domain": "siliconrepublic.com"
   },
   "Sltrib.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "sltrib.com"
   },
   "Speld.nl": {
     "domain": "speld.nl"
   },
+  "Splainer.in": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\".subscription-prompt\",\"rm_elem\":1,\"elems\":[{\"cond\":\".hide-section\",\"rm_class\":\"hide-section\"}]}]",
+    "domain": "splainer.in"
+  },
   "Spokesman.com": {
     "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net\\/",
+    "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "spokesman.com"
   },
   "Sportsbusinessjournal.com": {
@@ -249,12 +259,18 @@
     "domain": "stimme.de",
     "ld_google_webcache": "div.paywall-product-box,div.fadeOut|div.art-text"
   },
+  "Stylist.co.uk": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div[data-cy='upgradeAccountPaywall']\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class|style\"},{\"cond\":\"div.css-tu9vsa\",\"rm_attrib\":\"class\"}]}]",
+    "domain": "stylist.co.uk"
+  },
   "Supchina.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
   },
   "Swarajyamag.com": {
+    "amp_redirect": "div#story-notification",
     "domain": "swarajyamag.com"
   },
   "The-japan-news.com": {
@@ -262,6 +278,12 @@
   },
   "The-past.com": {
     "domain": "the-past.com"
+  },
+  "Thecaterer.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\".locked-content\",\"rm_attrib\":\"class\"}]",
+    "domain": "thecaterer.com",
+    "useragent": "googlebot"
   },
   "Thecourier.co.uk": {
     "allow_cookies": 1,
@@ -283,7 +305,7 @@
   },
   "Thenational.scot": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "thenational.scot"
   },
   "Theweek.com": {
@@ -298,7 +320,7 @@
   },
   "Toledoblade.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "toledoblade.com"
   },
   "Vigilantcitizen.com": {
@@ -308,7 +330,7 @@
   },
   "Washingtontimes.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
+    "block_regex": "\\.tinypass\\.com",
     "domain": "washingtontimes.com"
   }
 }

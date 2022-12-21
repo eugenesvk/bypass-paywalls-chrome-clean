@@ -46,7 +46,7 @@ if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
 
-function runOnMessage(bg2csData, dompurify_loaded, div_bpc_done) {
+function runOnMessage(bg2csData, dompurify_loaded) {
 // custom/updated sites: load text from json
 if (bg2csData.ld_json && dompurify_loaded) {
   if (bg2csData.ld_json.includes('|')) {
@@ -96,8 +96,6 @@ if (bg2csData.ld_google_webcache && dompurify_loaded) {
   }
 }
 
-if (!div_bpc_done) {
-
 // check for opt-in confirmation (from background.js)
 if (bg2csData.optin_setcookie) {
   if (matchDomain(['crusoe.uol.com.br'])) {
@@ -146,8 +144,11 @@ function cs_code_elems(elems) {
         let rm_class = elem.rm_class.split(',').map(x => x.trim());
         item.classList.remove(...rm_class);
       }
-      if (elem.rm_attrib)
-        item.removeAttribute(elem.rm_attrib);
+      if (elem.rm_attrib) {
+        let rm_attribs = elem.rm_attrib.split('|');
+        for (let rm_attrib of rm_attribs)
+          item.removeAttribute(rm_attrib);
+      }
       if (elem.set_attrib && elem.set_attrib.includes('|')) {
         let attrib = elem.set_attrib.split('|')[0];
         let value = elem.set_attrib.split('|')[1];
@@ -166,22 +167,20 @@ if (bg2csData.cs_code) {
   }, 1000);
 }
 
-}
-
 }// runOnMessage
 
-var div_bpc_done = document.querySelector('div#bpc_done');
 var msg_once = false;
 if (ext_api.runtime) {
   ext_api.runtime.onMessage.addListener(
     function (request, sender) {
     if (request.msg === 'bg2cs' && !msg_once) {
       msg_once = true;
-      runOnMessage(request.data, dompurify_loaded, div_bpc_done);
+      runOnMessage(request.data, dompurify_loaded);
     }
   })
 }
 
+var div_bpc_done = document.querySelector('div#bpc_done');
 if (!div_bpc_done) {
 
 if (ext_api.runtime) {

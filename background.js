@@ -315,11 +315,20 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (rule.random_ip) {
           random_ip[domain] = rule.random_ip;
         }
-        // updated
+        // updated/custom
         if (rule.amp_redirect)
           amp_redirect[domain] = rule.amp_redirect.paywall ? rule.amp_redirect : {paywall: rule.amp_redirect};
-        if (rule.cs_code)
-          cs_code[domain] = rule.cs_code;
+        if (rule.cs_code) {
+          if (typeof rule.cs_code === 'string') {
+            try {
+              rule.cs_code = JSON.parse(rule.cs_code);
+            } catch (e) {
+              console.log(`cs_code not valid: ${rule.cs_code} error: ${e}`);
+            }
+          }
+          if (typeof rule.cs_code === 'object')
+            cs_code[domain] = rule.cs_code;
+        }
         // custom
         if (rule.googlebot > 0)
           use_google_bot.push(domain);

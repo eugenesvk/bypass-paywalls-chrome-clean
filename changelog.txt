@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Wiwo.de
+Update custom sites (cs_code: remove/unhide in dom)
 
 * v2.9.8.0 (2022-12-18)
 Add CaravanMagazine.in
