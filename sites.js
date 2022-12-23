@@ -2169,6 +2169,11 @@ var defaultSites = {
     block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|(.+-)?ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
     excluded_domains: ["cambridge.org"]
   },
+  "Axate.io": {
+    domain: "###_uk_axate.io",
+    allow_cookies: 1,
+    block_regex_general: /\.axate\.io\//
+  },
   "AzureEdge": {
     domain: "loader-cdn.azureedge.net",
     allow_cookies: 1,
@@ -2365,6 +2370,7 @@ var custom_flex_not = {
   "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
   "###_medium_custom": ["medium.com"],
   "###_substack_custom": ["substack.com"],
+  "###_uk_axate.io": ["thinkofx.net"],
   "###_usa_gannett": ["usatoday.com"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],

@@ -4330,6 +4330,12 @@ else if (matchDomain(usa_mng_domains) || (window.location.href.match(/\.com\/(\d
   }
 }
 
+else if (document.querySelector('script[src*=".axate.io/"]')) {
+  let premium = document.querySelector('.premium, div[class*="-premium"]');
+  if (premium)
+    premium.removeAttribute('class');
+}
+
 else
   csDone = true;
 }
