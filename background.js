@@ -332,9 +332,9 @@ function set_rules(sites, sites_updated, sites_custom) {
         // custom
         if (rule.googlebot > 0)
           use_google_bot.push(domain);
-        if (rule.block_javascript > 0)
+        if (rule.block_js > 0 || rule.block_javascript > 0)
           block_js_custom.push(domain);
-        if (rule.block_javascript_ext > 0)
+        if (rule.block_js_ext > 0 || rule.block_javascript_ext > 0)
           block_js_custom_ext.push(domain);
         if (rule.amp_unhide > 0)
           amp_unhide.push(domain);

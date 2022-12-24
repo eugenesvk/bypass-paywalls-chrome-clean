@@ -283,7 +283,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.clarin\.com\/.+\/auth\d\.js/
   },
-  "CNBC (only news)": {
+  "CNBC (news only)": {
     domain: "cnbc.com",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
@@ -1059,7 +1059,7 @@ var defaultSites = {
   "La Tercera": {
     domain: "latercera.com",
     allow_cookies: 1,
-    block_regex: /(\.latercera\.com\/arc\/subs\/p\.min\.js|cdn\.cxense\.com\/)/
+    block_regex: /(\.latercera\.com\/arc\/subs\/p\.min\.js|cdn\.cxense\.com\/|\.tinypass\.com\/)/
   },
   "La Tribune": {
     domain: "latribune.fr",
@@ -1809,7 +1809,7 @@ var defaultSites = {
     domain: "thedailybeast.com",
     block_regex: /\.tinypass\.com\//
   },
-  "The Daily Wire (only news)": {
+  "The Daily Wire (news only)": {
     domain: "dailywire.com",
     allow_cookies: 1
   },

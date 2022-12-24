@@ -209,8 +209,9 @@ function edit_options() {
     document.querySelector('input[data-key="domain"]').value = edit_site.domain;
     document.querySelector('select[data-key="useragent"]').selectedIndex = (edit_site.googlebot > 0) ? 1 : useragent_options.indexOf(edit_site.useragent);
     document.querySelector('input[data-key="allow_cookies"]').checked = (edit_site.allow_cookies > 0);
-    document.querySelector('input[data-key="block_javascript"]').checked = (edit_site.block_javascript > 0);
-    document.querySelector('input[data-key="block_javascript_ext"]').checked = (edit_site.block_javascript_ext > 0);
+    document.querySelector('input[data-key="block_js"]').checked = (edit_site.block_js > 0 || edit_site.block_javascript > 0);
+    document.querySelector('input[data-key="block_js_ext"]').checked = (edit_site.block_js_ext > 0 || edit_site.block_javascript_ext > 0);
+    document.querySelector('input[data-key="block_js_inline"]').value = edit_site.block_js_inline ? edit_site.block_js_inline : '';
     document.querySelector('input[data-key="block_regex"]').value = edit_site.block_regex ? edit_site.block_regex : '';
     document.querySelector('textarea[data-key="cs_code"]').value = edit_site.cs_code ? edit_site.cs_code : '';
     document.querySelector('input[data-key="amp_unhide"]').checked = (edit_site.amp_unhide > 0);
@@ -276,8 +277,9 @@ function renderOptions() {
       'title': 0,
       'domain': 0,
       'allow_cookies': 1,
-      'block_javascript (domain)': 1,
-      'block_javascript_ext': 1,
+      'block_js (domain)': 1,
+      'block_js_ext': 1,
+      'block_js_inline': 0,
       'block_regex': 0,
       'amp_unhide': 1,
       'amp_redirect': 0,
@@ -304,6 +306,7 @@ function renderOptions() {
         let placeholders = {
           title: 'Example',
           domain: 'example.com',
+          block_js_inline: '\\.example\\.com\\/article\\/',
           block_regex: '\\.example\\.com\\/js\\/',
           amp_redirect: 'div.paywall',
           ld_json: 'div.paywall|div.article',
@@ -356,9 +359,10 @@ function renderOptions() {
       optionEl.text += key + ': ' + domain +
       (sites_custom[key]['googlebot'] > 0 ? ' | googlebot' : '') +
       (sites_custom[key]['allow_cookies'] > 0 ? ' | allow_cookies' : '') +
-      (sites_custom[key]['block_javascript'] > 0 ? ' | block javascript' : '') +
-      (sites_custom[key]['block_javascript_ext'] > 0 ? ' | block javascript ext' : '') +
-      (sites_custom[key]['block_regex'] ? ' | block regex' : '') +
+      ((sites_custom[key]['block_js'] > 0 || sites_custom[key]['block_javascript'] > 0) ? ' | block_js' : '') +
+      ((sites_custom[key]['block_js_ext'] > 0 || sites_custom[key]['block_javascript_ext'] > 0) ? ' | block_js_ext' : '') +
+      (sites_custom[key]['block_js_inline'] ? ' | block_js_inline' : '') +
+      (sites_custom[key]['block_regex'] ? ' | block_regex' : '') +
       (sites_custom[key]['useragent'] ? ' | useragent: ' + sites_custom[key]['useragent'] : '') +
       (sites_custom[key]['referer'] ? ' | referer: ' + sites_custom[key]['referer'] : '') +
       (sites_custom[key]['random_ip'] ? ' | random_ip: ' + sites_custom[key]['random_ip'] : '') +

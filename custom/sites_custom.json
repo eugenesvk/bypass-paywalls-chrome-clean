@@ -58,6 +58,13 @@
     "domain": "diabeteshealth.co.in",
     "ld_json": "div#paywall-banner|div[class^='text-story-m_gap']"
   },
+  "Diariodenavarra.es": {
+    "allow_cookies": 1,
+    "amp_redirect": "div#paywallMessage",
+    "amp_unhide": 1,
+    "cs_code": "[{\"cond\":\"section.txt\",\"rm_elem\":1}]",
+    "domain": "diariodenavarra.es"
+  },
   "Die-glocke.de": {
     "allow_cookies": 1,
     "domain": "die-glocke.de",
@@ -76,6 +83,11 @@
   "Euromoney.com": {
     "allow_cookies": 1,
     "domain": "euromoney.com",
+    "useragent": "googlebot"
+  },
+  "Finanz-szene.de": {
+    "allow_cookies": 1,
+    "domain": "finanz-szene.de",
     "useragent": "googlebot"
   },
   "Fnweb.de": {
@@ -108,6 +120,11 @@
     "block_regex": "\\.piano\\.io",
     "domain": "heidi.news",
     "useragent": "googlebot"
+  },
+  "Heraldo.es": {
+    "allow_cookies": 1,
+    "block_js_inline": "\\.heraldo\\.es\\/noticias",
+    "domain": "heraldo.es"
   },
   "Heraldscotland.com": {
     "allow_cookies": 1,
@@ -183,6 +200,11 @@
   },
   "Medpagetoday.com": {
     "domain": "medpagetoday.com"
+  },
+  "Milesplit.com": {
+    "allow_cookies": 1,
+    "domain": "milesplit.com",
+    "useragent": "facebookbot"
   },
   "Nationalobserver.com": {
     "allow_cookies": 1,
@@ -322,6 +344,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "toledoblade.com"
+  },
+  "Toolkits.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
+    "domain": "toolkits.com"
   },
   "Vigilantcitizen.com": {
     "allow_cookies": 1,
