@@ -662,7 +662,8 @@ Grouped in options:\
 [Record](https://www.record.pt)
 
 ##### Russia
-[Republic.ru](https://republic.ru)
+[Republic.ru](https://republic.ru) -
+[The Village](https://www.the-village.ru)
 
 ##### Slovenia
 [Finance.si](https://www.finance.si)

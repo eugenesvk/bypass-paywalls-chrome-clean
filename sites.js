@@ -2031,6 +2031,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
+  "The Village.ru": {
+    domain: "the-village.ru",
+    allow_cookies: 1,
+    block_regex: /\.the-village\.ru\/assets\/app\/\d.+\.js/
+  },
   "The Wall Street Journal (when blocked disable Googlebot in BPC-settings)": {
     domain: "wsj.com",
     allow_cookies: 1,
