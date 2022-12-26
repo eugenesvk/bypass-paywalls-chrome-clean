@@ -838,7 +838,7 @@ if (typeof browser !== 'object') {
 
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
-  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (!tab_status && changeInfo.url))) {
+  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (changeInfo.url))) {
     if (matchUrlDomain(enabledSites, tab.url)) {
       runOnTab(tab);
     }

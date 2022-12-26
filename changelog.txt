@@ -8,6 +8,7 @@ Add TheVillage.ru
 Add Wiwo.de
 Add Wonderzine (ru)
 Remove Dvhn.nl & Mediahuis Belgie (fix obsolete)
+Fix New York Magazine sites (timing cookies)
 Update block general paywall script (Axate.io)
 Update custom sites (block_js_inline)
 Update custom sites (cs_code: remove/unhide in dom)
