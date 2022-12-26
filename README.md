@@ -661,6 +661,9 @@ Grouped in options:\
 [Observador](https://observador.pt) -
 [Record](https://www.record.pt)
 
+##### Russia
+[Republic.ru](https://republic.ru)
+
 ##### Slovenia
 [Finance.si](https://www.finance.si)
 
