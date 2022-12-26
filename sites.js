@@ -2170,6 +2170,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "facebookbot"
   },
+  "Wonderzine": {
+    domain: "wonderzine.com",
+    allow_cookies: 1,
+    useragent: "facebookbot"
+  },
   "* Block general paywall-scripts (opt-in to custom sites to enable also for unlisted sites)": {
     domain: "###"
   },

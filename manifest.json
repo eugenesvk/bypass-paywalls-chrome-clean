@@ -675,6 +675,7 @@
     "*://*.wn.de/*",
     "*://*.womenshealthmag.com/*",
     "*://*.womensrunning.com/*",
+    "*://*.wonderzine.com/*",
     "*://*.wp.de/*",
     "*://*.wr.de/*",
     "*://*.wsj.com/*",
@@ -718,5 +719,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.8.5"
+  "version": "2.9.8.6"
 }

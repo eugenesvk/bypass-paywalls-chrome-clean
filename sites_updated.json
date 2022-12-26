@@ -10,8 +10,18 @@
     "useragent": "googlebot",
     "new_site": 1
   },
+  "The Village.ru": {
+    "domain": "the-village.ru",
+    "allow_cookies": 1,
+    "block_regex": "\\.the-village\\.ru\\/assets\\/app\\/\\d.+\\.js"
+  },
   "WirtschaftsWoche": {
     "domain": "wiwo.de",
+    "allow_cookies": 1,
+    "useragent": "facebookbot"
+  },
+  "Wonderzine": {
+    "domain": "wonderzine.com",
     "allow_cookies": 1,
     "useragent": "facebookbot"
   },

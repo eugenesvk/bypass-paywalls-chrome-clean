@@ -5,6 +5,7 @@ Post-release
 Add Republic.ru
 Add TheVillage.ru
 Add Wiwo.de
+Add Wonderzine (ru)
 Update block general paywall script (Axate.io)
 Update custom sites (block_js_inline)
 Update custom sites (cs_code: remove/unhide in dom)
