@@ -1957,6 +1957,20 @@ else if (matchDomain(['lc.nl'])) {
   removeDOMElement(top_ad);
 }
 
+else if (matchDomain(['limburger.nl'])) {
+  let button_close = document.querySelector('span[data-testid="button-close"]');
+  if (button_close)
+    button_close.click();
+  let url = window.location.href;
+  let paywall = document.querySelector('div[data-cj-root="subscription-wall"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('footer.article__footer');
+    if (article)
+      article.insertBefore(archiveLink(url), article.firstChild);
+  }
+}
+
 else if (matchDomain(nl_mediahuis_region_domains)) {
   window.setTimeout(function () {
     let close_button = document.querySelector('button[data-testid="button-close"]');

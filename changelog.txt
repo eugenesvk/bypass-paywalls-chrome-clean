@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Limburger.nl (link to archive.is)
 Add Republic.ru
 Add TheVillage.ru
 Add Wiwo.de

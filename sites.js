@@ -357,6 +357,10 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "De Limburger": {
+    domain: "limburger.nl",
+    allow_cookies: 1
+  },
   "De Tijd": {
     domain: "tijd.be",
     referer: "google"
