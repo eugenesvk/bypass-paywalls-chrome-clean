@@ -1213,15 +1213,6 @@ var defaultSites = {
     ],
     block_regex: /(js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
-  "Mediahuis België": {
-    domain: "###_be_mediahuis",
-    group: [
-      "nieuwsblad.be",
-      "standaard.be"
-    ],
-    allow_cookies: 1
-  },
-
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",
     group: [
@@ -1236,7 +1227,6 @@ var defaultSites = {
   "Mediahuis Noord": {
     domain: "###_nl_mediahuis_noord",
     group: [
-      "dvhn.nl",
       "lc.nl"
     ],
     allow_cookies: 1,
@@ -2382,6 +2372,7 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
+  "###_nl_mediahuis_noord": ["dvhn.nl"],
   "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
   "###_medium_custom": ["medium.com"],
   "###_substack_custom": ["substack.com"],
@@ -2402,6 +2393,6 @@ init_custom_flex_domains();
 
 // sites with no fix (background)
 var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
-var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be'];
+var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'dvhn.nl', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zerohedge.com'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);

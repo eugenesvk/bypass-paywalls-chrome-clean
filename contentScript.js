@@ -1952,23 +1952,9 @@ else if (matchDomain(['knack.be', 'kw.be', 'levif.be'])) {
   }
 }
 
-else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
+else if (matchDomain(['lc.nl'])) {
   let top_ad = document.querySelector('.top__ad');
   removeDOMElement(top_ad);
-}
-
-else if (matchDomain(['nieuwsblad.be', 'standaard.be'])) {
-  let button_close = document.querySelector('span[data-testid="button-close"]');
-  if (button_close)
-    button_close.click();
-  let url = window.location.href;
-  let paywall = document.querySelector('div[data-cj-root="subscription-wall"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('footer, div[data-mht-block="main__article-paywall"]');
-    if (article)
-      article.insertBefore(archiveLink(url), article.firstChild);
-  }
 }
 
 else if (matchDomain(nl_mediahuis_region_domains)) {

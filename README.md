@@ -631,9 +631,6 @@ Grouped in options:\
 [Humo](https://www.humo.be) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
-*Mediahuis België (link to archive.is)* sites like\
-[De Standaard](https://www.standaard.be) -
-[Het Nieuwsblad](https://www.nieuwsblad.be)\
 *Mediahuis Nederland Regional* sites like\
 [Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -
@@ -641,7 +638,6 @@ Grouped in options:\
 [IJmuider Courant](https://www.ijmuidercourant.nl) -
 [De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
-[Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)
 
 ##### Norway
