@@ -134,6 +134,7 @@ Grouped in options:\
 *[PEI Media](https://www.thisispei.com)* sites (opt-in to custom sites)
 
 ##### Tech/Science
+[Bulletin of the Atomic Scientists](https://thebulletin.org) -
 [Chemical & Engineering News](https://cen.acs.org) -
 [Discover Magazine](https://www.discovermagazine.com) -
 [Medscape](https://www.medscape.com) -

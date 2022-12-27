@@ -588,6 +588,7 @@
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
     "*://*.thebanker.com/*",
+    "*://*.thebulletin.org/*",
     "*://*.thecourier.com.au/*",
     "*://*.thecritic.co.uk/*",
     "*://*.thecut.com/*",
@@ -717,5 +718,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.8.8"
+  "version": "2.9.8.9"
 }

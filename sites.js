@@ -232,6 +232,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Bulletin of the Atomic Scientists": {
+    domain: "thebulletin.org",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
+  },
   "Business Insider": {
     domain: "businessinsider.com",
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
