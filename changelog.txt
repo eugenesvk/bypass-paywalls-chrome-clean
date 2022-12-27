@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v2.9.9.0 (2022-12-27)
 Add Bulletin of the Atomic Scientists
 Add Limburger.nl (link to archive.is)
 Add Republic.ru
