@@ -13,6 +13,7 @@ Fix New York Magazine sites (timing cookies)
 Update block general paywall script (Axate.io)
 Update custom sites (block_js_inline)
 Update custom sites (cs_code: remove/unhide in dom)
+Update custom sites (fix optional permissions)
 
 * v2.9.8.0 (2022-12-18)
 Add CaravanMagazine.in
