@@ -400,6 +400,7 @@
     "*://*.masslive.com/*",
     "*://*.maz-online.de/*",
     "*://*.mcall.com/*",
+    "*://*.mcclatchydc.com/*",
     "*://*.medium.com/*",
     "*://*.medscape.com/*",
     "*://*.menshealth.com/*",
@@ -718,5 +719,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "2.9.9.0"
+  "version": "2.9.9.1"
 }

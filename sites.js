@@ -1213,6 +1213,7 @@ var defaultSites = {
       "kansas.com",
       "kansascity.com",
       "kentucky.com",
+      "mcclatchydc.com",
       "miamiherald.com",
       "newsobserver.com",
       "sacbee.com",

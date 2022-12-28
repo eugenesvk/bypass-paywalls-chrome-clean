@@ -35,7 +35,7 @@ var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com',
 var usa_genomeweb_domains = ['360dx.com', 'genomeweb.com', 'precisiononcologynews.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'omaha.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
-var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
+var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'mcclatchydc.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pe.com', 'twincities.com'];
 var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "gymclimber.com", "outsideonline.com", "oxygenmag.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
@@ -4314,9 +4314,9 @@ else if ((domain = matchDomain(usa_mcc_domains)) ||
   (window.location.hostname.startsWith('account.') && document.querySelector('script[src*=".mcclatchyinteractive.com/"]')) ||
   (window.location.href.match(/\/\/amp\..+\.com\/(.+\/)?article(\d){8,}\.html/) && document.querySelector('a[href^="https://classifieds.mcclatchy.com/"]'))) {
   if (!domain)
-    domain = document.domain.replace(/(account|amp)\./, '');
+    domain = window.location.hostname.replace(/^(account|amp)\./, '');
   let url = window.location.href;
-  if (url.includes('account.' + domain + '/paywall/')) {
+  if (url.includes('account.' + domain + '/paywall/subscriber-only?resume=')) {
     window.setTimeout(function () {
       window.location.href = 'https://amp.' + domain + '/article' + url.split('resume=')[1].split(/[#&]/)[0] + '.html';
     }, 500);

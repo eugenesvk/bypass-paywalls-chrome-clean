@@ -542,7 +542,8 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     }
 
     // Refresh the current tab
-    refreshCurrentTab();
+    if (!['ext_version_new'].includes(key))
+      refreshCurrentTab();
   }
 });
 
@@ -839,10 +840,13 @@ if (typeof browser !== 'object') {
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
   if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (changeInfo.url))) {
+    let timeout = changeInfo.url ? 500 : 0;
+    setTimeout(function () {
     if (matchUrlDomain(enabledSites, tab.url)) {
       runOnTab(tab);
     }
     runOnTab_once(tab);
+    }, timeout);
   }
 });
 

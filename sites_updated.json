@@ -6,10 +6,9 @@
     "ld_google_webcache": "div.article--cropped|div#body-copy",
     "new_site": 1
   },
-  "L'Express": {
-    "domain": "lexpress.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/data"
+  "McClatchy DC": {
+    "domain": "mcclatchydc.com",
+    "block_regex": "js\\.matheranalytics\\.com"
   },
   "Republic.ru": {
     "domain": "republic.ru",
@@ -31,10 +30,5 @@
     "domain": "wonderzine.com",
     "allow_cookies": 1,
     "useragent": "facebookbot"
-  },
-  "Qiota": {
-    "domain": "qiota.com",
-    "allow_cookies": 1,
-    "block_regex_general": "\\.qiota\\.com\\/data"
   }
 }

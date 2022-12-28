@@ -325,6 +325,7 @@ Grouped in options:\
 [Belleville News-Democrat](https://www.bnd.com) -
 [Fort Worth Star-Telegram](https://www.star-telegram.com) -
 [Lexington Herald-Leader](https://www.kentucky.com) -
+[McClatchy DC](https://www.mcclatchydc.com) -
 [Miami Herald](https://www.miamiherald.com) -
 [The Charlotte Observer](https://www.charlotteobserver.com) -
 [The Fresno Bee](https://www.fresnobee.com) -

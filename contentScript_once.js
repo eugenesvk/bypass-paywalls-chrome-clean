@@ -93,7 +93,7 @@ window.setTimeout(function () {
         group = '###_usa_townnews';
       else if (document.querySelector('meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"]'))
         group = '###_usa_mcc';
-      else if (document.querySelector('script[src*=".com/wp-content/plugins/dfm"]'))
+      else if (document.querySelector('script[src*=".com/wp-content/plugins/dfm"], amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))
         group = '###_usa_mng';
       else if (hostname.match(/\.com$/)) {
         if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
