@@ -211,6 +211,11 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.
 else if (window.location.hostname.match(/\.(com|net)\.au$/)) {//australia
 
 if (matchDomain('thesaturdaypaper.com.au')) {
+  let hide_end = document.querySelector('div.hide-end');
+  if (hide_end) {
+    ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
+    csDoneOnce = true;
+  }
   let paywall = document.querySelector('div.paywall-hard-always-show');
   removeDOMElement(paywall);
 }

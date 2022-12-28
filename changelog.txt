@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add McClatchy DC
+Fix TheSaturdayPaper.com.au
 
 * v2.9.9.0 (2022-12-27)
 Add Bulletin of the Atomic Scientists
@@ -982,7 +983,7 @@ Fix WSJ (option to disable Googlebot; http error 500)
 Add Berliner-Zeitung.de
 Add The Dallas Morning News (local USA)
 Add Entrepreneur
-Fix The Saturday Paper
+Fix TheSaturdayPaper.com.au
 
 * v2.1.2.0 (2021-03-14)
 Add El Espanol (Spain)
