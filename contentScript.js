@@ -2696,7 +2696,7 @@ else if (matchDomain('bostonglobe.com')) {
 
 else if (matchDomain('bqprime.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
-    amp_unhide_subscr_section();
+    amp_unhide_subscr_section('.ad-container');
   }
 }
 
@@ -4295,6 +4295,32 @@ else if (matchDomain('substack.com') || document.querySelector('script[src^="htt
     let redundant_elem = document.querySelector(redundant_sel);
     removeDOMElement(redundant_elem);
     waitDOMElement(redundant_sel, 'DIV', removeDOMElement, true);
+  }
+}
+
+else if (matchDomain('zerohedge.com')) {
+  let paywall = document.querySelector('div[class^="PremiumOverlay_container__"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script && dompurify_loaded) {
+      try {
+        let json = JSON.parse(json_script.innerText);
+        if (json && json.props.pageProps.node.body) {
+          let article_new = parseHtmlEntities(decode_utf8(atob(json.props.pageProps.node.body.substring(21))));
+          let article = document.querySelector('div[class^="NodeContent_mainContent__"');
+          if (article) {
+            article.innerHTML = '';
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            article.appendChild(content_new);
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
   }
 }
 

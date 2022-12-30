@@ -202,7 +202,8 @@ Grouped in options:\
 [The Daily Wire](https://www.dailywire.com) -
 [The New Atlantis](https://www.thenewatlantis.com) -
 [The Point Magazine](https://thepointmag.com) -
-[The Wrap](https://www.thewrap.com)
+[The Wrap](https://www.thewrap.com) -
+[ZeroHedge](https://www.zerohedge.com)
 
 Grouped in options:\
 *Condé Nast magazines* sites like\

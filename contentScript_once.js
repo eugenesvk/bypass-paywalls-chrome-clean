@@ -91,7 +91,7 @@ window.setTimeout(function () {
         group = '###_usa_lee_ent';
       else if (document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]'))
         group = '###_usa_townnews';
-      else if (document.querySelector('meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"]'))
+      else if (document.querySelector('meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"], script[src*=".mcclatchyinteractive.com/"]'))
         group = '###_usa_mcc';
       else if (document.querySelector('script[src*=".com/wp-content/plugins/dfm"], amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))
         group = '###_usa_mng';
