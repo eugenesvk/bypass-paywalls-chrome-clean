@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add McClatchy DC
 Add ZeroHedge
+Fix Substack (split content)
 Fix TheSaturdayPaper.com.au
 
 * v2.9.9.0 (2022-12-27)

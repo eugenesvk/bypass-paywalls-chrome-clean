@@ -4276,25 +4276,37 @@ else if (matchDomain('wsj.com')) {
   }
 }
 
-else if (matchDomain('substack.com') || document.querySelector('script[src^="https://substackcdn.com/min/main.bundle.js"]')) {
+else if (matchDomain('substack.com') || document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]')) {
   let paywall = document.querySelector('div.paywall:not(.modal-paywall)');
   let article_sel = 'div.available-content';
   if (paywall) {
     let article = document.querySelector(article_sel);
-    if (article) {
-      let msg = document.createElement('div');
+    let msg = document.querySelector('div#bpc_msg');
+    if (article && !msg) {
+      msg = document.createElement('div');
+      msg.id = 'bpc_msg';
       msg.innerText = 'BPC > no fix !';
       msg.setAttribute('style', 'margin: 20px; width: 20em; font-weight: bold; color: red;');
       article.insertBefore(msg, article.firstChild);
     }
-    csDoneOnce = true;
   } else {
     let lock = document.querySelector('path.lock-body');
     let paywall_content_sel = 'div.paywall-content';
-    let redundant_sel = lock ? article_sel : paywall_content_sel;
-    let redundant_elem = document.querySelector(redundant_sel);
-    removeDOMElement(redundant_elem);
-    waitDOMElement(redundant_sel, 'DIV', removeDOMElement, true);
+    let redundant_sel;
+    if (lock) {
+      let intro = document.querySelectorAll(article_sel + ' > div > p');
+      if (intro.length) {
+        let intro_last = intro.length - 1;
+        if (!intro[intro_last].innerText.match(/…(")?/))
+          redundant_sel = article_sel;
+      }
+    } else
+      redundant_sel = paywall_content_sel;
+    if (redundant_sel) {
+      let redundant_elem = document.querySelector(redundant_sel);
+      removeDOMElement(redundant_elem);
+      waitDOMElement(redundant_sel, 'DIV', removeDOMElement, true);
+    }
   }
 }
 
