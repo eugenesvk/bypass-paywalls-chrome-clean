@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add McClatchy DC
+Add Mundo Deportivo
 Add ZeroHedge
 Fix Substack (split content)
 Fix TheSaturdayPaper.com.au

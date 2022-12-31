@@ -10,6 +10,11 @@
     "domain": "mcclatchydc.com",
     "block_regex": "js\\.matheranalytics\\.com"
   },
+  "Mundo Deportivo": {
+    "domain": "mundodeportivo.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
+  },
   "Republic.ru": {
     "domain": "republic.ru",
     "allow_cookies": 1,

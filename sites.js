@@ -1299,6 +1299,11 @@ var defaultSites = {
   "Mountain View Voice": {
     domain: "mv-voice.com"
   },
+  "Mundo Deportivo": {
+    domain: "mundodeportivo.com",
+    allow_cookies: 1,
+    block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
+  },
   "National Geographic USA": {
     domain: "nationalgeographic.com",
     allow_cookies: 1,

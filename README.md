@@ -676,6 +676,7 @@ Grouped in options:\
 [El País](https://elpais.com) -
 [El Periódico de Catalunya](https://www.elperiodico.com) -
 [La Vanguardia](https://www.lavanguardia.com) -
+[Mundo Deportivo](https://www.mundodeportivo.com) -
 [Política Exterior](https://www.politicaexterior.com)
 
 Grouped in options:\

@@ -1014,7 +1014,7 @@ else if (matchDomain('suomensotilas.fi')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'lavanguardia.com', 'levante-emv.com', 'marca.com', 'politicaexterior.com'])) {//spain/portugal
+} else if (window.location.hostname.match(/\.(es|pt|cat)$/) || matchDomain(['diariocordoba.com', 'diariovasco.com', 'elconfidencial.com', 'elcorreo.com', 'elespanol.com', 'elpais.com', 'elperiodico.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'expansion.com', 'larioja.com', 'lavanguardia.com', 'levante-emv.com', 'marca.com', 'mundodeportivo.com', 'politicaexterior.com'])) {//spain/portugal
 
 if (matchDomain(['ara.cat', 'arabalears.cat'])) {
   let url = window.location.href;
@@ -1170,7 +1170,7 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
   }
 }
 
-else if (matchDomain('lavanguardia.com')) {
+else if (matchDomain(['lavanguardia.com', 'mundodeportivo.com'])) {
   let ads = document.querySelectorAll('span.content-ad, span.hidden-ad');
   removeDOMElement(...ads);
 }
