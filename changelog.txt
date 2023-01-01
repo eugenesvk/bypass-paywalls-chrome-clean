@@ -6,6 +6,7 @@ Add McClatchy DC
 Add Mundo Deportivo
 Add ZeroHedge
 Fix Substack (split content)
+Fix Telegraaf.nl
 Fix TheSaturdayPaper.com.au
 
 * v2.9.9.0 (2022-12-27)

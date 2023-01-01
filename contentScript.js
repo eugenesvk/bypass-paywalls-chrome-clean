@@ -2106,11 +2106,11 @@ else if (matchDomain('telegraaf.nl')) {
       window.location.reload(true);
     }, 500);
   }
-  let article_wrapper = document.querySelector('.ArticlePageWrapper__uid');
-  let spotx_banner = document.querySelector('.ArticleBodyBlocks__inlineArticleSpotXBanner');
   let paywall = document.querySelector('.MeteringNotification__backdrop');
-  removeDOMElement(spotx_banner, paywall);
+  let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
+  removeDOMElement(paywall, ...banners);
   let premium = document.querySelector('.PremiumLabelWithLine');
+  let article_wrapper = document.querySelector('.ArticlePageWrapper__uid');
   let article_id = article_wrapper ? article_wrapper.innerText : '123';
   let article_body_done = window.location.pathname.startsWith('/video/') || document.querySelector('#articleBody' + article_id);
   if (premium && !article_body_done) {
@@ -2144,7 +2144,7 @@ else if (matchDomain('telegraaf.nl')) {
             div_elem.appendChild(p_div);
           });
           div_main.appendChild(div_elem);
-          article_body.insertBefore(div_main, article_body.firstChild);
+          article_body.firstChild.after(div_main);
         }
       }
     }
