@@ -1490,10 +1490,14 @@ var defaultSites = {
     ],
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
-  "Philosophie Magazine": {
+  "PhiloMag.com": {
     domain: "philomag.com",
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
+  },
+  "PhiloMag.de": {
+    domain: "philomag.de",
+    allow_cookies: 1
   },
   "Philosophy Now": {
     domain: "philosophynow.org"

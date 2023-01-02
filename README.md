@@ -529,7 +529,8 @@ Grouped in options:\
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
-[Piqd.de](https://www.piqd.de) -
+[Philosophie Magazin](https://www.philomag.de) -
+[Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -

@@ -61,7 +61,8 @@ if (bg2csData.ld_json && dompurify_loaded) {
         if (json_script) {
           try {
             let json = JSON.parse(json_script.text);
-            let json_text = parseHtmlEntities(json.articleBody ? json.articleBody : json.text);
+            let json_key = Object.keys(json).find(key => key.match(/^(articlebody|text)$/i));
+            let json_text = parseHtmlEntities((json[json_key].replace(/(\r)?\n/g, '<br><br>')));
             let content = document.querySelector(article_sel);
             if (json_text && content) {
               let parser = new DOMParser();
@@ -691,6 +692,27 @@ else if (matchDomain('nzz.ch')) {
   } else {
     let amp_ads = document.querySelectorAll('amp-ad');
     removeDOMElement(...amp_ads);
+  }
+}
+
+else if (matchDomain('philomag.de')) {
+  let paywall = document.querySelector('div[id^="block-paywall"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = json.articlebody.replace('%paywall%', '').replace(/(\\r)?\\n/g, '<br><br>');
+        let content = document.querySelector('div.content-center > div.description');
+        if (json_text && content) {
+          content.innerHTML = '';
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          content.appendChild(article_new);
+        }
+      }
+    }
   }
 }
 
@@ -4662,7 +4684,7 @@ function getArticleJsonScript() {
   let scripts = document.querySelectorAll('script[type="application/ld+json"]');
   let json_script;
   for (let script of scripts) {
-    if (script.innerText.match(/"(articleBody|text)":/)) {
+    if (script.innerText.match(/"(articlebody|text)":/i)) {
       json_script = script;
       break;
     }

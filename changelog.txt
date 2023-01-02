@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add McClatchy DC
 Add Mundo Deportivo
+Add PhiloMag.de
 Add ZeroHedge
 Fix Substack (split content)
 Fix Telegraaf.nl
@@ -81,7 +82,7 @@ Fix custom sites (block_regex)
 Add Ad.nl (+ regional) & Hln.be (link to archive.is)
 Add Field & Stream
 Add Nieuwsblad.be & Standaard.be (link to archive.is)
-Add Philomag.com
+Add PhiloMag.com
 Add Public.fr
 Add Record.pt
 Add The New York Post
