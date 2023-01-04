@@ -1087,6 +1087,10 @@ var defaultSites = {
     remove_cookies: 1,
     referer: "facebook"
   },
+  "Le Courrier des Stratèges": {
+    domain: "lecourrierdesstrateges.fr",
+    allow_cookies: 1
+  },
   "Le Devoir": {
     domain: "ledevoir.com",
     block_regex: /\.tinypass\.com\//,
