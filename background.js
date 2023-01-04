@@ -786,7 +786,9 @@ if (typeof browser !== 'object') {
         ext_api.tabs.executeScript(tabId, {
           file: lib_file,
           runAt: 'document_start'
-        }, function () {
+        }, function (res) {
+          if (ext_api.runtime.lastError)
+            return;
           ext_api.tabs.executeScript(tabId, {
             file: 'contentScript.js',
             runAt: 'document_start'

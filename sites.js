@@ -483,10 +483,6 @@ var defaultSites = {
     domain: "enotes.com",
     allow_cookies: 1
   },
-  "Entrepreneur": {
-    domain: "entrepreneur.com",
-    allow_cookies: 1
-  },
   "ESPN USA (news only; link to archive.is))": {
     domain: "espn.com",
     allow_cookies: 1

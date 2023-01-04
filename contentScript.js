@@ -2984,19 +2984,6 @@ else if (matchDomain('enotes.com')) {
   }
 }
 
-else if (matchDomain('entrepreneur.com')) {
-  let promo = document.querySelector('.paywall-promo');
-  if (promo) {
-    removeDOMElement(promo);
-    let gate_check = document.querySelector('.gate-check');
-    if (gate_check)
-      gate_check.removeAttribute('class');
-    let hidden_images = document.querySelectorAll('img.lazy[src*="blur"][data-src]');
-    for (let hidden_image of hidden_images)
-      hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
-  }
-}
-
 else if (matchDomain('espn.com')) {
   let url = window.location.href;
   let paywall = document.querySelector('aside.espn-plus-container-wrapper');
