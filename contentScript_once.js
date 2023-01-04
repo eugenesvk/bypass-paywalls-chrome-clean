@@ -83,7 +83,7 @@ window.setTimeout(function () {
         group = '###_ca_postmedia';
       else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]'))
         group = '###_uk_axate.io';
-      else if (document.querySelector('img[srcset*=".gannett-cdn.com/"]'))
+      else if (document.querySelector('link[href*=".gannett-cdn.com/"]'))
         group = '###_usa_gannett';
       else if (document.querySelector('script[src*="/treg.hearstnp.com/"]'))
         group = '###_usa_hearst_comm';

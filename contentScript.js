@@ -2712,7 +2712,7 @@ else if (matchDomain('bostonglobe.com')) {
     amp_unhide_subscr_section();
   } else {
     let ads = document.querySelectorAll('div.arc_ad');
-    removeDOMElement(...ads);
+    hideDOMElement(...ads);
   }
 }
 

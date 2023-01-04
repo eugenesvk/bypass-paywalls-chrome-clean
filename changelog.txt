@@ -6,6 +6,7 @@ Add McClatchy DC
 Add Mundo Deportivo
 Add PhiloMag.de
 Add ZeroHedge
+Fix Boston Globe (css)
 Fix Substack (split content)
 Fix Telegraaf.nl
 Fix TheSaturdayPaper.com.au
