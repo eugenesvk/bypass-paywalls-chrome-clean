@@ -8,6 +8,7 @@ Add Mundo Deportivo
 Add PhiloMag.de
 Add ZeroHedge
 Remove Entrepreneur (fix obsolete)
+Remove The-Village.ru (fix obsolete)
 Fix Boston Globe (css)
 Fix Substack (split content)
 Fix Telegraaf.nl
@@ -17,7 +18,7 @@ Fix TheSaturdayPaper.com.au
 Add Bulletin of the Atomic Scientists
 Add Limburger.nl (link to archive.is)
 Add Republic.ru
-Add TheVillage.ru
+Add The-Village.ru
 Add Wiwo.de
 Add Wonderzine (ru)
 Remove Dvhn.nl & Mediahuis Belgie (fix obsolete)

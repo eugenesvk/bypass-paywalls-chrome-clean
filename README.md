@@ -664,7 +664,6 @@ Grouped in options:\
 
 ##### Russia
 [Republic.ru](https://republic.ru) -
-[The Village](https://www.the-village.ru) -
 [Wonderzine](https://www.wonderzine.com)
 
 ##### Slovenia
