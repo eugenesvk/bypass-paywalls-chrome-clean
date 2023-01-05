@@ -861,7 +861,18 @@ else
 
 } else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/sweden
 
-if (matchDomain('etc.se')) {
+if (matchDomain(['aftonbladet.se'])) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+}
+
+else if (matchDomain('etc.se')) {
   let paywall = document.querySelector('div.paywalled');
   if (paywall) {
     paywall.removeAttribute('class');

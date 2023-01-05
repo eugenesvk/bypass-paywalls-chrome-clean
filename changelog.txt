@@ -9,6 +9,7 @@ Add PhiloMag.de
 Add ZeroHedge
 Remove Entrepreneur (fix obsolete)
 Remove The-Village.ru (fix obsolete)
+Fix Aftonbladet.se (link to archive.is)
 Fix Boston Globe (css)
 Fix Substack (split content)
 Fix Telegraaf.nl
