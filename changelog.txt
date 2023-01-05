@@ -11,6 +11,7 @@ Remove Entrepreneur (fix obsolete)
 Remove The-Village.ru (fix obsolete)
 Fix Aftonbladet.se (link to archive.is)
 Fix Boston Globe (css)
+Fix Nordwest Zeitung
 Fix Substack (split content)
 Fix Telegraaf.nl
 Fix TheSaturdayPaper.com.au
@@ -984,7 +985,7 @@ Update options: restore opt-in for custom sites (on reload; Chrome-only)
 Add Aachener-Zeitung.de (RP-medien)
 Add Apollo Magazine
 Add NK News (not pro)
-Add Nordwest Zeitung (Germany)
+Add Nordwest Zeitung
 Fix McClatchy Group (opt-in to custom sites for unlisted)
 Fix Wired (Googlebot)
 Fix WSJ (option to disable Googlebot; http error 500)

@@ -15,16 +15,17 @@
     "allow_cookies": 1,
     "block_regex": "(\\.evolok\\.net\\/|\\.lavanguardia\\.com\\/js\\/godo-basex-)"
   },
+  "Nordwest Zeitung": {
+    "domain": "nwzonline.de",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": ".paywall-overlay"
+  },
   "Republic.ru": {
     "domain": "republic.ru",
     "allow_cookies": 1,
     "useragent": "googlebot",
     "new_site": 1
-  },
-  "The Village.ru": {
-    "domain": "the-village.ru",
-    "allow_cookies": 1,
-    "block_regex": "\\.the-village\\.ru\\/assets\\/app\\/\\d.+\\.js"
   },
   "WirtschaftsWoche": {
     "domain": "wiwo.de",

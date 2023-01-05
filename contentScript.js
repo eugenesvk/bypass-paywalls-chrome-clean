@@ -676,11 +676,10 @@ else if (matchDomain('nwzonline.de')) {
   if (window.location.pathname.match(/-amp\.html$/)) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed');
   } else {
-    let paywall = document.querySelector('.story--premium__container');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
+    let paywall = document.querySelector('.story--premium__container, .paywall-overlay');
+    if (paywall) {
       removeDOMElement(paywall);
-      window.location.href = amphtml.href;
+      window.location.href = window.location.pathname.replace('.html', '-amp.html');
     }
   }
 }
