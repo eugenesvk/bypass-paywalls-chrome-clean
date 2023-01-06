@@ -3715,6 +3715,11 @@ else if (matchDomain('scmp.com')) {
     csDoneOnce = true;
 }
 
+else if (matchDomain('seattletimes.com')) {
+  let ads = document.querySelectorAll('.top-ad-wrapper, .ad-container');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('seekingalpha.com')) {
   if (!window.location.pathname.startsWith('/amp/')) {
     let locked = document.querySelector('div[data-test-id="post-locked-banner"]');

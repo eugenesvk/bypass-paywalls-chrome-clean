@@ -1989,7 +1989,7 @@ var defaultSites = {
   "The Seattle Times": {
     domain: "seattletimes.com",
     allow_cookies: 1,
-    block_regex: /(\.seattletimes\.com\/wp-content\/.+\/st-(advertising|blocking)-bundle\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.seattletimes\.com\/.+\/st-user-messaging.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Scotsman": {
     domain: "scotsman.com",

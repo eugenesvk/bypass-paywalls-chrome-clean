@@ -14,6 +14,7 @@ Fix Boston Globe (css)
 Fix Nordwest Zeitung
 Fix Substack (split content)
 Fix Telegraaf.nl
+Fix The Seattle Times (comments)
 Fix TheSaturdayPaper.com.au
 
 * v2.9.9.0 (2022-12-27)
