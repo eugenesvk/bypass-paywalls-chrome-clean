@@ -1982,6 +1982,10 @@ var defaultSites = {
     domain: "thepointmag.com",
     remove_cookies_select_drop: ["monthly_history"]
   },
+  "The Quint": {
+    domain: "thequint.com",
+    allow_cookies: 1
+  },
   "The Saturday Paper": {
     domain: "thesaturdaypaper.com.au",
     block_regex: /\.thesaturdaypaper\.com\.au\/sites\/all\/modules\/custom\/node_meter\/pw\.js/

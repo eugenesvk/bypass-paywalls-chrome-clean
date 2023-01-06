@@ -4085,6 +4085,20 @@ else if (matchDomain('thepointmag.com')) {
     removeDOMElement(elem);
 }
 
+else if (matchDomain('thequint.com')) {
+  let paywall = document.querySelector('div.zsqcu');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let body_hidden = document.querySelector('div#story-body-wrapper');
+    if (body_hidden)
+      body_hidden.removeAttribute('class');
+    function thequint_unhide(node) {
+      node.removeAttribute('class');
+    }
+    waitDOMAttribute('div#story-body-wrapper', 'DIV', 'class', thequint_unhide, true);
+  }
+}
+
 else if (matchDomain('thewrap.com')) {
   let paywall = document.querySelector('.wrappro-paywall');
   if (paywall)

@@ -6,6 +6,7 @@ Add LeCourrierDesStrateges.fr
 Add McClatchy DC
 Add Mundo Deportivo
 Add PhiloMag.de
+Add The Quint
 Add ZeroHedge
 Remove Entrepreneur (fix obsolete)
 Remove The-Village.ru (fix obsolete)

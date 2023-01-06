@@ -27,6 +27,11 @@
     "useragent": "googlebot",
     "new_site": 1
   },
+  "The Seattle Times": {
+    "domain": "seattletimes.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.seattletimes\\.com\\/.+\\/st-user-messaging.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+  },
   "WirtschaftsWoche": {
     "domain": "wiwo.de",
     "allow_cookies": 1,
