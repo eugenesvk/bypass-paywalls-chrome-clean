@@ -230,6 +230,7 @@ var defaultSites = {
   "BQ Prime": {
     domain: "bqprime.com",
     allow_cookies: 1,
+    block_js_inline: /\.bqprime\.com\/.+\/.+\?rel=geo_block/,
     block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Bulletin of the Atomic Scientists": {

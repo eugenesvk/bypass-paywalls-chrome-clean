@@ -2758,6 +2758,20 @@ else if (matchDomain('bostonglobe.com')) {
 else if (matchDomain('bqprime.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_subscr_section('.ad-container');
+  } else {
+    if (!window.location.search.startsWith('?rel=geo_block')) {
+      window.setTimeout(function () {
+        let geo_block = document.querySelector('div[class*="geotag-container_"]');
+        if (geo_block) {
+          removeDOMElement(geo_block);
+          window.location.href = window.location.pathname + '?rel=geo_block';
+        }
+      }, 1000);
+    } else {
+      let hidden_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
+      for (let elem of hidden_images)
+        elem.setAttribute('src', elem.getAttribute('data-src'));
+    }
   }
 }
 

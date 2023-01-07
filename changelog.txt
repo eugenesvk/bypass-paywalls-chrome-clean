@@ -14,6 +14,7 @@ Remove (custom) Substack (fix obsolete)
 Remove The-Village.ru (fix obsolete)
 Fix Aftonbladet.se (link to archive.is)
 Fix Boston Globe (css)
+Fix BQ Prime (geo-block)
 Fix Nordwest Zeitung
 Fix Substack (split content - fix obsolete)
 Fix Telegraaf.nl
