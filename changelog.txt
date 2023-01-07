@@ -9,6 +9,7 @@ Add PhiloMag.de
 Add The Quint
 Add ZeroHedge
 Remove Entrepreneur (fix obsolete)
+Remove Saarbruecker Zeitung (fix obsolete)
 Remove (custom) Substack (fix obsolete)
 Remove The-Village.ru (fix obsolete)
 Fix Aftonbladet.se (link to archive.is)
