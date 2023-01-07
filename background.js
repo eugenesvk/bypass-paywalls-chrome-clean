@@ -816,7 +816,7 @@ if (typeof browser !== 'object') {
     let tabId = tab.id;
     let url = tab.url;
     // load contentScript_once.js to identify custom site (flex) of group
-    if (!(matchUrlDomain(custom_flex_domains.concat(custom_flex_not_domains, customSites_domains, updatedSites_domains_new, excludedSites), url) || matchUrlDomain(defaultSites_domains, url))) {
+    if (!(matchUrlDomain(custom_flex_domains.concat(custom_flex_not_domains, customSites_domains, updatedSites_domains_new, excludedSites, nofix_sites), url) || matchUrlDomain(defaultSites_domains, url))) {
       ext_api.tabs.executeScript(tabId, {
         file: 'contentScript_once.js',
         runAt: 'document_start'
@@ -1336,10 +1336,12 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      if (enabledSites.includes(group) && custom_domain && !custom_flex_domains.includes(custom_domain)) {
+      if (enabledSites.concat(['###_substack_custom']).includes(group) && custom_domain && !custom_flex_domains.includes(custom_domain)) {
         let rules;
         if (group === 'elmercurio.com')
           rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
+        else if (group === '###_substack_custom')
+          nofix_sites.push(custom_domain);
         else {
           rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
           if (group === '###_usa_gannett')

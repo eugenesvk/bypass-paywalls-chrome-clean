@@ -169,13 +169,11 @@ Grouped in options:\
 [StuDocu](https://www.studocu.com)
 
 ##### Magazines/Blogs
-[Medium](https://www.medium.com) -
-[Substack](https://substack.com)\
+[Medium](https://www.medium.com)\
 Grouped in options:\
 *Medium custom domains* like (opt-in to custom sites for unlisted)\
 [Better Programming](https://betterprogramming.pub) -
-[Towards Data Science](https://towardsdatascience.com)\
-*Substack custom domains* (opt-in to custom sites)
+[Towards Data Science](https://towardsdatascience.com)
 
 [Apollo Magazine](https://www.apollo-magazine.com) -
 [Artforum](https://www.artforum.com) -

@@ -41,7 +41,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'lanouvellerepublique.fr', 'latimes.com', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'nknews.org', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'nwzonline.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'substack.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(ca_gcm_domains, de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
+var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'lanouvellerepublique.fr', 'latimes.com', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'nknews.org', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'nwzonline.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(ca_gcm_domains, de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, usa_hearst_comm_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -4339,40 +4339,6 @@ else if (matchDomain('wsj.com')) {
     if (snippet || wsj_pro) {
       removeDOMElement(snippet, wsj_pro);
       window.location.href = url.replace('wsj.com', 'wsj.com/amp');
-    }
-  }
-}
-
-else if (matchDomain('substack.com') || document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]')) {
-  let paywall = document.querySelector('div.paywall:not(.modal-paywall)');
-  let article_sel = 'div.available-content';
-  if (paywall) {
-    let article = document.querySelector(article_sel);
-    let msg = document.querySelector('div#bpc_msg');
-    if (article && !msg) {
-      msg = document.createElement('div');
-      msg.id = 'bpc_msg';
-      msg.innerText = 'BPC > no fix !';
-      msg.setAttribute('style', 'margin: 20px; width: 20em; font-weight: bold; color: red;');
-      article.insertBefore(msg, article.firstChild);
-    }
-  } else {
-    let lock = document.querySelector('path.lock-body');
-    let paywall_content_sel = 'div.paywall-content';
-    let redundant_sel;
-    if (lock) {
-      let intro = document.querySelectorAll(article_sel + ' > div > p');
-      if (intro.length) {
-        let intro_last = intro.length - 1;
-        if (!intro[intro_last].innerText.match(/…(")?/))
-          redundant_sel = article_sel;
-      }
-    } else
-      redundant_sel = paywall_content_sel;
-    if (redundant_sel) {
-      let redundant_elem = document.querySelector(redundant_sel);
-      removeDOMElement(redundant_elem);
-      waitDOMElement(redundant_sel, 'DIV', removeDOMElement, true);
     }
   }
 }

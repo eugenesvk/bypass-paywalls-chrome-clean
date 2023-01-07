@@ -1697,15 +1697,6 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
-  "Substack (paywall-content only)": {
-    domain: "substack.com",
-    useragent: "googlebot"
-  },
-  "Substack custom domains (paywall-content only; opt-in to custom sites)": {
-    domain: "###_substack_custom",
-    group: [],
-    useragent: "googlebot"
-  },
   "Süddeutsche Zeitung (link to archive.is)": {
     domain: "sueddeutsche.de",
     allow_cookies: 1
@@ -2396,7 +2387,6 @@ var custom_flex_not = {
   "###_nl_mediahuis_noord": ["dvhn.nl"],
   "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
   "###_medium_custom": ["medium.com"],
-  "###_substack_custom": ["substack.com"],
   "###_uk_axate.io": ["thinkofx.net"],
   "###_usa_gannett": ["usatoday.com"],
   "###_usa_hearst_comm": ["sfgate.com"],
@@ -2416,4 +2406,4 @@ init_custom_flex_domains();
 var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'dvhn.nl', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'dvhn.nl', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'substack.com', 'suedkurier.de', 'swp.de', 'tagesanzeiger.ch', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);
