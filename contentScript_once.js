@@ -56,17 +56,18 @@ window.setTimeout(function () {
         if (document.querySelector('link[href*="/thewest.com.au/"]'))
           group = 'thewest.com.au';
       }
-    } else if (hostname.endsWith('.ch')) {
-      if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
-        group = 'nzz.ch';
     } else if (hostname.endsWith('.cl')) {
       if (document.querySelector('meta[content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';
-    } else if (hostname.endsWith('.de')) {
+    } else if (hostname.match(/\.(de|at|ch)$/) || matchDomain(['horizont.net', 'lebensmittelzeitung.net'])) {
       if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))
         group = '###_de_funke_medien';
       else if (document.querySelector('link[href*=".rndtech.de/"]'))
         group = '###_de_madsack';
+      else if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))
+        group = '###_de_dfv_medien';
+      else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
+        group = 'nzz.ch';
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
       if (document.querySelector('link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';

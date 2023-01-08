@@ -435,10 +435,10 @@ else if (matchDomain('arcinfo.ch')) {
   let paywall = document.querySelector('section#paywall-articles');
   if (paywall && dompurify_loaded) {
     removeDOMElement(paywall);
-    let url_id = window.location.href.split(/[\?#]/)[0].match(/\d+$/).pop();
+    let url_id = window.location.pathname.match(/\d+$/).pop();
     let html = document.documentElement.outerHTML;
     let og_url = document.querySelector('meta[name="og:url"][content]');
-    if (og_url && (og_url.content.match(/\d+$/).pop() !== url_id))
+    if (og_url && !og_url.content.endsWith(url_id))
       window.location.reload(true);
     let json;
     if (html.includes('window.__NUXT__='))
@@ -2773,6 +2773,8 @@ else if (matchDomain('bqprime.com')) {
         elem.setAttribute('src', elem.getAttribute('data-src'));
     }
   }
+  let ads = document.querySelectorAll('.responsive-ad');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('business-standard.com')) {

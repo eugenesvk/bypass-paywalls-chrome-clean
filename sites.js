@@ -379,6 +379,12 @@ var defaultSites = {
     domain: "tagesspiegel.de",
     allow_cookies: 1
   },
+  "Deutscher Fachverlag Mediengruppe": {
+    domain: "###_de_dfv_medien",
+    group: [],
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
@@ -2254,7 +2260,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\//,
-    excluded_domains: ["asia.nikkei.com", "japantimes.co.jp", "lkz.de"]
+    excluded_domains: ["asia.nikkei.com", "brusselstimes.com", "japantimes.co.jp", "lkz.de"]
   },
   "Pico.tools": {
     domain: "pico.tools",
@@ -2383,6 +2389,7 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 // custom domains (background)
 var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
+  "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
   "###_nl_mediahuis_noord": ["dvhn.nl"],
   "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],

@@ -20,6 +20,11 @@
   "Brainly.com": {
     "domain": "brainly.com"
   },
+  "Brusselstimes.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "domain": "brusselstimes.com"
+  },
   "Businessnews.com.au": {
     "allow_cookies": 1,
     "domain": "businessnews.com.au",
@@ -94,6 +99,11 @@
     "allow_cookies": 1,
     "domain": "euromoney.com",
     "useragent": "googlebot"
+  },
+  "Fastcompany.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "domain": "fastcompany.com"
   },
   "Finanz-szene.de": {
     "allow_cookies": 1,
@@ -273,6 +283,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "sltrib.com"
+  },
+  "Spectator.org": {
+    "allow_cookies": 1,
+    "block_regex": "\\/spectator\\.org\\/.+\\/evolok",
+    "domain": "spectator.org"
   },
   "Speld.nl": {
     "domain": "speld.nl"
