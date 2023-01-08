@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v3.0.0.0 (2023-01-08)
 Add Deutscher Fachverlag Mediengruppe (opt-in to custom sites)
 Add LeCourrierDesStrateges.fr
 Add McClatchy DC
