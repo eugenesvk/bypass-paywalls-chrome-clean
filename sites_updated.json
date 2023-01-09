@@ -6,6 +6,11 @@
     "ld_google_webcache": "div.article--cropped|div#body-copy",
     "new_site": 1
   },
+  "Inc42": {
+    "domain": "inc42.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div#inc42_article_content_lock|div.content-wrapper,section[amp-access='status']"
+  },
   "McClatchy DC": {
     "domain": "mcclatchydc.com",
     "block_regex": "js\\.matheranalytics\\.com"

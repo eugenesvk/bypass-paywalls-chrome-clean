@@ -68,6 +68,8 @@ window.setTimeout(function () {
         group = '###_de_dfv_medien';
       else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
+      else if (document.querySelector('link[href*=".tamedia.ch/"]'))
+        group = '###_ch_tamedia';
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
       if (document.querySelector('link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';
