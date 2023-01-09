@@ -1532,19 +1532,7 @@ else if (matchDomain('lequipe.fr')) {
 }
 
 else if (matchDomain('lesechos.fr')) {
-  if (matchDomain('investir.lesechos.fr')) {
-    if (!window.location.href.includes('/amp/')) {
-      let paywall = document.querySelector('div.bloc-paywall');
-      let amphtml = document.querySelector('link[rel="amphtml"]');
-      if (paywall && amphtml) {
-        removeDOMElement(paywall);
-        window.location.href = amphtml.href;
-      }
-    } else {
-      let amp_ads = document.querySelectorAll('amp-ad');
-      removeDOMElement(...amp_ads);
-    }
-  } else if (window.location.pathname.startsWith('/amp/')) {
+  if (window.location.pathname.startsWith('/amp/')) {
       ampToHtml();
   } else {
     window.setTimeout(function () {
