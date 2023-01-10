@@ -1533,7 +1533,7 @@ else if (matchDomain('lequipe.fr')) {
 
 else if (matchDomain('lesechos.fr')) {
   if (window.location.pathname.startsWith('/amp/')) {
-      ampToHtml();
+    ampToHtml();
   } else {
     window.setTimeout(function () {
       let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
@@ -1904,21 +1904,6 @@ else if (matchDomain('italiaoggi.it')) {
   }
 }
 
-else if (matchDomain('rep.repubblica.it')) {
-  window.setTimeout(function () {
-    if (window.location.href.includes('/pwa/')) {
-      window.location.href = window.location.href.replace('/pwa/', '/ws/detail/');
-    }
-  }, 500);
-  if (window.location.href.includes('/ws/detail/')) {
-    let paywall = document.querySelector('.paywall');
-    if (paywall) {
-      amp_unhide_subscr_section();
-      csDoneOnce = true;
-    }
-  }
-}
-
 else if (matchDomain(it_gedi_domains)) {
   if (matchDomain('lescienze.it')) {
     let paywall = document.querySelector('.paywall-adagio');
@@ -1958,6 +1943,19 @@ else if (matchDomain(it_gedi_domains)) {
       }
     } else {
       amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed');
+      let logo = document.querySelector('div.logo-container > a');
+      if (logo) {
+        logo.innerText = "L'Espresso";
+        logo.style.color = 'white';
+      }
+      let inline_videos = document.querySelectorAll('div.video-container > iframe[src]');
+      for (let video of inline_videos) {
+        let elem = document.createElement('a');
+        elem.href = video.src;
+        elem.innerText = '>>> external video-link';
+        elem.target = '_blank';
+        video.parentNode.replaceChild(elem, video);
+      }
     }
   } else {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {

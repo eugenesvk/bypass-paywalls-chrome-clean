@@ -26,14 +26,12 @@ var restrictions = {
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
-  'lastampa.it': /^((?!\/video\.lastampa\.it\/).)*$/,
   'lequipe.fr': /^((?!\.lequipe\.fr\/.+\/les-notes\/).)*$/,
   'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
-  'repubblica.it': /^((?!\/video\.repubblica\.it\/).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/(outlook|study)\/).)*$/,
   'tagesspiegel.de': /^((?!\/background\.tagesspiegel\.de\/).)*$/,
@@ -418,10 +416,8 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_au_nine_ent', '###_de_noz_mhn', '###_de_rp_medien', '###_de_westfalen_medien', '###_es_grupo_vocento', '###_es_unidad', '###_fr_gcf', '###_it_gedi', '###_nl_dpg_media', '###_usa_cbj', '###_usa_chronicle', '###_usa_genomeweb'];
-          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)))
-             || (!enabledSites.includes('uol.com.br') && (enabledSites.includes('crusoe.uol.com.br') || enabledSites.includes('###_br_folha')))
-             || (!enabledSites.includes('iltalehti.fi') && enabledSites.includes('###_fi_alma_talent'));
+          let new_groups = ['###_de_noz_mhn'];
+          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }
@@ -558,18 +554,6 @@ ext_api.runtime.onInstalled.addListener(function (details) {
     });
   }
 });
-
-// repubblica.it bypass
-ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
-    return;
-  }
-  var updatedUrl = details.url.replace('/pwa/', '/ws/detail/');
-  return { redirectUrl: updatedUrl };
-},
-{urls:["*://*.repubblica.it/pwa/*"], types:["main_frame"]},
-["blocking"]
-);
 
 // Google AMP cache redirect
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
@@ -955,7 +939,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       setReferer = true;
     }
     if (requestHeader.name === 'User-Agent') {
-      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr'].concat(it_gedi_domains), details.url);
+      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr'], details.url);
     }
     return requestHeader;
   });

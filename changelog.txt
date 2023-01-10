@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix Inc42
 Fix LesEchos.fr (investir)
+Remove Repubblica.it (fix obsolete)
 
 * v3.0.0.0 (2023-01-08)
 Add Deutscher Fachverlag Mediengruppe (opt-in to custom sites)

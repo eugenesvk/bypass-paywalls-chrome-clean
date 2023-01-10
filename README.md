@@ -591,7 +591,7 @@ Grouped in options:\
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
 [Italian.tech](https://www.italian.tech) -
-[La Repubblica](https://www.repubblica.it) -
+[L'Espresso](https://espresso.repubblica.it) -
 [Le Scienze](https://www.lescienze.it)
 
 [Il Messaggero](https://www.ilmessaggero.it) and regional sites like
