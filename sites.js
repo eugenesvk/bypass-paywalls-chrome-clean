@@ -1317,8 +1317,7 @@ var defaultSites = {
   },
   "National Review": {
     domain: "nationalreview.com",
-    allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+    block_regex: /(\.nationalreview\.com\/script\.js|\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Nautilus": {
     domain: "nautil.us",
@@ -2302,7 +2301,8 @@ var defaultSites = {
   "Zephr": {
     domain: "zephr.com",
     allow_cookies: 1,
-    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/
+    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/,
+    excluded_domains: ["nationalreview.com"]
   },
   "* BPC settings": {
     domain: "###"
