@@ -3928,8 +3928,9 @@ else if (matchDomain('theathletic.com')) {
   if (!(window.location.search.match(/(\?|&)amp/) && !document.querySelector('link[rel="amphtml"]'))) {
     let paywall = document.querySelector('div[id^="slideup-"]');
     if (paywall) {
+      removeDOMElement(paywall);
       let overlays = document.querySelectorAll('div[id*="overlay"], div:empty:not([data-rjs])');
-      removeDOMElement(paywall, ...overlays);
+      hideDOMElement(...overlays);
       let body = document.querySelector('body');
       if (body) {
         body.style.overflow = 'visible';
