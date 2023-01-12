@@ -171,6 +171,8 @@ function delete_options() {
   var selectEl = document.querySelector('#custom_sites select');
   var sites_custom = {};
   var remove_key = selectEl.value;
+  if (!remove_key)
+    return false;
   
   // delete site from local storage
   ext_api.storage.local.get({
@@ -198,6 +200,8 @@ function edit_options() {
   var selectEl = document.querySelector('#custom_sites select');
   var sites_custom = {};
   var title = selectEl.value;
+  if (!title)
+    return false;
   
   // copy site to add-fields
   ext_api.storage.local.get({
@@ -209,6 +213,7 @@ function edit_options() {
     document.querySelector('input[data-key="domain"]').value = edit_site.domain;
     document.querySelector('select[data-key="useragent"]').selectedIndex = (edit_site.googlebot > 0) ? 1 : useragent_options.indexOf(edit_site.useragent);
     document.querySelector('input[data-key="allow_cookies"]').checked = (edit_site.allow_cookies > 0);
+    document.querySelector('input[data-key="remove_cookies"]').checked = (edit_site.remove_cookies > 0);
     document.querySelector('input[data-key="block_js"]').checked = (edit_site.block_js > 0 || edit_site.block_javascript > 0);
     document.querySelector('input[data-key="block_js_ext"]').checked = (edit_site.block_js_ext > 0 || edit_site.block_javascript_ext > 0);
     document.querySelector('input[data-key="block_js_inline"]').value = edit_site.block_js_inline ? edit_site.block_js_inline : '';
@@ -277,6 +282,7 @@ function renderOptions() {
       'title': 0,
       'domain': 0,
       'allow_cookies': 1,
+      'remove_cookies': 1,
       'block_js (domain)': 1,
       'block_js_ext': 1,
       'block_js_inline': 0,
@@ -359,6 +365,7 @@ function renderOptions() {
       optionEl.text += key + ': ' + domain +
       (sites_custom[key]['googlebot'] > 0 ? ' | googlebot' : '') +
       (sites_custom[key]['allow_cookies'] > 0 ? ' | allow_cookies' : '') +
+      (sites_custom[key]['remove_cookies'] > 0 ? ' | remove_cookies' : '') +
       ((sites_custom[key]['block_js'] > 0 || sites_custom[key]['block_javascript'] > 0) ? ' | block_js' : '') +
       ((sites_custom[key]['block_js_ext'] > 0 || sites_custom[key]['block_javascript_ext'] > 0) ? ' | block_js_ext' : '') +
       (sites_custom[key]['block_js_inline'] ? ' | block_js_inline' : '') +

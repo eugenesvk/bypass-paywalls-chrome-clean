@@ -1,4 +1,9 @@
 {
+  "Abajournal.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io",
+    "domain": "abajournal.com"
+  },
   "Arkansasonline.com": {
     "domain": "arkansasonline.com"
   },
@@ -105,6 +110,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "fastcompany.com"
   },
+  "Finansavisen.no": {
+    "allow_cookies": 1,
+    "domain": "finansavisen.no",
+    "useragent": "googlebot"
+  },
   "Finanz-szene.de": {
     "allow_cookies": 1,
     "domain": "finanz-szene.de",
@@ -185,6 +195,11 @@
     "domain": "kaleva.fi",
     "useragent": "googlebot"
   },
+  "Kapital.no": {
+    "allow_cookies": 1,
+    "domain": "kapital.no",
+    "useragent": "googlebot"
+  },
   "Lindipendente.online": {
     "allow_cookies": 1,
     "domain": "lindipendente.online",
@@ -219,7 +234,9 @@
     "domain": "marketscreener.com"
   },
   "Medpagetoday.com": {
-    "domain": "medpagetoday.com"
+    "allow_cookies": 1,
+    "domain": "medpagetoday.com",
+    "remove_cookies": 1
   },
   "Milesplit.com": {
     "allow_cookies": 1,
@@ -329,9 +346,6 @@
   "Swarajyamag.com": {
     "amp_redirect": "div#story-notification",
     "domain": "swarajyamag.com"
-  },
-  "The-japan-news.com": {
-    "domain": "the-japan-news.com"
   },
   "The-past.com": {
     "domain": "the-past.com"

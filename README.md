@@ -867,8 +867,20 @@ Add your own custom site (also for testing).
 Check 'Options'-link in popup-menu and go to custom sites.
 \* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` (BPC-icon) to ask for permission for current site).
 
-By default sites' cookies/local storage are removed after page loads (to bypass article limit).  
-Also you can enable Googlebot/Bingbot user-agent, set referer (to Facebook, Google or Twitter; ignored when Googlebot is set), set random ip-address, disable Javascript for (sub)domain(s) and/or external domains, block regular expression, unhide text on (or when paywall(selector) redirect to) amp-page and/or load text from json or Google webcache (paywall|article selector).
+By default sites' cookies/local storage are blocked/removed (for example to bypass article limit when metered paywall).
+
+Additional custom options:
+* allow/remove cookies (no options selected: cookies are blocked)
+* set useragent to Googlebot, Bingbot or Facebookbot
+* set referer (to Facebook, Google or Twitter; ignored when Googlebot is set)
+* set random ip-address
+* disable Javascript for (sub)domain(s), external domains (when host permission) and/or inline scripts
+* block regular expression (to block specific script and/or xhr)
+* unhide text amp-page
+* redirect to amp-page when paywall(selector)
+* load text from json when paywall|article(selector)
+* load text from Google webcache when paywall|article(selector)
+* remove/unhide elements in dom (optional for dev; check examples)
 
 [Example list of custom sites](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/custom/sites_custom.json) or [download list (json)](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/custom/sites_custom.json)
 
@@ -885,7 +897,7 @@ You can also exclude a specific domain which is grouped in options.
 * [Download the latest version](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)
 
 ### License
-Bypass Paywalls Clean is [MIT-licensed](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/LICENSE).
+* Bypass Paywalls Clean is [MIT-licensed](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/LICENSE).
 
 ### Disclaimer
 * This software is provided for educational purposes only and is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.

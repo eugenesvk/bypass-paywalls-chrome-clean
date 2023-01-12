@@ -1,7 +1,11 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
 
+try {
 window.localStorage.clear();
 sessionStorage.clear();
+} catch (e) {
+  console.log(e);
+}
 
 var cookie_domain = getCookieDomain(document.domain);
 
@@ -18,11 +22,15 @@ function getCookieDomain(hostname) {
   let n = 0;
   let parts = hostname.split('.');
   let str = '_gd' + (new Date()).getTime();
+  try {
   while (n < (parts.length - 1) && document.cookie.indexOf(str + '=' + str) == -1) {
     domain = parts.slice(-1 - (++n)).join('.');
     document.cookie = str + "=" + str + ";domain=" + domain + ";";
   }
   document.cookie = str + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;domain=" + domain + ";";
+  } catch (e) {
+    console.log(e);
+  }
   return domain;
 }
 

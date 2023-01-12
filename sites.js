@@ -2335,8 +2335,8 @@ var defaultSites_groups_domains = [].concat.apply([], Object.values(defaultSites
   }).map(x => x.group));
 var defaultSites_domains = defaultSites_grouped_domains.concat(defaultSites_groups_domains);
 
-function addCookieRules(rule, custom) {
-  if (rule.hasOwnProperty('remove_cookies_select_drop') || rule.hasOwnProperty('remove_cookies_select_hold') || (custom && !rule.hasOwnProperty('allow_cookies'))) {
+function addCookieRules(rule) {
+  if (rule.hasOwnProperty('remove_cookies_select_drop') || rule.hasOwnProperty('remove_cookies_select_hold')) {
     rule.allow_cookies = 1;
     rule.remove_cookies = 1;
   }

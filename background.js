@@ -234,7 +234,7 @@ function set_rules(sites, sites_updated, sites_custom) {
               custom = true;
           }
         }
-        addCookieRules(rule, custom || custom_in_group);
+        addCookieRules(rule);
         
         if (rule.allow_cookies > 0 && !allow_cookies.includes(domain))
           allow_cookies.push(domain);
