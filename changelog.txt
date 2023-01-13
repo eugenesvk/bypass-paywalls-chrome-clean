@@ -7,6 +7,7 @@ Fix LesEchos.fr (investir)
 Fix National Review (no amp)
 Fix The Athletic (error)
 Remove Repubblica.it (fix obsolete)
+Remove republic.ru (fix obsolete)
 Update custom sites (default block cookies)
 
 * v3.0.0.0 (2023-01-08)

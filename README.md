@@ -662,7 +662,6 @@ Grouped in options:\
 [Record](https://www.record.pt)
 
 ##### Russia
-[Republic.ru](https://republic.ru) -
 [Wonderzine](https://www.wonderzine.com)
 
 ##### Slovenia
