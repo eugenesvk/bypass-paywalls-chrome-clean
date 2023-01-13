@@ -2124,8 +2124,7 @@ var defaultSites = {
   "Vogue Business": {
     allow_cookies: 1,
     domain: "voguebusiness.com",
-    useragent: "googlebot",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+    useragent: "facebookbot"
   },
   "Volksstimme": {
     domain: "volksstimme.de",

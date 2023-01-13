@@ -4320,19 +4320,6 @@ else if (matchDomain('venturebeat.com')) {
   }, 500);
 }
 
-else if (matchDomain('voguebusiness.com')) {
-  if (window.location.pathname.endsWith('/amp')) {
-    amp_unhide_subscr_section();
-  } else {
-    let paywall = document.querySelector('div[class*="PaywallInlineBarrier"]');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
-  }
-}
-
 else if (matchDomain('washingtonpost.com')) {
   let leaderboard = document.querySelector('#leaderboard-wrapper');
   let adverts = document.querySelectorAll('div[data-qa$="-ad"]');

@@ -6,6 +6,7 @@ Fix Inc42
 Fix LesEchos.fr (investir)
 Fix National Review (no amp)
 Fix The Athletic (error)
+Fix Vogue Business
 Remove Repubblica.it (fix obsolete)
 Remove republic.ru (fix obsolete)
 Update custom sites (default block cookies)

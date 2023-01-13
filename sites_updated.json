@@ -23,5 +23,10 @@
     "domain": "seattletimes.com",
     "allow_cookies": 1,
     "block_regex": "(\\.seattletimes\\.com\\/.+\\/st-user-messaging.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+  },
+  "Vogue Business": {
+    "allow_cookies": 1,
+    "domain": "voguebusiness.com",
+    "useragent": "facebookbot"
   }
 }
