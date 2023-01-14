@@ -4,11 +4,12 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix Inc42
 Fix LesEchos.fr (investir)
+Fix Madsack Mediengruppe (identify site in cs)
 Fix National Review (no amp)
 Fix The Athletic (error)
 Fix Vogue Business
 Remove Repubblica.it (fix obsolete)
-Remove republic.ru (fix obsolete)
+Remove Republic.ru (fix obsolete)
 Update custom sites (default block cookies)
 
 * v3.0.0.0 (2023-01-08)
