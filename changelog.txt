@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v3.0.1.0 (2023-01-15)
 Fix Inc42
 Fix LesEchos.fr (investir)
 Fix Madsack Mediengruppe (identify site in cs)
