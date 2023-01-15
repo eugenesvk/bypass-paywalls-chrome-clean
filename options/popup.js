@@ -63,10 +63,11 @@ function showArchiveLinks() {
     currentWindow: true
   }, function (tabs) {
     if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-      let url = tabs[0].url.split('?')[0];
+      let url = encodeURIComponent(tabs[0].url.split('?')[0]);
       let archive_array = {
         'Archive.today': 'https://archive.today?run=1&url=' + url,
-        'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url
+        'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url,
+        'Google Mobile-Friendly Tool\n(use online html-viewer - no fix)': 'https://search.google.com/test/mobile-friendly?url=' + url
       };
       let archive_id = document.querySelector('span#archive');
       if (archive_id) {

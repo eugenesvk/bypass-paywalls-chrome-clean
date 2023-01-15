@@ -11,6 +11,7 @@ Fix Vogue Business
 Remove Repubblica.it (fix obsolete)
 Remove Republic.ru (fix obsolete)
 Update custom sites (default block cookies)
+Update popup (Google Mobile-Friendly tool)
 
 * v3.0.0.0 (2023-01-08)
 Add Deutscher Fachverlag Mediengruppe (opt-in to custom sites)

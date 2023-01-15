@@ -801,7 +801,7 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
-  "Gruppo GEDI.it": {
+  "Gruppo GEDI.it (italian.tech, lescienze.it & espresso.repubblica.it)": {
     domain: "###_it_gedi",
     group: [
       "italian.tech",

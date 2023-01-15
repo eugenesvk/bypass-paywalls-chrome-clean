@@ -1905,29 +1905,19 @@ else if (matchDomain(it_gedi_domains)) {
       if (paywall && amphtml) {
         removeDOMElement(paywall);
         window.location.href = amphtml.href;
-      } else {
-        let inline_videos = document.querySelectorAll('div.responsive-video');
-        for (let video of inline_videos) {
-          let placeholder = video.querySelector('div.snappedPlaceholder');
-          if (placeholder)
-            placeholder.removeAttribute('class');
-          let iframe = video.querySelector('iframe[data-src]:not([src])');
-          if (iframe) {
-            iframe.src = iframe.getAttribute('data-src');
-            let elem = document.createElement('a');
-            elem.href = iframe.getAttribute('data-src');
-            elem.innerText = '>>> external video-link';
-            elem.target = '_blank';
-            video.parentNode.appendChild(elem);
-          }
-        }
       }
     } else {
-      amp_unhide_access_hide('="showContent"', '', 'amp-ad, amp-embed');
+      amp_unhide_access_hide('="showContent"', '="NOT (showContent)"', 'amp-ad, amp-embed');
       let logo = document.querySelector('div.logo-container > a');
       if (logo) {
         logo.innerText = "L'Espresso";
         logo.style.color = 'white';
+      }
+      let placeholders = document.querySelectorAll('figure > amp-img[placeholder][src]');
+      for (let elem of placeholders) {
+        let img = document.createElement('img');
+        img.src = elem.getAttribute('src');
+        elem.parentNode.replaceChild(img, elem);
       }
       let inline_videos = document.querySelectorAll('div.video-container > iframe[src]');
       for (let video of inline_videos) {
