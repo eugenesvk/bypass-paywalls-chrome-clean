@@ -263,6 +263,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
+  "Cellesche Zeitung": {
+    domain: "cz.de",
+    allow_cookies: 1,
+  },
   "Challenges": {
     domain: "challenges.fr",
     allow_cookies: 1,

@@ -526,6 +526,33 @@ else if (matchDomain('cicero.de')) {
   removeDOMElement(...urban_ad_sign);
 }
 
+else if (matchDomain('cz.de')) {
+  let paywall = document.querySelector('#erasmo');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article) {
+      article.classList.remove('news-read-not-allowed');
+      fetch(window.location.href)
+      .then(response => {
+        if (response.ok) {
+          response.text().then(html => {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(html, 'text/html');
+            let content = document.querySelector('.field__items');
+            let content_new = doc.querySelector('.field__items');
+            if (content_new && content) {
+              content.parentNode.replaceChild(content_new, content);
+            }
+          })
+        }
+      });
+    }
+  }
+  let banner = document.querySelector('.newsletter-signup-wrapper');
+  removeDOMElement(banner);
+}
+
 else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
     let paywall_z = document.querySelector('.c-red-carpet');
