@@ -26,6 +26,16 @@ if (matchDomain('gitlab.com')) {
   }, 1000);
 }
 
+else if (matchDomain('cz.de')) {
+  function cz_unhide(node) {
+    removeDOMElement(node);
+    let article_not_allowed = document.querySelector('article.news-read-not-allowed');
+    if (article_not_allowed)
+      article_not_allowed.classList.remove('news-read-not-allowed')
+  }
+  waitDOMElement('div#erasmo', 'DIV', cz_unhide);
+}
+
 else if (matchDomain('nzherald.co.nz')) {
   function nzherald_main() {
     if (window.Fusion)
@@ -143,6 +153,32 @@ function getCookieDomain(hostname) {
     console.log(e);
   }
   return domain;
+}
+
+function removeDOMElement(...elements) {
+  for (let element of elements) {
+    if (element)
+      element.remove();
+  }
+}
+
+function waitDOMElement(selector, tagName = '', callback, multiple = false) {
+  new window.MutationObserver(function (mutations) {
+    for (let mutation of mutations) {
+      for (let node of mutation.addedNodes) {
+        if (!tagName || (node.tagName === tagName)) {
+          if (node.matches(selector)) {
+            callback(node);
+            if (!multiple)
+              this.disconnect();
+          }
+        }
+      }
+    }
+  }).observe(document, {
+    subtree: true,
+    childList: true
+  });
 }
 
 function insert_script(func, insertAfterDom) {

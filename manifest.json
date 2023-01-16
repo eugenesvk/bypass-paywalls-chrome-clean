@@ -39,6 +39,7 @@
   ],
   "content_scripts": [{
       "matches": [
+        "*://*.cz.de/*",
         "*://*.gitlab.com/magnolia1234",
         "*://*.nzherald.co.nz/*"
       ],
@@ -165,6 +166,7 @@
     "*://*.curbed.com/*",
     "*://*.cw.com.tw/*",
     "*://*.cyclingtips.com/*",
+    "*://*.cz.de/*",
     "*://*.dailyadvertiser.com.au/*",
     "*://*.dailyliberal.com.au/*",
     "*://*.dailypress.com/*",
@@ -719,5 +721,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.1.0"
+  "version": "3.0.1.1"
 }

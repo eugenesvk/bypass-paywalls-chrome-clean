@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Cellesche Zeitung
 
 * v3.0.1.0 (2023-01-15)
 Fix Inc42

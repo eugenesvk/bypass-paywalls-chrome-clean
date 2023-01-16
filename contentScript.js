@@ -526,6 +526,12 @@ else if (matchDomain('cicero.de')) {
   removeDOMElement(...urban_ad_sign);
 }
 
+else if (matchDomain('cz.de')) {
+  // plus code in contentScript_once.js (timing)
+  let banner = document.querySelector('.newsletter-signup-wrapper');
+  removeDOMElement(banner);
+}
+
 else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
     let paywall_z = document.querySelector('.c-red-carpet');

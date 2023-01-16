@@ -63,12 +63,6 @@
     "block_regex": "paywall\\.correiodopovo\\.com\\.br",
     "domain": "correiodopovo.com.br"
   },
-  "Cz.de": {
-    "allow_cookies": 1,
-    "block_regex": "\\.cz\\.de\\/sites\\/default\\/files\\/js\\/js_.*\\.js",
-    "cs_code": "[{\"cond\":\"#erasmo\", \"rm_elem\":1, \"elems\":[{\"cond\":\"article\",\"rm_class\":\"news-read-not-allowed\"},{\"cond\":\".newsletter-signup-wrapper\",\"rm_elem\":1}]}]",
-    "domain": "cz.de"
-  },
   "Dailyherald.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
