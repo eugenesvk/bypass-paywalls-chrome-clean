@@ -643,6 +643,7 @@ Grouped in options:\
 [IJmuider Courant](https://www.ijmuidercourant.nl) -
 [De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
+[Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)
 
 ##### Norway

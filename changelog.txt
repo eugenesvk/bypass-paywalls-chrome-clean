@@ -3,6 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Cellesche Zeitung
+Add DvhN.nl
+Fix Fd.nl (search)
+Fix TheTimes.co.uk (overlay)
 
 * v3.0.1.0 (2023-01-15)
 Fix Inc42
@@ -44,7 +47,7 @@ Add Republic.ru
 Add The-Village.ru
 Add Wiwo.de
 Add Wonderzine (ru)
-Remove Dvhn.nl & Mediahuis Belgie (fix obsolete)
+Remove DvhN.nl & Mediahuis Belgie (fix obsolete)
 Fix New York Magazine sites (timing cookies)
 Update block general paywall script (Axate.io)
 Update custom sites (block_js_inline)

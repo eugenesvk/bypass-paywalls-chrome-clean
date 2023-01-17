@@ -1246,10 +1246,17 @@ var defaultSites = {
   "Mediahuis Noord": {
     domain: "###_nl_mediahuis_noord",
     group: [
+      "dvhn.nl",
       "lc.nl"
     ],
     allow_cookies: 1,
-    block_regex: /\.evolok\.net\//
+    block_regex: /\.evolok\.net\//,
+    exception: [{
+        domain: "dvhn.nl",
+        allow_cookies: 1,
+        block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/
+      }
+    ]
   },
   "MediaNews Group": {
     domain: "###_usa_mng",
@@ -2383,10 +2390,10 @@ var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 
 // custom domains (background)
 var custom_flex_not = {
+  "###": ["gitlab.com"],
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
-  "###_nl_mediahuis_noord": ["dvhn.nl"],
   "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
   "###_medium_custom": ["medium.com"],
   "###_uk_axate.io": ["thinkofx.net"],
@@ -2400,7 +2407,7 @@ var custom_flex_not_domains;
 
 function init_custom_flex_domains() {
   custom_flex_domains = [];
-  custom_flex_not_domains = [].concat.apply([], Object.values(custom_flex_not)).concat(['gitlab.com']);
+  custom_flex_not_domains = [].concat.apply([], Object.values(custom_flex_not));
 }
 init_custom_flex_domains();
 
@@ -2408,4 +2415,4 @@ init_custom_flex_domains();
 var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com', 'repubblica.it'];
-var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'dvhn.nl', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'ruhrnachrichten.de', 'saarbruecker-zeitung.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'substack.com', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'ruhrnachrichten.de', 'saarbruecker-zeitung.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'substack.com', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);

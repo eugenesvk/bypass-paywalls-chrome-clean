@@ -12,7 +12,7 @@ if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
 }
 
-const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'dn.no', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'inc42.com', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'techinasia.com', 'thebulletin.org', 'timesofindia.com', 'valor.globo.com', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['arcinfo.ch', 'asiatimes.com', 'bloomberg.com', 'cicero.de', 'dn.no', 'dvhn.nl', 'ilmanifesto.it', 'iltalehti.fi', 'iltirreno.it', 'inc42.com', 'ipolitics.ca', 'italiaoggi.it', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lequipe.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'nzherald.co.nz', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'techinasia.com', 'thebulletin.org', 'timesofindia.com', 'valor.globo.com', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
@@ -1320,7 +1320,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_substack_custom', '###_ch_tamedia'];
+      let nofix_groups = ['###_substack_custom', '###_ch_tamedia', '###_it_citynews'];
       if (enabledSites.concat(nofix_groups).includes(group) && custom_domain && !custom_flex_domains.includes(custom_domain)) {
         let rules;
         if (group === 'elmercurio.com')

@@ -188,6 +188,7 @@
     "*://*.discovermagazine.com/*",
     "*://*.dn.no/*",
     "*://*.dna.fr/*",
+    "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
     "*://*.eastwest.eu/*",
     "*://*.economictimes.com/*",
@@ -716,10 +717,11 @@
     "*://*.gitlab.com/magnolia1234/*",
     "*://*.hadrianpaywall.com/*",
     "*://*.medscapestatic.com/*",
+    "*://*.ndcmediagroep.nl/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.1.1"
+  "version": "3.0.1.2"
 }

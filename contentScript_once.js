@@ -58,7 +58,7 @@ window.setTimeout(function () {
     else if (document.querySelector('script[src*="/leaky-paywall/"], script[src*="/leaky-paywall-"]'))
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
-      group = '###_substack_custom';
+      group = '###_substack_custom';// no fix
     else if (hostname.match(/\.(com|net)\.au$/)) {
       if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
         group = '###_au_comm_media';
@@ -79,13 +79,16 @@ window.setTimeout(function () {
       else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
       else if (document.querySelector('link[href*=".tamedia.ch/"]'))
-        group = '###_ch_tamedia';
+        group = '###_ch_tamedia';// no fix
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
       if (document.querySelector('link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';
     } else if (hostname.endsWith('.fr')) {
       if (document.querySelector('link[href*=".fr/static/bloc/ripolinage/header/cf-header/"]'))
         group = '###_fr_gcf';
+    } else if (hostname.endsWith('.it')) {
+      if (document.querySelector('link[href^="//citynews.stgy.ovh/"]'))
+        group = '###_it_citynews';// no fix
     } else if (hostname.endsWith('.nl')) {
       if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
