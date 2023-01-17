@@ -5,6 +5,7 @@ Post-release
 Add Cellesche Zeitung
 Add DvhN.nl
 Fix Fd.nl (search)
+Fix StuDocu
 Fix TheTimes.co.uk (overlay)
 
 * v3.0.1.0 (2023-01-15)

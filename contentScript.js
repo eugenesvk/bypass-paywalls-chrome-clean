@@ -1989,6 +1989,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
         let url_nuxt = json.split(',url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
           refreshCurrentTab();
+        else if (json.includes(',body:')) {
         let json_text = json.split(',body:')[1].split('leadText:')[0];
         let article = document.querySelector('div.content');
         if (article) {
@@ -2005,7 +2006,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                   if (!concat) {
                     elem = document.createElement('p');
                     elem.innerText = item;
-                    if (item.match(/\s$/))
+                    if (item.match(/(\s|-)$/))
                       concat = 2;
                   } else {
                     elem.innerText += (concat < 2 ? ' ' : '') + item;
@@ -2032,6 +2033,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
           }
           if (elem)
             article.appendChild(elem);
+        }
         }
       }
     }
@@ -3916,9 +3918,9 @@ else if (matchDomain('studocu.com')) {
   window.setTimeout(function () {
     let paywall = document.querySelector('div._de9e5fdb76af');
     if (paywall) {
-      let banners = document.querySelectorAll('div._d18a99c0d544, div#premium-page-header');
+      let banners = document.querySelectorAll('div._869f7c361ca9, div#premium-page-header');
       removeDOMElement(paywall, ...banners);
-      let blurred_pages = document.querySelectorAll('div.page-content[style*="filter: blur"]');
+      let blurred_pages = document.querySelectorAll('div.page-content[style]');
       for (let blurred_page of blurred_pages) {
         let page = document.createElement('span');
         page.setAttribute('class', 'page-content');
