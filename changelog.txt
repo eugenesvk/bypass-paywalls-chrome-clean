@@ -5,6 +5,7 @@ Post-release
 Add Cellesche Zeitung
 Add DvhN.nl
 Fix Fd.nl (search)
+Fix Statista (outlook)
 Fix StuDocu
 Fix TheTimes.co.uk (overlay)
 

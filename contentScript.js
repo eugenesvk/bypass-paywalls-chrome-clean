@@ -3868,6 +3868,17 @@ else if (matchDomain('stocknews.com')) {
     blurmes[i].setAttribute('id', 'blurmenot' + i);
 }
 
+else if (matchDomain('statista.com')) {
+  if (window.location.pathname.startsWith('/outlook/')) {
+    let promo = document.querySelector('section#promotionElement');
+    let chartbox_paywall = document.querySelectorAll('div.xmoChartBoxPaywall');
+    removeDOMElement(promo, ...chartbox_paywall);
+    let blurred = document.querySelectorAll('.blurred');
+    for (let elem of blurred)
+      elem.removeAttribute('class');
+  }
+}
+
 else if (matchDomain('stratfor.com')) {
   let banner = document.querySelector('.free-cta-container, .paywall-banner');
   removeDOMElement(banner);

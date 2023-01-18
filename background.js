@@ -33,7 +33,7 @@ var restrictions = {
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
-  'statista.com': /^((?!\.statista\.com\/(outlook|study)\/).)*$/,
+  'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
   'tagesspiegel.de': /^((?!\/background\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
