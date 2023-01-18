@@ -129,14 +129,14 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
+    useragent: "googlebot",
     exception: [{
         domain: "codesports.com.au",
         allow_cookies: 1,
         block_js_inline: /\.codesports\.com\.au\/.+\/news-story\//,
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }
-    ],
-    useragent: "googlebot"
+    ]
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",

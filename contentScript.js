@@ -268,7 +268,7 @@ else {
         let figure_stretch = document.querySelectorAll('figure.stretch');
         for (let elem of figure_stretch)
           elem.classList.remove('stretch');
-        let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], .story-ad-container';
+        let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], [class*="ad-container"]';
         let comments;
         if (window.location.hostname.startsWith('amp.')) {
           amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');

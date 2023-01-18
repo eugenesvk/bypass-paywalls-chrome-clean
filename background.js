@@ -666,11 +666,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {
     return;
   }
-  var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]);
-  if (!matchUrlDomain('theaustralian.com.au', details.url))
-    updatedUrl += '?amp';
-  else
-    updatedUrl = updatedUrl.replace('www.', 'amp.');
+  var updatedUrl = decodeURIComponent(details.url.split('dest=')[1].split('&')[0]) + '?amp';
   return {
     redirectUrl: updatedUrl
   };
