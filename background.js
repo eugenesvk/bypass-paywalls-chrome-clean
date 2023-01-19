@@ -626,7 +626,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
 
 // economictimes redirect
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
+  if (!isSiteEnabled(details) || details.url.includes('.com/epaper/')) {
     return;
   }
   var updatedUrl = details.url.split('?')[0].replace('economictimes.indiatimes.com', 'm.economictimes.com');

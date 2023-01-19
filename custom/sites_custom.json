@@ -190,11 +190,6 @@
     "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
     "domain": "irishexaminer.com"
   },
-  "Kaleva.fi": {
-    "allow_cookies": 1,
-    "domain": "kaleva.fi",
-    "useragent": "googlebot"
-  },
   "Kapital.no": {
     "allow_cookies": 1,
     "domain": "kapital.no",

@@ -62,12 +62,14 @@ function showArchiveLinks() {
     active: true,
     currentWindow: true
   }, function (tabs) {
-    if (tabs && tabs[0] && tabs[0].url && tabs[0].url.startsWith('http')) {
-      let url = encodeURIComponent(tabs[0].url.split('?')[0]);
+    if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
+      let url = tabs[0].url.split('?')[0];
+      let url_enc = encodeURIComponent(url);
+      let hostname = urlHost(url);
       let archive_array = {
-        'Archive.today': 'https://archive.today?run=1&url=' + url,
-        'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url,
-        'Google Mobile-Friendly Tool\n(use online html-viewer - no fix)': 'https://search.google.com/test/mobile-friendly?url=' + url
+        'Archive.today': 'https://archive.today?run=1&url=' + url_enc,
+        'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url_enc,
+        'Google Search Tool\n(use online html-viewer - no fix)': 'https://search.google.com/test/rich-results?url=' + url_enc
       };
       let archive_id = document.querySelector('span#archive');
       if (archive_id) {
@@ -76,16 +78,37 @@ function showArchiveLinks() {
           let elem_div = document.createElement('div');
           let elem = document.createElement('a');
           elem.innerText = key;
-          elem.href = archive_array[key];
-          elem.target = '_blank';
-          elem_div.appendChild(elem);
-          archive_id.appendChild(elem_div);
+          if (!(matchDomain(['google.com', 'googleusercontent.com'], hostname) || hostname.match(/^archive\.\w{2}$/))) {
+            elem.href = archive_array[key];
+            elem.target = '_blank';
+            elem_div.appendChild(elem);
+            archive_id.appendChild(elem_div);
+          }
         }
       }
     }
   });
 }
 showArchiveLinks();
+
+function matchDomain(domains, hostname = window.location.hostname) {
+  let matched_domain = false;
+  if (typeof domains === 'string')
+    domains = [domains];
+  domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matched_domain = domain));
+  return matched_domain;
+}
+
+function urlHost(url) {
+  if (/^http/.test(url)) {
+    try {
+      return new URL(url).hostname;
+    } catch (e) {
+      console.log(`url not valid: ${url} error: ${e}`);
+    }
+  }
+  return url;
+}
 
 function closeButton() {
   window.close();

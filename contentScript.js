@@ -275,7 +275,7 @@ else {
           comments = document.querySelector('#story-comments, .comments-wrapper');
         } else if (window.location.search.match(/(\?|&)amp/)) {
           amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
-          comments = document.querySelector('#comments-load');
+          comments = document.querySelector('#comments-load, .comments-module');
           let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
           removeDOMElement(...amp_iframe_sizers)
         }
@@ -2992,6 +2992,8 @@ else if (matchDomain('economictimes.com')) {
       let content = document.querySelector('.paywall[style="display:none;"]');
       if (content)
         content.setAttribute('style', 'display:block;');
+      else
+        window.location.href = 'https://economictimes.indiatimes.com' + window.location.pathname.replace('amp_prime', 'prime');
       let intro = document.querySelector('.art_wrap');
       let article_blocker = document.querySelector('.articleBlocker');
       let amp_ads = document.querySelectorAll('amp-ad');
@@ -3002,11 +3004,17 @@ else if (matchDomain('economictimes.com')) {
       let paywall = document.querySelector('div#blocker_layer');
       let data_prime = document.querySelector('div[data-prime="1"]');
       let amphtml = document.querySelector('link[rel="amphtml"]');
-      if ((paywall || data_prime) && amphtml) {
+      if (paywall || data_prime) {
         removeDOMElement(paywall);
         if (data_prime)
           data_prime.removeAttribute('data-prime');
-        window.location.href = amphtml.href;
+        if (amphtml)
+          window.location.href = amphtml.href;
+        else if (window.location.pathname.startsWith('/epaper/'))
+          window.location.href = 'https://economictimes.indiatimes.com' + window.location.pathname;
+      } else {
+        let ads = document.querySelectorAll('.adContainer');
+        removeDOMElement(...ads);
       }
     }, 500);
   }

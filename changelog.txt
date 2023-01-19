@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Cellesche Zeitung
 Add DvhN.nl
+Fix ET Prime (mobile epaper)
 Fix Fd.nl (search)
 Fix Statista (outlook)
 Fix StuDocu
@@ -20,7 +21,7 @@ Fix Vogue Business
 Remove Repubblica.it (fix obsolete)
 Remove Republic.ru (fix obsolete)
 Update custom sites (default block cookies)
-Update popup (Google Mobile-Friendly tool)
+Update popup (Google Search Tool)
 
 * v3.0.0.0 (2023-01-08)
 Add Deutscher Fachverlag Mediengruppe (opt-in to custom sites)
