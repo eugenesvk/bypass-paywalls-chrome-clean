@@ -10,6 +10,7 @@ Fix Statista (outlook)
 Fix StuDocu
 Fix The Australian (amp)
 Fix TheTimes.co.uk (overlay)
+Update popup (fix clear cookies; custom version)
 
 * v3.0.1.0 (2023-01-15)
 Fix Inc42
