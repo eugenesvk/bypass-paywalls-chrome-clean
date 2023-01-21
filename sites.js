@@ -23,6 +23,10 @@ var defaultSites = {
   "Adweek (free articles only)": {
     domain: "adweek.com"
   },
+  "Ärzte Zeitung": {
+    domain: "aerztezeitung.de",
+    allow_cookies: 1
+  },
   "Aftonbladet (link to archive.is)": {
     domain: "aftonbladet.se",
     allow_cookies: 1,
@@ -379,7 +383,7 @@ var defaultSites = {
     domain: "spiegel.de",
     allow_cookies: 1
   },
-  "Der Tagesspiegel (link to archive.is/not background)": {
+  "Der Tagesspiegel (link to archive.is/not background/checkpoint)": {
     domain: "tagesspiegel.de",
     allow_cookies: 1
   },
@@ -388,6 +392,10 @@ var defaultSites = {
     group: [],
     allow_cookies: 1,
     useragent: "googlebot"
+  },
+  "Deutsches Ärzteblatt": {
+    domain: "aerzteblatt.de",
+    allow_cookies: 1
   },
   "Diario Financiero": {
     domain: "df.cl",

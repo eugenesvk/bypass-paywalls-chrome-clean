@@ -65,6 +65,8 @@
     "*://*.adage.com/*",
     "*://*.adelaidenow.com.au/*",
     "*://*.adweek.com/*",
+    "*://*.aerzteblatt.de/*",
+    "*://*.aerztezeitung.de/*",
     "*://*.afr.com/*",
     "*://*.aftonbladet.se/*",
     "*://*.aisnenouvelle.fr/*",
@@ -723,5 +725,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.1.5"
+  "version": "3.0.1.6"
 }

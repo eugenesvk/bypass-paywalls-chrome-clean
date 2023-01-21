@@ -415,7 +415,40 @@ else {
 
 } else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net'])) {//germany/austria/switzerland - ch
 
-if (matchDomain('allgaeuer-zeitung.de')) {
+if (matchDomain('aerzteblatt.de')) {
+  let paywall = document.querySelector('div#restrictedAccessLogin');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let restricted = document.querySelector('div.restricted');
+    if (restricted)
+      restricted.classList.remove('restricted');
+    let unsharp = document.querySelector('div.unsharp');
+    if (unsharp)
+      unsharp.classList.remove('unsharp');
+  }
+}
+
+else if (matchDomain('aerztezeitung.de')) {
+  let paywall = document.querySelector('div.AZLoginModule');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = json.articleBody;
+        let content = document.querySelector('p.intro');
+        if (json_text && content) {
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          content.after(article_new);
+        }
+      }
+    }
+  }
+}
+
+else if (matchDomain('allgaeuer-zeitung.de')) {
   let url = window.location.href;
   if (!url.includes('?type=amp')) {
     let paywall = document.querySelector('p.nfy-text-blur');
@@ -3334,13 +3367,12 @@ else if (matchDomain('inkl.com')) {
       locked.classList.remove('locked');
   }
   let what_is_inkl = document.querySelector('.what-is-inkl-container, .features-panel');
-  let signup = document.querySelector('.article-signup-container, .locked-sign-up-container');
-  removeDOMElement(what_is_inkl, signup);
+  let signup = document.querySelectorAll('.article-signup-container, .locked-sign-up-container, div[class*="/inkl-watermark.svg"]');
+  let shared_banner = document.querySelector('div.shared-article-inline-banner');
+  removeDOMElement(what_is_inkl, ...signup, shared_banner);
   let dismiss_button = document.querySelector('div.dismiss-button-container button.btn');
   if (dismiss_button)
     dismiss_button.click();
-  let shared_banner = document.querySelector('div.shared-article-inline-banner');
-  removeDOMElement(shared_banner);
   let dive_deeper_summary_bodies = document.querySelectorAll('div.dive-deeper-container div.summary-body');
   if (dive_deeper_summary_bodies) {
     for (let summary_body of dive_deeper_summary_bodies) {

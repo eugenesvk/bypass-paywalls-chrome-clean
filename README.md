@@ -508,6 +508,7 @@ Grouped in options:\
 
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
+[Ärzte Zeitung](https://www.aerztezeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
 [Badische Neueste Nachrichten](https://www.bnn.de) -
@@ -516,6 +517,7 @@ Grouped in options:\
 [Cicero](https://www.cicero.de) -
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
+[Deutsches Ärzteblatt](https://www.aerzteblatt.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
 [Die Welt (link to archive.is)](https://www.welt.de) -
 [Die Zeit](https://www.zeit.de) -

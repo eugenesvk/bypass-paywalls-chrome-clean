@@ -95,6 +95,11 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "edweek.org"
   },
+  "Elpais.com.uy": {
+    "allow_cookies": 1,
+    "amp_redirect": "div.contenido-exclusivo-nota",
+    "domain": "elpais.com.uy"
+  },
   "Eluniversal.com.mx": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
