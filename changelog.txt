@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v3.0.2.0 (2023-01-22)
 Add AerzteBlatt.de
 Add AerzteZeitung.de
 Add 3 Australia News Corp sites
