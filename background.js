@@ -661,7 +661,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // Australia News Corp redirect subscribe to amp
-var au_news_corp_subscr = au_news_corp_domains.filter(domain => !['codesports.com.au', 'ntnews.com.au'].includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
+var au_news_corp_subscr = au_news_corp_domains.filter(domain => !['codesports.com.au', 'goldcoastbulletin.com.au', 'ntnews.com.au', 'thechronicle.com.au', 'weeklytimesnow.com.au'].includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {
     return;

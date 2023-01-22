@@ -741,19 +741,22 @@ Grouped in options:\
 Grouped in options:\
 *Australia News Corp* sites like\
 [Code Sports](https://www.codesports.com.au) -
+[Gold Coast Bulletin](https://www.goldcoastbulletin.com.au) -
 [Herald Sun](https://www.heraldsun.com.au) -
 [Northern Territory News](https://www.ntnews.com.au) -
 [The Advertiser/AdelaideNow](https://www.adelaidenow.com.au) -
 [The Australian](https://www.theaustralian.com.au) -
+[The Chronicle](https://www.thechronicle.com.au) -
 [The Courier-Mail](https://www.couriermail.com.au) -
 [The Daily Telegraph](https://www.dailytelegraph.com.au) -
-[The Mercury Tasmania](https://www.themercury.com.au)
+[The Mercury Tasmania](https://www.themercury.com.au) -
+[The Weekly Times](https://www.weeklytimesnow.com.au)\
 *Australia Nine Entertainment* sites like\
 [Brisbane Times](https://www.brisbanetimes.com.au) -
 [The Age](https://www.theage.com.au) -
 [The Australian Financial Review](https://www.afr.com) -
 [The Sydney Morning Herald](https://www.smh.com.au) -
-[WAtoday](https://www.watoday.com.au)
+[WAtoday](https://www.watoday.com.au)\
 *Australian Community Media (daily)* sites like (opt-in to custom sites for unlisted)\
 [Bendigo Advertiser](https://www.bendigoadvertiser.com.au) -
 [Central Western Daily](https://www.centralwesterndaily.com.au) -

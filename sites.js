@@ -126,10 +126,13 @@ var defaultSites = {
       "codesports.com.au",
       "couriermail.com.au",
       "dailytelegraph.com.au",
+      "goldcoastbulletin.com.au",
       "heraldsun.com.au",
       "ntnews.com.au",
       "theaustralian.com.au",
-      "themercury.com.au"
+      "thechronicle.com.au",
+      "themercury.com.au",
+      "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
@@ -2425,7 +2428,7 @@ function init_custom_flex_domains() {
 init_custom_flex_domains();
 
 // sites with no fix (background)
-var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'thechronicle.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
+var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'townsvillebulletin.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com', 'repubblica.it'];
 var nofix_sites = ['africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'badische-zeitung.de', 'bild.de', 'borsen.dk', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'catalyst-journal.com', 'courrierinternational.com', 'diepresse.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'ftchinese.com', 'golem.de', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'jacobinmag.com', 'jeuneafrique.com', 'kurier.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefigaro.fr', 'lemonde.fr', 'lepoint.fr', 'letemps.ch', 'liberation.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nn.de', 'ouest-france.fr', 'philonomist.com', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'ruhrnachrichten.de', 'saarbruecker-zeitung.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'substack.com', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'weser-kurier.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, it_gedi_nofix_domains);

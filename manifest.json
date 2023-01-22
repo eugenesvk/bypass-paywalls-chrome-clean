@@ -260,6 +260,7 @@
     "*://*.glassdoor.com/*",
     "*://*.globes.co.il/*",
     "*://*.globo.com/*",
+    "*://*.goldcoastbulletin.com.au/*",
     "*://*.goodhousekeeping.com/*",
     "*://*.gooieneemlander.nl/*",
     "*://*.gq.com/*",
@@ -594,6 +595,7 @@
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
     "*://*.thebanker.com/*",
+    "*://*.thechronicle.com.au/*",
     "*://*.thebulletin.org/*",
     "*://*.thecourier.com.au/*",
     "*://*.thecritic.co.uk/*",
@@ -669,6 +671,7 @@
     "*://*.washingtonpost.com/*",
     "*://*.watoday.com.au/*",
     "*://*.waz.de/*",
+    "*://*.weeklytimesnow.com.au/*",
     "*://*.wellandtribune.ca/*",
     "*://*.welt.de/*",
     "*://*.weltkunst.de/*",
@@ -726,5 +729,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.1.7"
+  "version": "3.0.1.8"
 }

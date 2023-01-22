@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add AerzteBlatt.de
 Add AerzteZeitung.de
+Add 3 Australia News Corp sites
 Add BusinessPost.ie
 Add Cellesche Zeitung
 Add DvhN.nl

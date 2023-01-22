@@ -262,7 +262,7 @@ else {
     removeDOMElement(story_generic_iframe, blocker, ...overlays, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
-    let au_news_corp_domains = ['adelaidenow.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'heraldsun.com.au', 'theaustralian.com.au', 'themercury.com.au'];
+    let au_news_corp_domains = ['adelaidenow.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'weeklytimesnow.com.au'];
     if (matchDomain(au_news_corp_domains)) {
       if (window.location.hostname.startsWith('amp.') || window.location.search.match(/(\?|&)amp/)) {
         let figure_stretch = document.querySelectorAll('figure.stretch');
