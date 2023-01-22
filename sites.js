@@ -246,6 +246,11 @@ var defaultSites = {
     domain: "businessinsider.com",
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Business Post.ie (do not block Piano.io-script and cookie-banner externally)": {
+    domain: "businesspost.ie",
+    block_regex: /cdn\.cxense\.com\//,
+    remove_cookies_select_drop: ["xbc"]
+  },
   "Business Standard": {
     domain: "business-standard.com",
     allow_cookies: 1,
@@ -2270,7 +2275,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\//,
-    excluded_domains: ["asia.nikkei.com", "brusselstimes.com", "japantimes.co.jp", "lkz.de"]
+    excluded_domains: ["asia.nikkei.com", "brusselstimes.com", "businesspost.ie", "japantimes.co.jp", "lkz.de"]
   },
   "Pico.tools": {
     domain: "pico.tools",

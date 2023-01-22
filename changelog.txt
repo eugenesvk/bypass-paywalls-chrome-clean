@@ -2,9 +2,10 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
-Add AerzteZeitung.de
-Add Cellesche Zeitung
 Add AerzteBlatt.de
+Add AerzteZeitung.de
+Add BusinessPost.ie
+Add Cellesche Zeitung
 Add DvhN.nl
 Fix ET Prime (mobile epaper)
 Fix Fd.nl (search)

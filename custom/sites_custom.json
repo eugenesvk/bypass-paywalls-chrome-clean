@@ -210,11 +210,6 @@
     "domain": "lindipendente.online",
     "useragent": "googlebot"
   },
-  "Lkz.de": {
-    "allow_cookies": 1,
-    "domain": "lkz.de",
-    "useragent": "googlebot"
-  },
   "Lsa-conso.fr": {
     "allow_cookies": 1,
     "domain": "lsa-conso.fr",
