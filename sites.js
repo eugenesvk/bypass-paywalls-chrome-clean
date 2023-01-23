@@ -720,7 +720,7 @@ var defaultSites = {
       "petitbleu.fr"
     ],
     allow_cookies: 1,
-    block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Groupe Nice-Matin": {
     domain: "###_fr_groupe_nice_matin",

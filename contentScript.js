@@ -1349,9 +1349,28 @@ else if (matchDomain(fr_groupe_la_depeche_domains)) {
   } else {
     let paywall = document.querySelector('div.paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
+    if (paywall) {
       removeDOMElement(paywall);
-      window.location.href = amphtml.href;
+      if (amphtml)
+        window.location.href = amphtml.href;
+      else {
+        let json_script = getArticleJsonScript();
+        if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = parseHtmlEntities(json.articleBody);
+            let content = document.querySelector('div.article-full__body-content');
+            if (json_text && content) {
+              content.innerHTML = '';
+              let article_new = document.createElement('p');
+              article_new.innerText = json_text;
+              content.appendChild(article_new);
+              content.removeAttribute('style');
+              content.removeAttribute('data-state');
+            }
+          }
+        }
+      }
     }
   }
 }

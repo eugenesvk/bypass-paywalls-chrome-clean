@@ -4,6 +4,22 @@
     "allow_cookies": 1,
     "ld_google_webcache": "div#inc42_article_content_lock|div.content-wrapper,section[amp-access='status']"
   },
+  "Groupe La Dépêche": {
+    "domain": "###_fr_groupe_la_depeche",
+    "group": [
+      "centrepresseaveyron.fr",
+      "ladepeche.fr",
+      "lindependant.fr",
+      "midi-olympique.fr",
+      "midilibre.fr",
+      "nrpyrenees.fr",
+      "petitbleu.fr"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "ld_json": "div.paywall|div.article-full__body-content",
+    "cs_code": "[{\"cond\":\"div.article-full__body-content\",\"rm_attrib\":\"style|data-state\"}]"
+  },
   "Vogue Business": {
     "allow_cookies": 1,
     "domain": "voguebusiness.com",
