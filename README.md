@@ -572,6 +572,7 @@ Grouped in options:\
 [Aachener Zeitung](https://www.aachener-zeitung.de) -
 [General-Anzeiger Bonn](https://ga.de) -
 [Rheinische Post](https://rp-online.de) -
+[Saarbrücker Zeitung](http://www.saarbruecker-zeitung.de) -
 [Trierischer Volksfreund](http://www.volksfreund.de)\
 *Westfälische Mediengruppe* sites like\
 [Münstersche Zeitung](https://www.muensterschezeitung.de) -

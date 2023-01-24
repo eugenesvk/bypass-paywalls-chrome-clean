@@ -20,6 +20,11 @@
     "ld_json": "div.paywall|div.article-full__body-content",
     "cs_code": "[{\"cond\":\"div.article-full__body-content\",\"rm_attrib\":\"style|data-state\"}]"
   },
+  "Saarbrücker Zeitung": {
+    "domain": "saarbruecker-zeitung.de",
+    "allow_cookies": 1,
+    "useragent": "facebookbot"
+  },
   "Vogue Business": {
     "allow_cookies": 1,
     "domain": "voguebusiness.com",
