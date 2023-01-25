@@ -524,7 +524,6 @@ Grouped in options:\
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
-[Handelsblatt](https://www.handelsblatt.com) -
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -
