@@ -3682,7 +3682,7 @@ else if (matchDomain('nzherald.co.nz')) {
   }
   let premium_toaster = document.querySelector('#premium-toaster');
   let ads = document.querySelectorAll('.ad');
-  removeDOMElement(premium_toaster, ...ads);
+  hideDOMElement(premium_toaster, ...ads);
 }
 
 else if (matchDomain('outlookbusiness.com')) {
