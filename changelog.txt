@@ -6,6 +6,7 @@ Add Saarbruecker Zeitung
 Remove Handelsblatt
 Fix Groupe LaDepeche.fr (text)
 Fix NzHerald (css)
+Fix StuDocu (timing)
 
 * v3.0.2.0 (2023-01-22)
 Add AerzteBlatt.de
