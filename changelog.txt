@@ -3,8 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Add Saarbruecker Zeitung
-Remove Handelsblatt
+Remove Handelsblatt (fix obsolete)
 Fix Groupe LaDepeche.fr (text)
+Fix LesEchos.fr (json)
 Fix NzHerald (css)
 Fix SOFREP (plus)
 Fix StuDocu (timing)

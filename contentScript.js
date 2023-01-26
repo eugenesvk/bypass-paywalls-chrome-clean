@@ -1592,6 +1592,8 @@ else if (matchDomain('lesechos.fr')) {
         try {
           let data = JSON.parse(state);
           let data_article = data.article ? data.article : data.pageProps;
+          if (data_article.dehydratedState)
+            data_article = data_article.dehydratedState.queries[1].state;
           let article = data_article.data.stripes[0].mainContent[0].data.description;
           let url_loaded = data_article.data.path;
           if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))

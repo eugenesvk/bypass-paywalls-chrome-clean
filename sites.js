@@ -1161,8 +1161,7 @@ var defaultSites = {
   },
   "Les Échos": {
     domain: "lesechos.fr",
-    allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    allow_cookies: 1
   },
   "Les Inrockuptibles": {
     domain: "lesinrocks.com",
