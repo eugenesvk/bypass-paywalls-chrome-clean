@@ -1686,8 +1686,7 @@ var defaultSites = {
     allow_cookies: 1
   },
   "SOFREP": {
-    domain: "sofrep.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+    domain: "sofrep.com"
   },
   "South China Morning Post": {
     domain: "scmp.com",

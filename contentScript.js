@@ -3881,13 +3881,12 @@ else if (matchDomain('sloanreview.mit.edu')) {
 }
 
 else if (matchDomain('sofrep.com')) {
-  if (!window.location.pathname.startsWith('/amp/')) {
-    let paywall = document.querySelector('div.fader');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    paywall.removeAttribute('class');
+    let intro = document.querySelector('div.non-paywall');
+    removeDOMElement(intro);
+    waitDOMElement('div#paywall_wrap', 'DIV', node => removeDOMElement(node.parentNode));
   }
   let banners = document.querySelectorAll('#scrollerCTA, #botCta');
   removeDOMElement(...banners);
