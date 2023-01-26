@@ -212,7 +212,7 @@ var defaultSites = {
   "Belfast Telegraph": {
     domain: "belfasttelegraph.co.uk",
     allow_cookies: 1,
-    block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
+    block_regex: /(cdn\.flip-pay\.com\/clients\/.+\/flip-pay\.js)/
   },
   "Beobachter.ch": {
     allow_cookies: 1,
@@ -983,7 +983,7 @@ var defaultSites = {
   "Irish Independent": {
     domain: "independent.ie",
     allow_cookies: 1,
-    block_regex: /(cdn\.flip-pay\.com\/clients\/inm\/flip-pay\.js)/
+    block_regex: /(cdn\.flip-pay\.com\/clients\/.+\/flip-pay\.js)/
   },
   "Italia Oggi": {
     domain: "italiaoggi.it",

@@ -2325,8 +2325,79 @@ else
 
 if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   let flip_pay = document.querySelector('div#flip-pay[style]');
-  if (flip_pay)
-    flip_pay.removeAttribute('style');
+  if (flip_pay) {
+    let content = document.querySelector('script[data-fragment-type="ArticleContent"]');
+    if (content) {
+      removeDOMElement(flip_pay);
+      let intro = document.querySelector('div[data-auth-intro="article"]');
+      if (intro && intro.parentNode) {
+        let content_text = content.innerText;
+        if (content_text.includes('__PRELOADED_STATE_GRAPH')) {
+          content_text = content_text.replace(/window\["__PRELOADED_STATE_GRAPH__.+"\]\s=\s/, '');
+          try {
+            let json = JSON.parse(content_text);
+            if (Object.keys(json).length) {
+              let key = Object.keys(json)[0];
+              let pars = json[key].data.article.body;
+              let parser = new DOMParser();
+              for (let par of pars) {
+                for (let type in par) {
+                  let item = par[type];
+                  let elem = document.createElement('p');
+                  elem.setAttribute('style', "margin: 10px;");
+                  if (type === 'bullet_list') {
+                    let ul = document.createElement('ul');
+                    for (let sub_item of item) {
+                      let li = document.createElement('li');
+                      li.innerText = sub_item;
+                      ul.appendChild(li);
+                    }
+                    elem.appendChild(ul);
+                  } else if (type === 'image') {
+                    let figure = document.createElement('figure');
+                    let img = document.createElement('img');
+                    img.src = item.url;
+                    figure.appendChild(img);
+                    let caption = document.createElement('figcaption');
+                    caption.innerText = item.caption;
+                    figure.appendChild(caption);
+                    elem.appendChild(figure);
+                  } else if (type === 'related') {
+                    if (item.articles) {
+                      let articles = item.articles;
+                      for (let article of articles) {
+                        let elem_link = document.createElement('a');
+                        elem_link.href = article.webcmsRelativeUrl;
+                        elem_link.innerText = article.title;
+                        elem.appendChild(elem_link);
+                        elem.appendChild(document.createElement('br'));
+                      }
+                    }
+                  } else if (type !== 'ad') {
+                    let html = parser.parseFromString('<p style="font-size: 18px; font-family: Georgia, serif; margin: 10px;">' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</p>', 'text/html');
+                    elem = html.querySelector('p');
+                    if (!['p', 'subhead', 'legacy-ml'].includes(type)) {
+                      console.log(type);
+                      console.log(item);
+                    }
+                  }
+                  window.setTimeout(function () {
+                    if (elem)
+                      intro.parentNode.appendChild(elem);
+                  }, 500);
+                }
+              }
+            }
+          } catch (err) {
+            console.log(err);
+          }
+        }
+      }
+    } else
+      flip_pay.removeAttribute('style');
+  }
+  let ads = document.querySelectorAll('div[id^="ad_article"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('citywire.com')) {
