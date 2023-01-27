@@ -529,15 +529,13 @@ Grouped in options:\
 [Krautreporter](https://krautreporter.de) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
-[Nordwest Zeitung](https://www.nwzonline.de) -
 [Philosophie Magazin](https://www.philomag.de) -
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -
 [Weltkunst](https://www.weltkunst.de) -
-[Westdeutsche Zeitung](https://www.wz.de) -
-[WirtschaftsWoche](https://www.wiwo.de)
+[Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)

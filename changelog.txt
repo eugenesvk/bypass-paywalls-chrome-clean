@@ -4,6 +4,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Saarbruecker Zeitung
 Remove Handelsblatt (fix obsolete)
+Remove Nordwest Zeitung (fix obsolete)
+Remove Wiwo.de (fix obsolete)
 Fix Belfast Telegraph
 Fix Groupe LaDepeche.fr (text)
 Fix LesEchos.fr (json)
@@ -816,7 +818,7 @@ Fix The Australian (option to disable Googlebot; http error 403)
 Fix WSJ & Barron's (amp)
 
 * v2.3.6.0 (2021-09-05)
-Remove WirtschaftsWoche (fix obsolete)
+Remove Wiwo.de (fix obsolete)
 Fix Estadao.com.br
 Fix Gestion & El Comercio (Peru)
 Fix Handelsblatt (only non-premium articles)
@@ -1268,7 +1270,7 @@ Update options/popup layout (+ mobile)
 
 * v1.9.3.0 (2020-11-01)
 Add Deutsche Wirtschafts Nachrichten
-Add WirtschaftsWoche (Germany)
+Add Wiwo.de
 Fix Quartz (newsletter)
 Fix Sueddeutsche Zeitung (+ magazine)
 Fix WSJ (restore Googlebot)
