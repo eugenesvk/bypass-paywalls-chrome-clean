@@ -708,6 +708,7 @@
     "*://*.pico.tools/*",
     "*://*.poool.fr/*",
     "*://*.qiota.com/*",
+    "*://*.steadyhq.com/*",
     "*://*.tinypass.com/*",
     "*://*.tribdss.com/*",
     "*://*.weborama.fr/*",
@@ -729,5 +730,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.2.6"
+  "version": "3.0.2.7"
 }

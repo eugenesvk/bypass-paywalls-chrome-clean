@@ -10,6 +10,7 @@ Fix LesEchos.fr (json)
 Fix NzHerald (css)
 Fix SOFREP (plus)
 Fix StuDocu (timing)
+Update block general paywall script (Steady)
 
 * v3.0.2.0 (2023-01-22)
 Add AerzteBlatt.de

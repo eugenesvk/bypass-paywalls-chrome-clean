@@ -2267,7 +2267,8 @@ var defaultSites = {
   "OneCount": {
     domain: "onecount.net",
     allow_cookies: 1,
-    block_regex_general: /\.onecount\.net\//
+    block_regex_general: /\.onecount\.net\//,
+    excluded_domains: ["onecount.net"]
   },
   "Pelcro": {
     domain: "pelcro.com",
@@ -2278,7 +2279,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\//,
-    excluded_domains: ["asia.nikkei.com", "brusselstimes.com", "businesspost.ie", "japantimes.co.jp", "lkz.de"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "brusselstimes.com", "businesspost.ie", "japantimes.co.jp", "lkz.de"]
   },
   "Pico.tools": {
     domain: "pico.tools",
@@ -2300,10 +2301,17 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /\.qiota\.com\/data/
   },
+  "Steady": {
+    domain: "steadyhq.com",
+    allow_cookies: 1,
+    block_regex_general: /\/steadyhq\.com\//,
+    excluded_domains: ["steadyhq.com"]
+  },
   "TinyPass": {
     domain: "tinypass.com",
     allow_cookies: 1,
-    block_regex_general: /cdn\.tinypass\.com\//
+    block_regex_general: /cdn\.tinypass\.com\//,
+    excluded_domains: ["piano.io"]
   },
   "TownNews sites (Blox CMS; not encrypted)": {
     domain: "###_usa_townnews",
