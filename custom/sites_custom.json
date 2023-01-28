@@ -95,6 +95,12 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "edweek.org"
   },
+  "Elfinancierocr.com": {
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div.article-body-wrapper__styled[style]\",\"rm_attrib\":\"style\"},{\"cond\":\"div.post\",\"rm_elem\":1}]",
+    "domain": "elfinancierocr.com"
+  },
   "Elpais.com.uy": {
     "allow_cookies": 1,
     "amp_redirect": "div.contenido-exclusivo-nota",
@@ -149,6 +155,11 @@
     "allow_cookies": 1,
     "domain": "gplanet.co.il",
     "ld_json": "div.subscription-form|div.content-inner"
+  },
+  "Hartenergy.com": {
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com",
+    "domain": "hartenergy.com"
   },
   "Heidi.news": {
     "allow_cookies": 1,
@@ -242,6 +253,11 @@
     "allow_cookies": 1,
     "domain": "milesplit.com",
     "useragent": "facebookbot"
+  },
+  "Mining-journal.com": {
+    "allow_cookies": 1,
+    "domain": "mining-journal.com",
+    "ld_json": "div.article-teaser|div.article-content>p"
   },
   "Nationalobserver.com": {
     "allow_cookies": 1,

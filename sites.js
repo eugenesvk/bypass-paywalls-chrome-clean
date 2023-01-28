@@ -1240,7 +1240,7 @@ var defaultSites = {
       "thestate.com",
       "tri-cityherald.com"
     ],
-    block_regex: /(js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   },
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",
@@ -1624,6 +1624,10 @@ var defaultSites = {
     useragent: "googlebot",
     exception: [{
         domain: "saarbruecker-zeitung.de",
+        allow_cookies: 1,
+        useragent: "facebookbot"
+      }, {
+        domain: "volksfreund.de",
         allow_cookies: 1,
         useragent: "facebookbot"
       }
