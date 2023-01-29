@@ -2,6 +2,8 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+
+* v3.0.3.0 (2023-01-29)
 Add Saarbruecker Zeitung
 Remove Handelsblatt (fix obsolete)
 Remove Nordwest Zeitung (fix obsolete)
