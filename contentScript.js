@@ -2032,50 +2032,65 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
           refreshCurrentTab();
         else if (json.includes(',body:')) {
-        let json_text = json.split(',body:')[1].split('leadText:')[0];
-        let article = document.querySelector('div.content');
-        if (article) {
-          article.innerHTML = '';
-          let concat = 0;
-          let elem;
-          let types = json_text.split(/(,|\[){typename:/);
-          for (let type of types) {
-            let type_elem = type.split(',')[0];
-            if (type.includes(',text:')) {
-              if (type.includes(',text:')) {
-                let item = type.split(',text:')[1].split(/(}])?,__typename:/)[0].replace(/(^"|"$)/g, '').replace(/\\u002F/g, '/');
-                if (item.length > 2 && !item.match(/(^\[|\]$)/)) {
-                  if (!concat) {
-                    elem = document.createElement('p');
-                    elem.innerText = item;
-                    if (item.match(/(\s|-)$/))
-                      concat = 2;
-                  } else {
-                    elem.innerText += (concat < 2 ? ' ' : '') + item;
-                    if (item.match(/\s$/))
-                      concat = 2;
-                    else
-                      concat--;
+          let json_text = json.split(',body:')[1].split(',leadText:')[0].replace(/([{,])([a-zA-Z_0-9]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3");
+          let article = document.querySelector('div.content');
+          if (article) {
+            article.innerHTML = '';
+            try {
+              let pars = JSON.parse(json_text);
+              for (let par of pars) {
+                let elem = document.createElement('p');
+                if (par.typename === 'HTMLCustomEmbed') {
+                  if (par.code) {
+                    let parser = new DOMParser();
+                    let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
+                    elem = article_html.querySelector('div');
                   }
+                } else if (par.typename === 'Story_insertbox') {
+                  if (par.insertbox_head) {
+                    let span = document.createElement('span');
+                    span.innerText = par.insertbox_head;
+                    elem.appendChild(span);
+                    elem.appendChild(document.createElement('br'));
+                  }
+                  if (par.insertbox_text) {
+                    for (let item of par.insertbox_text) {
+                      if (item.children) {
+                        for (let child of item.children) {
+                          let span = document.createElement('span');
+                          span.innerText = child.text;
+                          elem.appendChild(span);
+                        }
+                      }
+                    }
+                  }
+                } else if (par.text) {
+                  elem.innerText = par.text;
+                } else if (par.children) {
+                  for (let child of par.children) {
+                    if (child.text) {
+                      if (child.text.length > 1) {
+                        let span = document.createElement('span');
+                        span.innerText = child.text;
+                        elem.appendChild(span);
+                      }
+                    } else if (child.href && child.children[0].text) {
+                      let par_link = document.createElement('a');
+                      par_link.href = child.href;
+                      par_link.innerText = child.children[0].text;
+                      elem.appendChild(par_link);
+                    }
+                  }
+                } else if (par.typename.length > 2)
+                    console.log(par);
+                if (elem.hasChildNodes()) {
+                  article.appendChild(elem);
                 }
               }
-            } else if (type.includes('HTMLCustomEmbed')) {
-              if (type.includes(',code:')) {
-                let item = type.split(',code:')[1].split(',type:')[0].replace(/(^"|"$)/g, '').replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"');
-                let parser = new DOMParser();
-                let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
-                elem = article_html.querySelector('div');
-              }
-            } else if (type_elem.length > 2)
-              console.log(type_elem);
-            if (elem && !concat) {
-              article.appendChild(elem);
-              elem = '';
+            } catch (err) {
+              console.log(err);
             }
           }
-          if (elem)
-            article.appendChild(elem);
-        }
         }
       }
     }
