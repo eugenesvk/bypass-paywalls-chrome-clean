@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
+Fix The Australian (The Oz)
 
 * v3.0.3.0 (2023-01-29)
 Add Saarbruecker Zeitung

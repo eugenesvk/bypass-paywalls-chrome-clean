@@ -1,4 +1,34 @@
 {
+  "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
+    "domain": "###_au_news_corp",
+    "group": [
+      "adelaidenow.com.au",
+      "codesports.com.au",
+      "couriermail.com.au",
+      "dailytelegraph.com.au",
+      "goldcoastbulletin.com.au",
+      "heraldsun.com.au",
+      "ntnews.com.au",
+      "theaustralian.com.au",
+      "thechronicle.com.au",
+      "themercury.com.au",
+      "weeklytimesnow.com.au"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "useragent": "googlebot",
+    "exception": [{
+        "domain": "codesports.com.au",
+        "allow_cookies": 1,
+        "block_js_inline": "\\.codesports\\.com\\.au\\/.+\\/news-story",
+        "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
+      }, {
+        "domain": "theaustralian.com.au",
+        "allow_cookies": 1,
+        "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
+      }
+    ]
+  },
   "Condé Nast magazines": {
     "domain": "###_usa_conde_nast",
     "group": [

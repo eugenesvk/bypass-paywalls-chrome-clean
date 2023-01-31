@@ -913,9 +913,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain(es_grupo_vocento_domains, details.url) && mobile) &&
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
-    !(matchUrlDomain(au_news_corp_domains, details.url) &&
-      ((matchUrlDomain('theaustralian.com.au', details.url) && !details.url.startsWith('https://www.theaustralian.com.au/the-oz/')) ||
-        (!matchUrlDomain('theaustralian.com.au', details.url) && (details.url.includes('?amp') || enabledSites.includes('#options_disable_gb_au_news_corp'))))) &&
+    !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || enabledSites.includes('#options_disable_gb_au_news_corp'))) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
     !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
