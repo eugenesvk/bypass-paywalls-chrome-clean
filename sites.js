@@ -328,7 +328,8 @@ var defaultSites = {
       "vogue.com",
       "wired.com"
     ],
-    remove_cookies_select_drop: ["pay_ent_smp", "pay_ent_usmp"],
+    allow_cookies: 1,
+    remove_cookies: 1,
     block_regex: "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     useragent: "googlebot"
   },

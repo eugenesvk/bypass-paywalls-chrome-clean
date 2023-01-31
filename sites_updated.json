@@ -1,8 +1,19 @@
 {
-  "Inc42": {
-    "domain": "inc42.com",
+  "Condé Nast magazines": {
+    "domain": "###_usa_conde_nast",
+    "group": [
+      "architecturaldigest.com",
+      "bonappetit.com",
+      "gq.com",
+      "newyorker.com",
+      "vanityfair.com",
+      "vogue.com",
+      "wired.com"
+    ],
     "allow_cookies": 1,
-    "ld_google_webcache": "div#inc42_article_content_lock|div.content-wrapper,section[amp-access='status']"
+    "remove_cookies": 1,
+    "block_regex": "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "useragent": "googlebot"
   },
   "Groupe La Dépêche": {
     "domain": "###_fr_groupe_la_depeche",
@@ -23,11 +34,6 @@
   "Saarbrücker Zeitung": {
     "domain": "saarbruecker-zeitung.de",
     "allow_cookies": 1,
-    "useragent": "facebookbot"
-  },
-  "Vogue Business": {
-    "allow_cookies": 1,
-    "domain": "voguebusiness.com",
     "useragent": "facebookbot"
   }
 }

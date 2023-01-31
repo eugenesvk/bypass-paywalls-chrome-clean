@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
 
 * v3.0.3.0 (2023-01-29)

@@ -4432,8 +4432,8 @@ else if (matchDomain(usa_conde_nast_domains)) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_subscr_section('amp-ad, amp-embed, .ad');
   } else {
-    let paywall_bar = document.querySelector('.paywall-bar');
-    removeDOMElement(paywall_bar);
+    let banners = document.querySelectorAll('.paywall-bar, div[class^="MessageBannerWrapper-"');
+    removeDOMElement(...banners);
   }
 }
 
