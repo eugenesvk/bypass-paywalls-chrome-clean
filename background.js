@@ -819,16 +819,37 @@ if (typeof browser !== 'object') {
     }
   }
 
+  var set_var_sites =  ['cz.de', 'nzherald.co.nz'].concat(de_madsack_domains, de_madsack_custom_domains);
+  function runOnTab_once_var(tab) {
+    let tabId = tab.id;
+    let url = tab.url;
+    let domain = matchUrlDomain(set_var_sites, url);
+    // load contentScript_once_var.js to set variables for site
+    if (domain && enabledSites.includes(domain)) {
+      ext_api.tabs.executeScript(tabId, {
+        file: 'contentScript_once_var.js',
+        runAt: 'document_start'
+      }, function (res) {
+        if (ext_api.runtime.lastError || res[0]) {
+          return;
+        }
+      });
+    }
+  }
+
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
-  if (/^http/.test(tab.url) && ((tab_status && tab_status === 'complete') || (changeInfo.url))) {
-    let timeout = changeInfo.url ? 500 : 0;
-    setTimeout(function () {
-    if (matchUrlDomain(enabledSites, tab.url)) {
-      runOnTab(tab);
+  if (/^http/.test(tab.url)) {
+    if ((tab_status && tab_status === 'complete') || (changeInfo.url)) {
+      let timeout = changeInfo.url ? 500 : 0;
+      setTimeout(function () {
+        if (matchUrlDomain(enabledSites, tab.url)) {
+          runOnTab(tab);
+        }
+        runOnTab_once(tab);
+      }, timeout);
     }
-    runOnTab_once(tab);
-    }, timeout);
+    runOnTab_once_var(tab);
   }
 });
 
@@ -1020,6 +1041,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
             runOnTab(tab);
           }
           runOnTab_once(tab);
+          runOnTab_once_var(tab);
         });
       }
     } else {
@@ -1034,6 +1056,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
               runOnTab(tab);
             }
             runOnTab_once(tab);
+            runOnTab_once_var(tab);
           }
         });
       }
@@ -1310,12 +1333,12 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
   if (message.request === 'clear_cookies_domain' && message.data) {
     remove_cookies_fn(message.data.domain);
   }
-  if (message.request === 'custom_domain' && message.data) {
+  if (message.request === 'custom_domain' && message.data && message.data.domain) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
       let nofix_groups = ['###_substack_custom', '###_ch_tamedia', '###_it_citynews'];
-      if (enabledSites.concat(nofix_groups).includes(group) && custom_domain && !custom_flex_domains.includes(custom_domain)) {
+      if (enabledSites.concat(nofix_groups).includes(group) && !custom_flex_domains.includes(custom_domain)) {
         let rules;
         if (group === 'elmercurio.com')
           rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
@@ -1329,10 +1352,10 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
         if (rules) {
           customAddRules(custom_domain, rules);
         }
-      }
-    } else if (custom_domain) {
+      } else if (disabledSites.includes(group))
+        custom_flex_not_domains.push(custom_domain);
+    } else
       custom_flex_not_domains.push(custom_domain);
-    }
   }
   if (message.request === 'site_switch') {
     site_switch();

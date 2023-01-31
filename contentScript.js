@@ -9,6 +9,7 @@ var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca',
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
+var de_madsack_custom_domains = ['dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'op-marburg.de', 'paz-online.de', 'siegener-zeitung.de', 'sn-online.de', 'waz-online.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
@@ -560,7 +561,7 @@ else if (matchDomain('cicero.de')) {
 }
 
 else if (matchDomain('cz.de')) {
-  // plus code in contentScript_once.js (timing)
+  // plus code in contentScript_once_var.js (timing)
   let banner = document.querySelector('.newsletter-signup-wrapper');
   removeDOMElement(banner);
 }
@@ -818,38 +819,9 @@ else if (matchDomain(de_funke_medien_domains) || document.querySelector('a[href=
     sessionStorage.setItem('deobfuscate', 'true');
 }
 
-else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
+else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domains)) {
+  // plus code in contentScript_once_var.js (timing)
   if (!window.location.search.startsWith('?outputType=valid_amp')) {
-    let paywall = document.querySelector('div.paywalledContent');
-    if (paywall) {
-      paywall.removeAttribute('class');
-      let gradient = document.querySelector('div[class^="ArticleContentLoaderstyled__Gradient"]');
-      let loading = document.querySelector('#article > svg');
-      removeDOMElement(gradient, loading);
-      let article = paywall.querySelector('div:not([class])');
-      let json_script = getArticleJsonScript();
-      if (json_script) {
-        let json = JSON.parse(json_script.text);
-        if (article && json) {
-          let json_text = json.articleBody;
-          let article_new = document.createElement('span');
-          let par = article.querySelector('p');
-          let par_class = par ? par.getAttribute('class') : '';
-          article_new.setAttribute('class', par_class);
-          article_new.innerText = json_text;
-          article.innerText = '';
-          if (json.articleSection) {
-            let json_section = json.articleSection;
-            let article_section = document.querySelector('span');
-            article_section.setAttribute('class', par_class);
-            article_section.setAttribute('style', 'font-weight: bold;');
-            article_section.innerText = json_section + '. ';
-            article.appendChild(article_section);
-          }
-          article.appendChild(article_new);
-        }
-      }
-    }
     let ads = document.querySelectorAll('div[class^="Adstyled__AdWrapper"]');
     removeDOMElement(...ads);
   } else {
@@ -3730,7 +3702,7 @@ else if (matchDomain('nytimes.com')) {
 }
 
 else if (matchDomain('nzherald.co.nz')) {
-  // plus code in contentScript_once.js (timing)
+  // plus code in contentScript_once_var.js (timing)
   let article_content = document.querySelector('.article__content');
   if (article_content) {//redundant
     let article_offer = document.querySelector('.article-offer');

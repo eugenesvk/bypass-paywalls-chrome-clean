@@ -39,9 +39,7 @@
   ],
   "content_scripts": [{
       "matches": [
-        "*://*.cz.de/*",
-        "*://*.gitlab.com/magnolia1234",
-        "*://*.nzherald.co.nz/*"
+        "*://*.gitlab.com/magnolia1234"
       ],
       "run_at": "document_start",
       "js": ["contentScript_once.js"]
@@ -728,5 +726,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.3.3"
+  "version": "3.0.3.4"
 }
