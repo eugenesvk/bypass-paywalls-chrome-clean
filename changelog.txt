@@ -6,6 +6,7 @@ Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
 Fix Madsack Mediengruppe
 Fix The Australian (The Oz)
+Fix The Globe and Mail (media)
 
 * v3.0.3.0 (2023-01-29)
 Add Saarbruecker Zeitung

@@ -44,6 +44,21 @@ else if (matchDomain('nzherald.co.nz')) {
   insert_script(nzherald_main);
 }
 
+else if (matchDomain('theglobeandmail.com')) {
+  function tgam_main() {
+    let done = false;
+    for (let n = 0; n < 10; n++) {
+      window.setTimeout(function () {
+        if (!done && window.Fusion) {
+          window.Fusion.globalContent._id = '';
+          done = true;
+        }
+      }, n * 50);
+    }
+  }
+  insert_script(tgam_main);
+}
+
 function matchDomain(domains, hostname) {
   var matched_domain = false;
   if (!hostname)

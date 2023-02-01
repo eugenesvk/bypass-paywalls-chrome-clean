@@ -3703,33 +3703,6 @@ else if (matchDomain('nytimes.com')) {
 
 else if (matchDomain('nzherald.co.nz')) {
   // plus code in contentScript_once_var.js (timing)
-  let article_content = document.querySelector('.article__content');
-  if (article_content) {//redundant
-    let article_offer = document.querySelector('.article-offer');
-    if (article_offer && dompurify_loaded) {
-      removeDOMElement(article_offer);
-      let premium = document.querySelector('span.ellipsis');
-      if (premium)
-        premium.classList.remove('ellipsis');
-      let css_selector = article_content.querySelectorAll('p[style][class]')[1].getAttribute('class');
-      let hidden_not_pars = article_content.querySelectorAll('.' + css_selector + ':not(p)');
-      for (let hidden_not_par of hidden_not_pars) {
-        hidden_not_par.classList.remove(css_selector);
-        hidden_not_par.removeAttribute('style');
-      }
-      let hidden_pars = article_content.querySelectorAll('p.' + css_selector);
-      let par_html, par_dom;
-      let parser = new DOMParser();
-      for (let hidden_par of hidden_pars) {
-        let par_html = parser.parseFromString('<div style="margin: 10px 0px; font-size: 17px; line-height: 1.6">' + DOMPurify.sanitize(hidden_par.innerHTML) + '</div>', 'text/html');
-        let par_dom = par_html.querySelector('div');
-        article_content.insertBefore(par_dom, hidden_par);
-      }
-      let first_span = document.querySelector('p > span');
-      if (first_span)
-        first_span.removeAttribute('class');
-    }
-  }
   let premium_toaster = document.querySelector('#premium-toaster');
   let ads = document.querySelectorAll('.ad');
   hideDOMElement(premium_toaster, ...ads);
@@ -4035,10 +4008,11 @@ else if (matchDomain('stratfor.com')) {
 
 else if (matchDomain('studocu.com')) {
   window.setTimeout(function () {
-    let paywall = document.querySelector('div._de9e5fdb76af');
+    let paywall = document.querySelector('button[data-test-selector^="preview-banner-"]');
     if (paywall) {
-      let banners = document.querySelectorAll('div._869f7c361ca9, div#premium-page-header');
-      removeDOMElement(paywall, ...banners);
+      let paywall_banner = document.querySelector('div#document-wrapper > div:not([style])');
+      let banners = document.querySelectorAll('div.pf > :not(.page-content), div#premium-page-header');
+      removeDOMElement(paywall_banner, ...banners);
       window.setTimeout(function () {
         let blurred_pages = document.querySelectorAll('div.page-content[style]');
         for (let blurred_page of blurred_pages) {
@@ -4208,14 +4182,10 @@ else if (matchDomain('theglobeandmail.com')) {
     removeDOMElement(paywall);
     let url = window.location.href.split('?')[0];
     window.location.href = url + '?rel=premium';
-  } else {
-    let article_body_subscribed = document.querySelector('.c-article-body--subscribed');
-    if (article_body_subscribed)
-      article_body_subscribed.removeAttribute('class');
-    let lazy_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
-    for (let elem of lazy_images)
-      elem.src = elem.getAttribute('data-src');
   }
+  let lazy_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
+  for (let elem of lazy_images)
+    elem.src = elem.getAttribute('data-src');
   let banners = document.querySelectorAll('div.c-ad, div#subscription-pencil-area, div.marketing-container-wrapper');
   hideDOMElement(...banners);
 }
