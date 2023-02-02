@@ -65,5 +65,10 @@
     "domain": "saarbruecker-zeitung.de",
     "allow_cookies": 1,
     "useragent": "facebookbot"
+  },
+  "The Atlantic": {
+    "domain": "theatlantic.com",
+    "remove_cookies_select_drop": ["articleViews"],
+    "useragent": "facebookbot"
   }
 }

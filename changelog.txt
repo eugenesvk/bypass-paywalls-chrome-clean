@@ -5,6 +5,7 @@ Post-release
 Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
 Fix Madsack Mediengruppe
+Fix The Atlantic (menu)
 Fix The Australian (The Oz)
 Fix The Globe and Mail (media)
 

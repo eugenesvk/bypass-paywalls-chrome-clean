@@ -4092,7 +4092,7 @@ else if (matchDomain('theathletic.com')) {
 
 else if (matchDomain('theatlantic.com')) {
   let banners = document.querySelectorAll('.c-nudge__container, .c-non-metered-nudge, div[class^="ArticleInjector_"]');
-  removeDOMElement(...banners);
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('thebulletin.org')) {
