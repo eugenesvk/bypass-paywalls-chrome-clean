@@ -1602,19 +1602,6 @@ else if (matchDomain('loeildelaphotographie.com')) {
     blurred_image.removeAttribute('style');
 }
 
-else if (matchDomain('lopinion.fr')) {
-  if (window.location.search.startsWith('?_amp=true'))
-    amp_unhide_access_hide('="access"', '="NOT access"');
-  else {
-    let paywall = document.querySelector('div#poool-widget');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
-  }
-}
-
 else if (matchDomain('marianne.net')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall && dompurify_loaded) {
@@ -2018,9 +2005,19 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                     for (let item of par.insertbox_text) {
                       if (item.children) {
                         for (let child of item.children) {
-                          let span = document.createElement('span');
-                          span.innerText = child.text;
-                          elem.appendChild(span);
+                          if (child.text) {
+                            let span = document.createElement('span');
+                            span.innerText = child.text;
+                            elem.appendChild(span);
+                          } else if (child.children) {
+                            for (let sub_child of child.children) {
+                              if (sub_child.text) {
+                                let sub_span = document.createElement('span');
+                                sub_span.innerText = sub_child.text;
+                                elem.appendChild(sub_span);
+                              }
+                            }
+                          }
                         }
                       }
                     }

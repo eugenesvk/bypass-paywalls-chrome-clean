@@ -1337,7 +1337,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_substack_custom', '###_ch_tamedia', '###_it_citynews'];
+      let nofix_groups = ['###_substack_custom', '###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews'];
       if (enabledSites.concat(nofix_groups).includes(group) && !custom_flex_domains.includes(custom_domain)) {
         let rules;
         if (group === 'elmercurio.com')

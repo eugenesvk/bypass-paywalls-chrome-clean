@@ -440,7 +440,6 @@ Grouped in options:\
 [L'Humanité](https://www.humanite.fr) -
 [L'Obs](https://www.nouvelobs.com) -
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
-[L'Opinion](https://www.lopinion.fr) -
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
 [La Libre](https://www.lalibre.be) -
