@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
 Remove DN.no (fix obsolete)
+Remove Spiegel.de (fix obsolete)
 Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
 Fix Madsack Mediengruppe

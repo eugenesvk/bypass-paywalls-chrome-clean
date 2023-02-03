@@ -236,6 +236,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "mailplus.co.uk"
   },
+  "Makorrishon.co.il": {
+    "allow_cookies": 1,
+    "domain": "makorrishon.co.il",
+    "useragent": "googlebot"
+  },
   "Mannheimer-morgen.de": {
     "allow_cookies": 1,
     "domain": "mannheimer-morgen.de",
@@ -268,6 +273,11 @@
     "allow_cookies": 1,
     "block_regex": "\\/newbostonpost\\.com\\/.+\\/paywall\\/js\\/main\\.js",
     "domain": "newbostonpost.com"
+  },
+  "Newspicks.com": {
+    "allow_cookies": 1,
+    "domain": "newspicks.com",
+    "useragent": "googlebot"
   },
   "Nu.nl": {
     "allow_cookies": 1,

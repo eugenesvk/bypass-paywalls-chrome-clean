@@ -751,17 +751,6 @@ else if (matchDomain('rheinpfalz.de')) {
   }
 }
 
-else if (matchDomain('spiegel.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div[data-area="paywall"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('div[data-area="body"]');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('sueddeutsche.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('offer-page, div.offer-page');
