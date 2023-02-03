@@ -61,10 +61,18 @@
     "ld_json": "div.paywall|div.article-full__body-content",
     "cs_code": "[{\"cond\":\"div.article-full__body-content\",\"rm_attrib\":\"style|data-state\"}]"
   },
+  "Los Angeles Times": {
+    "domain": "latimes.com",
+    "block_regex": "\\.californiatimes\\.com\\/meteringjs"
+  },
   "Saarbrücker Zeitung": {
     "domain": "saarbruecker-zeitung.de",
     "allow_cookies": 1,
     "useragent": "facebookbot"
+  },
+  "San Diego Union Tribune": {
+    "domain": "sandiegouniontribune.com",
+    "block_regex": "\\.californiatimes\\.com\\/meteringjs"
   },
   "The Atlantic": {
     "domain": "theatlantic.com",

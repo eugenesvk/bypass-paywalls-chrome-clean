@@ -3436,15 +3436,8 @@ else if (matchDomain('jpost.com')) {
 }
 
 else if (matchDomain(['latimes.com', 'sandiegouniontribune.com'])) {
-  if (window.location.search.startsWith('?_amp=true')) {
-    amp_unhide_subscr_section('amp-ad, [class*="-ad-wrapper"], div.enhancement');
-  } else {
-    window.setTimeout(function () {
-      let metering_bottompanel = document.querySelector('metering-bottompanel');
-      let banners = document.querySelectorAll('div.enhancement, div.google-dfp-ad-wrapper');
-      removeDOMElement(metering_bottompanel, ...banners);
-    }, 500);
-  }
+  let ads = document.querySelectorAll('div.enhancement, div.google-dfp-ad-wrapper');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('ledevoir.com')) {

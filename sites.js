@@ -1180,7 +1180,7 @@ var defaultSites = {
   },
   "Los Angeles Times": {
     domain: "latimes.com",
-    block_regex: /(metering\.platform\.latimes\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /\.californiatimes\.com\/meteringjs/
   },
   "Madavor Media (opt-in to custom sites)": {
     domain: "###_usa_madavor",
@@ -1644,7 +1644,7 @@ var defaultSites = {
   },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
-    block_regex: /(metering\.platform\.sandiegouniontribune\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /\.californiatimes\.com\/meteringjs/
   },
   "Science (free articles only)": {
     domain: "science.org",
