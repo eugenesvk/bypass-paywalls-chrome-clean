@@ -13,6 +13,7 @@ Fix Madsack Mediengruppe
 Fix The Atlantic (images)
 Fix The Australian (The Oz)
 Fix The Globe and Mail (media)
+Fix The Hill Times (text)
 
 * v3.0.3.0 (2023-01-29)
 Add Saarbruecker Zeitung

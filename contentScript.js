@@ -61,8 +61,15 @@ if (bg2csData.ld_json && dompurify_loaded) {
         if (json_script) {
           try {
             let json = JSON.parse(json_script.text.replace(/[\r\n]/g, '').replace(/(\\r)?\\n/g, '<br>'));
-            let json_key = Object.keys(json).find(key => key.match(/^(articlebody|text)$/i));
-            let json_text = parseHtmlEntities(json[json_key]);
+            let json_key, json_text;
+            if (Array.isArray(json)) {
+              json = json.filter(x => json_key = Object.keys(x).find(key => key.match(/^(articlebody|text)$/i)));
+              if (json_key)
+                json_text = parseHtmlEntities(json[0][json_key]);
+            } else {
+              json_key = Object.keys(json).find(key => key.match(/^(articlebody|text)$/i));
+              json_text = parseHtmlEntities(json[json_key]);
+            }
             let content = document.querySelector(article_sel);
             if (json_text && content) {
               let parser = new DOMParser();
@@ -3259,18 +3266,24 @@ else if (matchDomain('hbrchina.org')) {
 }
 
 else if (matchDomain('hilltimes.com')) {
-  let paywall = document.querySelector('div[class^="paywallcont"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let content = document.querySelector('meta[property="og:description"][content]');
-    if (content) {
-      let article = document.querySelector('div#fadebg');
-      if (article) {
-        article.innerText = parseHtmlEntities(content.content);
-        article.removeAttribute('id');
+  let paywall = document.querySelectorAll('div[class^="paywallcont"]');
+  if (paywall.length) {
+    removeDOMElement(...paywall);
+    let json_script = document.querySelector('script.saswp-schema-markup-output');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.text);
+        json_text = json.filter(x => x.articleBody)[0].articleBody.replace(/\s{2,}/g, '\r\n\r\n');
+        let article = document.querySelector('div#fadebg > p');
+        if (article)
+          article.innerText = parseHtmlEntities(json_text);
+      } catch (err) {
+        console.log(err);
       }
     }
   }
+  let banner = document.querySelector('section.hide_this_section');
+  hideDOMElement(banner);
 }
 
 else if (matchDomain('hindustantimes.com')) {
