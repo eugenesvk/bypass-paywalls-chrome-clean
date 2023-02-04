@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Add Kurier.at
 Remove DN.no (fix obsolete)
 Remove L'Opinion.fr (fix obsolete)
 Remove Spiegel.de (fix obsolete)

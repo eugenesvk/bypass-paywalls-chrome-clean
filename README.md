@@ -525,6 +525,7 @@ Grouped in options:\
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -
+[Kurier.at](https://kurier.at) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Philosophie Magazin](https://www.philomag.de) -

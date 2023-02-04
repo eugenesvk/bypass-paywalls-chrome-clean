@@ -676,6 +676,20 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain('kurier.at')) {
+  let paywall = document.querySelector('div.plusContent');
+  if (paywall) {
+    paywall.classList.remove('plusContent');
+    window.setTimeout(function () {
+      let elem_hidden = paywall.querySelectorAll('.ng-star-inserted[style="display: none;"]');
+      for (let elem of elem_hidden)
+        elem.removeAttribute('style');
+    }, 2000);
+  }
+  let banners = document.querySelectorAll('app-paywall, adfullbanner, outbrain');
+  removeDOMElement(...banners);
+}
+
 else if (matchDomain(['mz.de', 'volksstimme.de'])) {
   let url = window.location.href.split('?')[0];
   let paywall = document.querySelector('.fp-paywall');
