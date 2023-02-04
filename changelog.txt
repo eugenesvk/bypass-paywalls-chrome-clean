@@ -9,7 +9,7 @@ Fix Conde Nast magazines (cookies)
 Fix DvhN.nl (json)
 Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe
-Fix The Atlantic (menu)
+Fix The Atlantic (images)
 Fix The Australian (The Oz)
 Fix The Globe and Mail (media)
 

@@ -4034,6 +4034,9 @@ else if (matchDomain('theathletic.com')) {
 }
 
 else if (matchDomain('theatlantic.com')) {
+  let lazy_images = document.querySelectorAll('img.Image_lazy__tutlP');
+  for (let elem of lazy_images)
+    elem.classList.remove('Image_lazy__tutlP');
   let banners = document.querySelectorAll('.c-nudge__container, .c-non-metered-nudge, div[class^="ArticleInjector_"]');
   hideDOMElement(...banners);
 }

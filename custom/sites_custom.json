@@ -25,6 +25,11 @@
   "Brainly.com": {
     "domain": "brainly.com"
   },
+  "Brandonsun.com": {
+    "allow_cookies": 1,
+    "block_regex": "account\\.brandonsun\\.com\\/api\\/v\\d\\/auth\\/identify",
+    "domain": "brandonsun.com"
+  },
   "Brusselstimes.com": {
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",

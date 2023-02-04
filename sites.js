@@ -1778,8 +1778,8 @@ var defaultSites = {
   },
   "The Atlantic": {
     domain: "theatlantic.com",
-    remove_cookies_select_drop: ["articleViews"],
-    useragent: "facebookbot"
+    block_regex: /cdn\.theatlantic\.com\/_next\/static\/chunks\/[5-7].+\.js/,
+    remove_cookies_select_drop: ["articleViews"]
   },
   "The Australian Financial Review": {
     domain: "afr.com",
