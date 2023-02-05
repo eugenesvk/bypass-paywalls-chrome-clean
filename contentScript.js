@@ -3823,6 +3823,17 @@ else if (matchDomain('puck.news')) {
   }
 }
 
+else if (matchDomain('quillette.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('aside.gh-post-upgrade-cta');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.appendChild(archiveLink(url));
+  }
+}
+
 else if (matchDomain('quora.com')) {
   let overlays = document.querySelectorAll('div[class*="_overlay"]');
   removeDOMElement(...overlays);

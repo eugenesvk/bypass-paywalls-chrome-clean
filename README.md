@@ -735,6 +735,7 @@ Grouped in options:\
 [Griffith Review](https://www.griffithreview.com) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
+[Quillette](https://quillette.com) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
 [The Spectator Australia](https://www.spectator.com.au) -
 [The West Australian (+ regional/opt-in to custom sites)](https://thewest.com.au)

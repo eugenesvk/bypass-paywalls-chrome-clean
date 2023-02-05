@@ -334,7 +334,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     remove_cookies: 1,
-    block_regex: "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    block_regex: "(\\.{domain}\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     useragent: "googlebot"
   },
   "Connaissance des Arts": {
@@ -1581,6 +1581,10 @@ var defaultSites = {
     domain: "qz.com",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
+  },
+  "Quillette": {
+    domain: "quillette.com",
+    allow_cookies: 1
   },
   "Quora (regwall)": {
     domain: "quora.com",

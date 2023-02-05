@@ -4,11 +4,12 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Add Inside Higher Ed
 Add Kurier.at
+Add Quillette
 Add Verlagsgruppe Rhein Main
 Remove DN.no (fix obsolete)
 Remove L'Opinion.fr (fix obsolete)
 Remove Spiegel.de (fix obsolete)
-Fix Conde Nast magazines (cookies)
+Fix Conde Nast magazines (js/cookies)
 Fix DvhN.nl (json)
 Fix Los Angeles Times & San Diego Union-Tribune
 Fix Madsack Mediengruppe

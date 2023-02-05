@@ -42,7 +42,7 @@
     ],
     "allow_cookies": 1,
     "remove_cookies": 1,
-    "block_regex": "(journey\\.{domain}\\/(.+\\/)?build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "block_regex": "(\\.{domain}\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot"
   },
   "Groupe La Dépêche": {
