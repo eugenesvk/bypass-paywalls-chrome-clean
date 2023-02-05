@@ -61,6 +61,11 @@
     "ld_json": "div.paywall|div.article-full__body-content",
     "cs_code": "[{\"cond\":\"div.article-full__body-content\",\"rm_attrib\":\"style|data-state\"}]"
   },
+  "Inside Higher Ed": {
+    "domain": "insidehighered.com",
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com"
+  },
   "Los Angeles Times": {
     "domain": "latimes.com",
     "block_regex": "\\.californiatimes\\.com\\/meteringjs"

@@ -958,6 +958,11 @@ var defaultSites = {
   "Inkl": {
     domain: "inkl.com"
   },
+  "Inside Higher Ed": {
+    domain: "insidehighered.com",
+    allow_cookies: 1,
+    block_regex: /js\.pelcro\.com\//
+  },
   "Intelligent Investor": {
     domain: "intelligentinvestor.com.au",
     allow_cookies: 1,

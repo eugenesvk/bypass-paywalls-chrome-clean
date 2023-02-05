@@ -136,6 +136,7 @@ Grouped in options:\
 [Bulletin of the Atomic Scientists](https://thebulletin.org) -
 [Chemical & Engineering News](https://cen.acs.org) -
 [Discover Magazine](https://www.discovermagazine.com) -
+[Inside Higher Ed](https://www.insidehighered.com) -
 [Medscape](https://www.medscape.com) -
 [MIT Technology Review](https://www.technologyreview.com) -
 [National Geographic USA](https://www.nationalgeographic.com) -
