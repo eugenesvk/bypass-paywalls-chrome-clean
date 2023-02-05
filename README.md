@@ -300,14 +300,14 @@ Grouped in options:\
 [Memphis Commercial Appeal](https://www.commercialappeal.com) -
 [Milwaukee Journal Sentinel](https://www.jsonline.com) -
 [The Arizona Republic](https://www.azcentral.com) -
-[The Cincinnati Enquirer](http://www.cincinnati.com) -
+[The Cincinnati Enquirer](https://www.cincinnati.com) -
 [The Courier-Journal](https://www.courier-journal.com) -
 [The Detroit News](https://www.detroitnews.com) -
 [The Indianapolis Star](https://www.indystar.com) -
 [The News-Press](https://www.news-press.com) -
 [The Oklahoman](https://www.oklahoman.com) -
 [The Record (North Jersey)](https://www.northjersey.com) -
-[The Tennessean](http://www.tennessean.com)\
+[The Tennessean](https://www.tennessean.com)\
 *Hearst Communications (newspapers)* sites like (opt-in to custom sites for unlisted)\
 [Houston Chronicle](https://www.houstonchronicle.com) -
 [San Antonio Express-News](https://www.expressnews.com) -
@@ -568,8 +568,12 @@ Grouped in options:\
 [Aachener Zeitung](https://www.aachener-zeitung.de) -
 [General-Anzeiger Bonn](https://ga.de) -
 [Rheinische Post](https://rp-online.de) -
-[Saarbrücker Zeitung](http://www.saarbruecker-zeitung.de) -
-[Trierischer Volksfreund](http://www.volksfreund.de)\
+[Saarbrücker Zeitung](https://www.saarbruecker-zeitung.de) -
+[Trierischer Volksfreund](https://www.volksfreund.de)\
+*Verlagsgruppe Rhein Main* sites like (opt-in to custom sites for unlisted)\
+[Allgemeine Zeitung (Mainz)](https://www.allgemeine-zeitung.de) -
+[Darmstädter Echo](https://www.echo-online.de) -
+[Wiesbadener Kurier](https://www.wiesbadener-kurier.de)\
 *Westfälische Mediengruppe* sites like\
 [Münstersche Zeitung](https://www.muensterschezeitung.de) -
 [Westfalen-Blatt](https://www.westfalen-blatt.de) -

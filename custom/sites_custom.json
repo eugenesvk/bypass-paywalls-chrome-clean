@@ -359,11 +359,6 @@
     "cs_code": "[{\"cond\":\"div.c-memberships-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"body.access-restricted\",\"rm_class\":\"access-restricted\"}]}]",
     "domain": "stateaffairs.com"
   },
-  "Stimme.de": {
-    "allow_cookies": 1,
-    "domain": "stimme.de",
-    "ld_google_webcache": "div.paywall-product-box,div.fadeOut|div.art-text"
-  },
   "Stylist.co.uk": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div[data-cy='upgradeAccountPaywall']\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class|style\"},{\"cond\":\"div.css-tu9vsa\",\"rm_attrib\":\"class\"}]}]",

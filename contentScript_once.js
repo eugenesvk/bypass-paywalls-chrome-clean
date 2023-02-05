@@ -56,6 +56,8 @@ window.setTimeout(function () {
         group = '###_de_madsack';
       else if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))
         group = '###_de_dfv_medien';
+      else if (document.querySelector('meta[name^="cXenseParse:vrm-"]'))
+        group = '###_de_vrm';
       else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
       else if (document.querySelector('link[href*=".tamedia.ch/"]'))

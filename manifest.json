@@ -71,6 +71,7 @@
     "*://*.ajc.com/*",
     "*://*.al.com/*",
     "*://*.allgaeuer-zeitung.de/*",
+    "*://*.allgemeine-zeitung.de/*",
     "*://*.alternatives-economiques.fr/*",
     "*://*.ambito.com/*",
     "*://*.americanaffairsjournal.org/*",
@@ -191,6 +192,7 @@
     "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
     "*://*.eastwest.eu/*",
+    "*://*.echo-online.de/*",
     "*://*.economictimes.com/*",
     "*://*.economictimes.indiatimes.com/*",
     "*://*.economist.com/*",
@@ -672,6 +674,7 @@
     "*://*.weltkunst.de/*",
     "*://*.westernadvocate.com.au/*",
     "*://*.westfalen-blatt.de/*",
+    "*://*.wiesbadener-kurier.de/*",
     "*://*.winnipegfreepress.com/*",
     "*://*.wired.com/*",
     "*://*.wn.de/*",
@@ -725,5 +728,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.3.8"
+  "version": "3.0.3.9"
 }
