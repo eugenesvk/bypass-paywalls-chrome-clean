@@ -1582,7 +1582,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
-  "Quillette": {
+  "Quillette (link to archive.is)": {
     domain: "quillette.com",
     allow_cookies: 1
   },
