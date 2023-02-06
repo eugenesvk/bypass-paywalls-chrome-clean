@@ -70,22 +70,14 @@ Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypas
 
 _* free articles only._
 
-##### World news
+##### International news
 [Foreign Affairs](https://www.foreignaffairs.com) -
 [Foreign Policy](https://www.foreignpolicy.com) -
-[Harper's Magazine](https://harpers.org) -
 [Inkl](https://www.inkl.com) -
 [Newsweek](https://www.newsweek.com) -
 [Reuters](https://www.reuters.com) -
 [Stratfor](https://stratfor.com) -
-[The American Interest](https://www.the-american-interest.com) -
-[The Atlantic](https://www.theatlantic.com) -
-[The Christian Science Monitor](https://www.csmonitor.com) -
-[The Nation](https://www.thenation.com) -
-[The New Republic](https://newrepublic.com) -
-[The New York Review of Books](https://www.nybooks.com) -
 [The New York Times](https://www.nytimes.com) -
-[The Spectator World](https://spectatorworld.com) -
 [The Washington Post](https://www.washingtonpost.com) -
 [Time Magazine](https://time.com)
 
@@ -112,7 +104,8 @@ _* free articles only._
 [The Business Journals](https://www.bizjournals.com)* -
 [The Business of Fashion](https://www.businessoffashion.com) -
 [The Wall Street Journal](https://www.wsj.com) -
-[Vogue Business](https://www.voguebusiness.com)
+[Vogue Business](https://www.voguebusiness.com) -
+[ZeroHedge](https://www.zerohedge.com)
 
 Grouped in options:\
 *California Business Journals* sites like\
@@ -169,6 +162,12 @@ Grouped in options:\
 [Statista](https://www.statista.com) -
 [StuDocu](https://www.studocu.com)
 
+###### Sports
+[ESPN USA](https://www.espn.com) -
+[RugbyPass](https://www.rugbypass.com) -
+[Sports Illustrated](https://www.si.com) -
+[The Athletic](https://theathletic.com)
+
 ##### Magazines/Blogs
 [Medium](https://www.medium.com)\
 Grouped in options:\
@@ -182,26 +181,29 @@ Grouped in options:\
 [Atavist Magazine](https://magazine.atavist.com) -
 [Axios](https://www.axios.com) -
 [Commentary Magazine](https://www.commentary.org) -
-[ESPN USA](https://www.espn.com) -
 [Field & Stream](https://www.fieldandstream.com) -
 [First Things](https://www.firstthings.com) -
+[Harper's Magazine](https://harpers.org) -
 [National Review](https://www.nationalreview.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
 [Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -
 [Puck.news](https://puck.news) -
-[RugbyPass](https://www.rugbypass.com) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
-[Sports Illustrated](https://www.si.com) -
+[The American Interest](https://www.the-american-interest.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
-[The Athletic](https://theathletic.com) -
+[The Atlantic](https://www.theatlantic.com) -
+[The Christian Science Monitor](https://www.csmonitor.com) -
 [The Intercept](https://theintercept.com) -
 [The Daily Beast](https://www.thedailybeast.com) -
 [The Daily Wire](https://www.dailywire.com) -
+[The Nation](https://www.thenation.com) -
 [The New Atlantis](https://www.thenewatlantis.com) -
+[The New Republic](https://newrepublic.com) -
+[The New York Review of Books](https://www.nybooks.com) -
 [The Point Magazine](https://thepointmag.com) -
-[The Wrap](https://www.thewrap.com) -
-[ZeroHedge](https://www.zerohedge.com)
+[The Spectator World](https://spectatorworld.com) -
+[The Wrap](https://www.thewrap.com)
 
 Grouped in options:\
 *Condé Nast magazines* sites like\

@@ -351,8 +351,7 @@
     "domain": "spokesman.com"
   },
   "Sportsbusinessjournal.com": {
-    "domain": "sportsbusinessjournal.com",
-    "random_ip": "all"
+    "domain": "sportsbusinessjournal.com"
   },
   "Stateaffairs.com": {
     "allow_cookies": 1,
@@ -429,11 +428,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
     "domain": "toolkits.com"
-  },
-  "Vigilantcitizen.com": {
-    "allow_cookies": 1,
-    "domain": "vigilantcitizen.com",
-    "random_ip": "all"
   },
   "Washingtontimes.com": {
     "allow_cookies": 1,

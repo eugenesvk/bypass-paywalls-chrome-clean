@@ -1633,8 +1633,8 @@ else if (matchDomain('lesechos.fr')) {
         let state;
         let split1 = html.split('window.__CONFIG__=')[1];
         let split2 = split1.split('</script>')[0].trim();
-        if (split2.includes('; window.__DATA__=')) {
-          state = split2.split('; window.__DATA__=')[1].split('; window.__')[0].trim();
+        if (split2.includes('window.__DATA__=')) {
+          state = split2.split('window.__DATA__=')[1].split('};')[0] + '}';
         } else
           state = split2.substr(0, split2.length - 1);
         try {
@@ -1666,7 +1666,7 @@ else if (matchDomain('lesechos.fr')) {
           let styleElem = document.head.appendChild(document.createElement('style'));
           styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
         } catch (err) {
-          refreshCurrentTab();
+          console.log(err);
         }
       }
     }, 500);
@@ -4320,6 +4320,8 @@ else if (matchDomain('time.com')) {
   let body = document.querySelector('body');
   if (body && !matchDomain('api.time.com'))
     body.setAttribute('style', 'position:relative !important;');
+  let ads = document.querySelectorAll('div[id*="inline-ad-"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('timeshighereducation.com')) {
@@ -4607,6 +4609,8 @@ else if ((domain = matchDomain(usa_mcc_domains)) ||
     if (premium_link.href.includes('www.'))
       premium_link.href = premium_link.href.replace('www.', 'amp.');
   }
+  let ads = document.querySelectorAll('div[id^="zone-el-"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain(usa_mng_domains) || (window.location.href.match(/\.com\/(\d){4}\/(\d){2}\/(\d){2}\/.+\/amp\//) && document.querySelector('amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))) {
