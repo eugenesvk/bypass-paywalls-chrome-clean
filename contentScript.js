@@ -4589,10 +4589,11 @@ else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('
 else if ((domain = matchDomain(usa_mcc_domains)) ||
   (window.location.hostname.startsWith('account.') && document.querySelector('script[src*=".mcclatchyinteractive.com/"]')) ||
   (window.location.href.match(/\/\/amp\..+\.com\/(.+\/)?article(\d){8,}\.html/) && document.querySelector('a[href^="https://classifieds.mcclatchy.com/"]'))) {
-  if (!domain)
-    domain = window.location.hostname.replace(/^(account|amp)\./, '');
   let url = window.location.href;
-  if (url.includes('account.' + domain + '/paywall/subscriber-only?resume=')) {
+  let hostname = window.location.hostname;
+  if (!domain)
+    domain = hostname.replace(/^(account|amp)\./, '');
+  if (hostname.startsWith('account.') && window.location.search.startsWith('?resume=')) {
     window.setTimeout(function () {
       window.location.href = 'https://amp.' + domain + '/article' + url.split('resume=')[1].split(/[#&]/)[0] + '.html';
     }, 500);
