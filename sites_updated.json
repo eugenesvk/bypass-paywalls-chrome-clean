@@ -69,7 +69,7 @@
   "Kölner Stadt-Anzeiger": {
     "domain": "ksta.de",
     "allow_cookies": 1,
-    "block_regex": "\\.ksta\\.de\\/_nuxt\\/AdContainer.+\\.js"
+    "cs_code": "[{\"cond\":\"div.paywalled-content\",\"rm_attrib\":\"class\",\"elems\":[{\"cond\":\"div.dm-paywall-wrapper\",\"rm_elem\":1}]}]"
   },
   "Los Angeles Times": {
     "domain": "latimes.com",

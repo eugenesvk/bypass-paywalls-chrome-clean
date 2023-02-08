@@ -998,13 +998,11 @@ var defaultSites = {
   },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
-    allow_cookies: 1,
-    block_regex: /\.ksta\.de\/_nuxt\/AdContainer.+\.js/
+    allow_cookies: 1
   },
   "Kölnische Rundschau": {
     domain: "rundschau-online.de",
-    allow_cookies: 1,
-    block_regex: /\.rundschau-online\.de\/_nuxt\/AdContainer.+\.js/
+    allow_cookies: 1
   },
   "Krant van West-Vlaanderen": {
     domain: "kw.be",
@@ -2432,13 +2430,12 @@ var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
-  "###_wp_leaky_paywall": ["griffithreview.com", "nknews.org", "thewirechina.com"],
+  "###_wp_leaky_paywall": ["thewirechina.com"],
   "###_medium_custom": ["medium.com"],
   "###_uk_axate.io": ["thinkofx.net"],
-  "###_usa_gannett": ["usatoday.com"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
-  "###_usa_townnews": ["townnews.com", "nola.com", "theadvocate.com"]
+  "###_usa_townnews": ["townnews.com"]
 }
 var custom_flex_domains;
 var custom_flex_not_domains;

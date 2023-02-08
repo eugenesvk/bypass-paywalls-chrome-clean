@@ -166,6 +166,11 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "hartenergy.com"
   },
+  "Hbook.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.hbook\\.com\\/.+\\/js\\/metering\\.js",
+    "domain": "hbook.com"
+  },
   "Heidi.news": {
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
@@ -211,6 +216,10 @@
     "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
     "domain": "irishexaminer.com"
   },
+  "Irishnews.com (not premium)": {
+    "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/mpppaywall\\.js",
+    "domain": "irishnews.com"
+  },
   "Kapital.no": {
     "allow_cookies": 1,
     "domain": "kapital.no",
@@ -220,6 +229,11 @@
     "allow_cookies": 1,
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
+  },
+  "Libraryjournal.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
+    "domain": "libraryjournal.com"
   },
   "Lindipendente.online": {
     "allow_cookies": 1,
@@ -326,6 +340,11 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "siliconrepublic.com"
+  },
+  "Slj.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.slj\\.com\\/.+\\/js\\/metering\\.js",
+    "domain": "slj.com"
   },
   "Sltrib.com": {
     "allow_cookies": 1,

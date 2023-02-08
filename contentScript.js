@@ -309,12 +309,12 @@ else {
             let scripts = document.querySelectorAll('script:not([src], [type])');
             let json_script;
             for (let script of scripts) {
-              if (script.innerText.includes('window.PAGE_DATA =')) {
+              if (script.text.includes('window.PAGE_DATA =')) {
                 json_script = script;
                 break;
               }
             }
-            if (json_script && json_script.text.includes('window.PAGE_DATA =')) {
+            if (json_script) {
               let json_text = json_script.text.split('window.PAGE_DATA =')[1].split('</script')[0];
               json_text = json_text.replace(/undefined/g, '"undefined"');
               try {
@@ -395,6 +395,17 @@ else {
                       par_elem.appendChild(par_sub2);
                     }
                   }
+                } else if (par.kind === 'inline-related') {
+                  par_elem = document.createElement('p');
+                  if (par.publications) {
+                    for (let elem of par.publications) {
+                      let par_link = document.createElement('a');
+                      par_link.href = elem._self;
+                      par_link.innerText = elem.heading;
+                      par_elem.appendChild(par_link);
+                      par_elem.appendChild(document.createElement('br'));
+                    }
+                  }
                 } else {
                   par_elem = document.createElement('p');
                   par_elem.innerText = par.text;
@@ -416,7 +427,7 @@ else {
             }
             removeDOMElement(breach_screen);
           }
-        }, 1500);
+        }, 2000);
         let header_advert = document.querySelector('.headerAdvertisement');
         hideDOMElement(header_advert);
       }
@@ -683,8 +694,14 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
     let span_hidden = document.querySelector('div.dm-paint');
     if (span_hidden)
       span_hidden.removeAttribute('class');
+  } else {
+    let paywall_new = document.querySelector('div.paywalled-content');
+    if (paywall_new)
+      paywall_new.removeAttribute('class');
+    let wrapper = document.querySelector('div.dm-paywall-wrapper');
+    removeDOMElement(wrapper);
   }
-  let banners = document.querySelectorAll('div.dm-slot');
+  let banners = document.querySelectorAll('div.dm-slot, div[id^="taboola-feed"]');
   removeDOMElement(...banners);
 }
 
