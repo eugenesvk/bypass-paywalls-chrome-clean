@@ -2,6 +2,7 @@
 Changelog Bypass Paywalls Clean - Firefox
 
 Post-release
+Fix Koelner Stadt-Anzeiger (regwall)
 Fix LesEchos.fr (json)
 Fix McClatchy Group (amp-redirect)
 Fix The West Australian (regional; identify site)

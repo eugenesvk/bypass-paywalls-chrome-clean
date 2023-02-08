@@ -66,6 +66,11 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com"
   },
+  "Kölner Stadt-Anzeiger": {
+    "domain": "ksta.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.ksta\\.de\\/_nuxt\\/AdContainer.+\\.js"
+  },
   "Los Angeles Times": {
     "domain": "latimes.com",
     "block_regex": "\\.californiatimes\\.com\\/meteringjs"
