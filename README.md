@@ -620,7 +620,7 @@ Grouped in options:\
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
-[Het Laatste Nieuws (link to archive.is))](https://www.hln.be) -
+[Het Laatste Nieuws (link to archive.is)](https://www.hln.be) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
@@ -737,7 +737,7 @@ Grouped in options:\
 [Griffith Review](https://www.griffithreview.com) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
-[Quillette](https://quillette.com) -
+[Quillette (link to archive.is)](https://quillette.com) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
 [The Spectator Australia](https://www.spectator.com.au) -
 [The West Australian (+ regional/opt-in to custom sites)](https://thewest.com.au)

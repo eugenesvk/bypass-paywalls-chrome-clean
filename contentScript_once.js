@@ -43,7 +43,7 @@ window.setTimeout(function () {
       if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
         group = '###_au_comm_media';
       else if (hostname.endsWith('.com.au')) {
-        if (document.querySelector('link[href*="/thewest.com.au/"]'))
+        if (document.querySelector('li > a[href*=".sevenwestmedia.com.au"]'))
           group = 'thewest.com.au';
       }
     } else if (hostname.endsWith('.cl')) {

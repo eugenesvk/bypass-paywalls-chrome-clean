@@ -302,8 +302,7 @@ else {
       }
     } else {
       // Australian Seven West Media
-      let swm_image = document.querySelector('img[src^="https://images.thewest.com.au"]');
-      if (matchDomain('thewest.com.au') || swm_image) {
+      if (matchDomain('thewest.com.au') || document.querySelector('li > a[href*=".sevenwestmedia.com.au"]')) {
         window.setTimeout(function () {
           let breach_screen = document.querySelector('div[data-testid*="BreachScreen"]');
           if (breach_screen) {
@@ -315,16 +314,19 @@ else {
                 break;
               }
             }
-            if (json_script) {
-              let json_text = json_script.innerHTML.split('window.PAGE_DATA =')[1].split('</script')[0];
+            if (json_script && json_script.text.includes('window.PAGE_DATA =')) {
+              let json_text = json_script.text.split('window.PAGE_DATA =')[1].split('</script')[0];
               json_text = json_text.replace(/undefined/g, '"undefined"');
+              try {
               let json_article = JSON.parse(json_text);
               let json_pub;
-              for (let key in json_article)
-                if (json_article[key].data.result.resolution && json_article[key].data.result.resolution.publication) {
-                  json_pub = json_article[key].data.result.resolution.publication;
+              for (let key in json_article) {
+                let json_resolution = json_article[key].data.result.resolution;
+                if (json_resolution && json_resolution.publication) {
+                  json_pub = json_resolution.publication;
                   break;
                 }
+              }
               let json_content = [];
               let url_loaded;
               if (json_pub) {
@@ -408,13 +410,15 @@ else {
                 par_dom.setAttribute('style', 'margin: 20px;');
                 breach_screen.before(par_dom);
               }
+              } catch (err) {
+                console.log(err);
+              }
             }
             removeDOMElement(breach_screen);
           }
         }, 1500);
         let header_advert = document.querySelector('.headerAdvertisement');
-        if (header_advert)
-          header_advert.setAttribute('style', 'display: none;');
+        hideDOMElement(header_advert);
       }
     }
   }

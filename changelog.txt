@@ -4,6 +4,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Post-release
 Fix LesEchos.fr (json)
 Fix McClatchy Group (amp-redirect)
+Fix The West Australian (regional; identify site)
 
 * v3.0.4.0 (2023-02-05)
 Add Inside Higher Ed
