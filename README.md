@@ -17,15 +17,13 @@ Weekly updates are released for fixes and new sites.
 * [Disclaimer](#disclaimer)
 
 ### Installation
-You can install the add-on from Mozilla add-ons (AMO): [Bypass Paywalls Clean](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean)\
-Latest add-on versions (2.4.8.0+) require a browser based on Firefox 86+ (else use the non-amo version below).\
-Or download and install the latest xpi-version from [GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)
+You can install the add-on from [GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
+Minumum browser requirement: Firefox 86+.
 
 If you want to install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked folder (of master-zip)).
 
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
-You can also install the custom add-on version (with host permissions for all sites): [Bypass Paywalls Clean (c)](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean-custom)
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).
 
 ### Update
 Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
@@ -33,21 +31,9 @@ You can also check for update of site rules at startup (opt-in); only available 
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
 #### Android
-On Android this add-on doesn't work with latest Firefox v84 (Fenix); it only supports a number of 'recommended' add-ons (for now).\
-Only from Firefox v85 you can install recommended add-ons via [AMO](https://addons.mozilla.org) - so no more need to add these to your custom add-on collection (see below).
+Add-on was removed by Mozilla from add-on store.
 
-BPC add-on works fine in [Firefox Beta (v107+)](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) or [Firefox Nightly](https://play.google.com/store/apps/details?id=org.mozilla.fenix) though.\
-You can also use a Firefox clone like [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid), [Mull]() or [IceRaven](https://github.com/fork-maintainers/iceraven-browser).\
-You'll need to load BPC from a [custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly).
-
-For Firefox Beta/Nightly or Fennec F-Droid (based on latest Firefox for Android) you have to make your own custom add-on collection (or use another that contains BPC). \
-Iceraven uses: [What I want on Fenix](https://addons.mozilla.org/firefox/collections/16201230/What-I-want-on-Fenix)\
-It has a custom add-ons account: 16201230 & collection: What-I-want-on-Fenix.\
-In IceRaven all add-ons are shown (with search option), but in Firefox Beta/Nightly and Fennec F-Droid only the first 50 add-ons are shown.\
-There you can use custom add-ons account: 15546469 & collection: Fenix.
-
-PS on Android: enabling custom sites isn't working (no optional permissions).\
-Then you need to install the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (c)](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean-custom)
+You can switch to Kiwi browser (Chromium) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
@@ -894,9 +880,6 @@ Additional custom options:
 * remove/unhide elements in dom (optional for dev; check examples)
 
 [Example list of custom sites](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/custom/sites_custom.json) or [download list (json)](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/custom/sites_custom.json)
-
-PS on Android: enabling custom sites isn't working (no optional permissions).\
-Then you need to install the 'custom' add-on version (with access to all sites): [Bypass Paywalls Clean (custom)](https://addons.mozilla.org/firefox/addon/bypass-paywalls-clean-custom)
 
 ### Add excluded site
 Add excluded sites/domains (for your subscriptions).\

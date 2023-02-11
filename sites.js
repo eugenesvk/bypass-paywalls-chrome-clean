@@ -2134,7 +2134,6 @@ var defaultSites = {
   "UOL.com.br": {
     domain: "uol.com.br",
     allow_cookies: 1,
-    block_js_inline: /crusoe\.uol\.com\.br\/(diario|edicoes)\/.+/,
     block_regex: /(paywall\.folha\.uol\.com\.br\/|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },

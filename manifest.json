@@ -6,7 +6,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "magnolia@12.34",
-      "update_url": "https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/updates.json"
+      "update_url": "https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/updates.json",
+      "strict_min_version": "86.0"
     }
   },
   "browser_action": {
@@ -48,7 +49,7 @@
   "permissions": [
     "cookies",
     "storage",
-    "tabs",
+    "activeTab",
     "webRequest",
     "webRequestBlocking",
     "*://*.360dx.com/*",
@@ -730,5 +731,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.4.4"
+  "version": "3.0.4.5"
 }

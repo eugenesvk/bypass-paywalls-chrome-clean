@@ -3,30 +3,9 @@ var ext_api = (typeof browser === 'object') ? browser : chrome;
 var manifestData = ext_api.runtime.getManifest();
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
-var custom_switch = manifestData.optional_permissions && manifestData.optional_permissions.length && !navigator_ua_mobile;
+var custom_switch = manifestData.optional_permissions && manifestData.optional_permissions.length;// && !navigator_ua_mobile;
 
 window.addEventListener("load", function () {
-    var opt_in_enabled = document.getElementById('opt-in-enabled');
-    ext_api.storage.local.get("optIn", function (result) {
-        opt_in_enabled.innerText = result.optIn ? 'YES' : 'NO';
-    });
-
-    document.getElementById("optin-enable").addEventListener("click", function () {
-        ext_api.storage.local.set({
-            "optIn": true,
-            "optInShown": true
-        });
-        opt_in_enabled.innerText = 'YES';
-    });
-
-    document.getElementById("optin-disable").addEventListener("click", function () {
-        ext_api.storage.local.set({
-            "optIn": false,
-            "optInShown": true
-        });
-        opt_in_enabled.innerText = 'NO';
-    });
-
     document.getElementById("button-close").addEventListener("click", function () {
         ext_api.storage.local.set({
             "optInShown": true,
@@ -83,25 +62,6 @@ window.addEventListener("load", function () {
     });
 
     }// custom_switch
-
-    var counter_enabled = document.getElementById('counter-enabled');
-    ext_api.storage.local.get({counter: true}, function (result) {
-        counter_enabled.innerText = result.counter ? 'YES' : 'NO';
-    });
-
-    document.getElementById("counter-enable").addEventListener("click", function () {
-        ext_api.storage.local.set({
-            "counter": true
-        });
-        counter_enabled.innerText = 'YES';
-    });
-
-    document.getElementById("counter-disable").addEventListener("click", function () {
-        ext_api.storage.local.set({
-            "counter": false
-        });
-        counter_enabled.innerText = 'NO';
-    });
 
     var update_enabled = document.getElementById('update-enabled');
     ext_api.storage.local.get({optInUpdate: true}, function (result) {
