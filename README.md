@@ -440,6 +440,7 @@ Grouped in options:\
 [Le Journal du Net](https://www.journaldunet.com) -
 [Le Nouvel Economiste](https://www.lenouveleconomiste.fr) -
 [Le Parisien](https://www.leparisien.fr) -
+[Le Point](https://www.lepoint.fr) -
 [Le Télégramme](https://www.letelegramme.fr) -
 [Le Vif](https://www.levif.be) -
 [Les Échos](https://www.lesechos.fr) -
