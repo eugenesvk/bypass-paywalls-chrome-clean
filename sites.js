@@ -1012,7 +1012,7 @@ var defaultSites = {
   "Krautreporter.de": {
     domain: "krautreporter.de"
   },
-  "Kurier.at (do not block TinyPass & Piano.io-script externally)": {
+  "Kurier.at (do not block TinyPass-script externally)": {
     domain: "kurier.at",
     allow_cookies: 1,
     block_regex: /cdn\.cxense\.com\//
@@ -2294,11 +2294,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /js\.pelcro\.com\//
   },
-  "Piano.io": {
+  "Piano.io (+ TinyPass)": {
     domain: "piano.io",
     allow_cookies: 1,
-    block_regex_general: /\.piano\.io\//,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "brusselstimes.com", "businesspost.ie", "japantimes.co.jp", "kurier.at", "lkz.de"]
+    block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
+    excluded_domains: ["piano.io", "asia.nikkei.com", "businesspost.ie", "japantimes.co.jp", "kurier.at"]
   },
   "Pico.tools": {
     domain: "pico.tools",
@@ -2325,12 +2325,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /\/steadyhq\.com\//,
     excluded_domains: ["steadyhq.com"]
-  },
-  "TinyPass": {
-    domain: "tinypass.com",
-    allow_cookies: 1,
-    block_regex_general: /cdn\.tinypass\.com\//,
-    excluded_domains: ["piano.io", "kurier.at"]
   },
   "TownNews sites (Blox CMS; not encrypted)": {
     domain: "###_usa_townnews",

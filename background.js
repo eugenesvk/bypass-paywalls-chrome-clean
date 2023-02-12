@@ -407,7 +407,8 @@ ext_api.storage.local.get({
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
           let new_groups = ['###_de_noz_mhn'];
-          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
+          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
+            (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }

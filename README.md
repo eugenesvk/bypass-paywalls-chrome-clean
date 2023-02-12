@@ -17,7 +17,9 @@ Weekly updates are released for fixes and new sites.
 * [Disclaimer](#disclaimer)
 
 ### Installation
-You can install the add-on from [GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
+You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
+Download the xpi-file (from latest release), go to downloads and install the add-on.\
+Or go to Tools > Add-ons (about:addons) > Extensions > Cogwheel/Settings - Install Add-on from File\
 Minumum browser requirement: Firefox 86+.
 
 If you want to install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
@@ -26,7 +28,8 @@ Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/th
 By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).
 
 ### Update
-Check for updates (in about:addons) and allow permissions for newly supported sites (else no update will be installed).\
+Add-on will automatically update or you can do a manual check for updates (in about:addons).\
+Either way you have to allow host permissions for newly supported sites (else no update will be installed).\
 You can also check for update of site rules at startup (opt-in); only available until about 10 days after fix-release.\
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
