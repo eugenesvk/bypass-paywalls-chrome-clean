@@ -1040,6 +1040,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
+  "L'Informé": {
+    domain: "linforme.com",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "L'Obs": {
     domain: "nouvelobs.com",
     allow_cookies: 1,

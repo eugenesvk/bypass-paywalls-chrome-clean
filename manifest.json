@@ -390,6 +390,7 @@
     "*://*.liberation-champagne.fr/*",
     "*://*.limburger.nl/*",
     "*://*.lindependant.fr/*",
+    "*://*.linforme.com/*",
     "*://*.livelaw.in/*",
     "*://*.livemint.com/*",
     "*://*.ln-online.de/*",
@@ -731,5 +732,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.4.5"
+  "version": "3.0.4.6"
 }

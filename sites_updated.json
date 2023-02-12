@@ -71,6 +71,11 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.paywalled-content\",\"rm_attrib\":\"class\",\"elems\":[{\"cond\":\"div.dm-paywall-wrapper\",\"rm_elem\":1}]}]"
   },
+  "L'Informé": {
+    "domain": "linforme.com",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Los Angeles Times": {
     "domain": "latimes.com",
     "block_regex": "\\.californiatimes\\.com\\/meteringjs"
