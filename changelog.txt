@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Remove Finance.si (fix obsolete)
 
 * v3.0.5.0 (2023-02-12)
 Add L'Informe (fr)

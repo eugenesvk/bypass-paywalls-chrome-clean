@@ -667,9 +667,6 @@ Grouped in options:\
 ##### Russia
 [Wonderzine](https://www.wonderzine.com)
 
-##### Slovenia
-[Finance.si](https://www.finance.si)
-
 ##### Spain
 [El Confidencial](https://www.elconfidencial.com) -
 [El Diario.es](https://www.eldiario.es) -
