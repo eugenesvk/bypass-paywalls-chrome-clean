@@ -20,6 +20,7 @@ Weekly updates are released for fixes and new sites.
 You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
 Download the xpi-file (from latest release), go to downloads and install the add-on.\
 Or go to Tools > Add-ons (about:addons) > Extensions > Cogwheel/Settings - Install Add-on from File\
+Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
 If you want to install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
@@ -34,9 +35,12 @@ You can also check for update of site rules at startup (opt-in); only available 
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
 #### Android
-Add-on was removed by Mozilla from add-on store.
+Add-on was removed by Mozilla from add-on store.\
+Current installations will stay active, but with no more updates.
 
-You can switch to Kiwi browser (Chromium) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
+At the moment only the experimental GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can install/sideload a xpi-file by url.
+
+You can also switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
