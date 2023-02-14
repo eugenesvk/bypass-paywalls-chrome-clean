@@ -45,6 +45,11 @@
     "block_regex": "(\\.{domain}\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot"
   },
+  "DH Les Sports+": {
+    "domain": "dhnet.be",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Groupe La Dépêche": {
     "domain": "###_fr_groupe_la_depeche",
     "group": [

@@ -426,6 +426,7 @@ Grouped in options:\
 [Challenges](https://www.challenges.fr) -
 [Charlie Hebdo](https://charliehebdo.fr) -
 [Connaissance des Arts](https://www.connaissancedesarts.com) -
+[DH Les Sports+](https://www.dhnet.be) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
 [Franc-Tireur](https://www.franc-tireur.fr) -

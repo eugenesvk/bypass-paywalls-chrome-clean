@@ -406,6 +406,11 @@ var defaultSites = {
     domain: "aerzteblatt.de",
     allow_cookies: 1
   },
+  "DH Les Sports+": {
+    domain: "dhnet.be",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
