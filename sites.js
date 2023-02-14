@@ -2259,6 +2259,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /\/(wp-content\/.+\/ev-em|evolok\/.+\/ev-widgets)\.min\.js/
   },
+  "FewCents": {
+    domain: "fewcents.co",
+    allow_cookies: 1,
+    block_regex_general: /paywall\.fewcents\.co\/static\/js\/paywall\.js/
+  },
   "Leaky Paywall (WordPress plugin)": {
     domain: "###_wp_leaky_paywall",
     group: [],

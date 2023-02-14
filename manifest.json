@@ -699,6 +699,7 @@
     "*://*.cxense.com/*",
     "*://*.ensighten.com/*",
     "*://*.evolok.net/*",
+    "*://*.fewcents.co/*",
     "*://*.loader-cdn.azureedge.net/*",
     "*://*.matheranalytics.com/*",
     "*://*.newsmemory.com/*",
@@ -732,5 +733,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.5.0"
+  "version": "3.0.5.1"
 }
