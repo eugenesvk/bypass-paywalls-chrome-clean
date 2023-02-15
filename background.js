@@ -649,7 +649,8 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // Australia News Corp redirect subscribe to amp
-var au_news_corp_subscr = au_news_corp_domains.filter(domain => !['codesports.com.au', 'goldcoastbulletin.com.au', 'ntnews.com.au', 'thechronicle.com.au', 'weeklytimesnow.com.au'].includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
+var au_news_corp_no_amp_fix = ['adelaidenow.com.au', 'codesports.com.au', 'goldcoastbulletin.com.au', 'ntnews.com.au', 'thechronicle.com.au', 'themercury.com.au', 'weeklytimesnow.com.au'];
+var au_news_corp_subscr = au_news_corp_domains.filter(domain => !au_news_corp_no_amp_fix.includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {
     return;
@@ -908,7 +909,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain(es_grupo_vocento_domains, details.url) && mobile) &&
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
-    !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || enabledSites.includes('#options_disable_gb_au_news_corp'))) &&
+    !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
     !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 

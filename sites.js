@@ -2372,7 +2372,7 @@ var defaultSites = {
   "Check for update rules at startup": {
     domain: "#options_optin_update_rules"
   },
-  "Australia News Corp - no Googlebot (blocked)": {
+  "Australia News Corp - no Googlebot (blocked; only disabled when amp-fix)": {
     domain: "#options_disable_gb_au_news_corp"
   },
   "Barron's - no Googlebot (http error 500)": {

@@ -3764,7 +3764,7 @@ else if (matchDomain('newscientist.com')) {
 
 else if (matchDomain('newsday.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
-    amp_unhide_access_hide('="AccessLevel = \'Full Content Access\' OR Error = true"', '="AccessLevel = \'Page View Limit\'"');
+    amp_unhide_access_hide('="AccessLevel = \'Full Content Access\' OR Error = true"', '="Error != true AND UserState != \'Subscribed\'"');
   }
 }
 

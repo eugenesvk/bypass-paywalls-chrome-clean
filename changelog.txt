@@ -6,6 +6,7 @@ Post-release
 Add DHnet.be
 Add TagesAnzeiger.ch (link to archive.is)
 Remove Finance.si (fix obsolete)
+Fix Australia News Corp (no amp-fix)
 Fix Lc.nl
 Update block general paywall script (FewCents)
 
