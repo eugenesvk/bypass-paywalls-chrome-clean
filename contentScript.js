@@ -2105,7 +2105,7 @@ else if (matchDomain(['knack.be', 'kw.be', 'levif.be'])) {
 }
 
 else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
-  if (matchDomain('dvhn.nl')) {
+  if (true) {
     let paywall = document.querySelector('div.signupPlus');
     if (paywall) {
       let intro = document.querySelector('div.startPayWall');
@@ -2113,7 +2113,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
       let html = document.documentElement.outerHTML;
       if (html.includes('window.__NUXT__=')) {
         let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
-        let url_nuxt = json.split(',url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
+        let url_nuxt = json.includes(',url:"') ? json.split(',url:"')[1].split('",')[0].replace(/\\u002F/g, '/') : '';
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
           refreshCurrentTab();
         else if (json.includes(',body:')) {
@@ -2190,8 +2190,8 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
       }
     }
   }
-  let top_ad = document.querySelector('.top__ad');
-  removeDOMElement(top_ad);
+  let ads = document.querySelectorAll('.top__ad, .marketingblock-article');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain(['limburger.nl'])) {

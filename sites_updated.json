@@ -92,6 +92,25 @@
     "domain": "latimes.com",
     "block_regex": "\\.californiatimes\\.com\\/meteringjs"
   },
+  "Mediahuis Noord": {
+    "domain": "###_nl_mediahuis_noord",
+    "group": [
+      "dvhn.nl",
+      "lc.nl"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.evolok\\.net\\/",
+    "exception": [{
+        "domain": "dvhn.nl",
+        "allow_cookies": 1,
+        "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
+      }, {
+        "domain": "lc.nl",
+        "allow_cookies": 1,
+        "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
+      }
+    ]
+  },
   "Saarbrücker Zeitung": {
     "domain": "saarbruecker-zeitung.de",
     "allow_cookies": 1,

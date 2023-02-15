@@ -6,6 +6,7 @@ Post-release
 Add DHnet.be
 Add TagesAnzeiger.ch (link to archive.is)
 Remove Finance.si (fix obsolete)
+Fix Lc.nl
 Update block general paywall script (FewCents)
 
 * v3.0.5.0 (2023-02-12)

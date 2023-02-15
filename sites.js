@@ -1278,6 +1278,10 @@ var defaultSites = {
         domain: "dvhn.nl",
         allow_cookies: 1,
         block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/
+      }, {
+        domain: "lc.nl",
+        allow_cookies: 1,
+        block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/
       }
     ]
   },
