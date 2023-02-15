@@ -2856,17 +2856,6 @@ else if (matchDomain('asia.nikkei.com')) {
   removeDOMElement(popup);
 }
 
-else if (matchDomain('asiatimes.com')) {
-  if (!window.location.search.match(/(\?|&)amp_markup=1/)) {
-    let paywall = document.querySelector('div.woocommerce');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let url_amp = window.location.href.split('?')[0] + '?amp_markup=1';
-      replaceDomElementExt(url_amp, false, false, 'div.entry-content', '', 'article.ia2amp-article');
-    }
-  }
-}
-
 else if (matchDomain('axios.com')) {
   function axios_noscroll(node) {
     node.removeAttribute('style');

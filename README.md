@@ -772,7 +772,6 @@ Grouped in options:\
 [Western Advocate](https://www.westernadvocate.com.au)
 
 ##### East Asia
-[Asia Times](https://asiatimes.com) -
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -
 [Harvard Business Review China](https://www.hbrchina.org) -
 [Initium Media](https://theinitium.com) -

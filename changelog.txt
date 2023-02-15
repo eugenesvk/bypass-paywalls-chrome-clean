@@ -5,6 +5,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add DHnet.be
 Add TagesAnzeiger.ch (link to archive.is)
+Remove Asia Times (fix obsolete)
 Remove Finance.si (fix obsolete)
 Fix Australia News Corp (no amp-fix)
 Fix Lc.nl
