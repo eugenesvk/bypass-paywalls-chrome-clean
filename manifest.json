@@ -84,6 +84,7 @@
     "*://*.arcinfo.ch/*",
     "*://*.artforum.com/*",
     "*://*.artnet.com/*",
+    "*://*.artsenkrant.com/*",
     "*://*.atavist.com/*",
     "*://*.atlantico.fr/*",
     "*://*.augsburger-allgemeine.de/*",
@@ -235,11 +236,13 @@
     "*://*.farodevigo.es/*",
     "*://*.faz.net/*",
     "*://*.fd.nl/*",
+    "*://*.femmesdaujourdhui.be/*",
     "*://*.fieldandstream.com/*",
     "*://*.financialexpress.com/*",
     "*://*.financialpost.com/*",
     "*://*.firstthings.com/*",
     "*://*.fiskeribladet.no/*",
+    "*://*.flair.be/*",
     "*://*.fnlondon.com/*",
     "*://*.forbes.com/*",
     "*://*.foreignaffairs.com/*",
@@ -387,6 +390,7 @@
     "*://*.levante-emv.com/*",
     "*://*.levif.be/*",
     "*://*.lexpress.fr/*",
+    "*://*.libelle.be/*",
     "*://*.liberation-champagne.fr/*",
     "*://*.limburger.nl/*",
     "*://*.lindependant.fr/*",
@@ -734,5 +738,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.5.3"
+  "version": "3.0.5.4"
 }

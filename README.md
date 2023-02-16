@@ -23,10 +23,11 @@ Or go to Tools > Add-ons (about:addons) > Extensions > Cogwheel/Settings - Insta
 Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
-If you want to install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
+If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked folder (of master-zip)).
 
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
+You can also install the custom add-on version (with host permissions for all sites).
 
 ### Update
 Add-on will automatically update or you can do a manual check for updates (in about:addons).\
@@ -38,7 +39,7 @@ For new sites you also have to opt-in to custom sites/request permissions for ne
 Add-on was removed by Mozilla from add-on store.\
 Current installations will stay active, but with no more updates.
 
-At the moment only the experimental GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can install/sideload a xpi-file by url.
+At the moment only the experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can install/sideload a xpi-file by url.
 
 You can also switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
@@ -450,7 +451,6 @@ Grouped in options:\
 [Le Parisien](https://www.leparisien.fr) -
 [Le Point](https://www.lepoint.fr) -
 [Le Télégramme](https://www.letelegramme.fr) -
-[Le Vif](https://www.levif.be) -
 [Les Échos](https://www.lesechos.fr) -
 [Les Inrockuptibles](https://www.lesinrocks.com) -
 [Marianne](https://www.marianne.net) -
@@ -503,7 +503,11 @@ Grouped in options:\
 *Groupe Sud Ouest* sites like\
 [Charente libre](https://www.charentelibre.fr) -
 [La République des Pyrénées](https://www.larepubliquedespyrenees.fr) -
-[Sud Ouest](https://www.sudouest.fr)
+[Sud Ouest](https://www.sudouest.fr)\
+*Roularta Media Group* sites like\
+[Femmes d'Aujourd'hui](https://www.femmesdaujourdhui.be) -
+[Flair](https://www.flair.be/fr) -
+[Le Vif](https://www.levif.be)
 
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
@@ -617,8 +621,6 @@ Grouped in options:\
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
 [Het Laatste Nieuws (link to archive.is)](https://www.hln.be) -
-[Knack](https://www.knack.be) -
-[Krant van West-Vlaanderen](https://kw.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
 [Vrij Nederland](https://www.vn.nl)
@@ -647,7 +649,13 @@ Grouped in options:\
 [De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
-[Leeuwarder Courant](https://www.lc.nl)
+[Leeuwarder Courant](https://www.lc.nl)\
+*Roularta Media Group* sites like\
+[Artsenkrant](https://www.artsenkrant.com) -
+[Flair](https://www.flair.be/nl) -
+[Knack](https://www.knack.be) -
+[Krant van West-Vlaanderen](https://kw.be) -
+[Libelle](https://www.libelle.be)
 
 ##### Norway
 Grouped in options:\

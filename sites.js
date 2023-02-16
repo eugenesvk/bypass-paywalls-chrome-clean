@@ -986,11 +986,6 @@ var defaultSites = {
     domain: "italiaoggi.it",
     allow_cookies: 1
   },
-  "Knack.be": {
-    domain: "knack.be",
-    allow_cookies: 1,
-    block_regex: /(\.knack\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
-  },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
     allow_cookies: 1
@@ -998,11 +993,6 @@ var defaultSites = {
   "Kölnische Rundschau": {
     domain: "rundschau-online.de",
     allow_cookies: 1
-  },
-  "Krant van West-Vlaanderen": {
-    domain: "kw.be",
-    allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//
   },
   "Krautreporter.de": {
     domain: "krautreporter.de"
@@ -1148,11 +1138,6 @@ var defaultSites = {
     domain: "letelegramme.fr",
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
-  },
-  "Le Vif.be": {
-    domain: "levif.be",
-    allow_cookies: 1,
-    block_regex: /(\.levif\.be\/js\/responsive\/rmg(Modal|Paywall)\.js|\.blueconic\.net\/)/
   },
   "Lee Enterprises Group": {
     domain: "###_usa_lee_ent",
@@ -1648,6 +1633,20 @@ var defaultSites = {
         useragent: "facebookbot"
       }
     ]
+  },
+  "Roularta Media Group": {
+    domain: "###_be_roularta",
+    group: [
+      "artsenkrant.com",
+      "femmesdaujourdhui.be",
+      "flair.be",
+      "knack.be",
+      "kw.be",
+      "levif.be",
+      "libelle.be"
+    ],
+    allow_cookies: 1,
+    block_regex: "(\\.{domain}\\/(script|js\\/responsive\\/rmg(Modal|Paywall))\\.js|\\.blueconic\\.net\\/)"
   },
   "RugbyPass": {
     domain: "rugbypass.com",

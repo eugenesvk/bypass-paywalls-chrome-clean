@@ -298,6 +298,11 @@
     "domain": "newspicks.com",
     "useragent": "googlebot"
   },
+  "Nnn.de": {
+    "allow_cookies": 1,
+    "domain": "nnn.de",
+    "useragent": "googlebot"
+  },
   "Nu.nl": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.login-wall\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.authorized-content\",\"rm_class\":\"authorized-content\"}]}]",

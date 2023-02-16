@@ -4,6 +4,7 @@ var domain;
 var csDone = false;
 var csDoneOnce = false;
 
+var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
@@ -1680,7 +1681,7 @@ else if (matchDomain('lesechos.fr')) {
           let data_article = data.article ? data.article : data.pageProps;
           if (data_article.dehydratedState)
             data_article = data_article.dehydratedState.queries[1].state;
-          let article = data_article.data.stripes[0].mainContent[0].data.description;
+          let article = data_article.data.stripes[0].mainContent[0].data.description.replace(/allowfullscreen=''/g, '');
           let url_loaded = data_article.data.path;
           if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))
             refreshCurrentTab();
@@ -2074,7 +2075,7 @@ else if (matchDomain(it_gedi_domains)) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(be|nl)$/)) {//belgium/netherlands
+} else if (window.location.hostname.match(/\.(be|nl)$/) || matchDomain(['artsenkrant.com'])) {//belgium/netherlands
 
 if (matchDomain('fd.nl')) {
   let reg_modal = document.querySelector('div.modal.upsell');
@@ -2087,20 +2088,23 @@ else if (matchDomain('ftm.nl')) {
   removeDOMElement(...banners);
 }
 
-else if (matchDomain(['knack.be', 'kw.be', 'levif.be'])) {
+else if (matchDomain(be_roularta_domains)) {
   let paywall = document.querySelector('div[id*="wall-modal"]');
   if (paywall) {
     removeDOMElement(paywall);
     let html = document.querySelector('html[class]');
     if (html)
       html.removeAttribute('class');
-    function knack_noscroll(node) {
+    function roularta_noscroll(node) {
       node.removeAttribute('style');
       node.removeAttribute('class');
     }
-    waitDOMAttribute('html', 'html', 'class', knack_noscroll, true);
+    waitDOMAttribute('html', 'html', 'class', roularta_noscroll, true);
     let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
     removeDOMElement(...intro);
+    let locked = document.querySelector('body.locked');
+    if (locked)
+      locked.classList.remove('locked');
   }
 }
 
