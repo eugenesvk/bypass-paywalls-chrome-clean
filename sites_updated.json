@@ -50,6 +50,12 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
+  "El Tiempo": {
+    "domain": "eltiempo.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "cs_code": "[{\"cond\":\"div.modulos\",\"rm_class\":\"modulos\"}]"
+  },
   "Groupe La Dépêche": {
     "domain": "###_fr_groupe_la_depeche",
     "group": [

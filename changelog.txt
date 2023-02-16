@@ -9,6 +9,7 @@ Add TagesAnzeiger.ch (link to archive.is)
 Remove Asia Times (fix obsolete)
 Remove Finance.si (fix obsolete)
 Fix Australia News Corp (no amp-fix)
+Fix El Tiempo (css)
 Fix Lc.nl
 Update block general paywall script (FewCents)
 
