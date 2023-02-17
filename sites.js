@@ -1337,6 +1337,15 @@ var defaultSites = {
     domain: "nationalreview.com",
     block_regex: /(\.nationalreview\.com\/script\.js|\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "National World Publishing (UK)": {
+    domain: "###_uk_nat_world",
+    group: [
+      "scotsman.com",
+      "yorkshirepost.co.uk"
+    ],
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|\.axate\.io\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
   "Nautilus": {
     domain: "nautil.us",
     allow_cookies: 1,
@@ -2029,11 +2038,6 @@ var defaultSites = {
     domain: "seattletimes.com",
     allow_cookies: 1,
     block_regex: /(\.seattletimes\.com\/.+\/st-user-messaging.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
-  },
-  "The Scotsman": {
-    domain: "scotsman.com",
-    allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Spectator (UK)": {
     domain: "spectator.co.uk",

@@ -30,6 +30,7 @@ var nl_dpg_media_domains = ['demorgen.be', 'humo.be', 'parool.nl', 'trouw.nl', '
 var no_nhst_media_domains = ['europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
+var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_conde_nast_domains = ['architecturaldigest.com', 'bonappetit.com', 'gq.com' , 'newyorker.com', 'vanityfair.com', 'vogue.com', 'wired.com'];
 var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
@@ -2552,14 +2553,6 @@ else if (matchDomain('prospectmagazine.co.uk')) {
   }, 1000);
 }
 
-else if (matchDomain('scotsman.com')) {
-  let premium = document.querySelector('div.premium.no-entitlement');
-  if (premium)
-    premium.classList.remove('no-entitlement');
-  let ads = document.querySelectorAll('div[class^="MarkupAds__Container-"], div[class^="Dailymotion__Wrapper-"], div.OUTBRAIN');
-  removeDOMElement(...ads);
-}
-
 else if (matchDomain('spectator.co.uk')) {
   let banner = document.querySelector('#subscribe-ribbon');
   removeDOMElement(banner);
@@ -2622,6 +2615,23 @@ else if (matchDomain('thetimes.co.uk')) {
     let ads = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
     removeDOMElement(paywall_page, block, ...ads);
   }
+}
+
+else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]')) {
+  let premium = document.querySelector('div.premium');
+  if (premium)
+    premium.removeAttribute('class');
+  let amp_images = document.querySelectorAll('article amp-img[src^="https://"]');
+  for (let amp_image of amp_images) {
+    let elem = document.createElement('img');
+    Object.assign(elem, {
+      src: amp_image.getAttribute('src'),
+      alt: amp_image.getAttribute('alt')
+    });
+    amp_image.parentNode.replaceChild(elem, amp_image);
+  }
+  let ads = document.querySelectorAll('div[class^="MarkupAds__Container-"], div[class*="_AdContainer-"], div[class^="Dailymotion__Wrapper-"], div.OUTBRAIN');
+  removeDOMElement(...ads);
 }
 
 else

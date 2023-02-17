@@ -1,7 +1,7 @@
 # Bypass Paywalls Clean for Firefox
 
 Add-on allows you to read articles from (supported) sites that implement a paywall.  
-You can also add domains as custom site and try to bypass the paywall.  
+You can also add a domain as custom site and try to bypass the paywall.  
 Weekly updates are released for fixes and new sites.
 
 * [Installation](#installation)
@@ -26,7 +26,7 @@ Minumum browser requirement: Firefox 86+.
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked folder (of master-zip)).
 
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
 You can also install the custom add-on version (with host permissions for all sites).
 
 ### Update
@@ -404,12 +404,16 @@ Grouped in options:\
 [The Irish Times](https://www.irishtimes.com) -
 [The New European](https://www.theneweuropean.co.uk) -
 [The New Statesman](https://www.newstatesman.com) -
-[The Scotsman](https://www.scotsman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
 [The Times (link to archive.is)](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk) -
 [UnHerd](https://unherd.com)
+
+Grouped in options:\
+*National World Publishing* sites like (opt-in to custom sites for unlisted)\
+[The Scotsman](https://www.scotsman.com) -
+[Yorkshire Post](https://www.yorkshirepost.co.uk)
 
 ##### Denmark
 [Berlingske](https://www.berlingske.dk)
@@ -877,7 +881,7 @@ Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass
 ### Add custom site
 Add your own custom site (also for testing).  
 Check 'Options'-link in popup-menu and go to custom sites.
-\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for non-listed sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` (BPC-icon) to ask for permission for current site).
+\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` (BPC-icon) to ask for permission for current site).
 
 By default sites' cookies/local storage are blocked/removed (for example to bypass article limit when metered paywall).
 

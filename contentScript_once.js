@@ -77,6 +77,9 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.nl')) {
       if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
+    } else if (hostname.endsWith('.co.uk')) {
+      if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
+        group = '###_uk_nat_world';
     } else if (hostname.match(/\.(ca|com|net|org)$/)) {
       if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
         group = '###_ca_gcm';
