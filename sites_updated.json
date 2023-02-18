@@ -26,6 +26,11 @@
     "block_regex": "\\.tinypass\\.com",
     "cs_code": "[{\"cond\":\"div.modulos\",\"rm_class\":\"modulos\"}]"
   },
+  "Grupo Abril": {
+    "domain": "abril.com.br",
+    "allow_cookies": 1,
+    "block_regex": "(\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
+  },
   "Inside Higher Ed": {
     "domain": "insidehighered.com",
     "allow_cookies": 1,

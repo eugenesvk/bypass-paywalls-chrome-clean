@@ -13,6 +13,7 @@ Remove LePoint.fr (fix obsolete)
 Remove NordEclair.fr (domain obsolete)
 Fix Australia News Corp (no amp-fix)
 Fix El Tiempo (css)
+Fix Grupo Abril (js)
 Fix Lc.nl
 Fix Outside (js)
 Update block general paywall script (FewCents)

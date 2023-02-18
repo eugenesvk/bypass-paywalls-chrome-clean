@@ -754,7 +754,7 @@ var defaultSites = {
   "Grupo Abril": {
     domain: "abril.com.br",
     allow_cookies: 1,
-    block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/js\/abril-paywall\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Grupo El Comercio": {
     domain: "###_pe_grupo_elcomercio",

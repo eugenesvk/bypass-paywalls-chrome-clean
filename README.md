@@ -20,7 +20,7 @@ Weekly updates are released for fixes and new sites.
 ### Installation
 You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
 Download the xpi-file (from latest release), go to downloads and install the add-on.\
-Or go to Tools > Add-ons (about:addons) > Extensions > Cogwheel/Settings - Install Add-on from File\
+Or go to Tools > Add-ons (about:addons) > Extensions > Settings/Cogwheel - Install Add-on from File\
 Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
@@ -44,9 +44,11 @@ There is still an elaborate workaround for regular Firefox though:
 * install an old version of Firefox (like [v68.11.0](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/)); you have to remove your current Firefox app (or use an old Firefox Beta version)
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
-* add-on will stay active & automatically updates to the latest version (in add-ons it will be labeled as not yet available)
+* add-on will stay active & automatically updates to the latest version
+*  in add-ons it will be labeled as not yet available and also has no more option to enable the add-on in private browsing
 
-The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url.
+The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url (Settings > Advanced settings > Sideload XPI).\
+No option to enable the add-on in private browsing though.
 
 Or switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
