@@ -16,7 +16,7 @@ var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farode
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
-var fr_be_groupe_rossel = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordeclair.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];
+var fr_be_groupe_rossel = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];
 var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', 'lalsace.fr', 'ledauphine.com', 'lejsl.com', 'leprogres.fr', 'republicain-lorrain.fr', 'vosgesmatin.fr'];
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midi-olympique.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
@@ -1582,21 +1582,6 @@ else if (matchDomain('leparisien.fr')) {
       window.location.href = amphtml.href;
     }
   }
-}
-
-else if (matchDomain('lepoint.fr')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.info-paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.ArticleBody');
-  }
-  window.setTimeout(function () {
-    let ads = document.querySelectorAll('#WRAP_BAN_ATF, .StickyPaywall, .slotpub, .sticky-block');
-    removeDOMElement(...ads);
-  }, 1000);
 }
 
 else if (matchDomain('lequipe.fr')) {

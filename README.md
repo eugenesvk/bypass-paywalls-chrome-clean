@@ -453,7 +453,6 @@ Grouped in options:\
 [Le Journal du Net](https://www.journaldunet.com) -
 [Le Nouvel Economiste](https://www.lenouveleconomiste.fr) -
 [Le Parisien](https://www.leparisien.fr) -
-[Le Point](https://www.lepoint.fr) -
 [Le Télégramme](https://www.letelegramme.fr) -
 [Les Échos](https://www.lesechos.fr) -
 [Les Inrockuptibles](https://www.lesinrocks.com) -
@@ -500,7 +499,6 @@ Grouped in options:\
 [Le Courrier picard](https://www.courrier-picard.fr) -
 [Le Soir](https://www.lesoir.be) -
 [Libération Champagne](https://www.liberation-champagne.fr) -
-[Nord Éclair](https://www.nordeclair.fr) -
 [Nord Littoral](https://www.nordlittoral.fr) -
 [Paris Normandie](https://www.paris-normandie.fr) -
 [SudInfo](https://www.sudinfo.be)\

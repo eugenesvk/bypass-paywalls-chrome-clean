@@ -9,6 +9,8 @@ Add Roularta Media Group (be)
 Add TagesAnzeiger.ch (link to archive.is)
 Remove Asia Times (fix obsolete)
 Remove Finance.si (fix obsolete)
+Remove LePoint.fr (fix obsolete)
+Remove NordEclair.fr (domain obsolete)
 Fix Australia News Corp (no amp-fix)
 Fix El Tiempo (css)
 Fix Lc.nl

@@ -1,34 +1,4 @@
 {
-  "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
-    "domain": "###_au_news_corp",
-    "group": [
-      "adelaidenow.com.au",
-      "codesports.com.au",
-      "couriermail.com.au",
-      "dailytelegraph.com.au",
-      "goldcoastbulletin.com.au",
-      "heraldsun.com.au",
-      "ntnews.com.au",
-      "theaustralian.com.au",
-      "thechronicle.com.au",
-      "themercury.com.au",
-      "weeklytimesnow.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "useragent": "googlebot",
-    "exception": [{
-        "domain": "codesports.com.au",
-        "allow_cookies": 1,
-        "block_js_inline": "\\.codesports\\.com\\.au\\/.+\\/news-story",
-        "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
-      }, {
-        "domain": "theaustralian.com.au",
-        "allow_cookies": 1,
-        "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
-      }
-    ]
-  },
   "Condé Nast magazines": {
     "domain": "###_usa_conde_nast",
     "group": [
@@ -56,22 +26,6 @@
     "block_regex": "\\.tinypass\\.com",
     "cs_code": "[{\"cond\":\"div.modulos\",\"rm_class\":\"modulos\"}]"
   },
-  "Groupe La Dépêche": {
-    "domain": "###_fr_groupe_la_depeche",
-    "group": [
-      "centrepresseaveyron.fr",
-      "ladepeche.fr",
-      "lindependant.fr",
-      "midi-olympique.fr",
-      "midilibre.fr",
-      "nrpyrenees.fr",
-      "petitbleu.fr"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "ld_json": "div.paywall|div.article-full__body-content",
-    "cs_code": "[{\"cond\":\"div.article-full__body-content\",\"rm_attrib\":\"style|data-state\"}]"
-  },
   "Inside Higher Ed": {
     "domain": "insidehighered.com",
     "allow_cookies": 1,
@@ -86,17 +40,6 @@
     "domain": "linforme.com",
     "allow_cookies": 1,
     "useragent": "googlebot"
-  },
-  "Le Point": {
-    "domain": "lepoint.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/",
-    "ld_google_webcache": "div.info-paywall|div.ArticleBody",
-    "new_site": 1
-  },
-  "Los Angeles Times": {
-    "domain": "latimes.com",
-    "block_regex": "\\.californiatimes\\.com\\/meteringjs"
   },
   "Mediahuis Noord": {
     "domain": "###_nl_mediahuis_noord",
@@ -116,19 +59,5 @@
         "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
       }
     ]
-  },
-  "Saarbrücker Zeitung": {
-    "domain": "saarbruecker-zeitung.de",
-    "allow_cookies": 1,
-    "useragent": "facebookbot"
-  },
-  "San Diego Union Tribune": {
-    "domain": "sandiegouniontribune.com",
-    "block_regex": "\\.californiatimes\\.com\\/meteringjs"
-  },
-  "The Atlantic": {
-    "domain": "theatlantic.com",
-    "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/[5-7].+\\.js",
-    "remove_cookies_select_drop": ["articleViews"]
   }
 }
