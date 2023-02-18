@@ -14,6 +14,7 @@ Remove NordEclair.fr (domain obsolete)
 Fix Australia News Corp (no amp-fix)
 Fix El Tiempo (css)
 Fix Lc.nl
+Fix Outside (js)
 Update block general paywall script (FewCents)
 
 * v3.0.5.0 (2023-02-12)

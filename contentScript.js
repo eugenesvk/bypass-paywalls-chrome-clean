@@ -2104,6 +2104,8 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
       if (html.includes('window.__NUXT__=')) {
         let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
         let url_nuxt = json.includes(',url:"') ? json.split(',url:"')[1].split('",')[0].replace(/\\u002F/g, '/') : '';
+        if (url_nuxt.startsWith('/auteur/'))
+          url_nuxt = json.includes(',routePath:"') ? json.split(',routePath:"')[1].split('",')[0].replace(/\\u002F/g, '/') : '';
         if (url_nuxt && !url_nuxt.includes(window.location.pathname))
           refreshCurrentTab();
         else if (json.includes(',body:')) {

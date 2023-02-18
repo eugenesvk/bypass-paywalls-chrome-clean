@@ -6,6 +6,7 @@ Weekly updates are released for fixes and new sites.
 
 * [Installation](#installation)
 * [Update](#update)
+* [Android](#android)
 * [Troubleshooting](#troubleshooting)
 * [List of supported websites](#list-of-supported-websites)
 * [Sites with limited number of free articles](#sites-with-limited-number-of-free-articles)
@@ -23,8 +24,8 @@ Or go to Tools > Add-ons (about:addons) > Extensions > Cogwheel/Settings - Insta
 Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
-If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
-Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked folder (of master-zip)).
+If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
+Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder.
 
 By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
 You can also install the custom add-on version (with host permissions for all sites).
@@ -35,19 +36,25 @@ Either way you have to allow host permissions for newly supported sites (else no
 You can also check for update of site rules at startup (opt-in); only available until about 10 days after fix-release.\
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
-#### Android
+### Android
 Add-on was removed by Mozilla from add-on store.\
-Current installations will stay active, but with no more updates.
+Current installations (by custom collection in Firefox Beta/Nightly or Firefox-clone) will stay active, but with no more updates.
 
-At the moment only the experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can install/sideload a xpi-file by url.
+There is still an elaborate workaround for regular Firefox though:
+* install an old version of Firefox (like [v68.11.0](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/)); you have to remove your current Firefox app (or use an old Firefox Beta version)
+* download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
+* now you can update Firefox to the latest version
+* add-on will stay active & automatically updates to the latest version (in add-ons it will be labeled as not yet available)
 
-You can also switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
+The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url.
+
+Or switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
 #### Chrome/Chromium
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
 
 #### iOS/iPadOS
-Use adblocker with custom (content)filter: https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
+Use adblocker with custom (content)filter & userscript (manager): https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
 
 ### Troubleshooting
 * If a site doesn't work, first try to turn off your adblocker (or other extension) and refresh page.

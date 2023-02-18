@@ -1482,7 +1482,7 @@ var defaultSites = {
       "yogajournal.com"
     ],
     allow_cookies: 1,
-    block_regex: "\\.{domain}\\/.+\\/scripts\\/contentGate.+\\.js"
+    block_regex: "(\\.{domain}\\/.+\\/(scripts\\/contentGate|MegaRegWall).+\\.js|\\.tinypass\\.com\\/)"
   },
   "Palo Alto Online": {
     domain: "paloaltoonline.com"
