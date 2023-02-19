@@ -1615,6 +1615,22 @@ else if (matchDomain('leparisien.fr')) {
   }
 }
 
+else if (matchDomain('lepoint.fr')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.info-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.ArticleBody');
+  }
+  window.setTimeout(function () {
+    let ads = document.querySelectorAll('#WRAP_BAN_ATF, .StickyPaywall, .slotpub, .sticky-block');
+    removeDOMElement(...ads);
+  }, 1000);
+}
+
+
 else if (matchDomain('lequipe.fr')) {
   let paywall = document.querySelectorAll('.Paywall, .Article__paywall');
   if (window.location.pathname.includes('/Article/') && paywall.length) {
