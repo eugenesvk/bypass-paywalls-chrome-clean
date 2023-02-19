@@ -260,6 +260,11 @@
     "domain": "makorrishon.co.il",
     "useragent": "googlebot"
   },
+  "Manilatimes.net": {
+    "allow_cookies": 1,
+    "domain": "manilatimes.net",
+    "ld_json": "div.website-packages|div.article-body-content"
+  },
   "Mannheimer-morgen.de": {
     "allow_cookies": 1,
     "domain": "mannheimer-morgen.de",
