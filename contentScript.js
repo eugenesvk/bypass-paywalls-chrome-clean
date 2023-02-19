@@ -106,6 +106,37 @@ if (bg2csData.ld_google_webcache) {
   }
 }
 
+// custom/updated sites: add link to article
+if (bg2csData.add_ext_link) {
+  if (bg2csData.add_ext_link.css && bg2csData.add_ext_link.css.includes('|') && bg2csData.add_ext_link.type) {
+    window.setTimeout(function () {
+      let url = window.location.href;
+      let add_ext_link_split = bg2csData.add_ext_link.css.split('|');
+      let paywall_sel = add_ext_link_split[0];
+      let article_sel = add_ext_link_split[1];
+      let paywall = document.querySelectorAll(paywall_sel);
+      if (paywall.length) {
+        removeDOMElement(...paywall);
+        let article = document.querySelector(article_sel);
+        if (article) {
+          switch (bg2csData.add_ext_link.type) {
+          case 'archive.is':
+            article.firstChild.before(archiveLink(url));
+            break;
+          case '12ft.io':
+            article.firstChild.before(ext_12ftLink(url));
+            break;
+          case 'google_search_tool':
+            article.firstChild.before(googleSearchToolLink(url));
+            break;
+          }
+          
+        }
+      }
+    }, 1000);
+  }
+}
+
 // custom/updated sites: try to unhide text on amp-page
 if (bg2csData.amp_unhide) {
   window.setTimeout(function () {
@@ -4849,6 +4880,10 @@ function archiveLink(url, text_fail = 'BPC > Full article text:\r\n') {
 
 function googleWebcacheLink(url, text_fail = 'BPC > Full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
+}
+
+function googleSearchToolLink(url, text_fail = 'BPC > Full article text:\r\n') {
+  return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
 function ext_12ftLink(url, text_fail = 'BPC > Full article text:\r\n') {

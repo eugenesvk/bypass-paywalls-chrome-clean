@@ -2,7 +2,7 @@ var ext_api = (typeof browser === 'object') ? browser : chrome;
 var manifestData = ext_api.runtime.getManifest();
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
-var custom_switch = manifestData.optional_permissions && manifestData.optional_permissions.length && !navigator_ua_mobile;
+var custom_switch = ((manifestData.optional_permissions && manifestData.optional_permissions.length) || (manifestData.optional_host_permissions && manifestData.optional_host_permissions.length)) && !navigator_ua_mobile;
 
 function popup_show_toggle(domain, enabled) {
   if (domain) {

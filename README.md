@@ -903,6 +903,7 @@ Additional custom options:
 * redirect to amp-page when paywall(selector)
 * load text from json when paywall|article(selector)
 * load text from Google webcache when paywall|article(selector)
+* add external link to archive-site when paywall|article(selector)
 * remove/unhide elements in dom (optional for dev; check examples)
 
 [Example list of custom sites](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/blob/master/custom/sites_custom.json) or [download list (json)](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/custom/sites_custom.json)

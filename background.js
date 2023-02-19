@@ -80,6 +80,8 @@ var cs_code;
 var ld_json;
 // load text from Google webcache
 var ld_google_webcache;
+// add external link to article
+var add_ext_link;
 
 // custom: block javascript
 var block_js_custom = [];
@@ -103,6 +105,7 @@ function initSetRules() {
   cs_code = {};
   ld_json = {};
   ld_google_webcache = {};
+  add_ext_link = {};
   block_js_custom = [];
   block_js_custom_ext = [];
   blockedRegexes = {};
@@ -338,6 +341,8 @@ function set_rules(sites, sites_updated, sites_custom) {
           ld_json[domain] = rule.ld_json;
         if (rule.ld_google_webcache)
           ld_google_webcache[domain] = rule.ld_google_webcache;
+        if (rule.add_ext_link && rule.add_ext_link_type)
+          add_ext_link[domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
       }
     }
   }
@@ -526,7 +531,8 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     }
 
     // Refresh the current tab
-    if (!['ext_version_new'].includes(key))
+    let refresh = (url_loc === 'chrome') || ((typeof storageChange.newValue === 'string') && (storageChange.newValue !== storageChange.oldValue)) || ((typeof storageChange.newValue === 'object') && (Object.keys(storageChange.newValue).length !== Object.keys(storageChange.oldValue).length));
+    if (refresh)
       refreshCurrentTab();
   }
 });
@@ -741,6 +747,9 @@ if (typeof browser !== 'object') {
     let ld_google_webcache_domain = '';
     if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url))
       bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
+    let add_ext_link_domain = '';
+    if (add_ext_link_domain = matchUrlDomain(Object.keys(add_ext_link), url))
+      bg2csData.add_ext_link = add_ext_link[add_ext_link_domain];
     let tab_runs = 5;
     for (let n = 0; n < tab_runs; n++) {
       setTimeout(function () {

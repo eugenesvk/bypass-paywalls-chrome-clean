@@ -17,6 +17,7 @@ Fix Grupo Abril (js)
 Fix Lc.nl
 Fix Outside (js)
 Update block general paywall script (FewCents)
+Update custom sites (add_ext_link)
 
 * v3.0.5.0 (2023-02-12)
 Add L'Informe (fr)

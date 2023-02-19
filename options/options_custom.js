@@ -4,6 +4,7 @@ var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
 var random_ip_options = ['', 'all', 'eu'];
+var add_ext_link_type_options = ['', 'archive.is', '12ft.io', 'google_search_tool']
 
 function capitalize(str) {
   return (typeof str === 'string') ? str.charAt(0).toUpperCase() + str.slice(1) : '';
@@ -211,20 +212,22 @@ function edit_options() {
     var edit_site = sites_custom[title];
     document.querySelector('input[data-key="title"]').value = title;
     document.querySelector('input[data-key="domain"]').value = edit_site.domain;
-    document.querySelector('select[data-key="useragent"]').selectedIndex = (edit_site.googlebot > 0) ? 1 : useragent_options.indexOf(edit_site.useragent);
     document.querySelector('input[data-key="allow_cookies"]').checked = (edit_site.allow_cookies > 0);
     document.querySelector('input[data-key="remove_cookies"]').checked = (edit_site.remove_cookies > 0);
+    document.querySelector('select[data-key="useragent"]').selectedIndex = (edit_site.googlebot > 0) ? 1 : useragent_options.indexOf(edit_site.useragent);
+    document.querySelector('select[data-key="referer"]').selectedIndex = referer_options.indexOf(edit_site.referer);
+    document.querySelector('select[data-key="random_ip"]').selectedIndex = random_ip_options.indexOf(edit_site.random_ip);
     document.querySelector('input[data-key="block_js"]').checked = (edit_site.block_js > 0 || edit_site.block_javascript > 0);
     document.querySelector('input[data-key="block_js_ext"]').checked = (edit_site.block_js_ext > 0 || edit_site.block_javascript_ext > 0);
     document.querySelector('input[data-key="block_js_inline"]').value = edit_site.block_js_inline ? edit_site.block_js_inline : '';
     document.querySelector('input[data-key="block_regex"]').value = edit_site.block_regex ? edit_site.block_regex : '';
-    document.querySelector('textarea[data-key="cs_code"]').value = edit_site.cs_code ? edit_site.cs_code : '';
     document.querySelector('input[data-key="amp_unhide"]').checked = (edit_site.amp_unhide > 0);
     document.querySelector('input[data-key="amp_redirect"]').value = edit_site.amp_redirect ? edit_site.amp_redirect : '';
     document.querySelector('input[data-key="ld_json"]').value = edit_site.ld_json ? edit_site.ld_json : '';
     document.querySelector('input[data-key="ld_google_webcache"]').value = edit_site.ld_google_webcache ? edit_site.ld_google_webcache : '';
-    document.querySelector('select[data-key="referer"]').selectedIndex = referer_options.indexOf(edit_site.referer);
-    document.querySelector('select[data-key="random_ip"]').selectedIndex = random_ip_options.indexOf(edit_site.random_ip);
+    document.querySelector('input[data-key="add_ext_link"]').value = edit_site.add_ext_link ? edit_site.add_ext_link : '';
+    document.querySelector('select[data-key="add_ext_link_type"]').selectedIndex = add_ext_link_type_options.indexOf(edit_site.add_ext_link_type);
+    document.querySelector('textarea[data-key="cs_code"]').value = edit_site.cs_code ? edit_site.cs_code : '';
   });
 }
 
@@ -283,6 +286,9 @@ function renderOptions() {
       'domain': 0,
       'allow_cookies': 1,
       'remove_cookies': 1,
+      'useragent': 0,
+      'referer': 0,
+      'random_ip': 0,
       'block_js (domain)': 1,
       'block_js_ext': 1,
       'block_js_inline': 0,
@@ -291,59 +297,59 @@ function renderOptions() {
       'amp_redirect': 0,
       'ld_json': 0,
       'ld_google_webcache': 0,
+      'add_ext_link': 0,
+      'add_ext_link_type': 0,
       'cs_code': 0,
     };
-    for (var key in add_checkboxes) {
-      labelEl = document.createElement('label');
-      if (!['cs_code'].includes(key)) {
-        inputEl = document.createElement('input');
-        inputEl.size = 25;
-      } else {
-        inputEl = document.createElement('textarea');
-        inputEl.rows = 5;
-        inputEl.cols = 25;
-      }
-      inputEl.dataset.key = key.split(' (')[0];
-      labelEl.appendChild(inputEl);
-      if (add_checkboxes[key]) {
-        inputEl.type = 'checkbox';
-        inputEl.dataset.value = 1;
-      } else {
-        let placeholders = {
-          title: 'Example',
-          domain: 'example.com',
-          block_js_inline: '\\.example\\.com\\/article\\/',
-          block_regex: '\\.example\\.com\\/js\\/',
-          amp_redirect: 'div.paywall',
-          ld_json: 'div.paywall|div.article',
-          ld_google_webcache: 'div.paywall|div.article',
-          cs_code: 'for dev: check GitLab examples',
-        };
-        if (placeholders[key])
-          inputEl.placeholder = placeholders[key];
-      }
-      labelEl.appendChild(document.createTextNode(' ' + key));
-      add_sitesEl.appendChild(labelEl);
-    }
-    
     var add_options = {
       useragent: useragent_options,
       referer: referer_options,
-      random_ip: random_ip_options
+      random_ip: random_ip_options,
+      add_ext_link_type: add_ext_link_type_options
     };
-    for (let key in add_options) {
+    for (var key in add_checkboxes) {
+      if (add_checkboxes[key]) {
+        inputEl = document.createElement('input');
+        inputEl.type = 'checkbox';
+        inputEl.dataset.value = 1;
+      } else {
+        if (add_options[key]) {
+          inputEl = document.createElement('select');
+          for (let elem of add_options[key]) {
+            let option = document.createElement("option");
+            option.value = elem;
+            option.text = elem;
+            inputEl.appendChild(option);
+          }
+        } else {
+          if (!['cs_code'].includes(key)) {
+            inputEl = document.createElement('input');
+            inputEl.size = 25;
+          } else {
+            inputEl = document.createElement('textarea');
+            inputEl.rows = 5;
+            inputEl.cols = 25;
+          }
+          let placeholders = {
+            title: 'Example',
+            domain: 'example.com',
+            block_js_inline: '\\.example\\.com\\/article\\/',
+            block_regex: '\\.example\\.com\\/js\\/',
+            amp_redirect: 'div.paywall',
+            ld_json: 'div.paywall|div.article',
+            ld_google_webcache: 'div.paywall|div.article',
+            add_ext_link: 'div.paywall|div.article',
+            cs_code: 'for dev: check GitLab examples',
+          };
+          if (placeholders[key])
+            inputEl.placeholder = placeholders[key];
+        }
+      }
       labelEl = document.createElement('label');
-      labelEl.appendChild(document.createTextNode(key + ' '));
-      inputEl = document.createElement('select');
+      labelEl.style = 'margin: 2px 0px;';
       inputEl.dataset.key = key.split(' (')[0];
       labelEl.appendChild(inputEl);
-      
-      for (let elem of add_options[key]) {
-        let option = document.createElement("option");
-        option.value = elem;
-        option.text = elem;
-        inputEl.appendChild(option);
-      }
+      labelEl.appendChild(document.createTextNode(' ' + key));
       add_sitesEl.appendChild(labelEl);
     }
     
@@ -363,20 +369,21 @@ function renderOptions() {
       let isDefaultSite = defaultSites_domains.includes(domain);
       optionEl.text = isDefaultSite ? '*' : '';
       optionEl.text += key + ': ' + domain +
-      (sites_custom[key]['googlebot'] > 0 ? ' | googlebot' : '') +
       (sites_custom[key]['allow_cookies'] > 0 ? ' | allow_cookies' : '') +
       (sites_custom[key]['remove_cookies'] > 0 ? ' | remove_cookies' : '') +
+      (sites_custom[key]['useragent'] ? ' | useragent: ' + sites_custom[key]['useragent'] : '') +
+      (sites_custom[key]['googlebot'] > 0 ? ' | googlebot' : '') +
+      (sites_custom[key]['referer'] ? ' | referer: ' + sites_custom[key]['referer'] : '') +
+      (sites_custom[key]['random_ip'] ? ' | random_ip: ' + sites_custom[key]['random_ip'] : '') +
       ((sites_custom[key]['block_js'] > 0 || sites_custom[key]['block_javascript'] > 0) ? ' | block_js' : '') +
       ((sites_custom[key]['block_js_ext'] > 0 || sites_custom[key]['block_javascript_ext'] > 0) ? ' | block_js_ext' : '') +
       (sites_custom[key]['block_js_inline'] ? ' | block_js_inline' : '') +
       (sites_custom[key]['block_regex'] ? ' | block_regex' : '') +
-      (sites_custom[key]['useragent'] ? ' | useragent: ' + sites_custom[key]['useragent'] : '') +
-      (sites_custom[key]['referer'] ? ' | referer: ' + sites_custom[key]['referer'] : '') +
-      (sites_custom[key]['random_ip'] ? ' | random_ip: ' + sites_custom[key]['random_ip'] : '') +
       (sites_custom[key]['amp_unhide'] > 0 ? ' | amp_unhide' : '') +
       (sites_custom[key]['amp_redirect'] ? ' | amp_redirect' : '') +
       (sites_custom[key]['ld_json'] ? ' | ld_json' : '') +
       (sites_custom[key]['ld_google_webcache'] ? ' | ld_google_webcache' : '') +
+      (sites_custom[key]['add_ext_link'] && sites_custom[key]['add_ext_link_type'] ? ' | add_ext_link' : '') +
       (sites_custom[key]['cs_code'] ? ' | cs_code' : '');
       optionEl.value = key;
       selectEl.add(optionEl);
