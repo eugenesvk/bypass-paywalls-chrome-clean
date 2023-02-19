@@ -6,6 +6,7 @@ Post-release
 Add DHnet.be
 Add National World Publishing (UK)
 Add Roularta Media Group (be)
+Add Spiegel.de (link to archive.is)
 Add TagesAnzeiger.ch (link to archive.is)
 Remove Asia Times (fix obsolete)
 Remove Finance.si (fix obsolete)

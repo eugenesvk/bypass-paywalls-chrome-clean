@@ -530,6 +530,7 @@ Grouped in options:\
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Cellesche Zeitung](https://www.cz.de) -
 [Cicero](https://www.cicero.de) -
+[Der Spiegel (link to archive.is)](https://www.spiegel.de) -
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Deutsches Ärzteblatt](https://www.aerzteblatt.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
