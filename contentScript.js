@@ -3960,11 +3960,13 @@ else if (matchDomain('quora.com')) {
 
 else if (matchDomain('qz.com')) {
   if (window.location.pathname.startsWith('/emails/')) {
-    let paywall = document.querySelector('div#email-content[class]');
+    let paywall = document.querySelector('div.js_regwalled-content > div[class]');
     if (paywall) {
       paywall.removeAttribute('class');
-      let login = pageContains('h2[class]', /^This story is exclusive to/);
-      removeDOMElement(login[0].parentElement);
+      paywall.parentNode.removeAttribute('class');
+      let login = pageContains('h2[class]', /This story is exclusive to/);
+      if (login.length)
+        removeDOMElement(login[0].parentNode);
       let noscroll = document.querySelector('iframe[scrolling]');
       if (noscroll)
         noscroll.removeAttribute('scrolling');
