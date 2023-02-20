@@ -1427,9 +1427,9 @@ var defaultSites = {
     domain: "asia.nikkei.com",
     remove_cookies_select_drop: ["xbc"]
   },
-  "NK News (free articles only)": {
+  "NK News": {
     domain: "nknews.org",
-    remove_cookies_select_drop: ["issuem_lp"]
+    remove_cookies_select_drop: ["issuem_lp", "issuem_lp_kp"]
   },
   "NRC Handelsblad": {
     domain: "nrc.nl",
