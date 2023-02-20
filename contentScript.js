@@ -1641,66 +1641,6 @@ else if (matchDomain('lepoint.fr')) {
   }, 1000);
 }
 
-
-else if (matchDomain('lequipe.fr')) {
-  let paywall = document.querySelectorAll('.Paywall, .Article__paywall');
-  if (window.location.pathname.includes('/Article/') && paywall.length) {
-    let scripts = document.querySelectorAll('script:not([src], [type])');
-    let json_script;
-    for (let script of scripts) {
-      if (script.innerText.includes('window.__NUXT__=')) {
-        json_script = script;
-        break;
-      }
-    }
-    let article = document.querySelector('div.article__body');
-    if (article && json_script) {
-      if (json_script.innerText.includes('articleObject:')) {
-        removeDOMElement(...paywall);
-        let json = json_script.textContent.split('articleObject:')[1].split(',articleType')[0];
-        let url_nuxt = json_script.textContent.split('comment_count_url:"')[1].split('",')[0].replace(/\\u002F/g, '/');
-        if (url_nuxt && !url_nuxt.includes(window.location.pathname))
-          window.setTimeout(function () {
-            refreshCurrentTab();
-          }, 500);
-        json = json.replace(/keywords:\[([\w\,\$]+)\]/g, "keywords:\"\"").replace(/([{,])([a-zA-Z_]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3").replace(/},([\w]+),{/g, "},\"$1\",{").replace(/}(,\w{2})+(\]}|,{)/g, "}$2");
-        json = JSON.parse(json);
-        if (json.items) {
-          let pars = json.items.filter(x => x.objet && x.objet.paragraphs)[0].objet.paragraphs;
-          article.innerHTML = '';
-          let article_dom;
-          let article_text = '';
-          let parser = new DOMParser();
-          for (let par of pars) {
-            if (par.title || par.content) {
-              if (par.title && par.title.length > 2)
-                article_text += '<p><strong>' + par.title + '</strong></p>';
-              if (par.content && par.content.length > 2) {
-                let par_content = par.content.replace('class=', '').replace(/\\u003C/g, '<').replace(/\\u003E/g, '>').replace(/\\u002F/g, '/').replace(/\\"/g, '"').replace(/(^\"|\"$)/g, '').replace(/\\t/g, '');
-                article_text += '<p>' + par_content + '</p>';
-              }
-            } else if (par.media && par.media.url && par.media.ratio) {
-              let ratio = par.media.ratio;
-              if (!parseInt(ratio))
-                ratio = 1.5;
-              let url = par.media.url.replace(/\\u002F/g, '/').replace('{width}', '400').replace('{height}', parseInt(400 / ratio)).replace('{quality}', '75');
-              article_text += '<p><img src="' + url + '" style="width:95%;"</img></p>';
-              if (par.media.legende && par.media.legende.length > 2)
-                article_text += '<p><strong>' + par.media.legende + '</strong></p>';
-            } else if (par.__type && !par.layout)
-              console.log(par);
-          }
-          article_dom = parser.parseFromString('<div style="margin:20px; font-family:DINNextLTPro-Regular,sans-serif; font-size:18px;">' + article_text + '</div>', 'text/html');
-          article.appendChild(article_dom.querySelector('div'));
-        }
-      } else
-        window.setTimeout(function () {
-          refreshCurrentTab();
-        }, 500);
-    }
-  }
-}
-
 else if (matchDomain('lesechos.fr')) {
   if (window.location.pathname.startsWith('/amp/')) {
     ampToHtml();

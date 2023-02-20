@@ -446,7 +446,6 @@ Grouped in options:\
 [Franc-Tireur](https://www.franc-tireur.fr) -
 [L'Avenir](https://www.lavenir.net) -
 [L'Écho](https://lecho.be) -
-[L'Équipe](https://www.lequipe.fr) -
 [L'Express](https://www.lexpress.fr) -
 [L'Humanité](https://www.humanite.fr) -
 [L'Informé](https://www.linforme.com) -
