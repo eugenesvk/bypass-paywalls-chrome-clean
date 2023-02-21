@@ -4,6 +4,7 @@ var domain;
 var csDone = false;
 var csDoneOnce = false;
 
+var ar_grupo_clarin_domains =['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
 var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
@@ -2632,8 +2633,8 @@ if (matchDomain('abril.com.br')) {
   }
 }
 
-else if (matchDomain('clarin.com')) {
-  let ads = document.querySelectorAll('.ad-slot');
+else if (matchDomain(ar_grupo_clarin_domains)) {
+  let ads = document.querySelectorAll('.ad-slot, .box-adv, .sticky, .wrapperblock');
   removeDOMElement(...ads);
 }
 
@@ -2766,11 +2767,6 @@ else if (matchDomain('lasegunda.com')) {
     let bt_readmore = document.querySelectorAll('div[id*="bt_readmore_"]');
     removeDOMElement(...bt_readmore);
   }
-}
-
-else if (matchDomain('lavoz.com.ar')) {
-  let wrapperblock = document.querySelector('.wrapperblock');
-  removeDOMElement(wrapperblock);
 }
 
 else if (matchDomain('valor.globo.com')) {

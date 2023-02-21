@@ -299,11 +299,6 @@ var defaultSites = {
     domain: "citywire.com",
     allow_cookies: 1
   },
-  "Clarín": {
-    domain: "clarin.com",
-    allow_cookies: 1,
-    block_regex: /\.clarin\.com\/.+\/auth\d\.js/
-  },
   "CNBC (news only)": {
     domain: "cnbc.com",
     allow_cookies: 1,
@@ -760,6 +755,26 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Grupo Clarín": {
+    domain: "###_ar_grupo_clarin",
+    group: [
+      "clarin.com",
+      "lavoz.com.ar",
+      "losandes.com.ar"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.clarin\.com\/.+\/auth\d\.js/,
+    exception: [{
+        domain: "lavoz.com.ar",
+        allow_cookies: 1,
+        block_js_inline: /\.lavoz\.com\.ar/
+      }, {
+        domain: "losandes.com.ar",
+        allow_cookies: 1,
+        block_regex: /cdn\.lavoz\.com\.ar\/sites\/.+\/paywall\/losandes\/pw\.js/
+      }
+    ]
+  },
   "Grupo El Comercio": {
     domain: "###_pe_grupo_elcomercio",
     group: [
@@ -1082,11 +1097,6 @@ var defaultSites = {
     domain: "lavanguardia.com",
     allow_cookies: 1,
     block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
-  },
-  "La Voz del Interior": {
-    domain: "lavoz.com.ar",
-    allow_cookies: 1,
-    block_js_inline: /\.lavoz\.com\.ar/
   },
   "Law.com (free articles only)": {
     domain: "law.com",

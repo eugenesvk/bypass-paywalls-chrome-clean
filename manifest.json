@@ -399,6 +399,7 @@
     "*://*.lne.es/*",
     "*://*.loebclassics.com/*",
     "*://*.loeildelaphotographie.com/*",
+    "*://*.losandes.com.ar/*",
     "*://*.lrb.co.uk/*",
     "*://*.lunion.fr/*",
     "*://*.lvz.de/*",
@@ -738,5 +739,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.6.2"
+  "version": "3.0.6.3"
 }

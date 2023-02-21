@@ -835,9 +835,14 @@ Grouped in options:\
 
 ##### Argentina
 [Ámbito](https://www.ambito.com) -
+[La Nación](https://www.lanacion.com.ar)*
+
+Grouped in options:\
+*Grupo Clarín* sites like\
 [Clarín](https://www.clarin.com) -
-[La Nación](https://www.lanacion.com.ar)* -
-[La Voz del Interior](https://www.lavoz.com.ar)
+[La Voz del Interior](https://www.lavoz.com.ar) -
+[Los Andes](https://www.losandes.com.ar)
+
 ##### Brazil
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
