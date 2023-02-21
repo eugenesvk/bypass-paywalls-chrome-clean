@@ -1578,10 +1578,10 @@ var defaultSites = {
     domain: "puck.news",
     allow_cookies: 1
   },
-  "Quartz": {
+  "Quartz (newsletter)": {
     domain: "qz.com",
     allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
+    block_regex: /\.kinja-static\.com\/assets\/.+\/regwalled-content.+\.js/
   },
   "Quillette (link to archive.is)": {
     domain: "quillette.com",

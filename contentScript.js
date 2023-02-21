@@ -3898,22 +3898,6 @@ else if (matchDomain('quora.com')) {
   }, 500);
 }
 
-else if (matchDomain('qz.com')) {
-  if (window.location.pathname.startsWith('/emails/')) {
-    let paywall = document.querySelector('div.js_regwalled-content > div[class]');
-    if (paywall) {
-      paywall.removeAttribute('class');
-      paywall.parentNode.removeAttribute('class');
-      let login = pageContains('h2[class]', /This story is exclusive to/);
-      if (login.length)
-        removeDOMElement(login[0].parentNode);
-      let noscroll = document.querySelector('iframe[scrolling]');
-      if (noscroll)
-        noscroll.removeAttribute('scrolling');
-    }
-  }
-}
-
 else if (matchDomain('rugbypass.com')) {
   if (window.location.pathname.startsWith('/plus/')) {
     let paywall = document.querySelector('.premium-fold-bottom');

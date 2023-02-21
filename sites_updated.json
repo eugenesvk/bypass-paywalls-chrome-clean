@@ -75,5 +75,10 @@
   "NK News (free articles only)": {
     "domain": "nknews.org",
     "remove_cookies_select_drop": ["issuem_lp", "issuem_lp_kp"]
+  },
+  "Quartz": {
+    "domain": "qz.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.kinja-static\\.com\\/assets\\/.+\\/regwalled-content.+\\.js"
   }
 }

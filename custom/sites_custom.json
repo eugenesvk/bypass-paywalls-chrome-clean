@@ -392,6 +392,12 @@
     "cs_code": "[{\"cond\":\"div[data-cy='upgradeAccountPaywall']\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class|style\"},{\"cond\":\"div.css-tu9vsa\",\"rm_attrib\":\"class\"}]}]",
     "domain": "stylist.co.uk"
   },
+  "Substack.com": {
+    "add_ext_link": "div.paywall:not(.modal-paywall)|div.available-content",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "substack.com"
+  },
   "Supchina.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
