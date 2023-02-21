@@ -3344,14 +3344,6 @@ else if (matchDomain('griffithreview.com')) {
   removeDOMElement(subscribe);
 }
 
-else if (matchDomain('harpers.org')) {
-  let overlay = document.querySelector('div[id^="pum-"]');
-  removeDOMElement(overlay);
-  let entry_content = document.querySelectorAll('.entry-content');
-  for (let elem of entry_content)
-    elem.setAttribute('style', 'display: block !important');
-}
-
 else if (matchDomain('hbr.org')) {
   let popup = document.querySelector('.persistent-banner');
   removeDOMElement(popup);

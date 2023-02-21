@@ -857,7 +857,8 @@ var defaultSites = {
     useragent: "googlebot"
   },
   "Harper's Magazine": {
-    domain: "harpers.org"
+    domain: "harpers.org",
+    block_regex: /\/harpers\.org\/wp-content\/themes\/timber\/static\/js\/modal.+\.js/
   },
   "Harvard Business Review": {
     domain: "hbr.org",
