@@ -2284,7 +2284,7 @@ else if (matchDomain(nl_mediahuis_region_domains)) {
   }, 500);
 }
 
-else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {
+else if (matchDomain(nl_dpg_adr_domains)) {
   let url = window.location.href;
   let paywall = document.querySelector('div#remaining-paid-content');
   if (paywall) {

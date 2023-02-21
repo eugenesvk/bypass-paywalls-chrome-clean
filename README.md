@@ -632,7 +632,6 @@ Grouped in options:\
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
-[Het Laatste Nieuws (link to archive.is)](https://www.hln.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
 [Vrij Nederland](https://www.vn.nl)
