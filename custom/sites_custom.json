@@ -86,9 +86,10 @@
     "domain": "diariodenavarra.es"
   },
   "Die-glocke.de": {
+    "add_ext_link": "div.cardPw|div.mainContent",
+    "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
-    "domain": "die-glocke.de",
-    "ld_google_webcache": "div.cardPw|div.mainContent"
+    "domain": "die-glocke.de"
   },
   "Doorbraak.be": {
     "allow_cookies": 1,

@@ -1307,7 +1307,7 @@ else if (matchDomain(es_grupo_vocento_domains)) {
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (!amphtml)
       amphtml = {href: window.location.pathname.replace('.html', '_amp.html')};
-    if (paywall && amphtml) {
+    if (paywall && amphtml && !matchDomain(['diariovasco.com', 'eldiariomontanes.es'])) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
     } else {
@@ -1962,16 +1962,19 @@ else if (matchDomain(it_ilmessaggero_domains)) {
 }
 
 else if (matchDomain(it_quotidiano_domains)) {
-  if (window.location.pathname.endsWith('/amp')) {
-    amp_unhide_access_hide('="c.customGranted"', '="NOT c.customGranted"', 'amp-ad, amp-embed, amp-fx-flying-carpet, .watermark-adv');
+  if (window.location.pathname.endsWith('/amp') || window.location.search.startsWith('?amp')) {
+    amp_unhide_access_hide('="c.customGranted"', '="NOT c.customGranted"', 'amp-ad, amp-embed, amp-fx-flying-carpet, .watermark-adv, .amp__watermark');
   } else {
-    let paywall = document.querySelector('div[data-testid="paywall-container"]');
+    let paywall = document.querySelector('div[data-testid="paywall-container"], div[class^="Paywall_paywall_"]');
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (!amphtml)
       amphtml = {href: window.location.pathname + '/amp'};
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
+    } else {
+      let ads = document.querySelectorAll('div[id^="div-gpt-ad"]');
+      removeDOMElement(...ads);
     }
   }
 }

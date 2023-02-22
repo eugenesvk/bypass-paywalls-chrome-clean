@@ -1608,7 +1608,7 @@ var defaultSites = {
       "quotidiano.net"
     ],
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Record.pt": {
     domain: "record.pt",

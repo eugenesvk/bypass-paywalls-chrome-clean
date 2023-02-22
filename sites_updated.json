@@ -89,5 +89,18 @@
     "domain": "qz.com",
     "allow_cookies": 1,
     "block_regex": "\\.kinja-static\\.com\\/assets\\/.+\\/regwalled-content.+\\.js"
+  },
+  "Quotidiano.net (+ regional)": {
+    "domain": "###_it_quotidiano",
+    "group": [
+      "ilgiorno.it",
+      "ilrestodelcarlino.it",
+      "iltelegrafolivorno.it",
+      "lanazione.it",
+      "quotidiano.net"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "amp_redirect": "div[data-testid='paywall-container'], div[class^='Paywall_paywall_']"
   }
 }

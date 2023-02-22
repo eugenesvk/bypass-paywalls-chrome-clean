@@ -10,6 +10,7 @@ Fix Harper's Magazine (modal)
 Fix Madsack Mediengruppe (custom flex sites)
 Fix NK News (pro)
 Fix Quartz (newsletter)
+Fix Quotidiano.net sites
 
 * v3.0.6.0 (2023-02-19)
 Add DHnet.be
