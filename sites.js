@@ -2439,7 +2439,6 @@ expandSiteRules(defaultSites);
 // grouped domains (background)
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var de_madsack_domains = grouped_sites['###_de_madsack'];
-var de_madsack_custom_domains = ['dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'op-marburg.de', 'paz-online.de', 'siegener-zeitung.de', 'sn-online.de', 'waz-online.de'];
 var es_grupo_vocento_domains = grouped_sites['###_es_grupo_vocento'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];

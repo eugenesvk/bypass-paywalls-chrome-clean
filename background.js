@@ -802,7 +802,7 @@ if (typeof browser !== 'object') {
     }
   }
 
-  var set_var_sites =  ['cz.de', 'nzherald.co.nz', 'theglobeandmail.com'].concat(de_madsack_domains, de_madsack_custom_domains);
+  var set_var_sites =  ['cz.de', 'nzherald.co.nz', 'theglobeandmail.com'].concat(de_madsack_domains);
   function runOnTab_once_var(tab) {
     let tabId = tab.id;
     let url = tab.url;
@@ -1331,6 +1331,9 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
           rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
           if (group === '###_usa_gannett')
             rules.amp_unhide = 1;
+          else if (group === '###_de_madsack')
+            if (!set_var_sites.includes(custom_domain))
+              set_var_sites.push(custom_domain);
         }
         if (rules) {
           customAddRules(custom_domain, rules);

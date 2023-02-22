@@ -7,6 +7,7 @@ Add LosAndes.com.ar (Grupo Clarin)
 Remove Hln.be (fix obsolete)
 Remove Lequipe.fr (fix obsolete)
 Fix Harper's Magazine (modal)
+Fix Madsack Mediengruppe (custom flex sites)
 Fix NK News (pro)
 Fix Quartz (newsletter)
 

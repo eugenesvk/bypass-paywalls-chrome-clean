@@ -1,8 +1,10 @@
 //'use strict';
 var ext_api = (typeof browser === 'object') ? browser : chrome;
 
+var hostname = window.location.hostname;
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
-var de_madsack_custom_domains = ['dnn.de', 'gnz.de', 'goettinger-tageblatt.de', 'op-marburg.de', 'paz-online.de', 'siegener-zeitung.de', 'sn-online.de', 'waz-online.de'];
+
+if (hostname.match(/\.de$/)) {
 
 if (matchDomain('cz.de')) {
   function cz_unhide(node) {
@@ -14,7 +16,7 @@ if (matchDomain('cz.de')) {
   waitDOMElement('div#erasmo', 'DIV', cz_unhide);
 }
 
-else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domains)) {
+else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
   function madsack_main() {
     let done = false;
     for (let n = 0; n < 10; n++) {
@@ -29,7 +31,7 @@ else if (matchDomain(de_madsack_domains) || matchDomain(de_madsack_custom_domain
   insert_script(madsack_main);
 }
 
-else if (matchDomain('nzherald.co.nz')) {
+} else if (matchDomain('nzherald.co.nz')) {
   function nzherald_main() {
     let done = false;
     for (let n = 0; n < 10; n++) {
