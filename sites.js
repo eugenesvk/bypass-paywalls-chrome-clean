@@ -334,8 +334,7 @@ var defaultSites = {
   },
   "Correio da Manhã": {
     domain: "cmjornal.pt",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(subscriptions|consent)-.+\.js/
+    allow_cookies: 1
   },
   "Corriere della Sera": {
     domain: "corriere.it",
@@ -550,7 +549,6 @@ var defaultSites = {
   },
   "Financial Times (not Chinese)": {
     domain: "ft.com",
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/,
     useragent: "googlebot"
   },
   "Financieele Dagblad (fd.nl)": {
@@ -1238,7 +1236,7 @@ var defaultSites = {
       "thestate.com",
       "tri-cityherald.com"
     ],
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
   },
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",
@@ -1613,7 +1611,7 @@ var defaultSites = {
   "Record.pt": {
     domain: "record.pt",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(subscriptions|consent)-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
   },
   "Reuters": {
     domain: "reuters.com",
@@ -1815,7 +1813,7 @@ var defaultSites = {
   "The Atlanta Journal-Constitution": {
     domain: "ajc.com",
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.ajc\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Atlantic": {
     domain: "theatlantic.com",
@@ -2239,7 +2237,7 @@ var defaultSites = {
     domain: "cdn.ampproject.org",
     allow_cookies: 1,
     block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|(.+-)?ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
-    excluded_domains: ["cambridge.org"]
+    excluded_domains: ["cambridge.org", "cmjornal.pt"]
   },
   "Axate.io": {
     domain: "###_uk_axate.io",

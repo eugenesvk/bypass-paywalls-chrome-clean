@@ -102,5 +102,10 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "amp_redirect": "div[data-testid='paywall-container'], div[class^='Paywall_paywall_']"
+  },
+  "The Atlanta Journal-Constitution": {
+    "domain": "ajc.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.ajc\\.com\\/prod\\/ajc\\/loader\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   }
 }

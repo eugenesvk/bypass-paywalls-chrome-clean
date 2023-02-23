@@ -41,7 +41,7 @@ Add-on was removed by Mozilla from add-on store.\
 Current installations (by custom collection in Firefox Beta/Nightly or Firefox-clone) will stay active, but with no more updates.
 
 There is still an elaborate workaround for regular Firefox though:
-* install an old version of Firefox (like [v68.11.0](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/)); you have to remove your current Firefox app (or use an old Firefox Beta version)
+* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0/) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/) or Firefox-clone; you have to remove your current Firefox app (or use an old Firefox Beta version)
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
 * add-on will stay active & automatically updates to the latest version

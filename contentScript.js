@@ -43,7 +43,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'nationalreview.com', 'nknews.org', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(ca_gcm_domains, de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'nationalreview.com', 'nknews.org', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(ca_gcm_domains, de_funke_medien_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -1197,7 +1197,6 @@ if (matchDomain(['ara.cat', 'arabalears.cat'])) {
 
 else if (matchDomain(['cmjornal.pt', 'record.pt'])) {
   let paywall = document.querySelector('.bloqueio_exclusivos, .container_assinatura');
-  console.log(paywall);
   let amphtml = document.querySelector('link[rel="amphtml"]');
   let url = window.location.href;
   if (!url.includes('/amp/')) {
@@ -1206,7 +1205,7 @@ else if (matchDomain(['cmjornal.pt', 'record.pt'])) {
       window.location.href = amphtml.href;
     }
   } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed, amp-consent');
+    amp_unhide_subscr_section('amp-ad, amp-embed, amp-consent, .detalheAds, .exclusivos_bar');
     let amp_links = document.querySelectorAll('a[href^="https://www-cmjornal-pt.cdn.ampproject.org/c/s/"]');
     for (let amp_link of amp_links)
       amp_link.href = amp_link.href.replace('www-cmjornal-pt.cdn.ampproject.org/c/s/', '');
@@ -1857,7 +1856,7 @@ else if (matchDomain('gazzetta.it')) {
 else if (matchDomain('ilfattoquotidiano.it')) {
   let url = window.location.href;
   if (url.includes('/amp/')) {
-    amp_unhide_subscr_section('amp-ad, div#_4sVideoContainer');
+    amp_unhide_subscr_section('amp-ad, amp-embed, div#_4sVideoContainer');
     let comments = document.querySelector('div.content.comments');
     removeDOMElement(comments);
   } else if (url.split('?')[0].match(/\/\d{4}\/\d{2}\/\d{2}\//)) {
@@ -4586,6 +4585,9 @@ else if ((domain = matchDomain(usa_mcc_domains)) ||
     }, 500);
   } else if (url.includes('amp.' + domain + '/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed', false);
+    let subscriptions_action = document.querySelector('div[subscriptions-action][subscriptions-display="NOT data.hasError"]');
+    if (subscriptions_action)
+      subscriptions_action.removeAttribute('subscriptions-action');
     let subscr_tag = document.querySelector('div#subscriber-exclusive-tag');
     let amp_players = document.querySelectorAll('amp-connatix-player');
     removeDOMElement(subscr_tag, ...amp_players);
@@ -4781,8 +4783,8 @@ function amp_iframes_replace(weblink = false, source = '') {
 }
 
 function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
-  let preview = document.querySelector('[subscriptions-section="content-not-granted"]');
-  removeDOMElement(preview);
+  let preview = document.querySelectorAll('[subscriptions-section="content-not-granted"]');
+  removeDOMElement(...preview);
   let subscr_section = document.querySelectorAll('[subscriptions-section="content"]');
   for (let elem of subscr_section)
     elem.removeAttribute('subscriptions-section');
