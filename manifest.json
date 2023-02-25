@@ -506,6 +506,7 @@
     "*://*.post-gazette.com/*",
     "*://*.precisiononcologynews.com/*",
     "*://*.prevention.com/*",
+    "*://*.profi.de/*",
     "*://*.project-syndicate.org/*",
     "*://*.prospectmagazine.co.uk/*",
     "*://*.public.fr/*",
@@ -640,6 +641,8 @@
     "*://*.timesofindia.com/*",
     "*://*.timesofindia.indiatimes.com/*",
     "*://*.tlz.de/*",
+    "*://*.topagrar.at/*",
+    "*://*.topagrar.com/*",
     "*://*.torontosun.com/*",
     "*://*.towardsdatascience.com/*",
     "*://*.townandcountrymag.com/*",
@@ -686,6 +689,7 @@
     "*://*.winnipegfreepress.com/*",
     "*://*.wired.com/*",
     "*://*.wn.de/*",
+    "*://*.wochenblatt.com/*",
     "*://*.womenshealthmag.com/*",
     "*://*.womensrunning.com/*",
     "*://*.wonderzine.com/*",
@@ -739,5 +743,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.6.6"
+  "version": "3.0.6.7"
 }

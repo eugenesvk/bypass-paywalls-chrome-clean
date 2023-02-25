@@ -565,6 +565,11 @@ Grouped in options:\
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
 [Westfälische Rundschau](https://www.wr.de)\
+*Landwirtschaftsverlag* sites like\
+[Profi.de](https://www.profi.de) -
+[Top Agrar.at](https://www.topagrar.at) -
+[Top Agrar.com](https://www.topagrar.com) -
+[Wochenblatt für Landwirtschaft & Landleben](https://www.wochenblatt.com)\
 *Madsack Mediengruppe* sites like (opt-in to custom sites for unlisted)\
 [Hannoversche Allgemeine Zeitung](https://www.haz.de) -
 [Kieler Nachrichten](https://www.kn-online.de) -

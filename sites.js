@@ -1097,6 +1097,15 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
   },
+  "Landwirtschaftsverlag": {
+    domain: "###_de_lv",
+    group: [
+      "profi.de",
+      "topagrar.at",
+      "topagrar.com",
+      "wochenblatt.com"
+    ]
+  },
   "Law.com (free articles only)": {
     domain: "law.com",
     allow_cookies: 1,
