@@ -9,6 +9,7 @@ Remove Hln.be (fix obsolete)
 Remove Lequipe.fr (fix obsolete)
 Fix Harper's Magazine (modal)
 Fix Madsack Mediengruppe (custom flex sites)
+Fix Newsday (overlay)
 Fix NK News (pro)
 Fix Quartz (newsletter)
 Fix Quotidiano.net sites
@@ -1117,7 +1118,7 @@ Fix Gazet van Antwerpen (amo: remove external mediaplayer scripts)
 * v2.1.1.0 (2021-03-07)
 Add Atlantico (France)
 Add Politica Exterior (Spain)
-Fix Chronicle of Higher Education (scroll)
+Fix Chronicle of Higher Education (overlay)
 Fix Grupo Vocento (amp)
 Fix New Left Review
 

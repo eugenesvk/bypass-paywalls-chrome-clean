@@ -1,20 +1,4 @@
 {
-  "Condé Nast magazines": {
-    "domain": "###_usa_conde_nast",
-    "group": [
-      "architecturaldigest.com",
-      "bonappetit.com",
-      "gq.com",
-      "newyorker.com",
-      "vanityfair.com",
-      "vogue.com",
-      "wired.com"
-    ],
-    "allow_cookies": 1,
-    "remove_cookies": 1,
-    "block_regex": "(\\.{domain}\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot"
-  },
   "DH Les Sports+": {
     "domain": "dhnet.be",
     "allow_cookies": 1,
@@ -34,16 +18,6 @@
   "Harper's Magazine": {
     "domain": "harpers.org",
     "block_regex": "\\/harpers\\.org\\/wp-content\\/themes\\/timber\\/static\\/js\\/modal.+\\.js"
-  },
-  "Inside Higher Ed": {
-    "domain": "insidehighered.com",
-    "allow_cookies": 1,
-    "block_regex": "js\\.pelcro\\.com"
-  },
-  "Kölner Stadt-Anzeiger": {
-    "domain": "ksta.de",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.paywalled-content\",\"rm_attrib\":\"class\",\"elems\":[{\"cond\":\"div.dm-paywall-wrapper\",\"rm_elem\":1}]}]"
   },
   "L'Informé": {
     "domain": "linforme.com",

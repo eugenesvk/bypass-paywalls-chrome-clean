@@ -1331,11 +1331,11 @@ else if (matchDomain(es_grupo_vocento_domains)) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
     } else {
-      let banners = document.querySelectorAll('.voc-advertising, div.ev-em-modal, span.mega-superior');
+      let banners = document.querySelectorAll('.voc-advertising, div.ev-em-modal, span.mega-superior, .v-adv');
       removeDOMElement(...banners);
     }
   } else {
-    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed');
+    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed, .v-adv');
     removeDOMElement(paywall);
     let body_top = document.querySelector('body#top');
     if (body_top)
@@ -3769,6 +3769,12 @@ else if (matchDomain('newscientist.com')) {
 else if (matchDomain('newsday.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_access_hide('="AccessLevel = \'Full Content Access\' OR Error = true"', '="Error != true AND UserState != \'Subscribed\'"');
+  } else {
+    let nd_lock = document.querySelector('html[class]');
+    if (nd_lock)
+      nd_lock.removeAttribute('class');
+    let ads = document.querySelectorAll('div[class^="ad_full-banner_"]');
+    hideDOMElement(...ads);
   }
 }
 
