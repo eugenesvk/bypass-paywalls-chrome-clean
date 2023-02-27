@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix mobile user-agent for Google webcache
 
 * v3.0.7.0 (2023-02-26)
 Add Landwirtschaftsverlag

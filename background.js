@@ -584,10 +584,10 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   }
   let headers = details.requestHeaders;
   headers = headers.map(function (header) {
-      if (header.name.toLowerCase() === 'user-agent')
-        header.value = userAgentMobile;
-      return header;
-    });
+    if (header.name.toLowerCase() === 'user-agent')
+      header.value = userAgentMobile;
+    return header;
+  });
   return {
     requestHeaders: headers
   };
@@ -596,6 +596,25 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   types: ["xmlhttprequest"]
 },
   ["blocking", "requestHeaders"]);
+
+// webcache.googleusercontent.com set user-agent to Chrome (on Firefox for Android)
+if ((typeof browser !== 'object') && navigator_ua_mobile) {
+  ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
+    let headers = details.requestHeaders;
+    headers = headers.map(function (header) {
+      if (header.name.toLowerCase() === 'user-agent')
+        header.value = userAgentMobile;
+      return header;
+    });
+    return {
+      requestHeaders: headers
+    };
+  }, {
+    urls: ["*://webcache.googleusercontent.com/*"],
+    types: ["main_frame", "xmlhttprequest"]
+  },
+    ["blocking", "requestHeaders"]);
+}
 
 // wap.business-standard.com/article-amp/ set user-agent to mobile
 ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
@@ -919,7 +938,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
-    !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || !details.url.includes('/articles/')));
+    !(matchUrlDomain('wsj.com', details.url) && (enabledSites.includes('#options_disable_gb_wsj') || (!details.url.includes('/articles/') && mobile)));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url) && 
     !(matchUrlDomain('stratfor.com', details.url) && details.url.match(/(\/(\d){4}-([a-z]||-)+-forecast(-([a-z]|-)+)?|-forecast-(\d){4}-([a-z]|[0-9]||-)+)$/));
   var facebookbotEnabled = matchUrlDomain(use_facebook_bot, details.url);
