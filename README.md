@@ -674,6 +674,7 @@ Grouped in options:\
 [Libelle](https://www.libelle.be)
 
 ##### Norway
+[DN](https://www.dn.no)\
 Grouped in options:\
 *NHST Media Group* sites like\
 [Europower](https://www.europower-energi.no) -
