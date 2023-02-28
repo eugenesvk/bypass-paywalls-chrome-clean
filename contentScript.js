@@ -3004,6 +3004,14 @@ else if (matchDomain('bloomberg.com')) {
   }
 }
 
+else if (matchDomain('bloombergadria.com')) {
+  let article_hidden = document.querySelector('article[style]');
+  if (article_hidden)
+    article_hidden.removeAttribute('style');
+  let ads = document.querySelectorAll('.banner');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('bostonglobe.com')) {
   if (window.location.search.startsWith('?outputType=amp')) {
     amp_unhide_subscr_section();
@@ -4899,6 +4907,8 @@ function ext_12ftLink(url, text_fail = 'BPC > Full article text:\r\n') {
 }
 
 function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full article text:\r\n') {
+  if (domains.includes('search.google.com'))
+    text_fail = 'BPC > Full article text (copy html (tab) code to online html viewer):\r\n'
   let text_fail_div = document.createElement('div');
   text_fail_div.id = 'bpc_archive';
   text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color:red;');

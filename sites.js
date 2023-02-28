@@ -233,6 +233,11 @@ var defaultSites = {
     block_regex: /(\.tinypass\.com\/|assets\.bwbx\.io\/s\d\/(fence\/plug-client|javelin\/.+\/transporter)\/)/,
     remove_cookies_select_drop: ["gatehouse_id"]
   },
+  "Bloomberg Adria": {
+    domain: "bloombergadria.com",
+    allow_cookies: 1,
+    block_js_inline: /\.bloombergadria\.com\/.+\/news\//
+  },
   "BQ Prime": {
     domain: "bqprime.com",
     allow_cookies: 1,

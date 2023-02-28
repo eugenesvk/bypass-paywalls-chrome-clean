@@ -1,4 +1,10 @@
 {
+  "Bloomberg Adria": {
+    "domain": "bloombergadria.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.bloombergadria\\.com\\/.+\\/news\\/",
+    "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]"
+  },
   "DH Les Sports+": {
     "domain": "dhnet.be",
     "allow_cookies": 1,

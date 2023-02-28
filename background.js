@@ -19,6 +19,7 @@ var blocked_referer = false;
 
 var restrictions = {
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
+  'bloombergadria.com': /^((?!\.bloombergadria\.com\/video\/).)*$/,
   'dailywire.com': /^((?!\.dailywire\.com\/(episode|show|videos|watch)).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,

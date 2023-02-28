@@ -110,6 +110,7 @@
     "*://*.billboard.com/*",
     "*://*.bizjournals.com/*",
     "*://*.bloomberg.com/*",
+    "*://*.bloombergadria.com/*",
     "*://*.bnd.com/*",
     "*://*.bndestem.nl/*",
     "*://*.bnn.de/*",
@@ -744,5 +745,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.7.1"
+  "version": "3.0.7.2"
 }

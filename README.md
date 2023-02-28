@@ -389,6 +389,7 @@ Grouped in options:\
 
 #### Europe
 
+[Bloomberg Adria](https://www.bloombergadria.com) -
 [EUobserver](https://euobserver.com)
 
 ##### United Kingdom/Ireland
