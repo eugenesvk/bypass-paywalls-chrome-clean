@@ -342,6 +342,9 @@
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "pressherald.com"
   },
+  "Quickmath.com": {
+    "domain": "quickmath.com"
+  },
   "Reviewjournal.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",

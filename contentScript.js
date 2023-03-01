@@ -2117,7 +2117,7 @@ else if (matchDomain(be_roularta_domains)) {
 
 else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
   if (true) {
-    let paywall = document.querySelector('div.signupPlus');
+    let paywall = document.querySelector('div.signupPlus, div.pw-wrapper');
     if (paywall) {
       let intro = document.querySelector('div.startPayWall');
       removeDOMElement(paywall, intro);
@@ -2144,8 +2144,8 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                     let article_html = parser.parseFromString('<div>' + par.code + '</div>', 'text/html');
                     elem = article_html.querySelector('div');
                   }
-                } else if (par.typename === 'Story_insertbox') {
-                  if (par.insertbox_head) {
+                } else if (par.insertbox_head || par.insertbox_text) {
+                  if (par.insertbox_head && par.insertbox_head.length > 2) {
                     let span = document.createElement('span');
                     span.innerText = par.insertbox_head;
                     elem.appendChild(span);
@@ -2159,6 +2159,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                             let span = document.createElement('span');
                             span.innerText = child.text;
                             elem.appendChild(span);
+                            elem.appendChild(document.createElement('br'));
                           } else if (child.children) {
                             for (let sub_child of child.children) {
                               if (sub_child.text) {
@@ -2187,6 +2188,12 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                       par_link.href = child.href;
                       par_link.innerText = child.children[0].text;
                       elem.appendChild(par_link);
+                    } else if (child.children.length && child.children[0].text) {
+                      if (child.children[0].text.length > 2) {
+                        let span = document.createElement('span');
+                        span.innerText = child.children[0].text;
+                        elem.appendChild(span);
+                      }
                     }
                   }
                 } else if (par.typename.length > 2)
@@ -4632,14 +4639,18 @@ else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('
     let elem_hidden = document.querySelectorAll('html[class], body[class]');
     for (let elem of elem_hidden)
       elem.removeAttribute('class');
-  } else if (!domain) {
-    let subscriber_only = document.querySelectorAll('div.subscriber-only:not(.encrypted-content)');
-    for (let elem of subscriber_only) {
-      elem.removeAttribute('style');
-      elem.removeAttribute('class');
+  } else {
+    if (!domain) {
+      let subscriber_only = document.querySelectorAll('div.subscriber-only:not(.encrypted-content)');
+      for (let elem of subscriber_only) {
+        elem.removeAttribute('style');
+        elem.removeAttribute('class');
+      }
+      let banners = document.querySelectorAll('div.subscription-required, div.redacted-overlay');
+      removeDOMElement(...banners);
     }
-    let banners = document.querySelectorAll('div.subscription-required, div.redacted-overlay, div.tnt-ads-container');
-    removeDOMElement(...banners);
+    let ads = document.querySelectorAll('div.tnt-ads-container');
+    removeDOMElement(...ads);
   }
 }
 

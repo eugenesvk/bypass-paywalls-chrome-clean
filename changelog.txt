@@ -5,6 +5,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add Bloomberg Adria
 Add DN.no (cached articles only)
+Fix Mediahuis Noord
 Fix mobile user-agent for Google webcache
 
 * v3.0.7.0 (2023-02-26)
@@ -1673,7 +1674,7 @@ Fix Corriere Della Sera
 * v1.6.4.3 (2020-02-12)
 Add CommonWealth Magazine Taiwan
 Add El Mercurio (Chile)
-Add Leeuwarder Courant & Dagblad van het Noorden (Netherlands)
+Add Lc.nl & DvhN.nl
 
 * v1.6.4.2 (2020-02-03)
 Add Fd.nl (Googlebot)
