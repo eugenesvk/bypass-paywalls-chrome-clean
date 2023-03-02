@@ -440,6 +440,7 @@ else {
                   par_dom.appendChild(par_elem);
               }
               let content = document.querySelector('div[class*="StyledArticleContent"]');
+              content.innerHTML = '';
               if (content) {
                 content.appendChild(par_dom);
               } else {
@@ -3808,12 +3809,14 @@ else if (matchDomain('newscientist.com')) {
     removeDOMElement(paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.article-body');
+    replaceDomElementExt(url_cache, true, false, 'div.article-body, article');
   }
   window.setTimeout(function () {
     let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src]');
     for (let elem of lazy_images)
       elem.src = elem.getAttribute('data-src').split('?')[0] + '?width=800';
+    let ads = document.querySelectorAll('div[class*="Advert"]');
+    removeDOMElement(...ads);
   }, 1000);
 }
 

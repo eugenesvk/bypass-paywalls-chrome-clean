@@ -3,7 +3,8 @@
     "domain": "bloombergadria.com",
     "allow_cookies": 1,
     "block_js_inline": "\\.bloombergadria\\.com\\/.+\\/news\\/",
-    "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]"
+    "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]",
+    "new_site": 1
   },
   "DH Les Sports+": {
     "domain": "dhnet.be",
@@ -60,6 +61,11 @@
         "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
       }
     ]
+  },
+  "New Scientist": {
+    "domain": "newscientist.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "#subscription-barrier|div.article-body,article"
   },
   "NK News (free articles only)": {
     "domain": "nknews.org",
