@@ -5,6 +5,8 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add Bloomberg Adria
 Add DN.no (cached articles only)
+Remove TagesAnzeiger.ch (fix obsolete)
+Remove Welt.de (fix obsolete)
 Fix Mediahuis Noord
 Fix mobile user-agent for Google webcache
 Fix New Scientist

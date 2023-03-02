@@ -842,17 +842,6 @@ else if (matchDomain('sueddeutsche.de')) {
   }
 }
 
-else if (matchDomain('tagesanzeiger.ch')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#piano-premium > div');
-  if (paywall) {
-    removeDOMElement(paywall.parentNode);
-    let article = document.querySelector('article p');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.article--paid > div');
@@ -862,19 +851,6 @@ else if (matchDomain('tagesspiegel.de')) {
     if (article)
       article.firstChild.before(archiveLink(url));
   }
-}
-
-else if (matchDomain('welt.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.contains_walled_content');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('div[data-qa="Article.PremiumContent"]');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-  let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
-  removeDOMElement(...ads);
 }
 
 else if (matchDomain(de_lv_domains)) {

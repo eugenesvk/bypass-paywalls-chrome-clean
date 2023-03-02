@@ -157,6 +157,12 @@
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "gazette.com"
   },
+  "Gp.se": {
+    "add_ext_link": "div.c-premium-lockscreen__subscribe|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "gp.se"
+  },
   "Gplanet.co.il": {
     "allow_cookies": 1,
     "domain": "gplanet.co.il",

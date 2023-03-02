@@ -534,7 +534,6 @@ Grouped in options:\
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Deutsches Ärzteblatt](https://www.aerzteblatt.de) -
 [Die Rheinpfalz](https://www.rheinpfalz.de) -
-[Die Welt (link to archive.is)](https://www.welt.de) -
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
@@ -748,7 +747,6 @@ Grouped in options:\
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)](https://www.nzz.ch) -
-[Tages-Anzeiger (link to archive.is)](https://www.tagesanzeiger.ch) -
 [The Market](https://themarket.ch)
 
 ##### Australia/New Zealand
