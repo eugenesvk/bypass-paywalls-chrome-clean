@@ -7,6 +7,7 @@ Add Bloomberg Adria
 Add DN.no (cached articles only)
 Remove TagesAnzeiger.ch (fix obsolete)
 Remove Welt.de (fix obsolete)
+Fix Berliner Zeitung
 Fix Mediahuis Noord
 Fix mobile user-agent for Google webcache
 Fix New Scientist
