@@ -742,6 +742,7 @@ var defaultSites = {
       "sudinfo.be"
     ],
     allow_cookies: 1,
+    block_regex: /\.qiota\.com\//,
     useragent: "googlebot"
   },
   "Groupe Sud Ouest": {
@@ -2322,7 +2323,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "businesspost.ie", "japantimes.co.jp", "kurier.at"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "businesspost.ie", "japantimes.co.jp", "kurier.at", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

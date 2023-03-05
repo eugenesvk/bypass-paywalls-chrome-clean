@@ -11,6 +11,7 @@ Fix Berliner Zeitung
 Fix Mediahuis Noord
 Fix mobile user-agent for Google webcache
 Fix New Scientist
+Fix SudInfo.be (text)
 
 * v3.0.7.0 (2023-02-26)
 Add Landwirtschaftsverlag
