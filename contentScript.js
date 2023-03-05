@@ -3117,19 +3117,6 @@ else if (matchDomain(ca_torstar_domains)) {
   }, 500);
 }
 
-else if (matchDomain('caravanmagazine.in')) {
-  if (!window.location.href.startsWith('/amp/')) {
-    let paywall = document.querySelector('div.subscribe-plan');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (!amphtml)
-      amphtml = {href: '/amp' + window.location.pathname};
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
-  }
-}
-
 else if (matchDomain('cen.acs.org')) {
   let meteredBar = document.querySelector('.meteredBar');
   removeDOMElement(meteredBar);
