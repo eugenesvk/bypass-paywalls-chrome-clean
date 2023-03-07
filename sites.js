@@ -1251,7 +1251,7 @@ var defaultSites = {
       "thestate.com",
       "tri-cityherald.com"
     ],
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
+    block_regex: "(\\.{domain}\\/script\\.js|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
   },
   "Mediahuis Nederland Regional": {
     domain: "###_nl_mediahuis_region",

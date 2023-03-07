@@ -26,6 +26,10 @@
     "domain": "harpers.org",
     "block_regex": "\\/harpers\\.org\\/wp-content\\/themes\\/timber\\/static\\/js\\/modal.+\\.js"
   },
+  "Inkl": {
+    "domain": "inkl.com",
+    "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
+  },
   "L'Informé": {
     "domain": "linforme.com",
     "allow_cookies": 1,

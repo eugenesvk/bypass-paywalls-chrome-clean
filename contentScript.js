@@ -415,7 +415,7 @@ else {
                     par_elem.appendChild(par_sub1);
                     if (par.asset.captionText) {
                       par_sub2 = document.createElement('figcaption');
-                      par_sub2.innerText = par.asset.captionText + ' ' + par.asset.copyrightByline +
+                      par_sub2.innerText = par.asset.captionText + ' ' + (par.asset.copyrightByline ? par.asset.copyrightByline : '') +
                         ((par.asset.copyrightCredit && par.asset.captionText !== par.asset.copyrightByline) ? '/' + par.asset.copyrightCredit : '');
                       par_elem.appendChild(par_sub2);
                     }
@@ -440,8 +440,8 @@ else {
                   par_dom.appendChild(par_elem);
               }
               let content = document.querySelector('div[class*="StyledArticleContent"]');
-              content.innerHTML = '';
               if (content) {
+                content.innerHTML = '';
                 content.appendChild(par_dom);
               } else {
                 par_dom.setAttribute('style', 'margin: 20px;');
@@ -765,7 +765,7 @@ else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
   } else {
     let ads = document.querySelectorAll('div.nozmhn_ad');
-    removeDOMElement(...ads);
+    hideDOMElement(...ads);
   }
 }
 
@@ -785,7 +785,7 @@ else if (matchDomain('nw.de')) {
 else if (matchDomain('nzz.ch')) {
   if (!window.location.href.includes('/amp/')) {
     let ads = document.querySelectorAll('div.resor');
-    removeDOMElement(...ads);
+    hideDOMElement(...ads);
   } else {
     let amp_ads = document.querySelectorAll('amp-ad');
     removeDOMElement(...amp_ads);
@@ -901,7 +901,7 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*="
   // plus code in contentScript_once_var.js (timing)
   if (!window.location.search.startsWith('?outputType=valid_amp')) {
     let ads = document.querySelectorAll('div[class^="Adstyled__AdWrapper"]');
-    removeDOMElement(...ads);
+    hideDOMElement(...ads);
   } else {
     ampToHtml();
   }
@@ -2358,9 +2358,11 @@ else if (matchDomain('telegraaf.nl')) {
       window.location.reload(true);
     }, 500);
   }
-  let paywall = document.querySelector('.MeteringNotification__backdrop');
-  let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
-  removeDOMElement(paywall, ...banners);
+  window.setTimeout(function () {
+    let paywall = document.querySelector('.MeteringNotification__backdrop');
+    let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
+    removeDOMElement(paywall, ...banners);
+  }, 500);
   let premium = document.querySelector('.PremiumLabelWithLine');
   let article_wrapper = document.querySelector('.ArticlePageWrapper__uid');
   let article_id = article_wrapper ? article_wrapper.innerText : '123';
@@ -3556,21 +3558,11 @@ else if (matchDomain('infzm.com')) {
 }
 
 else if (matchDomain('inkl.com')) {
-  let menu_btn = document.querySelector('div.left-buttons-container button.menu-btn');
-  if (!menu_btn) {
-    let article_container = document.querySelector('div.article-content-container');
-    if (article_container) {
-      article_container.setAttribute('style', 'overflow: visible; max-height: none;');
-      let figures = document.querySelectorAll('figure');
-      for (let figure of figures)
-        figure.setAttribute('style', 'display:block !important;');
-    }
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    paywall.removeAttribute('class');
     let gradient_container = document.querySelector('div.gradient-container');
-    if (gradient_container)
-      gradient_container.setAttribute('style', 'height:auto;');
-    let locked = document.querySelector('div.locked');
-    if (locked)
-      locked.classList.remove('locked');
+    removeDOMElement(gradient_container);
   }
   let what_is_inkl = document.querySelector('.what-is-inkl-container, .features-panel');
   let signup = document.querySelectorAll('.article-signup-container, .locked-sign-up-container, div[class*="/inkl-watermark.svg"]');
