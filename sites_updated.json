@@ -6,22 +6,6 @@
     "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]",
     "new_site": 1
   },
-  "DH Les Sports+": {
-    "domain": "dhnet.be",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "El Tiempo": {
-    "domain": "eltiempo.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "cs_code": "[{\"cond\":\"div.modulos\",\"rm_class\":\"modulos\"}]"
-  },
-  "Grupo Abril": {
-    "domain": "abril.com.br",
-    "allow_cookies": 1,
-    "block_regex": "(\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
-  },
   "Harper's Magazine": {
     "domain": "harpers.org",
     "block_regex": "\\/harpers\\.org\\/wp-content\\/themes\\/timber\\/static\\/js\\/modal.+\\.js"
@@ -30,41 +14,10 @@
     "domain": "inkl.com",
     "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
   },
-  "L'Informé": {
-    "domain": "linforme.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Le Point (cached articles only)": {
-    "domain": "lepoint.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/",
-    "ld_google_webcache": "div.info-paywall|div.ArticleBody",
-    "new_site": 1
-  },
   "LosAndes.com.ar": {
     "domain": "losandes.com.ar",
     "allow_cookies": 1,
     "block_regex": "cdn\\.lavoz\\.com\\.ar\\/sites\\/.+\\/paywall\\/losandes\\/pw\\.js"
-  },
-  "Mediahuis Noord": {
-    "domain": "###_nl_mediahuis_noord",
-    "group": [
-      "dvhn.nl",
-      "lc.nl"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.evolok\\.net\\/",
-    "exception": [{
-        "domain": "dvhn.nl",
-        "allow_cookies": 1,
-        "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
-      }, {
-        "domain": "lc.nl",
-        "allow_cookies": 1,
-        "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/)"
-      }
-    ]
   },
   "New Scientist": {
     "domain": "newscientist.com",

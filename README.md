@@ -579,17 +579,13 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
+*Medienhaus Aachen* sites like\
+[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
+[Aachener Zeitung](https://www.aachener-zeitung.de)\
 *NOZ/MHN Mediengruppe* sites like\
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
 [Schweriner Volkszeitung](https://www.svz.de)\
-*Rheinische Post Mediengruppe* sites like\
-[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
-[Aachener Zeitung](https://www.aachener-zeitung.de) -
-[General-Anzeiger Bonn](https://ga.de) -
-[Rheinische Post](https://rp-online.de) -
-[Saarbrücker Zeitung](https://www.saarbruecker-zeitung.de) -
-[Trierischer Volksfreund](https://www.volksfreund.de)\
 *Verlagsgruppe Rhein Main* sites like (opt-in to custom sites for unlisted)\
 [Allgemeine Zeitung (Mainz)](https://www.allgemeine-zeitung.de) -
 [Darmstädter Echo](https://www.echo-online.de) -
@@ -885,7 +881,7 @@ If removing the cookies works you can also add the site as a custom site.
 
 ### New site requests
 You can [submit a request for a new website](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues).  
-Please read the following instructions and share your results for a quicker process.  
+Please use the issue template (check READ FIRST issue), read the following instructions and share your results for a quicker process.  
 Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues?scope=all&state=all) before asking for a new website.  
 1. Open incognito window and search for article in Google search (or webcache).
 2. Clear cookies for the site (by this add-on: opt-in to custom sites or grant permission for the site; also enables blocking of general paywall scripts).

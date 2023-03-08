@@ -330,6 +330,11 @@
     "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall",
     "domain": "odt.co.nz"
   },
+  "Onet.pl": {
+    "allow_cookies": 1,
+    "domain": "onet.pl",
+    "remove_cookies": 1
+  },
   "Oz-online.de": {
     "allow_cookies": 1,
     "domain": "oz-online.de",
