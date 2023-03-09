@@ -476,7 +476,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "El Mercurio (+ regional/opt-in to custom sites)": {
+  "El Mercurio (not Inversiones; + regional/opt-in to custom sites)": {
     domain: "elmercurio.com",
     allow_cookies: 1,
     block_regex: /\.(elmercurio\.com|emol\.cl)\/(.+\/)?js\/(.+\/)?(modal|merPramV\d|PramModal\.min)\.js/,
@@ -1451,9 +1451,9 @@ var defaultSites = {
     domain: "asia.nikkei.com",
     remove_cookies_select_drop: ["xbc"]
   },
-  "NK News": {
+  "NK News (not pro)": {
     domain: "nknews.org",
-    remove_cookies_select_drop: ["issuem_lp", "issuem_lp_kp"]
+    remove_cookies_select_drop: ["issuem_lp"]
   },
   "NRC Handelsblad": {
     domain: "nrc.nl",
@@ -2310,7 +2310,7 @@ var defaultSites = {
   "Pico.tools": {
     domain: "pico.tools",
     allow_cookies: 1,
-    block_regex_general: /api\.pico.tools\//
+    block_regex_general: /api\.pico\.tools\//
   },
   "Pigeon (WordPress plugin)": {
     domain: "###_wp_pigeon",

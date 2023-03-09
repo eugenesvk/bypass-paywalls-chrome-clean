@@ -152,6 +152,12 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "frieze.com"
   },
+  "Gazetaprawna.pl": {
+    "allow_cookies": 1,
+    "amp_redirect": "div.displayMode_simplePaywall",
+    "domain": "gazetaprawna.pl",
+    "ld_json": "div.simplePaywall|article"
+  },
   "Gazette.com": {
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",

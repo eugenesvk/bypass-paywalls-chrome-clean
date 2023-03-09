@@ -29,10 +29,6 @@
     "allow_cookies": 1,
     "ld_google_webcache": "#subscription-barrier|div.article-body,article"
   },
-  "NK News (free articles only)": {
-    "domain": "nknews.org",
-    "remove_cookies_select_drop": ["issuem_lp", "issuem_lp_kp"]
-  },
   "Quartz": {
     "domain": "qz.com",
     "allow_cookies": 1,

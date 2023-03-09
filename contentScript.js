@@ -66,13 +66,14 @@ if (bg2csData.ld_json) {
             let json = JSON.parse(json_script.text.replace(/[\r\n]/g, '').replace(/(\\r)?\\n/g, '<br>'));
             let json_key, json_text;
             if (Array.isArray(json)) {
-              json = json.filter(x => json_key = Object.keys(x).find(key => key.match(/^(articlebody|text)$/i)));
+              json = json.filter(x => json_key = Object.keys(x).find(key => key.match(/^articlebody$/i))) || json.filter(x => json_key = Object.keys(x).find(key => key.match(/^text$/i)));
               if (json_key)
                 json_text = parseHtmlEntities(json[0][json_key]);
             } else {
-              json_key = Object.keys(json).find(key => key.match(/^(articlebody|text)$/i));
+              json_key = Object.keys(json).find(key => key.match(/^articlebody$/i)) || Object.keys(json).find(key => key.match(/^text$/i));
               json_text = parseHtmlEntities(json[json_key]);
             }
+			console.log(json_text);
             let content = document.querySelector(article_sel);
             if (json_text && content) {
               let parser = new DOMParser();
