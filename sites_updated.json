@@ -6,6 +6,11 @@
     "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]",
     "new_site": 1
   },
+  "Haaretz English": {
+    "domain": "haaretz.com",
+    "allow_cookies": 1,
+    "useragent": "facebookbot"
+  },
   "Harper's Magazine": {
     "domain": "harpers.org",
     "block_regex": "\\/harpers\\.org\\/wp-content\\/themes\\/timber\\/static\\/js\\/modal.+\\.js"

@@ -5,6 +5,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add Medienhaus Aachen
 Remove Rheinische Post Mediengruppe
+Fix Haaretz English
 Fix Inkl
 
 * v3.0.8.0 (2023-03-05)
@@ -1338,7 +1339,7 @@ Add Gazet van Antwerpen (Belgium)
 Add MarketWatch (free articles only)
 Fix Australian Provincial Newspapers
 Fix Deutsche Wirtschafts Nachrichten
-Fix Haaretz/TheMarker (Bingbot)
+Fix Haaretz English/TheMarker (Bingbot)
 Fix LesEchos.fr (first premium article)
 Fix Telegraph.co.uk (overlay)
 Fix Chrome-icon for dark/incognito mode (all permitted sites)
@@ -1561,7 +1562,7 @@ Add block general paywall scripts: BlueConic, OneCount, Qiota & TribDss. Remove 
 * v1.7.3.0 (2020-05-24)
 Add ilManifesto.it
 Fix Gestion.pe/ElComercio.pe
-Fix Haaretz.com (anti-adblocker)
+Fix Haaretz English (anti-adblocker)
 Fix LeJdD.fr
 Limit contentScript on external content
 
@@ -1736,7 +1737,7 @@ Fix Newcastle Herald (+ new domain)
 Fix NYTimes (layout)
 Fix The Globe and Mail
 Fix Toronto Star (enable Javascript)
-Fix banners on TheTimes.co.uk, Bloomberg, Asia Nikkei, Haaretz.com & Hbr.org
+Fix banners on TheTimes.co.uk, Bloomberg, Asia Nikkei, Haaretz English & Hbr.org
 Fix Statistica & Bloomberg Quint (manifest)
 
 * v1.6.3.0 (2019-12-15)

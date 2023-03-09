@@ -848,7 +848,7 @@ var defaultSites = {
   "Haaretz English": {
     domain: "haaretz.com",
     allow_cookies: 1,
-    useragent: "bingbot"
+    useragent: "facebookbot"
   },
   "Haaretz": {
     domain: "haaretz.co.il",
