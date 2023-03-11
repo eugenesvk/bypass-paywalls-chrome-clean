@@ -8,6 +8,7 @@ Remove Rheinische Post Mediengruppe
 Fix Haaretz English
 Fix Inkl
 Fix NK News (not pro)
+Fix The West Australian
 
 * v3.0.8.0 (2023-03-05)
 Add Bloomberg Adria
