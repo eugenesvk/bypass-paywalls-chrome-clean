@@ -533,7 +533,6 @@ Grouped in options:\
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Deutsches Ärzteblatt](https://www.aerzteblatt.de) -
-[Die Rheinpfalz](https://www.rheinpfalz.de) -
 [Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -

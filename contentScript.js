@@ -814,15 +814,6 @@ else if (matchDomain('philomag.de')) {
   }
 }
 
-else if (matchDomain('rheinpfalz.de')) {
-  let url = window.location.href;
-  if (url.includes('reduced=true')) {
-    window.setTimeout(function () {
-      window.location.href = url.split('?')[0];
-    }, 500);
-  }
-}
-
 else if (matchDomain('spiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div[data-area="paywall"]');

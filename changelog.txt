@@ -4,7 +4,8 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 
 Post-release
 Add Medienhaus Aachen
-Remove Rheinische Post Mediengruppe
+Remove Rheinische Post Mediengruppe (fix obsolete)
+Remove RheinPfalz.de (fix obsolete)
 Fix Haaretz English
 Fix Inkl
 Fix NK News (not pro)
@@ -1143,7 +1144,7 @@ Fix Grupo Vocento (amp)
 Fix New Left Review
 
 * v2.1.0.0 (2021-02-28)
-Add Die Rheinpfalz (Germany)
+Add RheinPfalz.de
 Add Gannett Group (local USA Today; opt-in to custom sites)
 Add New York Daily News (local USA)
 Add Rhein-Zeitung.de
