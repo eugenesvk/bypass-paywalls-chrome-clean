@@ -3,7 +3,7 @@ var ext_api = (typeof browser === 'object') ? browser : chrome;
 
 if (matchDomain('gitlab.com')) {
   window.setTimeout(function () {
-    let bio = document.querySelector('div.profile-user-bio');
+    let bio = document.querySelector('p.profile-user-bio');
     if (bio) {
       let split = bio.innerText.split(/(https:[\w\-/.]+)|\|/g).filter(x => x && x.trim());
       bio.innerText = '';

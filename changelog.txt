@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix Sciences et Avenir.fr
 
 * v3.0.9.0 (2023-03-12)
 Add Medienhaus Aachen

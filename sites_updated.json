@@ -47,6 +47,11 @@
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "amp_redirect": "div[data-testid='paywall-container'], div[class^='Paywall_paywall_']"
   },
+  "Sciences et Avenir": {
+    "domain": "sciencesetavenir.fr",
+    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
+  },
   "The Atlanta Journal-Constitution": {
     "domain": "ajc.com",
     "allow_cookies": 1,
