@@ -429,8 +429,7 @@ Grouped in options:\
 [Berlingske](https://www.berlingske.dk)
 
 ##### Finland
-[Suomen Sotilas](https://suomensotilas.fi) -
-[Iltalehti](https://www.iltalehti.fi)
+[Suomen Sotilas](https://suomensotilas.fi)
 
 ##### France/Wallonia
 [60 Millions de consommateurs](https://www.60millions-mag.com) -
