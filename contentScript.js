@@ -1771,34 +1771,36 @@ else if (matchDomain('ilfoglio.it')) {
 }
 
 else if (matchDomain('ilmanifesto.it')) {
-  if (window.location.pathname.match(/((\w)+(\-)+){3,}/)) {
-    let paywall = document.querySelector('div[class^="PostPaywall_PostPaywall__"]');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let json_script = document.querySelector('script#__NEXT_DATA__');
-      if (json_script) {
-        let json = JSON.parse(json_script.innerText);
-        if (json && json.props.pageProps.content && json.props.pageProps.content.content) {
-          let article_new = json.props.pageProps.content.content;
-          let article = document.querySelector('div.ArticleBody');
-          if (article) {
-            article.innerHTML = '';
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
-            let content_new = doc.querySelector('div');
-            article.appendChild(content_new);
-          }
-        } else
-          window.location.reload(true);
+  window.setTimeout(function () {
+    if (window.location.pathname.match(/((\w)+(\-)+){3,}/)) {
+      let paywall = document.querySelector('div[class^="PostPaywall_PostPaywall__"]');
+      if (paywall) {
+        removeDOMElement(paywall);
+        let json_script = document.querySelector('script#__NEXT_DATA__');
+        if (json_script) {
+          let json = JSON.parse(json_script.innerText);
+          if (json && json.props.pageProps.content && json.props.pageProps.content.content) {
+            let article_new = json.props.pageProps.content.content;
+            let article = document.querySelector('div.ArticleBody');
+            if (article) {
+              article.innerHTML = '';
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
+              let content_new = doc.querySelector('div');
+              article.appendChild(content_new);
+            }
+          } else
+            window.location.reload(true);
+        }
       }
     }
-  }
-  let service_page = document.querySelector('div.service-page');
-  if (service_page) {
-    window.setTimeout(function () {
-      window.location.reload(true);
-    }, 1000);
-  }
+    let service_page = document.querySelector('div.service-page');
+    if (service_page) {
+      window.setTimeout(function () {
+        window.location.reload(true);
+      }, 1000);
+    }
+  }, 1000);
 }
 
 else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it'])) {
@@ -2049,13 +2051,13 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                         span.innerText = child.text;
                         elem.appendChild(span);
                       }
-                    } else if (child.href && child.children[0].text) {
-                      let par_link = document.createElement('a');
-                      par_link.href = child.href;
-                      par_link.innerText = child.children[0].text;
-                      elem.appendChild(par_link);
-                    } else if (child.children.length && child.children[0].text) {
-                      if (child.children[0].text.length > 2) {
+                    } else if (child.children && child.children.length && child.children[0].text && child.children[0].text.length > 2) {
+                      if (child.href || (child.relation && child.relation.follow && child.relation.follow.url)) {
+                        let par_link = document.createElement('a');
+                        par_link.href = child.href || child.relation.follow.url;
+                        par_link.innerText = child.children[0].text;
+                        elem.appendChild(par_link);
+                      } else {
                         let span = document.createElement('span');
                         span.innerText = child.children[0].text;
                         elem.appendChild(span);
@@ -2063,7 +2065,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                     }
                   }
                 } else if (par.typename.length > 2)
-                    console.log(par);
+                  console.log(par);
                 if (elem.hasChildNodes()) {
                   article.appendChild(elem);
                 }

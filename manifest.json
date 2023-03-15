@@ -736,5 +736,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.9.2"
+  "version": "3.0.9.3"
 }
