@@ -3457,19 +3457,27 @@ else if (matchDomain('ipolitics.ca')) {
     removeDOMElement(login);
     let json_script = document.querySelector('script#__NEXT_DATA__');
     if (json_script) {
-      let json = JSON.parse(json_script.innerText);
-      if (json && json.props.pageProps.post.content) {
-        let article_new = json.props.pageProps.post.content;
-        let article = document.querySelector('.post-header');
-        if (article) {
-          let parser = new DOMParser();
-          let doc = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
-          let content_new = doc.querySelector('div');
-          article.appendChild(content_new);
-          let locked = document.querySelector('div.locked');
-          if (locked)
-            locked.classList.remove('locked');
+      try {
+        let json = JSON.parse(json_script.innerText);
+        if (json && json.props.pageProps.post && json.props.pageProps.post.content) {
+          let url_next = json.props.pageProps.post.slug;
+          if (url_next && !window.location.pathname.includes(url_next))
+            refreshCurrentTab();
+          let article_new = json.props.pageProps.post.content;
+          let article = document.querySelector('.post-body');
+          if (article) {
+            article.innerHTML = '';
+            article.classList.remove('locked');
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + article_new + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            article.appendChild(content_new);
+          }
+        } else {
+          refreshCurrentTab();
         }
+      } catch (err) {
+        console.log(err);
       }
     }
   }

@@ -4,7 +4,8 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 
 Post-release
 Remove Iltalehti.fi (fix obsolete)
-Fix Sciences et Avenir.fr
+Fix iPolitics.ca (refresh)
+Fix Sciences et Avenir.fr (css)
 
 * v3.0.9.0 (2023-03-12)
 Add Medienhaus Aachen
