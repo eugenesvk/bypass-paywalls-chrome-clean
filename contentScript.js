@@ -3044,6 +3044,31 @@ else if (matchDomain('dallasnews.com')) {
   }
 }
 
+else if (matchDomain('defector.com')) {
+  let paywall = document.querySelector('[class^="ContentGate_wrapper__"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let url = window.location.href;
+    try {
+      fetch(url)
+      .then(response => {
+        if (response.ok) {
+          response.text().then(html => {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(html, 'text/html');
+            let article_new = doc.querySelector('div[class^="PostContent_wrapper__"]');
+            let article = document.querySelector('div[class^="PostContent_wrapper__"]');
+            if (article && article_new)
+              article.parentNode.replaceChild(article_new, article);
+          });
+        }
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+}
+
 else if (matchDomain('digiday.com')) {
   if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_access_hide('="NOT p.showPageviewExpired AND NOT p.showPayWall"', '', 'amp-ad, .advertisement, .ad-wrapper');

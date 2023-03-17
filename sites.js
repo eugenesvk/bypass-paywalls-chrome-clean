@@ -386,6 +386,10 @@ var defaultSites = {
     domain: "tijd.be",
     referer: "google"
   },
+  "Defector": {
+    domain: "defector.com",
+    allow_cookies: 1
+  },
   "Der Spiegel (link to archive.is)": {
     domain: "spiegel.de",
     allow_cookies: 1

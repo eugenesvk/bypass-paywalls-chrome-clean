@@ -176,6 +176,7 @@
     "*://*.dailytelegraph.com.au/*",
     "*://*.dailywire.com/*",
     "*://*.dallasnews.com/*",
+    "*://*.defector.com/*",
     "*://*.democratandchronicle.com/*",
     "*://*.demorgen.be/*",
     "*://*.denverpost.com/*",
@@ -736,5 +737,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.9.3"
+  "version": "3.0.9.4"
 }

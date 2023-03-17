@@ -184,6 +184,7 @@ Grouped in options:\
 [Atavist Magazine](https://magazine.atavist.com) -
 [Axios](https://www.axios.com) -
 [Commentary Magazine](https://www.commentary.org) -
+[Defector](https://defector.com) -
 [Field & Stream](https://www.fieldandstream.com) -
 [First Things](https://www.firstthings.com) -
 [Harper's Magazine](https://harpers.org) -
