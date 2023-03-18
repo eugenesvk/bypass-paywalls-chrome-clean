@@ -33,5 +33,10 @@
     "domain": "sciencesetavenir.fr",
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
+  },
+  "The Times Literary Supplement": {
+    "domain": "the-tls.co.uk",
+    "remove_cookies": 1,
+    "referer": "google"
   }
 }

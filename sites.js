@@ -2069,6 +2069,7 @@ var defaultSites = {
   },
   "The Times Literary Supplement": {
     domain: "the-tls.co.uk",
+    remove_cookies: 1,
     referer: "google"
   },
   "The Toronto Star (+ local TorStar sites)": {

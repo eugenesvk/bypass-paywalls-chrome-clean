@@ -10,6 +10,7 @@ Remove Iltalehti.fi (fix obsolete)
 Fix ilManifesto.it (timing)
 Fix iPolitics.ca (refresh)
 Fix Sciences et Avenir.fr (css)
+Fix Times Literary Supplement (cookies)
 
 * v3.0.9.0 (2023-03-12)
 Add Medienhaus Aachen
