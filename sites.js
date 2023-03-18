@@ -1951,6 +1951,14 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.jpost\.com\/js\/js_article\.min\.js/
   },
+  "The Juggernaut": {
+    domain: "###_usa_thejuggernaut",
+    group: [
+      "thejuggernaut.com",
+      "jgnt.co"
+    ],
+    allow_cookies: 1
+  },
   "The Lawyer's Daily": {
     domain: "thelawyersdaily.ca",
     allow_cookies: 1,

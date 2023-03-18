@@ -326,6 +326,7 @@
     "*://*.italian.tech/*",
     "*://*.italiaoggi.it/*",
     "*://*.japantimes.co.jp/*",
+    "*://*.jgnt.co/*",
     "*://*.journaldunet.com/*",
     "*://*.journalnow.com/*",
     "*://*.jpost.com/*",
@@ -611,6 +612,7 @@
     "*://*.thehindubusinessline.com/*",
     "*://*.theinitium.com/*",
     "*://*.theintercept.com/*",
+    "*://*.thejuggernaut.com/*",
     "*://*.thelawyersdaily.ca/*",
     "*://*.themarker.com/*",
     "*://*.themarket.ch/*",
@@ -738,5 +740,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.0.9.5"
+  "version": "3.0.9.6"
 }

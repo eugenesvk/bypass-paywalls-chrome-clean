@@ -4244,6 +4244,139 @@ else if (matchDomain('theinitium.com')) {
   removeDOMElement(paywall);
 }
 
+else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
+  let paywall = pageContains('div.font-mono', /\Read this article and many more by subscribing today/);
+  if (paywall.length) {
+    removeDOMElement(paywall[0].parentNode);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.innerText);
+        if (json && json.props.pageProps.post) {
+          let url_next = json.query.slug;
+          if (url_next && !window.location.pathname.includes(url_next))
+            refreshCurrentTab();
+          let pars = json.props.pageProps.post.fields.textEssay.fields.body.content;
+          let article = document.querySelector('div.opacity-50');
+          if (article) {
+            article.innerHTML = '';
+            article.removeAttribute('class');
+            let par_first = true;
+            function attach_text(sub_item, elem) {
+              if (sub_item.value) {
+                let sub_elem = document.createElement('span');
+                sub_elem.innerText = sub_item.value;
+                if (sub_item.marks && sub_item.marks.length) {
+                  let style = '';
+                  for (let mark of sub_item.marks) {
+                    if (mark.type === 'bold')
+                      style += 'font-weight: bold;';
+                    else if (mark.type === 'italic')
+                      style += 'font-style: italic;';
+                    else if (mark.type === 'underline')
+                      style += 'text-decoration: underline;';
+                  }
+                  sub_elem.style = style;
+                }
+                elem.appendChild(sub_elem);
+              }
+            }
+            function attach_hyperlink(sub_item, elem) {
+              if (sub_item.content && sub_item.content[0] && sub_item.content[0].value && sub_item.data && sub_item.data.uri) {
+                let sub_elem = document.createElement('a');
+                sub_elem.href = sub_item.data.uri;
+                sub_elem.innerText = sub_item.content[0].value;
+                if (!matchUrlDomain(['thejuggernaut.com', 'jgnt.co'], sub_item.data.uri))
+                  sub_elem.target = '_blank';
+                sub_elem.style = 'text-decoration: underline;';
+                elem.appendChild(sub_elem);
+              }
+            }
+            function attach_paragraph(par, elem) {
+              if (par.content && par.content.length) {
+                let span_elem = document.createElement('span');
+                for (let item of par.content) {
+                  if (item.nodeType === 'text') {
+                    attach_text(item, span_elem);
+                  } else if (item.nodeType === 'hyperlink') {
+                    attach_hyperlink(item, span_elem);
+                  } else
+                    console.log(item);
+                }
+                elem.appendChild(span_elem);
+              }
+            }
+            for (let par of pars) {
+              let elem = document.createElement('p');
+              if (['paragraph', 'heading-1'].includes(par.nodeType)) {
+                attach_paragraph(par, elem);
+              } else if (['blockquote'].includes(par.nodeType)) {
+                if (par.content && par.content.length) {
+                  for (let item of par.content) {
+                    if (item.nodeType === 'paragraph') {
+                      elem.style = 'margin: 0px 20px; font-style: italic;';
+                      attach_paragraph(item, elem);
+                    } else
+                      console.log(item);
+                  }
+                }
+              } else if (par.nodeType === 'hr') {
+                elem.appendChild(document.createElement('hr'));
+              } else if (par.nodeType === 'embedded-asset-block') {
+                if (!par_first) {
+                  if (par.data && par.data.target && par.data.target.fields) {
+                    if (par.data.target.fields.file && par.data.target.fields.file.url) {
+                      let figure = document.createElement('figure');
+                      let img = document.createElement('img');
+                      img.src = par.data.target.fields.file.url;
+                      figure.appendChild(img);
+                      if (par.data.target.fields.description) {
+                        let caption = document.createElement('figcaption');
+                        caption.innerText = par.data.target.fields.description;
+                        figure.appendChild(caption);
+                      }
+                      elem.appendChild(figure);
+                    }
+                  }
+                } else
+                  par_first = false;
+              } else if (par.nodeType === 'unordered-list') {
+                if (par.content && par.content.length) {
+                  let ul = document.createElement('ul');
+                  for (let item of par.content) {
+                    if (item.nodeType === 'list-item') {
+                      if (item.content) {
+                        for (let sub_item_par of item.content) {
+                          if (sub_item_par.nodeType === 'paragraph') {
+                            let li = document.createElement('li');
+                            attach_paragraph(sub_item_par, li);
+                            ul.appendChild(li);
+                          }
+                        }
+                      }
+                    } else
+                      console.log(item);
+                  }
+                  elem.appendChild(ul);
+                }
+              } else {
+                console.log(par);
+              }
+              if (elem.hasChildNodes) {
+                article.appendChild(document.createElement('br'));
+                article.appendChild(elem);
+              }
+            }
+          }
+        } else
+          refreshCurrentTab();
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+
 else if (matchDomain('thelawyersdaily.ca')) {
   if (window.location.pathname.startsWith('/amp/')) {
     ampToHtml();
@@ -4655,6 +4788,21 @@ function matchDomain(domains, hostname = window.location.hostname) {
     domains = [domains];
   domains.some(domain => (hostname === domain || hostname.endsWith('.' + domain)) && (matched_domain = domain));
   return matched_domain;
+}
+
+function urlHost(url) {
+  if (/^http/.test(url)) {
+    try {
+      return new URL(url).hostname;
+    } catch (e) {
+      console.log(`url not valid: ${url} error: ${e}`);
+    }
+  }
+  return url;
+}
+
+function matchUrlDomain(domains, url) {
+  return matchDomain(domains, urlHost(url));
 }
 
 function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
