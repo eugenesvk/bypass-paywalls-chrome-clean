@@ -6,6 +6,11 @@
     "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]",
     "new_site": 1
   },
+  "Euromoney": {
+    "domain": "euromoney.com",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Haaretz English": {
     "domain": "haaretz.com",
     "allow_cookies": 1,
@@ -19,42 +24,14 @@
     "domain": "inkl.com",
     "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
   },
-  "LosAndes.com.ar": {
-    "domain": "losandes.com.ar",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.lavoz\\.com\\.ar\\/sites\\/.+\\/paywall\\/losandes\\/pw\\.js"
-  },
   "New Scientist": {
     "domain": "newscientist.com",
     "allow_cookies": 1,
     "ld_google_webcache": "#subscription-barrier|div.article-body,article"
   },
-  "Quartz": {
-    "domain": "qz.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.kinja-static\\.com\\/assets\\/.+\\/regwalled-content.+\\.js"
-  },
-  "Quotidiano.net (+ regional)": {
-    "domain": "###_it_quotidiano",
-    "group": [
-      "ilgiorno.it",
-      "ilrestodelcarlino.it",
-      "iltelegrafolivorno.it",
-      "lanazione.it",
-      "quotidiano.net"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "amp_redirect": "div[data-testid='paywall-container'], div[class^='Paywall_paywall_']"
-  },
   "Sciences et Avenir": {
     "domain": "sciencesetavenir.fr",
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
-  },
-  "The Atlanta Journal-Constitution": {
-    "domain": "ajc.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.ajc\\.com\\/prod\\/ajc\\/loader\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)"
   }
 }

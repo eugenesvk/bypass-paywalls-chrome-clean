@@ -117,11 +117,6 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "eluniversal.com.mx"
   },
-  "Euromoney.com": {
-    "allow_cookies": 1,
-    "domain": "euromoney.com",
-    "useragent": "googlebot"
-  },
   "Fastcompany.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
