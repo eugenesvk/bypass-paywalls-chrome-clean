@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix Faz.net (json)
 
 * v3.1.0.0 (2023-03-19)
 Add Defector

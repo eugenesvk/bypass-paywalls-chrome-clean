@@ -648,7 +648,7 @@ else if (matchDomain('faz.net')) {
                 let split1 = json_text.split('"ArticleBody": "');
                 let split2 = split1[1].split('","author":');
                 if (split2[0].includes('"'))
-                  json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/"/g, '“') + '","author":' + split2[1];
+                  json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/(\\)?"/g, "'") + '","author":' + split2[1];
                 try {
                   json_text = JSON.parse(json_text).ArticleBody;
                 } catch (err) {
@@ -5040,7 +5040,7 @@ function pageContains(selector, text) {
 }
 
 function breakText(str) {
-  str = str.replace(/(?:^|[A-Za-z\"\“])(\.|\?|!)(?=[A-ZÖÜ\„\d][A-Za-zÀ-ÿ\„\d]{1,})/gm, "$&\n\n");
+  str = str.replace(/(?:^|[A-Za-z\"\“\)])(\.|\?|!)(?=[A-ZÖÜ\„\d][A-Za-zÀ-ÿ\„\d]{1,})/gm, "$&\n\n");
   str = str.replace(/(([a-z]{2,}|[\"\“]))(?=[A-Z](?=[A-Za-zÀ-ÿ]+))/gm, "$&\n\n");
   // exceptions: names with alternating lower/uppercase (no general fix)
   let str_rep_arr = ['AstraZeneca', 'BaFin', 'BerlHG', 'BfArM', 'BilMoG', 'BioNTech', 'DiGA', 'EuGH', 'FinTechRat', 'GlaxoSmithKline', 'IfSG', 'medRxiv', 'mmHg', 'PlosOne', 'StVO'];
