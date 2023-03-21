@@ -1469,9 +1469,9 @@ var defaultSites = {
     domain: "estadao.com.br",
     block_regex: /(acesso\.estadao\.com\.br\/paywall\/.+\/.+\.js|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
-  "O Globo (& Valor Econômico; cached articles only)": {
+  "O Globo (& Valor Econômico)": {
     domain: "globo.com",
-    block_regex: /\.tinypass\.com\//
+    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Observador.pt": {
     domain: "observador.pt",
