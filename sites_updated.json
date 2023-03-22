@@ -1,4 +1,9 @@
 {
+  "Automobilwoche": {
+    "domain": "automobilwoche.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_nCw.+\\.js"
+  },
   "Bloomberg Adria": {
     "domain": "bloombergadria.com",
     "allow_cookies": 1,

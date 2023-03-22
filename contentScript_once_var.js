@@ -6,17 +6,7 @@ var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'm
 
 if (hostname.match(/\.de$/)) {
 
-if (matchDomain('cz.de')) {
-  function cz_unhide(node) {
-    removeDOMElement(node);
-    let article_not_allowed = document.querySelector('article.news-read-not-allowed');
-    if (article_not_allowed)
-      article_not_allowed.classList.remove('news-read-not-allowed')
-  }
-  waitDOMElement('div#erasmo', 'DIV', cz_unhide);
-}
-
-else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
+if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
   function madsack_main() {
     let done = false;
     for (let n = 0; n < 10; n++) {

@@ -573,16 +573,6 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   }
 }
 
-else if (matchDomain('automobilwoche.de')) {
-  let lazy_images = document.querySelectorAll('img.lazy[data-src]');
-  for (let lazy_image of lazy_images) {
-    lazy_image.src = lazy_image.getAttribute('data-src');
-    lazy_image.removeAttribute('class');
-  }
-  let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
-  removeDOMElement(...lazy_sources);
-}
-
 else if (matchDomain('berliner-zeitung.de')) {
   window.setTimeout(function () {
     let ads = document.querySelectorAll('[id^="traffective-ad"], [class^="ad-slot_wrapper"], [class^="outbrain_container"]');
@@ -2398,10 +2388,8 @@ else if (matchDomain('ft.com')) {
   if (window.location.hostname.startsWith('amp.')) {
     amp_unhide_subscr_section('.ad-container, amp-ad');
   } else {
-    let cookie_banner = document.querySelector('.o-cookie-message');
-    let ribbon = document.querySelector('.js-article-ribbon');
-    let ads = document.querySelector('.o-ads');
-    removeDOMElement(cookie_banner, ribbon, ads);
+    let banners = document.querySelectorAll('.o-cookie-message, .js-article-ribbon, .o-ads, .o-banner');
+    removeDOMElement(...banners);
   }
 }
 

@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Remove Cellesche Zeitung (fix obsolete)
+Fix Automobilwoche.de
 Fix Faz.net (json)
 Fix Valor Economico (amp-redirect)
 
@@ -464,7 +466,7 @@ Add BQ Prime (former Bloomberg Quint)
 Add ilTirreno.it
 Add Spiegel.de (link to archive.is)
 Remove Deutsche Wirtschafts Nachrichten (fix obsolete)
-Fix Automobilwoche
+Fix Automobilwoche.de
 Fix Financial Times (cookie-banner)
 Fix Groupe SudOuest.fr
 Fix Iltalehti.fi (videos)
@@ -555,7 +557,7 @@ Update badge (site with no fix; X)
 Update block general paywall script (Pico/Wordpress)
 
 * v2.6.6.0 (2022-04-24)
-Add Automobilwoche
+Add Automobilwoche.de
 Add Better Nutrition, Gym Climber, Peloton, Podium Runner & Rock and Ice
 Add eNotes
 Add Italia Oggi

@@ -823,7 +823,7 @@ if (typeof browser !== 'object') {
     }
   }
 
-  var set_var_sites =  ['cz.de', 'nzherald.co.nz', 'theglobeandmail.com'].concat(de_madsack_domains);
+  var set_var_sites =  ['nzherald.co.nz', 'theglobeandmail.com'].concat(de_madsack_domains);
   function runOnTab_once_var(tab) {
     let tabId = tab.id;
     let url = tab.url;

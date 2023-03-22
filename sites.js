@@ -180,7 +180,7 @@ var defaultSites = {
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,
-    block_regex: /\.automobilwoche\.de\/s3fs-public\/js\/js_.+\.js/
+    block_regex: /\.automobilwoche\.de\/s3fs-public\/js\/js_nCw.+\.js/
   },
   "AutoPlus.fr": {
     domain: "autoplus.fr",
@@ -278,10 +278,6 @@ var defaultSites = {
     domain: "causeur.fr",
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
-  },
-  "Cellesche Zeitung": {
-    domain: "cz.de",
-    allow_cookies: 1,
   },
   "Challenges": {
     domain: "challenges.fr",
