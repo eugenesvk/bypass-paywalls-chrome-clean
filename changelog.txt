@@ -7,6 +7,7 @@ Remove Cellesche Zeitung (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Faz.net (json)
 Fix The Art Newspaper (js)
+Fix The West Australian
 Fix Valor Economico (amp-redirect)
 
 * v3.1.0.0 (2023-03-19)
