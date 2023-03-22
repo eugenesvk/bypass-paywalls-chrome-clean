@@ -39,6 +39,11 @@
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
   },
+  "The Art Newspaper": {
+    "domain": "theartnewspaper.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.theartnewspaper\\.com\\/_next\\/static\\/chunks\\/pages\\/access-allowed-.+\\.js"
+  },
   "The Times Literary Supplement": {
     "domain": "the-tls.co.uk",
     "remove_cookies": 1,

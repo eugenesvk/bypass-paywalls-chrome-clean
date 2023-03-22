@@ -1792,7 +1792,7 @@ var defaultSites = {
   "The Art Newspaper": {
     domain: "theartnewspaper.com",
     allow_cookies: 1,
-    block_regex: /\.amazonaws.com\/production-website-scripts\/bouncer\.js/
+    block_regex: /\.theartnewspaper\.com\/_next\/static\/chunks\/pages\/access-allowed-.+\.js/
   },
   "The Athletic": {
     domain: "###_usa_theathletic",
