@@ -1467,6 +1467,17 @@ else if (matchDomain('lecourrierdesstrateges.fr')) {
   }, 500);
 }
 
+else if (matchDomain('lefigaro.fr')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#fig-premium-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+}
+
 else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
   let poool_banner = document.querySelector('#poool-container');
   let poool_widget = document.querySelector('#poool-widget-content');

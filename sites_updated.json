@@ -29,6 +29,13 @@
     "domain": "inkl.com",
     "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
   },
+  "Le Figaro (link to archive.is)": {
+    "domain": "lefigaro.fr",
+    "allow_cookies": 1,
+    "add_ext_link": "div#fig-premium-paywall",
+    "add_ext_link_type": "archive.is",
+    "new_site": 1
+  },
   "New Scientist": {
     "domain": "newscientist.com",
     "allow_cookies": 1,
