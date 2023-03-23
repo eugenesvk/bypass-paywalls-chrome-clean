@@ -44,6 +44,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.theartnewspaper\\.com\\/_next\\/static\\/chunks\\/pages\\/access-allowed-.+\\.js"
   },
+  "The New Republic": {
+    "domain": "newrepublic.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
+    "cs_code": "[{\"cond\":\"div.article-scheduled-modal\",\"rm_elem\":1}]"
+  },
   "The Times Literary Supplement": {
     "domain": "the-tls.co.uk",
     "remove_cookies": 1,

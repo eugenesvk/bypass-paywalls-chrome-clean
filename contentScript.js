@@ -3669,9 +3669,10 @@ else if (matchDomain('newleftreview.org')) {
 }
 
 else if (matchDomain('newrepublic.com')) {
+  let modal = document.querySelector('div.article-scheduled-modal');
   let pw_popups = document.querySelector('div#pwPopups');
   let ads = document.querySelectorAll('.ad-unit, .ad-container');
-  removeDOMElement(pw_popups, ...ads);
+  removeDOMElement(modal, pw_popups, ...ads);
 }
 
 else if (matchDomain('newscientist.com')) {
