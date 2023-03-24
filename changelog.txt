@@ -8,6 +8,7 @@ Add Revue Conflits
 Remove Cellesche Zeitung (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Faz.net (json)
+Fix PEI Media (identify site)
 Fix The Art Newspaper (js)
 Fix The New Republic (modal)
 Fix The West Australian

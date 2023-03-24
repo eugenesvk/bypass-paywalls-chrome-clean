@@ -330,7 +330,7 @@ else {
       // Australian Seven West Media
       if (matchDomain('thewest.com.au') || document.querySelector('li > a[href*=".sevenwestmedia.com.au"]')) {
         window.setTimeout(function () {
-          let breach_screen = document.querySelector('div[data-testid*="BreachScreen"]:not(.paywall), div[class*="StyledBreachWallContent"]');
+          let breach_screen = document.querySelector('div.paywall div[data-testid*="BreachScreen"], div[class*="StyledBreachWallContent"]');
           if (breach_screen) {
             let scripts = document.querySelectorAll('script:not([src], [type])');
             let json_script;

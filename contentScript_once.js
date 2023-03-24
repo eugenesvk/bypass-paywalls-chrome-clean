@@ -102,7 +102,7 @@ window.setTimeout(function () {
       else if (hostname.match(/\.com$/)) {
         if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
           group = '###_usa_madavor';
-        else if (document.querySelector('script#wp-parsely-pei-events-js'))
+        else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
           group = '###_usa_pei';
       }
     }
