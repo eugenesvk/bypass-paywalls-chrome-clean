@@ -473,6 +473,7 @@ Grouped in options:\
 [Paris Match](https://www.parismatch.com) -
 [Philosophie Magazine](https://www.philomag.com) -
 [Public](https://www.public.fr) -
+[Revue Conflits](https://www.revueconflits.com) -
 [Science & Vie](https://www.science-et-vie.com) -
 [Sciences et Avenir](https://www.sciencesetavenir.fr) -
 [Télérama](https://www.telerama.fr) -

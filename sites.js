@@ -1642,6 +1642,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.reuters\.com\/(arc\/subs\/p\.min|pf\/resources\/dist\/reuters\/js\/index)\.js/
   },
+  "Revue Conflits": {
+    domain: "revueconflits.com",
+    allow_cookies: 1,
+    block_regex: /\.qiota\.com\/data/
+  },
   "Rhein-Zeitung": {
     domain: "rhein-zeitung.de",
     allow_cookies: 1,

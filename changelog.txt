@@ -4,6 +4,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 
 Post-release
 Add Le Figaro (link to archive.is)
+Add Revue Conflits
 Remove Cellesche Zeitung (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Faz.net (json)

@@ -4,13 +4,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_nCw.+\\.js"
   },
-  "Bloomberg Adria": {
-    "domain": "bloombergadria.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.bloombergadria\\.com\\/.+\\/news\\/",
-    "cs_code": "[{\"cond\":\"article[style]\",\"rm_attrib\":\"style\"}]",
-    "new_site": 1
-  },
   "Euromoney": {
     "domain": "euromoney.com",
     "allow_cookies": 1,
@@ -20,10 +13,6 @@
     "domain": "haaretz.com",
     "allow_cookies": 1,
     "useragent": "facebookbot"
-  },
-  "Harper's Magazine": {
-    "domain": "harpers.org",
-    "block_regex": "\\/harpers\\.org\\/wp-content\\/themes\\/timber\\/static\\/js\\/modal.+\\.js"
   },
   "Inkl": {
     "domain": "inkl.com",
@@ -36,10 +25,10 @@
     "add_ext_link_type": "archive.is",
     "new_site": 1
   },
-  "New Scientist": {
-    "domain": "newscientist.com",
+  "Revue Conflits": {
+    "domain": "revueconflits.com",
     "allow_cookies": 1,
-    "ld_google_webcache": "#subscription-barrier|div.article-body,article"
+    "block_regex": "\\.qiota\\.com\\/data"
   },
   "Sciences et Avenir": {
     "domain": "sciencesetavenir.fr",

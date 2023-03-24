@@ -524,6 +524,7 @@
     "*://*.repubblica.it/*",
     "*://*.republicain-lorrain.fr/*",
     "*://*.reuters.com/*",
+    "*://*.revueconflits.com/*",
     "*://*.rhein-zeitung.de/*",
     "*://*.richmond.com/*",
     "*://*.rnd.de/*",
@@ -740,5 +741,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.0.6"
+  "version": "3.1.0.7"
 }
