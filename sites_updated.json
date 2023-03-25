@@ -9,6 +9,11 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
+  "Flair.nl": {
+    "domain": "flair.nl",
+    "remove_cookies_select_drop": ["TID_ID"],
+    "block_regex": "(\\.flair\\.nl\\/temptation\\/resolve|temptation\\.flair\\.nl\\/temptation\\.js)"
+  },
   "Haaretz English": {
     "domain": "haaretz.com",
     "allow_cookies": 1,
@@ -21,9 +26,19 @@
   "Le Figaro (link to archive.is)": {
     "domain": "lefigaro.fr",
     "allow_cookies": 1,
-    "add_ext_link": "div#fig-premium-paywall",
+    "add_ext_link": "div#fig-premium-paywall|article",
     "add_ext_link_type": "archive.is",
     "new_site": 1
+  },
+  "Libelle.nl": {
+    "domain": "libelle.nl",
+    "remove_cookies_select_drop": ["TID_ID"],
+    "block_regex": "(\\.libelle\\.nl\\/temptation\\/resolve|temptation\\.libelle\\.nl\\/temptation\\.js)"
+  },
+  "Margriet.nl": {
+    "domain": "margriet.nl",
+    "remove_cookies_select_drop": ["TID_ID"],
+    "block_regex": "(\\.margriet\\.nl\\/temptation\\/resolve|temptation\\.margriet\\.nl\\/temptation\\.js)"
   },
   "Revue Conflits": {
     "domain": "revueconflits.com",

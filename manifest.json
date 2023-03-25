@@ -245,6 +245,7 @@
     "*://*.firstthings.com/*",
     "*://*.fiskeribladet.no/*",
     "*://*.flair.be/*",
+    "*://*.flair.nl/*",
     "*://*.fnlondon.com/*",
     "*://*.forbes.com/*",
     "*://*.foreignaffairs.com/*",
@@ -391,6 +392,7 @@
     "*://*.levif.be/*",
     "*://*.lexpress.fr/*",
     "*://*.libelle.be/*",
+    "*://*.libelle.nl/*",
     "*://*.liberation-champagne.fr/*",
     "*://*.limburger.nl/*",
     "*://*.lindependant.fr/*",
@@ -408,6 +410,7 @@
     "*://*.mainichi.jp/*",
     "*://*.mallorcazeitung.es/*",
     "*://*.marca.com/*",
+    "*://*.margriet.nl/*",
     "*://*.marianne.net/*",
     "*://*.marketwatch.com/*",
     "*://*.masslive.com/*",
@@ -741,5 +744,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.0.7"
+  "version": "3.1.0.8"
 }

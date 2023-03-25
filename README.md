@@ -522,7 +522,7 @@ Grouped in options:\
 [Sud Ouest](https://www.sudouest.fr)\
 *Roularta Media Group* sites like\
 [Femmes d'Aujourd'hui](https://www.femmesdaujourdhui.be) -
-[Flair](https://www.flair.be/fr) -
+[Flair.be](https://www.flair.be/fr) -
 [Le Vif](https://www.levif.be)
 
 ##### Germany/Austria
@@ -652,7 +652,10 @@ Grouped in options:\
 *DPG Media (not ADR)* sites like\
 [De Morgen](https://www.demorgen.be) -
 [De Volkskrant](https://www.volkskrant.nl) -
+[Flair.nl](https://www.flair.nl) -
 [Humo](https://www.humo.be) -
+[Libelle.nl](https://www.libelle.nl) -
+[Margriet](https://www.margriet.nl) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
 *Mediahuis Nederland Regional* sites like\
@@ -666,10 +669,10 @@ Grouped in options:\
 [Leeuwarder Courant](https://www.lc.nl)\
 *Roularta Media Group* sites like\
 [Artsenkrant](https://www.artsenkrant.com) -
-[Flair](https://www.flair.be/nl) -
+[Flair.be](https://www.flair.be/nl) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -
-[Libelle](https://www.libelle.be)
+[Libelle.be](https://www.libelle.be)
 
 ##### Norway
 [DN](https://www.dn.no)\

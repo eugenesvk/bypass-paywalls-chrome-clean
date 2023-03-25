@@ -440,13 +440,16 @@ var defaultSites = {
     domain: "###_nl_dpg_media",
     group: [
       "demorgen.be",
+      "flair.nl",
       "humo.be",
+      "libelle.nl",
+      "margriet.nl",
       "parool.nl",
       "trouw.nl",
       "volkskrant.nl"
     ],
     remove_cookies_select_drop: ["TID_ID"],
-    block_regex: "(\\.{domain}\\/temptation\\/resolve|temptation\\.{domain}\\/temptation\.js)"
+    block_regex: "(\\.{domain}\\/temptation\\/resolve|temptation\\.{domain}\\/temptation\\.js)"
   },
   "Eastwest.eu": {
     domain: "eastwest.eu",
