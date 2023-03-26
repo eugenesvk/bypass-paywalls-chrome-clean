@@ -1730,6 +1730,12 @@ var defaultSites = {
     domain: "infzm.com",
     allow_cookies: 1
   },
+  "Sport Life Ibérica (text only; opt-in to custom sites)": {
+    domain: "###_es_sport_life",
+    group: [],
+    allow_cookies: 1,
+    ld_json: "div.c-paywall|div.c-mainarticle__body"
+  },
   "Sports Illustrated": {
     domain: "si.com",
     allow_cookies: 1,

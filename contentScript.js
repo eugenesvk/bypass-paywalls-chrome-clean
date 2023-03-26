@@ -73,7 +73,6 @@ if (bg2csData.ld_json) {
               json_key = Object.keys(json).find(key => key.match(/^articlebody$/i)) || Object.keys(json).find(key => key.match(/^text$/i));
               json_text = parseHtmlEntities(json[json_key]);
             }
-			console.log(json_text);
             let content = document.querySelector(article_sel);
             if (json_text && content) {
               let parser = new DOMParser();

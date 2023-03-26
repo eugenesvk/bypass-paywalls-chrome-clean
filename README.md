@@ -737,6 +737,8 @@ Grouped in options:\
 [Las Provincias](https://www.lasprovincias.es) -
 [Sur](https://www.diariosur.es)
 
+*[Sport Life Ibérica](https://www.sportlifeiberica.es/)* sites (opt-in to custom sites)
+
 ##### Sweden
 [Aftonbladet](https://www.aftonbladet.se) -
 [Dagens ETC](https://www.etc.se) -

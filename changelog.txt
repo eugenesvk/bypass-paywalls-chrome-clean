@@ -8,6 +8,7 @@ Add Le Figaro (link to archive.is)
 Add Libelle.nl
 Add Margriet.nl
 Add Revue Conflits
+Add Sport Life Iberica (opt-in to custom sites)
 Remove Cellesche Zeitung (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Faz.net (json)

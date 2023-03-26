@@ -1317,11 +1317,12 @@ function clear_cookies() {
         change_headers.push(custom_domain);
       }
     }
-    let custom_amp_unhide = rules.amp_unhide;
-    if (custom_amp_unhide) {
+    if (rules.amp_unhide) {
       if (!amp_unhide.includes(custom_domain))
         amp_unhide.push(custom_domain);
     }
+    if (rules.ld_json)
+      ld_json[custom_domain] = rules.ld_json;
     custom_flex_domains.push(custom_domain);
     if (!enabledSites.includes(custom_domain))
       enabledSites.push(custom_domain);

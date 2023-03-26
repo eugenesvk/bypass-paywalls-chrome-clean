@@ -65,6 +65,8 @@ window.setTimeout(function () {
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
       if (document.querySelector('link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';
+      else if (document.querySelector('div > ul > li > a[href="https://www.sportlife.es/"]'))
+        group = '###_es_sport_life';
     } else if (hostname.endsWith('.fi')) {
       if (document.querySelector('link[href^="https://assets.almatalent.fi"]'))
         group = '###_fi_alma_talent';// no fix
