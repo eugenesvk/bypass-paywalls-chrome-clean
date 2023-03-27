@@ -82,7 +82,7 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.co.uk')) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';
-    } else if (hostname.match(/\.(ca|com|net|org)$/)) {
+    } else if (hostname.match(/\.(ca|com|net|news|org)$/)) {
       if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
         group = '###_ca_gcm';
       else if (document.querySelector('script[src*=".postmedia.digital/"], meta[content*=".postmedia.digital/"]'))

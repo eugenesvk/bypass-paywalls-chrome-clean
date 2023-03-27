@@ -2358,7 +2358,7 @@ var defaultSites = {
   },
   "TownNews sites (Blox CMS; not encrypted)": {
     domain: "###_usa_townnews",
-    block_regex_general: /\.com\/shared-content\/art\/tncms\/user\/user\.js/
+    block_regex_general: /\/shared-content\/art\/tncms\/user\/user\.js/
   },
   "TribDss": {
     domain: "tribdss.com",
@@ -2467,7 +2467,7 @@ var custom_flex_not = {
   "###_uk_axate.io": ["thinkofx.net"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
-  "###_usa_townnews": ["townnews.com"]
+  "###_usa_townnews": ["bloxdigital.com", "townnews.com"]
 }
 var custom_flex_domains;
 var custom_flex_not_domains;
