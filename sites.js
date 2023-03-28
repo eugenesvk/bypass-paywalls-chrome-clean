@@ -163,7 +163,7 @@ var defaultSites = {
       "westernadvocate.com.au"
     ],
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/)/
+    block_regex: /\.piano\.io\//
   },
   "Australia Nine Entertainment": {
     domain: "###_au_nine_ent",
@@ -242,7 +242,7 @@ var defaultSites = {
     domain: "bqprime.com",
     allow_cookies: 1,
     block_js_inline: /\.bqprime\.com\/.+\/.+\?rel=geo_block/,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Bulletin of the Atomic Scientists": {
     domain: "thebulletin.org",
@@ -253,10 +253,10 @@ var defaultSites = {
     domain: "businessinsider.com",
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Business Post.ie (do not block Piano.io-script and cookie-banner externally)": {
+  "Business Post.ie": {
     domain: "businesspost.ie",
-    block_regex: /cdn\.cxense\.com\//,
-    remove_cookies_select_drop: ["xbc"]
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\//
   },
   "Business Standard": {
     domain: "business-standard.com",
@@ -584,7 +584,7 @@ var defaultSites = {
   "Foreign Policy": {
     domain: "foreignpolicy.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
+    block_regex: /\.tinypass\.com\//
   },
   "Fortune": {
     domain: "fortune.com",
@@ -806,7 +806,7 @@ var defaultSites = {
       "mallorcazeitung.es"
     ],
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Grupo Unidad Editorial": {
     domain: "###_es_unidad",
@@ -1474,12 +1474,12 @@ var defaultSites = {
   },
   "O Globo (& Valor Econômico)": {
     domain: "globo.com",
-    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Observador.pt": {
     domain: "observador.pt",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Outdoor Life": {
     domain: "outdoorlife.com",
@@ -1544,7 +1544,7 @@ var defaultSites = {
       "variety.com",
       "wwd.com"
     ],
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "PhiloMag.com": {
     domain: "philomag.com",
@@ -1565,7 +1565,7 @@ var defaultSites = {
   },
   "Pittsburgh Post Gazette": {
     domain: "post-gazette.com",
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
+    block_regex: /\.tinypass\.com\//
   },
   "Política Exterior": {
     domain: "politicaexterior.com",
@@ -1713,7 +1713,7 @@ var defaultSites = {
   },
   "Slate": {
     domain: "slate.com",
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "SlideShare": {
     domain: "slideshare.net",
@@ -2065,8 +2065,9 @@ var defaultSites = {
     block_regex: /\.tinypass\.com\//
   },
   "The Spectator World": {
-    domain: "spectatorworld.com",
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/)/
+    domain: "thespectator.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
   },
   "The Star Malaysia": {
     domain: "thestar.com.my",
@@ -2328,7 +2329,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "businesspost.ie", "japantimes.co.jp", "kurier.at", "onet.pl"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "japantimes.co.jp", "kurier.at", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

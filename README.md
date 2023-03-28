@@ -207,7 +207,7 @@ Grouped in options:\
 [The New Republic](https://newrepublic.com) -
 [The New York Review of Books](https://www.nybooks.com) -
 [The Point Magazine](https://thepointmag.com) -
-[The Spectator World](https://spectatorworld.com) -
+[The Spectator World](https://thespectator.com) -
 [The Wrap](https://www.thewrap.com)
 
 Grouped in options:\

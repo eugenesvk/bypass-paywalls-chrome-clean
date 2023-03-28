@@ -2052,7 +2052,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                         elem.appendChild(span);
                       }
                     } else if (child.children && child.children.length && child.children[0].text && child.children[0].text.length > 2) {
-                      if (child.href || (child.relation && child.relation.follow && child.relation.follow.url)) {
+                      if ((child.href  && child.href.length > 2) || (child.relation && child.relation.follow && child.relation.follow.url)) {
                         let par_link = document.createElement('a');
                         par_link.href = child.href || child.relation.follow.url;
                         par_link.innerText = child.children[0].text;
@@ -2386,6 +2386,50 @@ if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   }
   let ads = document.querySelectorAll('div[id^="ad_article"]');
   hideDOMElement(...ads);
+}
+
+else if (matchDomain('businesspost.ie')) {
+  function bpie_main() {
+    if ($) {
+      let article_id_dom = document.querySelector('article[id]');
+      let article_id;
+      if (article_id_dom)
+        article_id = article_id_dom.id;
+      if (article_id) {
+        let bp_ajaxurl = 'https://www.businesspost.ie/wp-admin/admin-ajax.php';
+        let data_ajax = {
+          action: 'fetch_article_content',
+          type: 'POST',
+          data: {
+            id: article_id
+          },
+          dataType: 'json',
+          contentType: 'application/json'
+        };
+        $.ajax({
+          type: 'POST',
+          url: bp_ajaxurl,
+          data: data_ajax,
+          success: function (data) {
+            $('main article .article-body-section').html(data);
+          }
+        });
+      }
+    } else
+      window.location.reload(true);
+  }
+  csDoneOnce = true;
+  window.setTimeout(function () {
+    let paywall = document.querySelector('div#bp_paywall_content');
+    let article_id_dom = document.querySelector('article[id]');
+    let article_id;
+    if (article_id_dom)
+      article_id = article_id_dom.id;
+    if (paywall || article_id) {
+      removeDOMElement(paywall);
+      insert_script(bpie_main);
+    }
+  }, 500);
 }
 
 else if (matchDomain('citywire.com')) {

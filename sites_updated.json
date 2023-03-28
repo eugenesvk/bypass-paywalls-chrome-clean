@@ -61,6 +61,11 @@
     "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
     "cs_code": "[{\"cond\":\"div.article-scheduled-modal\",\"rm_elem\":1}]"
   },
+  "The Spectator World - new domain": {
+    "domain": "thespectator.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com/"
+  },
   "The Times Literary Supplement": {
     "domain": "the-tls.co.uk",
     "remove_cookies": 1,

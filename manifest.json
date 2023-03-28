@@ -562,7 +562,6 @@
     "*://*.sofrep.com/*",
     "*://*.spectator.co.uk/*",
     "*://*.spectator.com.au/*",
-    "*://*.spectatorworld.com/*",
     "*://*.spglobal.com/*",
     "*://*.spiegel.de/*",
     "*://*.sportico.com/*",
@@ -631,6 +630,7 @@
     "*://*.therecord.com/*",
     "*://*.thesaturdaypaper.com.au/*",
     "*://*.thespec.com/*",
+    "*://*.thespectator.com/*",
     "*://*.thestar.com.my/*",
     "*://*.thestar.com/*",
     "*://*.thestate.com/*",
@@ -744,5 +744,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.1.1"
+  "version": "3.1.1.2"
 }
