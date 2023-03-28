@@ -750,6 +750,7 @@ Grouped in options:\
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)](https://www.nzz.ch) -
+[Tages-Anzeiger (link to archive.is)](https://www.tagesanzeiger.ch) -
 [The Market](https://themarket.ch)
 
 ##### Australia/New Zealand

@@ -50,6 +50,14 @@
     "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
   },
+  "TagesAnzeiger.ch (link to archive.is)": {
+    "domain": "tagesanzeiger.ch",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "add_ext_link": "div#piano-premium > div|article p",
+    "add_ext_link_type": "archive.is",
+    "new_site": 1
+  },
   "The Art Newspaper": {
     "domain": "theartnewspaper.com",
     "allow_cookies": 1,
