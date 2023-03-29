@@ -4,7 +4,8 @@ var domain;
 var csDone = false;
 var csDoneOnce = false;
 
-var ar_grupo_clarin_domains =['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
+var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
+var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
 var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
@@ -1234,7 +1235,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'lavenir.net', 'ledauphine.com', 'lesinrocks.com', 'lejsl.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'lesinrocks.com', 'lejsl.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -1434,18 +1435,6 @@ else if (matchDomain('lanouvellerepublique.fr')) {
   let alert_didacticiel = document.querySelector('div.alert-didacticiel');
   let loading = document.querySelectorAll('span.loading');
   removeDOMElement(alert_didacticiel, ...loading);
-}
-
-else if (matchDomain('lavenir.net')) {
-  let paywall = document.querySelector('div.is-preview');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let div_hidden = document.querySelector('div.is-hidden');
-    if (div_hidden)
-      div_hidden.classList.remove('is-hidden');
-  }
-  let ads = document.querySelectorAll('div.ap-AdContainer');
-  removeDOMElement(...ads);
 }
 
 else if (matchDomain('lecourrierdesstrateges.fr')) {
@@ -1961,9 +1950,23 @@ else if (matchDomain(it_gedi_domains)) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(be|nl)$/) || matchDomain(['artsenkrant.com'])) {//belgium/netherlands
+} else if (window.location.hostname.match(/\.(be|nl)$/) || matchDomain(['artsenkrant.com', 'lavenir.net'])) {//belgium/netherlands
 
-if (matchDomain('fd.nl')) {
+if (matchDomain(be_groupe_ipm_domains)) {
+  let paywall = document.querySelector('div.is-preview');
+  if (paywall) {
+    paywall.classList.remove('is-preview');
+    window.setTimeout(function () {
+      let div_hidden = document.querySelector('div.is-hidden');
+      if (div_hidden)
+        div_hidden.classList.remove('is-hidden');
+    }, 1000);
+  }
+  let ads = document.querySelectorAll('div.ap-AdContainer, div.ap-Outbrain');
+  removeDOMElement(...ads);
+}
+
+else if (matchDomain('fd.nl')) {
   let reg_modal = document.querySelector('div.modal.upsell');
   if (reg_modal)
     refreshCurrentTab();
@@ -4990,7 +4993,7 @@ function refreshCurrentTab() {
   ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
 }
 
-function archiveLink(url, text_fail = 'BPC > Full article text:\r\n') {
+function archiveLink(url, text_fail = 'BPC > Full article text (only report issue if not working for over a week):\r\n') {
   return externalLink(['archive.today', 'archive.is'], 'https://{domain}?run=1&url={url}', url, text_fail);
 }
 

@@ -443,11 +443,9 @@ Grouped in options:\
 [Challenges](https://www.challenges.fr) -
 [Charlie Hebdo](https://charliehebdo.fr) -
 [Connaissance des Arts](https://www.connaissancedesarts.com) -
-[DH Les Sports+](https://www.dhnet.be) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
 [Franc-Tireur](https://www.franc-tireur.fr) -
-[L'Avenir](https://www.lavenir.net) -
 [L'Écho](https://lecho.be) -
 [L'Express](https://www.lexpress.fr) -
 [L'Humanité](https://www.humanite.fr) -
@@ -456,7 +454,6 @@ Grouped in options:\
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
-[La Libre](https://www.lalibre.be) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
 [Le Courrier des Stratèges](https://lecourrierdesstrateges.fr) -
@@ -492,6 +489,10 @@ Grouped in options:\
 [Le Progrès](https://www.leprogres.fr) -
 [Le Républicain Lorrain](https://www.republicain-lorrain.fr) -
 [Vosges Matin](https://www.vosgesmatin.fr)\
+*Groupe IPM* sites like\
+[DH Les Sports+](https://www.dhnet.be) -
+[L'Avenir](https://www.lavenir.net) -
+[La Libre](https://www.lalibre.be)\
 *Groupe La Dépêche* sites like\
 [Centre Presse](https://www.centrepresseaveyron.fr) -
 [L'Indépendant](https://www.lindependant.fr) -

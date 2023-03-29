@@ -5,6 +5,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add TagesAnzeiger.ch (link to archive.is)
 Fix BusinessPost.ie (json)
+Fix DHnet.be, L'Avenir & LaLibre.be (Add Groupe IPM)
 Fix The Spectator World (new domain)
 Fix TownNews sites (js)
 

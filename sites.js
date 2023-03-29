@@ -404,11 +404,6 @@ var defaultSites = {
     domain: "aerzteblatt.de",
     allow_cookies: 1
   },
-  "DH Les Sports+": {
-    domain: "dhnet.be",
-    allow_cookies: 1,
-    useragent: "googlebot"
-  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,
@@ -704,6 +699,16 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
+  "Groupe IPM": {
+    domain: "###_be_groupe_ipm",
+    group: [
+      "dhnet.be",
+      "lalibre.be",
+      "lavenir.net"
+    ],
+    allow_cookies: 1,
+    block_regex: /(\.piano\.io\/xbuilder\/experience\/execute|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Groupe La Dépêche": {
     domain: "###_fr_groupe_la_depeche",
@@ -1020,10 +1025,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.cxense\.com\//
   },
-  "L'Avenir": {
-    domain: "lavenir.net",
-    allow_cookies: 1
-  },
   "L'Écho": {
     domain: "lecho.be",
     referer: "google"
@@ -1066,11 +1067,6 @@ var defaultSites = {
   "La Gazzetta dello Sport": {
     domain: "gazzetta.it",
     allow_cookies: 1
-  },
-  "La Libre.be": {
-    domain: "lalibre.be",
-    allow_cookies: 1,
-    useragent: "googlebot"
   },
   "La Nación (free articles only)": {
     domain: "lanacion.com.ar"

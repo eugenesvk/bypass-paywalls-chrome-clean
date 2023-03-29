@@ -4,6 +4,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_nCw.+\\.js"
   },
+  "DH Les Sports+": {
+    "domain": "dhnet.be",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
+  },
   "Euromoney": {
     "domain": "euromoney.com",
     "allow_cookies": 1,
@@ -22,6 +28,12 @@
   "Inkl": {
     "domain": "inkl.com",
     "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
+  },
+  "La Libre.be": {
+    "domain": "lalibre.be",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
   },
   "Le Figaro (link to archive.is)": {
     "domain": "lefigaro.fr",
