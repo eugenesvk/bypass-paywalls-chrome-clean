@@ -8,6 +8,7 @@ Fix BusinessPost.ie (json)
 Fix DHnet.be, L'Avenir & LaLibre.be (Add Groupe IPM)
 Fix The Spectator World (new domain)
 Fix TownNews sites (js)
+Fix ZeroHedge (timing)
 
 * v3.1.1.0 (2023-03-26)
 Add Flair.nl

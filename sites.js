@@ -251,6 +251,7 @@ var defaultSites = {
   },
   "Business Insider": {
     domain: "businessinsider.com",
+    allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Business Post.ie": {
