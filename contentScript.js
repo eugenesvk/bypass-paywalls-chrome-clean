@@ -2985,36 +2985,6 @@ else if (matchDomain('bqprime.com')) {
   removeDOMElement(...ads);
 }
 
-else if (matchDomain('business-standard.com')) {
-  let skip_button = document.querySelector('a.btn_skip');
-  if (skip_button)
-    skip_button.click();
-  if (!window.location.pathname.startsWith('/article-amp/')) {
-    let paywall = document.querySelector('span.p-content.paywall, main, p.read-txt');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
-    }
-    let story_content = document.querySelector('div.story-content');
-    if (story_content)
-      story_content.classList.remove('story-content');
-    let ads = document.querySelectorAll('div[class*="adv-"]');
-    removeDOMElement(...ads);
-  } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed, .block-cont-amp, #divnonpaidcontent, section > div.article_image, div[subscriptions-actions], .reader');
-    let hidden_images = document.querySelectorAll('p > amp-img[src][width]');
-    for (let elem of hidden_images) {
-      let img = document.createElement('img');
-      img.src = elem.getAttribute('src');
-      elem.parentNode.replaceChild(img, elem);
-    }
-    let author_image = document.querySelector('amp-img > img[src*="/bs/img/author/"]');
-    if (author_image)
-      author_image.removeAttribute('class');
-  }
-}
-
 else if (matchDomain('businessinsider.com')) {
   let ads = document.querySelectorAll('div.l-ad, div.in-post-sticky, aside.has-video-ad');
   hideDOMElement(...ads);

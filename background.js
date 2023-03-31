@@ -618,26 +618,6 @@ if ((typeof browser !== 'object') && navigator_ua_mobile) {
     ["blocking", "requestHeaders"]);
 }
 
-// wap.business-standard.com/article-amp/ set user-agent to mobile
-ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
-  if (!isSiteEnabled(details)) {
-    return;
-  }
-  let headers = details.requestHeaders;
-  headers = headers.map(function (header) {
-      if (header.name.toLowerCase() === 'user-agent')
-        header.value = userAgentMobile;
-      return header;
-    });
-  return {
-    requestHeaders: headers
-  };
-}, {
-  urls: ["*://wap.business-standard.com/article-amp/*"],
-  types: ["main_frame"]
-},
-  ["blocking", "requestHeaders"]);
-
 // economictimes redirect
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('.com/epaper/')) {
