@@ -804,6 +804,26 @@ else if (matchDomain('philomag.de')) {
   }
 }
 
+
+else if (matchDomain('schwaebische.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.sve-paywall-wrapper');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.article_body');
+    let body = document.querySelector('body');
+    if (body)
+      body.removeAttribute('style');
+    waitDOMAttribute('body', 'body', 'style', node => node.removeAttribute('style'), true);
+  }
+  window.setTimeout(function () {
+    let ads = document.querySelectorAll('div.fp-ad-placeholder');
+    hideDOMElement(...ads);
+  }, 1000);
+}
+
 else if (matchDomain('spiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div[data-area="paywall"]');
@@ -1220,7 +1240,7 @@ else if (matchDomain('politicaexterior.com')) {
   let paywall = document.querySelector('div[class^="paywall-"]');
   if (paywall) {
     let article = document.querySelector('div.entry-content-text');
-    let json = document.querySelector('script[type="application/ld+json"]:not([class]');
+    let json = document.querySelector('script[type="application/ld+json"]:not([class])');
     if (json) {
       let json_text = JSON.parse(json.text).description.replace(/&amp;nbsp;/g, '');
       let article_new = document.createElement('div');
@@ -3200,7 +3220,7 @@ else if (matchDomain('economictimes.indiatimes.com')) {
     let full_text = document.querySelector('div.paywall.p1');
     if (content && full_text)
       content.innerText = full_text.innerText;
-    let page_content = document.querySelector('div.pageContent:not([style]');
+    let page_content = document.querySelector('div.pageContent:not([style])');
     if (page_content)
       page_content.setAttribute('style', 'height: auto !important;');
   }
@@ -3728,7 +3748,7 @@ else if (matchDomain('newscientist.com')) {
     replaceDomElementExt(url_cache, true, false, 'div.article-body, article');
   }
   window.setTimeout(function () {
-    let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src]');
+    let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
     for (let elem of lazy_images)
       elem.src = elem.getAttribute('data-src').split('?')[0] + '?width=800';
     let ads = document.querySelectorAll('div[class*="Advert"]');

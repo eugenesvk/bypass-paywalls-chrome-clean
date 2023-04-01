@@ -1682,6 +1682,10 @@ var defaultSites = {
     domain: "sandiegouniontribune.com",
     block_regex: /\.californiatimes\.com\/meteringjs/
   },
+  "Schwäbische Zeitung": {
+    domain: "schwaebische.de",
+    allow_cookies: 1
+  },
   "Science (free articles only)": {
     domain: "science.org",
     allow_cookies: 1
