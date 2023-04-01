@@ -10,6 +10,13 @@
     "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
   },
+  "Epicurious": {
+    "domain": "epicurious.com",
+    "allow_cookies": 1,
+    "remove_cookies": 1,
+    "block_regex": "(\\.epicurious\\.com\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "useragent": "googlebot"
+  },
   "Euromoney": {
     "domain": "euromoney.com",
     "allow_cookies": 1,

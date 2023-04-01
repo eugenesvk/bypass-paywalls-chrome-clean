@@ -221,6 +221,7 @@
     "*://*.em.com.br/*",
     "*://*.enotes.com/*",
     "*://*.epe.es/*",
+    "*://*.epicurious.com/*",
     "*://*.espn.com/*",
     "*://*.esprit.presse.fr/*",
     "*://*.esquire.com/*",
@@ -745,5 +746,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.1.5"
+  "version": "3.1.1.6"
 }

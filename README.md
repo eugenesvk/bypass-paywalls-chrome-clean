@@ -214,6 +214,7 @@ Grouped in options:\
 *Condé Nast magazines* sites like\
 [Architectural Digest](https://www.architecturaldigest.com) -
 [Bon Appétit](https://www.bonappetit.com) -
+[Epicurious](https://www.epicurious.com) -
 [GC](https://www.gq.com) -
 [The New Yorker](https://www.newyorker.com) -
 [Vanity Fair](https://www.vanityfair.com) -

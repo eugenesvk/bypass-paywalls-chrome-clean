@@ -313,6 +313,7 @@ var defaultSites = {
     group: [
       "architecturaldigest.com",
       "bonappetit.com",
+      "epicurious.com",
       "gq.com",
       "newyorker.com",
       "vanityfair.com",
