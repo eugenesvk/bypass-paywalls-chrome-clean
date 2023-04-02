@@ -49,6 +49,12 @@
     "add_ext_link_type": "archive.is",
     "new_site": 1
   },
+  "Le Grand Continent": {
+    "domain": "legrandcontinent.eu",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body.paywall,body.pw,body.softwall\",\"rm_class\":\"paywall,pw,softwall\"},{\"cond\":\"div#fix-pw,div.disposableBanner\",\"rm_elem\":1}]",
+    "new_site": 1
+  },
   "Libelle.nl": {
     "domain": "libelle.nl",
     "remove_cookies_select_drop": ["TID_ID"],

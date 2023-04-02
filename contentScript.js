@@ -1255,7 +1255,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'lesinrocks.com', 'lejsl.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'legrandcontinent.eu', 'lejsl.com', 'lesinrocks.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -1495,6 +1495,14 @@ else if (matchDomain('lefigaro.fr')) {
     if (article)
       article.firstChild.before(archiveLink(url));
   }
+}
+
+else if (matchDomain('legrandcontinent.eu')) {
+  let paywall = document.querySelector('body.paywall, body.pw, body.softwall');
+  if (paywall)
+    paywall.classList.remove('paywall', 'pw', 'softwall');
+  let banners = document.querySelectorAll('div#fix-pw, div.disposableBanner')
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {

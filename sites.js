@@ -1123,6 +1123,10 @@ var defaultSites = {
     domain: "lefigaro.fr",
     allow_cookies: 1
   },
+  "Le Grand Continent": {
+    domain: "legrandcontinent.eu",
+    allow_cookies: 1
+  },
   "Le Journal du Dimanche": {
     domain: "lejdd.fr",
     allow_cookies: 1,
