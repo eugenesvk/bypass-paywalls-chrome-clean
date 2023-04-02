@@ -2467,9 +2467,21 @@ else if (matchDomain('businesspost.ie')) {
 }
 
 else if (matchDomain('citywire.com')) {
-  removeClassesList(['article-locked', 'm-article--locked', 'm-media-container--locked', 'm-article__body--locked']);
-  let banners = document.querySelectorAll('registration-widget, div.alert--locked');
-  removeDOMElement(...banners);
+  let url = window.location.href;
+  let paywall = document.querySelector('div.locked-content.cw-article-body');
+  if (paywall) {
+    paywall.classList.remove('locked-content');
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.cw-article-body');
+  }
+  window.setTimeout(function () {
+    let banner = document.querySelector('div#lockedLoginPanel');
+    removeDOMElement(banner);
+    let article = document.querySelector('div.cw-article-body');
+    if (article)
+      removeDOMElement(article.nextSibling);
+  }, 1000);
 }
 
 else if (matchDomain('ft.com')) {
