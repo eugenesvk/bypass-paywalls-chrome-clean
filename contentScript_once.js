@@ -52,6 +52,8 @@ window.setTimeout(function () {
     } else if (hostname.match(/\.(de|at|ch)$/) || matchDomain(['horizont.net', 'lebensmittelzeitung.net'])) {
       if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))
         group = '###_de_funke_medien';
+      else if (document.querySelector('div.navigation__personalization > a[href^="https://www.haas-mediengruppe.de/"]'))
+        group = '###_de_haas_medien';
       else if (document.querySelector('link[href*=".rndtech.de/"]'))
         group = '###_de_madsack';
       else if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))

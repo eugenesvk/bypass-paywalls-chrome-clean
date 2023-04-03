@@ -1501,7 +1501,7 @@ else if (matchDomain('legrandcontinent.eu')) {
   let paywall = document.querySelector('body.paywall, body.pw, body.softwall');
   if (paywall)
     paywall.classList.remove('paywall', 'pw', 'softwall');
-  let banners = document.querySelectorAll('div#fix-pw, div.disposableBanner')
+  let banners = document.querySelectorAll('div#fix-pw, div.disposableBanner');
   removeDOMElement(...banners);
 }
 
@@ -1724,7 +1724,7 @@ if (matchDomain('corriere.it')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');
   } else {
     let url = window.location.href;
-    if (url.includes('_preview.shtml')) {
+    if (url.includes('_preview.shtml') && !window.location.pathname.startsWith('/podcast/')) {
       window.setTimeout(function () {
         window.location.href = url.replace('_preview.shtml', '.shtml').split('?')[0];
       }, 500);

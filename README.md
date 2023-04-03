@@ -571,6 +571,7 @@ Grouped in options:\
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
 [Westfälische Rundschau](https://www.wr.de)\
+*[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken/)* sites (opt-in to custom sites)\
 *Landwirtschaftsverlag* sites like\
 [Profi.de](https://www.profi.de) -
 [Top Agrar.at](https://www.topagrar.at) -

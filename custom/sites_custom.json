@@ -132,11 +132,6 @@
     "domain": "finanz-szene.de",
     "useragent": "googlebot"
   },
-  "Fnweb.de": {
-    "allow_cookies": 1,
-    "domain": "fnweb.de",
-    "useragent": "googlebot"
-  },
   "Freitag.de": {
     "allow_cookies": 1,
     "domain": "freitag.de",
@@ -272,11 +267,6 @@
     "allow_cookies": 1,
     "domain": "manilatimes.net",
     "ld_json": "div.website-packages|div.article-body-content"
-  },
-  "Mannheimer-morgen.de": {
-    "allow_cookies": 1,
-    "domain": "mannheimer-morgen.de",
-    "useragent": "googlebot"
   },
   "Marketscreener.com (only free articles)": {
     "domain": "marketscreener.com"
