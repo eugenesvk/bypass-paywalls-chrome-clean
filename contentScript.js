@@ -1567,41 +1567,36 @@ else if (matchDomain('lesechos.fr')) {
         removeDOMElement(abo_banner);
         let url = window.location.href;
         let html = document.documentElement.outerHTML;
-        let state;
-        let split1 = html.split('window.__CONFIG__=')[1];
-        let split2 = split1.split('</script>')[0].trim();
-        if (split2.includes('window.__DATA__=')) {
-          state = split2.split('window.__DATA__=')[1].split('};')[0] + '}';
-        } else
-          state = split2.substr(0, split2.length - 1);
         try {
+          let split1 = html.split(/window\.__REACT_QUERY_STATE__\s?=/)[1];
+          let state = split1.split('</script>')[0].trim().replace(/;$/, '');
           let data = JSON.parse(state);
-          let data_article = data.article ? data.article : data.pageProps;
-          if (data_article.dehydratedState)
-            data_article = data_article.dehydratedState.queries[1].state;
-          let article = data_article.data.stripes[0].mainContent[0].data.description.replace(/allowfullscreen=''/g, '');
+          let data_article = data.queries[1].state;
           let url_loaded = data_article.data.path;
-          if (url_loaded && !url.replace(/%20/g, '').includes(url_loaded))
+          if (url_loaded && (!url_loaded.slice(-7).match(/\d+/) || !url.includes(url_loaded.slice(-7))))
             refreshCurrentTab();
-          let paywallNode = document.querySelector('.post-paywall');
-          if (paywallNode) {
-            let contentNode = document.createElement('div');
-            let parser = new DOMParser();
-            let article_html = parser.parseFromString('<div>' + article + '</div>', 'text/html');
-            let article_par = article_html.querySelector('div');
-            if (article_par) {
-              contentNode.appendChild(article_par);
-              contentNode.className = paywallNode.className;
-              paywallNode.before(contentNode);
-              removeDOMElement(paywallNode);
-              let paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
-              if (paywallLastChildNode) {
-                paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+          else {
+            let article = data_article.data.stripes[0].mainContent[0].data.description.replace(/allowfullscreen='(true)?'/g, '');
+            let paywallNode = document.querySelector('.post-paywall');
+            if (paywallNode) {
+              let contentNode = document.createElement('div');
+              let parser = new DOMParser();
+              let article_html = parser.parseFromString('<div>' + article + '</div>', 'text/html');
+              let article_par = article_html.querySelector('div');
+              if (article_par) {
+                contentNode.appendChild(article_par);
+                contentNode.className = paywallNode.className;
+                paywallNode.before(contentNode);
+                removeDOMElement(paywallNode);
+                let paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
+                if (paywallLastChildNode) {
+                  paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+                }
               }
             }
+            let styleElem = document.head.appendChild(document.createElement('style'));
+            styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
           }
-          let styleElem = document.head.appendChild(document.createElement('style'));
-          styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
         } catch (err) {
           console.log(err);
         }
