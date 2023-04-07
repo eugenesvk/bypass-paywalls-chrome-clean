@@ -65,6 +65,10 @@
     "remove_cookies_select_drop": ["TID_ID"],
     "block_regex": "(\\.margriet\\.nl\\/temptation\\/resolve|temptation\\.margriet\\.nl\\/temptation\\.js)"
   },
+  "Nautilus": {
+    "domain": "nautil.us",
+    "remove_cookies_select_drop": ["arc", "sfa"]
+  },
   "Revue Conflits": {
     "domain": "revueconflits.com",
     "allow_cookies": 1,

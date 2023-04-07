@@ -1377,8 +1377,7 @@ var defaultSites = {
   },
   "Nautilus": {
     domain: "nautil.us",
-    allow_cookies: 1,
-    block_js_inline: /\/nautil\.us\/((\w)+(\-)+){3,}/
+    remove_cookies_select_drop: ["arc", "sfa"]
   },
   "NOZ/MHN Mediengruppe": {
     domain: "###_de_noz_mhn",
