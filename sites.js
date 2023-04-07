@@ -656,10 +656,6 @@ var defaultSites = {
     domain: "globes.co.il",
     block_regex: /\.tinypass\.com\//
   },
-  "Griffith Review": {
-    domain: "griffithreview.com",
-    remove_cookies_select_drop: ["issuem_lp"]
-  },
   "Groene Amsterdammer": {
     domain: "groene.nl",
     remove_cookies_select_hold: ["accept-cookies", "popunder-hidden"],

@@ -761,7 +761,6 @@ Grouped in options:\
 ##### Australia/New Zealand
 
 [Eureka Report](https://www.eurekareport.com.au) -
-[Griffith Review](https://www.griffithreview.com) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [Quillette (link to archive.is)](https://quillette.com) -

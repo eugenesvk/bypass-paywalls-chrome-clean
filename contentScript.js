@@ -3362,14 +3362,6 @@ else if (matchDomain('fortune.com')) {
   }
 }
 
-else if (matchDomain('griffithreview.com')) {
-  let body_single = document.querySelector('body.single');
-  if (body_single)
-    body_single.classList.remove('single');
-  let subscribe = document.querySelector('div.call-to-action');
-  removeDOMElement(subscribe);
-}
-
 else if (matchDomain('hbr.org')) {
   let popup = document.querySelector('.persistent-banner');
   removeDOMElement(popup);
