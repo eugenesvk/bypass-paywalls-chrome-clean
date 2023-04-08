@@ -26,6 +26,7 @@ var restrictions = {
   'elmercurio.com': /^((?!\.elmercurio\.com\/inversiones\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
+  'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
   'hilltimes.com': /^((?!hilltimes\.com\/slideshow\/).)*$/,
   'nknews.org': /^((?!nknews\.org\/pro\/).)*$/,
   'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,

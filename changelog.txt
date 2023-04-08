@@ -8,6 +8,7 @@ Remove Griffith Review (fix obsolete)
 Fix Gannett Group (identify sites)
 Fix LesEchos.fr (json)
 Fix Nautil.us (cookies)
+Fix The West Australian (json)
 
 * v3.1.2.0 (2023-04-02)
 Add Epicurious (Conde Nast)

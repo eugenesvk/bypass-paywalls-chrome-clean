@@ -342,7 +342,7 @@ else {
             }
             if (json_script) {
               let json_text = json_script.text.split('window.PAGE_DATA =')[1].split('</script')[0];
-              json_text = json_text.replace(/undefined/g, '"undefined"');
+              json_text = json_text.replace(/:undefined([,}])/g, ':"undefined"$1');
               try {
               let json_article = JSON.parse(json_text);
               let json_pub;
@@ -3301,11 +3301,8 @@ else if (matchDomain('financialexpress.com')) {
   if (paywall)
     paywall.classList.remove('paywall');
   let register = document.querySelector('div.pcl-wrap');
-  let ads;
-  if (window.location.pathname.endsWith('/lite/'))
-    ads = document.querySelectorAll('amp-ad, amp-embed, .ad-bg-container');
-  else
-    ads = document.querySelectorAll('div[class*="-ads-blocks-ad-unit"]');
+  let ads_selector = window.location.pathname.endsWith('/lite/') ? 'amp-ad, amp-embed, .ad-bg-container' : 'div[class*="-ads-blocks-ad-unit"]';
+  let ads = document.querySelectorAll(ads_selector);
   removeDOMElement(register, ...ads);
 }
 
@@ -3323,23 +3320,6 @@ else if (matchDomain('foreignaffairs.com')) {
     let article_dropcap = document.querySelectorAll('.article-dropcap');
     for (let elem of article_dropcap)
       elem.classList.add('loaded');
-    let hidden_images = document.querySelectorAll('img[src^="data:image/"][data-src]');
-    for (let hidden_image of hidden_images) {
-      hidden_image.setAttribute('src', hidden_image.getAttribute('data-src'));
-      hidden_image.removeAttribute('class');
-    }
-    let img_list = document.querySelectorAll('.magazine-list-article img');
-    for (let img_elem of img_list)
-      img_elem.setAttribute('class', 'mb-4');
-    if (window.location.href.includes('/interviews/')) {
-      let img_header = document.querySelector('.interview-header > div');
-      if (img_header) {
-        let img_src = img_header.getAttribute('data-src');
-        let img_elem = document.createElement('img');
-        img_elem.src = img_src;
-        img_header.appendChild(img_elem);
-      }
-    }
   }, 1000);
 }
 
@@ -4447,8 +4427,7 @@ else if (matchDomain('thenewatlantis.com')) {
 
 else if (matchDomain('thepointmag.com')) {
   let overlay = document.querySelectorAll('div.overlay, div#tpopup-');
-  for (let elem of overlay)
-    removeDOMElement(elem);
+  removeDOMElement(...overlay);
 }
 
 else if (matchDomain('thequint.com')) {
