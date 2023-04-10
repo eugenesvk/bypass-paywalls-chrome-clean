@@ -17,24 +17,10 @@
     "block_regex": "(\\.epicurious\\.com\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot"
   },
-  "Euromoney": {
-    "domain": "euromoney.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
   "Flair.nl": {
     "domain": "flair.nl",
     "remove_cookies_select_drop": ["TID_ID"],
     "block_regex": "(\\.flair\\.nl\\/temptation\\/resolve|temptation\\.flair\\.nl\\/temptation\\.js)"
-  },
-  "Haaretz English": {
-    "domain": "haaretz.com",
-    "allow_cookies": 1,
-    "useragent": "facebookbot"
-  },
-  "Inkl": {
-    "domain": "inkl.com",
-    "cs_code": "[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class\"}]"
   },
   "La Libre.be": {
     "domain": "lalibre.be",
@@ -74,11 +60,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com\\/data"
   },
-  "Sciences et Avenir": {
-    "domain": "sciencesetavenir.fr",
-    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\".amorce\",\"rm_elem\":1},{\"cond\":\".user-paying-content\",\"rm_attrib\":\"class|hidden\"}]"
-  },
   "TagesAnzeiger.ch (link to archive.is)": {
     "domain": "tagesanzeiger.ch",
     "allow_cookies": 1,
@@ -102,10 +83,5 @@
     "domain": "thespectator.com",
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com/"
-  },
-  "The Times Literary Supplement": {
-    "domain": "the-tls.co.uk",
-    "remove_cookies": 1,
-    "referer": "google"
   }
 }
