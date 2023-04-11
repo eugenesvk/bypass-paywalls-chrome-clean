@@ -325,6 +325,7 @@
     "*://*.irishtimes.com/*",
     "*://*.italian.tech/*",
     "*://*.italiaoggi.it/*",
+    "*://*.jacobin.de/*",
     "*://*.japantimes.co.jp/*",
     "*://*.jgnt.co/*",
     "*://*.journaldunet.com/*",
@@ -747,5 +748,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.3.0"
+  "version": "3.1.3.1"
 }

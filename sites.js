@@ -1008,6 +1008,10 @@ var defaultSites = {
     domain: "italiaoggi.it",
     allow_cookies: 1
   },
+  "Jacobin.de": {
+    domain: "jacobin.de",
+    allow_cookies: 1
+  },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
     allow_cookies: 1

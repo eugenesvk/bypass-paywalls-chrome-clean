@@ -691,6 +691,60 @@ else if (matchDomain('freiepresse.de')) {
   }
 }
 
+else if (matchDomain('jacobin.de')) {
+  let paywall = pageContains('h3.m-auto', 'Dieser Artikel ist nur mit Abo zugänglich.');
+  if (paywall.length) {
+    let slash = document.querySelector('div.slash');
+    removeDOMElement(paywall[0].parentNode, slash);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.text);
+        if (json && json.props.pageProps.sections && json.props.pageProps.sections[1].content) {
+          let url_next = json.query.slug;
+          if (url_next && !window.location.pathname.includes(url_next))
+            refreshCurrentTab();
+          let pars = json.props.pageProps.sections[1].content;
+          let first_par = document.querySelector('body > div#__next p.bodyText');
+          if (first_par) {
+            let par_class = first_par.getAttribute('class');
+            let article = first_par.parentNode;
+            if (article) {
+              let add_par = false;
+              for (let par of pars) {
+                if (!add_par) {
+                  if (par.type === 'paywall')
+                    add_par = true;
+                } else {
+                  if (par.text) {
+                    let elem_type = 'p';
+                    let elem_class = par_class;
+                    let elem_style;
+                    if (['paragraph', 'quote'].includes(par.type)) {
+                      if (par.type === 'quote')
+                        elem_style = 'font-size: 36px; font-weight: bold;';
+                    } else if (par.type === 'header') {
+                      elem_type = 'h2';
+                      elem_class = 'content-element font-headline h2 my-1em';
+                    }
+                    let content = par.text.replace(/&nbsp;/g, '');
+                    let parser = new DOMParser();
+                    let content_new = parser.parseFromString('<' + elem_type + ' class="' + elem_class + (elem_style ? '" style="' + elem_style : '') + '">' + content + '</' + elem_type + 'p>', 'text/html');
+                    article.appendChild(content_new.querySelector(elem_type));
+                  } else
+                    console.log(par);
+                }
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+
 else if (matchDomain('krautreporter.de')) {
   let paywall = document.querySelector('.js-article-paywall');
   if (paywall) {
