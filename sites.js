@@ -472,11 +472,21 @@ var defaultSites = {
     block_regex: /\.(elmercurio\.com|emol\.cl)\/(.+\/)?js\/(.+\/)?(modal|merPramV\d|PramModal\.min)\.js/,
     useragent: "googlebot"
   },
+  "El Observador.com.uy": {
+    domain: "elobservador.com.uy",
+    allow_cookies: 1,
+    block_regex: /(\.elobservador\.com\.uy\/shares|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
   "El País": {
     domain: "elpais.com",
     allow_cookies: 1,
     block_js_inline: /\.elpais\.com\/.+\.html/,
     block_regex: /(\/elpais\.com\/arc\/subs\/p\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
+  "El País.com.uy": {
+    domain: "elpais.com.uy",
+    allow_cookies: 1,
+    block_regex: /(\.elpais\.com\.uy\/user\/authStatus|\.evolok\.net\/|cdn\.cxense\.com\/)/
   },
   "El Periódico (de Catalunya)": {
     domain: "elperiodico.com",
@@ -1066,6 +1076,11 @@ var defaultSites = {
     domain: "la-croix.com",
     allow_cookies: 1,
     block_regex: /(\.la-croix\.com\/build\/.+\/paywall.+\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+  },
+  "La Diaria.com.uy": {
+    domain: "ladiaria.com.uy",
+    allow_cookies: 1,
+    useragent: "googlebot"
   },
   "La Gazzetta dello Sport": {
     domain: "gazzetta.it",

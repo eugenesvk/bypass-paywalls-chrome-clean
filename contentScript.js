@@ -2667,7 +2667,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ar|br|cl|pe)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -2733,6 +2733,28 @@ else if (matchDomain('elmercurio.com')) {
   }, 3000);
 }
 
+else if (matchDomain('elobservador.com.uy')) {
+  if (window.location.pathname.endsWith('/amp')) {
+    amp_unhide_access_hide('="observador.mostrarNota"');
+    let amp_images = document.querySelectorAll('div.fixed-container > amp-img.null');
+    for (let amp_image of amp_images) {
+      let elem = document.createElement('img');
+      Object.assign(elem, {
+        src: amp_image.getAttribute('src'),
+        alt: amp_image.getAttribute('alt'),
+        title: amp_image.getAttribute('title')
+      });
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
+  } else {
+    let paywall = document.querySelector('div.mensaje_member');
+    if (paywall) {
+      removeDOMElement(paywall);
+      window.location.href = window.location.pathname + '/amp';
+    }
+  }
+}
+
 else if (matchDomain('eltiempo.com')) {
   let modulos = document.querySelector('div.modulos');
   if (modulos)
@@ -2794,6 +2816,16 @@ else if (matchDomain('blogfolha.uol.com.br')) {
   for (let hidden_image of hidden_images) {
     hidden_image.src = hidden_image.src.replace('http:', 'https:');
     hidden_image.srcset = '';
+  }
+}
+
+else if (matchDomain('ladiaria.com.uy')) {
+  if (window.location.search.startsWith('?display=amp')) {
+    csDoneOnce = true;
+    ampToHtml();
+  } else {
+    let banners = document.querySelectorAll('div.softwall, div.subscribe-notice');
+    removeDOMElement(...banners);
   }
 }
 
@@ -4995,7 +5027,7 @@ function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes 
 }
 
 function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
-  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]:not([amp-access="error"], [amp-access^="message"])');
+  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]:not([amp-access="error"], [amp-access^="message"]):not(.piano)');
   for (let elem of access_hide)
     elem.removeAttribute('amp-access-hide');
   if (amp_access_not) {

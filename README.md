@@ -883,6 +883,10 @@ Grouped in options:\
 [Diario Correo](https://diariocorreo.pe) -
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)
+##### Uruguay
+[El Observador](https://www.elobservador.com.uy) -
+[El País](https://www.elpais.com.uy) -
+[La Diaria](https://ladiaria.com.uy)
 
 _* free articles only._
 

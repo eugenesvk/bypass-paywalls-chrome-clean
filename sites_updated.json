@@ -10,6 +10,19 @@
     "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
   },
+  "El Observador.com.uy": {
+    "domain": "elobservador.com.uy",
+    "allow_cookies": 1,
+    "amp_redirect": "div.mensaje_member",
+    "amp_unhide": 1,
+    "block_regex": "(\\.elobservador\\.com\\.uy\\/shares|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "new_site": 1
+  },
+  "El País.com.uy": {
+    "domain": "elpais.com.uy",
+    "allow_cookies": 1,
+    "block_regex": "(\\.elpais\\.com\\.uy\\/user\\/authStatus|\\.evolok\\.net\\/|cdn\\.cxense\\.com\\/)"
+  },
   "Epicurious": {
     "domain": "epicurious.com",
     "allow_cookies": 1,
@@ -21,6 +34,11 @@
     "domain": "flair.nl",
     "remove_cookies_select_drop": ["TID_ID"],
     "block_regex": "(\\.flair\\.nl\\/temptation\\/resolve|temptation\\.flair\\.nl\\/temptation\\.js)"
+  },
+  "La Diaria.com.uy": {
+    "domain": "ladiaria.com.uy",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
   },
   "La Libre.be": {
     "domain": "lalibre.be",

@@ -107,11 +107,6 @@
     "cs_code": "[{\"cond\":\"div.article-body-wrapper__styled[style]\",\"rm_attrib\":\"style\"},{\"cond\":\"div.post\",\"rm_elem\":1}]",
     "domain": "elfinancierocr.com"
   },
-  "Elpais.com.uy": {
-    "allow_cookies": 1,
-    "amp_redirect": "div.contenido-exclusivo-nota",
-    "domain": "elpais.com.uy"
-  },
   "Eluniversal.com.mx": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

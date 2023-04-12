@@ -122,7 +122,6 @@
     "*://*.brisbanetimes.com.au/*",
     "*://*.britannica.com/*",
     "*://*.buffalonews.com/*",
-    "*://*.business-standard.com/*",
     "*://*.businessinsider.com/*",
     "*://*.businessoffashion.com/*",
     "*://*.businesspost.ie/*",
@@ -215,6 +214,8 @@
     "*://*.elmercurio.com/*",
     "*://*.elmundo.es/*",
     "*://*.elnortedecastilla.es/*",
+    "*://*.elobservador.com.uy/*",
+    "*://*.elpais.com.uy/*",
     "*://*.elpais.com/*",
     "*://*.elperiodico.com/*",
     "*://*.eltiempo.com/*",
@@ -345,6 +346,7 @@
     "*://*.la-croix.com/*",
     "*://*.labusinessjournal.com/*",
     "*://*.ladepeche.fr/*",
+    "*://*.ladiaria.com.uy/*",
     "*://*.lalibre.be/*",
     "*://*.lalsace.fr/*",
     "*://*.lamontagne.fr/*",
@@ -606,8 +608,8 @@
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
     "*://*.thebanker.com/*",
-    "*://*.thechronicle.com.au/*",
     "*://*.thebulletin.org/*",
+    "*://*.thechronicle.com.au/*",
     "*://*.thecourier.com.au/*",
     "*://*.thecritic.co.uk/*",
     "*://*.thecut.com/*",
@@ -748,5 +750,5 @@
     "*://*.wallkit.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.3.1"
+  "version": "3.1.3.2"
 }
