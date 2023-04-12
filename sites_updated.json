@@ -4,6 +4,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_nCw.+\\.js"
   },
+  "Berlingske": {
+    "domain": "berlingske.dk",
+    "allow_cookies": 1,
+    "useragent": "bingbot"
+  },
   "DH Les Sports+": {
     "domain": "dhnet.be",
     "allow_cookies": 1,

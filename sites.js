@@ -226,7 +226,7 @@ var defaultSites = {
   "Berlingske": {
     domain: "berlingske.dk",
     allow_cookies: 1,
-    useragent: "googlebot"
+    useragent: "bingbot"
   },
   "Bloomberg": {
     domain: "bloomberg.com",
