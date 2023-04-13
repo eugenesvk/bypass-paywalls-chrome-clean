@@ -1309,6 +1309,8 @@ function clear_cookies() {
     if (!enabledSites.includes(custom_domain))
       enabledSites.push(custom_domain);
     ext_api.tabs.reload({bypassCache: true});
+    if (rules.add_ext_link && rules.add_ext_link_type)
+      add_ext_link[custom_domain] = {css: rules.add_ext_link, type: rules.add_ext_link_type};
   }
 
 var chrome_scheme = 'light';
@@ -1324,7 +1326,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_substack_custom', '###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews'];
+      let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews'];
       if (enabledSites.concat(nofix_groups).includes(group) && !custom_flex_domains.includes(custom_domain)) {
         let rules;
         if (group === 'elmercurio.com')

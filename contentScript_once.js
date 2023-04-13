@@ -38,7 +38,7 @@ window.setTimeout(function () {
     else if (document.querySelector('script[src*="/leaky-paywall"], link[href*="/leaky-paywall"]'))
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
-      group = '###_substack_custom';// no fix
+      group = '###_substack_custom';
     else if (hostname.match(/\.(com|net)\.au$/)) {
       if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
         group = '###_au_comm_media';

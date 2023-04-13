@@ -5027,7 +5027,7 @@ function amp_unhide_subscr_section(amp_ads_sel = 'amp-ad, .ad', replace_iframes 
 }
 
 function amp_unhide_access_hide(amp_access = '', amp_access_not = '', amp_ads_sel = 'amp-ad, .ad', replace_iframes = true, amp_iframe_link = false, source = '') {
-  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]:not([amp-access="error"], [amp-access^="message"]):not(.piano)');
+  let access_hide = document.querySelectorAll('[amp-access' + amp_access + '][amp-access-hide]:not([amp-access="error"], [amp-access^="message"], .piano)');
   for (let elem of access_hide)
     elem.removeAttribute('amp-access-hide');
   if (amp_access_not) {
@@ -5059,7 +5059,7 @@ function googleWebcacheLink(url, text_fail = 'BPC > Full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
 }
 
-function googleSearchToolLink(url, text_fail = 'BPC > Full article text:\r\n') {
+function googleSearchToolLink(url, text_fail = 'BPC > Full article text (copy html (tab) code to html.onlineviewer.net):\r\n') {
   return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
@@ -5068,11 +5068,9 @@ function ext_12ftLink(url, text_fail = 'BPC > Full article text:\r\n') {
 }
 
 function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full article text:\r\n') {
-  if (domains.includes('search.google.com'))
-    text_fail = 'BPC > Full article text (copy html (tab) code to online html viewer):\r\n'
   let text_fail_div = document.createElement('div');
   text_fail_div.id = 'bpc_archive';
-  text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color:red;');
+  text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
   text_fail_div.appendChild(document.createTextNode(text_fail));
   for (let domain of domains) {
     let ext_url = ext_url_templ.replace('{domain}', domain).replace('{url}', url.split('?')[0]);

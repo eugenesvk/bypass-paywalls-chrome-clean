@@ -394,7 +394,7 @@
     "domain": "stylist.co.uk"
   },
   "Substack.com": {
-    "add_ext_link": "div.paywall:not(.modal-paywall)|div.available-content",
+    "add_ext_link": "div.paywall:not(.modal-paywall)|article",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "substack.com"
