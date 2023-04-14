@@ -2316,6 +2316,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /paywall\.fewcents\.co\/static\/js\/paywall\.js/
   },
+  "Ippen.space": {
+    domain: "ippen.space",
+    allow_cookies: 1,
+    block_regex_general: /\.ippen\.space\/js\/paywall\.js/
+  },
   "Leaky Paywall (WordPress plugin)": {
     domain: "###_wp_leaky_paywall",
     group: [],

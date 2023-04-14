@@ -8,6 +8,7 @@ Add Jacobin.de
 Add Substack (link to Google Search Tool; opt-in to custom sites for custom domains)
 Fix Berlingske.dk
 Remove Zeit.de (fix obsolete)
+Update block general paywall script (Ippen.space)
 Update popup (12ft.io)
 
 * v3.1.3.0 (2023-04-10)
