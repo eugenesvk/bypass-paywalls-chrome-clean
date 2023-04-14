@@ -2053,7 +2053,7 @@ var defaultSites = {
   "The New York Times": {
     domain: "nytimes.com",
     allow_cookies: 1,
-    block_regex: /(meter-svc\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/
+    block_regex: /(\.nytimes\.com\/(meter\.js|graphql\/v\d)|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/
   },
   "The Philadelphia Inquirer": {
     domain: "inquirer.com",

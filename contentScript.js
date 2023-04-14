@@ -3847,7 +3847,7 @@ else if (matchDomain('nybooks.com')) {
 }
 
 else if (matchDomain('nytimes.com')) {
-  let banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock');
+  let banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock, div[id$="-wrapper"]');
   removeDOMElement(...banners);
 }
 

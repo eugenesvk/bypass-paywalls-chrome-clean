@@ -102,6 +102,11 @@
     "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
     "cs_code": "[{\"cond\":\"div.article-scheduled-modal\",\"rm_elem\":1}]"
   },
+  "The New York Times": {
+    "domain": "nytimes.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.nytimes\\.com\\/(meter\\.js|graphql\\/v\\d)|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)"
+  },
   "The Spectator World - new domain": {
     "domain": "thespectator.com",
     "allow_cookies": 1,
