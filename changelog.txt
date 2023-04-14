@@ -7,6 +7,7 @@ Add El Observador, El Pais & La Diaria (Uruguay)
 Add Jacobin.de
 Add Substack (link to Google Search Tool; opt-in to custom sites for custom domains)
 Fix Berlingske.dk
+Remove Zeit.de (fix obsolete)
 Update popup (12ft.io)
 
 * v3.1.3.0 (2023-04-10)
@@ -1473,7 +1474,7 @@ Fix WSJ
 Fix custom sites Googlebot-fix (after reload)
 
 * v1.8.8.0 (2020-09-27)
-Add Die Zeit (Germany)
+Add Zeit.de
 Add Rolling Stone
 Add StockNews.com
 Add Times Higher Education
