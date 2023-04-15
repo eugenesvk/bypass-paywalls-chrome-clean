@@ -2395,7 +2395,7 @@ var defaultSites = {
     exception: [{
         domain: "html.onlineviewer.net",
         allow_cookies: 1,
-        block_regex: /\/substackcdn\.com\/min\/main\.bundle\.js/
+        block_regex: /\/substackcdn\.com\/.+\/main(.+)?\.bundle\.js/
       }
     ]
   },

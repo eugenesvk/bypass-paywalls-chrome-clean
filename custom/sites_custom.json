@@ -185,10 +185,22 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
+  "Huffingtonpost.it": {
+    "add_ext_link": "iframe#__limio_frame|div.main-content",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "huffingtonpost.it"
+  },
   "Ilglobo.com": {
     "allow_cookies": 1,
     "domain": "ilglobo.com",
     "useragent": "googlebot"
+  },
+  "Ilsecoloxix.it": {
+    "add_ext_link": "iframe#__limio_frame|div.story__wrapper",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "ilsecoloxix.it"
   },
   "Interestingengineering.com": {
     "allow_cookies": 1,
@@ -228,6 +240,12 @@
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
   },
+  "Lastampa.it": {
+    "add_ext_link": "iframe#__limio_frame|header",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "lastampa.it"
+  },
   "Lemonde.fr": {
     "add_ext_link": "section.paywall|article",
     "add_ext_link_type": "google_search_tool",
@@ -238,6 +256,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
     "domain": "libraryjournal.com"
+  },
+  "Limesonline.com": {
+    "add_ext_link": "div#paywall|div.sommario",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "limesonline.com"
   },
   "Lindipendente.online": {
     "allow_cookies": 1,
@@ -353,6 +377,12 @@
   },
   "Quickmath.com": {
     "domain": "quickmath.com"
+  },
+  "Repubblica.it": {
+    "add_ext_link": "iframe#__limio_frame|div.story__wrapper",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "repubblica.it"
   },
   "Reviewjournal.com": {
     "allow_cookies": 1,
@@ -506,7 +536,7 @@
     "ld_google_webcache": "div.paid-article|div.font-serif"
   },
   "Zeit.de": {
-    "add_ext_link": "aside#paywall|article",
+    "add_ext_link": "aside#paywall|div.article-body",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "zeit.de"
