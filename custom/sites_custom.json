@@ -228,6 +228,12 @@
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
   },
+  "Lemonde.fr": {
+    "add_ext_link": "section.paywall|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "lemonde.fr"
+  },
   "Libraryjournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
@@ -265,6 +271,12 @@
   },
   "Marketscreener.com (only free articles)": {
     "domain": "marketscreener.com"
+  },
+  "Mediapart.fr": {
+    "add_ext_link": "div#paywall_no_variance|main",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "mediapart.fr"
   },
   "Medpagetoday.com": {
     "allow_cookies": 1,
@@ -437,6 +449,12 @@
     "block_regex": "\\.thefashionlaw\\.com\\/evolok\\/.+\\/ev-widgets\\.min\\.js",
     "domain": "thefashionlaw.com"
   },
+  "Theinformation.com": {
+    "add_ext_link": "div[data-paywall]|div.locked",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "theinformation.com"
+  },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"
   },
@@ -475,6 +493,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "washingtontimes.com"
+  },
+  "Welt.de": {
+    "add_ext_link": "div.contains_walled_content|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "welt.de"
   },
   "Wuv.de": {
     "allow_cookies": 1,

@@ -8,6 +8,7 @@ Add Jacobin.de
 Add Substack (link to Google Search Tool; opt-in to custom sites for custom domains)
 Fix Berlingske.dk
 Fix NYTimes
+Fix Tagesspiegel.de (background; link to Google Search Tool)
 Remove Zeit.de (fix obsolete)
 Update block general paywall script (Ippen.space)
 Update popup (12ft.io)

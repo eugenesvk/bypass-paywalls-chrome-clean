@@ -913,12 +913,20 @@ else if (matchDomain('tagesanzeiger.ch')) {
 
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.article--paid > div');
+  let paywall = document.querySelector('div.article--paid > div:not([id])');
   if (paywall) {
     removeDOMElement(paywall);
     let article = document.querySelector('div.article--paid');
     if (article)
       article.firstChild.before(archiveLink(url));
+  } else {
+    paywall = document.querySelector('section.ts-paywall, div#pw');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let article = document.querySelector('main p');
+      if (article)
+        article.firstChild.before(googleSearchToolLink(url));
+    }
   }
 }
 
