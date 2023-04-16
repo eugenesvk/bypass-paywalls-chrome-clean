@@ -39,6 +39,8 @@ window.setTimeout(function () {
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
       group = '###_substack_custom';
+    else if (document.querySelector('script[src*="/wp-content/themes/pmgnews/scripts/promedia.js"], form[action^="https://go.promedia.nl/"]'))
+      group = '###_nl_promedia';
     else if (hostname.match(/\.(com|net)\.au$/)) {
       if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
         group = '###_au_comm_media';

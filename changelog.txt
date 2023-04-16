@@ -5,6 +5,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 Post-release
 Add El Observador, El Pais & La Diaria (Uruguay)
 Add Jacobin.de
+Add ProMedia.nl Group (opt-in to custom sites)
 Add Substack (link to Google Search Tool; opt-in to custom sites for custom domains)
 Fix Berlingske.dk
 Fix NYTimes

@@ -1609,6 +1609,11 @@ var defaultSites = {
     domain: "project-syndicate.org",
     allow_cookies: 1
   },
+  "ProMedia.nl Group (opt-in to custom sites)": {
+    domain: "###_nl_promedia",
+    group: [],
+    useragent: "googlebot"
+  },
   "Prospect Magazine": {
     domain: "prospectmagazine.co.uk",
     allow_cookies: 1

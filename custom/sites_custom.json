@@ -4,6 +4,12 @@
     "block_regex": "\\.piano\\.io",
     "domain": "abajournal.com"
   },
+  "Africaintelligence.fr": {
+    "add_ext_link": "div#poool-widget,div#landing|div.landing",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "africaintelligence.fr"
+  },
   "Arkansasonline.com": {
     "domain": "arkansasonline.com"
   },
@@ -202,6 +208,18 @@
     "allow_cookies": 1,
     "domain": "ilsecoloxix.it"
   },
+  "Intelligenceonline.com": {
+    "add_ext_link": "div#poool-widget,div#landing|div.landing",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "intelligenceonline.com"
+  },
+  "Intelligenceonline.fr": {
+    "add_ext_link": "div#poool-widget,div#landing|div.landing",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "intelligenceonline.fr"
+  },
   "Interestingengineering.com": {
     "allow_cookies": 1,
     "domain": "interestingengineering.com",
@@ -230,6 +248,12 @@
     "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/mpppaywall\\.js",
     "domain": "irishnews.com"
   },
+  "Jeuneafrique.com": {
+    "add_ext_link": "div#poool-widget|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "jeuneafrique.com"
+  },
   "Kapital.no": {
     "allow_cookies": 1,
     "domain": "kapital.no",
@@ -240,11 +264,23 @@
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
   },
+  "Lalettrea.fr": {
+    "add_ext_link": "div#poool-widget,div#landing|div.landing",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "lalettrea.fr"
+  },
   "Lastampa.it": {
     "add_ext_link": "iframe#__limio_frame|header",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "lastampa.it"
+  },
+  "Lavozdegalicia.es": {
+    "add_ext_link": "div#paywall_box|div.date",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "lavozdegalicia.es"
   },
   "Lemonde.fr": {
     "add_ext_link": "section.paywall|article",
@@ -357,6 +393,12 @@
     "domain": "onet.pl",
     "remove_cookies": 1
   },
+  "Ouest-france.fr": {
+    "add_ext_link": "div.mur|div#article-detail",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "ouest-france.fr"
+  },
   "Oz-online.de": {
     "allow_cookies": 1,
     "domain": "oz-online.de",
@@ -388,6 +430,12 @@
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
+  },
+  "Saechsische.de": {
+    "add_ext_link": "div#piano-inline|div.article-detail-content>p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "saechsische.de"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,

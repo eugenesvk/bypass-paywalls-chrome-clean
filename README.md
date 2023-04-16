@@ -673,6 +673,7 @@ Grouped in options:\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)\
+*[ProMedia Group](https://www.promedia.nl/publicaties)* sites (opt-in to custom sites)\
 *Roularta Media Group* sites like\
 [Artsenkrant](https://www.artsenkrant.com) -
 [Flair.be](https://www.flair.be/nl) -
