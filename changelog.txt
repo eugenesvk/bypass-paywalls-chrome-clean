@@ -4,7 +4,7 @@ Updates: https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/release
 
 Post-release
 
-* v3.1.4.0 (2023-04-16)
+* v3.1.4.1 (2023-04-17)
 Add El Observador, El Pais & La Diaria (Uruguay)
 Add Jacobin.de
 Add ProMedia.nl Group (opt-in to custom sites)
@@ -12,7 +12,6 @@ Add Substack (link to Google Search Tool; opt-in to custom sites for custom doma
 Fix Berlingske.dk
 Fix NYTimes (Googlebot)
 Fix Tagesspiegel.de (background; link to Google Search Tool)
-Remove Zeit.de (fix obsolete)
 Update block general paywall script (Ippen.space)
 Update popup (12ft.io)
 

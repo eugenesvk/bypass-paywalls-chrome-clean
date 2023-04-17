@@ -9,6 +9,11 @@
     "allow_cookies": 1,
     "useragent": "bingbot"
   },
+  "Die Zeit": {
+    "domain": "zeit.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "DH Les Sports+": {
     "domain": "dhnet.be",
     "allow_cookies": 1,

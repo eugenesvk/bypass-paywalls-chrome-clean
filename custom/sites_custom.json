@@ -582,11 +582,5 @@
     "allow_cookies": 1,
     "domain": "wuv.de",
     "ld_google_webcache": "div.paid-article|div.font-serif"
-  },
-  "Zeit.de": {
-    "add_ext_link": "aside#paywall|div.article-body",
-    "add_ext_link_type": "google_search_tool",
-    "allow_cookies": 1,
-    "domain": "zeit.de"
   }
 }

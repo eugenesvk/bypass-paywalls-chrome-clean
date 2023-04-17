@@ -708,6 +708,7 @@
     "*://*.wz.de/*",
     "*://*.yogajournal.com/*",
     "*://*.yorkshirepost.co.uk/*",
+    "*://*.zeit.de/*",
     "*://*.zerohedge.com/*",
     "*://*.ampproject.org/*",
     "*://*.axate.io/*",
@@ -753,5 +754,5 @@
     "*://html.onlineviewer.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.4.0"
+  "version": "3.1.4.1"
 }
