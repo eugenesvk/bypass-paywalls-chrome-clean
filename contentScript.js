@@ -4165,7 +4165,7 @@ else if (matchDomain('studocu.com')) {
   window.setTimeout(function () {
     let paywall = document.querySelector('button[data-test-selector^="preview-banner-"]');
     if (paywall) {
-      let paywall_banner = document.querySelector('div#document-wrapper > div:not([style])');
+      let paywall_banner = document.querySelector('#document-wrapper > div:not([style])');
       let banners = document.querySelectorAll('div.pf > :not(.page-content), div#premium-page-header');
       removeDOMElement(paywall_banner, ...banners);
       window.setTimeout(function () {

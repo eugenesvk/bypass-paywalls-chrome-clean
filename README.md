@@ -40,8 +40,9 @@ For new sites you also have to opt-in to custom sites/request permissions for ne
 Add-on was removed by Mozilla from add-on store.\
 Current installations (by custom collection in Firefox Beta/Nightly or Firefox-clone) will stay active, but with no more updates.
 
-There is still an elaborate workaround for regular Firefox though:
-* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0/) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/) or Firefox-clone; you have to remove your current Firefox app (or use an old Firefox Beta version)
+There is still an elaborate workaround for regular Firefox (or Beta/Clone) though:
+* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0/) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/)); first you have to remove your current Firefox app  
+for the add-on you can also use Firefox Beta or a Firefox clone like [Fennec F-Droid](https://f-droid.org/packages/org.mozilla.fennec_fdroid) where you can [set a custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly); again first install an old version of [Firefox Beta v68.7](https://www.apkmirror.com/apk/mozilla/firefox-beta/firefox-beta-68-7-release/) or [Fennec F-droid  v68.11.0](https://www.apkmirror.com/apk/mozilla/fennec-f-droid/fennec-f-droid-68-11-0-release)
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
 * add-on will stay active & automatically updates to the latest version
