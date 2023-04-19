@@ -1,9 +1,4 @@
 {
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.automobilwoche\\.de\\/s3fs-public\\/js\\/js_nCw.+\\.js"
-  },
   "Berlingske": {
     "domain": "berlingske.dk",
     "allow_cookies": 1,
@@ -13,12 +8,6 @@
     "domain": "zeit.de",
     "allow_cookies": 1,
     "useragent": "googlebot"
-  },
-  "DH Les Sports+": {
-    "domain": "dhnet.be",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
   },
   "El Observador.com.uy": {
     "domain": "elobservador.com.uy",
@@ -33,89 +22,19 @@
     "allow_cookies": 1,
     "block_regex": "(\\.elpais\\.com\\.uy\\/user\\/authStatus|\\.evolok\\.net\\/|cdn\\.cxense\\.com\\/)"
   },
-  "Epicurious": {
-    "domain": "epicurious.com",
-    "allow_cookies": 1,
-    "remove_cookies": 1,
-    "block_regex": "(\\.epicurious\\.com\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot"
-  },
-  "Flair.nl": {
-    "domain": "flair.nl",
-    "remove_cookies_select_drop": ["TID_ID"],
-    "block_regex": "(\\.flair\\.nl\\/temptation\\/resolve|temptation\\.flair\\.nl\\/temptation\\.js)"
-  },
   "La Diaria.com.uy": {
     "domain": "ladiaria.com.uy",
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
-  "La Libre.be": {
-    "domain": "lalibre.be",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\".is-preview\",\"rm_class\":\"is-preview\"},{\"cond\":\".is-hidden\",\"rm_class\":\"is-hidden\"}]"
-  },
-  "Le Figaro (link to archive.is)": {
-    "domain": "lefigaro.fr",
-    "allow_cookies": 1,
-    "add_ext_link": "div#fig-premium-paywall|article",
-    "add_ext_link_type": "archive.is",
-    "new_site": 1
-  },
-  "Le Grand Continent": {
-    "domain": "legrandcontinent.eu",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"body.paywall,body.pw,body.softwall\",\"rm_class\":\"paywall,pw,softwall\"},{\"cond\":\"div#fix-pw,div.disposableBanner\",\"rm_elem\":1}]",
-    "new_site": 1
-  },
-  "Libelle.nl": {
-    "domain": "libelle.nl",
-    "remove_cookies_select_drop": ["TID_ID"],
-    "block_regex": "(\\.libelle\\.nl\\/temptation\\/resolve|temptation\\.libelle\\.nl\\/temptation\\.js)"
-  },
-  "Margriet.nl": {
-    "domain": "margriet.nl",
-    "remove_cookies_select_drop": ["TID_ID"],
-    "block_regex": "(\\.margriet\\.nl\\/temptation\\/resolve|temptation\\.margriet\\.nl\\/temptation\\.js)"
-  },
   "Nautilus": {
     "domain": "nautil.us",
     "remove_cookies_select_drop": ["arc", "sfa"]
-  },
-  "Revue Conflits": {
-    "domain": "revueconflits.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\\/data"
-  },
-  "TagesAnzeiger.ch (link to archive.is)": {
-    "domain": "tagesanzeiger.ch",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
-    "add_ext_link": "div#piano-premium > div|article p",
-    "add_ext_link_type": "archive.is",
-    "new_site": 1
-  },
-  "The Art Newspaper": {
-    "domain": "theartnewspaper.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.theartnewspaper\\.com\\/_next\\/static\\/chunks\\/pages\\/access-allowed-.+\\.js"
-  },
-  "The New Republic": {
-    "domain": "newrepublic.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
-    "cs_code": "[{\"cond\":\"div.article-scheduled-modal\",\"rm_elem\":1}]"
   },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot"
-  },
-  "The Spectator World - new domain": {
-    "domain": "thespectator.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com/"
   }
 }

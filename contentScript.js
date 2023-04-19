@@ -1411,7 +1411,7 @@ else if (matchDomain(fr_be_groupe_rossel)) {
     }
   }
   let ads = document.querySelectorAll('div[id^="article_"], r-pub, div#rossel-leader-top');
-  removeDOMElement(...ads);
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(fr_groupe_ebra_domains)) {
@@ -1468,7 +1468,7 @@ else if (matchDomain(fr_groupe_nice_matin_domains)) {
       paywall.removeAttribute('id');
   }
   let ads = document.querySelectorAll('div[class^="ad-slot-"]');
-  removeDOMElement(...ads);
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('franc-tireur.fr')) {
@@ -1613,7 +1613,7 @@ else if (matchDomain('lepoint.fr')) {
   }
   window.setTimeout(function () {
     let ads = document.querySelectorAll('#WRAP_BAN_ATF, .StickyPaywall, .slotpub, .sticky-block');
-    removeDOMElement(...ads);
+    hideDOMElement(...ads);
   }, 1000);
 }
 
@@ -1679,7 +1679,7 @@ else if (matchDomain('lesinrocks.com')) {
 
 else if (matchDomain('lexpress.fr')) {
   let ads = document.querySelectorAll('div[class^="block_pub"], div.bottom-bar-full, div.tead, div.ban-bottom, div.placeholder--ban-atf');
-  removeDOMElement(...ads);
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('loeildelaphotographie.com')) {
@@ -1715,6 +1715,9 @@ else if (matchDomain('marianne.net')) {
 else if (matchDomain('nouvelobs.com')) {
   let paywall = document.querySelector('.paywall');
   removeDOMElement(paywall);
+  let fade = document.querySelector('div.paywall--gradient-top');
+  if (fade)
+    fade.classList.remove('paywall--gradient-top');
 }
 
 else if (matchDomain('science-et-vie.com')) {
@@ -1746,7 +1749,7 @@ else if (matchDomain(['sudouest.fr', 'charentelibre.fr', 'larepubliquedespyrenee
   window.setTimeout(function () {
     let footer_premium = document.querySelector('.footer-premium');
     let ads = document.querySelectorAll('div.pub, div.ph-easy-subscription');
-    removeDOMElement(footer_premium, ...ads);
+    hideDOMElement(footer_premium, ...ads);
   }, 500);
 }
 
@@ -2048,7 +2051,7 @@ if (matchDomain(be_groupe_ipm_domains)) {
     }, 1000);
   }
   let ads = document.querySelectorAll('div.ap-AdContainer, div.ap-Outbrain');
-  removeDOMElement(...ads);
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('fd.nl')) {
