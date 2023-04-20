@@ -510,7 +510,7 @@ var defaultSites = {
     domain: "enotes.com",
     allow_cookies: 1
   },
-  "ESPN USA (news only; link to archive.is))": {
+  "ESPN USA (news only)": {
     domain: "espn.com",
     allow_cookies: 1
   },

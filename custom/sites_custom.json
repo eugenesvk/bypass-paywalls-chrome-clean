@@ -118,6 +118,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "eluniversal.com.mx"
   },
+  "Eviemagazine.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
+    "domain": "eviemagazine.com"
+  },
   "Fastcompany.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
@@ -437,6 +442,11 @@
     "allow_cookies": 1,
     "domain": "saechsische.de"
   },
+  "Schwaebische-post.de": {
+    "allow_cookies": 1,
+    "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",
+    "domain": "schwaebische-post.de"
+  },
   "Siliconrepublic.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -540,6 +550,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "thenational.scot"
+  },
+  "Thestage.co.uk": {
+    "allow_cookies": 1,
+    "domain": "thestage.co.uk",
+    "ld_google_webcache": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle']"
   },
   "Theweek.com": {
     "allow_cookies": 1,

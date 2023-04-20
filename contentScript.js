@@ -3379,9 +3379,7 @@ else if (matchDomain('espn.com')) {
   let paywall = document.querySelector('aside.espn-plus-container-wrapper');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div.article-body');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    replaceDomElementExt(url, false, false, 'div.article-body');
   }
 }
 
@@ -4944,7 +4942,12 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
     }
     ext_api.runtime.sendMessage({request: 'getExtSrc', data: {url: url, selector: selector, selector_source: selector_source, base64: base64, text_fail: text_fail}});
   } else {
-    fetch(url)
+    let options = {};
+    if (matchUrlDomain('espn.com', url))
+      options.headers = {
+        'X-Forwarded-For': randomIP(185, 185)
+      };
+    fetch(url, options)
     .then(response => {
       let article = document.querySelector(selector);
       if (response.ok) {
@@ -5159,6 +5162,21 @@ function makeRandomNumber(len) {
   for (let i = 0; i < len; i++)
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   return result;
+}
+
+function randomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+function randomIP(range_low = 0, range_high = 223) {
+  let rndmIP = [];
+  for (let n = 0; n < 4; n++) {
+    if (n === 0)
+      rndmIP.push(range_low + randomInt(range_high - range_low + 1));
+    else
+      rndmIP.push(randomInt(255) + 1);
+  }
+  return rndmIP.join('.');
 }
 
 function pageContains(selector, text) {
