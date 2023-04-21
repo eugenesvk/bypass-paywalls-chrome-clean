@@ -1851,10 +1851,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
-  "The Atlanta Journal-Constitution": {
+  "The Atlanta Journal-Constitution (+ Cox First Media; opt-in to custom sties)": {
     domain: "ajc.com",
     allow_cookies: 1,
-    block_regex: /(\.ajc\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Atlantic": {
     domain: "theatlantic.com",

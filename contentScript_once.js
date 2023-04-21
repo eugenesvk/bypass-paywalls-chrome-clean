@@ -110,6 +110,8 @@ window.setTimeout(function () {
           group = '###_usa_madavor';
         else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
           group = '###_usa_pei';
+        else if (matchDomain(['dayton.com', 'daytondailynews.com', 'journal-news.com', 'springfieldnewssun.com']))
+          group = 'ajc.com';// Cox First Media
       }
     }
 

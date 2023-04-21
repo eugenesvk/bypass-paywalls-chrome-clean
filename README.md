@@ -280,7 +280,6 @@ Grouped in options:\
 [Star Tribune](https://www.startribune.com) -
 [Tampa Bay Times](https://www.tampabay.com) -
 [The Advocate](https://www.theadvocate.com) -
-[The Atlanta Journal-Constitution](https://www.ajc.com) -
 [The Boston Globe](https://www.bostonglobe.com) -
 [The Dallas Morning News](https://www.dallasnews.com) -
 [The Hill](https://thehill.com) -
@@ -351,6 +350,7 @@ Grouped in options:\
 [The Denver Post](https://www.denverpost.com) -
 [The Mercury News](https://www.mercurynews.com) -
 [The Press-Enterprise](https://www.pe.com)\
+*[The Atlanta Journal-Constitution](https://www.ajc.com) + Cox First Media* (opt-in to custom sites)\
 *TownNews sites (Blox CMS)* sites (opt-in to custom sites)\
 *Tribune Publishing Company* sites like\
 [Baltimore Sun](https://www.baltimoresun.com) -
