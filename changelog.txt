@@ -6,6 +6,7 @@ Post-release
 Add Cox First Media (opt-in to custom sites)
 Fix ESPN USA
 Fix Groupe IPM
+Fix NYTimes (interactive/games)
 Fix StuDocu (banner)
 
 * v3.1.4.1 (2023-04-17)

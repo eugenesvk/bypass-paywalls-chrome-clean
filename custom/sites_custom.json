@@ -41,6 +41,11 @@
     "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
     "domain": "brusselstimes.com"
   },
+  "Bt.no": {
+    "allow_cookies": 1,
+    "domain": "bt.no",
+    "useragent": "facebookbot"
+  },
   "Businessnews.com.au": {
     "allow_cookies": 1,
     "domain": "businessnews.com.au",
@@ -169,6 +174,12 @@
     "allow_cookies": 1,
     "domain": "gplanet.co.il",
     "ld_json": "div.subscription-form|div.content-inner"
+  },
+  "Handelsblatt.com": {
+    "add_ext_link": "div.temp-paywall2|div.vhb-article-area--read>p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "handelsblatt.com"
   },
   "Hartenergy.com": {
     "allow_cookies": 1,
@@ -592,6 +603,12 @@
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "welt.de"
+  },
+  "Wiwo.de": {
+    "add_ext_link": "div.o-paywall|div.o-article__element>p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "wiwo.de"
   },
   "Wuv.de": {
     "allow_cookies": 1,
