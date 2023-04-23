@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Cox First Media (opt-in to custom sites)
+Remove NK News (fix obsolete)
 Fix ESPN USA
 Fix Groupe IPM
 Fix NYTimes (interactive/games)
@@ -1728,7 +1729,7 @@ Update custom sites UI (delete site)
 
 * v1.6.6.2 (2020-03-02)
 Add The Port Macquarie News (Australia)
-Remove nknews.org (fix obsolete)
+Remove NK News (fix obsolete)
 
 * v1.6.6.1 (2020-02-28)
 Add Humo.be
@@ -1811,7 +1812,7 @@ Add ET Prime
 Add Harper's Magazine
 Add LeParisien.fr
 Add London Review of Books
-Add NkNews.org
+Add NK News
 Add Philadelphia Inquirer
 Add Times Literary Supplement
 Fix Boston Globe (fix for blocking scripts while site restrictions)

@@ -813,7 +813,6 @@ Grouped in options:\
 [Initium Media](https://theinitium.com) -
 [Mainichi Shimbun](https://mainichi.jp) -
 [Nikkei Asian Review](https://asia.nikkei.com) -
-[NK News](https://www.nknews.org) -
 [South China Morning Post](https://www.scmp.com) -
 [Southern Weekly](https://www.infzm.com) -
 [Tech in Asia](https://www.techinasia.com) -
