@@ -1685,7 +1685,8 @@ var defaultSites = {
       "libelle.be"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/(script|js\\/responsive\\/rmg(Modal|Paywall))\\.js|\\.blueconic\\.net\\/)"
+    block_js_inline: /\.(femmesdaujourdhui|flair|knack|levif|libelle)\.be\/.+\/((\w)+(\-)+){3,}/,
+    block_regex: "((\\.|\\/){domain}\\/(script|js\\/responsive\\/rmg(Modal|Paywall))\\.js|\\.blueconic\\.net\\/)"
   },
   "RugbyPass": {
     domain: "rugbypass.com",
@@ -2447,6 +2448,10 @@ var defaultSites = {
   "The Wall Street Journal - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_wsj"
   },
+}
+
+if (typeof browser !== 'object') {
+  delete defaultSites['Roularta Media Group']['block_js_inline'];
 }
 
 var defaultSites_grouped_domains = Object.values(defaultSites).filter(function (value) {
