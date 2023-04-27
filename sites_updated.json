@@ -27,9 +27,10 @@
     "allow_cookies": 1,
     "useragent": "googlebot"
   },
-  "Nautilus": {
-    "domain": "nautil.us",
-    "remove_cookies_select_drop": ["arc", "sfa"]
+  "La Vanguardia": {
+    "domain": "lavanguardia.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/ev\\.lavanguardia\\.com"
   },
   "The New York Times": {
     "domain": "nytimes.com",

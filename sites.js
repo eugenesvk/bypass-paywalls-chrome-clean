@@ -1114,7 +1114,7 @@ var defaultSites = {
   "La Vanguardia": {
     domain: "lavanguardia.com",
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
+    block_regex: /\/ev\.lavanguardia\.com\//
   },
   "Landwirtschaftsverlag": {
     domain: "###_de_lv",
@@ -1373,7 +1373,7 @@ var defaultSites = {
   "Mundo Deportivo": {
     domain: "mundodeportivo.com",
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|\.lavanguardia\.com\/js\/godo-basex-)/
+    block_regex: /\.evolok\.net\//
   },
   "National Geographic USA": {
     domain: "nationalgeographic.com",
