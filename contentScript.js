@@ -3080,6 +3080,11 @@ else if (matchDomain('bloomberg.com')) {
       }
     }
   }
+  if (window.location.pathname.startsWith('/live/')) {
+    setInterval(function () {
+      window.localStorage.clear();
+    }, 15 * 60 * 1000);
+  }
 }
 
 else if (matchDomain('bloombergadria.com')) {
