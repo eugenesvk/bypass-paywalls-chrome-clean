@@ -4,11 +4,6 @@
     "allow_cookies": 1,
     "useragent": "bingbot"
   },
-  "Die Zeit": {
-    "domain": "zeit.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
   "El Observador.com.uy": {
     "domain": "elobservador.com.uy",
     "allow_cookies": 1,
