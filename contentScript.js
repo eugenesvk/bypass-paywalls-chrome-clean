@@ -36,6 +36,7 @@ var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_conde_nast_domains = ['architecturaldigest.com', 'bonappetit.com', 'epicurious.com', 'gq.com' , 'newyorker.com', 'vanityfair.com', 'vogue.com', 'wired.com'];
 var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
+var usa_gannett_domains = ['azcentral.com', 'cincinnati.com', 'commercialappeal.com', 'courier-journal.com', 'democratandchronicle.com', 'detroitnews.com', 'freep.com', 'indystar.com', 'jsonline.com', 'knoxnews.com', 'news-press.com', 'northjersey.com', 'oklahoman.com', 'statesman.com', 'tennessean.com'];
 var usa_genomeweb_domains = ['360dx.com', 'genomeweb.com', 'precisiononcologynews.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'omaha.com', 'richmond.com', 'tucson.com', 'tulsaworld.com'];
@@ -500,7 +501,7 @@ else if (matchDomain('aerztezeitung.de')) {
 }
 
 else if (matchDomain('allgaeuer-zeitung.de')) {
-  if (!window.location.search.includes('?type=amp')) {
+  if (!window.location.search.startsWith('?type=amp')) {
     let paywall = document.querySelector('p.nfy-text-blur');
     if (paywall) {
       removeDOMElement(paywall);
@@ -4781,6 +4782,11 @@ else if (matchDomain('zerohedge.com')) {
       }
     }
   }, 1000);
+}
+
+else if (matchDomain(usa_gannett_domains) || document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], link[href*=".gannett-cdn.com/"]')) {
+  if (window.location.pathname.endsWith('/restricted/') && window.location.search.startsWith('?return='))
+    window.location.href = decodeURIComponent(window.location.href.split('?return=')[1]);
 }
 
 else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {

@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Bloomberg (Live TV limit)
+Fix Gannett Group (redirect restricted)
 Fix La Vanguardia (xhr)
 Fix Mediahuis Noord (refresh)
 Fix Roularta Media Group (js) 
