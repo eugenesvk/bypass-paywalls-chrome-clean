@@ -20,8 +20,9 @@ var defaultSites = {
       "syracuse.com"
     ]
   },
-  "Adweek (free articles only)": {
-    domain: "adweek.com"
+  "Adweek": {
+    domain: "adweek.com",
+    useragent: "googlebot"
   },
   "Ärzte Zeitung": {
     domain: "aerztezeitung.de",

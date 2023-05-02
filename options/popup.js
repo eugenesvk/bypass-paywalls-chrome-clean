@@ -78,7 +78,7 @@ function showArchiveLinks() {
     currentWindow: true
   }, function (tabs) {
     if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
-      let url = tabs[0].url.split('?')[0];
+      let url = tabs[0].url.split(/[#\?]/)[0];
       let url_enc = encodeURIComponent(url);
       let hostname = urlHost(url);
       let archive_array = {

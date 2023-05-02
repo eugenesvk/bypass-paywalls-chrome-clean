@@ -113,7 +113,11 @@ if (bg2csData.ld_google_webcache) {
 if (bg2csData.add_ext_link) {
   if (bg2csData.add_ext_link.css && bg2csData.add_ext_link.css.includes('|') && bg2csData.add_ext_link.type) {
     window.setTimeout(function () {
-      let url = window.location.href;
+      let url = window.location.href.split(/[#\?]/)[0];
+      if (matchUrlDomain('zeit.de', url)) {
+        if (document.querySelector('link[rel="next"]'))
+          url += '/komplettansicht';
+      }
       let add_ext_link_split = bg2csData.add_ext_link.css.split('|');
       let paywall_sel = add_ext_link_split[0];
       let article_sel = add_ext_link_split[1];
@@ -2919,16 +2923,6 @@ if (matchDomain(usa_adv_local_domains)) {
   }
 }
 
-else if (matchDomain('adweek.com')) {
-  let url = window.location.href;
-  let body_single = document.querySelector('body.single');
-  let amphtml = document.querySelector('link[rel="amphtml"]');
-  if (body_single && amphtml) {
-    body_single.classList.remove('single');
-    window.location.href = amphtml.href;
-  }
-}
-
 else if (matchDomain('americanbanker.com')) {
   let inline_gate = document.querySelector('.inline-gate');
   if (inline_gate) {
@@ -4667,6 +4661,9 @@ else if (matchDomain(usa_craincomm_domains)) {
   }
   let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
   removeDOMElement(...lazy_sources);
+  let sponsored_article = document.querySelector('div.sponsored-article');
+  if (sponsored_article)
+    sponsored_article.classList.remove('sponsored-article');
 }
 
 else if (matchDomain(usa_genomeweb_domains)) {
