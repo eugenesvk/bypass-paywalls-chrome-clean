@@ -70,7 +70,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/americanaffairsjournal\.org\/wp-content\/mu-plugins\/app\/src\/paywall\/paywall\.js/
   },
-  "American Banker": {
+  "American Banker (+ Arizent; opt-in to custom sites)": {
     domain: "americanbanker.com",
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//

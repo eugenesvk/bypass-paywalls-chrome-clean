@@ -89,7 +89,6 @@ _* free articles only._
 ##### Business
 [Adweek](https://www.adweek.com) -
 [American Affairs](https://americanaffairsjournal.org) -
-[American Banker](https://www.americanbanker.com) -
 [Barron's](https://www.barrons.com) -
 [Bloomberg](https://www.bloomberg.com) -
 [Business Insider](https://www.businessinsider.com) -
@@ -113,6 +112,8 @@ _* free articles only._
 [ZeroHedge](https://www.zerohedge.com)
 
 Grouped in options:\
+*[American Banker](https://www.americanbanker.com) (+ [Arizent](https://www.arizent.com/brands)*; opt-in to custom sites)
+
 *California Business Journals* sites like\
 [Los Angeles Business Journal](https://labusinessjournal.com) -
 [Orange County Business Journal](https://www.ocbj.com) -
@@ -128,7 +129,7 @@ Grouped in options:\
 [Crain's New York Business](https://www.crainsnewyork.com) -
 [Modern Healthcare](https://www.modernhealthcare.com)
 
-*[PEI Media](https://www.thisispei.com)* sites (opt-in to custom sites)
+*[PEI Media](https://www.pei.group/brands)* sites (opt-in to custom sites)
 
 ##### Tech/Science
 [Bulletin of the Atomic Scientists](https://thebulletin.org) -
@@ -240,7 +241,7 @@ Grouped in options:\
 [Town & Country](https://www.townandcountrymag.com) -
 [Women's Health](https://www.womenshealthmag.com)
 
-*[Madavor Media](https://www.madavor.com)* sites (opt-in to custom sites)\
+*[Madavor Media](https://www.madavor.com/brands)* sites (opt-in to custom sites)\
 *Outside magazines* sites like\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -

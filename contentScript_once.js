@@ -112,6 +112,8 @@ window.setTimeout(function () {
           group = '###_usa_pei';
         else if (matchDomain(['dayton.com', 'daytondailynews.com', 'journal-news.com', 'springfieldnewssun.com']))
           group = 'ajc.com';// Cox First Media
+        else if (matchDomain(['accountingtoday.com', 'benefitnews.com', 'bondbuyer.com', 'dig-in.com', 'financial-planning.com', 'nationalmortgagenews.com']))
+          group = 'americanbanker.com';// Arizent
       }
     }
 
