@@ -84,6 +84,12 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "dailyherald.com"
   },
+  "Deutsche-wirtschafts-nachrichten.de": {
+    "add_ext_link": "div#article-teaser-blocks|div.teaser_extra",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "deutsche-wirtschafts-nachrichten.de"
+  },
   "Diabeteshealth.co.in": {
     "allow_cookies": 1,
     "domain": "diabeteshealth.co.in",
@@ -298,6 +304,13 @@
     "allow_cookies": 1,
     "domain": "lavozdegalicia.es"
   },
+  "Law360.com": {
+    "add_ext_link": "div.feature-box|div#teaser",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "block_regex": "\\.law360news\\.com\\/assets\\/www\\/free_trial_modal-.+\\.js",
+    "domain": "law360.com"
+  },
   "Lemonde.fr": {
     "add_ext_link": "section.paywall|article",
     "add_ext_link_type": "google_search_tool",
@@ -423,6 +436,12 @@
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
+  "Politiken.dk": {
+    "add_ext_link": "div.stopsign|div.article__body",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "politiken.dk"
+  },
   "Pressandjournal.co.uk": {
     "allow_cookies": 1,
     "domain": "pressandjournal.co.uk",
@@ -446,6 +465,24 @@
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
+  },
+  "Risk.net": {
+    "add_ext_link": "div.barrier-block|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "risk.net"
+  },
+  "Rp-online.de": {
+    "add_ext_link": "div.paid-content|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "rp-online.de"
+  },
+  "Saarbruecker-zeitung.de": {
+    "add_ext_link": "div.paid-content|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "saarbruecker-zeitung.de"
   },
   "Saechsische.de": {
     "add_ext_link": "div#piano-inline|div.article-detail-content>p",

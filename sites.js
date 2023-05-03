@@ -119,27 +119,42 @@ var defaultSites = {
     domain: "###_au_news_corp",
     group: [
       "adelaidenow.com.au",
+      "cairnspost.com.au",
       "codesports.com.au",
       "couriermail.com.au",
       "dailytelegraph.com.au",
+      "geelongadvertiser.com.au",
       "goldcoastbulletin.com.au",
       "heraldsun.com.au",
       "ntnews.com.au",
       "theaustralian.com.au",
       "thechronicle.com.au",
       "themercury.com.au",
+      "townsvillebulletin.com.au",
       "weeklytimesnow.com.au"
     ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/,
     useragent: "googlebot",
     exception: [{
+        domain: "cairnspost.com.au",
+        allow_cookies: 1,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+      }, {
         domain: "codesports.com.au",
         allow_cookies: 1,
         block_js_inline: /\.codesports\.com\.au\/.+\/news-story\//,
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }, {
+        domain: "geelongadvertiser.com.au",
+        allow_cookies: 1,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+      }, {
         domain: "theaustralian.com.au",
+        allow_cookies: 1,
+        block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+      }, {
+        domain: "townsvillebulletin.com.au",
         allow_cookies: 1,
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }
@@ -2391,6 +2406,7 @@ var defaultSites = {
     domain: "###_substack_custom",
     group: [
       "substack.com",
+      "codebeautify.org",
       "html.onlineviewer.net"
     ],
     add_ext_link: "div.paywall:not(.modal-paywall)|article",
@@ -2398,6 +2414,10 @@ var defaultSites = {
     allow_cookies: 1,
     exception: [{
         domain: "html.onlineviewer.net",
+        allow_cookies: 1,
+        block_regex: /\/substackcdn\.com\/.+\/main(.+)?\.bundle\.js/
+      }, {
+        domain: "codebeautify.org",
         allow_cookies: 1,
         block_regex: /\/substackcdn\.com\/.+\/main(.+)?\.bundle\.js/
       }
@@ -2530,8 +2550,7 @@ function init_custom_flex_domains() {
 init_custom_flex_domains();
 
 // sites with no fix (background)
-var au_news_corp_nofix_domains = ['cairnspost.com.au', 'geelongadvertiser.com.au', 'townsvillebulletin.com.au'];
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var de_rp_medien_nofix_domains = ['ga.de', 'rp-online.de', 'saarbruecker-zeitung.de', 'volksfreund.de'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com', 'repubblica.it'];
-var nofix_sites = ['aamulehti.fi', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'asiatimes.com', 'badische-zeitung.de', 'bild.de', 'bloomberglaw.com', 'bloombergtax.com', 'borsen.dk', 'business-standard.com', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'courrierinternational.com', 'diepresse.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'finance.si', 'ftchinese.com', 'gamestar.de', 'golem.de', 'handelsblatt.com', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'investors.com', 'iltalehti.fi', 'jacobinmag.com', 'jeuneafrique.com', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lemonde.fr', 'lequipe.fr', 'letemps.ch', 'liberation.fr', 'lopinion.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nknews.org', 'nn.de', 'nwzonline.de', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'rheinpfalz.de', 'rnz.de', 'ruhrnachrichten.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'thedispatch.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'weser-kurier.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zeit.de'].concat(au_news_corp_nofix_domains, be_mediahuis_nofix_domains, de_rp_medien_nofix_domains, it_gedi_nofix_domains);
+var nofix_sites = ['aamulehti.fi', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'asiatimes.com', 'badische-zeitung.de', 'bild.de', 'bloomberglaw.com', 'bloombergtax.com', 'borsen.dk', 'business-standard.com', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'courrierinternational.com', 'deutsche-wirtschafts-nachrichten.de', 'diepresse.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'finance.si', 'ftchinese.com', 'gamestar.de', 'golem.de', 'handelsblatt.com', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'investors.com', 'iltalehti.fi', 'jacobinmag.com', 'jeuneafrique.com', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lemonde.fr', 'lequipe.fr', 'letemps.ch', 'liberation.fr', 'lopinion.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'moneycontrol.com', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'nknews.org', 'nn.de', 'nwzonline.de', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'ruhrnachrichten.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'thedispatch.com', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'welt.de', 'weser-kurier.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il', 'zeit.de'].concat(be_mediahuis_nofix_domains, de_rp_medien_nofix_domains, it_gedi_nofix_domains);

@@ -303,9 +303,9 @@ else {
     removeDOMElement(story_generic_iframe, blocker, ...overlays, ...ads);
   } else if (window.location.hostname.endsWith('.com.au')) {
     // Australia News Corp
-    let au_news_corp_domains = ['adelaidenow.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'weeklytimesnow.com.au'];
+    let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'codesports.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
     if (matchDomain(au_news_corp_domains)) {
-      if (window.location.hostname.startsWith('amp.') || window.location.search.match(/(\?|&)amp/)) {
+      if (window.location.hostname.startsWith('amp.') || window.location.search.match(/[&\?]amp/)) {
         let figure_stretch = document.querySelectorAll('figure.stretch');
         for (let elem of figure_stretch)
           elem.classList.remove('stretch');
@@ -5083,7 +5083,7 @@ function googleWebcacheLink(url, text_fail = 'BPC > Full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
 }
 
-function googleSearchToolLink(url, text_fail = 'BPC > Full article text (copy html (tab) code to html.onlineviewer.net):\r\n') {
+function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test url & copy html (tab) code to [https://codebeautify.org/htmlviewer] or [https://html.onlineviewer.net]):\r\n') {
   return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
@@ -5095,7 +5095,11 @@ function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full artic
   let text_fail_div = document.createElement('div');
   text_fail_div.id = 'bpc_archive';
   text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
-  text_fail_div.appendChild(document.createTextNode(text_fail));
+  let parser = new DOMParser();
+  text_fail = text_fail.replace(/\[([^\]]+)\]/g, "<a href='$1' target='_blank' style='color: red'>$1</a>");
+  let doc = parser.parseFromString('<span>' + text_fail + '</span>', 'text/html');
+  let elem = doc.querySelector('span');
+  text_fail_div.appendChild(elem);
   for (let domain of domains) {
     let ext_url = ext_url_templ.replace('{domain}', domain).replace('{url}', url.split('?')[0]);
     let a_link = document.createElement('a');

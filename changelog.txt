@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Cairns Post, Geelong Advertiser & Townsville Bulletin (Australia News Corp)
 Add Arizent sites (opt-in to custom sites)
 Fix Adweek (premium)
 Fix Modern Healthcare (sponsored)
@@ -176,7 +177,7 @@ Update block general paywall script (Steady)
 * v3.0.2.0 (2023-01-22)
 Add AerzteBlatt.de
 Add AerzteZeitung.de
-Add 3 Australia News Corp sites
+Add Gold Coast Bulletin, The Chronicle & The Weekly Times (Australia News Corp)
 Add BusinessPost.ie
 Add Cellesche Zeitung
 Add DvhN.nl

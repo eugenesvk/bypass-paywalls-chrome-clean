@@ -775,7 +775,9 @@ Grouped in options:\
 
 Grouped in options:\
 *Australia News Corp* sites like\
+[Cairns Post](https://www.cairnspost.com.au) -
 [Code Sports](https://www.codesports.com.au) -
+[Geelong Advertiser](https://www.geelongadvertiser.com.au) -
 [Gold Coast Bulletin](https://www.goldcoastbulletin.com.au) -
 [Herald Sun](https://www.heraldsun.com.au) -
 [Northern Territory News](https://www.ntnews.com.au) -
@@ -785,7 +787,8 @@ Grouped in options:\
 [The Courier-Mail](https://www.couriermail.com.au) -
 [The Daily Telegraph](https://www.dailytelegraph.com.au) -
 [The Mercury Tasmania](https://www.themercury.com.au) -
-[The Weekly Times](https://www.weeklytimesnow.com.au)\
+[The Weekly Times](https://www.weeklytimesnow.com.au) -
+[Townsville Bulletin](https://www.townsvillebulletin.com.au)\
 *Australia Nine Entertainment* sites like\
 [Brisbane Times](https://www.brisbanetimes.com.au) -
 [The Age](https://www.theage.com.au) -
@@ -907,7 +910,7 @@ Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass
 3. Disable Javascript on the site (by browser, uBlock Origin or other add-on).
 4. Add the domain as custom site for more bypass options.
 5. Open page in reader view (by browser or add-on).
-6. Try one of the archive sites (for Google Search Tool copy html (tab) code to https://html.onlineviewer.net).
+6. Try one of the archive sites (for Google Search Tool test url & copy html (tab) code to https://codebeautify.org/htmlviewer or https://html.onlineviewer.net).
 
 ### Add custom site
 Add your own custom site (also for testing).  
