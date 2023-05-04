@@ -3926,19 +3926,6 @@ else if (matchDomain('project-syndicate.org')) {
   }
 }
 
-else if (matchDomain('puck.news')) {
-  let paywall = document.querySelector('.paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let overlay = document.querySelector('body.paywall-active');
-    if (overlay)
-      overlay.classList.remove('paywall-active');
-    let article_style = document.querySelector('article[style]');
-    if (article_style)
-      article_style.removeAttribute('style');
-  }
-}
-
 else if (matchDomain('quillette.com')) {
   let url = window.location.href;
   let paywall = document.querySelector('aside.gh-post-upgrade-cta');

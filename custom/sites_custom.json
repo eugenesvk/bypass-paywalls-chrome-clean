@@ -23,6 +23,12 @@
     "domain": "bauernzeitung.ch",
     "useragent": "googlebot"
   },
+  "Bild.de": {
+    "add_ext_link": "div.offer-module|div.article-body",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "bild.de"
+  },
   "Bizwest.com": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.fp-paywall\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.fp-content\", \"rm_attrib\":\"class\"}]}]",
@@ -45,6 +51,12 @@
     "allow_cookies": 1,
     "domain": "bt.no",
     "useragent": "facebookbot"
+  },
+  "Businessinsider.de": {
+    "add_ext_link": "div.piano-article__paywall|div.piano-article__content>p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "businessinsider.de"
   },
   "Businessnews.com.au": {
     "allow_cookies": 1,
@@ -451,6 +463,13 @@
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "pressherald.com"
+  },
+  "Puck.news": {
+    "add_ext_link": "div.paywall|div.entry-content",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body.paywall-active\", \"rm_class\":\"paywall-active\"},{\"cond\":\"article[style]\", \"rm_attrib\":\"style\"}]",
+    "domain": "puck.news"
   },
   "Quickmath.com": {
     "domain": "quickmath.com"

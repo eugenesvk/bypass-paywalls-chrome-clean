@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Cairns Post, Geelong Advertiser & Townsville Bulletin (Australia News Corp)
 Add Arizent sites (opt-in to custom sites)
+Remove Puck.news (fix obsolete)
 Fix Adweek (premium)
 Fix Modern Healthcare (sponsored)
 
