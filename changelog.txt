@@ -8,6 +8,7 @@ Add Arizent sites (opt-in to custom sites)
 Remove Puck.news (fix obsolete)
 Fix Adweek (premium)
 Fix Modern Healthcare (sponsored)
+Fix Sportico (amp)
 
 * v3.1.6.0 (2023-04-30)
 Remove Zeit.de (fix obsolete)

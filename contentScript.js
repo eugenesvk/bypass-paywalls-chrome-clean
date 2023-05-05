@@ -4069,6 +4069,11 @@ else if (matchDomain('spglobal.com')) {
     html_noscroll.removeAttribute('class');
 }
 
+else if (matchDomain('sportico.com')) {
+  if (window.location.pathname.endsWith('/amp/'))
+    amp_unhide_subscr_section('amp-ad, amp-embed', false);
+}
+
 else if (matchDomain('staradvertiser.com')) {
   if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_subscr_section();
