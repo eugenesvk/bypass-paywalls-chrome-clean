@@ -3,28 +3,17 @@
     "domain": "adweek.com",
     "useragent": "googlebot"
   },
-  "Berlingske": {
-    "domain": "berlingske.dk",
+  "Il Messaggero (+ regional)": {
+    "domain": "###_it_ilmessaggero",
+    "group": [
+      "corriereadriatico.it",
+      "ilgazzettino.it",
+      "ilmattino.it",
+      "ilmessaggero.it",
+      "quotidianodipuglia.it"
+    ],
     "allow_cookies": 1,
-    "useragent": "bingbot"
-  },
-  "El Observador.com.uy": {
-    "domain": "elobservador.com.uy",
-    "allow_cookies": 1,
-    "amp_redirect": "div.mensaje_member",
-    "amp_unhide": 1,
-    "block_regex": "(\\.elobservador\\.com\\.uy\\/shares|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "new_site": 1
-  },
-  "El País.com.uy": {
-    "domain": "elpais.com.uy",
-    "allow_cookies": 1,
-    "block_regex": "(\\.elpais\\.com\\.uy\\/user\\/authStatus|\\.evolok\\.net\\/|cdn\\.cxense\\.com\\/)"
-  },
-  "La Diaria.com.uy": {
-    "domain": "ladiaria.com.uy",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
+    "block_regex": "(\\.(cedscdn|cedsdigital)\\.it\\/.+\\/PaywallMeter\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|consent|subscriptions)-.+\\.(m)?js)"
   },
   "La Vanguardia": {
     "domain": "lavanguardia.com",

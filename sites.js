@@ -965,7 +965,8 @@ var defaultSites = {
       "ilmessaggero.it",
       "quotidianodipuglia.it"
     ],
-    block_regex: /(utils\.cedsdigital\.it\/js\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|consent|subscriptions)-.+\.mjs)/
+    allow_cookies: 1,
+    block_regex: /(\.(cedscdn|cedsdigital)\.it\/.+\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|consent|subscriptions)-.+\.(m)?js)/
   },
   "Il Tirreno": {
     domain: "iltirreno.it"
