@@ -1303,12 +1303,9 @@ function clear_cookies() {
     }
     if (rules.ld_json)
       ld_json[custom_domain] = rules.ld_json;
-    custom_flex_domains.push(custom_domain);
-    if (!enabledSites.includes(custom_domain))
-      enabledSites.push(custom_domain);
-    ext_api.tabs.reload({bypassCache: true});
     if (rules.add_ext_link && rules.add_ext_link_type)
       add_ext_link[custom_domain] = {css: rules.add_ext_link, type: rules.add_ext_link_type};
+    ext_api.tabs.reload({bypassCache: true});
   }
 
 var chrome_scheme = 'light';
@@ -1325,25 +1322,33 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let group = message.data.group;
     if (group) {
       let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews'];
-      if (enabledSites.concat(nofix_groups).includes(group) && !custom_flex_domains.includes(custom_domain)) {
-        let rules;
-        if (group === 'elmercurio.com')
-          rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
+      if (!custom_flex_domains.includes(custom_domain)) {
+        if (enabledSites.includes(group)) {
+          let rules;
+          if (group === 'elmercurio.com')
+            rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
+          else {
+            rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
+            if (rules) {
+              if (group === '###_de_madsack')
+                if (!set_var_sites.includes(custom_domain))
+                  set_var_sites.push(custom_domain);
+            } else
+              rules = Object.values(customSites).filter(x => x.domain === group)[0];
+          }
+          if (rules) {
+            custom_flex_domains.push(custom_domain);
+            if (!enabledSites.includes(custom_domain))
+              enabledSites.push(custom_domain);
+            customAddRules(custom_domain, rules);
+          }
+        } else if (disabledSites.includes(group))
+          custom_flex_not_domains.push(custom_domain);
         else if (nofix_groups.includes(group))
           nofix_sites.push(custom_domain);
-        else {
-          rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
-          if (group === '###_de_madsack')
-            if (!set_var_sites.includes(custom_domain))
-              set_var_sites.push(custom_domain);
-        }
-        if (rules) {
-          customAddRules(custom_domain, rules);
-        }
-      } else if (disabledSites.includes(group))
-        custom_flex_not_domains.push(custom_domain);
-    } else
-      custom_flex_not_domains.push(custom_domain);
+    }
+  } else
+    custom_flex_not_domains.push(custom_domain);
   }
   if (message.request === 'site_switch') {
     site_switch();

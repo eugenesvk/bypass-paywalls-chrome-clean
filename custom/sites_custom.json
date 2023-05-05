@@ -575,6 +575,13 @@
     "amp_redirect": "div#story-notification",
     "domain": "swarajyamag.com"
   },
+  "Tamedia.ch": {
+    "add_ext_link": "div#piano-premium>div|article p>span",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "domain": "###_ch_tamedia"
+  },
   "The-past.com": {
     "domain": "the-past.com"
   },

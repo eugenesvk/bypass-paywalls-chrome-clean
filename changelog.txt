@@ -9,6 +9,7 @@ Remove Puck.news (fix obsolete)
 Fix Adweek (premium)
 Fix Modern Healthcare (sponsored)
 Fix Sportico (amp)
+Update custom (flex) sites (no fix group)
 
 * v3.1.6.0 (2023-04-30)
 Remove Zeit.de (fix obsolete)

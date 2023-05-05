@@ -909,7 +909,7 @@ else if (matchDomain('tagesanzeiger.ch')) {
   let paywall = document.querySelector('div#piano-premium > div');
   if (paywall) {
     removeDOMElement(paywall.parentNode);
-    let article = document.querySelector('article p');
+    let article = document.querySelector('article p > span');
     if (article)
       article.firstChild.before(archiveLink(url));
   }
