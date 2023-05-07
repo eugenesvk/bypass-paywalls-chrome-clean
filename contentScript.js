@@ -61,7 +61,9 @@ if (bg2csData.ld_json) {
       let paywall_sel = ld_json_split[0];
       let article_sel = ld_json_split[1];
       let paywall = document.querySelectorAll(paywall_sel);
-      if (paywall.length) {
+      let article = document.querySelector(article_sel);
+      let article_append = ld_json_split[2];// optional
+      if (paywall.length && article) {
         removeDOMElement(...paywall);
         let json_script = getArticleJsonScript();
         if (json_script) {
@@ -76,15 +78,52 @@ if (bg2csData.ld_json) {
               json_key = Object.keys(json).find(key => key.match(/^articlebody$/i)) || Object.keys(json).find(key => key.match(/^text$/i));
               json_text = parseHtmlEntities(json[json_key]);
             }
-            let content = document.querySelector(article_sel);
-            if (json_text && content) {
+            if (json_text && article.parentNode) {
               let parser = new DOMParser();
-              let doc = parser.parseFromString('<div>' + json_text + '</div>', 'text/html');
-              let content_new = doc.querySelector('div');
-              content.parentNode.replaceChild(content_new, content);
+              let doc = parser.parseFromString('<div style="margin: 25px 0px">' + json_text + '</div>', 'text/html');
+              let article_new = doc.querySelector('div');
+              if (article_append || !article.parentNode) {
+                article.innerHTML = '';
+                article.appendChild(article_new);
+              } else
+                article.parentNode.replaceChild(article_new, article);
             }
           } catch (err) {
             console.log(err);
+          }
+        }
+      }
+    }, 1000);
+  }
+}
+
+if (bg2csData.ld_json_next) {
+  if (bg2csData.ld_json_next.includes('|')) {
+    window.setTimeout(function () {
+      let ld_json_next_split = bg2csData.ld_json_next.split('|');
+      let paywall_sel = ld_json_next_split[0];
+      let article_sel = ld_json_next_split[1];
+      let paywall = document.querySelectorAll(paywall_sel);
+      let article = document.querySelector(article_sel);
+      let article_append = ld_json_next_split[2];// optional
+      if (paywall.length && article) {
+        removeDOMElement(...paywall);
+        let json_script = document.querySelector('script#__NEXT_DATA__');
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let url_next = findKeyJson(json, ['slug']);
+          if (url_next && !window.location.pathname.endsWith(url_next))
+            refreshCurrentTab();
+          let json_text = parseHtmlEntities(findKeyJson(json, ['body', 'content', 'description'], 500));
+          if (json_text && article.parentNode) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + json_text + '</div>', 'text/html');
+              let article_new = doc.querySelector('div');
+              if (article_append || !article.parentNode) {
+                article.innerHTML = '';
+                article.appendChild(article_new);
+              } else
+                article.parentNode.replaceChild(article_new, article);
           }
         }
       }
@@ -5152,6 +5191,24 @@ function getArticleJsonScript() {
     }
   }
   return json_script;
+}
+
+function findKeyJson(json, keys, min_val_len = 0) {
+  let source;
+  if (Array.isArray(json)) {
+    for (let elem of json)
+      source = source || findKeyJson(json[elem], keys, min_val_len);
+  } else if (typeof json === 'object') {
+    for (let elem in json) {
+      let json_elem = json[elem];
+      if (typeof json_elem === 'string' && keys.includes(elem)) {
+        if (json_elem.length > min_val_len)
+          return json_elem;
+      } else
+        source = source || findKeyJson(json_elem, keys, min_val_len);
+    }
+  }
+  return source;
 }
 
 function genHexString(len) {

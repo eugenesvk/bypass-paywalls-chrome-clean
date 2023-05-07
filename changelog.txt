@@ -11,6 +11,7 @@ Fix ilMessaggero.it (+ regional sites)
 Fix Modern Healthcare (sponsored)
 Fix Sportico (amp)
 Update custom (flex) sites (no fix group)
+Update custom sites (load text from json_next)
 
 * v3.1.6.0 (2023-04-30)
 Remove Zeit.de (fix obsolete)

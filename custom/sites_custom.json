@@ -29,6 +29,11 @@
     "allow_cookies": 1,
     "domain": "bild.de"
   },
+  "Bisnisindonesia.id": {
+    "allow_cookies": 1,
+    "domain": "bisnisindonesia.id",
+    "ld_json_next": "div.bottom-10|article"
+  },
   "Bizwest.com": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.fp-paywall\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.fp-content\", \"rm_attrib\":\"class\"}]}]",
