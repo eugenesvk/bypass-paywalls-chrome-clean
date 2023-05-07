@@ -2156,6 +2156,15 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
             article.innerHTML = '';
             try {
               let pars = JSON.parse(json_text);
+              function addParText(elem, par_text, add_br = false) {
+                if (par_text.length > 1) {
+                  let span = document.createElement('span');
+                  span.innerText = par_text;
+                  elem.appendChild(span);
+                  if (add_br)
+                    elem.appendChild(document.createElement('br'));
+                }
+              }
               for (let par of pars) {
                 let elem = document.createElement('p');
                 if (par.typename === 'HTMLCustomEmbed') {
@@ -2166,26 +2175,20 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                   }
                 } else if (par.insertbox_head || par.insertbox_text) {
                   if (par.insertbox_head && par.insertbox_head.length > 2) {
-                    let span = document.createElement('span');
-                    span.innerText = par.insertbox_head;
-                    elem.appendChild(span);
-                    elem.appendChild(document.createElement('br'));
+                    addParText(elem, par.insertbox_head, true);
                   }
                   if (par.insertbox_text) {
                     for (let item of par.insertbox_text) {
                       if (item.children) {
                         for (let child of item.children) {
                           if (child.text) {
-                            let span = document.createElement('span');
-                            span.innerText = child.text;
-                            elem.appendChild(span);
-                            elem.appendChild(document.createElement('br'));
+                            addParText(elem, child.text, true);
                           } else if (child.children) {
                             for (let sub_child of child.children) {
                               if (sub_child.text) {
-                                let sub_span = document.createElement('span');
-                                sub_span.innerText = sub_child.text;
-                                elem.appendChild(sub_span);
+                                addParText(elem, sub_child.text);
+                              } else if (sub_child.children && sub_child.children.length && sub_child.children[0].text) {
+                                addParText(elem, sub_child.children[0].text);
                               }
                             }
                           }
@@ -2194,25 +2197,19 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                     }
                   }
                 } else if (par.text) {
-                  elem.innerText = par.text;
+                  addParText(elem, par.text);
                 } else if (par.children) {
                   for (let child of par.children) {
                     if (child.text) {
-                      if (child.text.length > 1) {
-                        let span = document.createElement('span');
-                        span.innerText = child.text;
-                        elem.appendChild(span);
-                      }
+                      addParText(elem, child.text);
                     } else if (child.children && child.children.length && child.children[0].text && child.children[0].text.length > 2) {
-                      if ((child.href  && child.href.length > 2) || (child.relation && child.relation.follow && child.relation.follow.url)) {
+                      if ((child.href && child.href.length > 2) || (child.relation && child.relation.follow && child.relation.follow.url)) {
                         let par_link = document.createElement('a');
                         par_link.href = child.href || child.relation.follow.url;
                         par_link.innerText = child.children[0].text;
                         elem.appendChild(par_link);
                       } else {
-                        let span = document.createElement('span');
-                        span.innerText = child.children[0].text;
-                        elem.appendChild(span);
+                        addParText(elem, child.children[0].text);
                       }
                     }
                   }
