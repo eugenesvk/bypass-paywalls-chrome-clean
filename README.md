@@ -589,9 +589,6 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
-*Medienhaus Aachen* sites like\
-[Aachener Nachrichten](https://www.aachener-nachrichten.de) -
-[Aachener Zeitung](https://www.aachener-zeitung.de)\
 *NOZ/MHN Mediengruppe* sites like\
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -

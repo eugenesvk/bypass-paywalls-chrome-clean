@@ -417,7 +417,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_ar_grupo_clarin', '###_be_groupe_ipm', '###_be_roularta', '###_de_mh_aachen', '###_de_noz_mhn', '###_uk_nat_world'];
+          let new_groups = ['###_ar_grupo_clarin', '###_be_groupe_ipm', '###_be_roularta', '###_de_noz_mhn', '###_uk_nat_world'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
             (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)
@@ -1331,7 +1331,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews'];
+      let nofix_groups = ['###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (enabledSites.includes(group)) {
           let rules;

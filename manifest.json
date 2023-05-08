@@ -54,8 +54,6 @@
     "webRequestBlocking",
     "*://*.360dx.com/*",
     "*://*.60millions-mag.com/*",
-    "*://*.aachener-nachrichten.de/*",
-    "*://*.aachener-zeitung.de/*",
     "*://*.abc.es/*",
     "*://*.abendblatt.de/*",
     "*://*.abqjournal.com/*",
@@ -756,5 +754,5 @@
     "*://html.onlineviewer.net/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.1.7.0"
+  "version": "3.1.7.1"
 }

@@ -496,17 +496,11 @@
     "allow_cookies": 1,
     "domain": "risk.net"
   },
-  "Rp-online.de": {
-    "add_ext_link": "div.paid-content|article",
+  "Rp_aachen_medien": {
+    "add_ext_link": "div.paid-content,span.park-widget|article",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
-    "domain": "rp-online.de"
-  },
-  "Saarbruecker-zeitung.de": {
-    "add_ext_link": "div.paid-content|article",
-    "add_ext_link_type": "google_search_tool",
-    "allow_cookies": 1,
-    "domain": "saarbruecker-zeitung.de"
+    "domain": "###_de_rp_aachen_medien"
   },
   "Saechsische.de": {
     "add_ext_link": "div#piano-inline|div.article-detail-content>p",
