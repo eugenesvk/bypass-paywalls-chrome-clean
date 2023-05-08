@@ -4,6 +4,8 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove Medienhaus Aachen (fix obsolete)
+Fix BusinessPost.ie (link to archive.is)
+Maintenance contentScript (sanitize html-input)
 
 * v3.1.7.0 (2023-05-07)
 Add Cairns Post, Geelong Advertiser & Townsville Bulletin (Australia News Corp)

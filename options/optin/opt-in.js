@@ -7,7 +7,32 @@ var custom_switch = ((manifestData.optional_permissions && manifestData.optional
 
 window.addEventListener("load", function () {
     document.getElementById("button-close").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "optInShown": true,
+            "customShown": true
+        });
         window.close();
+    });
+
+    var opt_in_enabled = document.getElementById('opt-in-enabled');
+    ext_api.storage.local.get("optIn", function (result) {
+        opt_in_enabled.innerText = result.optIn ? 'YES' : 'NO';
+    });
+
+    document.getElementById("optin-enable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "optIn": true,
+            "optInShown": true
+        });
+        opt_in_enabled.innerText = 'YES';
+    });
+
+    document.getElementById("optin-disable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "optIn": false,
+            "optInShown": true
+        });
+        opt_in_enabled.innerText = 'NO';
     });
 
     var custom_enabled = document.getElementById('custom-enabled');
@@ -35,6 +60,9 @@ window.addEventListener("load", function () {
             } else {
                 custom_enabled.innerText = 'NO';
             }
+            ext_api.storage.local.set({
+                "customShown": true
+            });
         });
     });
 
@@ -48,6 +76,9 @@ window.addEventListener("load", function () {
                     "customOptIn": false
                 });
             }
+            ext_api.storage.local.set({
+                "customShown": true
+            });
         });
     });
 
@@ -70,5 +101,24 @@ window.addEventListener("load", function () {
             "optInUpdate": false
         });
         update_enabled.innerText = 'NO';
+    });
+
+    var counter_enabled = document.getElementById('counter-enabled');
+    ext_api.storage.local.get({counter: true}, function (result) {
+        counter_enabled.innerText = result.counter ? 'YES' : 'NO';
+    });
+
+    document.getElementById("counter-enable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "counter": true
+        });
+        counter_enabled.innerText = 'YES';
+    });
+
+    document.getElementById("counter-disable").addEventListener("click", function () {
+        ext_api.storage.local.set({
+            "counter": false
+        });
+        counter_enabled.innerText = 'NO';
     });
 });

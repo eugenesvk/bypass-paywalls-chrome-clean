@@ -37,4 +37,8 @@ function currentDateStr() {
 }
 var last_date_str = currentDateStr();
 var daily_users;
-bpc_count_daily_users(last_date_str);
+ext_api.storage.local.get({counter: true}, function (result) {
+  if (result.counter)
+    bpc_count_daily_users(last_date_str);
+});
+

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bypass Paywalls Clean (setCookie/custom sites opt-in)</title>
+    <title>Bypass Paywalls Clean (setCookie, custom sites & check update opt-in)</title>
     <link rel="stylesheet" href="../options_all.css"/>
     <link rel="stylesheet" href="opt-in.css"/>
     <script src="opt-in.js"></script>
@@ -12,8 +12,17 @@
 
   <body>
     <div>
-      <p><strong>Bypass Paywalls Clean<br> - custom sites/check update opt-in</strong></p>
+      <p><strong>Bypass Paywalls Clean<br> - setCookie, custom sites & check update opt-in</strong></p>
       </div>
+    </div>
+    <div id="opt-in-prompt">
+      <p><strong>setCookie opt-in</strong></p>
+      <p>For some sites a necessary cookie has to be set (this cookie doesn't contain any personal information about the user or device):<br><br>
+      Crusoé</p>
+      <p>setCookie opt-in enabled: <span id="opt-in-enabled"></span></p>
+      <div id="optin-container">
+        <button id="optin-enable">Enable</button>
+        <button id="optin-disable">Disable</button>
     </div>
     <div id="custom-prompt">
       <p><strong>custom sites opt-in</strong></p>
@@ -32,6 +41,15 @@
       <div id="update-container">
         <button id="update-enable">Enable</button>
         <button id="update-disable">Disable</button>
+      </div>
+    </div>
+    <div id="counter-prompt">
+      <p><strong>daily users counter opt-in</strong></p>
+      <p>Very basic daily users counter (by counting the download of an empty json-file (no personal information is shared)):</br>
+      <p>daily users counter enabled: <span id="counter-enabled"></span></p>
+      <div id="custom-container">
+        <button id="counter-enable">Enable</button>
+        <button id="counter-disable">Disable</button>
       </div>
     </div>
 	<p>

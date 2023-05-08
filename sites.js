@@ -270,7 +270,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Business Post.ie": {
+  "Business Post.ie (link to archive.is)": {
     domain: "businesspost.ie",
     allow_cookies: 1,
     block_regex: /\.piano\.io\//
@@ -2198,6 +2198,7 @@ var defaultSites = {
   "UOL.com.br": {
     domain: "uol.com.br",
     allow_cookies: 1,
+    block_js_inline: /crusoe\.uol\.com\.br\/(diario|edicoes)\/.+/,
     block_regex: /(paywall\.folha\.uol\.com\.br\/|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
@@ -2512,6 +2513,7 @@ expandSiteRules(defaultSites);
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
 var de_madsack_domains = grouped_sites['###_de_madsack'];
 var es_grupo_vocento_domains = grouped_sites['###_es_grupo_vocento'];
+var nl_mediahuis_noord_domains = grouped_sites['###_nl_mediahuis_noord'];
 var nl_mediahuis_region_domains = grouped_sites['###_nl_mediahuis_region'];
 var no_nhst_media_domains = grouped_sites['###_no_nhst_media'];
 

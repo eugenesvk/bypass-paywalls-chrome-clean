@@ -12,6 +12,8 @@ if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
 }
 
+const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'bloomberg.com', 'cicero.de', 'defector.com', 'ilmanifesto.it', 'iltirreno.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
 
@@ -347,6 +349,9 @@ function set_rules(sites, sites_updated, sites_custom) {
           ld_json_next[domain] = rule.ld_json_next;
         if (rule.ld_google_webcache)
           ld_google_webcache[domain] = rule.ld_google_webcache;
+        if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
+          if (!dompurify_sites.includes(domain))
+            dompurify_sites.push(domain);
         if (rule.add_ext_link && rule.add_ext_link_type)
           add_ext_link[domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
       }
@@ -383,6 +388,7 @@ ext_api.storage.local.get({
   sites_updated: {},
   sites_excluded: [],
   ext_version_old: '2.3.9.0',
+  optIn: false,
   optInUpdate: true
 }, function (items) {
   var sites = items.sites;
@@ -393,6 +399,7 @@ ext_api.storage.local.get({
   updatedSites = items.sites_updated;
   updatedSites_domains_new = Object.values(updatedSites).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
   var ext_version_old = items.ext_version_old;
+  optin_setcookie = items.optIn;
   optin_update = items.optInUpdate;
   excludedSites = items.sites_excluded;
 
@@ -531,6 +538,9 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
     }
     if (key === 'ext_version_new') {
       ext_version_new = storageChange.newValue;
+    }
+    if (key === 'optIn') {
+      optin_setcookie = storageChange.newValue;
     }
     if (key === 'optInUpdate') {
       optin_update = storageChange.newValue;
@@ -698,6 +708,8 @@ ext_api.webRequest.onHeadersReceived.addListener(function (details) {
 function blockJsInlineListener(details) {
   let domain = matchUrlDomain(blockedJsInlineDomains, details.url);
   let matched = domain && details.url.match(blockedJsInline[domain]);
+  if (matched && optin_setcookie && ['uol.com.br'].includes(domain))
+    matched = false;
   if (!isSiteEnabled(details) || !matched)
     return;
   var headers = details.responseHeaders;
@@ -737,7 +749,12 @@ if (typeof browser !== 'object') {
     let url = tab.url;
     let rc_domain = matchUrlDomain(remove_cookies, url);
     let rc_domain_enabled = rc_domain && enabledSites.includes(rc_domain);
+    let lib_file = 'lib/empty.js';
+    if (matchUrlDomain(dompurify_sites, url))
+      lib_file = 'lib/purify.min.js';
     var bg2csData = {};
+    if (optin_setcookie && matchUrlDomain(['crusoe.uol.com.br'], url))
+      bg2csData.optin_setcookie = 1;
     if (matchUrlDomain(amp_unhide, url))
       bg2csData.amp_unhide = 1;
     let amp_redirect_domain = '';
@@ -763,12 +780,19 @@ if (typeof browser !== 'object') {
       setTimeout(function () {
         // run contentScript.js on page
         ext_api.tabs.executeScript(tabId, {
-          file: 'contentScript.js',
+          file: lib_file,
           runAt: 'document_start'
         }, function (res) {
-          if (ext_api.runtime.lastError || res[0]) {
+          if (ext_api.runtime.lastError)
             return;
-          }
+          ext_api.tabs.executeScript(tabId, {
+            file: 'contentScript.js',
+            runAt: 'document_start'
+          }, function (res) {
+            if (ext_api.runtime.lastError || res[0]) {
+              return;
+            }
+          })
         });
         // send bg2csData to contentScript.js
         if (Object.keys(bg2csData).length) {
@@ -1277,19 +1301,19 @@ function clear_cookies() {
   });
 }
 
-  function customAddRules(custom_domain, rules) {
-    if (rules.allow_cookies && !allow_cookies.includes(custom_domain))
+  function customAddRules(custom_domain, rule) {
+    if (rule.allow_cookies && !allow_cookies.includes(custom_domain))
       allow_cookies.push(custom_domain);
-    if (rules.remove_cookies && !remove_cookies.includes(custom_domain))
+    if (rule.remove_cookies && !remove_cookies.includes(custom_domain))
       remove_cookies.push(custom_domain);
-    let custom_block_regex = rules.block_regex;
+    let custom_block_regex = rule.block_regex;
     if (custom_block_regex) {
       if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
         custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
       blockedRegexes[custom_domain] = custom_block_regex;
       blockedRegexesDomains = Object.keys(blockedRegexes);
     }
-    let custom_useragent = rules.useragent;
+    let custom_useragent = rule.useragent;
     if (custom_useragent) {
       if (custom_useragent === 'googlebot') {
         if (!use_google_bot.includes(custom_domain))
@@ -1297,7 +1321,7 @@ function clear_cookies() {
         change_headers.push(custom_domain);
       }
     }
-    let custom_referer = rules.referer;
+    let custom_referer = rule.referer;
     if (custom_referer) {
       if (custom_referer === 'twitter') {
         if (!use_twitter_referer.includes(custom_domain))
@@ -1305,16 +1329,21 @@ function clear_cookies() {
         change_headers.push(custom_domain);
       }
     }
-    if (rules.amp_unhide) {
+    if (rule.amp_unhide) {
       if (!amp_unhide.includes(custom_domain))
         amp_unhide.push(custom_domain);
     }
-    if (rules.ld_json)
-      ld_json[custom_domain] = rules.ld_json;
-    if (rules.ld_json_next)
-      ld_json_next[custom_domain] = rules.ld_json_next;
-    if (rules.add_ext_link && rules.add_ext_link_type)
-      add_ext_link[custom_domain] = {css: rules.add_ext_link, type: rules.add_ext_link_type};
+    if (rule.ld_json)
+      ld_json[custom_domain] = rule.ld_json;
+    if (rule.ld_json_next)
+      ld_json_next[custom_domain] = rule.ld_json_next;
+    if (rule.ld_google_webcache)
+      ld_google_webcache[domain] = rule.ld_google_webcache;
+    if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
+      if (!dompurify_sites.includes(custom_domain))
+        dompurify_sites.push(custom_domain);
+    if (rule.add_ext_link && rule.add_ext_link_type)
+      add_ext_link[custom_domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
     ext_api.tabs.reload({bypassCache: true});
   }
 
@@ -1440,6 +1469,19 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       ext_api.action.setIcon(icon_path);
       chrome_scheme = message.scheme;
       focus_changed = false;
+  }
+});
+
+// show the opt-in tab on installation
+ext_api.storage.local.get(["optInShown", "customShown"], function (result) {
+  if (!result.optInShown || !result.customShown) {
+    ext_api.tabs.create({
+      url: "options/optin/opt-in.html"
+    });
+    ext_api.storage.local.set({
+      "optInShown": true,
+      "customShown": true
+    });
   }
 });
 
