@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix Advance Local (no amp)
 
 * v3.1.7.3 (2023-05-08)
 Remove Medienhaus Aachen (fix obsolete)

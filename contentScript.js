@@ -2924,6 +2924,8 @@ if (matchDomain(usa_adv_local_domains)) {
   } else {
     let paywall = document.querySelector('.paywall');
     let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (!amphtml)
+      amphtml = {href: window.location.pathname + '?outputType=amp'};
     if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
