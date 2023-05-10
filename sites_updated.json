@@ -20,6 +20,10 @@
     "allow_cookies": 1,
     "block_regex": "\\/ev\\.lavanguardia\\.com"
   },
+  "Monocle": {
+    "domain": "monocle.com",
+    "useragent": "googlebot"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,

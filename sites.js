@@ -1370,6 +1370,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
+  "Monocle": {
+    domain: "monocle.com",
+    useragent: "googlebot"
+  },
   "Mountain View Voice": {
     domain: "mv-voice.com"
   },
