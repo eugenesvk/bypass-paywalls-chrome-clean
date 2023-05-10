@@ -1133,6 +1133,17 @@ if (matchDomain(['aftonbladet.se'])) {
   }
 }
 
+else if (matchDomain('dn.se')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.esi-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article__content');
+    if (article)
+      article.appendChild(archiveLink(url));
+  }
+}
+
 else if (matchDomain('etc.se')) {
   let paywall = document.querySelector('div.paywalled');
   if (paywall) {

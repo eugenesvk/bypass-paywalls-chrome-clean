@@ -3,6 +3,17 @@
     "domain": "adweek.com",
     "useragent": "googlebot"
   },
+  "Dagens Nyheter (link to archive.is)": {
+    "domain": "dn.se",
+    "allow_cookies": 1,
+    "add_ext_link": "div.esi-paywall|div.article__content",
+    "add_ext_link_type": "archive.is"
+  },
+  "El Español": {
+    "domain": "elespanol.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
+  },
   "Il Messaggero (+ regional)": {
     "domain": "###_it_ilmessaggero",
     "group": [

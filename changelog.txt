@@ -3,9 +3,11 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Dagens Nyheter (link to archive.is)
 Add Monocle (UK)
 Add Stylist.co.uk
 Fix Advance Local (no amp)
+Fix El Espanol (js)
 
 * v3.1.7.3 (2023-05-08)
 Remove Medienhaus Aachen (fix obsolete)
