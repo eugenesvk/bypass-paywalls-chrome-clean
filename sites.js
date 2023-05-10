@@ -2395,6 +2395,10 @@ var defaultSites = {
     block_regex_general: /\/steadyhq\.com\//,
     excluded_domains: ["steadyhq.com"]
   },
+  "Stylist.co.uk": {
+    domain: "stylist.co.uk",
+    allow_cookies: 1
+  },
   "Substack (link to Google Search Tool; opt-in to custom sites for custom domains)": {
     domain: "###_substack_custom",
     group: [

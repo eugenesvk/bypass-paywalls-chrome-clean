@@ -370,6 +370,12 @@
     "domain": "makorrishon.co.il",
     "useragent": "googlebot"
   },
+  "Manager-magazin.de": {
+    "add_ext_link": "div[data-area='paywall']|div[data-area='body']",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "manager-magazin.de"
+  },
   "Manilatimes.net": {
     "allow_cookies": 1,
     "domain": "manilatimes.net",
@@ -553,17 +559,6 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.c-memberships-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"body.access-restricted\",\"rm_class\":\"access-restricted\"}]}]",
     "domain": "stateaffairs.com"
-  },
-  "Stylist.co.uk": {
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div[data-cy='upgradeAccountPaywall']\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.paywall\",\"rm_attrib\":\"class|style\"},{\"cond\":\"div.css-tu9vsa\",\"rm_attrib\":\"class\"}]}]",
-    "domain": "stylist.co.uk"
-  },
-  "Substack.com": {
-    "add_ext_link": "div.paywall:not(.modal-paywall)|article",
-    "add_ext_link_type": "google_search_tool",
-    "allow_cookies": 1,
-    "domain": "substack.com"
   },
   "Supchina.com": {
     "allow_cookies": 1,

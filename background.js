@@ -12,7 +12,7 @@ if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
 }
 
-const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'bloomberg.com', 'cicero.de', 'defector.com', 'ilmanifesto.it', 'iltirreno.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'bloomberg.com', 'cicero.de', 'defector.com', 'ilmanifesto.it', 'iltirreno.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'stylist.co.uk', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;

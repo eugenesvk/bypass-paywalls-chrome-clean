@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Monocle (UK)
+Add Stylist.co.uk
 Fix Advance Local (no amp)
 
 * v3.1.7.3 (2023-05-08)
