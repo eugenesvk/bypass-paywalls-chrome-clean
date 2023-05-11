@@ -48,6 +48,9 @@ window.setTimeout(function () {
         if (document.querySelector('li > a[href*=".sevenwestmedia.com.au"]'))
           group = 'thewest.com.au';
       }
+    } else if (hostname.endsWith('.be')) {
+        if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be']))
+          group = '###_be_mediahuis';// no fix
     } else if (hostname.endsWith('.cl')) {
       if (document.querySelector('meta[content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';

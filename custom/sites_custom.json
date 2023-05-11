@@ -384,6 +384,13 @@
   "Marketscreener.com (only free articles)": {
     "domain": "marketscreener.com"
   },
+  "Mediahuis België": {
+    "add_ext_link": "div[data-cj-root=\"subscription-wall\"]|div.intro,span[data-testid=\"article-author\"]",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "block_regex": "\\.be\\/extra\\/shared\\/user\\/user\\.js",
+    "domain": "###_be_mediahuis"
+  },
   "Mediapart.fr": {
     "add_ext_link": "div#paywall_no_variance|main",
     "add_ext_link_type": "google_search_tool",
@@ -424,6 +431,11 @@
     "allow_cookies": 1,
     "domain": "nnn.de",
     "useragent": "googlebot"
+  },
+  "Nordsee-zeitung.de": {
+    "allow_cookies": 1,
+    "domain": "nordsee-zeitung.de",
+    "ld_google_webcache": "div.UserLoggedInContainer|article"
   },
   "Nu.nl": {
     "allow_cookies": 1,
