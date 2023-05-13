@@ -14,6 +14,18 @@
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
   },
+  "El Mercurio (+ regional/opt-in to custom sites)": {
+    "domain": "elmercurio.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
+    "useragent": "facebookbot"
+  },
+  "El Mercurio (not Inversiones; + regional/opt-in to custom sites)": {
+    "domain": "elmercurio.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
+    "useragent": "facebookbot"
+  },
   "Il Messaggero (+ regional)": {
     "domain": "###_it_ilmessaggero",
     "group": [

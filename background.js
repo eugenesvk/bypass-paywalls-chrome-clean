@@ -25,7 +25,6 @@ var restrictions = {
   'dailywire.com': /^((?!\.dailywire\.com\/(episode|show|videos|watch)).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
-  'elmercurio.com': /^((?!\.elmercurio\.com\/inversiones\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
   'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
@@ -186,8 +185,9 @@ function set_rules(sites, sites_updated, sites_custom) {
       let site_default = defaultSites.hasOwnProperty(site) ? site : Object.keys(defaultSites).find(default_key => compareKey(default_key, site));
       if (site_default) {
         rule = defaultSites[site_default];
-        if (sites_updated.hasOwnProperty(site_default) && !sites_updated[site_default].new_site)
-          rule = sites_updated[site_default];
+        let site_updated = Object.keys(sites_updated).find(updated_key => compareKey(updated_key, site));
+        if (site_updated && !sites_updated[site_updated].new_site)
+          rule = sites_updated[site_updated];
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];
       } else if (sites_custom.hasOwnProperty(site)) { // custom (new) sites
@@ -1363,18 +1363,13 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       let nofix_groups = ['###_be_mediahuis', '###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (enabledSites.includes(group)) {
-          let rules;
-          if (group === 'elmercurio.com')
-            rules = {block_regex: "(\\.{domain}\\/impresa\\/.+\\/assets\\/(vendor|\\d)\\.js|pram\\.pasedigital\\.cl\\/API\\/User\\/Status\\?)"};
-          else {
-            rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
-            if (rules) {
-              if (group === '###_de_madsack')
-                if (!set_var_sites.includes(custom_domain))
-                  set_var_sites.push(custom_domain);
-            } else
-              rules = Object.values(customSites).filter(x => x.domain === group)[0];
-          }
+          let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
+          if (rules) {
+            if (group === '###_de_madsack')
+              if (!set_var_sites.includes(custom_domain))
+                set_var_sites.push(custom_domain);
+          } else
+            rules = Object.values(customSites).filter(x => x.domain === group)[0];
           if (rules) {
             custom_flex_domains.push(custom_domain);
             if (!enabledSites.includes(custom_domain))

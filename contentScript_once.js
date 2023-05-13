@@ -52,7 +52,7 @@ window.setTimeout(function () {
         if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be']))
           group = '###_be_mediahuis';// no fix
     } else if (hostname.endsWith('.cl')) {
-      if (document.querySelector('meta[content*="/impresa.soy-chile.cl/"]'))
+      if (document.querySelector('meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';
     } else if (hostname.match(/\.(de|at|ch)$/) || matchDomain(['horizont.net', 'lebensmittelzeitung.net'])) {
       if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))

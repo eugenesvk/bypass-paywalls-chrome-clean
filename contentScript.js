@@ -2177,7 +2177,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
             try {
               let pars = JSON.parse(json_text);
               function addParText(elem, par_text, add_br = false) {
-                if (par_text.length > 1) {
+                if (par_text.length > 2) {
                   let span = document.createElement('span');
                   span.innerText = par_text;
                   elem.appendChild(span);
@@ -3024,14 +3024,15 @@ else if (matchDomain('valor.globo.com')) {
 }
 
 else if (window.location.hostname.endsWith('.cl') && document.querySelector('meta[property="og:image"][content*="://impresa.soy-chile.cl/"]')) {
-  let content = document.querySelector('div.content');
-  if (content)
-    content.setAttribute('id', 'content_new');
-  let modal_wrapper = document.querySelector('div.modal-wrapper');
-  removeDOMElement(modal_wrapper);
-  let body_modal = document.querySelector('body.modal-open');
-  if (body_modal)
-    body_modal.classList.remove('modal-open');
+  window.setTimeout(function () {
+    let content = document.querySelector('div.content');
+    if (content)
+      content.setAttribute('id', 'content_new');
+    let modal_wrapper = document.querySelector('div.modal-wrapper');
+    removeDOMElement(modal_wrapper);
+  }, 1000);
+  waitDOMAttribute('body', 'BODY', 'class', node => node.removeAttribute('class'), true);
+  csDoneOnce = true;
 }
 
 else
