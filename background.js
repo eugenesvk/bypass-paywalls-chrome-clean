@@ -35,6 +35,7 @@ var restrictions = {
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
+  'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
@@ -395,6 +396,9 @@ ext_api.storage.local.get({
   optionSites = sites;
   var sites_default = items.sites_default;
   customSites = items.sites_custom;
+  customSites = filterObject(customSites, function (val, key) {
+    return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+  });
   customSites_domains = Object.values(customSites).map(x => x.domain);
   updatedSites = items.sites_updated;
   updatedSites_domains_new = Object.values(updatedSites).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
@@ -1360,7 +1364,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_be_mediahuis', '###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews'];
+      let nofix_groups = ['###_be_mediahuis', '###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews', '###_substack_custom'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (enabledSites.includes(group)) {
           let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];

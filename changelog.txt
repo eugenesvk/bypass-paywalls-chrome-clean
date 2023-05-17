@@ -3,6 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Remove (custom) Substack (fix obsolete)
+Fix Tagesspiegel.de (not background/checkpoint)
+Update custom sites/popup (remove Google Search Tool)
 
 * v3.1.8.0 (2023-05-14)
 Add Dagens Nyheter (link to archive.is)

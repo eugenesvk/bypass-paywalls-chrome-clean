@@ -175,9 +175,6 @@ if (bg2csData.add_ext_link) {
           case '12ft.io':
             article.firstChild.before(ext_12ftLink(url));
             break;
-          case 'google_search_tool':
-            article.firstChild.before(googleSearchToolLink(url));
-            break;
           }
           
         }
@@ -966,20 +963,12 @@ else if (matchDomain('tagesanzeiger.ch')) {
 
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.article--paid > div:not([id])');
+  let paywall = document.querySelector('div#paywall');
   if (paywall) {
     removeDOMElement(paywall);
     let article = document.querySelector('div.article--paid');
     if (article)
       article.firstChild.before(archiveLink(url));
-  } else {
-    paywall = document.querySelector('section.ts-paywall, div#pw');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let article = document.querySelector('main p');
-      if (article)
-        article.firstChild.before(googleSearchToolLink(url));
-    }
   }
 }
 
@@ -2203,6 +2192,11 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                         for (let child of item.children) {
                           if (child.text) {
                             addParText(elem, child.text, true);
+                          } else if (child.href && child.href.length > 2) {
+                            let par_link = document.createElement('a');
+                            par_link.href = child.href;
+                            par_link.innerText = child.children[0].text;
+                            elem.appendChild(par_link);
                           } else if (child.children) {
                             for (let sub_child of child.children) {
                               if (sub_child.text) {
@@ -5209,10 +5203,6 @@ function archiveLink(url, text_fail = 'BPC > Full article text (only report issu
 
 function googleWebcacheLink(url, text_fail = 'BPC > Full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
-}
-
-function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test url & copy html (tab) code to [https://codebeautify.org/htmlviewer] or [https://html.onlineviewer.net]):\r\n') {
-  return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
 function ext_12ftLink(url, text_fail = 'BPC > Full article text:\r\n') {

@@ -4,7 +4,7 @@ var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
 var random_ip_options = ['', 'all', 'eu'];
-var add_ext_link_type_options = ['', 'archive.is', '12ft.io', 'google_search_tool']
+var add_ext_link_type_options = ['', 'archive.is', '12ft.io']
 
 function capitalize(str) {
   return (typeof str === 'string') ? str.charAt(0).toUpperCase() + str.slice(1) : '';
@@ -18,12 +18,23 @@ function sortJson(json) {
   }, {});
 }
 
+function filterObject(obj, filterFn, mapFn = function (val, key) {
+  return [key, val];
+}) {
+  return Object.fromEntries(Object.entries(obj).
+    filter(([key, val]) => filterFn(val, key)).map(([key, val]) => mapFn(val, key)));
+}
+
 // Saves options to ext_api.storage
 function save_options() {
   var textareaEl = document.querySelector('#bypass_sites textarea');
   var sites_custom = {};
-  if (textareaEl.value)
+  if (textareaEl.value) {
     var sites_custom = JSON.parse(textareaEl.value);
+    sites_custom = filterObject(sites_custom, function (val, key) {
+      return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+    });
+  }
   ext_api.storage.local.set({
     sites_custom: sites_custom
   }, function () {
@@ -74,6 +85,9 @@ function import_json(result) {
     var sites_custom_new = JSON.parse(result);
     for (let site in sites_custom_new)
       sites_custom[site] = sites_custom_new[site];
+    sites_custom = filterObject(sites_custom, function (val, key) {
+      return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+    });
     ext_api.storage.local.set({
       sites_custom: sites_custom
     }, function () {
@@ -116,7 +130,7 @@ function import_options(e) {
 
 function _imp() {
   var result = this.result;
-  import_json(result)
+  import_json(result);
 }
 
 // Add custom site to ext_api.storage

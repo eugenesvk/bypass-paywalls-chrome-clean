@@ -38,7 +38,7 @@ window.setTimeout(function () {
     else if (document.querySelector('script[src*="/leaky-paywall"], link[href*="/leaky-paywall"]'))
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
-      group = '###_substack_custom';
+      group = '###_substack_custom';// no fix
     else if (document.querySelector('script[src*="/wp-content/themes/pmgnews/scripts/promedia.js"], form[action^="https://go.promedia.nl/"]'))
       group = '###_nl_promedia';
     else if (hostname.match(/\.(com|net)\.au$/)) {
