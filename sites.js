@@ -879,6 +879,13 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/
   },
+  "Gruppo SAE.it (free articles only)": {
+    domain: "###_it_gruppo_sae",
+    group: [
+      "iltirreno.it",
+      "lanuovasardegna.it"
+    ]
+  },
   "Haaretz English": {
     domain: "haaretz.com",
     allow_cookies: 1,
@@ -979,9 +986,6 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /(\.(cedscdn|cedsdigital)\.it\/.+\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|consent|subscriptions)-.+\.(m)?js)/
-  },
-  "Il Tirreno": {
-    domain: "iltirreno.it"
   },
   "Inc.com": {
     domain: "inc.com",
@@ -1117,9 +1121,6 @@ var defaultSites = {
     domain: "lanouvellerepublique.fr",
     allow_cookies: 1,
     block_regex: /(\.weborama\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
-  },
-  "La Nuova Sardegna": {
-    domain: "lanuovasardegna.it"
   },
   "La Segunda": {
     domain: "lasegunda.com",

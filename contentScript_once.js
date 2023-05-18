@@ -85,6 +85,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.it')) {
       if (document.querySelector('link[href^="//citynews.stgy.ovh/"]'))
         group = '###_it_citynews';// no fix
+      else if (matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it']))
+        group = '###_it_gruppo_sae';
     } else if (hostname.endsWith('.nl')) {
       if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';

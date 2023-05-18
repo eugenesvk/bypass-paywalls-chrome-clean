@@ -12,7 +12,7 @@ if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
 }
 
-const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'bloomberg.com', 'cicero.de', 'defector.com', 'ilmanifesto.it', 'iltirreno.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lanuovasardegna.it', 'lecourrierdesstrateges.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'stylist.co.uk', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'bloomberg.com', 'cicero.de', 'defector.com', 'ilmanifesto.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lecourrierdesstrateges.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'sloanreview.mit.edu', 'stratfor.com', 'stylist.co.uk', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
@@ -428,7 +428,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_ar_grupo_clarin', '###_be_groupe_ipm', '###_be_roularta', '###_de_noz_mhn', '###_uk_nat_world'];
+          let new_groups = ['###_ar_grupo_clarin', '###_be_groupe_ipm', '###_be_roularta', '###_de_noz_mhn', '###_it_gruppo_sae', '###_uk_nat_world'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
             (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)

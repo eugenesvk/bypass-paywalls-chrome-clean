@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove (custom) Substack (fix obsolete)
+Fix Gruppo SAE.it (free articles only)
 Fix Tagesspiegel.de (not background/checkpoint)
 Update custom sites/popup (remove Google Search Tool)
 

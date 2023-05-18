@@ -1942,39 +1942,8 @@ else if (matchDomain('ilmanifesto.it')) {
   }, 1000);
 }
 
-else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it'])) {
+else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it']) || matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it'])) {
   if (window.location.pathname.includes('/news/')) {
-    let paywall = document.querySelector('div.MuiBox-root > h4.MuiTypography-h4');
-    if (paywall && dompurify_loaded) {
-      let article = document.querySelector('div.MuiGrid-root.MuiGrid-grid-sm-7 > div');
-      if (article) {
-        removeDOMElement(paywall.parentNode);
-        try {
-          fetch(window.location.href)
-          .then(response => {
-            if (response.ok) {
-              response.text().then(html => {
-                let parser = new DOMParser();
-                let doc = parser.parseFromString(html, 'text/html');
-                let json = doc.querySelector('script#__NEXT_DATA__');
-                if (json) {
-                  let article_new = JSON.parse(json.text).props.pageProps.article.content;
-                  if (article_new) {
-                    let parser = new DOMParser();
-                    let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(article_new) + '</div>', 'text/html');
-                    let content_new = doc.querySelector('div');
-                    article.innerHTML = '';
-                    article.appendChild(content_new);
-                  }
-                }
-              })
-            }
-          });
-        } catch (err) {
-          console.log(err);
-        }
-      }
-    }
     window.setTimeout(function () {
       let banners = document.querySelectorAll('div.MuiSnackbar-root, div.css-16cchgy');
       removeDOMElement(...banners);

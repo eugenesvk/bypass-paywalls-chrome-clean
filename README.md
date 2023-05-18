@@ -611,11 +611,10 @@ Grouped in options:\
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Manifesto](https://ilmanifesto.it) -
-[Il Tirreno](https://www.iltirreno.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
-[La Gazzetta dello Sport](https://www.gazzetta.it) -
-[La Nuova Sardegna](https://www.lanuovasardegna.it)
+[La Gazzetta dello Sport](https://www.gazzetta.it)
+
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
@@ -634,6 +633,10 @@ Grouped in options:\
 [Il Resto del Carlino](https://www.ilrestodelcarlino.it) -
 [Il Telegrafo Livorno](https://www.iltelegrafolivorno.it) -
 [La Nazione](https://www.lanazione.it)
+
+*[Gruppo SAE.it](https://www.grupposae.it/i-quotidiani)** sites like\
+[Il Tirreno](https://www.iltirreno.it)* -
+[La Nuova Sardegna](https://www.lanuovasardegna.it)*
 
 ##### Netherlands/Flanders
 [De Limburger](https://www.limburger.nl) -
