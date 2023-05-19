@@ -57,7 +57,7 @@
     "domain": "lepoint.fr",
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr",
-    "ld_google_webcache": "div#dompurify|div"
+    "ld_google_webcache": "div.info-paywall|div.ArticleBody"
   },
   "Monocle": {
     "domain": "monocle.com",

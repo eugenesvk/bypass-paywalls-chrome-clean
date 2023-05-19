@@ -10,6 +10,7 @@ Fix Gruppo SAE.it (free articles only)
 Fix LePoint.fr
 Fix Schwaebische.de
 Fix Tagesspiegel.de (not background/checkpoint)
+Fix The Globe and Mail (title/comments)
 Update custom sites/popup (remove Google Search Tool)
 
 * v3.1.8.0 (2023-05-14)

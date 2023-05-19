@@ -8,12 +8,10 @@ if (hostname.match(/\.de$/)) {
 
 if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
   function madsack_main() {
-    let done = false;
     for (let n = 0; n < 10; n++) {
       window.setTimeout(function () {
-        if (!done && window.Fusion) {
+        if (window.Fusion) {
           window.Fusion.globalContent.isPaid = false;
-          done = true;
         }
       }, n * 50);
     }
@@ -23,12 +21,10 @@ if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndt
 
 } else if (matchDomain('nzherald.co.nz')) {
   function nzherald_main() {
-    let done = false;
     for (let n = 0; n < 10; n++) {
       window.setTimeout(function () {
-        if (!done && window.Fusion) {
+        if (window.Fusion) {
           window.Fusion.globalContent.isPremium = false;
-          done = true;
         }
       }, n * 50);
     }
@@ -38,12 +34,10 @@ if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndt
 
 else if (matchDomain('theglobeandmail.com')) {
   function tgam_main() {
-    let done = false;
     for (let n = 0; n < 10; n++) {
       window.setTimeout(function () {
-        if (!done && window.Fusion) {
+        if (window.Fusion) {
           window.Fusion.globalContent._id = '';
-          done = true;
         }
       }, n * 50);
     }
