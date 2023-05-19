@@ -3,11 +3,21 @@
     "domain": "adweek.com",
     "useragent": "googlebot"
   },
+  "Citywire": {
+    "domain": "citywire.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div#dompurify|div"
+  },
   "Dagens Nyheter (link to archive.is)": {
     "domain": "dn.se",
     "allow_cookies": 1,
     "add_ext_link": "div.esi-paywall|div.article__content",
     "add_ext_link_type": "archive.is"
+  },
+  "DN.no (cached articles only)": {
+    "domain": "dn.no",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div#dompurify|div"
   },
   "El Español": {
     "domain": "elespanol.com",
@@ -43,9 +53,20 @@
     "allow_cookies": 1,
     "block_regex": "\\/ev\\.lavanguardia\\.com"
   },
+  "Le Point (cached articles only)": {
+    "domain": "lepoint.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr",
+    "ld_google_webcache": "div#dompurify|div"
+  },
   "Monocle": {
     "domain": "monocle.com",
     "useragent": "googlebot"
+  },
+  "Schwäbische Zeitung": {
+    "domain": "schwaebische.de",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div#dompurify|div"
   },
   "The New York Times": {
     "domain": "nytimes.com",
