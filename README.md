@@ -556,7 +556,6 @@ Grouped in options:\
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
-[Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -
 [Weltkunst](https://www.weltkunst.de) -
 [Westdeutsche Zeitung](https://www.wz.de)

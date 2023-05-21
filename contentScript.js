@@ -939,17 +939,6 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
-else if (matchDomain('sueddeutsche.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('offer-page, div.offer-page');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('article, main > section > div > p');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('tagesanzeiger.ch')) {
   let url = window.location.href;
   let paywall = document.querySelector('div#piano-premium > div');
