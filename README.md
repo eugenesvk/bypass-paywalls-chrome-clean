@@ -863,6 +863,7 @@ Grouped in options:\
 ##### Brazil
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
+[GaúchaZH](https://gauchazh.clicrbs.com.br) -
 [Grupo Abril](https://grupoabril.com.br) -
 [O Estado de S. Paulo](https://estadao.com.br) -
 [O Globo](https://oglobo.globo.com) -

@@ -672,6 +672,11 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
+  "GaúchaZH": {
+    domain: "gauchazh.clicrbs.com.br",
+    allow_cookies: 1,
+    block_regex: /(\.piano\.io\/api\/tinypass\.min\.js|\.clicrbs\.com\.br\/paywall-api\/count\/)/
+  },
   "GenomeWeb": {
     domain: "###_usa_genomeweb",
     group: [

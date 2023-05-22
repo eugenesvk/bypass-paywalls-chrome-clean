@@ -36,6 +36,11 @@
     "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
     "useragent": "facebookbot"
   },
+  "GaúchaZH": {
+    "domain": "gauchazh.clicrbs.com.br",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/api\\/tinypass\\.min\\.js|\\.clicrbs\\.com\\.br\\/paywall-api\\/count)"
+  },
   "Il Messaggero (+ regional)": {
     "domain": "###_it_ilmessaggero",
     "group": [
