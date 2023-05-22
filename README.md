@@ -557,7 +557,6 @@ Grouped in options:\
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Volksstimme](https://www.volksstimme.de) -
-[Weltkunst](https://www.weltkunst.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\
