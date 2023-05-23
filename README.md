@@ -680,7 +680,8 @@ Grouped in options:\
 [Flair.be](https://www.flair.be/nl) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -
-[Libelle.be](https://www.libelle.be)
+[Libelle.be](https://www.libelle.be)\
+*[VmnMedia Group](https://vmnmedia.nl)* sites (opt-in to custom sites)
 
 ##### Norway
 [DN](https://www.dn.no)\

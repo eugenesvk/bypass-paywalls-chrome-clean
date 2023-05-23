@@ -1055,7 +1055,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   if (kiwi_browser) {
     let tabId = details.tabId;
     if (tabId !== -1) {
-      if (['main_frame', 'sub_frame'].includes(details.type)) {
+      if (['main_frame', 'sub_frame', 'xmlhttprequest'].includes(details.type)) {
         ext_api.tabs.get(tabId, function (tab) {
           if (!ext_api.runtime.lastError && tab && isSiteEnabled(tab)) {
             runOnTab(tab);
@@ -1342,7 +1342,7 @@ function clear_cookies() {
     if (rule.ld_json_next)
       ld_json_next[custom_domain] = rule.ld_json_next;
     if (rule.ld_google_webcache)
-      ld_google_webcache[domain] = rule.ld_google_webcache;
+      ld_google_webcache[custom_domain] = rule.ld_google_webcache;
     if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
       if (!dompurify_sites.includes(custom_domain))
         dompurify_sites.push(custom_domain);

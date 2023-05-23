@@ -90,6 +90,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.nl')) {
       if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
+      else if (document.querySelector('link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
+       group = '###_nl_vmnmedia';
     } else if (hostname.endsWith('.co.uk')) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';

@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add GauchaZH
+Add VmnMedia.nl Group (opt-in to custom sites)
 Remove Weltkunst.de (fix obsolete)
 
 * v3.1.9.0 (2023-05-21)
