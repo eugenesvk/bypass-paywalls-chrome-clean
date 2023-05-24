@@ -2414,7 +2414,7 @@ var defaultSites = {
     domain: "stylist.co.uk",
     allow_cookies: 1
   },
-  "TownNews sites (Blox CMS; not encrypted)": {
+  "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews",
     block_regex_general: /\/shared-content\/art\/tncms\/user\/user\.js/
   },

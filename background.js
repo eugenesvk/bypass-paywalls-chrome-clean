@@ -1369,9 +1369,13 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
         if (enabledSites.includes(group)) {
           let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
           if (rules) {
-            if (group === '###_de_madsack')
+            if (group === '###_de_madsack') {
               if (!set_var_sites.includes(custom_domain))
                 set_var_sites.push(custom_domain);
+            } else if (group === '###_usa_townnews') {
+              if (!dompurify_sites.includes(custom_domain))
+                dompurify_sites.push(custom_domain);
+            }
           } else
             rules = Object.values(customSites).filter(x => x.domain === group)[0];
           if (rules) {

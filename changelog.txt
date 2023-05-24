@@ -6,6 +6,7 @@ Post-release
 Add GauchaZH
 Add VmnMedia.nl Group (opt-in to custom sites)
 Remove Weltkunst.de (fix obsolete)
+Fix TownNews sites (encrypted)
 
 * v3.1.9.0 (2023-05-21)
 Remove (custom) Substack (fix obsolete)

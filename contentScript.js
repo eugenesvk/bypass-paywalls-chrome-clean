@@ -4875,8 +4875,25 @@ else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('
       elem.removeAttribute('class');
   } else {
     if (!domain) {
-      let subscriber_only = document.querySelectorAll('div.subscriber-only:not(.encrypted-content)');
+      function unscramble(t) {
+        for (var n = "", i = 0, r = t.length; i < r; i++) {
+          var s = t.charCodeAt(i);
+          if (s >= 33 && s <= 126) {
+            var sTmp = String.fromCharCode(33 + (s - 33 + 47) % 94);
+            n += sTmp;
+          } else
+            n += t.charAt(i);
+        }
+        return n;
+      }
+      let subscriber_only = document.querySelectorAll('div.subscriber-only');
       for (let elem of subscriber_only) {
+        if (elem.classList.contains('encrypted-content') && dompurify_loaded) {
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(unscramble(elem.innerText)) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          elem.parentNode.replaceChild(content_new, elem);
+        }
         elem.removeAttribute('style');
         elem.removeAttribute('class');
       }
