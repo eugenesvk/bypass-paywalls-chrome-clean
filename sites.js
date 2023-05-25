@@ -2124,7 +2124,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|\.telegraph\.co\.uk\/martech\/js\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "The Times (UK; link to archive.is))": {
+  "The Times (UK; link to archive.is)": {
     domain: "thetimes.co.uk",
     allow_cookies: 1
   },

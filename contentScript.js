@@ -2737,6 +2737,7 @@ else if (matchDomain('thetimes.co.uk')) {
       if (article)
         article.firstChild.before(archiveLink(url));
       waitDOMAttribute('body', 'BODY', 'style', node => node.removeAttribute('style'), true);
+      waitDOMAttribute('html', 'HTML', 'style', node => node.removeAttribute('style'), true);
     }
     let paywall_page = document.querySelector('div#paywall-portal-page-footer');
     let block = document.querySelector('.subscription-block');
