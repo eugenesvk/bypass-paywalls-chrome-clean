@@ -6,6 +6,7 @@ Post-release
 Add GauchaZH
 Add VmnMedia.nl Group (opt-in to custom sites)
 Remove Weltkunst.de (fix obsolete)
+Fix Defector (cookie)
 Fix TheTimes.co.uk (overlay)
 Fix TownNews sites (encrypted)
 Update popup (Google Search Tool)

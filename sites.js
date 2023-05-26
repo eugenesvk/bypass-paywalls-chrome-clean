@@ -401,7 +401,7 @@ var defaultSites = {
   },
   "Defector": {
     domain: "defector.com",
-    allow_cookies: 1
+    remove_cookies_select_drop: ["lede_defector_user"]
   },
   "Der Spiegel (link to archive.is)": {
     domain: "spiegel.de",
