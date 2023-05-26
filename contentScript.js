@@ -2117,7 +2117,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
         if (url_nuxt && !url_nuxt.includes(window.location.pathname.match(/-\d+\.html$/)))
           refreshCurrentTab();
         else if (json.includes(',body:')) {
-          let json_text = json.split(',body:')[1].split(',leadText:')[0].replace(/([{,])([a-zA-Z_0-9]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3");
+          let json_text = json.split(',body:')[1].split(/,(leadText|brand_key|tts):/)[0].replace(/([{,])([a-zA-Z_0-9]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3");
           let article = document.querySelector('div.content');
           if (article) {
             article.innerHTML = '';
@@ -2137,7 +2137,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                 if (par.typename === 'HTMLCustomEmbed') {
                   if (par.code) {
                     let parser = new DOMParser();
-                    let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code) + '</div>', 'text/html');
+                    let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
                     elem = article_html.querySelector('div');
                   }
                 } else if (par.insertbox_head || par.insertbox_text) {
@@ -2172,7 +2172,25 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                   addParText(elem, par.text);
                 } else if (par.children) {
                   for (let child of par.children) {
-                    if (child.text) {
+                    if (child.relation) {
+                      if (child.type === 'img' && child.relation.href) {
+                        let figure = document.createElement('figure');
+                        let img = document.createElement('img');
+                        img.src = child.relation.href;
+                        figure.appendChild(img);
+                        if (child.relation.caption && child.relation.caption.length > 2) {
+                          let caption = document.createElement('figcaption');
+                          caption.innerText = item.caption;
+                          figure.appendChild(caption);
+                        }
+                        elem.appendChild(figure);
+                      } else if (child.relation.link && ((child.relation.title && child.relation.title.length > 2) || child.relation.imageAlt)) {
+                        let par_link = document.createElement('a');
+                        par_link.href = child.relation.link;
+                        par_link.innerText = child.relation.title.length > 2 ? child.relation.title : child.relation.imageAlt;
+                        elem.appendChild(par_link);
+                      }
+                    } else if (child.text) {
                       addParText(elem, child.text);
                     } else if (child.children && child.children.length && child.children[0].text && child.children[0].text.length > 2) {
                       if ((child.href && child.href.length > 2) || (child.relation && child.relation.follow && child.relation.follow.url)) {

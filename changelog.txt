@@ -7,6 +7,7 @@ Add GauchaZH
 Add VmnMedia.nl Group (opt-in to custom sites)
 Remove Weltkunst.de (fix obsolete)
 Fix Defector (cookie)
+Fix Mediahuis Noord (json)
 Fix Quora (AI bot crash)
 Fix TheTimes.co.uk (overlay)
 Fix TownNews sites (encrypted)
