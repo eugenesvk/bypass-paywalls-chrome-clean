@@ -1658,8 +1658,9 @@ var defaultSites = {
     domain: "quillette.com",
     allow_cookies: 1
   },
-  "Quora (regwall)": {
+  "Quora": {
     domain: "quora.com",
+    allow_cookies: 1,
     useragent: "googlebot"
   },
   "Quotidiano.net (+ regional)": {

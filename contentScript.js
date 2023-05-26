@@ -4003,10 +4003,10 @@ else if (matchDomain('quillette.com')) {
 else if (matchDomain('quora.com')) {
   let overlays = document.querySelectorAll('div[class*="_overlay"]');
   removeDOMElement(...overlays);
-  let mask_image = document.querySelector('div.ePDXbR');
+  let mask_image = document.querySelector('div.jhqnqh');
   if (mask_image)
-    mask_image.classList.remove('ePDXbR');
-  let read_more_buttons = document.querySelectorAll('button.puppeteer_test_read_more_button');
+    mask_image.classList.remove('jhqnqh');
+  let read_more_buttons = document.querySelectorAll('button.puppeteer_test_read_more_button.qu-bg--gray_ultralight');
   for (let elem of read_more_buttons)
     elem.click();
   let overlay_cards = document.querySelectorAll('div[class*="OverlayCard"]');
