@@ -1385,11 +1385,8 @@ else if (matchDomain(['challenges.fr', 'sciencesetavenir.fr'])) {
   if (window.location.pathname.endsWith('.amp')) {
     amp_unhide_access_hide('="paywall.access OR cha.access"', '="NOT (paywall.access OR cha.access)"');
   } else {
-    let amorce = document.querySelector('.amorce');
-    if (matchDomain('sciencesetavenir.fr'))
-      hideDOMElement(amorce);
-    else if (amorce)
-      amorce.classList.remove('amorce');
+    let amorce = document.querySelector('div.amorce.manual');
+    hideDOMElement(amorce);
     let content = document.querySelectorAll('.user-paying-content');
     for (let elem of content) {
       elem.classList.remove('user-paying-content');
