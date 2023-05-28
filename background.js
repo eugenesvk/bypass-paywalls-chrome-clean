@@ -176,6 +176,139 @@ function prep_regex_str(str, domain = '') {
   return str.replace(/^\//, '').replace(/\/\//g, '/').replace(/([^\\])\/$/, "$1")
 }
 
+function addRules(domain, rule) {
+  if (rule.hasOwnProperty('remove_cookies_select_drop') || rule.hasOwnProperty('remove_cookies_select_hold')) {
+    rule.allow_cookies = 1;
+    rule.remove_cookies = 1;
+  }
+  if (rule.allow_cookies > 0 && !allow_cookies.includes(domain))
+    allow_cookies.push(domain);
+  if (rule.remove_cookies > 0 && !remove_cookies.includes(domain))
+    remove_cookies.push(domain);
+  if (rule.hasOwnProperty('remove_cookies_select_drop'))
+    remove_cookies_select_drop[domain] = rule.remove_cookies_select_drop;
+  if (rule.hasOwnProperty('remove_cookies_select_hold'))
+    remove_cookies_select_hold[domain] = rule.remove_cookies_select_hold;
+  if (rule.hasOwnProperty('block_regex')) {
+    if (rule.block_regex instanceof RegExp)
+      blockedRegexes[domain] = rule.block_regex;
+    else {
+      try {
+        blockedRegexes[domain] = new RegExp(prep_regex_str(rule.block_regex, domain));
+      } catch (e) {
+        console.log(`regex not valid, error: ${e}`);
+      }
+    }
+  }
+  if (rule.hasOwnProperty('block_regex_general')) {
+    if (rule.block_regex_general instanceof RegExp)
+      blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
+    else {
+      try {
+        blockedRegexesGeneral[domain] = {block_regex: new RegExp(prep_regex_str(rule.block_regex_general, domain))};
+      } catch (e) {
+        console.log(`regex not valid, error: ${e}`);
+      }
+    }
+    blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
+  }
+  if (rule.hasOwnProperty('block_js_inline')) {
+    if (rule.block_js_inline instanceof RegExp)
+      blockedJsInline[domain] = rule.block_js_inline;
+    else {
+      try {
+        blockedJsInline[domain] = new RegExp(prep_regex_str(rule.block_js_inline, domain));
+      } catch (e) {
+        console.log(`regex not valid, error: ${e}`);
+      }
+    }
+  }
+  if (rule.useragent) {
+    switch (rule.useragent) {
+    case 'googlebot':
+      if (!use_google_bot.includes(domain))
+        use_google_bot.push(domain);
+      break;
+    case 'bingbot':
+      if (!use_bing_bot.includes(domain))
+        use_bing_bot.push(domain);
+      break;
+    case 'facebookbot':
+      if (!use_facebook_bot.includes(domain))
+        use_facebook_bot.push(domain);
+      break;
+    }
+  }
+  if (rule.referer) {
+    switch (rule.referer) {
+    case 'facebook':
+      if (!use_facebook_referer.includes(domain))
+        use_facebook_referer.push(domain);
+      break;
+    case 'google':
+      if (!use_google_referer.includes(domain))
+        use_google_referer.push(domain);
+      break;
+    case 'twitter':
+      if (!use_twitter_referer.includes(domain))
+        use_twitter_referer.push(domain);
+      break;
+    }
+  }
+  if (rule.random_ip) {
+    random_ip[domain] = rule.random_ip;
+  }
+  if (rule.amp_unhide > 0 && !amp_unhide.includes(domain))
+    amp_unhide.push(domain);
+  if (rule.amp_redirect)
+    amp_redirect[domain] = rule.amp_redirect.paywall ? rule.amp_redirect : {paywall: rule.amp_redirect};
+  if (rule.cs_code) {
+    if (typeof rule.cs_code === 'string') {
+      try {
+        rule.cs_code = JSON.parse(rule.cs_code);
+      } catch (e) {
+        console.log(`cs_code not valid: ${rule.cs_code} error: ${e}`);
+      }
+    }
+    if (typeof rule.cs_code === 'object')
+      cs_code[domain] = rule.cs_code;
+  }
+  if (rule.ld_json)
+    ld_json[domain] = rule.ld_json;
+  if (rule.ld_json_next)
+    ld_json_next[domain] = rule.ld_json_next;
+  if (rule.ld_google_webcache)
+    ld_google_webcache[domain] = rule.ld_google_webcache;
+  if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
+    if (!dompurify_sites.includes(domain))
+      dompurify_sites.push(domain);
+  if (rule.add_ext_link && rule.add_ext_link_type)
+    add_ext_link[domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
+
+  // custom
+  if (rule.googlebot > 0)
+    use_google_bot.push(domain); // legacy
+  if (rule.block_js > 0 || rule.block_javascript > 0)
+    block_js_custom.push(domain);
+  if (rule.block_js_ext > 0 || rule.block_javascript_ext > 0)
+    block_js_custom_ext.push(domain);
+}
+
+function customFlexAddRules(custom_domain, rule) {
+  addRules(custom_domain, rule);
+  if (blockedRegexes[custom_domain])
+    blockedRegexesDomains.push(custom_domain);
+  if (blockedJsInline[custom_domain]) {
+    blockedJsInlineDomains.push(custom_domain);
+    disableJavascriptInline();
+  }
+  if (rule.useragent || rule.referer || rule.random_ip)
+    change_headers.push(custom_domain);
+  if (rule.random_ip)
+    use_random_ip.push(custom_domain);
+  ext_api.tabs.reload({bypassCache: true});
+}
+
 function set_rules(sites, sites_updated, sites_custom) {
   initSetRules();
   for (let site in sites) {
@@ -242,119 +375,7 @@ function set_rules(sites, sites_updated, sites_custom) {
               custom = true;
           }
         }
-        addCookieRules(rule);
-        
-        if (rule.allow_cookies > 0 && !allow_cookies.includes(domain))
-          allow_cookies.push(domain);
-        if (rule.remove_cookies > 0 && !remove_cookies.includes(domain))
-          remove_cookies.push(domain);
-        if (rule.hasOwnProperty('remove_cookies_select_drop'))
-          remove_cookies_select_drop[domain] = rule.remove_cookies_select_drop;
-        if (rule.hasOwnProperty('remove_cookies_select_hold'))
-          remove_cookies_select_hold[domain] = rule.remove_cookies_select_hold;
-        if (rule.hasOwnProperty('block_regex')) {
-          if (rule.block_regex instanceof RegExp)
-            blockedRegexes[domain] = rule.block_regex;
-          else {
-            try {
-              blockedRegexes[domain] = new RegExp(prep_regex_str(rule.block_regex, domain));
-            } catch (e) {
-              console.log(`regex not valid, error: ${e}`);
-            }
-          }
-        }
-        if (rule.hasOwnProperty('block_regex_general')) {
-          if (rule.block_regex_general instanceof RegExp)
-            blockedRegexesGeneral[domain] = {block_regex: rule.block_regex_general};
-          else {
-            try {
-              blockedRegexesGeneral[domain] = {block_regex: new RegExp(prep_regex_str(rule.block_regex_general, domain))};
-            } catch (e) {
-              console.log(`regex not valid, error: ${e}`);
-            }
-          }
-          blockedRegexesGeneral[domain]['excluded_domains'] = rule.excluded_domains ? rule.excluded_domains : [];
-        }
-        if (rule.hasOwnProperty('block_js_inline')) {
-          if (rule.block_js_inline instanceof RegExp)
-            blockedJsInline[domain] = rule.block_js_inline;
-          else {
-            try {
-              blockedJsInline[domain] = new RegExp(prep_regex_str(rule.block_js_inline, domain));
-            } catch (e) {
-              console.log(`regex not valid, error: ${e}`);
-            }
-          }
-        }
-        if (rule.useragent) {
-          switch (rule.useragent) {
-          case 'googlebot':
-            if (!use_google_bot.includes(domain))
-              use_google_bot.push(domain);
-            break;
-          case 'bingbot':
-            if (!use_bing_bot.includes(domain))
-              use_bing_bot.push(domain);
-            break;
-          case 'facebookbot':
-            if (!use_facebook_bot.includes(domain))
-              use_facebook_bot.push(domain);
-            break;
-          }
-        }
-        if (rule.referer) {
-          switch (rule.referer) {
-          case 'facebook':
-            if (!use_facebook_referer.includes(domain))
-              use_facebook_referer.push(domain);
-            break;
-          case 'google':
-            if (!use_google_referer.includes(domain))
-              use_google_referer.push(domain);
-            break;
-          case 'twitter':
-            if (!use_twitter_referer.includes(domain))
-              use_twitter_referer.push(domain);
-            break;
-          }
-        }
-        if (rule.random_ip) {
-          random_ip[domain] = rule.random_ip;
-        }
-        // updated/custom
-        if (rule.amp_redirect)
-          amp_redirect[domain] = rule.amp_redirect.paywall ? rule.amp_redirect : {paywall: rule.amp_redirect};
-        if (rule.cs_code) {
-          if (typeof rule.cs_code === 'string') {
-            try {
-              rule.cs_code = JSON.parse(rule.cs_code);
-            } catch (e) {
-              console.log(`cs_code not valid: ${rule.cs_code} error: ${e}`);
-            }
-          }
-          if (typeof rule.cs_code === 'object')
-            cs_code[domain] = rule.cs_code;
-        }
-        // custom
-        if (rule.googlebot > 0)
-          use_google_bot.push(domain);
-        if (rule.block_js > 0 || rule.block_javascript > 0)
-          block_js_custom.push(domain);
-        if (rule.block_js_ext > 0 || rule.block_javascript_ext > 0)
-          block_js_custom_ext.push(domain);
-        if (rule.amp_unhide > 0)
-          amp_unhide.push(domain);
-        if (rule.ld_json)
-          ld_json[domain] = rule.ld_json;
-        if (rule.ld_json_next)
-          ld_json_next[domain] = rule.ld_json_next;
-        if (rule.ld_google_webcache)
-          ld_google_webcache[domain] = rule.ld_google_webcache;
-        if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
-          if (!dompurify_sites.includes(domain))
-            dompurify_sites.push(domain);
-        if (rule.add_ext_link && rule.add_ext_link_type)
-          add_ext_link[domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
+        addRules(domain, rule);
       }
     }
   }
@@ -1305,52 +1326,6 @@ function clear_cookies() {
   });
 }
 
-  function customAddRules(custom_domain, rule) {
-    if (rule.allow_cookies && !allow_cookies.includes(custom_domain))
-      allow_cookies.push(custom_domain);
-    if (rule.remove_cookies && !remove_cookies.includes(custom_domain))
-      remove_cookies.push(custom_domain);
-    let custom_block_regex = rule.block_regex;
-    if (custom_block_regex) {
-      if ((typeof custom_block_regex === 'string') && custom_block_regex.includes('{domain}'))
-        custom_block_regex = new RegExp(custom_block_regex.replace('{domain}', custom_domain.replace(/\./g, '\\.')));
-      blockedRegexes[custom_domain] = custom_block_regex;
-      blockedRegexesDomains = Object.keys(blockedRegexes);
-    }
-    let custom_useragent = rule.useragent;
-    if (custom_useragent) {
-      if (custom_useragent === 'googlebot') {
-        if (!use_google_bot.includes(custom_domain))
-          use_google_bot.push(custom_domain);
-        change_headers.push(custom_domain);
-      }
-    }
-    let custom_referer = rule.referer;
-    if (custom_referer) {
-      if (custom_referer === 'twitter') {
-        if (!use_twitter_referer.includes(custom_domain))
-          use_twitter_referer.push(custom_domain);
-        change_headers.push(custom_domain);
-      }
-    }
-    if (rule.amp_unhide) {
-      if (!amp_unhide.includes(custom_domain))
-        amp_unhide.push(custom_domain);
-    }
-    if (rule.ld_json)
-      ld_json[custom_domain] = rule.ld_json;
-    if (rule.ld_json_next)
-      ld_json_next[custom_domain] = rule.ld_json_next;
-    if (rule.ld_google_webcache)
-      ld_google_webcache[custom_domain] = rule.ld_google_webcache;
-    if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
-      if (!dompurify_sites.includes(custom_domain))
-        dompurify_sites.push(custom_domain);
-    if (rule.add_ext_link && rule.add_ext_link_type)
-      add_ext_link[custom_domain] = {css: rule.add_ext_link, type: rule.add_ext_link_type};
-    ext_api.tabs.reload({bypassCache: true});
-  }
-
 var chrome_scheme = 'light';
 ext_api.runtime.onMessage.addListener(function (message, sender) {
   if (message.request === 'clear_cookies') {
@@ -1382,7 +1357,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
             custom_flex_domains.push(custom_domain);
             if (!enabledSites.includes(custom_domain))
               enabledSites.push(custom_domain);
-            customAddRules(custom_domain, rules);
+            customFlexAddRules(custom_domain, rules);
           }
         } else if (disabledSites.includes(group))
           custom_flex_not_domains.push(custom_domain);

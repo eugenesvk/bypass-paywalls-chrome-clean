@@ -1253,7 +1253,8 @@ var defaultSites = {
   },
   "Madavor Media (opt-in to custom sites)": {
     domain: "###_usa_madavor",
-    group: []
+    group: [],
+    cs_code: "[{\"cond\": \"div.free-articles-remaining\", \"rm_elem\": 1}]"
   },
   "Madsack Mediengruppe": {
     domain: "###_de_madsack",
@@ -1808,6 +1809,10 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
+  "Stylist.co.uk": {
+    domain: "stylist.co.uk",
+    allow_cookies: 1
+  },
   "Suomen Sotilas": {
     domain: "suomensotilas.fi",
     allow_cookies: 1,
@@ -1826,6 +1831,15 @@ var defaultSites = {
   "Tech in Asia": {
     domain: "techinasia.com",
     allow_cookies: 1
+  },
+  "TechTarget Group": {
+    domain: "###_usa_techtarget",
+    allow_cookies: 1,
+    group: [
+      "computerweekly.com",
+      "lemagit.fr",
+      "techtarget.com"
+    ]
   },
   "Telegraaf": {
     domain: "telegraaf.nl",
@@ -2411,10 +2425,6 @@ var defaultSites = {
     block_regex_general: /\/steadyhq\.com\//,
     excluded_domains: ["steadyhq.com"]
   },
-  "Stylist.co.uk": {
-    domain: "stylist.co.uk",
-    allow_cookies: 1
-  },
   "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews",
     block_regex_general: /\/shared-content\/art\/tncms\/user\/user\.js/
@@ -2469,13 +2479,6 @@ var defaultSites_groups_domains = [].concat.apply([], Object.values(defaultSites
     return value.hasOwnProperty('group');
   }).map(x => x.group));
 var defaultSites_domains = defaultSites_grouped_domains.concat(defaultSites_groups_domains);
-
-function addCookieRules(rule) {
-  if (rule.hasOwnProperty('remove_cookies_select_drop') || rule.hasOwnProperty('remove_cookies_select_hold')) {
-    rule.allow_cookies = 1;
-    rule.remove_cookies = 1;
-  }
-}
 
 function expandSiteRules(sites, updated = false) {
   for (let site in sites) {

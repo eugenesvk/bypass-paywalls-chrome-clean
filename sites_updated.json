@@ -82,6 +82,17 @@
     "allow_cookies": 1,
     "ld_google_webcache": "div#dompurify|div"
   },
+  "TechTarget Group": {
+    "domain": "###_usa_techtarget",
+    "allow_cookies": 1,
+    "group": [
+      "computerweekly.com",
+      "lemagit.fr",
+      "techtarget.com"
+    ],
+    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\": \"paywall\", \"elems\":[{\"cond\":\"p#firstP, div#inlineRegistrationWrapper\", \"rm_elem\": 1}]}]",
+    "new_site": 1
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,

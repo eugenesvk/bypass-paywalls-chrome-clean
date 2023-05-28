@@ -152,6 +152,9 @@ Grouped in options:\
 [360Dx](https://www.360dx.com) -
 [GenomeWeb](https://www.genomeweb.com) -
 [Precision Oncology News](https://www.precisiononcologynews.com)\
+*TechTarget Group* sites like\
+[Computer Weekly](https://www.computerweekly.com) -
+[TechTarget](https://www.techtarget.com)\
 *The Chronicle* sites like\
 [The Chronicle of Higher Education](https://www.chronicle.com) -
 [The Chronicle of Philanthropy](https://www.philanthropy.com)
@@ -530,7 +533,9 @@ Grouped in options:\
 *Roularta Media Group* sites like\
 [Femmes d'Aujourd'hui](https://www.femmesdaujourdhui.be) -
 [Flair.be](https://www.flair.be/fr) -
-[Le Vif](https://www.levif.be)
+[Le Vif](https://www.levif.be)\
+*TechTarget Group* sites like\
+[LeMagIT](https://www.lemagit.fr)
 
 ##### Germany/Austria
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -

@@ -1358,7 +1358,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.fr') || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'legrandcontinent.eu', 'lejsl.com', 'lesinrocks.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if ((window.location.hostname.endsWith('.fr') && !matchDomain(['lemagit.fr'])) || matchDomain(['bienpublic.com', 'connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'ledauphine.com', 'legrandcontinent.eu', 'lejsl.com', 'lesinrocks.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -4281,6 +4281,15 @@ else if (matchDomain('techinasia.com')) {
   let splash_subscribe = document.querySelector('.splash-subscribe');
   let paywall_hard = document.querySelector('.paywall-hard');
   removeDOMElement(splash_subscribe, paywall_hard);
+}
+
+else if (matchDomain(['techtarget.com', 'computerweekly.com', 'lemagit.fr'])) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    paywall.classList.remove('paywall');
+    let banners = document.querySelectorAll('p#firstP, div#inlineRegistrationWrapper');
+    removeDOMElement(...banners);
+  }
 }
 
 else if (matchDomain('the-american-interest.com')) {
