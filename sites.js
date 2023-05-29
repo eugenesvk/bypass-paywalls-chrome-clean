@@ -467,6 +467,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "El Cronista": {
+    domain: "cronista.com",
+    allow_cookies: 1,
+    block_regex: /cdn\.wyleex\.com\/elcronista\/pw\.min\.js/
+  },
   "El Diario.es": {
     domain: "eldiario.es",
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
@@ -814,7 +819,7 @@ var defaultSites = {
     exception: [{
         domain: "lavoz.com.ar",
         allow_cookies: 1,
-        block_js_inline: /\.lavoz\.com\.ar/
+        block_regex: /cdn\.wyleex\.com\/lavoz\/pw\.min\.js/
       }, {
         domain: "losandes.com.ar",
         allow_cookies: 1,

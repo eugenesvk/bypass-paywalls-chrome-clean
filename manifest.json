@@ -165,6 +165,7 @@
     "*://*.crainscleveland.com/*",
     "*://*.crainsdetroit.com/*",
     "*://*.crainsnewyork.com/*",
+    "*://*.cronista.com/*",
     "*://*.csmonitor.com/*",
     "*://*.curbed.com/*",
     "*://*.cw.com.tw/*",
@@ -752,6 +753,7 @@
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
     "*://*.wallkit.net/*",
+    "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
   "version": "3.1.9.9"
