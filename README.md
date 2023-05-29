@@ -556,13 +556,11 @@ Grouped in options:\
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -
 [Kurier.at](https://kurier.at) -
-[Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Philosophie Magazin](https://www.philomag.de) -
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
-[Volksstimme](https://www.volksstimme.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\

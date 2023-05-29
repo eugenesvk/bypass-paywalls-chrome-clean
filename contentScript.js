@@ -854,18 +854,6 @@ else if (matchDomain('kurier.at')) {
   removeDOMElement(...banners);
 }
 
-else if (matchDomain(['mz.de', 'volksstimme.de'])) {
-  let paywall = document.querySelector('.fp-paywall');
-  if (window.location.pathname.startsWith('/amp/')) {
-    amp_unhide_subscr_section('amp-ad, amp-embed');
-  } else {
-    if (paywall) {
-      removeDOMElement(paywall);
-      window.location.href = window.location.href.replace('.de/', '.de/amp/');
-    }
-  }
-}
-
 else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
