@@ -361,6 +361,12 @@
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
   },
+  "Rp-online.de": {
+    "add_ext_link": "div.paid-content|div[data-cy=\"article_content\"]",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "rp-online.de"
+  },
   "Schwaebische-post.de": {
     "allow_cookies": 1,
     "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",

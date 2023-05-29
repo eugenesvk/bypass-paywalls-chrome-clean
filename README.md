@@ -550,6 +550,7 @@ Grouped in options:\
 [Deutsches Ärzteblatt](https://www.aerzteblatt.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
+[Golem.de (link to archive.is)](https://www.golem.de) -
 [Jacobin Magazin](https://jacobin.de) -
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -

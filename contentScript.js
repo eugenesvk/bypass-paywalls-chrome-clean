@@ -742,6 +742,17 @@ else if (matchDomain('freiepresse.de')) {
   }
 }
 
+else if (matchDomain('golem.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall-wrapper');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('p#gpar1');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+}
+
 else if (matchDomain('jacobin.de')) {
   let paywall = pageContains('h3.m-auto', 'Dieser Artikel ist nur mit Abo zugänglich.');
   if (paywall.length) {

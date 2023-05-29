@@ -45,6 +45,12 @@
     "allow_cookies": 1,
     "block_regex": "(\\.piano\\.io\\/api\\/tinypass\\.min\\.js|\\.clicrbs\\.com\\.br\\/paywall-api\\/count)"
   },
+  "Golem.de (link to archive.is)": {
+    "domain": "golem.de",
+    "allow_cookies": 1,
+    "add_ext_link": "div.paywall-wrapper|p#gpar1",
+    "add_ext_link_type": "archive.is"
+  },
   "Il Messaggero (+ regional)": {
     "domain": "###_it_ilmessaggero",
     "group": [
