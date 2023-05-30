@@ -631,6 +631,15 @@ else if (matchDomain('berliner-zeitung.de')) {
   }, 1000);
 }
 
+else if (matchDomain('boersen-zeitung.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('storefront-element[child-id="paywall"]');
+  if (paywall) {
+    removeDOMElement(paywall);
+    replaceDomElementExt(url, false, false, 'article');
+  }
+}
+
 else if (matchDomain('cicero.de')) {
   let url = window.location.href;
   if (!window.location.search.match(/(\?|&)amp/)) {
@@ -651,12 +660,6 @@ else if (matchDomain('cicero.de')) {
   }
   let urban_ad_sign = document.querySelectorAll('.urban-ad-sign');
   removeDOMElement(...urban_ad_sign);
-}
-
-else if (matchDomain('cz.de')) {
-  // plus code in contentScript_once_var.js (timing)
-  let banner = document.querySelector('.newsletter-signup-wrapper');
-  removeDOMElement(banner);
 }
 
 else if (matchDomain('faz.net')) {
@@ -5066,9 +5069,7 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
           replaceDomElementExtSrc(url, html, false, base64, selector, text_fail, selector_source);
         });
       } else {
-        if (text_fail && article) {
-          replaceTextFail(article, proxy, text_fail)
-        }
+        replaceTextFail(url, article, proxy, text_fail);
       }
     }).catch(function (err) {
       false;

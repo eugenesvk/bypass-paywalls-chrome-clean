@@ -112,6 +112,7 @@
     "*://*.bnd.com/*",
     "*://*.bndestem.nl/*",
     "*://*.bnn.de/*",
+    "*://*.boersen-zeitung.de/*",
     "*://*.bonappetit.com/*",
     "*://*.bordermail.com.au/*",
     "*://*.bostonglobe.com/*",
@@ -756,5 +757,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.0.1"
+  "version": "3.2.0.2"
 }

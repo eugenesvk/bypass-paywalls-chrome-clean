@@ -441,6 +441,12 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "theday.com"
   },
+  "Thedispatch.com": {
+    "add_ext_link": "section.paywall-section|div.with_paywall",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "thedispatch.com"
+  },
   "Theepochtimes.com": {
     "allow_cookies": 1,
     "block_regex": "subs\\.theepochtimes\\.com\\/lib\\/api\\.bundle\\.js",
