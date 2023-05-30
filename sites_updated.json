@@ -40,6 +40,11 @@
     "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
     "useragent": "facebookbot"
   },
+  "ESPN USA (news only)": {
+    "domain": "espn.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div#dompurify|div"
+  },
   "GaúchaZH": {
     "domain": "gauchazh.clicrbs.com.br",
     "allow_cookies": 1,
