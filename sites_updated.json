@@ -1,8 +1,4 @@
 {
-  "Adweek (free articles only)": {
-    "domain": "adweek.com",
-    "useragent": "googlebot"
-  },
   "Citywire": {
     "domain": "citywire.com",
     "allow_cookies": 1,
@@ -32,13 +28,7 @@
     "domain": "elmercurio.com",
     "allow_cookies": 1,
     "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
-    "useragent": "facebookbot"
-  },
-  "El Mercurio (not Inversiones; + regional/opt-in to custom sites)": {
-    "domain": "elmercurio.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
-    "useragent": "facebookbot"
+    "useragent": "googlebot"
   },
   "ESPN USA (news only)": {
     "domain": "espn.com",
@@ -55,23 +45,6 @@
     "allow_cookies": 1,
     "add_ext_link": "div.paywall-wrapper|p#gpar1",
     "add_ext_link_type": "archive.is"
-  },
-  "Il Messaggero (+ regional)": {
-    "domain": "###_it_ilmessaggero",
-    "group": [
-      "corriereadriatico.it",
-      "ilgazzettino.it",
-      "ilmattino.it",
-      "ilmessaggero.it",
-      "quotidianodipuglia.it"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.(cedscdn|cedsdigital)\\.it\\/.+\\/PaywallMeter\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|consent|subscriptions)-.+\\.(m)?js)"
-  },
-  "La Vanguardia": {
-    "domain": "lavanguardia.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/ev\\.lavanguardia\\.com"
   },
   "Le Point (cached articles only)": {
     "domain": "lepoint.fr",

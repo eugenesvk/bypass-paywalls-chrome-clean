@@ -24,10 +24,6 @@ var defaultSites = {
     domain: "adweek.com",
     useragent: "googlebot"
   },
-  "Ärzte Zeitung": {
-    domain: "aerztezeitung.de",
-    allow_cookies: 1
-  },
   "Aftonbladet (link to archive.is)": {
     domain: "aftonbladet.se",
     allow_cookies: 1,
@@ -101,6 +97,10 @@ var defaultSites = {
     domain: "artnet.com",
     allow_cookies: 1,
     block_regex: /(\.artnet\.com\/paywall-ajax\.php|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+  },
+  "Ärzte Zeitung": {
+    domain: "aerztezeitung.de",
+    allow_cookies: 1
   },
   "Atavist Magazine": {
     domain: "atavist.com"
@@ -490,7 +490,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "El Mercurio (+ regional/opt-in to custom sites)": {
+  "El Mercurio (not Inversiones/Legal; + regional/opt-in to custom sites)": {
     domain: "elmercurio.com",
     group: [
       "elmercurio.com"
@@ -500,7 +500,7 @@ var defaultSites = {
         domain: "elmercurio.com",
         allow_cookies: 1,
         block_regex: /\.(elmercurio\.com|emol\.cl)\/(.+\/)?js\/(.+\/)?(modal|merPramV\d|PramModal\.min)\.js/,
-        useragent: "facebookbot"
+        useragent: "googlebot"
       }
     ]
   },

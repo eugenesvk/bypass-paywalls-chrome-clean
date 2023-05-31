@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Boersen-zeitung.de
+Fix El Mercurio (not Inversiones/Legal)
 Fix ESPN USA
 
 * v3.2.0.0 (2023-05-29)
