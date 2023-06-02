@@ -194,6 +194,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
+  "Iflr.com": {
+    "allow_cookies": 1,
+    "domain": "iflr.com",
+    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
+  },
   "Ilglobo.com": {
     "allow_cookies": 1,
     "domain": "ilglobo.com",

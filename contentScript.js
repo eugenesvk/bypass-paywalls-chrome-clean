@@ -1860,9 +1860,11 @@ else if (matchDomain('eastwest.eu')) {
 
 else if (matchDomain('gazzetta.it')) {
   if (window.location.pathname.endsWith('_preview.shtml')) {
-    window.setTimeout(function () {
+    let paywall = document.querySelector('section.bck-freemium__wall');
+    if (paywall) {
+      removeDOMElement(paywall);
       window.location.href = window.location.pathname.replace('_preview', '') + '?gaa_at=g';
-    }, 500);
+    }
   } else if (window.location.pathname.endsWith('_amp.shtml'))
     ampToHtml();
 }
@@ -2183,7 +2185,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                           figure.appendChild(caption);
                         }
                         elem.appendChild(figure);
-                      } else if (child.relation.link && ((child.relation.title && child.relation.title.length > 2) || child.relation.imageAlt)) {
+                      } else if (child.relation.link && child.relation.link.length > 2 && ((child.relation.title && child.relation.title.length > 2) || child.relation.imageAlt)) {
                         let par_link = document.createElement('a');
                         par_link.href = child.relation.link;
                         par_link.innerText = child.relation.title.length > 2 ? child.relation.title : child.relation.imageAlt;
