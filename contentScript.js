@@ -2354,51 +2354,43 @@ else if (matchDomain('telegraaf.nl')) {
       window.location.reload(true);
     }, 500);
   }
-  window.setTimeout(function () {
-    let paywall = document.querySelector('.MeteringNotification__backdrop');
-    let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
-    removeDOMElement(paywall, ...banners);
-  }, 500);
-  let premium = document.querySelector('.PremiumLabelWithLine');
-  let article_wrapper = document.querySelector('.ArticlePageWrapper__uid');
-  let article_id = article_wrapper ? article_wrapper.innerText : '123';
-  let article_body_done = window.location.pathname.startsWith('/video/') || document.querySelector('#articleBody' + article_id);
-  if (premium && !article_body_done) {
-    let article_body_old = document.querySelector('[id^="articleBody"]');
-    removeDOMElement(article_body_old);
-    let html = document.documentElement.outerHTML;
-    let json = html.includes('window.__APOLLO_STATE__=') ? html.split('window.__APOLLO_STATE__=')[1].split('};')[0] + '}' : '';
-    if (json) {
-      let json_article_id = json.split('uid\":')[1].split(/\D/)[0];
-      if (json_article_id && json_article_id !== article_id) {
-        window.setTimeout(function () {
-          window.location.reload(true);
-        }, 500);
-      }
-      let json_text = json.includes('"body":"') ? json.split('"body":"')[1].split('","__typename":')[0] : '';
-      if (json_text) {
-        let intro = document.querySelector('span[id^="articleIntro"]');
-        if (intro)
-          json_text = json_text.replace(intro.innerText + '\n\n', '');
-        let article_body = document.querySelector('section[data-element="articleBody"]');
-        if (article_body) {
-          let div_main = document.createElement('div');
-          div_main.setAttribute('id', 'articleBody' + article_id);
-          let div_elem = document.createElement('div');
-          div_elem.setAttribute('data-element', 'articleBodyBlocks');
-          let text_array = json_text.split('\\n');
-          text_array.forEach(p_text => {
-            let p_div = document.createElement('p');
-            p_div.setAttribute('class', 'ArticleBodyBlocks__paragraph');
-            p_div.innerText = p_text;
-            div_elem.appendChild(p_div);
-          });
-          div_main.appendChild(div_elem);
-          article_body.firstChild.after(div_main);
+  let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="SubscriptionCard"]');
+  if (paywall) {
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      removeDOMElement(paywall);
+      try {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let json_text = json.articleBody;
+          if (json_text) {
+            let intro = document.querySelector('span[id^="articleIntro"], p.Article__intro > span');
+            if (intro)
+              json_text = json_text.replace(intro.innerText + '\n\n', '');
+            let article_body = document.querySelector('section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
+            if (article_body) {
+              let div_main = document.createElement('div');
+              div_main.style = 'margin: 20px 0px;';
+              let div_elem = document.createElement('div');
+              let text_array = json_text.split('\\n');
+              text_array.forEach(p_text => {
+                let p_div = document.createElement('p');
+                p_div.innerText = p_text;
+                p_div.style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
+                div_elem.appendChild(p_div);
+              });
+              div_main.appendChild(div_elem);
+              article_body.after(div_main);
+            }
+          }
         }
+      } catch (err) {
+        console.log(err);
       }
     }
   }
+  let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
+  removeDOMElement(paywall, ...banners);
 }
 
 else if (matchDomain('vn.nl')) {

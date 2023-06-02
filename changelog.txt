@@ -6,6 +6,7 @@ Post-release
 Add Boersen-zeitung.de
 Fix El Mercurio (not Inversiones/Legal)
 Fix ESPN USA
+Fix Telegraaf.nl
 
 * v3.2.0.0 (2023-05-29)
 Add El Cronista (Argentina)
