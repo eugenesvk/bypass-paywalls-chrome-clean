@@ -4652,6 +4652,18 @@ else if (matchDomain(timesofindia_domains)) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
     }
+  } else {
+    let amp_images = document.querySelectorAll('div.inline-image > div.inline-imgecontent > amp-img[src]');
+    for (let amp_image of amp_images) {
+      amp_image.parentNode.removeAttribute('class');
+      amp_image.parentNode.parentNode.removeAttribute('class');
+      let elem = document.createElement('img');
+      Object.assign(elem, {
+        src: amp_image.getAttribute('src'),
+        alt: amp_image.getAttribute('alt')
+      });
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
   }
 }
 
