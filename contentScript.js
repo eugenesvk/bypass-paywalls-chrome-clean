@@ -1717,6 +1717,14 @@ else if (matchDomain('lesinrocks.com')) {
   }
 }
 
+else if (matchDomain('letelegramme.fr')) {
+  let paywall = document.querySelectorAll('div.tlg-paywalled');
+  for (let elem of paywall)
+    elem.classList.remove('tlg-paywalled');
+  let ads = document.querySelectorAll('div[id^="pub_"]');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('lexpress.fr')) {
   let ads = document.querySelectorAll('div[class^="block_pub"], div.bottom-bar-full, div.tead, div.ban-bottom, div.placeholder--ban-atf');
   hideDOMElement(...ads);

@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix LeTelegramme.fr (css)
 Fix The Athletic (timing)
 
 * v3.2.1.0 (2023-06-05)
@@ -1239,8 +1240,8 @@ Fix Stratfor
 
 * v2.1.5.0 (2021-04-04)
 Add Billboard
-Add La Tribune (France)
-Add Le Telegramme (France)
+Add LaTribune.fr
+Add LeTelegramme.fr
 Fix Mexico News Daily
 Update options: restore opt-in for custom sites (on reload; Chrome-only)
 
