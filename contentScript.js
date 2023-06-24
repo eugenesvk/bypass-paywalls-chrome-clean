@@ -2001,19 +2001,7 @@ else if (matchDomain('italiaoggi.it')) {
 }
 
 else if (matchDomain(it_gedi_domains)) {
-  if (matchDomain('lescienze.it')) {
-    let paywall = document.querySelector('.paywall-adagio');
-    if (paywall) {
-      let body_paywall = document.querySelector('#detail-body-paywall');
-      let shade = document.querySelector('.shade');
-      removeDOMElement(paywall, body_paywall, shade);
-      let detail_body_hidden = document.querySelectorAll('.detail_body[hidden]');
-      for (let elem of detail_body_hidden) {
-        elem.removeAttribute('hidden');
-        elem.removeAttribute('style');
-      }
-    }
-  } else if (matchDomain('espresso.repubblica.it')) {
+  if (matchDomain('espresso.repubblica.it')) {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let paywall = document.querySelector('div#paywall');
       let amphtml = document.querySelector('link[rel="amphtml"]');

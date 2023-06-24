@@ -895,7 +895,8 @@ var defaultSites = {
       "espresso.repubblica.it"
     ],
     allow_cookies: 1,
-    block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/
+    block_regex: /(scripts\.repubblica\.it\/pw\/pw\.js|cdn\.ampproject\.org\/v\d\/amp-(access|user-notification)-.+\.js)/,
+    useragent: "googlebot"
   },
   "Gruppo SAE.it (free articles only)": {
     domain: "###_it_gruppo_sae",
