@@ -398,7 +398,8 @@ Grouped in options:\
 #### Europe
 
 [Bloomberg Adria](https://www.bloombergadria.com) -
-[EUobserver](https://euobserver.com)
+[EUobserver](https://euobserver.com) -
+[Follow the Money - ftm.eu](https://www.ftm.eu) -
 
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -

@@ -262,6 +262,7 @@
     "*://*.freiepresse.de/*",
     "*://*.fresnobee.com/*",
     "*://*.ft.com/*",
+    "*://*.ftm.eu/*",
     "*://*.ftm.nl/*",
     "*://*.gazzetta.it/*",
     "*://*.geelongadvertiser.com.au/*",
@@ -756,5 +757,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.1.1"
+  "version": "3.2.1.2"
 }

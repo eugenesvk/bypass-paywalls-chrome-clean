@@ -3501,6 +3501,11 @@ else if (matchDomain('fortune.com')) {
   }
 }
 
+else if (matchDomain('ftm.eu')) {
+  let banners = document.querySelectorAll('div.banner-pp, a.readmore');
+  removeDOMElement(...banners);
+}
+
 else if (matchDomain('hbr.org')) {
   let popup = document.querySelector('.persistent-banner');
   removeDOMElement(popup);

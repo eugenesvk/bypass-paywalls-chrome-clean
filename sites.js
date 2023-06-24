@@ -601,10 +601,14 @@ var defaultSites = {
   "First Things": {
     domain: "firstthings.com"
   },
-  "Follow the Money (ftm.nl)": {
+  "Follow the Money (ftm.nl & ftm.eu)": {
     domain: "ftm.nl",
+    group: [
+      "ftm.eu",
+      "ftm.nl"
+    ],
     allow_cookies: 1,
-    block_regex: /\.ftm\.nl\/js\/routing\?/
+    block_regex: /\.ftm\.(nl|eu)\/js\/routing\?/
   },
   "Forbes": {
     domain: "forbes.com",
