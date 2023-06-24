@@ -1,70 +1,20 @@
 {
-  "Citywire": {
-    "domain": "citywire.com",
+  "Gruppo GEDI.it (italian.tech, lescienze.it & espresso.repubblica.it)": {
+    "domain": "###_it_gedi",
+    "group": [
+      "italian.tech",
+      "lescienze.it",
+      "espresso.repubblica.it"
+    ],
     "allow_cookies": 1,
-    "ld_google_webcache": "div#dompurify|div"
-  },
-  "Dagens Nyheter (link to archive.is)": {
-    "domain": "dn.se",
-    "allow_cookies": 1,
-    "add_ext_link": "div.esi-paywall|div.article__content",
-    "add_ext_link_type": "archive.is"
-  },
-  "Defector": {
-    "domain": "defector.com",
-    "remove_cookies_select_drop": ["lede_defector_user"]
-  },
-  "DN.no (cached articles only)": {
-    "domain": "dn.no",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div#dompurify|div"
-  },
-  "El Español": {
-    "domain": "elespanol.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
-  },
-  "El Mercurio (+ regional/opt-in to custom sites)": {
-    "domain": "elmercurio.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.(elmercurio\\.com|emol\\.cl)\\/(.+\\/)?js\\/(.+\\/)?(modal|merPramV\\d|PramModal\\.min)\\.js",
+    "block_regex": "(scripts\\.repubblica\\.it\\/pw\\/pw\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|user-notification)-.+\\.js)",
     "useragent": "googlebot"
   },
-  "ESPN USA (news only)": {
-    "domain": "espn.com",
+  "Le Télégramme": {
+    "domain": "letelegramme.fr",
     "allow_cookies": 1,
-    "ld_google_webcache": "div#dompurify|div"
-  },
-  "GaúchaZH": {
-    "domain": "gauchazh.clicrbs.com.br",
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/api\\/tinypass\\.min\\.js|\\.clicrbs\\.com\\.br\\/paywall-api\\/count)"
-  },
-  "Golem.de (link to archive.is)": {
-    "domain": "golem.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div.paywall-wrapper|p#gpar1",
-    "add_ext_link_type": "archive.is"
-  },
-  "Le Point (cached articles only)": {
-    "domain": "lepoint.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr",
-    "ld_google_webcache": "div.info-paywall|div.ArticleBody"
-  },
-  "Monocle": {
-    "domain": "monocle.com",
-    "useragent": "googlebot"
-  },
-  "Quora (regwall)": {
-    "domain": "quora.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "Schwäbische Zeitung": {
-    "domain": "schwaebische.de",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div#dompurify|div"
+    "block_regex": "\\.poool\\.fr\\/",
+    "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]"
   },
   "TechTarget Group": {
     "domain": "###_usa_techtarget",

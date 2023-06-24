@@ -593,7 +593,6 @@
     "*://*.suomensotilas.fi/*",
     "*://*.svz.de/*",
     "*://*.syracuse.com/*",
-    "*://*.tagesanzeiger.ch/*",
     "*://*.tagesspiegel.de/*",
     "*://*.tampabay.com/*",
     "*://*.techinasia.com/*",
@@ -757,5 +756,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.1.0"
+  "version": "3.2.1.1"
 }

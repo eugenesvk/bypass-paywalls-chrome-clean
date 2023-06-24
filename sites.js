@@ -1827,11 +1827,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/suomensotilas\.fi\/wp-content\/plugins\/epflpw\/js\/pw\.js/
   },
-  "TagesAnzeiger.ch (link to archive.is)": {
-    domain: "tagesanzeiger.ch",
-    allow_cookies: 1,
-    block_regex: /\.piano\.io\/xbuilder\/experience\/execute/
-  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,

@@ -941,17 +941,6 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
-else if (matchDomain('tagesanzeiger.ch')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#piano-premium > div');
-  if (paywall) {
-    removeDOMElement(paywall.parentNode);
-    let article = document.querySelector('article p > span');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div#paywall');
