@@ -291,6 +291,7 @@
     "*://*.heraldsun.com.au/*",
     "*://*.hilltimes.com/*",
     "*://*.hindustantimes.com/*",
+    "*://*.hindutamil.in/*",
     "*://*.historyextra.com/*",
     "*://*.hollywoodreporter.com/*",
     "*://*.housebeautiful.com/*",
@@ -757,5 +758,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.1.3"
+  "version": "3.2.1.4"
 }

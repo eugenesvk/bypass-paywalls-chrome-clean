@@ -831,6 +831,7 @@ Grouped in options:\
 
 ##### India
 [BQ Prime](https://www.bqprime.com) -
+[Hindu Tamil Thisai](https://www.hindutamil.in) -
 [Hindustan Times](https://www.hindustantimes.com) -
 [Inc42](https://inc42.com) -
 [India Today](https://www.indiatoday.in) -

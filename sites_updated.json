@@ -10,6 +10,11 @@
     "block_regex": "(scripts\\.repubblica\\.it\\/pw\\/pw\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|user-notification)-.+\\.js)",
     "useragent": "googlebot"
   },
+  "Hindu Tamil Thisai": {
+    "domain": "hindutamil.in",
+    "allow_cookies": 1,
+    "amp_redirect": "div.premium-class-bt"
+  },
   "Le Télégramme": {
     "domain": "letelegramme.fr",
     "allow_cookies": 1,

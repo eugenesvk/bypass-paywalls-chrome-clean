@@ -974,6 +974,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.ensighten\.com\/.+\/Bootstrap\.js/
   },
+  "Hindu Tamil Thisai": {
+    domain: "hindutamil.in",
+    allow_cookies: 1
+  },
   "Hindustan Times": {
     domain: "hindustantimes.com",
     allow_cookies: 1,

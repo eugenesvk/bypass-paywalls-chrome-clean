@@ -3594,6 +3594,17 @@ else if (matchDomain('hindustantimes.com')) {
   removeDOMElement(close_story, ...ads);
 }
 
+else if (matchDomain('hindutamil.in')) {
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div.premium-class-bt');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
+    }
+  }
+}
+
 else if (matchDomain('historyextra.com')) {
   let article_masked = document.querySelector('.template-article__masked');
   if (article_masked) {
