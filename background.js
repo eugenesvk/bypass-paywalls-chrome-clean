@@ -320,7 +320,7 @@ function set_rules(sites, sites_updated, sites_custom) {
       if (site_default) {
         rule = defaultSites[site_default];
         let site_updated = Object.keys(sites_updated).find(updated_key => compareKey(updated_key, site));
-        if (site_updated && !sites_updated[site_updated].new_site)
+        if (site_updated && !(sites_updated[site_updated].new_site || (sites_updated[site_updated].upd_version && (sites_updated[site_updated].upd_version <= ext_version))))
           rule = sites_updated[site_updated];
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];
@@ -449,7 +449,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_be_groupe_ipm', '###_it_gruppo_sae'];
+          let new_groups = ['###_be_groupe_ipm', '###_it_gruppo_sae', '###_nl_eu_ftm'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
             (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)

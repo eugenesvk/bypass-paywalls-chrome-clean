@@ -1,4 +1,9 @@
 {
+  "Ftm.eu": {
+    "domain": "ftm.eu",
+    "allow_cookies": 1,
+    "block_regex": "\\.ftm\\.eu\\/js\\/routing\\?"
+  },
   "Gruppo GEDI.it (italian.tech, lescienze.it & espresso.repubblica.it)": {
     "domain": "###_it_gedi",
     "group": [
@@ -8,18 +13,21 @@
     ],
     "allow_cookies": 1,
     "block_regex": "(scripts\\.repubblica\\.it\\/pw\\/pw\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|user-notification)-.+\\.js)",
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "upd_version": "3.2.1.1"
   },
   "Hindu Tamil Thisai": {
     "domain": "hindutamil.in",
     "allow_cookies": 1,
-    "amp_redirect": "div.premium-class-bt"
+    "amp_redirect": "div.premium-class-bt",
+    "new_site": 1
   },
   "Le Télégramme": {
     "domain": "letelegramme.fr",
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr\\/",
-    "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]"
+    "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]",
+    "upd_version": "3.2.1.1"
   },
   "TechTarget Group": {
     "domain": "###_usa_techtarget",
@@ -35,12 +43,14 @@
   "Telegraaf": {
     "domain": "telegraaf.nl",
     "allow_cookies": 1,
-    "ld_json": "data-hydrate[data-name='SubscriptionCard']|data-hydrate[data-name='InjectArticleDetailBlocks']"
+    "ld_json": "data-hydrate[data-name='SubscriptionCard']|data-hydrate[data-name='InjectArticleDetailBlocks']",
+    "upd_version": "3.2.0.4"
   },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "upd_version": "3.1.4.0"
   }
 }

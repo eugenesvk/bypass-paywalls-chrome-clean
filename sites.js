@@ -602,7 +602,7 @@ var defaultSites = {
     domain: "firstthings.com"
   },
   "Follow the Money (ftm.nl & ftm.eu)": {
-    domain: "ftm.nl",
+    domain: "###_nl_eu_ftm",
     group: [
       "ftm.eu",
       "ftm.nl"

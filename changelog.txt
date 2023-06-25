@@ -10,6 +10,7 @@ Fix LeScienze.it
 Fix LeTelegramme.fr (css)
 Fix The Athletic (timing)
 Fix Times of India (amp-images)
+Maintenance updated sites (version)
 
 * v3.2.1.0 (2023-06-05)
 Add Boersen-zeitung.de
