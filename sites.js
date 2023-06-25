@@ -810,6 +810,12 @@ var defaultSites = {
     ],
     allow_cookies: 1
   },
+  "Groupe SynerJ Media (opt-in to custom sites)": {
+    domain: "###_fr_synerj",
+    group: [],
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Grupo Abril": {
     domain: "abril.com.br",
     allow_cookies: 1,

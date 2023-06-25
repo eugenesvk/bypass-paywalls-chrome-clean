@@ -501,6 +501,11 @@
     "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
     "domain": "toolkits.com"
   },
+  "Vikatan.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.vikatan\\.com\\/evolok\\/ev-dab\\/ev-em\\.min\\.js",
+    "domain": "vikatan.com"
+  },
   "Washingtontimes.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

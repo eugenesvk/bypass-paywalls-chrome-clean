@@ -531,6 +531,7 @@ Grouped in options:\
 [Charente libre](https://www.charentelibre.fr) -
 [La République des Pyrénées](https://www.larepubliquedespyrenees.fr) -
 [Sud Ouest](https://www.sudouest.fr)\
+*[Groupe SynerJ Media](https://synerj.media/)* sites (opt-in to custom sites)\
 *Roularta Media Group* sites like\
 [Femmes d'Aujourd'hui](https://www.femmesdaujourdhui.be) -
 [Flair.be](https://www.flair.be/fr) -

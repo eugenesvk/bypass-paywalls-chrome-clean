@@ -115,7 +115,9 @@ window.setTimeout(function () {
       else if (document.querySelector('script[src*=".com/wp-content/plugins/dfm"], amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))
         group = '###_usa_mng';
       else if (hostname.match(/\.com$/)) {
-        if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
+        if (matchDomain(['journalauto.com', 'journaldupneu.com', 'j2rauto.com']))
+          group = '###_fr_synerj';
+        else if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
           group = '###_usa_madavor';
         else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
           group = '###_usa_pei';
