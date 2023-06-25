@@ -1856,11 +1856,41 @@ else if (matchDomain('eastwest.eu')) {
 }
 
 else if (matchDomain('gazzetta.it')) {
+  function header_nofix(header) {
+    if (header) {
+      let nofix_div = document.createElement('div');
+      nofix_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
+      nofix_div.innerText = 'BPC > no fix';
+      header.appendChild(nofix_div);
+    }
+  }
   if (window.location.pathname.endsWith('_preview.shtml')) {
     let paywall = document.querySelector('section.bck-freemium__wall');
     if (paywall) {
       removeDOMElement(paywall);
-      window.location.href = window.location.pathname.replace('_preview', '') + '?gaa_at=g';
+      if (!window.location.search.startsWith('?reason=unauthenticated')) {
+        window.location.href = window.location.pathname.replace('_preview', '') + '?gaa_at=g';
+      } else {
+        let json_script = getArticleJsonScript();
+        let header = document.querySelector('div.content > h2');
+        if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = json.articleBody.replace(/(\s{3}|&nbsp;)/g, '\r\n\r\n');
+            let content = document.querySelector('div.content > p.has-first-letter');
+            if (json_text && content) {
+              let content_new = document.createElement('p');
+              content_new.innerText = json_text;
+              content.parentNode.replaceChild(content_new, content);
+              let article_body = document.querySelector('section.body-article');
+              if (article_body)
+                article_body.style = 'height: auto;';
+            } else
+              header_nofix(header);
+          }
+        } else
+          header_nofix(header);
+      }
     }
   } else if (window.location.pathname.endsWith('_amp.shtml'))
     ampToHtml();

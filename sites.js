@@ -1133,7 +1133,7 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "La Gazzetta dello Sport": {
+  "La Gazzetta dello Sport (text only)": {
     domain: "gazzetta.it",
     allow_cookies: 1
   },
