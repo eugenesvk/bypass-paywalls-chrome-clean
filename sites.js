@@ -232,6 +232,7 @@ var defaultSites = {
   "Beobachter.ch": {
     allow_cookies: 1,
     domain: "beobachter.ch",
+    block_regex: /\.tinypass\.com\//,
     useragent: "googlebot"
   },
   "Berliner Zeitung": {
@@ -934,6 +935,7 @@ var defaultSites = {
   "Handelszeitung.ch": {
     allow_cookies: 1,
     domain: "handelszeitung.ch",
+    block_regex: /\.tinypass\.com\//,
     useragent: "googlebot"
   },
   "Harper's Magazine": {

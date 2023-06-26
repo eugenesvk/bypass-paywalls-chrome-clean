@@ -624,6 +624,45 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   }
 }
 
+else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
+  let paywall = document.querySelector('div#piano-inlined');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_script = document.querySelector('script#hydrationdata');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let url_id = json_script.text.includes('"gcid":"') ? json_script.text.split('"gcid":"')[1].split('","nid"')[0] : '';
+          if (url_id && !window.location.pathname.endsWith(url_id))
+            refreshCurrentTab();
+          let pars = json.state;
+          let paragraphs = document.querySelectorAll('div.paragraph');
+          let article = paragraphs[0];
+          if (article) {
+            article.setAttribute('class', 'paragraph text-paragraph');
+            for (let paragraph of paragraphs)
+              paragraph.innerHTML = '';
+            let parser = new DOMParser();
+            for (let par in pars) {
+              let content = pars[par].text;
+              if (content) {
+                let content_new = parser.parseFromString('<div style="font-size: 1.7rem; margin: 50px;">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
+                let article_new = content_new.querySelector('div'); ;
+                article.appendChild(article_new);
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+  let ads = document.querySelectorAll('div.ad-wrapper');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('berliner-zeitung.de')) {
   window.setTimeout(function () {
     let ads = document.querySelectorAll('[id^="traffective-ad"], [class^="ad-slot_wrapper"], [class^="outbrain_container"]');
