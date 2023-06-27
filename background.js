@@ -12,7 +12,7 @@ if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
 }
 
-const dompurify_sites = ['arcinfo.ch', 'belfasttelegraph.co.uk', 'beobachter.ch', 'bloomberg.com', 'boersen-zeitung.de', 'cicero.de', 'citywire.com', 'dn.no', 'espn.com', 'handelszeitung.ch', 'ilmanifesto.it', 'inc42.com', 'independent.ie', 'ipolitics.ca', 'italiaoggi.it', 'jacobin.de', 'lecourrierdesstrateges.fr', 'lepoint.fr', 'lesechos.fr', 'marianne.net', 'newleftreview.org', 'newscientist.com', 'outlookbusiness.com', 'prospectmagazine.co.uk', 'schwaebische.de', 'sloanreview.mit.edu', 'stratfor.com', 'stylist.co.uk', 'techinasia.com', 'thebulletin.org', 'vn.nl', 'zerohedge.com'].concat(nl_mediahuis_noord_domains, nl_mediahuis_region_domains, no_nhst_media_domains);
+var dompurify_sites = [];
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
@@ -279,7 +279,7 @@ function addRules(domain, rule) {
     ld_json_next[domain] = rule.ld_json_next;
   if (rule.ld_google_webcache)
     ld_google_webcache[domain] = rule.ld_google_webcache;
-  if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache)
+  if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache || rule.cs_dompurify)
     if (!dompurify_sites.includes(domain))
       dompurify_sites.push(domain);
   if (rule.add_ext_link && rule.add_ext_link_type)
@@ -449,7 +449,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_be_groupe_ipm', '###_it_gruppo_sae', '###_nl_eu_ftm'];
+          let new_groups = ['###_be_groupe_ipm', '###_ch_esh_medias', '###_it_gruppo_sae', '###_nl_eu_ftm'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
             (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)

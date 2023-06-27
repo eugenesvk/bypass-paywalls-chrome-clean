@@ -531,7 +531,7 @@ Grouped in options:\
 [Charente libre](https://www.charentelibre.fr) -
 [La République des Pyrénées](https://www.larepubliquedespyrenees.fr) -
 [Sud Ouest](https://www.sudouest.fr)\
-*[Groupe SynerJ Media](https://synerj.media/)* sites (opt-in to custom sites)\
+*[Groupe SynerJ Media](https://synerj.media)* sites (opt-in to custom sites)\
 *Roularta Media Group* sites like\
 [Femmes d'Aujourd'hui](https://www.femmesdaujourdhui.be) -
 [Flair.be](https://www.flair.be/fr) -
@@ -763,11 +763,16 @@ Grouped in options:\
 [NyTeknik](https://www.nyteknik.se)
 
 ##### Switzerland
-[ArcInfo](https://www.arcinfo.ch) -
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)](https://www.nzz.ch) -
 [The Market](https://themarket.ch)
+
+Grouped in options:\
+*[Groupe ESH Médias](https://www.eshmedias.ch)* sites like\
+[ArcInfo](https://www.arcinfo.ch) -
+[La Côte](https://www.lacote.ch) -
+[Le Nouvelliste](https://www.lenouvelliste.ch)
 
 ##### Australia/New Zealand
 

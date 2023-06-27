@@ -565,7 +565,7 @@ else if (matchDomain('allgaeuer-zeitung.de')) {
   }
 }
 
-else if (matchDomain('arcinfo.ch')) {
+else if (matchDomain(['arcinfo.ch', 'lacote.ch', 'lenouvelliste.ch'])) {// Groupe ESH Médias
   let paywall = document.querySelector('section#paywall-articles');
   if (paywall && dompurify_loaded) {
     removeDOMElement(paywall);
@@ -2210,6 +2210,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                             par_link.href = child.href;
                             par_link.innerText = child.children[0].text;
                             elem.appendChild(par_link);
+                            elem.appendChild(document.createElement('br'));
                           } else if (child.children) {
                             for (let sub_child of child.children) {
                               if (sub_child.text) {
@@ -2242,7 +2243,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
                       } else if (child.relation.link && child.relation.link.length > 2 && ((child.relation.title && child.relation.title.length > 2) || child.relation.imageAlt)) {
                         let par_link = document.createElement('a');
                         par_link.href = child.relation.link;
-                        par_link.innerText = child.relation.title.length > 2 ? child.relation.title : child.relation.imageAlt;
+                        par_link.innerText = child.relation.title.length > 2 ? child.relation.title : (child.relation.imageAlt.length > 2 ? child.relation.imageAlt : child.relation.link);
                         elem.appendChild(par_link);
                       }
                     } else if (child.text) {
