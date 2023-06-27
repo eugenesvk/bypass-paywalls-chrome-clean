@@ -628,7 +628,8 @@ var defaultSites = {
   "Foreign Policy": {
     domain: "foreignpolicy.com",
     allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
+    block_regex: /\.tinypass\.com\//,
+    cs_dompurify: 1
   },
   "Fortune": {
     domain: "fortune.com",
