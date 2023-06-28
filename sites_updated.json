@@ -5,6 +5,13 @@
     "useragent": "bingbot",
     "upd_version": "3.1.3.3"
   },
+  "Die Zeit": {
+    "domain": "zeit.de",
+    "allow_cookies": 1,
+    "add_ext_link": "aside#paywall|div.article-body",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.2.2.4"
+  },
   "Ftm.eu": {
     "domain": "ftm.eu",
     "allow_cookies": 1,

@@ -991,6 +991,20 @@ else if (matchDomain('tagesspiegel.de')) {
   }
 }
 
+else if (matchDomain('zeit.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('aside#paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article-body');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+    let fade = document.querySelector('div.paragraph--faded');
+    if (fade)
+      fade.classList.remove('paragraph--faded');
+  }
+}
+
 else if (matchDomain(de_lv_domains)) {
   let paywall_topagrar = document.querySelector('div > div.paywall-package');
   let paywall_other = document.querySelector('div[id^="paymentprocess-"]');
