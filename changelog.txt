@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Groupe ESH Medias (ch)
+Remove LePoint.fr (fix obsolete)
 Fix Beobachter.ch & Handelszeitung.ch
 Fix Foreign Policy (Insider)
 

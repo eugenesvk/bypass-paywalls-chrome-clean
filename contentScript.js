@@ -1670,21 +1670,6 @@ else if (matchDomain('leparisien.fr')) {
   }
 }
 
-else if (matchDomain('lepoint.fr')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.info-paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.ArticleBody');
-  }
-  window.setTimeout(function () {
-    let ads = document.querySelectorAll('#WRAP_BAN_ATF, .StickyPaywall, .slotpub, .sticky-block');
-    hideDOMElement(...ads);
-  }, 1000);
-}
-
 else if (matchDomain('lesechos.fr')) {
   if (window.location.pathname.startsWith('/amp/')) {
     ampToHtml();
@@ -5268,7 +5253,7 @@ function refreshCurrentTab() {
   ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
 }
 
-function archiveLink(url, text_fail = 'BPC > Full article text (only report issue if not working for over a week):\r\n') {
+function archiveLink(url, text_fail = 'BPC > Try for full article text (only report issue if not working for over a week):\r\n') {
   return externalLink(['archive.today', 'archive.is'], 'https://{domain}?run=1&url={url}', url, text_fail);
 }
 

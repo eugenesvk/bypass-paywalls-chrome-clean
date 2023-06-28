@@ -394,7 +394,6 @@
     "*://*.lenouveleconomiste.fr/*",
     "*://*.lenouvelliste.ch/*",
     "*://*.leparisien.fr/*",
-    "*://*.lepoint.fr/*",
     "*://*.leprogres.fr/*",
     "*://*.lescienze.it/*",
     "*://*.lesechos.fr/*",
@@ -760,5 +759,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.2.3"
+  "version": "3.2.2.4"
 }
