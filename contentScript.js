@@ -176,7 +176,6 @@ if (bg2csData.add_ext_link) {
             article.firstChild.before(ext_12ftLink(url));
             break;
           }
-          
         }
       }
     }, 1000);
@@ -2411,42 +2410,105 @@ else if (matchDomain('telegraaf.nl')) {
     }, 500);
   }
   let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="SubscriptionCard"]');
-  if (paywall) {
-    let json_script = getArticleJsonScript();
-    if (json_script) {
+  let article_body = document.querySelector('section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
+  if (paywall && article_body) {
+    let div_main = document.createElement('div');
+    div_main.style = 'margin: 20px 0px;';
+    let div_elem = document.createElement('div');
+    let par_style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
+    let scripts = document.querySelectorAll('script:not([src], [type])');
+    let apollo_script;
+    for (let script of scripts) {
+      if (script.text.includes('window.__APOLLO_STATE__=')) {
+        apollo_script = script;
+        break;
+      }
+    }
+    if (apollo_script) {
       removeDOMElement(paywall);
       try {
-        let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text = json.articleBody;
-          if (json_text) {
-            let intro = document.querySelector('span[id^="articleIntro"], p.Article__intro > span');
-            if (intro)
-              json_text = json_text.replace(intro.innerText + '\n\n', '');
-            let article_body = document.querySelector('section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
-            if (article_body) {
-              let div_main = document.createElement('div');
-              div_main.style = 'margin: 20px 0px;';
-              let div_elem = document.createElement('div');
-              let text_array = json_text.split('\\n');
-              text_array.forEach(p_text => {
-                let p_div = document.createElement('p');
-                p_div.innerText = p_text;
-                p_div.style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
-                div_elem.appendChild(p_div);
-              });
-              div_main.appendChild(div_elem);
-              article_body.after(div_main);
+        let apollo_json = JSON.parse(apollo_script.text.replace(/(^window.__APOLLO_STATE__=|;$)/g, ''));
+        let start = false;
+        for (let key in apollo_json) {
+          let elem = apollo_json[key];
+          if (!start) {
+            if (key.includes('.introBlocks.'))
+              start = true;
+          } else {
+            let typename = elem.__typename;
+            if (key.startsWith('Article:') || ['ArticleAuthorBiography'].includes(typename))
+              break;
+            else {
+              let par = document.createElement('p');
+              if (typename === 'HtmlBlock') {
+                let item = document.createElement('p');
+                item.innerText = elem.contentHTML.replace(/((<|\\u003c)([^>]+)(>|\\u003e))/gi, '');
+                item.style = par_style;
+                par.appendChild(item);
+              } else if (typename === 'SubheadBlock') {
+                let item = document.createElement('p');
+                item.innerText = elem.text.replace(/((<|\\u003c)([^>]+)(>|\\u003e))/gi, '');
+                item.style = par_style;
+                par.appendChild(item);
+              } else if (typename === 'Image') {
+                let figure = document.createElement('figure');
+                let img = document.createElement('img');
+                img.src = elem.url.startsWith('https:') ? elem.url : 'https:' + elem.url;
+                img.width = !mobile ? 640 : 320;
+                figure.appendChild(img);
+                if (elem.description) {
+                  let caption = document.createElement('figcaption');
+                  caption.innerText = elem.description + (elem.copyright ? ' | ' + elem.copyright : '');
+                  figure.appendChild(caption);
+                }
+                par.appendChild(figure);
+              } else if (typename === 'Article') {
+                let item = document.createElement('a');
+                item.href = elem.url.startsWith('https:') ? elem.url : 'https:' + elem.url;
+                item.innerText = elem.title;
+                par.appendChild(item);
+              } else if (!['ImageBlock', 'InlineRelatedArticlesBlock', 'Video', 'Webshop'].includes(typename))
+                console.log(elem);
+              if (par.childNodes) {
+                div_main.appendChild(par); ;
+              }
             }
           }
         }
       } catch (err) {
         console.log(err);
       }
+    } else {
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        removeDOMElement(paywall);
+        try {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = json.articleBody;
+            if (json_text) {
+              let intro = document.querySelector('span[id^="articleIntro"], p.Article__intro > span');
+              if (intro)
+                json_text = json_text.replace(intro.innerText + '\n\n', '');
+              let text_array = json_text.split('\\n');
+              text_array.forEach(p_text => {
+                let p_div = document.createElement('p');
+                p_div.innerText = p_text;
+                p_div.style = par_style;
+                div_elem.appendChild(p_div);
+              });
+              div_main.appendChild(div_elem);
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
     }
+    article_body.after(div_main);
   }
   let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
-  removeDOMElement(paywall, ...banners);
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain('vn.nl')) {

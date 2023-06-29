@@ -8,6 +8,7 @@ Add Zeit.de (link to archive.is)
 Remove LePoint.fr (fix obsolete)
 Fix Beobachter.ch & Handelszeitung.ch
 Fix Foreign Policy (Insider)
+Fix Telegraaf.nl (images)
 
 * v3.2.2.0 (2023-06-25)
 Add Follow the Money (Ftm.eu)
