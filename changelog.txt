@@ -7,6 +7,7 @@ Add Groupe ESH Medias (ch)
 Add Zeit.de (link to archive.is)
 Remove LePoint.fr (fix obsolete)
 Remove Stratfor (fix obsolete)
+Remove Time Magazine (no paywall)
 Fix Beobachter.ch & Handelszeitung.ch
 Fix Foreign Policy (Insider)
 Fix Telegraaf.nl (images)

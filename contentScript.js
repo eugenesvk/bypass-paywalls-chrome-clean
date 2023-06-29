@@ -4728,14 +4728,6 @@ else if (matchDomain('thewrap.com')) {
     paywall.classList.remove('wrappro-paywall');
 }
 
-else if (matchDomain('time.com')) {
-  let body = document.querySelector('body');
-  if (body && !matchDomain('api.time.com'))
-    body.setAttribute('style', 'position:relative !important;');
-  let ads = document.querySelectorAll('div[id*="inline-ad-"]');
-  removeDOMElement(...ads);
-}
-
 else if (matchDomain('timeshighereducation.com')) {
   let paywall_cta = document.querySelector('div.paywall-cta');
   if (paywall_cta) {

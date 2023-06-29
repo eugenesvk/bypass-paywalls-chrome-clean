@@ -82,8 +82,7 @@ _* free articles only._
 [Newsweek](https://www.newsweek.com) -
 [Reuters](https://www.reuters.com) -
 [The New York Times](https://www.nytimes.com) -
-[The Washington Post](https://www.washingtonpost.com) -
-[Time Magazine](https://time.com)
+[The Washington Post](https://www.washingtonpost.com)
 
 ##### Business
 [Adweek](https://www.adweek.com) -

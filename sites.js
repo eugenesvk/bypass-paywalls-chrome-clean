@@ -2235,11 +2235,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.wallkit\.net\/js\//
   },
-  "Time Magazine": {
-    domain: "time.com",
-    allow_cookies: 1,
-    block_regex: /(\/time\.com\/dist\/meter-wall-client-js\..+\.js|\.zephr\.com\/zephr-browser\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
-  },
   "Times Higher Education": {
     domain: "timeshighereducation.com",
     allow_cookies: 1,
