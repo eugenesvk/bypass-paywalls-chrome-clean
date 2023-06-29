@@ -587,7 +587,6 @@
     "*://*.statista.com/*",
     "*://*.stcatharinesstandard.ca/*",
     "*://*.stocknews.com/*",
-    "*://*.stratfor.com/*",
     "*://*.studocu.com/*",
     "*://*.stylist.co.uk/*",
     "*://*.sudinfo.be/*",
@@ -760,5 +759,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.2.4"
+  "version": "3.2.2.5"
 }

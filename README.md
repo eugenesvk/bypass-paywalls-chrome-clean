@@ -81,7 +81,6 @@ _* free articles only._
 [Inkl](https://www.inkl.com) -
 [Newsweek](https://www.newsweek.com) -
 [Reuters](https://www.reuters.com) -
-[Stratfor](https://stratfor.com) -
 [The New York Times](https://www.nytimes.com) -
 [The Washington Post](https://www.washingtonpost.com) -
 [Time Magazine](https://time.com)
