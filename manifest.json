@@ -293,6 +293,7 @@
     "*://*.hindustantimes.com/*",
     "*://*.hindutamil.in/*",
     "*://*.historyextra.com/*",
+    "*://*.hln.be/*",
     "*://*.hollywoodreporter.com/*",
     "*://*.housebeautiful.com/*",
     "*://*.houstonchronicle.com/*",
@@ -757,5 +758,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.2.5"
+  "version": "3.2.2.6"
 }

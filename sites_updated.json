@@ -35,6 +35,14 @@
     "useragent": "facebookbot",
     "upd_version": "3.0.8.3"
   },
+  "Het Laatste Nieuws (link to archive.is)": {
+    "domain": "hln.be",
+    "allow_cookies": 1,
+    "add_ext_link": "div#remaining-paid-content|div.article__body",
+    "add_ext_link_type": "archive.is",
+    "block_regex": "temptation\\.hln\\.be\\/temptation\\.js",
+    "upd_version": "3.2.2.6"
+  },
   "Hindu Tamil Thisai": {
     "domain": "hindutamil.in",
     "allow_cookies": 1,
