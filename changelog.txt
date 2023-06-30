@@ -7,6 +7,7 @@ Add Groupe ESH Medias (ch)
 Add Zeit.de (link to archive.is)
 Remove LePoint.fr (fix obsolete)
 Remove Stratfor (fix obsolete)
+Remove The Times Literary Supplement (fix obsolete)
 Remove Time Magazine (no paywall)
 Fix Beobachter.ch & Handelszeitung.ch
 Fix Foreign Policy (Insider)
@@ -153,7 +154,7 @@ Remove Iltalehti.fi (fix obsolete)
 Fix ilManifesto.it (timing)
 Fix iPolitics.ca (refresh)
 Fix Sciences et Avenir.fr (css)
-Fix Times Literary Supplement (cookies)
+Fix The Times Literary Supplement (cookies)
 
 * v3.0.9.0 (2023-03-12)
 Add Medienhaus Aachen
@@ -826,7 +827,7 @@ Fix Australia News Corp (video-still)
 Fix La Tercera (js)
 Fix MIT Technology Review (TinyPass)
 Fix TheTimes.co.uk (epaper)
-Fix Times Literary Supplement (set referer Google)
+Fix The Times Literary Supplement (set referer Google)
 Fix WaPo
 
 * v2.5.4.0 (2022-01-30)
@@ -1903,7 +1904,7 @@ Add LeParisien.fr
 Add London Review of Books
 Add NK News
 Add Philadelphia Inquirer
-Add Times Literary Supplement
+Add The Times Literary Supplement
 Fix Boston Globe (fix for blocking scripts while site restrictions)
 Fix Economist (new option to block external scripts)
 Fix ET Prime restrictions (now with regular expressions)

@@ -42,8 +42,8 @@ Add-on was removed by Mozilla from add-on store (amo).\
 Current installations (by custom collection in Firefox Beta/Nightly or Firefox-clone) will stay active, but with no more updates.
 
 There is still an elaborate workaround for regular Firefox (or Beta/Clone) though:
-* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0/) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release/)); first you have to remove your current Firefox app.\
-Specifically for the add-on you can also use Firefox Beta or a Firefox clone like [Fennec F-Droid](https://f-droid.org/packages/org.mozilla.fennec_fdroid) where you can [set a custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly) (for amo-listed add-ons); again first install an old version of [Firefox Beta v68.7](https://www.apkmirror.com/apk/mozilla/firefox-beta/firefox-beta-68-7-release/) or [Fennec F-droid  v68.11.0](https://www.apkmirror.com/apk/mozilla/fennec-f-droid/fennec-f-droid-68-11-0-release)
+* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release)); first you have to remove your current Firefox app.\
+Specifically for the add-on you can also use Firefox Beta or a Firefox clone like [Fennec F-Droid](https://f-droid.org/packages/org.mozilla.fennec_fdroid) where you can [set a custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly) (for amo-listed add-ons); again first install an old version of [Firefox Beta v68.7](https://www.apkmirror.com/apk/mozilla/firefox-beta/firefox-beta-68-7-release) or [Fennec F-droid  v68.11.0](https://www.apkmirror.com/apk/mozilla/fennec-f-droid/fennec-f-droid-68-11-0-release)
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
 * add-on will stay active & automatically updates to the latest version
@@ -427,7 +427,6 @@ Grouped in options:\
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
 [The Times (link to archive.is)](https://www.thetimes.co.uk) -
-[The Times Literary Supplement](https://www.the-tls.co.uk) -
 [UnHerd](https://unherd.com)
 
 Grouped in options:\
@@ -578,7 +577,7 @@ Grouped in options:\
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
 [Westfälische Rundschau](https://www.wr.de)\
-*[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken/)* sites (opt-in to custom sites)\
+*[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken)* sites (opt-in to custom sites)\
 *Landwirtschaftsverlag* sites like\
 [Profi.de](https://www.profi.de) -
 [Top Agrar.at](https://www.topagrar.at) -
@@ -751,7 +750,7 @@ Grouped in options:\
 [Las Provincias](https://www.lasprovincias.es) -
 [Sur](https://www.diariosur.es)
 
-*[Sport Life Ibérica](https://www.sportlifeiberica.es/)* sites (opt-in to custom sites)
+*[Sport Life Ibérica](https://www.sportlifeiberica.es)* sites (opt-in to custom sites)
 
 ##### Sweden
 [Aftonbladet](https://www.aftonbladet.se) -

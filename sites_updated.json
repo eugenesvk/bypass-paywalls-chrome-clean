@@ -98,11 +98,5 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "The Times Literary Supplement": {
-    "domain": "the-tls.co.uk",
-    "remove_cookies": 1,
-    "referer": "google",
-    "upd_version": "3.0.9.7"
   }
 }

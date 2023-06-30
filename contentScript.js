@@ -2837,11 +2837,6 @@ else if (matchDomain('tes.com')) {
   removeDOMElement(banner);
 }
 
-else if (matchDomain('the-tls.co.uk')) {
-  let paywall = document.querySelector('.tls-subscriptions-banner__closed-skin');
-  removeDOMElement(paywall);
-}
-
 else if (matchDomain('theneweuropean.co.uk')) {
   let paywall = document.querySelector('div[data-show-fade-on-noaccess]');
   if (paywall) {
