@@ -6,6 +6,7 @@ Post-release
 Add Groupe ESH Medias (ch)
 Add Hln.be (link to archive.is)
 Add Zeit.de (link to archive.is)
+Remove AerzteBlatt.de (fix obsolete)
 Remove LePoint.fr (fix obsolete)
 Remove Stratfor (fix obsolete)
 Remove The Times Literary Supplement (fix obsolete)

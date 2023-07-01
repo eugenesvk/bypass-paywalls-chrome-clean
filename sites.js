@@ -426,10 +426,6 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "Deutsches Ärzteblatt": {
-    domain: "aerzteblatt.de",
-    allow_cookies: 1
-  },
   "Diario Financiero": {
     domain: "df.cl",
     allow_cookies: 1,

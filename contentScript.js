@@ -517,20 +517,7 @@ else {
 
 } else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net', 'topagrar.com', 'wochenblatt.com'])) {//germany/austria/switzerland - ch
 
-if (matchDomain('aerzteblatt.de')) {
-  let paywall = document.querySelector('div#restrictedAccessLogin');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let restricted = document.querySelector('div.restricted');
-    if (restricted)
-      restricted.classList.remove('restricted');
-    let unsharp = document.querySelector('div.unsharp');
-    if (unsharp)
-      unsharp.classList.remove('unsharp');
-  }
-}
-
-else if (matchDomain('aerztezeitung.de')) {
+if (matchDomain('aerztezeitung.de')) {
   let paywall = document.querySelector('div.AZLoginModule');
   if (paywall) {
     removeDOMElement(paywall);
