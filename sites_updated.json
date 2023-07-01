@@ -62,6 +62,13 @@
     "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]",
     "upd_version": "3.2.1.1"
   },
+  "Puck.news": {
+    "domain": "puck.news",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.paywall|div.entry-content",
+    "cs_code": "[{\"cond\":\"body.paywall-active\", \"rm_class\":\"paywall-active\"},{\"cond\":\"article[style]\", \"rm_attrib\":\"style\"}]",
+    "upd_version": "3.2.2.7"
+  },
   "Quora (regwall)": {
     "domain": "quora.com",
     "allow_cookies": 1,

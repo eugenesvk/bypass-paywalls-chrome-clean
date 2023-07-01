@@ -528,6 +528,7 @@
     "*://*.project-syndicate.org/*",
     "*://*.prospectmagazine.co.uk/*",
     "*://*.public.fr/*",
+    "*://*.puck.news/*",
     "*://*.pzc.nl/*",
     "*://*.quillette.com/*",
     "*://*.quora.com/*",
@@ -757,5 +758,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.2.6"
+  "version": "3.2.2.7"
 }

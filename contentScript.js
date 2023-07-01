@@ -4135,6 +4135,23 @@ else if (matchDomain('project-syndicate.org')) {
   }
 }
 
+else if (matchDomain('puck.news')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.entry-content');
+    let overlay = document.querySelector('body.paywall-active');
+    if (overlay)
+      overlay.classList.remove('paywall-active');
+    let article_style = document.querySelector('article[style]');
+    if (article_style)
+      article_style.removeAttribute('style');
+  }
+}
+
 else if (matchDomain('quillette.com')) {
   let url = window.location.href;
   let paywall = document.querySelector('aside.gh-post-upgrade-cta');

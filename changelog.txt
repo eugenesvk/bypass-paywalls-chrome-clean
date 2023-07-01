@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Groupe ESH Medias (ch)
 Add Hln.be (link to archive.is)
+Add Puck.news
 Add Zeit.de (link to archive.is)
 Remove AerzteBlatt.de (fix obsolete)
 Remove LePoint.fr (fix obsolete)
