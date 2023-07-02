@@ -27,6 +27,11 @@
     "cs_code": "[{\"cond\":\"div.fp-paywall\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.fp-content\", \"rm_attrib\":\"class\"}]}]",
     "domain": "bizwest.com"
   },
+  "Bostonmagazine.com": {
+    "allow_cookies": 1,
+    "domain": "bostonmagazine.com",
+    "useragent": "googlebot"
+  },
   "Brainly.com": {
     "domain": "brainly.com"
   },
@@ -344,6 +349,11 @@
     "allow_cookies": 1,
     "domain": "oz-online.de",
     "ld_json": "div.paywall|div.pointer-events-none"
+  },
+  "Phillymag.com": {
+    "allow_cookies": 1,
+    "domain": "phillymag.com",
+    "useragent": "googlebot"
   },
   "Physicsworld.com": {
     "domain": "physicsworld.com"

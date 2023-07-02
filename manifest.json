@@ -421,6 +421,7 @@
     "*://*.lrb.co.uk/*",
     "*://*.lunion.fr/*",
     "*://*.lvz.de/*",
+    "*://*.macrobusiness.com.au/*",
     "*://*.mainichi.jp/*",
     "*://*.mallorcazeitung.es/*",
     "*://*.marca.com/*",
@@ -758,5 +759,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.2.7"
+  "version": "3.2.2.8"
 }

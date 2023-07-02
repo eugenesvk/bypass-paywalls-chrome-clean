@@ -25,10 +25,13 @@ You can add/pin the add-on icon to the toolbar with the toolbar extensions menu 
 Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
+PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addons.mozilla.org) the add-on is still signed and checked for security by Mozilla ('minor' delays can in reality be a few days or up to a week though):
+> Please be aware of a recent change to AMO’s review process: All extension submissions with a significantly large number of users are now subject to human review by the add-ons review team before approval. This may, occasionally, result in minor delays publishing new versions of your extension on AMO. We’ve made this change to provide Firefox users with even greater security assurances for some of AMO’s most popular extensions.
+
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder.
 
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or click `clear cookies` (BPC-icon) to ask for permission for current site).\
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or click *clear cookies* (BPC-icon) to ask for permission for current site).\
 You can also install the custom add-on version (with host permissions for all sites).
 
 ### Update
@@ -38,7 +41,7 @@ You can also check for update of site rules at startup (opt-in); only available 
 For new sites you also have to opt-in to custom sites/request permissions for new domains (or wait for new release).
 
 ### Android
-Add-on was removed by Mozilla from add-on store (amo).\
+Add-on was removed by Mozilla from [add-on store (AMO)](https://addons.mozilla.org).\
 Current installations (by custom collection in Firefox Beta/Nightly or Firefox-clone) will stay active, but with no more updates.
 
 There is still an elaborate workaround for regular Firefox (or Beta/Clone) though:
@@ -398,7 +401,7 @@ Grouped in options:\
 
 [Bloomberg Adria](https://www.bloombergadria.com) -
 [EUobserver](https://euobserver.com) -
-[Follow the Money - ftm.eu](https://www.ftm.eu) -
+[Follow the Money (ftm.eu)](https://www.ftm.eu)
 
 ##### United Kingdom/Ireland
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
@@ -636,7 +639,7 @@ Grouped in options:\
 [Il Telegrafo Livorno](https://www.iltelegrafolivorno.it) -
 [La Nazione](https://www.lanazione.it)
 
-*[Gruppo SAE.it](https://www.grupposae.it/i-quotidiani)** sites like\
+*[Gruppo SAE.it](https://www.grupposae.it/i-quotidiani)** sites like (opt-in to custom sites for unlisted)\
 [Il Tirreno](https://www.iltirreno.it)* -
 [La Nuova Sardegna](https://www.lanuovasardegna.it)*
 
@@ -776,6 +779,7 @@ Grouped in options:\
 
 [Eureka Report](https://www.eurekareport.com.au) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
+[MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [Quillette (link to archive.is)](https://quillette.com) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
@@ -910,7 +914,7 @@ _* free articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
-Click on the BPC-icon and then 'clear cookies'-button in the popup (for unsupported sites grant permission for domain).  
+Click on the BPC-icon and then *clear cookies*-button in the popup (for unsupported sites grant permission for domain).  
 If removing the cookies works you can also add the site as a custom site.
 
 ### New site requests
@@ -927,7 +931,7 @@ Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass
 ### Add custom site
 Add your own custom site (also for testing).  
 Check 'Options'-link in popup-menu and go to custom sites.
-\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or `clear cookies` (BPC-icon) to ask for permission for current site).
+\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request permissions for the custom sites you added yourself (or *clear cookies* (BPC-icon) to ask for permission for current site).
 
 By default sites' cookies/local storage are blocked/removed (for example to bypass article limit when metered paywall).
 

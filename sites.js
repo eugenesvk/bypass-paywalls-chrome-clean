@@ -1307,6 +1307,11 @@ var defaultSites = {
     domain: "latimes.com",
     block_regex: /\.californiatimes\.com\/meteringjs/
   },
+  "MacroBusiness.com.au": {
+    domain: "macrobusiness.com.au",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Madavor Media (opt-in to custom sites)": {
     domain: "###_usa_madavor",
     group: [],

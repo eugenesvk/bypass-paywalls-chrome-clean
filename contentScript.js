@@ -296,7 +296,32 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.
 
 else if (window.location.hostname.match(/\.(com|net)\.au$/)) {//australia
 
-if (matchDomain('thesaturdaypaper.com.au')) {
+if (matchDomain('macrobusiness.com.au')) {
+  let paywall = pageContains('div > p', 'The full text of this article is available');
+  if (paywall[0] && dompurify_loaded) {
+    let fade = document.querySelector('div.bg-gradient-to-t');
+    removeDOMElement(paywall[0].parentNode, fade);
+    let json_script = document.querySelector('script#__NUXT_DATA__');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.text);
+        let json_text = json.filter(x => typeof x === 'string' && x.match(/(<|\\u003C)p>/))[0];
+        let parser = new DOMParser();
+        let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+        let content_new = doc.querySelector('div')
+          let article = document.querySelector('div.content');
+        if (article) {
+          article.innerHTML = '';
+          article.appendChild(content_new);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+
+else if (matchDomain('thesaturdaypaper.com.au')) {
   let hide_end = document.querySelector('div.hide-end');
   if (hide_end) {
     refreshCurrentTab();
