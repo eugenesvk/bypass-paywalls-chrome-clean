@@ -1566,6 +1566,12 @@ var defaultSites = {
     remove_cookies_select_drop: ["counter"],
     block_regex: /\.nrc\.nl\/paywall-api\/api\/zephr/
   },
+  "NWT Media.se (opt-in to custom sites)": {
+    domain: "###_se_nwt_media",
+    group: [],
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "NyTeknik": {
     domain: "nyteknik.se",
     allow_cookies: 1,
@@ -1937,10 +1943,7 @@ var defaultSites = {
     block_regex: /\.theartnewspaper\.com\/_next\/static\/chunks\/pages\/access-allowed-.+\.js/
   },
   "The Athletic": {
-    domain: "###_usa_theathletic",
-    group: [
-      "theathletic.com"
-    ],
+    domain: "theathletic.com",
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },

@@ -763,6 +763,9 @@ Grouped in options:\
 [Dagens Nyheter (link to archive.is)](https://www.dn.se) -
 [NyTeknik](https://www.nyteknik.se)
 
+Grouped in options:\
+*[NWT Media](https://www.nwtmedia.se)* sites (opt-in to custom sites)
+
 ##### Switzerland
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -

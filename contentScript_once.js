@@ -92,6 +92,9 @@ window.setTimeout(function () {
         group = '###_nl_mediahuis_noord';
       else if (document.querySelector('link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
        group = '###_nl_vmnmedia';
+    } else if (hostname.endsWith('.se')) {
+      if (document.querySelector('footer > div > div > a[href="https://www.nwtmedia.se/"]'))
+        group = '###_se_nwt_media';
     } else if (hostname.endsWith('.co.uk')) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';

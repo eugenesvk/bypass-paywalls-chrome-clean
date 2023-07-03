@@ -435,7 +435,7 @@ ext_api.storage.local.get({
   });
 
   // Enable new sites by default (opt-in)
-  updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain));
+  updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain) && updatedSites[x].domain !== '###_usa_theathletic');
   for (let site_updated_new of updatedSites_new)
     defaultSites[site_updated_new] = updatedSites[site_updated_new];
   if (ext_version > ext_version_old || updatedSites_new.length > 0) {
@@ -463,6 +463,9 @@ ext_api.storage.local.get({
       ext_version_old: ext_version
     });
   }
+
+  if (defaultSites['The Athletic'] && !enabledSites.includes('theathletic.com')) 
+    ext_api.runtime.openOptionsPage();
 
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
