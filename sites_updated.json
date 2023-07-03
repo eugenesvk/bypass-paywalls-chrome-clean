@@ -75,6 +75,14 @@
     "useragent": "googlebot",
     "upd_version": "3.1.9.6"
   },
+  "Stuttgarter Zeitung": {
+    "domain": "stuttgarter-zeitung.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io",
+    "useragent": "googlebot",
+    "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
+    "new_site": 1
+  },
   "TechTarget Group": {
     "domain": "###_usa_techtarget",
     "allow_cookies": 1,

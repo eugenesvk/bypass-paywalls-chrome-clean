@@ -991,6 +991,11 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
+else if (matchDomain('stuttgarter-zeitung.de')) {
+  let banner = document.querySelector('div.mod-paywall');
+  removeDOMElement(banner);
+}
+
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div#paywall');

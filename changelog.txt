@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add NWT Media.se (opt-in to custom sites)
+Add Stuttgarter-zeitung.de
 
 * v3.2.3.0 (2023-07-02)
 Add Groupe ESH Medias (ch)
