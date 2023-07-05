@@ -177,6 +177,7 @@
     "*://*.dailywire.com/*",
     "*://*.dallasnews.com/*",
     "*://*.defector.com/*",
+    "*://*.delish.com/*",
     "*://*.democratandchronicle.com/*",
     "*://*.demorgen.be/*",
     "*://*.denverpost.com/*",
@@ -214,6 +215,7 @@
     "*://*.elespectador.com/*",
     "*://*.elle.com/*",
     "*://*.elle.fr/*",
+    "*://*.elledecor.com/*",
     "*://*.elmercurio.com/*",
     "*://*.elmundo.es/*",
     "*://*.elnortedecastilla.es/*",
@@ -284,6 +286,7 @@
     "*://*.haarlemsdagblad.nl/*",
     "*://*.handelszeitung.ch/*",
     "*://*.harpers.org/*",
+    "*://*.harpersbazaar.com/*",
     "*://*.haz.de/*",
     "*://*.hbr.org/*",
     "*://*.hbrchina.org/*",
@@ -494,6 +497,7 @@
     "*://*.ocregister.com/*",
     "*://*.oklahoman.com/*",
     "*://*.omaha.com/*",
+    "*://*.oprahdaily.com/*",
     "*://*.oregonlive.com/*",
     "*://*.orlandosentinel.com/*",
     "*://*.ostsee-zeitung.de/*",
@@ -760,5 +764,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.3.1"
+  "version": "3.2.3.2"
 }

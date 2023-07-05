@@ -984,12 +984,16 @@ var defaultSites = {
       "bicycling.com",
       "cosmopolitan.com",
       "countryliving.com",
+      "delish.com",
       "elle.com",
+      "elledecor.com",
       "esquire.com",
       "goodhousekeeping.com",
+      "harpersbazaar.com",
       "hollywoodreporter.com",
       "housebeautiful.com",
       "menshealth.com",
+      "oprahdaily.com",
       "popularmechanics.com",
       "prevention.com",
       "roadandtrack.com",
@@ -998,7 +1002,7 @@ var defaultSites = {
       "womenshealthmag.com"
     ],
     allow_cookies: 1,
-    block_regex: /\.ensighten\.com\/.+\/Bootstrap\.js/
+    block_regex: /(\.com\/_assets\/jam\/journey-data\.js|\.ensighten\.com\/.+\/Bootstrap\.js)/
   },
   "Het Laatste Nieuws (link to archive.is)": {
     domain: "hln.be",

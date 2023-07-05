@@ -3220,7 +3220,6 @@ else if (matchDomain('bloomberg.com')) {
   if (noscroll)
     noscroll.removeAttribute('data-paywall-overlay-status');
   hideDOMElement(...paywall, leaderboard);
-  sessionStorage.clear();
   let url = window.location.href;
   if (url.match(/s\/\d{4}-/)) {
     let page_ad = document.querySelectorAll('div.page-ad, div[data-ad-placeholder], div[class*="-ad-top"]');
@@ -3248,12 +3247,12 @@ else if (matchDomain('bloomberg.com')) {
       blur.classList.remove('blur');
       blur.removeAttribute('style');
     }
+    let main_column = document.querySelector('div[class*="main-column__"]');
+    if (main_column)
+      main_column.style = '-webkit-mask-image: none !important; mask-image: none !important;';
     let shimmering_content = document.querySelectorAll('div.shimmering-text');
-    let body_transparent = document.querySelector('div[class*="nearly-transparent-text-blur"]');
-    if ((shimmering_content.length || body_transparent) && dompurify_loaded) {
+    if (shimmering_content.length && dompurify_loaded) {
       removeDOMElement(...shimmering_content);
-      if (body_transparent)
-        removeClassesByPrefix(body_transparent, 'nearly-transparent-text-blur');
       let json_script = document.querySelector('script[data-component-props="ArticleBody"], script[data-component-props="FeatureBody"]');
       if (json_script) {
         let json = JSON.parse(json_script.text);
@@ -3294,6 +3293,7 @@ else if (matchDomain('bloomberg.com')) {
       }
     }
   }
+  window.sessionStorage.clear();
   if (window.location.pathname.startsWith('/live/')) {
     setInterval(function () {
       window.localStorage.clear();

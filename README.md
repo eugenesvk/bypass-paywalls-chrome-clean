@@ -231,11 +231,15 @@ Grouped in options:\
 [Bicycling](https://www.bicycling.com) -
 [Cosmopolitan](https://www.cosmopolitan.com) -
 [Country Living](https://www.countryliving.com) -
+[Delish](https://www.delish.com) -
+[Elle Decor](https://www.elledecor.com) -
 [Elle USA](https://www.elle.com) -
 [Esquire](https://www.esquire.com) -
 [Good Housekeeping](https://www.goodhousekeeping.com) -
+[Harper's Bazaar](https://www.harpersbazaar.com) -
 [House Beautiful](https://www.housebeautiful.com) -
 [Men's Health](https://www.menshealth.com) -
+[Oprah Daily](https://www.oprahdaily.com) -
 [Popular Mechanics](https://www.popularmechanics.com) -
 [Prevention](https://www.prevention.com) -
 [Road & Track](https://www.roadandtrack.com) -
