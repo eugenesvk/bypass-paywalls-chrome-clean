@@ -35,7 +35,6 @@ var restrictions = {
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
-  'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
@@ -449,7 +448,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_be_groupe_ipm', '###_ch_esh_medias', '###_it_gruppo_sae', '###_nl_eu_ftm'];
+          let new_groups = ['###_ch_esh_medias', '###_it_gruppo_sae', '###_nl_eu_ftm'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
             (enabledSites.includes('tinypass.com') && !enabledSites.includes('piano.io'));
           if (open_options)
@@ -464,7 +463,7 @@ ext_api.storage.local.get({
     });
   }
 
-  if (defaultSites['The Athletic'] && !enabledSites.includes('theathletic.com')) 
+  if (sites['The Athletic'] && !enabledSites.includes('theathletic.com'))
     ext_api.runtime.openOptionsPage();
 
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
@@ -530,7 +529,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
       var sites_updated = storageChange.newValue ? storageChange.newValue : {};
       updatedSites = sites_updated;
       updatedSites_domains_new = Object.values(updatedSites).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
-      updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain));
+      updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain) && updatedSites[x].domain !== '###_usa_theathletic');
       if (updatedSites_new.length > 0) {
         if (enabledSites.includes('#options_enable_new_sites')) {
           for (let site_updated_new of updatedSites_new)

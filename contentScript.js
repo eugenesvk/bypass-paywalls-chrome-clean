@@ -795,17 +795,6 @@ else if (matchDomain('freiepresse.de')) {
   }
 }
 
-else if (matchDomain('golem.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.paywall-wrapper');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('p#gpar1');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('jacobin.de')) {
   let paywall = pageContains('h3.m-auto', 'Dieser Artikel ist nur mit Abo zugänglich.');
   if (paywall.length) {
@@ -994,17 +983,6 @@ else if (matchDomain('spiegel.de')) {
 else if (matchDomain('stuttgarter-zeitung.de')) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);
-}
-
-else if (matchDomain('tagesspiegel.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('div.article--paid');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
 }
 
 else if (matchDomain('zeit.de')) {

@@ -6,6 +6,8 @@ Post-release
 Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily
 Add NWT Media.se (opt-in to custom sites)
 Add Stuttgarter-zeitung.de
+Remove Golem.de (fix obsolete)
+Remove Tagesspiegel.de (fix obsolete)
 Fix Hearst Communications magazines (js)
 
 * v3.2.3.0 (2023-07-02)

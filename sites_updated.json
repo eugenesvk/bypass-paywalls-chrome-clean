@@ -53,6 +53,29 @@
     "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
     "new_site": 1
   },
+  "Hearst Communications magazines": {
+    "domain": "###_usa_hearst_comm_mag",
+    "group": [
+      "bicycling.com",
+      "cosmopolitan.com",
+      "countryliving.com",
+      "elle.com",
+      "esquire.com",
+      "goodhousekeeping.com",
+      "hollywoodreporter.com",
+      "housebeautiful.com",
+      "menshealth.com",
+      "popularmechanics.com",
+      "prevention.com",
+      "roadandtrack.com",
+      "runnersworld.com",
+      "townandcountrymag.com",
+      "womenshealthmag.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
+    "upd_version": "3.2.3.2"
+  },
   "Het Laatste Nieuws (link to archive.is)": {
     "domain": "hln.be",
     "allow_cookies": 1,
