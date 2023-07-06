@@ -1624,17 +1624,6 @@ else if (matchDomain('lecourrierdesstrateges.fr')) {
   }, 500);
 }
 
-else if (matchDomain('lefigaro.fr')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#fig-premium-paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('article');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-  }
-}
-
 else if (matchDomain('legrandcontinent.eu')) {
   let paywall = document.querySelector('body.paywall, body.pw, body.softwall');
   if (paywall)

@@ -471,7 +471,6 @@ Grouped in options:\
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
 [Le Courrier des Stratèges](https://lecourrierdesstrateges.fr) -
-[Le Figaro (link to archive.is)](https://www.lefigaro.fr) -
 [Le Grand Continent](https://legrandcontinent.eu) -
 [Le Journal du Dimanche](https://lejdd.fr) -
 [Le Journal du Net](https://www.journaldunet.com) -

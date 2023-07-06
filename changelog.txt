@@ -7,6 +7,7 @@ Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily
 Add NWT Media.se (opt-in to custom sites)
 Add Stuttgarter-zeitung.de
 Remove Golem.de (fix obsolete)
+Remove LeFigaro.fr (fix obsolete)
 Remove Tagesspiegel.de (fix obsolete)
 Fix Hearst Communications magazines (js)
 
@@ -146,7 +147,7 @@ Fix ZeroHedge (timing)
 
 * v3.1.1.0 (2023-03-26)
 Add Flair.nl, Libelle.nl & Margriet.nl
-Add Le Figaro (link to archive.is)
+Add LeFigaro.fr (link to archive.is)
 Add Revue Conflits
 Add Sport Life Iberica (opt-in to custom sites)
 Remove Cellesche Zeitung (fix obsolete)
