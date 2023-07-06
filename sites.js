@@ -774,10 +774,10 @@ var defaultSites = {
       "centrepresseaveyron.fr",
       "ladepeche.fr",
       "lindependant.fr",
-      "midi-olympique.fr",
       "midilibre.fr",
       "nrpyrenees.fr",
-      "petitbleu.fr"
+      "petitbleu.fr",
+      "rugbyrama.fr"
     ],
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/

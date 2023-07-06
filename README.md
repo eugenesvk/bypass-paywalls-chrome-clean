@@ -513,7 +513,7 @@ Grouped in options:\
 [La Nouvelle République des Pyrénées](https://www.nrpyrenees.fr) -
 [Le Petit Bleu d'Agen](https://www.petitbleu.fr) -
 [Midi Libre](https://www.midilibre.fr) -
-[Midi Olympique](https://www.midi-olympique.fr)\
+[Midi Olympique](https://www.rugbyrama.fr/midi-olympique)\
 *Groupe Nice-Matin* sites like\
 [Monaco-Matin](https://www.monacomatin.mc) -
 [Nice-Matin](https://www.nicematin.com) -

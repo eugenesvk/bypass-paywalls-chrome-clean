@@ -10,6 +10,7 @@ Remove Golem.de (fix obsolete)
 Remove LeFigaro.fr (fix obsolete)
 Remove Tagesspiegel.de (fix obsolete)
 Fix Hearst Communications magazines (js)
+Fix Midi-Olympique.fr (new domain Rugbyrama.fr)
 
 * v3.2.3.0 (2023-07-02)
 Add Groupe ESH Medias (ch)

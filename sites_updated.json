@@ -122,6 +122,12 @@
     "useragent": "googlebot",
     "upd_version": "3.1.9.6"
   },
+  "Rugbyrama.fr": {
+    "domain": "rugbyrama.fr",
+    "allow_cookies": 1,
+    "ld_json": "div.paywall|div.article-full__body-content",
+    "upd_version": "3.2.3.3"
+  },
   "Stuttgarter Zeitung": {
     "domain": "stuttgarter-zeitung.de",
     "allow_cookies": 1,

@@ -440,7 +440,6 @@
     "*://*.mexiconewsdaily.com/*",
     "*://*.miamiherald.com/*",
     "*://*.mid-day.com/*",
-    "*://*.midi-olympique.fr/*",
     "*://*.midilibre.fr/*",
     "*://*.mlive.com/*",
     "*://*.modernhealthcare.com/*",
@@ -551,6 +550,7 @@
     "*://*.rockandice.com/*",
     "*://*.rollingstone.com/*",
     "*://*.rugbypass.com/*",
+    "*://*.rugbyrama.fr/*",
     "*://*.rundschau-online.de/*",
     "*://*.runnersworld.com/*",
     "*://*.sacbee.com/*",
@@ -761,5 +761,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.3.2"
+  "version": "3.2.3.3"
 }
