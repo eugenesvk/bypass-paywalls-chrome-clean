@@ -266,6 +266,27 @@ if (ext_api.runtime) {
   })
 }
 
+window.addEventListener('message', function (event) {
+  if (event.data) {
+    if (event.data.type === 'from_page') {
+      if (matchDomain('businesspost.ie')) {
+        let data = event.data.data;
+        let article = document.querySelector('div.article-body-section');
+        if (data && article && dompurify_loaded && !msg_once) {
+          msg_once = true;
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(data) + '</div>', 'text/html');
+          let article_new = doc.querySelector('div');
+          if (article_new) {
+            article.innerHTML = '';
+            article.appendChild(article_new);
+          }
+        }
+      }
+    }
+  }
+}, false);
+
 var div_bpc_done = document.querySelector('div#bpc_done');
 if (!div_bpc_done) {
 
@@ -2611,14 +2632,47 @@ if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
 }
 
 else if (matchDomain('businesspost.ie')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#bp_paywall_content');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('div.article-body-section');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+  function bpie_main() {
+    if ($) {
+      let article_id_dom = document.querySelector('article[id]');
+      let article_id;
+      if (article_id_dom)
+        article_id = article_id_dom.id;
+      if (article_id) {
+        let bp_ajaxurl = 'https://www.businesspost.ie/wp-admin/admin-ajax.php';
+        let data_ajax = {
+          action: 'fetch_article_content',
+          type: 'POST',
+          data: {
+            id: article_id
+          },
+          dataType: 'json',
+          contentType: 'application/json'
+        };
+        $.ajax({
+          type: 'POST',
+          url: bp_ajaxurl,
+          data: data_ajax,
+          success: function (data) {
+            window.postMessage({type: 'from_page', data: data});
+          }
+        });
+      }
+    } else
+      window.location.reload(true);
   }
+  csDoneOnce = true;
+  window.setTimeout(function () {
+    let paywall = document.querySelector('div#bp_paywall_content');
+    let article_id_dom = document.querySelector('article[id]');
+    let article_id;
+    if (article_id_dom)
+      article_id = article_id_dom.id;
+    if (paywall || article_id) {
+      removeDOMElement(paywall);
+      insert_script(bpie_main);
+    }
+  }, 500);
 }
 
 else if (matchDomain('citywire.com')) {

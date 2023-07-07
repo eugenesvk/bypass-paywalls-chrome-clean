@@ -277,10 +277,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Business Post.ie (link to archive.is)": {
+  "Business Post.ie": {
     domain: "businesspost.ie",
     allow_cookies: 1,
-    block_regex: /\.piano\.io\//
+    block_regex: /\.piano\.io\//,
+    cs_dompurify: 1
   },
   "California Business Journals": {
     domain: "###_usa_cbj",
