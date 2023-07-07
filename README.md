@@ -762,7 +762,6 @@ Grouped in options:\
 [Aftonbladet](https://www.aftonbladet.se) -
 [Dagens ETC](https://www.etc.se) -
 [Dagens Industri](https://www.di.se) -
-[Dagens Nyheter (link to archive.is)](https://www.dn.se) -
 [NyTeknik](https://www.nyteknik.se)
 
 Grouped in options:\
@@ -786,7 +785,6 @@ Grouped in options:\
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
-[Quillette (link to archive.is)](https://quillette.com) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
 [The Spectator Australia](https://www.spectator.com.au) -
 [The West Australian (+ regional/opt-in to custom sites)](https://thewest.com.au)

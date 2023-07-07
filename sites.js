@@ -397,10 +397,6 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
-  "Dagens Nyheter (link to archive.is)": {
-    domain: "dn.se",
-    allow_cookies: 1
-  },
   "De Limburger (link to archive.is)": {
     domain: "limburger.nl",
     allow_cookies: 1
@@ -1725,10 +1721,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.kinja-static\.com\/assets\/.+\/regwalled-content.+\.js/
   },
-  "Quillette (link to archive.is)": {
-    domain: "quillette.com",
-    allow_cookies: 1
-  },
   "Quora": {
     domain: "quora.com",
     allow_cookies: 1,
@@ -2597,4 +2589,4 @@ init_custom_flex_domains();
 
 // sites with no fix (background)
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'ilsecoloxix.it', 'lastampa.it', 'limesonline.com', 'repubblica.it'];
-var nofix_sites = ['aamulehti.fi', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'asiatimes.com', 'badische-zeitung.de', 'bild.de', 'bloomberglaw.com', 'bloombergtax.com', 'borsen.dk', 'business-standard.com', 'businessinsider.de', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'compactmag.com', 'courrierinternational.com', 'deutsche-wirtschafts-nachrichten.de', 'diepresse.com', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'finance.si', 'ftchinese.com', 'gamestar.de', 'golem.de', 'handelsblatt.com', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'investors.com', 'iltalehti.fi', 'jacobinmag.com', 'jeuneafrique.com', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'lefigaro.fr', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lemonde.fr', 'lepoint.fr', 'lequipe.fr', 'letemps.ch', 'liberation.fr', 'lopinion.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'moneycontrol.com', 'morningstar.com', 'nationaljournal.com', 'manager-magazin.de', 'mz.de', 'nature.com', 'nbr.co.nz', 'nn.de', 'nwzonline.de', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'ruhrnachrichten.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'stuttgarter-nachrichten.de', 'substack.com', 'sueddeutsche.de', 'suedkurier.de', 'swp.de', 'tagesspiegel.de', 'techcrunch.com', 'the-ken.com', 'the-tls.co.uk', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'volksstimme.de', 'welt.de', 'weltkunst.de', 'weser-kurier.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(it_gedi_nofix_domains);
+var nofix_sites = ['aamulehti.fi', 'africaintelligence.com', 'africaintelligence.fr', 'aftenposten.no', 'asiatimes.com', 'badische-zeitung.de', 'bild.de', 'bloomberglaw.com', 'bloombergtax.com', 'borsen.dk', 'business-standard.com', 'businessinsider.de', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'compactmag.com', 'courrierinternational.com', 'deutsche-wirtschafts-nachrichten.de', 'diepresse.com', 'dn.se', 'elordenmundial.com', 'epw.in', 'expresso.pt', 'finance.si', 'ftchinese.com', 'gamestar.de', 'golem.de', 'handelsblatt.com', 'heise.de', 'hs.fi', 'ilsole24ore.com', 'investors.com', 'iltalehti.fi', 'jacobinmag.com', 'jeuneafrique.com', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.com', 'lefigaro.fr', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lemonde.fr', 'lepoint.fr', 'lequipe.fr', 'letemps.ch', 'liberation.fr', 'lopinion.fr', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'moneycontrol.com', 'morningstar.com', 'nationaljournal.com', 'manager-magazin.de', 'mz.de', 'nature.com', 'nbr.co.nz', 'nn.de', 'nwzonline.de', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'quillette.com', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'ruhrnachrichten.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'stuttgarter-nachrichten.de', 'substack.com', 'sueddeutsche.de', 'suedkurier.de', 'swp.de', 'tagesspiegel.de', 'techcrunch.com', 'the-ken.com', 'the-tls.co.uk', 'theinformation.com', 'themorningcontext.com', 'theparisreview.org', 'thewirechina.com', 'volksstimme.de', 'welt.de', 'weltkunst.de', 'weser-kurier.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(it_gedi_nofix_domains);
