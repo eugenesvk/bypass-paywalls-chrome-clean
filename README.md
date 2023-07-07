@@ -646,7 +646,6 @@ Grouped in options:\
 [La Nuova Sardegna](https://www.lanuovasardegna.it)*
 
 ##### Netherlands/Flanders
-[De Limburger](https://www.limburger.nl) -
 [De Tijd](https://www.tijd.be) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
@@ -759,7 +758,6 @@ Grouped in options:\
 *[Sport Life Ibérica](https://www.sportlifeiberica.es)* sites (opt-in to custom sites)
 
 ##### Sweden
-[Aftonbladet](https://www.aftonbladet.se) -
 [Dagens ETC](https://www.etc.se) -
 [Dagens Industri](https://www.di.se) -
 [NyTeknik](https://www.nyteknik.se)

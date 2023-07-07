@@ -6,9 +6,11 @@ Post-release
 Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily
 Add NWT Media.se (opt-in to custom sites)
 Add Stuttgarter-zeitung.de
+Remove Aftonbladet.se (fix obsolete)
 Remove Dn.se (fix obsolete)
 Remove Golem.de (fix obsolete)
 Remove LeFigaro.fr (fix obsolete)
+Remove Limburger.nl (fix obsolete)
 Remove Quillette (fix obsolete)
 Remove Tagesspiegel.de (fix obsolete)
 Fix BusinessPost.ie (json)
