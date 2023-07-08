@@ -2138,7 +2138,7 @@ else if (matchDomain(be_roularta_domains)) {
   hideDOMElement(...ads);
 }
 
-else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
+else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('link[href*=".ndcmediagroep.nl/"]')) {
   if (true) {
     let paywall = document.querySelector('div.signupPlus, div.pw-wrapper');
     if (paywall && dompurify_loaded) {
@@ -2147,9 +2147,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl'])) {
       let html = document.documentElement.outerHTML;
       if (html.includes('window.__NUXT__=')) {
         let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
-        let url_nuxt = json.includes(',url:"') ? json.split(',url:"')[1].split('",')[0].replace(/\\u002F/g, '/') : '';
-        if (url_nuxt.startsWith('/auteur/'))
-          url_nuxt = json.includes(',routePath:"') ? json.split(',routePath:"')[1].split('",')[0].replace(/\\u002F/g, '/') : '';
+        let url_nuxt = json.match(/[(,]null,/) ? json.split(/[(,]null,/)[1].match(/-\d+\.html/)[0] : false;
         if (url_nuxt && !url_nuxt.includes(window.location.pathname.match(/-\d+\.html$/)))
           refreshCurrentTab();
         else if (json.includes(',body:')) {

@@ -1359,26 +1359,15 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Mediahuis Noord": {
+  "Mediahuis Noord (+ regional; opt-in to custom sites)": {
     domain: "###_nl_mediahuis_noord",
     group: [
       "dvhn.nl",
       "lc.nl"
     ],
     allow_cookies: 1,
-    block_regex: /\.evolok\.net\//,
-    exception: [{
-        domain: "dvhn.nl",
-        allow_cookies: 1,
-        block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/,
-        cs_dompurify: 1
-      }, {
-        domain: "lc.nl",
-        allow_cookies: 1,
-        block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/,
-        cs_dompurify: 1
-      }
-    ]
+    block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/,
+    cs_dompurify: 1
   },
   "MediaNews Group": {
     domain: "###_usa_mng",

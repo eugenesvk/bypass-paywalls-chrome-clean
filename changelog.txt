@@ -3,7 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
-Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily
+Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily (Hearst)
 Add NWT Media.se (opt-in to custom sites)
 Add Stuttgarter-zeitung.de
 Remove Aftonbladet.se (fix obsolete)
@@ -15,6 +15,7 @@ Remove Quillette (fix obsolete)
 Remove Tagesspiegel.de (fix obsolete)
 Fix BusinessPost.ie (json)
 Fix Hearst Communications magazines (js)
+Fix Mediahuis Noord (regional)
 Fix Midi-Olympique.fr (new domain Rugbyrama.fr)
 
 * v3.2.3.0 (2023-07-02)

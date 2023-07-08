@@ -88,7 +88,7 @@ window.setTimeout(function () {
       else if (matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it']))
         group = '###_it_gruppo_sae';
     } else if (hostname.endsWith('.nl')) {
-      if (document.querySelector('script[src*=".ndcmediagroep.nl/"]'))
+      if (document.querySelector('link[href*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
       else if (document.querySelector('link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
        group = '###_nl_vmnmedia';
