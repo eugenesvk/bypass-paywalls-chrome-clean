@@ -70,6 +70,12 @@
     "domain": "christianitytoday.com",
     "useragent": "googlebot"
   },
+  "Clareecho.ie": {
+    "allow_cookies": 1,
+    "block_regex": "\\.clareecho\\.ie\\/.+\\/flip-pay\\.js",
+    "cs_code": "[{\"cond\":\"div.td-post-content\", \"rm_class\": \"td-post-content\"}]",
+    "domain": "clareecho.ie"
+  },
   "Columbian.com": {
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",
@@ -251,6 +257,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
     "domain": "libraryjournal.com"
+  },
+  "Limerickpost.ie": {
+    "allow_cookies": 1,
+    "block_regex": "\\.limerickpost\\.ie\\/.+\\/flip-pay\\.js",
+    "cs_code": "[{\"cond\":\"div.td-post-content\", \"rm_class\": \"td-post-content\"}]",
+    "domain": "limerickpost.ie"
   },
   "Lindipendente.online": {
     "allow_cookies": 1,

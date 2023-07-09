@@ -174,5 +174,12 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "UOL.com.br": {
+    "domain": "uol.com.br",
+    "block_regex": "(paywall\\.folha\\.uol\\.com\\.br\\/|\\.crusoe\\.com\\.br\\/assets\\/js\\/swg-wallcontent-crusoe\\.js|\\.(tinypass|matheranalytics)\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "remove_cookies_select_drop": ["crs_subscriber"],
+    "useragent": "googlebot",
+    "upd_version": "3.2.3.6"
   }
 }

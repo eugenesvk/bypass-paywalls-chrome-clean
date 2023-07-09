@@ -184,10 +184,7 @@ if (bg2csData.add_ext_link) {
 
 // check for opt-in confirmation (from background.js)
 if (bg2csData.optin_setcookie) {
-  if (matchDomain(['crusoe.uol.com.br'])) {
-    if (!cookieExists('crs_subscriber'))
-      setCookie('crs_subscriber', 1, 'crusoe.uol.com.br', '/', 14);
-  }
+  false;
 }
 
 // custom/updated sites: try to unhide text on amp-page
@@ -2904,9 +2901,8 @@ else if (matchDomain(ar_grupo_clarin_domains)) {
 }
 
 else if (matchDomain('crusoe.uol.com.br')) {
-  let paywall = document.querySelector('#wallcontent');
   let ads = document.querySelectorAll('#gpt-leaderboard, .ads_desktop, .catchment-box');
-  removeDOMElement(paywall, ...ads);
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain(pe_grupo_elcomercio_domains)) {

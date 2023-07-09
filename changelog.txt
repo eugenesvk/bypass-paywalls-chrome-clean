@@ -14,6 +14,7 @@ Remove Limburger.nl (fix obsolete)
 Remove Quillette (fix obsolete)
 Remove Tagesspiegel.de (fix obsolete)
 Fix BusinessPost.ie (json)
+Fix Crusoe.uol.com.br (js)
 Fix Hearst Communications magazines (js)
 Fix Mediahuis Noord (regional)
 Fix Midi-Olympique.fr (new domain Rugbyrama.fr)
@@ -21,7 +22,7 @@ Fix Midi-Olympique.fr (new domain Rugbyrama.fr)
 * v3.2.3.0 (2023-07-02)
 Add Groupe ESH Medias (ch)
 Add Hln.be (link to archive.is)
-Add MacroBusiness.com.au (ld_nuxt)
+Add MacroBusiness.com.au (ld_json_nuxt)
 Add Puck.news
 Add Zeit.de (link to archive.is)
 Remove AerzteBlatt.de (fix obsolete)
@@ -576,7 +577,7 @@ Update block general paywall script (limit Evolok WordPress)
 Update custom sites (load text from Google webcache)
 
 * v2.7.8.0 (2022-07-31)
-Add Crusoe (Brazil)
+Add Crusoe.uol.com.br
 Add Golem.de
 Add Groupe Capitales Medias (+ regional/opt-in to custom sites)
 Grouping GenomeWeb sites

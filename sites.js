@@ -2258,9 +2258,8 @@ var defaultSites = {
   },
   "UOL.com.br": {
     domain: "uol.com.br",
-    allow_cookies: 1,
-    block_js_inline: /crusoe\.uol\.com\.br\/(diario|edicoes)\/.+/,
-    block_regex: /(paywall\.folha\.uol\.com\.br\/|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    block_regex: /(paywall\.folha\.uol\.com\.br\/|\.crusoe\.com\.br\/assets\/js\/swg-wallcontent-crusoe\.js|\.(tinypass|matheranalytics)\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    remove_cookies_select_drop: ["crs_subscriber"],
     useragent: "googlebot"
   },
   "USA Today": {

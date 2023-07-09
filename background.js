@@ -780,7 +780,7 @@ if (typeof browser !== 'object') {
     if (matchUrlDomain(dompurify_sites, url))
       lib_file = 'lib/purify.min.js';
     var bg2csData = {};
-    if (optin_setcookie && matchUrlDomain(['crusoe.uol.com.br'], url))
+    if (optin_setcookie && matchUrlDomain(['###'], url))
       bg2csData.optin_setcookie = 1;
     if (matchUrlDomain(amp_unhide, url))
       bg2csData.amp_unhide = 1;

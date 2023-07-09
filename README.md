@@ -19,7 +19,7 @@ Weekly updates are released for fixes and new sites.
 
 ### Installation
 You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
-Download the xpi-file (from latest release), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
+Download the [xpi-file](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi) (from latest release), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
 Or go to Tools > Add-ons (about:addons) > Extensions > Settings/Cogwheel - Install Add-on from File\
 You can add/pin the add-on icon to the toolbar with the toolbar extensions menu (jigsaw puzzle shaped icon).\
 Custom xpi-file has host permissions for all sites.\
