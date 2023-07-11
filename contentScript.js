@@ -2372,7 +2372,7 @@ else if (matchDomain('telegraaf.nl')) {
       window.location.reload(true);
     }, 500);
   }
-  let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="SubscriptionCard"]');
+  let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="PaywallHandler"]');
   let article_body = document.querySelector('section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
   if (paywall && article_body) {
     let div_main = document.createElement('div');

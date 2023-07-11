@@ -6,6 +6,7 @@ Post-release
 Add Sabado.pt
 Fix Australia News Corp (amp-fix)
 Fix Cmjornal.pt & Record.pt (amp)
+Fix Telegraaf.nl (columns)
 
 * v3.2.4.0 (2023-07-09)
 Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily (Hearst)

@@ -171,8 +171,8 @@
   "Telegraaf": {
     "domain": "telegraaf.nl",
     "allow_cookies": 1,
-    "ld_json": "data-hydrate[data-name='SubscriptionCard']|data-hydrate[data-name='InjectArticleDetailBlocks']",
-    "upd_version": "3.2.0.4"
+    "ld_json": "data-hydrate[data-name='PaywallHandler']|div.DetailBodyBlocks",
+    "upd_version": "3.2.4.3"
   },
   "The Athletic": {
     "domain": "###_usa_theathletic",
