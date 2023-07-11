@@ -2891,6 +2891,9 @@ if (matchDomain('abril.com.br')) {
     let paywall = document.querySelector('.piano-modal');
     let amp_ads = document.querySelectorAll('amp-ad, amp-embed');
     removeDOMElement(paywall, ...amp_ads);
+  } else {
+    let ads = document.querySelectorAll('div.ads, div[class^="ads-"]');
+    hideDOMElement(...ads);
   }
 }
 

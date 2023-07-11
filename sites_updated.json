@@ -35,6 +35,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.ftm\\.eu\\/js\\/routing\\?"
   },
+  "Grupo Abril": {
+    "domain": "abril.com.br",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.abril\\.com\\.br\\/.+\\/(\\w+\\-+){3,}",
+    "upd_version": "3.2.4.3"
+  },
   "Gruppo GEDI.it (italian.tech, lescienze.it & espresso.repubblica.it)": {
     "domain": "###_it_gedi",
     "group": [

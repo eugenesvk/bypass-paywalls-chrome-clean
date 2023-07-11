@@ -817,7 +817,7 @@ var defaultSites = {
   "Grupo Abril": {
     domain: "abril.com.br",
     allow_cookies: 1,
-    block_regex: /(\.abril\.com\.br\/.+\/abril-paywall\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_js_inline: /\.abril\.com\.br\/.+\/(\w+\-+){3,}/
   },
   "Grupo Clarín": {
     domain: "###_ar_grupo_clarin",
