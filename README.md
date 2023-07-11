@@ -707,7 +707,8 @@ Grouped in options:\
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
 [Observador](https://observador.pt) -
-[Record](https://www.record.pt)
+[Record](https://www.record.pt) -
+[Sábado](https://www.sabado.pt)
 
 ##### Russia
 [Wonderzine](https://www.wonderzine.com)

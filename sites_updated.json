@@ -5,6 +5,12 @@
     "useragent": "bingbot",
     "upd_version": "3.1.3.3"
   },
+  "Correio da Manhã": {
+    "domain": "cmjornal.pt",
+    "allow_cookies": 1,
+    "amp_unhide": 1,
+    "upd_version": "3.2.4.2"
+  },
   "Delish": {
     "domain": "delish.com",
     "allow_cookies": 1,
@@ -122,11 +128,26 @@
     "useragent": "googlebot",
     "upd_version": "3.1.9.6"
   },
+  "Record.pt": {
+    "domain": "record.pt",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_unhide": 1,
+    "upd_version": "3.2.4.2"
+  },
   "Rugbyrama.fr": {
     "domain": "rugbyrama.fr",
     "allow_cookies": 1,
     "ld_json": "div.paywall|div.article-full__body-content",
     "upd_version": "3.2.3.3"
+  },
+  "Sábado (not video)": {
+    "domain": "sabado.pt",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": ".bloco_bloqueio",
+    "amp_unhide": 1,
+    "new_site": 1
   },
   "Stuttgarter Zeitung": {
     "domain": "stuttgarter-zeitung.de",

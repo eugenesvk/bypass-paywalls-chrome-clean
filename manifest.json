@@ -549,6 +549,7 @@
     "*://*.rugbyrama.fr/*",
     "*://*.rundschau-online.de/*",
     "*://*.runnersworld.com/*",
+    "*://*.sabado.pt/*",
     "*://*.sacbee.com/*",
     "*://*.saltwire.com/*",
     "*://*.sandiegouniontribune.com/*",
@@ -758,5 +759,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.4.1"
+  "version": "3.2.4.2"
 }

@@ -1214,8 +1214,8 @@ if (matchDomain(['ara.cat', 'arabalears.cat'])) {
   }
 }
 
-else if (matchDomain(['cmjornal.pt', 'record.pt'])) {
-  let paywall = document.querySelector('.bloqueio_exclusivos, .container_assinatura');
+else if (matchDomain(['cmjornal.pt', 'record.pt', 'sabado.pt'])) {
+  let paywall = document.querySelector('.bloqueio_exclusivos, .container_assinatura, .bloco_bloqueio');
   let amphtml = document.querySelector('link[rel="amphtml"]');
   let url = window.location.href;
   if (!url.includes('/amp/')) {
@@ -1224,7 +1224,7 @@ else if (matchDomain(['cmjornal.pt', 'record.pt'])) {
       window.location.href = amphtml.href;
     }
   } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed, amp-consent, .detalheAds, .exclusivos_bar');
+    amp_unhide_access_hide('="subscriber"', '="NOT subscriber"', 'amp-ad, amp-embed, amp-consent, .detalheAds, .exclusivos_bar');
     let amp_links = document.querySelectorAll('a[href^="https://www-cmjornal-pt.cdn.ampproject.org/c/s/"]');
     for (let amp_link of amp_links)
       amp_link.href = amp_link.href.replace('www-cmjornal-pt.cdn.ampproject.org/c/s/', '');
@@ -1629,11 +1629,10 @@ else if (matchDomain('legrandcontinent.eu')) {
 }
 
 else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
-  let poool_banner = document.querySelector('#poool-container');
-  let poool_widget = document.querySelector('#poool-widget-content');
+  let poool_banners = document.querySelectorAll('#poool-container, #poool-widget-content, #poool-widget');
   let forbidden = document.querySelector('.forbidden');
   let ads = document.querySelectorAll('div[class^="lmn-"]');
-  removeDOMElement(poool_banner, poool_widget, forbidden, ...ads);
+  removeDOMElement(...poool_banners, forbidden, ...ads);
   let bottom_hide = document.querySelector('.cnt[data-poool-mode="hide"]');
   if (bottom_hide) {
     bottom_hide.removeAttribute('data-poool-mode');

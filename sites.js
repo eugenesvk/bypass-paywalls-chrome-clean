@@ -1721,7 +1721,7 @@ var defaultSites = {
   "Record.pt": {
     domain: "record.pt",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Reuters": {
     domain: "reuters.com",
@@ -1763,6 +1763,11 @@ var defaultSites = {
     domain: "spglobal.com",
     allow_cookies: 1,
     block_regex: /\.blueconic\.net\//
+  },
+  "Sábado (not video)": {
+    domain: "sabado.pt",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "Saltwire Network": {
     domain: "saltwire.com",
