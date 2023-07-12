@@ -2884,7 +2884,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'latercera.com', 'lasegunda.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'lasegunda.com', 'latercera.com', 'valor.globo.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -2976,6 +2976,14 @@ else if (matchDomain('eltiempo.com')) {
   let modulos = document.querySelector('div.modulos');
   if (modulos)
     modulos.classList.remove('modulos');
+}
+
+else if (matchDomain('eltribuno.com')) {
+  let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
+  for (let elem of lazy_images) {
+    elem.src = elem.getAttribute('data-src');
+    elem.classList.remove('lazyload');
+  }
 }
 
 else if (matchDomain('em.com.br')) {

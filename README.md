@@ -870,6 +870,7 @@ Grouped in options:\
 ##### Argentina
 [Ámbito](https://www.ambito.com) -
 [El Cronista](https://www.cronista.com) -
+[El Tribuno](https://www.eltribuno.com) -
 [La Nación](https://www.lanacion.com.ar)*
 
 Grouped in options:\

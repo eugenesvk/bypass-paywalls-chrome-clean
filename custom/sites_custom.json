@@ -352,6 +352,11 @@
     "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall",
     "domain": "odt.co.nz"
   },
+  "On-online.de": {
+    "allow_cookies": 1,
+    "domain": "on-online.de",
+    "ld_json": "div.paywall|div.pointer-events-none"
+  },
   "Onet.pl": {
     "allow_cookies": 1,
     "domain": "onet.pl",

@@ -520,6 +520,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "El Tribuno": {
+    domain: "eltribuno.com",
+    allow_cookies: 1,
+    block_regex: /\.eltribuno\.com\/scripts\/Bellhop\/dist\/bellhop\.min\.js/
+  },
   "Elle.fr": {
     domain: "elle.fr",
     allow_cookies: 1,
@@ -2560,7 +2565,8 @@ var custom_flex_not = {
   "###_uk_axate.io": ["thinkofx.net"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
-  "###_usa_townnews": ["bloxdigital.com", "townnews.com"]
+  "###_usa_townnews": ["bloxdigital.com", "townnews.com"],
+  "thewest.com.au": ["perthnow.com.au"]
 }
 var custom_flex_domains;
 var custom_flex_not_domains;

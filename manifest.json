@@ -222,6 +222,7 @@
     "*://*.elpais.com/*",
     "*://*.elperiodico.com/*",
     "*://*.eltiempo.com/*",
+    "*://*.eltribuno.com/*",
     "*://*.em.com.br/*",
     "*://*.enotes.com/*",
     "*://*.epe.es/*",
@@ -759,5 +760,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.4.3"
+  "version": "3.2.4.4"
 }
