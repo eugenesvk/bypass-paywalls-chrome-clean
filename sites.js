@@ -2297,12 +2297,6 @@ var defaultSites = {
       "wiesbadener-kurier.de"
     ]
   },
-  "VmnMedia.nl Group (opt-in to custom sites)": {
-    domain: "###_nl_vmnmedia",
-    group: [],
-    allow_cookies: 1,
-    ld_google_webcache: "section[type='paywall']|main"
-  },
   "Vogue Business": {
     allow_cookies: 1,
     domain: "voguebusiness.com",

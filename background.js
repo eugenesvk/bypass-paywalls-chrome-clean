@@ -1340,7 +1340,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_be_mediahuis', '###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews', '###_substack_custom'];
+      let nofix_groups = ['###_be_mediahuis', '###_ch_tamedia', '###_de_rp_aachen_medien', '###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (enabledSites.includes(group)) {
           let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];

@@ -91,7 +91,7 @@ window.setTimeout(function () {
       if (document.querySelector('link[href*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
       else if (document.querySelector('link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
-       group = '###_nl_vmnmedia';
+       group = '###_nl_vmnmedia';// no fix
     } else if (hostname.endsWith('.se')) {
       if (document.querySelector('footer > div > div > a[href="https://www.nwtmedia.se/"]'))
         group = '###_se_nwt_media';

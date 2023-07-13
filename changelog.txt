@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add El Tribuno (ar)
 Add Sabado.pt
+Remove VmnMedia.nl Group (fix obsolete)
 Fix Australia News Corp (amp-fix)
 Fix Cmjornal.pt & Record.pt (amp)
 Fix Grupo Abril (js-inline)

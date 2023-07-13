@@ -473,12 +473,6 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "theday.com"
   },
-  "Thedispatch.com": {
-    "add_ext_link": "section.paywall-section|div.with_paywall",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "thedispatch.com"
-  },
   "Theepochtimes.com": {
     "allow_cookies": 1,
     "block_regex": "subs\\.theepochtimes\\.com\\/lib\\/api\\.bundle\\.js",
@@ -506,12 +500,6 @@
     "allow_cookies": 1,
     "domain": "theweek.com",
     "useragent": "googlebot"
-  },
-  "Thewirechina.com": {
-    "add_ext_link": "div.leaky_paywall_message_wrap|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "thewirechina.com"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,
