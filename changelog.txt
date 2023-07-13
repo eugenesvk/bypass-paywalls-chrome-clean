@@ -10,6 +10,7 @@ Fix Australia News Corp (amp-fix)
 Fix Cmjornal.pt & Record.pt (amp)
 Fix Grupo Abril (js-inline)
 Fix Telegraaf.nl (columns)
+Fix WSJ (mobile)
 
 * v3.2.4.0 (2023-07-09)
 Add Delish, Elle Decor, Harper's Bazaar & Oprah Daily (Hearst)

@@ -4929,7 +4929,7 @@ else if (matchDomain('wsj.com')) {
     if (close_button)
       close_button.click();
   }
-  let wsj_ads = document.querySelectorAll('div[class*="wsj-ad"], div[class*="BodyAdWrapper"]');
+  let wsj_ads = document.querySelectorAll('div.wsj-ad, div.adWrapper');
   removeDOMElement(...wsj_ads);
   if (url.includes('/amp/')) {
     let masthead_link = document.querySelector('div.masthead > a[href*="/articles/"]');
