@@ -462,7 +462,6 @@
     "*://*.newstatesman.com/*",
     "*://*.newsweek.com/*",
     "*://*.newyorker.com/*",
-    "*://*.niagarafallsreview.ca/*",
     "*://*.nicematin.com/*",
     "*://*.nikkei.com/*",
     "*://*.nj.com/*",
@@ -587,7 +586,6 @@
     "*://*.startribune.com/*",
     "*://*.statesman.com/*",
     "*://*.statista.com/*",
-    "*://*.stcatharinesstandard.ca/*",
     "*://*.stocknews.com/*",
     "*://*.studocu.com/*",
     "*://*.stuttgarter-zeitung.de/*",
@@ -637,13 +635,10 @@
     "*://*.thenation.com/*",
     "*://*.thenewatlantis.com/*",
     "*://*.theneweuropean.co.uk/*",
-    "*://*.thepeterboroughexaminer.com/*",
     "*://*.thepointmag.com/*",
     "*://*.theprovince.com/*",
     "*://*.thequint.com/*",
-    "*://*.therecord.com/*",
     "*://*.thesaturdaypaper.com.au/*",
-    "*://*.thespec.com/*",
     "*://*.thespectator.com/*",
     "*://*.thestar.com.my/*",
     "*://*.thestar.com/*",
@@ -695,7 +690,6 @@
     "*://*.watoday.com.au/*",
     "*://*.waz.de/*",
     "*://*.weeklytimesnow.com.au/*",
-    "*://*.wellandtribune.ca/*",
     "*://*.westernadvocate.com.au/*",
     "*://*.westfalen-blatt.de/*",
     "*://*.wiesbadener-kurier.de/*",
@@ -760,5 +754,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.4.4"
+  "version": "3.2.4.5"
 }

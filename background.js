@@ -463,9 +463,6 @@ ext_api.storage.local.get({
     });
   }
 
-  if (sites['The Athletic'] && !enabledSites.includes('theathletic.com'))
-    ext_api.runtime.openOptionsPage();
-
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);

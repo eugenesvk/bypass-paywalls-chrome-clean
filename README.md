@@ -380,6 +380,7 @@ Grouped in options:\
 [The Globe and Mail](https://www.theglobeandmail.com) -
 [The Hill Times](https://www.hilltimes.com) -
 [The Lawyer's Daily](https://www.thelawyersdaily.ca) -
+[The Toronto Star](https://www.thestar.com) -
 [Winnipeg Free Press](https://www.winnipegfreepress.com)
 
 Grouped in options:\
@@ -391,15 +392,7 @@ Grouped in options:\
 [National Post](https://www.nationalpost.com) -
 [The Province](https://theprovince.com) -
 [Toronto Sun](https://torontosun.com) -
-[Vancouver Sun](https://vancouversun.com)\
-*TorStar* sites like\
-[The Toronto Star](https://www.thestar.com) and regional sites 
-[Niagara Falls Review](https://www.niagarafallsreview.ca) -
-[Peterborough Examiner](https://www.thepeterboroughexaminer.com) -
-[St. Catharines Standard](https://www.stcatharinesstandard.ca) -
-[The Hamilton Spectator](https://www.thespec.com) -
-[Waterloo Region Record](https://www.therecord.com) -
-[Welland Tribune](https://www.wellandtribune.ca)
+[Vancouver Sun](https://vancouversun.com)
 
 #### Europe
 

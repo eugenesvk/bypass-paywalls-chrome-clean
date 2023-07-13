@@ -10,7 +10,6 @@ var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
 var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
 var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
-var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
@@ -3359,18 +3358,6 @@ else if (matchDomain(ca_gcm_domains)) {
   removeDOMElement(counter);
 }
 
-else if (matchDomain(ca_torstar_domains)) {
-  window.setTimeout(function () {
-    let meter_banner = document.querySelector('.c-article-meter-banner');
-    let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot, .ad-slot');
-    removeDOMElement(meter_banner, ...ads);
-    let end_of_article = document.querySelector('#end-of-article');
-    hideDOMElement(end_of_article);
-    let rightrail = document.querySelector('.c-article-body__rightrail');
-    hideDOMElement(rightrail);
-  }, 500);
-}
-
 else if (matchDomain('cen.acs.org')) {
   let meteredBar = document.querySelector('.meteredBar');
   removeDOMElement(meteredBar);
@@ -4727,6 +4714,18 @@ else if (matchDomain('thequint.com')) {
     }
     waitDOMAttribute('div#story-body-wrapper', 'DIV', 'class', thequint_unhide, true);
   }
+}
+
+else if (matchDomain('thestar.com')) {
+  window.setTimeout(function () {
+    let meter_banner = document.querySelector('.c-article-meter-banner');
+    let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot, .ad-slot');
+    removeDOMElement(meter_banner, ...ads);
+    let end_of_article = document.querySelector('#end-of-article');
+    hideDOMElement(end_of_article);
+    let rightrail = document.querySelector('.c-article-body__rightrail');
+    hideDOMElement(rightrail);
+  }, 500);
 }
 
 else if (matchDomain('thewrap.com')) {
