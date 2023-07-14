@@ -179,9 +179,9 @@ Grouped in options:\
 [The Athletic](https://theathletic.com)
 
 ##### Magazines/Blogs
-[Medium](https://www.medium.com)\
 Grouped in options:\
-*Medium custom domains* like (opt-in to custom sites for unlisted)\
+*Medium (custom) domains* like (opt-in to custom sites for unlisted)\
+[Medium](https://www.medium.com) -
 [Better Programming](https://betterprogramming.pub) -
 [Towards Data Science](https://towardsdatascience.com)
 

@@ -34,7 +34,7 @@ window.setTimeout(function () {
   let group;
   if (hostname) {
     if (document.querySelector('script[src*=".medium.com/"]') || matchDomain(['plainenglish.io']))
-      group = '###_medium_custom';
+      group = 'medium.com';
     else if (document.querySelector('script[src*="/leaky-paywall"], link[href*="/leaky-paywall"]'))
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))

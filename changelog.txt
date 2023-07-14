@@ -10,6 +10,7 @@ Remove VmnMedia.nl Group (fix obsolete)
 Fix Australia News Corp (amp-fix)
 Fix Cmjornal.pt & Record.pt (amp)
 Fix Grupo Abril (js-inline)
+Fix (custom) Medium (link to Google webcache)
 Fix Telegraaf.nl (columns)
 Fix WSJ (mobile)
 

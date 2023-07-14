@@ -289,7 +289,8 @@ if (!div_bpc_done) {
 if (ext_api.runtime) {
   ext_api.runtime.onMessage.addListener(
     function (request, sender) {
-    if (request.msg === 'showExtSrc') {
+    if (request.msg === 'showExtSrc' && !msg_once) {
+      msg_once = true;
       replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
     }
   })
@@ -298,17 +299,16 @@ if (ext_api.runtime) {
 // Content workarounds/domain
 
 if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src*=".medium.com/"]')) {
-  let paywall = document.querySelector('div#paywall-background-color');
-  removeDOMElement(paywall);
-  if (paywall) {
-    refreshCurrentTab();
-    csDoneOnce = true;
-  }
+  let url = window.location.href;
   window.setTimeout(function () {
-    let meter = document.querySelector('[id*="highlight-meter-"]');
-    if (meter)
-      meter.hidden = true;
-  }, 500);
+    let paywall = pageContains('div > h2 > div, div > div > h2', /Read (the full story with|this story from)/);
+    if (paywall.length) {
+      removeDOMElement(paywall[0].parentNode.parentNode);
+      let article = document.querySelector('article');
+      if (article)
+        article.firstChild.before(googleWebcacheLink(url));
+    }
+  }, 1000);
 }
 
 else if (window.location.hostname.match(/\.(com|net)\.au$/)) {//australia
@@ -5286,11 +5286,11 @@ function archiveLink(url, text_fail = 'BPC > Try for full article text (only rep
   return externalLink(['archive.today', 'archive.is'], 'https://{domain}?run=1&url={url}', url, text_fail);
 }
 
-function googleWebcacheLink(url, text_fail = 'BPC > Full article text:\r\n') {
+function googleWebcacheLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
 }
 
-function ext_12ftLink(url, text_fail = 'BPC > Full article text:\r\n') {
+function ext_12ftLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
   return externalLink(['12ft.io'], 'https://{domain}/{url}', url, text_fail);
 }
 
