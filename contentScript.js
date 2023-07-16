@@ -2372,7 +2372,7 @@ else if (matchDomain('telegraaf.nl')) {
     }, 500);
   }
   let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="PaywallHandler"]');
-  let article_body = document.querySelector('section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
+  let article_body = document.querySelector('div.DetailBodyBlocks, section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
   if (paywall && article_body) {
     let div_main = document.createElement('div');
     div_main.style = 'margin: 20px 0px;';
@@ -3239,41 +3239,144 @@ else if (matchDomain('bloomberg.com')) {
     if (main_column)
       main_column.style = '-webkit-mask-image: none !important; mask-image: none !important;';
     let shimmering_content = document.querySelectorAll('div.shimmering-text');
-    if (shimmering_content.length && dompurify_loaded) {
-      removeDOMElement(...shimmering_content);
-      let json_script = document.querySelector('script[data-component-props="ArticleBody"], script[data-component-props="FeatureBody"]');
-      if (json_script) {
-        let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text;
-          if (json.body)
-            json_text = json.body;
-          else if (json.story && json.story.body)
-            json_text = json.story.body;
-          if (json_text) {
-            removeDOMElement(json_script);
-            let article = document.querySelector('div.body-copy-v2:not(.art_done)');
-            let article_class = 'body-copy-v2';
-            if (!article) {
-              article = document.querySelector('div.body-copy:not(.art_done)');
-              article_class = 'body-copy';
+    removeDOMElement(...shimmering_content);
+    let body_transparent = document.querySelector('main div[class*="nearly-transparent-text-blur"]');
+    let article_blur = document.querySelector('main div[class^="styles_articleBlur__"]');
+    if ((body_transparent || article_blur) && dompurify_loaded) {
+      if (body_transparent)
+        removeClassesByPrefix(body_transparent, 'nearly-transparent-text-blur');
+      if (article_blur)
+        article_blur.removeAttribute('class');
+      let articles = document.querySelectorAll('article[id], article[data-story-id]');
+      if (articles && articles.length < 2) {
+        let json_script = document.querySelector('script[data-component-props="ArticleBody"], script[data-component-props="FeatureBody"]');
+        let json_next_script = document.querySelector('script#__NEXT_DATA__');
+        if (json_next_script) {
+          let json = JSON.parse(json_next_script.text);
+          let json_pars = json.props.pageProps.story.body.content;
+          let article_par = document.querySelector('div > p[class^="Paragraph_text-"]');
+          let article;
+          if (article_par) {
+            let par_class = article_par.getAttribute('class');
+            article = article_par.parentNode;
+            function attach_hyperlink(item_text, item_href, elem) {
+              let sub_elem = document.createElement('a');
+              sub_elem.innerText = item_text;
+              sub_elem.href = item_href;
+              sub_elem.style = 'text-decoration: underline;';
+              if (!item_href.startsWith('https://www.bloomberg.com'))
+                sub_elem.target = '_blank';
+              elem.appendChild(sub_elem);
             }
-            if (!article) {
-              article = document.querySelector('div.body-content:not(.art_done)');
-              article_class = 'body-content';
+            function attach_list(content, elem) {
+              let ul = document.createElement('ul');
+              ul.setAttribute('style', 'list-style-type: disc; padding: 5px;');
+              for (let item of content) {
+                if (item.type === 'listItem') {
+                  let li = document.createElement('li');
+                  for (let list_item of item.content) {
+                    if (list_item.type === 'text') {
+                      if (list_item.value) {
+                        li.appendChild(document.createTextNode(list_item.value));
+                      }
+                    } else if (list_item.type === 'list') {
+                      if (list_item.content)
+                        false; //attach_list(list_item.content, li);
+                    } else if (!['entity'].includes(list_item.type))
+                      console.log(list_item);
+                  }
+                  ul.appendChild(li);
+                }
+              }
+              elem.appendChild(ul);
             }
-            if (article) {
-              article_class += ' art_done';
-              let parser = new DOMParser();
-              let doc = parser.parseFromString('<div class="' + article_class + '">' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe', 'script']}) + '</div>', 'text/html');
-              let article_new = doc.querySelector('div');
-              if (article_new) {
-                article.parentNode.replaceChild(article_new, article);
-                let teaser_body = document.querySelector('div.body-content[class*="teaser-content_"]');
-                removeDOMElement(teaser_body);
-                let thirdparty_embed = document.querySelector('div.thirdparty-embed__container[style*="height: 0;"]');
-                if (thirdparty_embed)
-                  thirdparty_embed.setAttribute('style', 'height: 550px !important;');
+            for (par of json_pars) {
+              let elem = document.createElement('p');
+              elem.setAttribute('class', par_class);
+              if (['heading', 'paragraph'].includes(par.type)) {
+                for (let item of par.content) {
+                  if (item.type === 'text' && item.value) {
+                    elem.appendChild(document.createTextNode(item.value));
+                  } else if (item.type === 'link' && item.data && item.data.href) {
+                    if (item.content && item.content[0] && item.content[0].value)
+                      attach_hyperlink(item.content[0].value, item.data.href, elem);
+                  } else if (item.type === 'entity') {
+                    if (item.content && item.content[0] && item.content[0].value) {
+                      if (['person', 'security'].includes(item.subType)) {
+                        elem.appendChild(document.createTextNode(item.content[0].value));
+                      } else if (item.subType === 'story') {
+                        if (item.data && item.data.link && item.data.link.destination && item.data.link.destination.web) {
+                          attach_hyperlink(item.content[0].value, item.data.link.destination.web, elem);
+                        }
+                      } else
+                        console.log(item);
+                    }
+                  } else
+                    console.log(item);
+                }
+              } else if (par.type === 'quote' && par.content) {
+                for (let item of par.content) {
+                  if (item.type === 'paragraph' && item.content && item.content[0] && item.content[0].value) {
+                    elem.appendChild(document.createTextNode(item.content[0].value + ' '));
+                  }
+                }
+                elem.setAttribute('style', 'font-style: italic;');
+              } else if (par.type === 'media' && par.subType === 'chart') {
+                if (par.data && par.data.chart) {
+                  let figure = document.createElement('figure');
+                  if (par.data.attachment && par.data.attachment.title)
+                    figure.appendChild(document.createTextNode(par.data.attachment.title));
+                  let img = document.createElement('img');
+                  img.src = par.data.chart.fallback;
+                  figure.appendChild(img);
+                  if (par.data.attachment && (par.data.attachment.source || par.data.attachment.footnote)) {
+                    let caption = document.createElement('figcaption');
+                    caption.innerText = par.data.attachment.source + '\r\n' + par.data.attachment.footnote;
+                    figure.appendChild(caption);
+                  }
+                  elem.appendChild(figure);
+                }
+              } else if (par.type === 'list' && par.content) {
+                attach_list(par.content, elem);
+              } else if (!['ad', 'inline-newsletter', 'inline-recirc', 'tabularData'].includes(par.type))
+                console.log(par);
+              if (elem.hasChildNodes)
+                article.appendChild(elem);
+            }
+          }
+        } else if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text;
+            if (json.body)
+              json_text = json.body;
+            else if (json.story && json.story.body)
+              json_text = json.story.body;
+            if (json_text) {
+              removeDOMElement(json_script);
+              let article = document.querySelector('div.body-copy-v2:not(.art_done)');
+              let article_class = 'body-copy-v2';
+              if (!article) {
+                article = document.querySelector('div.body-copy:not(.art_done)');
+                article_class = 'body-copy';
+              }
+              if (!article) {
+                article = document.querySelector('div.body-content:not(.art_done)');
+                article_class = 'body-content';
+              }
+              if (article) {
+                article_class += ' art_done';
+                let parser = new DOMParser();
+                let doc = parser.parseFromString('<div class="' + article_class + '">' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe', 'script']}) + '</div>', 'text/html');
+                let article_new = doc.querySelector('div');
+                if (article_new) {
+                  article.parentNode.replaceChild(article_new, article);
+                  let teaser_body = document.querySelector('div.body-content[class*="teaser-content_"]');
+                  removeDOMElement(teaser_body);
+                  let thirdparty_embed = document.querySelector('div.thirdparty-embed__container[style*="height: 0;"]');
+                  if (thirdparty_embed)
+                    thirdparty_embed.setAttribute('style', 'height: 550px !important;');
+                }
               }
             }
           }
