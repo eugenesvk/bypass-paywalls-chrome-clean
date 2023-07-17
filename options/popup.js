@@ -1,8 +1,10 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
+var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
 var manifestData = ext_api.runtime.getManifest();
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
-var custom_switch = ((manifestData.optional_permissions && manifestData.optional_permissions.length) || (manifestData.optional_host_permissions && manifestData.optional_host_permissions.length)) && !navigator_ua_mobile;
+var yandex_browser = navigator_ua_mobile && (url_loc === 'chrome') && navigator_ua.toLowerCase().includes('yabrowser');
+var custom_switch = ((manifestData.optional_permissions && manifestData.optional_permissions.length) || (manifestData.optional_host_permissions && manifestData.optional_host_permissions.length)) && !(navigator_ua_mobile && !yandex_browser);
 
 function popup_show_toggle(domain, enabled) {
   if (domain) {

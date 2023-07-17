@@ -1,5 +1,10 @@
 var ext_api = chrome || browser;
 var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
+var manifestData = ext_api.runtime.getManifest();
+var navigator_ua = navigator.userAgent;
+var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
+var yandex_browser = navigator_ua_mobile && (url_loc === 'chrome') && navigator_ua.toLowerCase().includes('yabrowser');
+var custom_switch = ((manifestData.optional_permissions && manifestData.optional_permissions.length) || (manifestData.optional_host_permissions && manifestData.optional_host_permissions.length)) && !(navigator_ua_mobile && !yandex_browser);
 
 var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
@@ -451,5 +456,7 @@ document.getElementById('import_gitlab').addEventListener('click', import_gitlab
 document.getElementById('add').addEventListener('click', add_options);
 document.getElementById('delete').addEventListener('click', delete_options);
 document.getElementById('edit').addEventListener('click', edit_options);
-document.getElementById('perm_request').addEventListener('click', request_permissions);
-document.getElementById('perm_remove').addEventListener('click', remove_permissions);
+if (custom_switch) {
+  document.getElementById('perm_request').addEventListener('click', request_permissions);
+  document.getElementById('perm_remove').addEventListener('click', remove_permissions);
+}
