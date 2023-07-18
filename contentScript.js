@@ -1000,7 +1000,7 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
-else if (matchDomain('stuttgarter-zeitung.de')) {
+else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de'])) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);
 }

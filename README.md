@@ -558,6 +558,8 @@ Grouped in options:\
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
+[Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
+[Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
 [Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 

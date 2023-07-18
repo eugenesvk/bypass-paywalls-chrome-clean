@@ -558,6 +558,7 @@
     "*://*.science.org/*",
     "*://*.sciencesetavenir.fr/*",
     "*://*.scientificamerican.com/*",
+    "*://*.schwarzwaelder-bote.de/*",
     "*://*.scmp.com/*",
     "*://*.scotsman.com/*",
     "*://*.sdbj.com/*",
@@ -588,6 +589,7 @@
     "*://*.statista.com/*",
     "*://*.stocknews.com/*",
     "*://*.studocu.com/*",
+    "*://*.stuttgarter-nachrichten.de/*",
     "*://*.stuttgarter-zeitung.de/*",
     "*://*.stylist.co.uk/*",
     "*://*.sudinfo.be/*",
@@ -754,5 +756,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.5.2"
+  "version": "3.2.5.3"
 }
