@@ -369,9 +369,9 @@ else {
   let au_comm_media_domains = ['bendigoadvertiser.com.au', 'bordermail.com.au', 'canberratimes.com.au', 'centralwesterndaily.com.au', 'dailyadvertiser.com.au', 'dailyliberal.com.au', 'examiner.com.au', 'illawarramercury.com.au', 'newcastleherald.com.au', 'northerndailyleader.com.au', 'standard.net.au', 'theadvocate.com.au', 'thecourier.com.au', 'westernadvocate.com.au'];
   let au_comm_media_link = document.querySelector('a[href^="https://australiancommunitymedia.zendesk.com"]');
   if (matchDomain(au_comm_media_domains) || au_comm_media_link) {
-    let mask = document.querySelector('div[style*="mask-image"]');
+    let mask = document.querySelector('div[class^="gradient-mask-"]');
     if (mask) {
-      mask.removeAttribute('style');
+      mask.removeAttribute('class');
       let div_hidden = document.querySelectorAll('div.hidden');
       for (let elem of div_hidden)
         elem.classList.remove('hidden');
