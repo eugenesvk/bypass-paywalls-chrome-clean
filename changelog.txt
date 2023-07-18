@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Medium (identify member-only)
+Fix Star Tribune (images/comments)
 Maintenance request host permission (disable for mobile)
 
 * v3.2.5.0 (2023-07-16)

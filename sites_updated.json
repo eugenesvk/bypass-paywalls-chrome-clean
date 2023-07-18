@@ -155,6 +155,11 @@
     "amp_unhide": 1,
     "new_site": 1
   },
+  "Star Tribune": {
+    "domain": "startribune.com",
+    "remove_cookies_select_drop": ["client_id"],
+    "upd_version": "3.2.5.2"
+  },
   "Stuttgarter Zeitung": {
     "domain": "stuttgarter-zeitung.de",
     "allow_cookies": 1,

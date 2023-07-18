@@ -4416,8 +4416,12 @@ else if (matchDomain('staradvertiser.com')) {
 }
 
 else if (matchDomain('startribune.com')) {
+  let modal = document.querySelector('body.ReactModal__Body--open');
+  if (modal)
+    modal.classList.remove('ReactModal__Body--open');
+  let banner = document.querySelector('body:not(.page-article) div.ReactModalPortal');
   let ads = document.querySelectorAll('div.ad-placeholder');
-  removeDOMElement(...ads);
+  removeDOMElement(banner, ...ads);
 }
 
 else if (matchDomain('stocknews.com')) {
