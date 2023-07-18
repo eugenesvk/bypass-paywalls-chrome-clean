@@ -300,14 +300,17 @@ if (ext_api.runtime) {
 
 if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src*=".medium.com/"]')) {
   let url = window.location.href;
+  let paywall = document.querySelector('section button[aria-label="Member-only story"]');
+  if (paywall) {
+    paywall.removeAttribute('aria-label');
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(googleWebcacheLink(url));
+  }
   window.setTimeout(function () {
-    let paywall = pageContains('div > h2 > div, div > div > h2', /Read (the full story with|this story from)/);
-    if (paywall.length) {
-      removeDOMElement(paywall[0].parentNode.parentNode);
-      let article = document.querySelector('article');
-      if (article)
-        article.firstChild.before(googleWebcacheLink(url));
-    }
+    let banner = pageContains('div > h2 > div, div > div > h2', /(Read (the full story with|this story from)|Get unlimited access to stories)/);
+    if (banner.length)
+      removeDOMElement(banner[0].parentNode.parentNode);
   }, 1000);
 }
 

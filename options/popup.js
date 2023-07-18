@@ -7,7 +7,7 @@ var yandex_browser = navigator_ua_mobile && (url_loc === 'chrome') && navigator_
 var custom_switch = ((manifestData.optional_permissions && manifestData.optional_permissions.length) || (manifestData.optional_host_permissions && manifestData.optional_host_permissions.length)) && !(navigator_ua_mobile && !yandex_browser);
 
 function popup_show_toggle(domain, enabled) {
-  if (domain) {
+  if (domain && !matchDomain(['webcache.googleusercontent.com'], domain)) {
     var site_switch_span = document.getElementById('site_switch_span');
     let labelEl = document.createElement('label');
     labelEl.setAttribute('class', 'switch');

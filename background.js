@@ -1131,7 +1131,7 @@ ext_api.tabs.onUpdated.addListener(function (tabId, info, tab) { updateBadge(tab
 ext_api.tabs.onActivated.addListener(function (activeInfo) { if (activeInfo.tabId) ext_api.tabs.get(activeInfo.tabId, updateBadge); });
 
 function updateBadge(activeTab) {
-  if (ext_api.runtime.lastError || !activeTab || (activeTab.url && activeTab.url.split('?')[0].includes('/archive.')))
+  if (ext_api.runtime.lastError || !activeTab || (activeTab.url && urlHost(activeTab.url).match(/^archive\.[a-z]{2}$/)))
     return;
   let badgeText = '';
   let color = 'red';
@@ -1150,6 +1150,8 @@ function updateBadge(activeTab) {
       badgeText = 'X';
       color = 'silver';
     }
+    if (matchUrlDomain('webcache.googleusercontent.com', currentUrl))
+      badgeText = '';
     if (ext_version_new)
       badgeText = '^' + badgeText;
     let isDefaultSite = matchUrlDomain(defaultSites_domains, currentUrl);
