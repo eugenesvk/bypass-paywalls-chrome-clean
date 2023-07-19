@@ -6,8 +6,9 @@ Post-release
 Add Schwarzwaelder-bote.de & Stuttgarter-nachrichten.de
 Fix Australian Community Media (css)
 Fix Medium (identify member-only)
+Fix Puck.news (cached articles only)
 Fix Star Tribune (images/comments)
-Maintenance request host permission (disable for mobile)
+Maintenance request host permission (disabled for mobile)
 
 * v3.2.5.0 (2023-07-16)
 Add El Tribuno (ar)

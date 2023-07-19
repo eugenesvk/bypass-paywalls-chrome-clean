@@ -308,7 +308,7 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.
       article.firstChild.before(googleWebcacheLink(url));
   }
   window.setTimeout(function () {
-    let banner = pageContains('div > h2 > div, div > div > h2', /(Read (the full story with|this story from)|Get unlimited access to stories)/);
+    let banner = pageContains('div > h2 > div, div > div > h2', /(Read (the full story with|this story from)|Get unlimited access to)/);
     if (banner.length)
       removeDOMElement(banner[0].parentNode.parentNode);
   }, 1000);
@@ -428,7 +428,7 @@ else {
         window.setTimeout(function () {
           let breach_screen = document.querySelector('div.paywall div[data-testid*="BreachScreen"], div[class*="StyledBreachWallContent"]');
           if (breach_screen) {
-            let scripts = document.querySelectorAll('script:not([src], [type])');
+            let scripts = document.querySelectorAll('script:not([src]):not([type])');
             let json_script;
             for (let script of scripts) {
               if (script.text.includes('window.PAGE_DATA =')) {
@@ -2381,7 +2381,7 @@ else if (matchDomain('telegraaf.nl')) {
     div_main.style = 'margin: 20px 0px;';
     let div_elem = document.createElement('div');
     let par_style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
-    let scripts = document.querySelectorAll('script:not([src], [type])');
+    let scripts = document.querySelectorAll('script:not([src]):not([type])');
     let apollo_script;
     for (let script of scripts) {
       if (script.text.includes('window.__APOLLO_STATE__=')) {
@@ -4249,9 +4249,9 @@ else if (matchDomain('project-syndicate.org')) {
 
 else if (matchDomain('puck.news')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
+  let paywall = document.querySelectorAll('div[class*="paywall"]');
+  if (paywall.length) {
+    removeDOMElement(...paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div.entry-content');

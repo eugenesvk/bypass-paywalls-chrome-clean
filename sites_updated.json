@@ -1,4 +1,27 @@
 {
+  "Australian Community Media (daily)": {
+    "domain": "###_au_comm_media",
+    "group": [
+      "bendigoadvertiser.com.au",
+      "bordermail.com.au",
+      "canberratimes.com.au",
+      "centralwesterndaily.com.au",
+      "dailyadvertiser.com.au",
+      "dailyliberal.com.au",
+      "examiner.com.au",
+      "illawarramercury.com.au",
+      "newcastleherald.com.au",
+      "northerndailyleader.com.au",
+      "standard.net.au",
+      "theadvocate.com.au",
+      "thecourier.com.au",
+      "westernadvocate.com.au"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io",
+    "cs_code": "[{\"cond\":\"div[class^=\"gradient-mask-\"]\", \"rm_attrib\": \"class\", \"elems\":[{\"cond\":\"div.hidden\", \"rm_class\": \"hidden\"}]}]",
+    "upd_version": "3.2.5.3"
+  },
   "Berlingske": {
     "domain": "berlingske.dk",
     "allow_cookies": 1,
@@ -124,9 +147,9 @@
   "Puck.news": {
     "domain": "puck.news",
     "allow_cookies": 1,
-    "ld_google_webcache": "div.paywall|div.entry-content",
+    "ld_google_webcache": "div[class*=\"paywall\"]|div.entry-content",
     "cs_code": "[{\"cond\":\"body.paywall-active\", \"rm_class\":\"paywall-active\"},{\"cond\":\"article[style]\", \"rm_attrib\":\"style\"}]",
-    "upd_version": "3.2.2.7"
+    "upd_version": "3.2.5.4"
   },
   "Quora (regwall)": {
     "domain": "quora.com",
@@ -166,7 +189,8 @@
   "Star Tribune": {
     "domain": "startribune.com",
     "remove_cookies_select_drop": ["client_id"],
-    "upd_version": "3.2.5.2"
+    "cs_code": "[{\"cond\":\"body:not(.page-article) div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
+    "upd_version": "3.2.5.3"
   },
   "Stuttgarter Nachrichten": {
     "domain": "stuttgarter-nachrichten.de",

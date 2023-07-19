@@ -50,6 +50,12 @@
     "domain": "bt.no",
     "useragent": "facebookbot"
   },
+  "Businessam.be": {
+    "add_ext_link": "div.paywall|div.entry-content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "businessam.be"
+  },
   "Businessnews.com.au": {
     "allow_cookies": 1,
     "domain": "businessnews.com.au",
@@ -495,6 +501,11 @@
     "allow_cookies": 1,
     "domain": "thestage.co.uk",
     "ld_google_webcache": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle']"
+  },
+  "Thetexan.news": {
+    "allow_cookies": 1,
+    "domain": "thetexan.news",
+    "useragent": "googlebot"
   },
   "Theweek.com": {
     "allow_cookies": 1,
