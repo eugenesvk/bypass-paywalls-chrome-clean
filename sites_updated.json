@@ -19,7 +19,7 @@
     ],
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
-    "cs_code": "[{\"cond\":\"div[class^=\"gradient-mask-\"]\", \"rm_attrib\": \"class\", \"elems\":[{\"cond\":\"div.hidden\", \"rm_class\": \"hidden\"}]}]",
+    "cs_code": "[{\"cond\":\"div[class^='gradient-mask-']\", \"rm_attrib\": \"class\", \"elems\":[{\"cond\":\"div.hidden\", \"rm_class\": \"hidden\"}]}]",
     "upd_version": "3.2.5.3"
   },
   "Auto Motor und Sport": {

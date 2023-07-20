@@ -10,6 +10,7 @@ var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
 var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
 var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
+var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
@@ -4841,18 +4842,6 @@ else if (matchDomain('thequint.com')) {
   }
 }
 
-else if (matchDomain('thestar.com')) {
-  window.setTimeout(function () {
-    let meter_banner = document.querySelector('.c-article-meter-banner');
-    let ads = document.querySelectorAll('.seo-media-query, .c-googleadslot, .ad-slot');
-    removeDOMElement(meter_banner, ...ads);
-    let end_of_article = document.querySelector('#end-of-article');
-    hideDOMElement(end_of_article);
-    let rightrail = document.querySelector('.c-article-body__rightrail');
-    hideDOMElement(rightrail);
-  }, 500);
-}
-
 else if (matchDomain('thewrap.com')) {
   let paywall = document.querySelector('.wrappro-paywall');
   if (paywall)
@@ -5103,12 +5092,22 @@ else if (matchDomain(usa_gannett_domains) || document.querySelector('img[srcset^
     window.location.href = decodeURIComponent(window.location.href.split('?return=')[1]);
 }
 
-else if ((domain = matchDomain(usa_lee_ent_domains)) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {
+else if ((domain = matchDomain(usa_lee_ent_domains)) || matchDomain(ca_torstar_domains) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {
   if (window.location.pathname.endsWith('.amp.html')) {
     amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"', 'amp-ad, amp-embed, .amp-ads-container');
     let elem_hidden = document.querySelectorAll('html[class], body[class]');
     for (let elem of elem_hidden)
       elem.removeAttribute('class');
+    let amp_images = document.querySelectorAll('div.main-content amp-img[src^="https://"]');
+    for (let amp_image of amp_images) {
+      let elem = document.createElement('img');
+      Object.assign(elem, {
+        src: amp_image.getAttribute('src'),
+        alt: amp_image.getAttribute('alt'),
+        height: '400'
+      });
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
   } else {
     if (!domain) {
       function unscramble(t) {

@@ -444,8 +444,7 @@ ext_api.storage.local.get({
         sites[site_new] = defaultSites[site_new].domain;
       // reset ungrouped sites
       let ungrouped_sites = {
-        'The Athletic': 'theathletic.com',
-        'The Toronto Star (+ local TorStar sites)': 'thestar.com'
+        'The Athletic': 'theathletic.com'
       };
       for (let key in ungrouped_sites) {
         if (sites[key] && sites[key] !== ungrouped_sites[key])

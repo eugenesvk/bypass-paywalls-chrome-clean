@@ -6,10 +6,12 @@ Post-release
 Add Auto-motor-und-sport.de
 Add Medienholding Süd (opt-in to custom sites for unlisted)
 Add Money.it
+Add TorStar local
 Fix Australian Community Media (css)
 Fix Medium (identify member-only)
 Fix Puck.news (cached articles only)
 Fix Star Tribune (images/comments)
+Fix The Toronto Star (js)
 Maintenance request host permission (disabled for mobile)
 
 * v3.2.5.0 (2023-07-16)
