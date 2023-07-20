@@ -539,6 +539,7 @@ Grouped in options:\
 [Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Ärzte Zeitung](https://www.aerztezeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
+[Auto Motor und Sport](https://www.auto-motor-und-sport.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
 [Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -

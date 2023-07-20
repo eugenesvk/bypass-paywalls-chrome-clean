@@ -185,6 +185,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
   },
+  "Auto Motor und Sport": {
+    domain: "auto-motor-und-sport.de",
+    allow_cookies: 1,
+    block_regex: /\.auto-motor-und-sport\.de\/thenewsbar\/static\/pw\.js/
+  },
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,

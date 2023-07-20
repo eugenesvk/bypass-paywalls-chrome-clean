@@ -22,6 +22,11 @@
     "cs_code": "[{\"cond\":\"div[class^=\"gradient-mask-\"]\", \"rm_attrib\": \"class\", \"elems\":[{\"cond\":\"div.hidden\", \"rm_class\": \"hidden\"}]}]",
     "upd_version": "3.2.5.3"
   },
+  "Auto Motor und Sport": {
+    "domain": "auto-motor-und-sport.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js"
+  },
   "Berlingske": {
     "domain": "berlingske.dk",
     "allow_cookies": 1,

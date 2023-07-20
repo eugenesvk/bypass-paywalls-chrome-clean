@@ -84,6 +84,7 @@
     "*://*.atavist.com/*",
     "*://*.atlantico.fr/*",
     "*://*.augsburger-allgemeine.de/*",
+    "*://*.auto-motor-und-sport.de/*",
     "*://*.automobilwoche.de/*",
     "*://*.autonews.com/*",
     "*://*.autoplus.fr/*",
@@ -757,5 +758,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.5.5"
+  "version": "3.2.5.6"
 }
