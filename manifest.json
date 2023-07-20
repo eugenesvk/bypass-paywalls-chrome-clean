@@ -442,6 +442,7 @@
     "*://*.mlive.com/*",
     "*://*.modernhealthcare.com/*",
     "*://*.monacomatin.mc/*",
+    "*://*.money.it/*",
     "*://*.monocle.com/*",
     "*://*.morgenpost.de/*",
     "*://*.muensterschezeitung.de/*",
@@ -756,5 +757,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.5.4"
+  "version": "3.2.5.5"
 }

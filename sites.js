@@ -1428,6 +1428,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.mjs)/
   },
+  "Money.it": {
+    domain: "money.it",
+    allow_cookies: 1
+  },
   "Monocle": {
     domain: "monocle.com",
     useragent: "googlebot"

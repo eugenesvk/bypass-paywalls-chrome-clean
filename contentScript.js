@@ -2078,6 +2078,20 @@ else if (matchDomain(it_gedi_domains)) {
   }
 }
 
+else if (matchDomain('money.it')) {
+  if (!window.location.search.startsWith('?page=amp')) {
+    let paywall = document.querySelector('div#paywall');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let article_id_dom = document.querySelector('div[data-idarticle]');
+      if (article_id_dom) {
+        let article_id = article_id_dom.getAttribute('data-idarticle');
+        window.location.href = 'https://www.money.it/?page=amp&id_article=' + article_id;
+      }
+    }
+  }
+}
+
 else
   csDone = true;
 
@@ -3293,7 +3307,7 @@ else if (matchDomain('bloomberg.com')) {
               }
               elem.appendChild(ul);
             }
-            for (par of json_pars) {
+            for (let par of json_pars) {
               let elem = document.createElement('p');
               elem.setAttribute('class', par_class);
               if (['heading', 'paragraph'].includes(par.type)) {

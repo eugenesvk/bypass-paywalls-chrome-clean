@@ -615,8 +615,8 @@ Grouped in options:\
 [Il Manifesto](https://ilmanifesto.it) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
-[La Gazzetta dello Sport](https://www.gazzetta.it)
-
+[La Gazzetta dello Sport](https://www.gazzetta.it) -
+[Money.it](https://www.money.it)
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
