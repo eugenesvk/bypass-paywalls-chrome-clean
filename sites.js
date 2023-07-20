@@ -1392,6 +1392,17 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.blueconic\.net\/|\.tinypass\.com\/|\/loader-wp\/.+\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Medienholding Süd": {
+    domain: "###_de_mhs",
+    group: [
+      "schwarzwaelder-bote.de",
+      "stuttgarter-nachrichten.de",
+      "stuttgarter-zeitung.de"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\//,
+    useragent: "googlebot"
+  },
   "Medium (opt-in to custom sites for custom domains)": {
     domain: "medium.com",
     allow_cookies: 1,
@@ -1801,12 +1812,6 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Schwarzwälder Bote": {
-    domain: "schwarzwaelder-bote.de",
-    allow_cookies: 1,
-    block_regex: /\.piano\.io\//,
-    useragent: "googlebot"
-  },
   "Science (free articles only)": {
     domain: "science.org",
     allow_cookies: 1
@@ -1874,18 +1879,6 @@ var defaultSites = {
   "StuDocu (no downloads)": {
     domain: "studocu.com",
     allow_cookies: 1
-  },
-  "Stuttgarter Nachrichten": {
-    domain: "stuttgarter-nachrichten.de",
-    allow_cookies: 1,
-    block_regex: /\.piano\.io\//,
-    useragent: "googlebot"
-  },
-  "Stuttgarter Zeitung": {
-    domain: "stuttgarter-zeitung.de",
-    allow_cookies: 1,
-    block_regex: /\.piano\.io\//,
-    useragent: "googlebot"
   },
   "Stylist.co.uk": {
     domain: "stylist.co.uk",

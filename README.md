@@ -559,9 +559,6 @@ Grouped in options:\
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
-[Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
-[Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
-[Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\
@@ -593,6 +590,10 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
+*Medienholding Süd* sites like (opt-in to custom sites for unlisted)\
+[Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
+[Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
+[Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de)\
 *NOZ/MHN Mediengruppe* sites like\
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -

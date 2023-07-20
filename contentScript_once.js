@@ -67,6 +67,8 @@ window.setTimeout(function () {
         group = '###_de_rp_aachen_medien';// no fix
       else if (document.querySelector('meta[name^="cXenseParse:vrm-"]'))
         group = '###_de_vrm';
+      else if (matchDomain(['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de']))
+        group = '###_de_mhs';
       else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
       else if (document.querySelector('link[href*=".tamedia.ch/"]'))
