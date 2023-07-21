@@ -194,8 +194,8 @@
   "Star Tribune": {
     "domain": "startribune.com",
     "remove_cookies_select_drop": ["client_id"],
-    "cs_code": "[{\"cond\":\"body:not(.page-article) div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
-    "upd_version": "3.2.5.3"
+    "cs_code": "[{\"cond\":\"div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
+    "upd_version": "3.2.5.8"
   },
   "Stuttgarter Nachrichten": {
     "domain": "stuttgarter-nachrichten.de",

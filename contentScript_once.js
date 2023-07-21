@@ -42,7 +42,7 @@ window.setTimeout(function () {
     else if (document.querySelector('script[src*="/wp-content/themes/pmgnews/scripts/promedia.js"], form[action^="https://go.promedia.nl/"]'))
       group = '###_nl_promedia';
     else if (hostname.match(/\.(com|net)\.au$/)) {
-      if (document.querySelector('a[href*="/australiancommunitymedia.zendesk.com/"]'))
+      if (document.querySelector('a[href^="https://austcommunitymedia.my.site.com/"]'))
         group = '###_au_comm_media';
       else if (hostname.endsWith('.com.au')) {
         if (document.querySelector('li > a[href*=".sevenwestmedia.com.au"]'))
