@@ -2313,7 +2313,9 @@ var defaultSites = {
       "allgemeine-zeitung.de",
       "echo-online.de",
       "wiesbadener-kurier.de"
-    ]
+    ],
+    block_regex: /cdn\.cxense\.com\//,
+    cs_dompurify: 1
   },
   "Vogue Business": {
     allow_cookies: 1,

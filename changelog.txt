@@ -12,6 +12,7 @@ Fix Medium (identify member-only)
 Fix Puck.news (cached articles only)
 Fix Star Tribune (images/comments)
 Fix The Toronto Star (js)
+Fix Verlagsgruppe Rhein Main (json & identify sites)
 Maintenance request host permission (disabled for mobile)
 
 * v3.2.5.0 (2023-07-16)

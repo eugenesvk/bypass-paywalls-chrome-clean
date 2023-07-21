@@ -16,6 +16,7 @@ var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de'];
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
+var de_vrm_custom_domains = ['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
@@ -50,7 +51,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, de_funke_medien_domains, de_lv_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -1073,11 +1074,11 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*="
   }
 }
 
-else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXenseParse:vrm-"]')) {
+else if (matchDomain(de_vrm_domains) || matchDomain(de_vrm_custom_domains)) {
   let url = window.location.href;
   let paywall = document.querySelector('div.storyElementWrapper__paywallContainer');
   let article = document.querySelector('section[data-testid="storyPage-main-content"]');
-  if (paywall && article) {
+  if (paywall && article && dompurify_loaded) {
     removeDOMElement(paywall);
     fetch(url)
     .then(response => {
@@ -1094,6 +1095,7 @@ else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXen
                   let pars = json_text.split(/(?=<p>)/);
                   let page_items = json.contentPage.data.context.elements;
                   if (json_text && page_items) {
+                    let parser = new DOMParser();
                     let n = 0;
                     let new_article = document.createElement('div');
                     new_article.setAttribute('style', 'font-size: 17px; font-family:Calibri, Helvetica, Arial; margin: auto; max-width: 620px;');
@@ -1110,6 +1112,10 @@ else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXen
                           elem = document.createElement('h2');
                           elem.appendChild(document.createTextNode(item.fields[0].value));
                         }
+                      } else if (item.type === 'multimediaIntro') {
+                        if (item.fields) {
+                          elem.appendChild(document.createTextNode(item.fields[0].value));
+                        }
                       } else if (item.type === 'internal_link') {
                         if (item.relation) {
                           let par_link = document.createElement('a');
@@ -1117,7 +1123,7 @@ else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXen
                           par_link.innerText = item.relation.title;
                           elem.appendChild(par_link);
                         }
-                      } else if (item.type === 'embed') {
+                      } else if (['embed', 'embed_code'].includes(item.type)) {
                         let fields = item.fields[0];
                         if (fields.name && fields.name === 'uri' && fields.value) {
                           let par_link = document.createElement('a');
@@ -1125,8 +1131,12 @@ else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXen
                           par_link.innerText = fields.value.split('?')[0];
                           par_link.target = '_blank';
                           elem.appendChild(par_link);
+                        } else if (fields.name && fields.name === 'basic' && fields.value) {
+                          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(fields.value, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
+                          let sub_item = doc.querySelector('div');
+                          elem.appendChild(sub_item);
                         }
-                      } else if (!['dateline', 'headline', 'image', 'leadtext', 'linkbox', 'linkbox_title', 'relation'].includes(item.type)) {
+                      } else if (!['dateline', 'gallery', 'headline', 'image', 'infobox', 'infobox_title', 'infobox_paragraph', 'leadtext', 'linkbox', 'linkbox_title', 'relation', 'quote', 'quotebody'].includes(item.type)) {
                         elem = '';
                         console.log(item.type);
                         console.log(item);
@@ -1147,6 +1157,8 @@ else if (matchDomain(de_vrm_domains) || document.querySelector('meta[name^="cXen
       }
     })
   }
+  let ads = document.querySelectorAll('div.adSlot');
+  hideDOMElement(...ads);
 }
 
 else if (document.querySelector('script[src^="https://assets.static-chmedia.ch/"]')) {// nzz.ch regional/CH Media
