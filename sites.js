@@ -381,7 +381,7 @@ var defaultSites = {
       "modernhealthcare.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.tinypass\\.com\\/|\\.{domain}\\/.+\\/js\\/js_.+\\.js)",
+    block_regex: "(\\.tinypass\\.com\\/|[\\.\\/]{domain}\\/.+\\/js\\/js_.+\\.js)",
     exception: [{
         domain: "autonews.com",
         block_regex: "(\\.tinypass\\.com\\/|\\.{domain}\\/.+\\/js\\/js_.+\\.js)"

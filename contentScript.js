@@ -2173,8 +2173,8 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('link[href*
       let html = document.documentElement.outerHTML;
       if (html.includes('window.__NUXT__=')) {
         let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
-        let url_nuxt = json.match(/[(,]null,/) ? json.split(/[(,]null,/)[1].match(/-\d+\.html/)[0] : false;
-        if (url_nuxt && !url_nuxt.includes(window.location.pathname.match(/-\d+\.html$/)))
+        let url_nuxt = json.match(/[(,]null,/) ? json.split(/[(,]null,/)[1].match(/\d+\.(html|ece)/)[0] : false;
+        if (url_nuxt && !window.location.pathname.includes(url_nuxt))
           refreshCurrentTab();
         else if (json.includes(',body:')) {
           let json_text = json.split(',body:')[1].split(/,(leadText|brand_key|tts):/)[0].replace(/([{,])([a-zA-Z_0-9]+\d?):/g, "$1\"$2\":").replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3");

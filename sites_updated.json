@@ -39,6 +39,26 @@
     "amp_unhide": 1,
     "upd_version": "3.2.4.2"
   },
+  "Crain Communications": {
+    "domain": "###_usa_craincomm",
+    "group": [
+      "adage.com",
+      "autonews.com",
+      "chicagobusiness.com",
+      "crainscleveland.com",
+      "crainsdetroit.com",
+      "crainsnewyork.com",
+      "modernhealthcare.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|[\\.\\/]{domain}\\/.+\\/js\\/js_.+\\.js)",
+    "exception": [{
+        "domain": "autonews.com",
+        "block_regex": "(\\.tinypass\\.com\\/|\\.{domain}\\/.+\\/js\\/js_.+\\.js)"
+      }
+    ],
+    "upd_version": "3.2.5.9"
+  },
   "Delish": {
     "domain": "delish.com",
     "allow_cookies": 1,
