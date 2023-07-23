@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+
+* v3.2.6.0 (2023-07-23)
 Add Auto-motor-und-sport.de
 Add Business-standard.com (json)
 Add Medienholding Süd (opt-in to custom sites for unlisted)
