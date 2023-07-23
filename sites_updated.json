@@ -33,6 +33,12 @@
     "useragent": "bingbot",
     "upd_version": "3.1.3.3"
   },
+  "Business Standard": {
+    "domain": "business-standard.com",
+    "allow_cookies": 1,
+    "ld_json": "div.subscribe-page|div.storycontent",
+    "upd_version": "3.2.6.0"
+  },
   "Correio da Manhã": {
     "domain": "cmjornal.pt",
     "allow_cookies": 1,

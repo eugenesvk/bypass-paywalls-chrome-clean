@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Auto-motor-und-sport.de
+Add Business-standard.com (json)
 Add Medienholding Süd (opt-in to custom sites for unlisted)
 Add Money.it
 Add The Times Literary Supplement (json)
@@ -175,7 +176,7 @@ Add Epicurious (Conde Nast)
 Add LeGrandContinent.eu
 Add Schwaebische.de
 Add TagesAnzeiger.ch (link to archive.is)
-Remove Business Standard (fix obsolete)
+Remove Business-standard.com (fix obsolete)
 Fix BusinessPost.ie (json)
 Fix Citywire
 Fix DHnet.be, L'Avenir & LaLibre.be (Add Groupe IPM)
@@ -377,7 +378,7 @@ Update custom/updated sites (onMessage in contentScript)
 Add Handelsblatt
 Remove 6 Australia News Corp sites (fix obsolete)
 Remove Law360 (fix obsolete)
-Fix Business Standard (images)
+Fix Business-standard.com (images)
 Fix Codesports.com.au (js)
 Fix DN.no (images)
 Fix Noz.de (no amp)
@@ -507,7 +508,7 @@ Fix NTNews.com.au
 * v2.8.6.0 (2022-09-25)
 Add Groupe Centre France (opt-in to custom sites)
 Fix Aftonbladet.se
-Fix Business Standard
+Fix Business-standard.com
 Fix Estadao.com.br (amp)
 Fix Hearst Communications (newspapers)
 Fix The (New Orleans) Advocate
@@ -563,7 +564,7 @@ Add Nw.de
 Add Substack custom domains (opt-in to custom sites)
 Add UOL.com.br
 Remove Sanoma Media Finland (fix obsolete)
-Fix Business Standard (mobile)
+Fix Business-standard.com (mobile)
 Fix El Correo & La Voz de Cadiz
 Fix LaVie.fr
 Fix LiveMint (css)
@@ -673,7 +674,7 @@ Add L'Avenir (Belgium)
 Add The Banker
 Remove Dagens Nyheter (fix obsolete)
 Remove Valor Economico (fix obsolete)
-Fix Business Standard
+Fix Business-standard.com
 Fix El Mercurio
 Fix Helsingin Sanomat (dynamic-json)
 Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
@@ -1045,7 +1046,7 @@ Remove Irish Times (fix obsolete)
 Remove Sueddeutsche Zeitung (fix obsolete)
 Fix ABC.es (Evolok)
 Fix Bloomberg (charts)
-Fix Business Standard
+Fix Business-standard.com
 Fix Il Tirreno (GElocal.it)
 Fix Financial Times (amp)
 Fix Knack.be
@@ -1302,7 +1303,7 @@ Bugfix Le Dauphine (plus some French sites)
 Add Dagens Industri (Sweden)
 Add La Nouvelle Republique du Centre-Ouest (France)
 Add VeloNews
-Fix Business Standard (mobile to desktop)
+Fix Business-standard.com (mobile to desktop)
 Fix El Pais
 Fix National Geographic USA
 Fix Stratfor
@@ -1681,7 +1682,7 @@ Fix Economist (menu)
 Fix WaPo (Googlebot & block Javascript)
 Fix custom sites (block Javascript)
 Update custom sites: (edit options) & hide double (custom) domain in options
-Maintenance contentScript (replace innerHTML): LesEchos.fr (plus reload), Business-Standard.com & NoordhollandsDagblad.nl
+Maintenance contentScript (replace innerHTML): LesEchos.fr (plus reload), Business-standard.com & NoordhollandsDagblad.nl
 Prepare subrelease notification (developer mode)
 
 * v1.8.1.0 (2020-08-16)
@@ -1719,7 +1720,7 @@ Update paywall scripts: Evolok
 * v1.7.8.0 (2020-07-06)
 Add Atavist Magazine
 Add Belfast Telegraph
-Add Business Standard (India)
+Add Business-standard.com
 Add Geelong Advertiser & Western Advocate (plus grouping Australian sites)
 Add Nautilus
 Add Newsweek

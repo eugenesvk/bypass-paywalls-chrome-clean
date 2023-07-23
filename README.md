@@ -845,6 +845,7 @@ Grouped in options:\
 
 ##### India
 [BQ Prime](https://www.bqprime.com) -
+[Business Standard](https://www.business-standard.com) -
 [Hindu Tamil Thisai](https://www.hindutamil.in) -
 [Hindustan Times](https://www.hindustantimes.com) -
 [Inc42](https://inc42.com) -
