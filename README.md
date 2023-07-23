@@ -563,6 +563,7 @@ Grouped in options:\
 [Krautreporter](https://krautreporter.de) -
 [Kurier.at](https://kurier.at) -
 [Neue Westfälische](https://www.nw.de) -
+[Nordwest Zeitung](https://www.nwzonline.de) -
 [Philosophie Magazin](https://www.philomag.de) -
 [Piqd](https://www.piqd.de) -
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -

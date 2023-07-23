@@ -175,6 +175,12 @@
     "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]",
     "upd_version": "3.2.1.1"
   },
+  "Nordwest Zeitung": {
+    "domain": "nwzonline.de",
+    "allow_cookies": 1,
+    "ld_json": "div.offerlist-wrapper|div.article-body|1",
+    "upd_version": "3.2.6.0"
+  },
   "Oprah Daily": {
     "domain": "oprahdaily.com",
     "allow_cookies": 1,
