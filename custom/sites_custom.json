@@ -295,6 +295,11 @@
     "domain": "makorrishon.co.il",
     "useragent": "googlebot"
   },
+  "Managingip.com": {
+    "allow_cookies": 1,
+    "domain": "managingip.com",
+    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
+  },
   "Manilatimes.net": {
     "allow_cookies": 1,
     "domain": "manilatimes.net",

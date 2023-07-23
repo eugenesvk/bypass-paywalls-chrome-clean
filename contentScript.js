@@ -2515,7 +2515,7 @@ else if (matchDomain('vn.nl')) {
     let article_content = document.querySelector('section[data-article-content-element]');
     if (article_content)
       article_content.style = 'max-height:none !important;';
-    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"]');
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
     if (json_url_dom) {
       let json_url = json_url_dom.href;
       fetch(json_url)
@@ -2861,6 +2861,32 @@ else if (matchDomain('telegraph.co.uk')) {
 else if (matchDomain('tes.com')) {
   let banner = document.querySelector('div.js-paywall-info');
   removeDOMElement(banner);
+}
+
+else if (matchDomain('the-tls.co.uk')) {
+  let paywall = document.querySelector('.tls-single-article__closed-paywall');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.content.rendered;
+          let content = document.querySelector('div.tls-article-body');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div class="tls-article-body">' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.parentNode.replaceChild(content_new, content);
+          }
+        });
+      }
+    });
+  }
+  let fade = document.querySelector('div.tls-single-article__closed-paywall-wrapper');
+  removeDOMElement(fade);
 }
 
 else if (matchDomain('theneweuropean.co.uk')) {

@@ -435,6 +435,7 @@ Grouped in options:\
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
 [The Times (link to archive.is)](https://www.thetimes.co.uk) -
+[The Times Literary Supplement](https://www.the-tls.co.uk) -
 [UnHerd](https://unherd.com)
 
 Grouped in options:\

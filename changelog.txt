@@ -6,6 +6,7 @@ Post-release
 Add Auto-motor-und-sport.de
 Add Medienholding Süd (opt-in to custom sites for unlisted)
 Add Money.it
+Add The Times Literary Supplement (json)
 Add TorStar local
 Fix Ad Age (js)
 Fix Australian Community Media (css & identify sites)
