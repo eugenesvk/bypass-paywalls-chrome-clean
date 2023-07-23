@@ -993,7 +993,6 @@ else if (matchDomain('philomag.de')) {
   }
 }
 
-
 else if (matchDomain('schwaebische.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.sve-paywall-wrapper');
@@ -1027,6 +1026,33 @@ else if (matchDomain('spiegel.de')) {
 else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de']) || matchDomain(de_mhs_custom_domains)) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);
+}
+
+else if (matchDomain('weltkunst.de')) {
+  let paywall = document.querySelector('section.paywall');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.content.rendered;
+          let content = document.querySelector('div.article div.text');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.innerHTML = '';
+            content.appendChild(content_new);
+          }
+        });
+      }
+    });
+  }
+  let par_initial = document.querySelector('p.initial');
+  removeDOMElement(par_initial);
 }
 
 else if (matchDomain('zeit.de')) {

@@ -10,6 +10,7 @@ Add Money.it
 Add Nordwest Zeitung
 Add The Times Literary Supplement (json)
 Add TorStar local
+Add Weltkunst.de
 Fix Ad Age (js)
 Fix Australian Community Media (css & identify sites)
 Fix Euromoney (ld_google_webcache)
