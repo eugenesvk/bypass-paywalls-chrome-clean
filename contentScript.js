@@ -2,8 +2,8 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
 var mobile = window.navigator.userAgent.toLowerCase().includes('mobile');
 var domain;
-var csDone = false;
-var csDoneOnce = false;
+var csDone;
+var csDoneOnce;
 var dompurify_loaded = (typeof DOMPurify === 'function');
 
 var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
@@ -254,7 +254,7 @@ if (bg2csData.cs_code) {
 
 }// runOnMessage
 
-var msg_once = false;
+var msg_once;
 if (ext_api.runtime) {
   ext_api.runtime.onMessage.addListener(
     function (request, sender) {
@@ -286,14 +286,14 @@ window.addEventListener('message', function (event) {
   }
 }, false);
 
-var div_bpc_done = document.querySelector('div#bpc_done');
-if (!div_bpc_done) {
+if (!(csDone || csDoneOnce)) {
 
+var msg_once_ses;
 if (ext_api.runtime) {
   ext_api.runtime.onMessage.addListener(
     function (request, sender) {
-    if (request.msg === 'showExtSrc' && !msg_once) {
-      msg_once = true;
+    if (request.msg === 'showExtSrc' && !msg_once_ses) {
+      msg_once_ses = true;
       replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
     }
   })
@@ -3700,6 +3700,17 @@ else if (matchDomain('espn.com')) {
   }
 }
 
+else if (matchDomain('euromoney.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.Paywall-content');
+  }
+}
+
 else if (matchDomain('fieldandstream.com')) {
   let overlay = document.querySelectorAll('div[class^="mailmunch-"]');
   removeDOMElement(...overlay);
@@ -4948,10 +4959,10 @@ else if (matchDomain(no_nhst_media_domains)) {
                   let parser = new DOMParser();
                   let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_ATTR: ['itemprop'], ADD_TAGS: ['link']}) + '</div>', 'text/html');
                   let article_new = doc.querySelector('div');
-                  if (article_new) {
-                    if (article)
-                      article.appendChild(article_new);
-                  }
+                  if (article && article_new)
+                    article.appendChild(article_new);
+                  let promo = document.querySelectorAll('div[data-ah5-type="promobox"], div.dn-relation-block');
+                  removeDOMElement(...promo);
                 }
               }
             })
@@ -5202,11 +5213,7 @@ else
   csDone = true;
 }
 
-if (csDone || csDoneOnce) {
-  addDivBpcDone();
-}
-
-} // end div_bpc_done
+} // end bpc_done
 
 // General Functions
 function removeDOMElement(...elements) {
@@ -5258,14 +5265,6 @@ function waitDOMAttribute(selector, tagName = '', attributeName = '', callback, 
     attributes: true,
     attributeFilter: [attributeName]
   });
-}
-
-function addDivBpcDone() {
-  let div_bpc_new = document.createElement('div');
-  div_bpc_new.setAttribute('id', 'bpc_done');
-  div_bpc_new.setAttribute('style', 'display: none;');
-  let insertAfter = (document.body || document.head || document.documentElement);
-  insertAfter.appendChild(div_bpc_new);
 }
 
 function matchDomain(domains, hostname = window.location.hostname) {

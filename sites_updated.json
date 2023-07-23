@@ -78,6 +78,12 @@
     "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
     "new_site": 1
   },
+  "Euromoney": {
+    "domain": "euromoney.com",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.paywall|div.Paywall-content",
+    "upd_version": "3.2.5.9"
+  },
   "Ftm.eu": {
     "domain": "ftm.eu",
     "allow_cookies": 1,

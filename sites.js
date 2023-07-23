@@ -568,9 +568,9 @@ var defaultSites = {
     useragent: "googlebot"
   },
   "Euromoney": {
-    "domain": "euromoney.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
+    domain: "euromoney.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Evening Standard (UK)": {
     domain: "standard.co.uk",
