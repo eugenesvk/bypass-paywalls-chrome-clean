@@ -27,12 +27,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js"
   },
-  "Berlingske": {
-    "domain": "berlingske.dk",
-    "allow_cookies": 1,
-    "useragent": "bingbot",
-    "upd_version": "3.1.3.3"
-  },
   "Business Standard": {
     "domain": "business-standard.com",
     "allow_cookies": 1,
@@ -68,50 +62,18 @@
   "Delish": {
     "domain": "delish.com",
     "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "new_site": 1
-  },
-  "Die Zeit": {
-    "domain": "zeit.de",
-    "allow_cookies": 1,
-    "add_ext_link": "aside#paywall|div.article-body",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.2.2.4"
+    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
   },
   "Elle Decor": {
     "domain": "elledecor.com",
     "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "new_site": 1
-  },
-  "Euromoney": {
-    "domain": "euromoney.com",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div.paywall|div.Paywall-content",
-    "upd_version": "3.2.5.9"
-  },
-  "Ftm.eu": {
-    "domain": "ftm.eu",
-    "allow_cookies": 1,
-    "block_regex": "\\.ftm\\.eu\\/js\\/routing\\?"
+    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
   },
   "Grupo Abril": {
     "domain": "abril.com.br",
     "allow_cookies": 1,
     "block_js_inline": "\\.abril\\.com\\.br\\/.+\\/(\\w+\\-+){3,}",
     "upd_version": "3.2.4.3"
-  },
-  "Gruppo GEDI.it (italian.tech, lescienze.it & espresso.repubblica.it)": {
-    "domain": "###_it_gedi",
-    "group": [
-      "italian.tech",
-      "lescienze.it",
-      "espresso.repubblica.it"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(scripts\\.repubblica\\.it\\/pw\\/pw\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|user-notification)-.+\\.js)",
-    "useragent": "googlebot",
-    "upd_version": "3.2.1.1"
   },
   "Haaretz English": {
     "domain": "haaretz.com",
@@ -122,8 +84,7 @@
   "Harper's Bazaar": {
     "domain": "harpersbazaar.com",
     "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "new_site": 1
+    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
   },
   "Hearst Communications magazines": {
     "domain": "###_usa_hearst_comm_mag",
@@ -148,32 +109,11 @@
     "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
     "upd_version": "3.2.3.2"
   },
-  "Het Laatste Nieuws (link to archive.is)": {
-    "domain": "hln.be",
-    "allow_cookies": 1,
-    "add_ext_link": "div#remaining-paid-content|div.article__body",
-    "add_ext_link_type": "archive.is",
-    "block_regex": "temptation\\.hln\\.be\\/temptation\\.js",
-    "upd_version": "3.2.2.6"
-  },
   "Hindu Tamil Thisai": {
     "domain": "hindutamil.in",
     "allow_cookies": 1,
     "amp_redirect": "div.premium-class-bt",
     "new_site": 1
-  },
-  "La Vanguardia": {
-    "domain": "lavanguardia.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/ev\\.lavanguardia\\.com",
-    "upd_version": "3.1.5.2"
-  },
-  "Le Télégramme": {
-    "domain": "letelegramme.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr\\/",
-    "cs_code": "[{\"cond\":\"div.tlg-paywalled\", \"rm_class\": \"tlg-paywalled\"}]",
-    "upd_version": "3.2.1.1"
   },
   "Nordwest Zeitung": {
     "domain": "nwzonline.de",
@@ -184,21 +124,7 @@
   "Oprah Daily": {
     "domain": "oprahdaily.com",
     "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "new_site": 1
-  },
-  "Puck.news": {
-    "domain": "puck.news",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div[class*=\"paywall\"]|div.entry-content",
-    "cs_code": "[{\"cond\":\"body.paywall-active\", \"rm_class\":\"paywall-active\"},{\"cond\":\"article[style]\", \"rm_attrib\":\"style\"}]",
-    "upd_version": "3.2.5.4"
-  },
-  "Quora (regwall)": {
-    "domain": "quora.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.1.9.6"
+    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
   },
   "Record.pt": {
     "domain": "record.pt",
@@ -249,17 +175,6 @@
     "block_regex": "\\.piano\\.io",
     "useragent": "googlebot",
     "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
-    "new_site": 1
-  },
-  "TechTarget Group": {
-    "domain": "###_usa_techtarget",
-    "allow_cookies": 1,
-    "group": [
-      "computerweekly.com",
-      "lemagit.fr",
-      "techtarget.com"
-    ],
-    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\": \"paywall\", \"elems\":[{\"cond\":\"p#firstP, div#inlineRegistrationWrapper\", \"rm_elem\": 1}]}]",
     "new_site": 1
   },
   "Telegraaf": {

@@ -51,7 +51,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['allgaeuer-zeitung.de', 'augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'uol.com.br', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, ca_gcm_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -303,12 +303,10 @@ if (ext_api.runtime) {
 
 if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src*=".medium.com/"]')) {
   let url = window.location.href;
-  let paywall = document.querySelector('section button[aria-label="Member-only story"]');
+  let paywall = document.querySelector('article.meteredContent');
   if (paywall) {
-    paywall.removeAttribute('aria-label');
-    let article = document.querySelector('article');
-    if (article)
-      article.firstChild.before(googleWebcacheLink(url));
+    paywall.removeAttribute('class');
+    paywall.firstChild.before(googleWebcacheLink(url));
   }
   window.setTimeout(function () {
     let banner = pageContains('div > h2 > div, div > div > h2', /(Read (the full story with|this story from)|Get unlimited access to)/);
@@ -1118,6 +1116,38 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('link[href*="
     hideDOMElement(...ads);
   } else {
     ampToHtml();
+  }
+}
+
+else if (matchDomain('ruhrnachrichten.de') || document.querySelector('div.mgw-integration > a.mgw__link')) {
+  let paywall = document.querySelector('body.is_plus_article');
+  if (paywall && dompurify_loaded) {
+    paywall.classList.remove('is_plus_article');
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.content.rendered;
+          let content = document.querySelector('article');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.appendChild(content_new);
+          }
+        });
+      }
+    });
+  }
+  let ads = document.querySelector('div.OUTBRAIN');
+  removeDOMElement(ads);
+  if (!matchDomain('ruhrnachrichten.de')) {
+    window.setTimeout(function () {
+      let push = document.querySelector('div.cleverpush-bell');
+      removeDOMElement(push);
+    }, 1000);
   }
 }
 
@@ -3809,6 +3839,8 @@ else if (matchDomain('euromoney.com')) {
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div.Paywall-content');
   }
+  let fade = document.querySelector('div[style*="background-image: linear-gradient"]');
+  removeDOMElement(fade);
 }
 
 else if (matchDomain('fieldandstream.com')) {
@@ -5604,7 +5636,7 @@ function getArticleJsonScript() {
 }
 
 function findKeyJson(json, keys, min_val_len = 0) {
-  let source;
+  let source = '';
   if (Array.isArray(json)) {
     for (let elem of json)
       source = source || findKeyJson(json[elem], keys, min_val_len);

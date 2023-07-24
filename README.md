@@ -600,6 +600,8 @@ Grouped in options:\
 [Neue Presse (Hannover)](https://www.neuepresse.de) -
 [Ostsee-Zeitung](https://www.ostsee-zeitung.de) -
 [RedaktionsNetzwerk Deutschland](https://www.rnd.de)\
+*[Media Group Westfalen](https://mgw.de/portfolio/tageszeitungen)* sites like (opt-in to custom sites for unlisted)\
+[Ruhr Nachrichten](https://www.ruhrnachrichten.de)\
 *Medienholding Süd* sites like (opt-in to custom sites for unlisted)\
 [Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
 [Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -

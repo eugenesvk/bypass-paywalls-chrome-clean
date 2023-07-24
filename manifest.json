@@ -552,6 +552,7 @@
     "*://*.rollingstone.com/*",
     "*://*.rugbypass.com/*",
     "*://*.rugbyrama.fr/*",
+    "*://*.ruhrnachrichten.de/*",
     "*://*.rundschau-online.de/*",
     "*://*.runnersworld.com/*",
     "*://*.sabado.pt/*",
@@ -768,5 +769,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.6.0"
+  "version": "3.2.6.1"
 }

@@ -55,20 +55,22 @@ window.setTimeout(function () {
       if (document.querySelector('meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';
     } else if (hostname.match(/\.(de|at|ch)$/) || matchDomain(['horizont.net', 'lebensmittelzeitung.net'])) {
-      if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))
+      if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))
+        group = '###_de_dfv_medien';
+      else if (document.querySelector('script[data-cmp-src*=".funkedigital.de/"], div#fmg-markenanker > a[href="https://www.funkemedien.de/"]'))
         group = '###_de_funke_medien';
       else if (document.querySelector('div.navigation__personalization > a[href^="https://www.haas-mediengruppe.de/"]'))
         group = '###_de_haas_medien';
       else if (document.querySelector('link[href*=".rndtech.de/"]'))
         group = '###_de_madsack';
-      else if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))
-        group = '###_de_dfv_medien';
+      else if (document.querySelector('div.mgw-integration > a.mgw__link'))
+        group = '###_de_mgw';
+      else if (matchDomain(['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de']))
+        group = '###_de_mhs';
       else if (matchDomain(['aachener-nachrichten.de', 'aachener-zeitung.de', 'ga.de', 'rp-online.de', 'saarbruecker-zeitung.de', 'volksfreund.de']))
         group = '###_de_rp_aachen_medien';// no fix
       else if (matchDomain(['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de']))
         group = '###_de_vrm';
-      else if (matchDomain(['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de']))
-        group = '###_de_mhs';
       else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
       else if (document.querySelector('link[href*=".tamedia.ch/"]'))
