@@ -149,6 +149,11 @@ function check_sites_updated() {
   location.reload();
 }
 
+function clear_sites_updated() {
+  ext_api.runtime.sendMessage({request: 'clear_sites_updated'});
+  location.reload();
+}
+
 function compareKey(firstStr, secondStr) {
   return firstStr.toLowerCase().replace(/\s\(.*\)/, '') === secondStr.toLowerCase().replace(/\s\(.*\)/, '');
 }
@@ -158,4 +163,5 @@ document.getElementById('save').addEventListener('click', save_options);
 document.getElementById('select-all').addEventListener('click', selectAll);
 document.getElementById('select-none').addEventListener('click', selectNone);
 document.getElementById("button-close").addEventListener('click', closeButton);
-document.getElementById('sites_updated').addEventListener('click', check_sites_updated);
+document.getElementById('check_sites_updated').addEventListener('click', check_sites_updated);
+document.getElementById('clear_sites_updated').addEventListener('click', clear_sites_updated);

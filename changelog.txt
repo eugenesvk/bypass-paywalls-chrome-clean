@@ -4,6 +4,8 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
+Fix New Scientist (regwall)
+Maintenance updated sites (clear)
 
 * v3.2.6.0 (2023-07-23)
 Add Auto-motor-und-sport.de
@@ -23,7 +25,7 @@ Fix Star Tribune (images/comments)
 Fix The Toronto Star (js)
 Fix Verlagsgruppe Rhein Main (json & identify sites)
 Maintenance request host permission (disabled for mobile)
-Update custom sites (fix ld_google_webcache)
+Update custom/updated sites (fix ld_google_webcache)
 
 * v3.2.5.0 (2023-07-16)
 Add El Tribuno (ar)

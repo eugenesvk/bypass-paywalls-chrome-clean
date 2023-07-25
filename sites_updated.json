@@ -109,11 +109,12 @@
     "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
     "upd_version": "3.2.3.2"
   },
-  "Hindu Tamil Thisai": {
-    "domain": "hindutamil.in",
+  "New Scientist": {
+    "domain": "newscientist.com",
     "allow_cookies": 1,
-    "amp_redirect": "div.premium-class-bt",
-    "new_site": 1
+    "block_regex": "\\.piano\\.io",
+    "cs_dompurify": 1,
+    "upd_version": "3.2.6.2"
   },
   "Nordwest Zeitung": {
     "domain": "nwzonline.de",

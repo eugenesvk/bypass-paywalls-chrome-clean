@@ -169,6 +169,12 @@ function check_sites_updated() {
   });
 }
 
+function clear_sites_updated() {
+  ext_api.storage.local.set({
+    sites_updated: {}
+  });
+}
+
 function prep_regex_str(str, domain = '') {
   if (domain)
     str = str.replace(/{domain}/g, domain.replace(/\./g, '\\.'));
@@ -1374,6 +1380,9 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
   }
   if (message.request === 'check_sites_updated') {
     check_sites_updated();
+  }
+  if (message.request === 'clear_sites_updated') {
+    clear_sites_updated();
   }
   if (message.request === 'popup_show_toggle') {
     ext_api.tabs.query({
