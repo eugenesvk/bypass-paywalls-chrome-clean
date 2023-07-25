@@ -1416,9 +1416,9 @@ else if (matchDomain(es_grupo_vocento_domains)) {
   let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style="display: none;"])');
   if (!window.location.pathname.endsWith('_amp.html')) {
     let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (!amphtml)
+    if (!amphtml && !matchDomain(['eldiariomontanes.es']))
       amphtml = {href: window.location.pathname.replace('.html', '_amp.html')};
-    if (paywall && amphtml && !matchDomain(['diariovasco.com', 'eldiariomontanes.es'])) {
+    if (paywall && amphtml) {
       removeDOMElement(paywall);
       window.location.href = amphtml.href;
     } else {

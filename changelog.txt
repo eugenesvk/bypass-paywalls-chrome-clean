@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
+Fix El Diario Vasco (mobile amp-redirect)
 Fix New Scientist (regwall)
 Maintenance updated sites (clear)
 

@@ -751,10 +751,10 @@ Grouped in options:\
 [Marca](https://www.marca.com)\
 *Grupo Vocento* sites like\
 [ABC](https://www.abc.es) -
-[Diario Vasco](https://www.diariovasco.com) -
 [El Comercio](https://www.elcomercio.es) -
 [El Correo](https://www.elcorreo.com) -
 [El Diario Montañés](https://www.eldiariomontanes.es) -
+[El Diario Vasco](https://www.diariovasco.com) -
 [El Norte de Castilla](https://www.elnortedecastilla.es) -
 [Hoy](https://www.hoy.es) -
 [Ideal](https://www.ideal.es) -
