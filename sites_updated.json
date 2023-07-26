@@ -59,16 +59,6 @@
     ],
     "upd_version": "3.2.5.9"
   },
-  "Delish": {
-    "domain": "delish.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
-  },
-  "Elle Decor": {
-    "domain": "elledecor.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
-  },
   "Grupo Abril": {
     "domain": "abril.com.br",
     "allow_cookies": 1,
@@ -80,34 +70,6 @@
     "allow_cookies": 1,
     "useragent": "facebookbot",
     "upd_version": "3.0.8.3"
-  },
-  "Harper's Bazaar": {
-    "domain": "harpersbazaar.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
-  },
-  "Hearst Communications magazines": {
-    "domain": "###_usa_hearst_comm_mag",
-    "group": [
-      "bicycling.com",
-      "cosmopolitan.com",
-      "countryliving.com",
-      "elle.com",
-      "esquire.com",
-      "goodhousekeeping.com",
-      "hollywoodreporter.com",
-      "housebeautiful.com",
-      "menshealth.com",
-      "popularmechanics.com",
-      "prevention.com",
-      "roadandtrack.com",
-      "runnersworld.com",
-      "townandcountrymag.com",
-      "womenshealthmag.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "upd_version": "3.2.3.2"
   },
   "New Scientist": {
     "domain": "newscientist.com",
@@ -122,23 +84,12 @@
     "ld_json": "div.offerlist-wrapper|div.article-body|1",
     "upd_version": "3.2.6.0"
   },
-  "Oprah Daily": {
-    "domain": "oprahdaily.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/journey-data\\.js|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)"
-  },
   "Record.pt": {
     "domain": "record.pt",
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
     "amp_unhide": 1,
     "upd_version": "3.2.4.2"
-  },
-  "Rugbyrama.fr": {
-    "domain": "rugbyrama.fr",
-    "allow_cookies": 1,
-    "ld_json": "div.paywall|div.article-full__body-content",
-    "upd_version": "3.2.3.3"
   },
   "Sábado (not video)": {
     "domain": "sabado.pt",
@@ -160,7 +111,7 @@
     "domain": "startribune.com",
     "remove_cookies_select_drop": ["client_id"],
     "cs_code": "[{\"cond\":\"div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
-    "upd_version": "3.2.5.8"
+    "upd_version": "3.2.6.3"
   },
   "Stuttgarter Nachrichten": {
     "domain": "stuttgarter-nachrichten.de",
@@ -205,12 +156,5 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "UOL.com.br": {
-    "domain": "uol.com.br",
-    "block_regex": "(paywall\\.folha\\.uol\\.com\\.br\\/|\\.crusoe\\.com\\.br\\/assets\\/js\\/swg-wallcontent-crusoe\\.js|\\.(tinypass|matheranalytics)\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "remove_cookies_select_drop": ["crs_subscriber"],
-    "useragent": "googlebot",
-    "upd_version": "3.2.3.6"
   }
 }

@@ -6,6 +6,7 @@ Post-release
 Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
 Fix El Diario Vasco (mobile amp-redirect)
 Fix New Scientist (regwall)
+Fix Star Tribune (mobile)
 Maintenance updated sites (clear)
 
 * v3.2.6.0 (2023-07-23)

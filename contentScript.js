@@ -4590,7 +4590,7 @@ else if (matchDomain('startribune.com')) {
   let modal = document.querySelector('body.ReactModal__Body--open');
   if (modal)
     modal.classList.remove('ReactModal__Body--open');
-  let banner = document.querySelector('div#meterContent');
+  let banner = document.querySelector('div#meterContent, div[class*="Limit-container-"]');
   let banner_modal;
   if (banner)
     banner_modal = banner.closest('div.ReactModalPortal');

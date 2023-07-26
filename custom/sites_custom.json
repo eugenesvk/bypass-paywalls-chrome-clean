@@ -107,10 +107,8 @@
   },
   "Diariodenavarra.es": {
     "allow_cookies": 1,
-    "amp_redirect": "div#paywallMessage",
-    "amp_unhide": 1,
-    "cs_code": "[{\"cond\":\"section.txt\",\"rm_elem\":1}]",
-    "domain": "diariodenavarra.es"
+    "domain": "diariodenavarra.es",
+    "ld_json": "div#paywall_message|div.free-html"
   },
   "Doorbraak.be": {
     "allow_cookies": 1,
@@ -467,6 +465,11 @@
   },
   "The-past.com": {
     "domain": "the-past.com"
+  },
+  "The42.ie": {
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io",
+    "domain": "the42.ie"
   },
   "Thecaterer.com": {
     "allow_cookies": 1,
