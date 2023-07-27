@@ -150,6 +150,13 @@
     "remove_cookies_select_drop": ["articleViews"],
     "upd_version": "3.0.3.8"
   },
+  "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
+    "domain": "japantimes.co.jp",
+    "block_regex": "cdn\\.cxense\\.com",
+    "remove_cookies_select_drop": ["xbc"],
+    "ld_json": "div.blocker > div.tp-container-inner|div.article-body|1",
+    "upd_version": "3.2.6.4"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,

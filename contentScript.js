@@ -4145,6 +4145,33 @@ else if (matchDomain('ipolitics.ca')) {
   }
 }
 
+else if (matchDomain('japantimes.co.jp')) {
+  if (!window.location.pathname.endsWith('/amp')) {
+    window.setTimeout(function () {
+      let paywall = document.querySelector('div.blocker > div.tp-container-inner');
+      if (paywall) {
+        removeDOMElement(paywall.parentNode);
+        let json_script = getArticleJsonScript();
+        if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = json.articleBody;
+            let article = document.querySelector('div.article-body');
+            if (json_text && article) {
+              let article_new = document.createElement('p');
+              article_new.innerText = breakText(json_text);
+              article.innerHTML = '';
+              article.appendChild(article_new);
+              article.classList.remove('blurred-text');
+            }
+          }
+        }
+      }
+    }, 1000);
+  } else
+    ampToHtml();
+}
+
 else if (matchDomain('jpost.com')) {
   let premium_banners = document.querySelectorAll('.hide-for-premium, #hiddenPremiumForm, #hiddenLink');
   removeDOMElement(...premium_banners);

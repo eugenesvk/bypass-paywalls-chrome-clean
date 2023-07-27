@@ -2098,7 +2098,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.irishtimes\.com\/zephr\/feature/
   },
-  "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
+  "The Japan Times (do not block Piano.io-script externally)": {
     domain: "japantimes.co.jp",
     block_regex: /cdn\.cxense\.com\//,
     remove_cookies_select_drop: ["xbc"]
