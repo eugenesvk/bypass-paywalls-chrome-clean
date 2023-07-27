@@ -27,6 +27,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js"
   },
+  "Bloomberg": {
+    "domain": "bloomberg.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.cm\\.bloomberg\\.com",
+    "upd_version": "3.2.6.5"
+  },
   "Business Standard": {
     "domain": "business-standard.com",
     "allow_cookies": 1,

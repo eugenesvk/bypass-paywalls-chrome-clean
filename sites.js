@@ -246,9 +246,8 @@ var defaultSites = {
   },
   "Bloomberg": {
     domain: "bloomberg.com",
-    block_regex: /(\.tinypass\.com\/|assets\.bwbx\.io\/s\d\/(fence\/plug-client|javelin\/.+\/transporter)\/)/,
-    cs_dompurify: 1,
-    remove_cookies_select_drop: ["gatehouse_id"]
+    allow_cookies: 1,
+    block_regex: /\.cm\.bloomberg\.com\//
   },
   "Bloomberg Adria": {
     domain: "bloombergadria.com",
