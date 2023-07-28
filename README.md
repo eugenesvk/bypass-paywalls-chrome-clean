@@ -201,6 +201,7 @@ Grouped in options:\
 [Puck.news](https://puck.news) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
+[Stereogum](https://www.stereogum.com) -
 [The American Interest](https://www.the-american-interest.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Atlantic](https://www.theatlantic.com) -

@@ -594,6 +594,7 @@
     "*://*.statesman.com/*",
     "*://*.statista.com/*",
     "*://*.stcatharinesstandard.ca/*",
+    "*://*.stereogum.com/*",
     "*://*.stocknews.com/*",
     "*://*.studocu.com/*",
     "*://*.stuttgarter-nachrichten.de/*",
@@ -769,5 +770,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.6.5"
+  "version": "3.2.6.6"
 }

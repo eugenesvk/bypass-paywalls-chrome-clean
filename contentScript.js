@@ -4441,14 +4441,6 @@ else if (matchDomain('startribune.com')) {
   removeDOMElement(banner_modal, ...ads);
 }
 
-else if (matchDomain('stocknews.com')) {
-  let hideme = document.querySelector('div#hideme');
-  removeDOMElement(hideme);
-  let blurmes = document.querySelectorAll('div[id^="blurme"]');
-  for (let i = 0; i < blurmes.length; i++)
-    blurmes[i].setAttribute('id', 'blurmenot' + i);
-}
-
 else if (matchDomain('statista.com')) {
   if (window.location.pathname.startsWith('/outlook/')) {
     let promo = document.querySelector('section#promotionElement');
@@ -4458,6 +4450,43 @@ else if (matchDomain('statista.com')) {
     for (let elem of blurred)
       elem.removeAttribute('class');
   }
+}
+
+else if (matchDomain('stereogum.com')) {
+  let paywall = document.querySelector('div.members-only-overlay-wrapper');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          try {
+            let json_text = json.acf.article_modules[0].copy.replace(/data-src/g, 'src');
+            let content = document.querySelector('div.article__content div.text-block__inner');
+            if (json_text && content) {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder', 'allow', 'allowfullscreen']}) + '</div>', 'text/html');
+              let content_new = doc.querySelector('div');
+              content.innerHTML = '';
+              content.appendChild(content_new);
+            }
+          } catch (err) {
+            console.log(err);
+          }
+        });
+      }
+    });
+  }
+}
+
+else if (matchDomain('stocknews.com')) {
+  let hideme = document.querySelector('div#hideme');
+  removeDOMElement(hideme);
+  let blurmes = document.querySelectorAll('div[id^="blurme"]');
+  for (let i = 0; i < blurmes.length; i++)
+    blurmes[i].setAttribute('id', 'blurmenot' + i);
 }
 
 else if (matchDomain('studocu.com')) {

@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
+Add Stereogum
 Fix Automobilwoche.de (js)
 Fix BizJournals (anti-adblocker)
 Fix Bloomberg (xhr; disable Dark Reader)

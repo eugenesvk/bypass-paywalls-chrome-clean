@@ -1889,6 +1889,11 @@ var defaultSites = {
     domain: "statista.com",
     referer: "google"
   },
+  "Stereogum": {
+    domain: "stereogum.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Stock News": {
     domain: "stocknews.com",
     allow_cookies: 1
