@@ -1987,9 +1987,9 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.blueconic\.net\/|meter\.bostonglobe\.com\/js\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "The Business Journals (free articles only)": {
+  "The Business Journals (free articles only; do not block Cxense-script externally)": {
     domain: "bizjournals.com",
-    block_regex: /(assets\.bizjournals\.com\/static\/js\/app\/cxense\.js|cdn\.cxense\.com\/)/
+    block_regex: /cdn\.cxense\.com\/cx\.js/
   },
   "The Business of Fashion": {
     domain: "businessoffashion.com",
@@ -2411,7 +2411,8 @@ var defaultSites = {
   "Cxense": {
     domain: "cxense.com",
     allow_cookies: 1,
-    block_regex_general: /cdn\.cxense\.com\//
+    block_regex_general: /cdn\.cxense\.com\//,
+    excluded_domains: ["bizjournals.com"]
   },
   "Ensighten": {
     domain: "ensighten.com",
