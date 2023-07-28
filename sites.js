@@ -193,7 +193,7 @@ var defaultSites = {
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,
-    block_regex: /\.automobilwoche\.de\/s3fs-public\/js\/js_nCw.+\.js/
+    block_regex: /\.automobilwoche\.de\/sites\/camw\/files\/js\/js_9G4.+\.js/
   },
   "AutoPlus.fr": {
     domain: "autoplus.fr",
