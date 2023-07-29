@@ -90,6 +90,11 @@
     "useragent": "facebookbot",
     "upd_version": "3.0.8.3"
   },
+  "Mannheimer Morgen": {
+    "domain": "mannheimer-morgen.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "New Scientist": {
     "domain": "newscientist.com",
     "allow_cookies": 1,

@@ -938,7 +938,9 @@ var defaultSites = {
   },
   "Haas Mediengruppe (opt-in to custom sites)": {
     domain: "###_de_haas_medien",
-    group: [],
+    group: [
+      "mannheimer-morgen.de"
+    ],
     allow_cookies: 1,
     useragent: "googlebot"
   },

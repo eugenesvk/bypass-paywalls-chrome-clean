@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Mannheimer Morgen (Haas)
 Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
 Add Stereogum
 Fix Automobilwoche.de (js)

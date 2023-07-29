@@ -573,8 +573,7 @@ Grouped in options:\
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\
-*[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)
-
+*[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
 *Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
 [Berliner Morgenpost](https://www.morgenpost.de) -
 [Braunschweiger Zeitung](https://www.braunschweiger-zeitung.de) -
@@ -586,7 +585,8 @@ Grouped in options:\
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
 [Westfälische Rundschau](https://www.wr.de)\
-*[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken)* sites (opt-in to custom sites)\
+*[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken)* sites like (opt-in to custom sites for unlisted)\
+[Mannheimer Morgen](https://www.mannheimer-morgen.de)\
 *Landwirtschaftsverlag* sites like\
 [Profi.de](https://www.profi.de) -
 [Top Agrar.at](https://www.topagrar.at) -
