@@ -14,6 +14,7 @@ Fix El Diario Vasco (mobile amp-redirect)
 Fix New Scientist (regwall)
 Fix Star Tribune (mobile)
 Fix The Japan Times (json for archive)
+Fix Verlagsgruppe Rhein Main
 Maintenance updated sites (clear)
 
 * v3.2.6.0 (2023-07-23)

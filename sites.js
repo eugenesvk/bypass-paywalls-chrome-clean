@@ -1964,7 +1964,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
   },
-  "The Atlanta Journal-Constitution (+ Cox First Media; opt-in to custom sties)": {
+  "The Atlanta Journal-Constitution (+ Cox First Media; opt-in to custom sites)": {
     domain: "ajc.com",
     allow_cookies: 1,
     block_regex: /(\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
@@ -2339,7 +2339,7 @@ var defaultSites = {
       "wiesbadener-kurier.de"
     ],
     block_regex: /cdn\.cxense\.com\//,
-    cs_dompurify: 1
+    useragent: "googlebot"
   },
   "Vogue Business": {
     allow_cookies: 1,

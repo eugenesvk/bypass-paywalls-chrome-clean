@@ -192,5 +192,17 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "Verlagsgruppe Rhein Main": {
+    "allow_cookies": 1,
+    "domain": "###_de_vrm",
+    "group": [
+      "allgemeine-zeitung.de",
+      "echo-online.de",
+      "wiesbadener-kurier.de"
+    ],
+    "block_regex": "cdn\\.cxense\\.com",
+    "useragent": "googlebot",
+    "upd_version": "3.2.6.7"
   }
 }
