@@ -3,9 +3,10 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
-Add Mannheimer Morgen (Haas)
-Add Ruhr Nachrichten (+ Media Group Westfalen; opt-in to custom sites)
+Add Mannheimer-Morgen.de (Haas)
+Add RuhrNachrichten.de (+ Media Group Westfalen; opt-in to custom sites)
 Add Stereogum
+Remove Allgaeuer-Zeitung.de (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix BizJournals (anti-adblocker)
 Fix Bloomberg (xhr; disable Dark Reader)
@@ -865,7 +866,7 @@ Fix update check (GitLab CORS issue or BitBucket http error 429)
 Update custom sites (load text from json)
 
 * v2.5.7.0 (2022-02-20)
-Remove Ruhr Nachrichten (fix obsolete)
+Remove RuhrNachrichten.de (fix obsolete)
 Fix Live Law
 Fix NewcastleHerald.com.au
 Fix Lequipe.fr (json)
@@ -1079,7 +1080,7 @@ Add Westfaelische Nachrichten (Germany)
 Remove Australian Provincial Newspapers (obsolete)
 Fix GElocal.it
 Fix National Review
-Fix Ruhr Nachrichten (amp)
+Fix RuhrNachrichten.de (amp)
 Fix Tech in Asia (visual story)
 Update custom sites (block regex, amp unhide & add imported)
 Update options: enable new sites by default

@@ -545,7 +545,6 @@ Grouped in options:\
 [LeMagIT](https://www.lemagit.fr)
 
 ##### Germany/Austria
-[Allgäuer Zeitung](https://www.allgaeuer-zeitung.de) -
 [Ärzte Zeitung](https://www.aerztezeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Auto Motor und Sport](https://www.auto-motor-und-sport.de) -
