@@ -6,6 +6,7 @@ Post-release
 Add Mannheimer-Morgen.de (Haas)
 Add RuhrNachrichten.de (+ Media Group Westfalen; opt-in to custom sites)
 Add Stereogum
+Add The Verge (newsletter)
 Remove Allgaeuer-Zeitung.de (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix BizJournals (anti-adblocker)
@@ -15,6 +16,7 @@ Fix New Scientist (regwall)
 Fix Star Tribune (mobile)
 Fix The Japan Times (json for archive)
 Fix Verlagsgruppe Rhein Main
+Fix Weltkunst.de
 Maintenance updated sites (clear)
 
 * v3.2.6.0 (2023-07-23)

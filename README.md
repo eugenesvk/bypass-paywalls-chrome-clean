@@ -216,6 +216,7 @@ Grouped in options:\
 [The New York Review of Books](https://www.nybooks.com) -
 [The Point Magazine](https://thepointmag.com) -
 [The Spectator World](https://thespectator.com) -
+[The Verge](https://www.theverge.com) -
 [The Wrap](https://www.thewrap.com)
 
 Grouped in options:\

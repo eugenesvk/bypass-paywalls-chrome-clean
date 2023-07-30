@@ -193,6 +193,12 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
+  "The Verge (newsletter)": {
+    "domain": "theverge.com",
+    "allow_cookies": 1,
+    "ld_json": "div.bg-paywall-fade|div.duet--article--article-body-component-container",
+    "new_site": 1
+  },
   "Verlagsgruppe Rhein Main": {
     "allow_cookies": 1,
     "domain": "###_de_vrm",
@@ -204,5 +210,11 @@
     "block_regex": "cdn\\.cxense\\.com",
     "useragent": "googlebot",
     "upd_version": "3.2.6.7"
+  },
+  "Weltkunst": {
+    "domain": "weltkunst.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.2.6.9"
   }
 }

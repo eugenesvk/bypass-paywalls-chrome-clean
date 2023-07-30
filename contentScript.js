@@ -1012,33 +1012,6 @@ else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 's
   removeDOMElement(banner);
 }
 
-else if (matchDomain('weltkunst.de')) {
-  let paywall = document.querySelector('section.paywall');
-  if (paywall && dompurify_loaded) {
-    removeDOMElement(paywall);
-    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
-    let json_url = json_url_dom.href;
-    fetch(json_url)
-    .then(response => {
-      if (response.ok) {
-        response.json().then(json => {
-          let json_text = json.content.rendered;
-          let content = document.querySelector('div.article div.text');
-          if (json_text && content) {
-            let parser = new DOMParser();
-            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
-            let content_new = doc.querySelector('div');
-            content.innerHTML = '';
-            content.appendChild(content_new);
-          }
-        });
-      }
-    });
-  }
-  let par_initial = document.querySelector('p.initial');
-  removeDOMElement(par_initial);
-}
-
 else if (matchDomain('zeit.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('aside#paywall');
@@ -1869,14 +1842,6 @@ else if (matchDomain('eastwest.eu')) {
 }
 
 else if (matchDomain('gazzetta.it')) {
-  function header_nofix(header) {
-    if (header) {
-      let nofix_div = document.createElement('div');
-      nofix_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
-      nofix_div.innerText = 'BPC > no fix';
-      header.appendChild(nofix_div);
-    }
-  }
   if (window.location.pathname.endsWith('_preview.shtml')) {
     let paywall = document.querySelector('section.bck-freemium__wall');
     if (paywall) {
@@ -2921,7 +2886,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'lasegunda.com', 'latercera.com', 'valor.globo.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'globo.com', 'lasegunda.com', 'latercera.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -3112,7 +3077,7 @@ else if (matchDomain('lasegunda.com')) {
   }
 }
 
-else if (matchDomain('valor.globo.com')) {
+else if (matchDomain('globo.com')) {
   let url = window.location.href;
   if (!window.location.pathname.startsWith('/google/amp/')) {
     let paywall = document.querySelector('div.paywall');
@@ -4776,6 +4741,89 @@ else if (matchDomain('thequint.com')) {
   }
 }
 
+else if (matchDomain('theverge.com')) {
+  let paywall = document.querySelector('div.bg-paywall-fade');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script) {
+      try {
+        let json = JSON.parse(json_script.text);
+        let article = document.querySelector('div.duet--article--article-body-component-container');
+        if (json && article) {
+          let json_pars = json.props.pageProps.hydration.responses[0].data.entryRevision.body.components;
+          article.innerHTML = '';
+          let parser = new DOMParser();
+          for (let par of json_pars) {
+            let elem = document.createElement('p');
+            elem.style = 'margin: 20px 0px;';
+            let type = par.__typename;
+            if (['EntryBodyParagraph', 'EntryBodyHeading'].includes(type)) {
+              if (par.contents && par.contents.html) {
+                if (type === 'EntryBodyHeading')
+                  elem.style = 'font-weight: bold;';
+                let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(par.contents.html) + '</div>', 'text/html');
+                elem.appendChild(doc.querySelector('div'));
+              }
+            } else if (type === 'EntryBodyHorizontalRule') {
+              elem.appendChild(document.createElement('hr'));
+            } else if (type === 'EntryBodyImage') {
+              if (par.image && par.image.url) {
+                let figure = document.createElement('figure');
+                if (par.image.asset && par.image.asset.title)
+                  figure.appendChild(document.createTextNode(par.image.asset.title));
+                let img = document.createElement('img');
+                img.src = par.image.url;
+                figure.appendChild(img);
+                if (par.image.caption && par.image.caption.html) {
+                  let caption = document.createElement('figcaption');
+                  caption.innerText = par.image.caption.html;
+                  if (par.image.credit && par.image.credit.html)
+                    caption.innerText += ' - ' + par.image.credit.html;
+                  figure.appendChild(caption);
+                }
+                elem.appendChild(figure);
+              }
+            } else if (type === 'EntryBodyPullquote') {
+              if (par.quote && par.quote.html) {
+                let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(par.quote.html) + '</div>', 'text/html');
+                elem.appendChild(doc.querySelector('div'));
+              }
+            } else if (type === 'EntryBodyBlockquote') {
+              if (par.paragraphs) {
+                for (let quote_par of par.paragraphs) {
+                  if (quote_par.contents && quote_par.contents.html) {
+                    let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(quote_par.contents.html) + '</div>', 'text/html');
+                    elem.appendChild(doc.querySelector('div'));
+                  }
+                }
+              }
+            } else if (type === 'EntryBodyList') {
+              if (par.items) {
+                let ul = document.createElement('ul');
+                for (let item of par.items) {
+                  if (item.line && item.line.html) {
+                    let li = document.createElement('li');
+                    let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(item.line.html) + '</div>', 'text/html');
+                    li.appendChild(doc.querySelector('div'));
+                    ul.appendChild(li);
+                  }
+                }
+                elem.appendChild(ul);
+              }
+            } else
+              console.log(par);
+            if (elem.hasChildNodes)
+              article.appendChild(elem);
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+
 else if (matchDomain('thewrap.com')) {
   let paywall = document.querySelector('.wrappro-paywall');
   if (paywall)
@@ -5196,6 +5244,15 @@ function urlHost(url) {
 
 function matchUrlDomain(domains, url) {
   return matchDomain(domains, urlHost(url));
+}
+
+function header_nofix(header) {
+  if (header) {
+    let nofix_div = document.createElement('div');
+    nofix_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
+    nofix_div.innerText = 'BPC > no fix';
+    header.appendChild(nofix_div);
+  }
 }
 
 function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
