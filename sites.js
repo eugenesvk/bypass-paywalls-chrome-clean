@@ -242,7 +242,7 @@ var defaultSites = {
   "Bloomberg": {
     domain: "bloomberg.com",
     allow_cookies: 1,
-    block_regex: /\.cm\.bloomberg\.com\//
+    block_regex: /(\.cm\.bloomberg\.com\/|assets\.bwbx\.io\/s\d\/javelin\/.+\/transporter\/)/
   },
   "Bloomberg Adria": {
     domain: "bloombergadria.com",

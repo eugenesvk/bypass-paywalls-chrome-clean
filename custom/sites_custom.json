@@ -4,6 +4,12 @@
     "block_regex": "\\.piano\\.io",
     "domain": "abajournal.com"
   },
+  "Airmail.news": {
+    "add_ext_link": "div.paywall-card|div.article-text",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "airmail.news"
+  },
   "Arkansasonline.com": {
     "domain": "arkansasonline.com"
   },
@@ -464,6 +470,12 @@
     "amp_redirect": "div#story-notification",
     "domain": "swarajyamag.com"
   },
+  "Tagesspiegel.de": {
+    "add_ext_link": "div#paywal|div.article--paid",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "tagesspiegel.de"
+  },
   "The-past.com": {
     "domain": "the-past.com"
   },
@@ -487,6 +499,12 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "theday.com"
+  },
+  "Thedispatch.com": {
+    "add_ext_link": "section.paywall-section|div.content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "thedispatch.com"
   },
   "Theepochtimes.com": {
     "allow_cookies": 1,

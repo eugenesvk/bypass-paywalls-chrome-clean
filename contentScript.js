@@ -177,6 +177,9 @@ if (bg2csData.add_ext_link) {
           case '12ft.io':
             article.firstChild.before(ext_12ftLink(url));
             break;
+          case 'google_webcache':
+            article.firstChild.before(googleWebcacheLink(url));
+            break;
           }
         }
       }
