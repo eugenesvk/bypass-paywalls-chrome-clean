@@ -165,6 +165,7 @@
     "*://*.crainscleveland.com/*",
     "*://*.crainsdetroit.com/*",
     "*://*.crainsnewyork.com/*",
+    "*://*.crikey.com.au/*",
     "*://*.cronista.com/*",
     "*://*.csmonitor.com/*",
     "*://*.curbed.com/*",
@@ -771,5 +772,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.7.2"
+  "version": "3.2.7.3"
 }

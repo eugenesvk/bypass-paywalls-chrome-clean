@@ -320,7 +320,34 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.
 
 else if (window.location.hostname.match(/\.(com|net)\.au$/)) {//australia
 
-if (matchDomain('macrobusiness.com.au')) {
+if (matchDomain('crikey.com.au')) {
+  let paywall = document.querySelector('div.locked-content');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.content.rendered;
+          let content = document.querySelector('div.article-body > div.paywall');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.parentNode.replaceChild(content_new, content);
+          }
+        });
+      }
+    });
+    let fade = document.querySelector('article.article-locked');
+    if (fade)
+      fade.classList.remove('article-locked');
+  }
+}
+
+else if (matchDomain('macrobusiness.com.au')) {
   let paywall = pageContains('div > p', 'The full text of this article is available');
   if (paywall[0] && dompurify_loaded) {
     let fade = document.querySelector('div.bg-gradient-to-t');

@@ -386,6 +386,11 @@ var defaultSites = {
       }
     ]
   },
+  "Crikey.com.au": {
+    domain: "crikey.com.au",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Dagens ETC": {
     domain: "etc.se",
     allow_cookies: 1
