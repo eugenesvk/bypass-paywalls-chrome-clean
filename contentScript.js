@@ -1293,7 +1293,7 @@ else if (matchDomain('elperiodico.com')) {
 }
 
 else if (matchDomain(es_grupo_vocento_domains)) {
-  let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style="display: none;"])');
+  let paywall = document.querySelector('.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style*="display: none;"])');
   if (!window.location.pathname.endsWith('_amp.html')) {
     let amphtml = document.querySelector('link[rel="amphtml"]');
     if (!amphtml && !matchDomain(['eldiariomontanes.es']))
@@ -2075,9 +2075,11 @@ if (matchDomain(be_groupe_ipm_domains)) {
 }
 
 else if (matchDomain('fd.nl')) {
-  let reg_modal = document.querySelector('div.modal.upsell');
-  if (reg_modal)
+  let paywall = document.querySelectorAll('section.upsell, div.upsell-modal-background');
+  if (paywall.length)
     refreshCurrentTab();
+  let header = document.querySelector('div.fd-message[data-slot="Artikel/Header"]');
+  removeDOMElement(header);
 }
 
 else if (matchDomain('ftm.nl')) {
@@ -3081,26 +3083,30 @@ else if (matchDomain('lasegunda.com')) {
 }
 
 else if (matchDomain('globo.com')) {
-  let url = window.location.href;
-  if (!window.location.pathname.startsWith('/google/amp/')) {
-    let paywall = document.querySelector('div.paywall');
-    let amphtml = document.querySelector('link[rel="amphtml"]');
-    if (paywall && amphtml) {
-      removeDOMElement(paywall);
-      window.location.href = amphtml.href;
+  if (matchDomain('valor.globo.com')) {
+    if (!window.location.pathname.startsWith('/google/amp/')) {
+      let paywall = document.querySelector('div.paywall');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall && amphtml) {
+        removeDOMElement(paywall);
+        window.location.href = amphtml.href;
+      }
+    } else {
+      amp_unhide_subscr_section('amp-ad, amp-embed');
+      let amp_images = document.querySelectorAll('figure > amp-img[src^="https://"]');
+      for (let amp_image of amp_images) {
+        let elem = document.createElement('img');
+        elem.src = amp_image.getAttribute('src');
+        elem.alt = amp_image.getAttribute('alt');
+        elem.style = mobile ? 'width: 320px;' : 'margin: 0px 250px; display:block;';
+        amp_image.parentNode.replaceChild(elem, amp_image);
+      }
     }
-    let ads = document.querySelectorAll('[id^="ad-container"], .content-ads');
+  } else if (window.location.pathname.includes('/amp/'))
+    ampToHtml();
+  if (!window.location.pathname.includes('/amp/')) {
+    let ads = document.querySelectorAll('div[id^="ad-container"], div.content-ads, div[class^="block__advertising"]');
     removeDOMElement(...ads);
-  } else {
-    amp_unhide_subscr_section('amp-ad, amp-embed');
-    let amp_images = document.querySelectorAll('figure > amp-img[src^="https://"]');
-    for (let amp_image of amp_images) {
-      let elem = document.createElement('img');
-      elem.src = amp_image.getAttribute('src');
-      elem.alt = amp_image.getAttribute('alt');
-      elem.style = mobile ? 'width: 320px;' : 'margin: 0px 250px; display:block;';
-      amp_image.parentNode.replaceChild(elem, amp_image);
-    }
   }
 }
 
