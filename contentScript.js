@@ -3460,11 +3460,15 @@ else if (matchDomain('dn.no')) {
 else if (matchDomain('economictimes.com')) {
   if (window.location.pathname.includes('/amp_')) {
     let paywall = document.querySelector('.paywall_wrap');
-    if (paywall) {
+    if (paywall && dompurify_loaded) {
       let content = document.querySelector('.paywall[style="display:none;"]');
-      if (content)
-        content.setAttribute('style', 'display:block;');
-      else
+      if (content) {
+        let parser = new DOMParser();
+        let doc = parser.parseFromString('<div style="margin: 20px 0px;">' + DOMPurify.sanitize(content.innerText, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
+        let content_new = doc.querySelector('div');
+        if (content_new && content.parentNode)
+          content.parentNode.replaceChild(content_new, content);
+      } else
         window.location.href = 'https://economictimes.indiatimes.com' + window.location.pathname.replace('amp_prime', 'prime');
       let intro = document.querySelector('.art_wrap');
       let article_blocker = document.querySelector('.articleBlocker');

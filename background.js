@@ -667,7 +667,7 @@ if ((typeof browser !== 'object') && navigator_ua_mobile) {
 
 // economictimes redirect
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
-  if (!isSiteEnabled(details) || details.url.includes('.com/epaper/')) {
+  if (!isSiteEnabled(details) || details.url.includes('.com/epaper/') || !navigator_ua_mobile) {
     return;
   }
   var updatedUrl = details.url.split('?')[0].replace('economictimes.indiatimes.com', 'm.economictimes.com');

@@ -2046,7 +2046,8 @@ var defaultSites = {
       "economictimes.indiatimes.com"
     ],
     allow_cookies: 1,
-    useragent: "googlebot"
+    useragent: "googlebot",
+    cs_dompurify: 1
   },
   "The Economist": {
     domain: "economist.com",
