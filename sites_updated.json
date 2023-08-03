@@ -45,12 +45,6 @@
     "ld_json": "div.subscribe-page|div.storycontent",
     "upd_version": "3.2.6.0"
   },
-  "Correio da Manhã": {
-    "domain": "cmjornal.pt",
-    "allow_cookies": 1,
-    "amp_unhide": 1,
-    "upd_version": "3.2.4.2"
-  },
   "Crain Communications": {
     "domain": "###_usa_craincomm",
     "group": [
@@ -78,11 +72,11 @@
     "excluded_domains": ["bizjournals.com"],
     "upd_version": "3.2.6.6"
   },
-  "Grupo Abril": {
-    "domain": "abril.com.br",
+  "EUobserver": {
+    "domain": "euobserver.com",
     "allow_cookies": 1,
-    "block_js_inline": "\\.abril\\.com\\.br\\/.+\\/(\\w+\\-+){3,}",
-    "upd_version": "3.2.4.3"
+    "cs_code": "[{\"cond\":\"div.membership-upsell.show\", \"rm_class\":\"show\"}]",
+    "upd_version": "3.2.7.4"
   },
   "Haaretz English": {
     "domain": "haaretz.com",
@@ -108,21 +102,6 @@
     "ld_json": "div.offerlist-wrapper|div.article-body|1",
     "upd_version": "3.2.6.0"
   },
-  "Record.pt": {
-    "domain": "record.pt",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "amp_unhide": 1,
-    "upd_version": "3.2.4.2"
-  },
-  "Sábado (not video)": {
-    "domain": "sabado.pt",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "amp_redirect": ".bloco_bloqueio",
-    "amp_unhide": 1,
-    "new_site": 1
-  },
   "Schwarzwälder Bote": {
     "domain": "schwarzwaelder-bote.de",
     "allow_cookies": 1,
@@ -139,14 +118,6 @@
   },
   "Stuttgarter Nachrichten": {
     "domain": "stuttgarter-nachrichten.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "useragent": "googlebot",
-    "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
-    "new_site": 1
-  },
-  "Stuttgarter Zeitung": {
-    "domain": "stuttgarter-zeitung.de",
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
     "useragent": "googlebot",

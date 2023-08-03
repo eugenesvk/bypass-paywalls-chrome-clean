@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Crikey.com.au
+Fix EUobserver (css)
 Fix Grupo Vocento (limit amp-redirect)
 Fix The Economic Times (update mobile redirect)
 Update custom sites (add_ext_link: Google webcache)

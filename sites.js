@@ -562,8 +562,7 @@ var defaultSites = {
   },
   "EUobserver": {
     domain: "euobserver.com",
-    allow_cookies: 1,
-    useragent: "googlebot"
+    allow_cookies: 1
   },
   "Eureka Report": {
     domain: "eurekareport.com.au",

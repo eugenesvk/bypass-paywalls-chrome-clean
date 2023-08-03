@@ -3555,6 +3555,12 @@ else if (matchDomain('espn.com')) {
   }
 }
 
+else if (matchDomain('euobserver.com')) {
+  let div_hidden = document.querySelector('div.membership-upsell.show');
+  if (div_hidden)
+    div_hidden.classList.remove('show');
+}
+
 else if (matchDomain('euromoney.com')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.paywall');
