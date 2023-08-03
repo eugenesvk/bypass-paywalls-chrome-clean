@@ -2520,7 +2520,18 @@ else
 
 } else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['citywire.com', 'ft.com', 'scotsman.com', 'tes.com'])) {//united kingdom/ireland
 
-if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
+if (matchDomain('autocar.co.uk')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.ms-block, div.register-block');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.content-wrapper');
+  }
+}
+
+else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   let flip_pay = document.querySelector('div#flip-pay[style]');
   if (flip_pay && dompurify_loaded) {
     let content = document.querySelector('script[data-fragment-type="ArticleContent"]');

@@ -25,7 +25,14 @@
   "Auto Motor und Sport": {
     "domain": "auto-motor-und-sport.de",
     "allow_cookies": 1,
-    "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js"
+    "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js",
+    "new_site": 1
+  },
+  "Autocar.co.uk": {
+    "domain": "autocar.co.uk",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.ms-block,div.register-block|div.content-wrapper",
+    "new_site": 1
   },
   "Automobilwoche": {
     "domain": "automobilwoche.de",

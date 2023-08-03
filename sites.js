@@ -185,6 +185,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.auto-motor-und-sport\.de\/thenewsbar\/static\/pw\.js/
   },
+  "Autocar.co.uk": {
+    domain: "autocar.co.uk",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Automobilwoche": {
     domain: "automobilwoche.de",
     allow_cookies: 1,

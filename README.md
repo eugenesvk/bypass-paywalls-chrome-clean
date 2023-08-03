@@ -410,6 +410,7 @@ Grouped in options:\
 [Follow the Money (ftm.eu)](https://www.ftm.eu)
 
 ##### United Kingdom/Ireland
+[Autocar](https://www.autocar.co.uk) -
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Business Post](https://www.businesspost.ie) -
 [Citywire](https://www.citywire.com) -
