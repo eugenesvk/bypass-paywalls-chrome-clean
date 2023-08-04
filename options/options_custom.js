@@ -88,8 +88,12 @@ function import_json(result) {
   }, function (items) {
     var sites_custom = items.sites_custom;
     var sites_custom_new = JSON.parse(result);
-    for (let site in sites_custom_new)
+    for (let site in sites_custom_new) {
+      let customSite_diff = Object.keys(sites_custom).find(key => sites_custom[key].domain === sites_custom_new[site].domain && key !== site);
+      if (customSite_diff)
+        delete sites_custom[customSite_diff];
       sites_custom[site] = sites_custom_new[site];
+    }
     sites_custom = filterObject(sites_custom, function (val, key) {
       return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
     });

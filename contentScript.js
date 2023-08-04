@@ -1149,6 +1149,8 @@ else if (document.querySelector('script[src^="https://assets.static-chmedia.ch/"
   let infobox_body = document.querySelector('div.infobox__body');
   if (infobox_body)
     infobox_body.removeAttribute('class');
+  let paywall = document.querySelector('div.dynamic-regwall');
+  removeDOMElement(paywall);
 }
 
 else
@@ -3522,23 +3524,14 @@ else if (matchDomain('economictimes.indiatimes.com')) {
 }
 
 else if (matchDomain('economist.com')) {
-  let subscribe = document.querySelector('.subscription-proposition');
-  let wrapper = document.getElementById('bottom-page-wrapper');
-  let adverts = document.querySelectorAll('div.advert');
-  removeDOMElement(subscribe, wrapper, ...adverts);
-  let p_articles = document.querySelectorAll('p.article__body-text');
-  let href;
-  for (let p_article of p_articles) {
-    let e_anchors = document.querySelectorAll('a');
-    href = '';
-    for (let e_anchor of e_anchors) {
-      if (e_anchor.href) {
-        href = e_anchor.href;
-      } else {
-        e_anchor.href = href;
-      }
-    }
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    let noscroll = document.querySelector('svelte-scroller-outer');
+    let hide_style = document.querySelector('body > style');
+    removeDOMElement(paywall, noscroll, hide_style);
   }
+  let ads = document.querySelectorAll('div[class*="_advert__"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('enotes.com')) {

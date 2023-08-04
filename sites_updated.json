@@ -157,6 +157,13 @@
     "block_regex": "cdn\\.cxense\\.com\\/cx\\.js",
     "upd_version": "3.2.6.6"
   },
+  "The Economist": {
+    "domain": "economist.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
+    "upd_version": "3.2.7.6"
+  },
   "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
     "domain": "japantimes.co.jp",
     "block_regex": "cdn\\.cxense\\.com",

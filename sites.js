@@ -2056,7 +2056,7 @@ var defaultSites = {
   "The Economist": {
     domain: "economist.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /\.tinypass\.com\//
   },
   "The Financial Express": {
     domain: "financialexpress.com",

@@ -249,8 +249,8 @@
     "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
     "domain": "irishexaminer.com"
   },
-  "Irishnews.com (not premium)": {
-    "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/mpppaywall\\.js",
+  "Irishnews.com": {
+    "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/(bundle|mpppaywall)\\.js",
     "domain": "irishnews.com"
   },
   "Kapital.no": {
