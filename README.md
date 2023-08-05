@@ -851,6 +851,7 @@ Grouped in options:\
 [The Star Malaysia](https://www.thestar.com.my)
 
 ##### India
+[Bar and Bench](https://www.barandbench.com) -
 [BQ Prime](https://www.bqprime.com) -
 [Business Standard](https://www.business-standard.com) -
 [Hindu Tamil Thisai](https://www.hindutamil.in) -

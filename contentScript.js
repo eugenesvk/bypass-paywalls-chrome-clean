@@ -3223,6 +3223,24 @@ else if (matchDomain('axios.com')) {
   csDoneOnce = true;
 }
 
+else if (matchDomain('barandbench.com')) {
+  let paywall = document.querySelector('div#paywall-banner');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = json.articleBody;
+        let content = document.querySelector('div.arr--story-page-card-wrapper');
+        if (json_text && content) {
+          content.innerText = breakText(parseHtmlEntities(json_text));
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('barrons.com')) {
   let url = window.location.href;
   if (!url.includes('barrons.com/amp/')) {

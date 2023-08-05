@@ -206,9 +206,14 @@ var defaultSites = {
     block_regex: "\.axios\.com\/api\/v\d\/licenses"
   },
   "Badische Neueste Nachrichten": {
-    allow_cookies: 1,
     domain: "bnn.de",
+    allow_cookies: 1,
     useragent: "googlebot"
+  },
+  "Bar and Bench": {
+    domain: "barandbench.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Barron's (when blocked disable Googlebot in BPC-settings)": {
     domain: "barrons.com",

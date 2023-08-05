@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Autocar.co.uk
+Add Bar and Bench (India)
 Add Crikey.com.au
 Fix EUobserver (css)
 Fix Grupo Vocento (limit amp-redirect)

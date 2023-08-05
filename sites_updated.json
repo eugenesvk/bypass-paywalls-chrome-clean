@@ -40,6 +40,12 @@
     "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_9G4.+\\.js",
     "upd_version": "3.2.6.6"
   },
+  "Bar and Bench": {
+    "domain": "barandbench.com",
+    "allow_cookies": 1,
+    "ld_json": "div#paywall-banner|div.arr--story-page-card-wrapper",
+    "upd_version": "3.2.7.7"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
