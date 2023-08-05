@@ -202,6 +202,12 @@
     "useragent": "googlebot",
     "upd_version": "3.2.6.7"
   },
+  "Washington Examiner": {
+    "domain": "washingtonexaminer.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.zephr\\.com\\/zephr-browser",
+    "new_site": 1
+  },
   "Weltkunst": {
     "domain": "weltkunst.de",
     "allow_cookies": 1,

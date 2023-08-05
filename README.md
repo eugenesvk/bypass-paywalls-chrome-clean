@@ -217,7 +217,8 @@ Grouped in options:\
 [The Point Magazine](https://thepointmag.com) -
 [The Spectator World](https://thespectator.com) -
 [The Verge](https://www.theverge.com) -
-[The Wrap](https://www.thewrap.com)
+[The Wrap](https://www.thewrap.com) -
+[Washington Examiner](https://www.washingtonexaminer.com)
 
 Grouped in options:\
 *Condé Nast magazines* sites like\

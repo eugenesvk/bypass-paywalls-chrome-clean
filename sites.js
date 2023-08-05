@@ -2371,6 +2371,11 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
+  "Washington Examiner": {
+    domain: "washingtonexaminer.com",
+    allow_cookies: 1,
+    block_regex: /\.zephr\.com\/zephr-browser\//
+  },
   "Weltkunst": {
     domain: "weltkunst.de",
     allow_cookies: 1,
