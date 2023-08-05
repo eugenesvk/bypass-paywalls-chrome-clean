@@ -1923,6 +1923,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/suomensotilas\.fi\/wp-content\/plugins\/epflpw\/js\/pw\.js/
   },
+  "Swarajyamag": {
+    domain: "swarajyamag.com",
+    allow_cookies: 1,
+    remove_cookies: 1
+  },
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,

@@ -864,6 +864,7 @@ Grouped in options:\
 [Mid-Day](https://www.mid-day.com) -
 [Outlook](https://www.outlookindia.com) -
 [Outlook Business](https://www.outlookbusiness.com) -
+[Swarajyamag](https://swarajyamag.com) -
 [The Economic Times (ET Prime)](https://economictimes.indiatimes.com) -
 [The Financial Express](https://www.financialexpress.com) -
 [The Hindu](https://www.thehindu.com) -

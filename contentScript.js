@@ -4446,6 +4446,19 @@ else if (matchDomain('studocu.com')) {
   }, 1000);
 }
 
+else if (matchDomain('swarajyamag.com')) {
+  let paywall = document.querySelector('div#story-notification');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let non_subscriber_text = document.querySelector('div#non-subscriber-text');
+    if (non_subscriber_text)
+      non_subscriber_text.removeAttribute('id');
+    let subscriber_text = document.querySelectorAll('div.subscriber-text');
+    for (let elem of subscriber_text)
+      elem.removeAttribute('class');
+  }
+}
+
 else if (matchDomain('techinasia.com')) {
   let paywall = document.querySelector('.paywall-content');
   if (paywall && dompurify_loaded) {

@@ -364,7 +364,7 @@
   },
   "Odt.co.nz": {
     "allow_cookies": 1,
-    "block_regex": "my\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall",
+    "block_regex": "\\.odt\\.co\\.nz\\/bwtw\\/api\\/TheWall",
     "cs_code": "[{\"cond\":\"div[property='content:encoded']\", \"rm_attrib\":\"property\"}]",
     "domain": "odt.co.nz"
   },
@@ -465,10 +465,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
-  },
-  "Swarajyamag.com": {
-    "amp_redirect": "div#story-notification",
-    "domain": "swarajyamag.com"
   },
   "Tagesspiegel.de": {
     "add_ext_link": "div#paywal|div.article--paid",

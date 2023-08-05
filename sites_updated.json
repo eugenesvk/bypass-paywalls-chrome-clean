@@ -137,6 +137,13 @@
     "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
     "new_site": 1
   },
+  "Swarajyamag": {
+    "domain": "swarajyamag.com",
+    "allow_cookies": 1,
+    "remove_cookies": 1,
+    "cs_code": "[{\"cond\":\"div#story-notification\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div#non-subscriber-text\", \"rm_attrib\": \"id\"}, {\"cond\":\"div.subscriber-text\", \"rm_attrib\": \"class\"}]}]",
+    "new_site": 1
+  },
   "Telegraaf": {
     "domain": "telegraaf.nl",
     "allow_cookies": 1,
