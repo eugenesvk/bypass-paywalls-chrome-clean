@@ -72,6 +72,7 @@
     "*://*.ambito.com/*",
     "*://*.americanaffairsjournal.org/*",
     "*://*.americanbanker.com/*",
+    "*://*.americastestkitchen.com/*",
     "*://*.apollo-magazine.com/*",
     "*://*.ara.cat/*",
     "*://*.arabalears.cat/*",
@@ -776,5 +777,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.7.8"
+  "version": "3.2.7.9"
 }

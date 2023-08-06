@@ -185,6 +185,7 @@ Grouped in options:\
 [Better Programming](https://betterprogramming.pub) -
 [Towards Data Science](https://towardsdatascience.com)
 
+[America's Test Kitchen](https://www.americastestkitchen.com) -
 [Apollo Magazine](https://www.apollo-magazine.com) -
 [Artforum](https://www.artforum.com) -
 [Artnet](https://www.artnet.com) -

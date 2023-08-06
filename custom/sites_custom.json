@@ -10,6 +10,11 @@
     "allow_cookies": 1,
     "domain": "airmail.news"
   },
+  "Al-monitor.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body.nodetype--memo\", \"rm_class\":\"nodetype--memo\"}, {\"cond\":\"div.memo--callout--wrapper\",\"rm_elem\":1}]",
+    "domain": "al-monitor.com"
+  },
   "Arkansasonline.com": {
     "domain": "arkansasonline.com"
   },
@@ -60,6 +65,7 @@
     "add_ext_link": "div.paywall|div.entry-content",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.text-gradient\", \"rm_class\":\"text-gradient\"}]",
     "domain": "businessam.be"
   },
   "Businessnews.com.au": {
@@ -409,12 +415,6 @@
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
   },
-  "Rp-online.de": {
-    "add_ext_link": "div.paid-content|div[data-cy=\"article_content\"]",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "rp-online.de"
-  },
   "Schwaebische-post.de": {
     "allow_cookies": 1,
     "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",
@@ -496,11 +496,10 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "theday.com"
   },
-  "Thedispatch.com": {
-    "add_ext_link": "section.paywall-section|div.content",
-    "add_ext_link_type": "archive.is",
+  "Thedriftmag.com": {
     "allow_cookies": 1,
-    "domain": "thedispatch.com"
+    "block_regex": "\\.thedriftmag\\.com\\/wp-content\\/plugins\\/drift-paywall-plugin",
+    "domain": "thedriftmag.com"
   },
   "Theepochtimes.com": {
     "allow_cookies": 1,

@@ -52,6 +52,11 @@ var defaultSites = {
     domain: "ambito.com",
     remove_cookies_select_drop: ["TDNotesRead"]
   },
+  "America's Test Kitchen": {
+    domain: "americastestkitchen.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//
+  },
   "American Affairs": {
     domain: "americanaffairsjournal.org",
     allow_cookies: 1,

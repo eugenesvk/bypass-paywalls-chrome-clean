@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add America's Test Kitchen
 Add Autocar.co.uk
 Add Bar and Bench (India)
 Add Crikey.com.au
@@ -13,6 +14,7 @@ Fix Grupo Vocento (limit amp-redirect)
 Fix The Economic Times (update mobile redirect)
 Fix The Economist (interactive)
 Update custom sites (add_ext_link: Google webcache)
+Update popup (Clearthis.page)
 
 * v3.2.7.0 (2023-07-30)
 Add Mannheimer-Morgen.de (Haas)

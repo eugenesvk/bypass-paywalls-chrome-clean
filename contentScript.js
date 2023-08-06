@@ -312,7 +312,7 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.
     paywall.firstChild.before(googleWebcacheLink(url));
   }
   window.setTimeout(function () {
-    let banner = pageContains('div > h2 > div, div > div > h2', /(Read (the full story with|this story from)|Get unlimited access to)/);
+    let banner = pageContains('div > div > p', /author made this story available to/);
     if (banner.length)
       removeDOMElement(banner[0].parentNode.parentNode);
   }, 1000);

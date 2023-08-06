@@ -358,7 +358,7 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (!custom) {
           let isCustomSite = matchDomain(customSites_domains, domain);
           let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite) : '';
-          if (customSite_title && !rule.add_ext_link) {
+          if (customSite_title && !(rule.add_ext_link || ['swarajyamag.com'].includes(isCustomSite))) {
             // add default block_regex
             let block_regex_default = '';
             if (rule.hasOwnProperty('block_regex'))
@@ -462,7 +462,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_ch_esh_medias', '###_de_mhs', '###_nl_eu_ftm'];
+          let new_groups = ['###_de_mhs', '###_nl_eu_ftm'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();
@@ -1358,6 +1358,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
             } else if (group === '###_usa_townnews') {
               if (!dompurify_sites.includes(custom_domain))
                 dompurify_sites.push(custom_domain);
+              if (['berkshireeagle.com'].includes(custom_domain))
+                rules.useragent = 'googlebot';
             }
           } else
             rules = Object.values(customSites).filter(x => x.domain === group)[0];
