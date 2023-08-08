@@ -2720,8 +2720,8 @@ else if (matchDomain('spectator.co.uk')) {
 }
 
 else if (matchDomain('stylist.co.uk')) {
-  let paywall = document.querySelector('div.css-1agpii8');
-  if (paywall) {
+  let paywall = document.querySelector('div[data-testid="paywall-component"]');
+  if (paywall && dompurify_loaded) {
     removeDOMElement(paywall);
     let json_script = document.querySelector('script#__NEXT_DATA__');
     if (json_script) {
@@ -2732,37 +2732,42 @@ else if (matchDomain('stylist.co.uk')) {
           if (url_next && !window.location.pathname.endsWith(url_next))
             refreshCurrentTab();
           let pars = json.props.pageProps.data.post.acf.widgets;
-          let first_par = document.querySelector('p.css-12ac4a9');
+          let first_par = document.querySelector('main div[data-column="true"] > p');
           if (first_par) {
-            let par_class = first_par.getAttribute('class');
             let article = first_par.parentNode;
-            let teaser = article.querySelectorAll('div.css-1q9dbt6 > p');
+            let teaser = article.querySelectorAll('div > p:not([class])');
             removeDOMElement(...teaser);
             if (article) {
               let parser = new DOMParser();
               for (let par of pars) {
                 let elem = document.createElement('p');
-                elem.style = 'font-family: "Source Serif Pro"; font-size: 20px; line-height: 34px;';
                 if (par.paragraph) {
                   let content = par.paragraph;
-                  let content_new = parser.parseFromString('<div class="css-1q9dbt6">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
+                  let content_new = parser.parseFromString('<div>' + DOMPurify.sanitize(content) + '</div>', 'text/html');
                   elem = content_new.querySelector('div');
                 } else if (par.acf_fc_layout === 'heading') {
                   if (par.text)
                     elem.appendChild(document.createTextNode(par.text));
-                } else if (par.image) {
-                  let figure = document.createElement('figure');
-                  let img = document.createElement('img');
-                  img.src = par.image.url;
-                  img.alt = par.image.alt;
-                  img.style = mobile ? 'width: 320px;' : 'width: 640px;';
-                  figure.appendChild(img);
-                  if (par.image.caption || par.image.description) {
-                    let caption = document.createElement('figcaption');
-                    caption.innerText = par.image.caption + ' ' + par.image.description;
-                    figure.appendChild(caption);
+                } else if (['image', 'interactive_image'].includes(par.acf_fc_layout)) {
+                  let image_array = [];
+                  if (par.image)
+                    image_array = [par.image];
+                  else if (par.image_collection)
+                    image_array = par.image_collection;
+                  for (let img_elem of image_array) {
+                    let figure = document.createElement('figure');
+                    let img = document.createElement('img');
+                    img.src = img_elem.url;
+                    img.alt = img_elem.alt;
+                    img.style = mobile ? 'width: 320px;' : 'width: 640px;';
+                    figure.appendChild(img);
+                    if (img_elem.caption || img_elem.description || img_elem.alt) {
+                      let caption = document.createElement('figcaption');
+                      caption.innerText = img_elem.caption ? (img_elem.caption + ' ' + img_elem.description) : img_elem.alt;
+                      figure.appendChild(caption);
+                    }
+                    elem.appendChild(figure);
                   }
-                  elem.appendChild(figure);
                 } else if (par.acf_fc_layout === 'listicle') {
                   let ul = document.createElement('ul');
                   for (let sub_item of par.item) {
@@ -2777,7 +2782,7 @@ else if (matchDomain('stylist.co.uk')) {
                       li.innerText = sub_item.title;
                     if (sub_item.paragraph) {
                       let content = sub_item.paragraph;
-                      let content_new = parser.parseFromString('<div class="css-1q9dbt6">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
+                      let content_new = parser.parseFromString('<div>' + DOMPurify.sanitize(content) + '</div>', 'text/html');
                       let par_elem = content_new.querySelector('div');
                       li.appendChild(par_elem);
                     }
@@ -2815,12 +2820,11 @@ else if (matchDomain('stylist.co.uk')) {
                   }
                 } else if (!['newsletter_signup', 'pull-quote'].includes(par.acf_fc_layout))
                   console.log(par);
-                if (elem.hasChildNodes)
+                if (elem.hasChildNodes) {
+                  elem.style = 'font-family: "Source Serif Pro"; font-size: 20px; line-height: 34px;';
                   article.appendChild(elem);
+                }
               }
-              let div_nostyle = document.querySelectorAll('div.css-1q9dbt6 > *');
-              for (let elem of div_nostyle)
-                elem.style = 'font-family: "Source Serif Pro"; font-size: 20px; line-height: 34px;';
             }
           }
         }
