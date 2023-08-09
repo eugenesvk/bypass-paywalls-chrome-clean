@@ -969,9 +969,9 @@ var defaultSites = {
     domain: "harpers.org",
     block_regex: /\/harpers\.org\/wp-content\/themes\/timber\/static\/js\/modal.+\.js/
   },
-  "Harvard Business Review": {
+  "Harvard Business Review (do not block TinyPass-script externally)": {
     domain: "hbr.org",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /cdn\.cxense\.com\//
   },
   "Harvard Business Review China": {
     domain: "hbrchina.org",
@@ -2510,7 +2510,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "japantimes.co.jp", "kurier.at", "onet.pl"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

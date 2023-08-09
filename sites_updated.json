@@ -102,6 +102,11 @@
     "useragent": "facebookbot",
     "upd_version": "3.0.8.3"
   },
+  "Harvard Business Review": {
+    "domain": "hbr.org",
+    "block_regex": "cdn\\.cxense\\.com",
+    "upd_version": "3.2.8.2"
+  },
   "Mannheimer Morgen": {
     "domain": "mannheimer-morgen.de",
     "allow_cookies": 1,
@@ -119,6 +124,13 @@
     "allow_cookies": 1,
     "ld_json": "div.offerlist-wrapper|div.article-body|1",
     "upd_version": "3.2.6.0"
+  },
+  "Piano.io (+ TinyPass)": {
+    "domain": "piano.io",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "excluded_domains": ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"],
+    "upd_version": "3.2.8.2"
   },
   "Schwarzwälder Bote": {
     "domain": "schwarzwaelder-bote.de",
