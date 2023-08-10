@@ -248,7 +248,6 @@ Grouped in options:\
 [Prevention](https://www.prevention.com) -
 [Road & Track](https://www.roadandtrack.com) -
 [Runner's World](https://www.runnersworld.com) -
-[The Hollywood Reporter](https://www.hollywoodreporter.com) -
 [Town & Country](https://www.townandcountrymag.com) -
 [Women's Health](https://www.womenshealthmag.com)
 

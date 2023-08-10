@@ -563,5 +563,10 @@
     "allow_cookies": 1,
     "domain": "wuv.de",
     "ld_google_webcache": "div.paid-article|div.font-serif"
+  },
+  "Zeitzeichen.net": {
+    "allow_cookies": 1,
+    "block_regex": "\\/zeitzeichen\\.net\\/sites\\/default\\/files\\/js\\/js_.+\\.js",
+    "domain": "zeitzeichen.net"
   }
 }

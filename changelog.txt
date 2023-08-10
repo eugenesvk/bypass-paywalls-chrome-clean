@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add 4 more Lee Enterprises Group sites
+Remove The Hollywood Reporter (no paywall)
 Fix Harvard Business Review (js)
 Fix Stylist.co.uk (css)
 Fix The Toronto Star (homepage)

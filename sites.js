@@ -999,7 +999,6 @@ var defaultSites = {
       "esquire.com",
       "goodhousekeeping.com",
       "harpersbazaar.com",
-      "hollywoodreporter.com",
       "housebeautiful.com",
       "menshealth.com",
       "oprahdaily.com",
