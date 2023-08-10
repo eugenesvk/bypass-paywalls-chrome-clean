@@ -337,10 +337,14 @@ Grouped in options:\
 [San Francisco Chronicle](https://www.sfchronicle.com)\
 *Lee Enterprises Group* sites like (opt-in to custom sites for unlisted)\
 [Arizona Daily Star](https://tucson.com) -
+[Lincoln Journal Star](https://journalstar.com) -
 [Omaha World-Herald](https://omaha.com) -
 [Richmond Times-Dispatch](https://richmond.com) -
+[St. Louis Post-Dispatch](https://www.stltoday.com) -
 [The Buffalo News](https://buffalonews.com) -
+[The Times of Northwest Indiana](https://www.nwitimes.com) -
 [Tulsa World](https://tulsaworld.com) -
+[Wisconsin State Journal](https://madison.com) -
 [Winston-Salem Journal](https://www.journalnow.com)\
 *McClatchy Group* sites like (opt-in to custom sites for unlisted)\
 [Belleville News-Democrat](https://www.bnd.com) -

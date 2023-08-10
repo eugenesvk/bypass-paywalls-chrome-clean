@@ -4,35 +4,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com"
   },
-  "Australian Community Media (daily)": {
-    "domain": "###_au_comm_media",
-    "group": [
-      "bendigoadvertiser.com.au",
-      "bordermail.com.au",
-      "canberratimes.com.au",
-      "centralwesterndaily.com.au",
-      "dailyadvertiser.com.au",
-      "dailyliberal.com.au",
-      "examiner.com.au",
-      "illawarramercury.com.au",
-      "newcastleherald.com.au",
-      "northerndailyleader.com.au",
-      "standard.net.au",
-      "theadvocate.com.au",
-      "thecourier.com.au",
-      "westernadvocate.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "cs_code": "[{\"cond\":\"div[class^='gradient-mask-']\", \"rm_attrib\": \"class\", \"elems\":[{\"cond\":\"div.hidden\", \"rm_class\": \"hidden\"}]}]",
-    "upd_version": "3.2.5.3"
-  },
-  "Auto Motor und Sport": {
-    "domain": "auto-motor-und-sport.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.auto-motor-und-sport\\.de\\/thenewsbar\\/static\\/pw\\.js",
-    "new_site": 1
-  },
   "Autocar.co.uk": {
     "domain": "autocar.co.uk",
     "allow_cookies": 1,
@@ -56,32 +27,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
-  },
-  "Business Standard": {
-    "domain": "business-standard.com",
-    "allow_cookies": 1,
-    "ld_json": "div.subscribe-page|div.storycontent",
-    "upd_version": "3.2.6.0"
-  },
-  "Crain Communications": {
-    "domain": "###_usa_craincomm",
-    "group": [
-      "adage.com",
-      "autonews.com",
-      "chicagobusiness.com",
-      "crainscleveland.com",
-      "crainsdetroit.com",
-      "crainsnewyork.com",
-      "modernhealthcare.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|[\\.\\/]{domain}\\/.+\\/js\\/js_.+\\.js)",
-    "exception": [{
-        "domain": "autonews.com",
-        "block_regex": "(\\.tinypass\\.com\\/|\\.{domain}\\/.+\\/js\\/js_.+\\.js)"
-      }
-    ],
-    "upd_version": "3.2.5.9"
   },
   "Cxense": {
     "domain": "cxense.com",
@@ -132,27 +77,11 @@
     "excluded_domains": ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"],
     "upd_version": "3.2.8.2"
   },
-  "Schwarzwälder Bote": {
-    "domain": "schwarzwaelder-bote.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "useragent": "googlebot",
-    "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
-    "new_site": 1
-  },
   "Star Tribune": {
     "domain": "startribune.com",
     "remove_cookies_select_drop": ["client_id"],
     "cs_code": "[{\"cond\":\"div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
     "upd_version": "3.2.6.3"
-  },
-  "Stuttgarter Nachrichten": {
-    "domain": "stuttgarter-nachrichten.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "useragent": "googlebot",
-    "cs_code": "[{\"cond\":\"div.mod-paywall\", \"rm_elem\":1}]",
-    "new_site": 1
   },
   "Swarajyamag": {
     "domain": "swarajyamag.com",
@@ -160,12 +89,6 @@
     "remove_cookies": 1,
     "cs_code": "[{\"cond\":\"div#story-notification\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div#non-subscriber-text\", \"rm_attrib\": \"id\"}, {\"cond\":\"div.subscriber-text\", \"rm_attrib\": \"class\"}]}]",
     "new_site": 1
-  },
-  "Telegraaf": {
-    "domain": "telegraaf.nl",
-    "allow_cookies": 1,
-    "ld_json": "data-hydrate[data-name='PaywallHandler']|div.DetailBodyBlocks",
-    "upd_version": "3.2.4.3"
   },
   "The Athletic": {
     "domain": "###_usa_theathletic",
@@ -208,11 +131,32 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
+  "The Toronto Star (+ local TorStar sites)": {
+    "domain": "###_ca_torstar",
+    "group": [
+      "niagarafallsreview.ca",
+      "stcatharinesstandard.ca",
+      "thepeterboroughexaminer.com",
+      "therecord.com",
+      "thespec.com",
+      "thestar.com",
+      "wellandtribune.ca"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.(com|ca)\\/shared-content\\/art\\/tncms\\/api\\/access\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_dompurify": 1,
+    "upd_version": "3.2.8.3"
+  },
   "The Verge (newsletter)": {
     "domain": "theverge.com",
     "allow_cookies": 1,
     "ld_json": "div.bg-paywall-fade|div.duet--article--article-body-component-container",
     "new_site": 1
+  },
+  "TownNews sites (Blox CMS)": {
+    "domain": "###_usa_townnews",
+    "block_regex_general": "\\/shared-content\\/art\\/tncms\\/api\\/access\\.js",
+    "upd_version": "3.2.8.3"
   },
   "Verlagsgruppe Rhein Main": {
     "allow_cookies": 1,

@@ -1277,13 +1277,17 @@ var defaultSites = {
     group: [
       "buffalonews.com",
       "journalnow.com",
+      "journalstar.com",
+      "madison.com",
+      "nwitimes.com",
       "omaha.com",
       "richmond.com",
+      "stltoday.com",
       "tucson.com",
       "tulsaworld.com"
     ],
     allow_cookies: 1,
-    block_regex: /(api\.bntech\.io\/js\/|\.com\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /\.com\/shared-content\/art\/tncms\/api\/access\.js/
   },
   "Les Échos": {
     domain: "lesechos.fr",
@@ -2269,7 +2273,7 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: /(\.(com|ca)\/shared-content\/art\/tncms\/user\/user\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+    block_regex: /(\.(com|ca)\/shared-content\/art\/tncms\/api\/access\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
     cs_dompurify: 1
   },
   "The Verge (newsletter)": {
@@ -2540,7 +2544,7 @@ var defaultSites = {
   },
   "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews",
-    block_regex_general: /\/shared-content\/art\/tncms\/user\/user\.js/
+    block_regex_general: /\/shared-content\/art\/tncms\/api\/access\.js/
   },
   "TribDss": {
     domain: "tribdss.com",
