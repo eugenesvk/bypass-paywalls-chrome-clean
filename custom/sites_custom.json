@@ -529,11 +529,6 @@
     "domain": "thetexan.news",
     "useragent": "googlebot"
   },
-  "Theweek.com": {
-    "allow_cookies": 1,
-    "domain": "theweek.com",
-    "useragent": "googlebot"
-  },
   "Tijorifinance.com": {
     "allow_cookies": 1,
     "domain": "tijorifinance.com",

@@ -667,6 +667,8 @@
     "*://*.thestate.com/*",
     "*://*.thetimes.co.uk/*",
     "*://*.theverge.com/*",
+    "*://*.theweek.co.uk/*",
+    "*://*.theweek.com/*",
     "*://*.thewest.com.au/*",
     "*://*.thewrap.com/*",
     "*://*.thueringer-allgemeine.de/*",
@@ -779,5 +781,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.8.4"
+  "version": "3.2.8.5"
 }

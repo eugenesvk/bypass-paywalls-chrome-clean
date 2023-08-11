@@ -218,6 +218,7 @@ Grouped in options:\
 [The Point Magazine](https://thepointmag.com) -
 [The Spectator World](https://thespectator.com) -
 [The Verge](https://www.theverge.com) -
+[The Week](https://theweek.com) -
 [The Wrap](https://www.thewrap.com) -
 [Washington Examiner](https://www.washingtonexaminer.com)
 
@@ -444,6 +445,7 @@ Grouped in options:\
 [The Telegraph](https://www.telegraph.co.uk) -
 [The Times (link to archive.is)](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk) -
+[The Week](https://www.theweek.co.uk) -
 [UnHerd](https://unherd.com)
 
 Grouped in options:\

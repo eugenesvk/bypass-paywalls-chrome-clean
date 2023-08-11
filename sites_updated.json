@@ -153,6 +153,16 @@
     "ld_json": "div.bg-paywall-fade|div.duet--article--article-body-component-container",
     "new_site": 1
   },
+  "The Week - UK": {
+    "domain": "theweek.co.uk",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
+  "The Week - USA": {
+    "domain": "theweek.com",
+    "allow_cookies": 1,
+    "useragent": "googlebot"
+  },
   "Times of India": {
     "domain": "###_timesofindia",
     "group": [
