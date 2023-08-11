@@ -1977,6 +1977,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
   },
+  "The American Conservative": {
+    domain: "theamericanconservative.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "The American Interest": {
     domain: "the-american-interest.com",
     allow_cookies: 1

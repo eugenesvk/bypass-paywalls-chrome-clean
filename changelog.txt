@@ -4,12 +4,14 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add 4 more Lee Enterprises Group sites
+Add The American Conservative
 Add The Week (UK & USA)
 Remove The Hollywood Reporter (no paywall)
 Fix Harvard Business Review (js)
 Fix Stylist.co.uk (css)
 Fix The Toronto Star (homepage)
 Fix Times of India (css)
+Fix mobile user-agent for Google webcache (proper)
 
 * v3.2.8.0 (2023-08-06)
 Add America's Test Kitchen

@@ -304,7 +304,7 @@ if (ext_api.runtime) {
 
 // Content workarounds/domain
 
-if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || document.querySelector('script[src*=".medium.com/"]')) {
+if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDomain('webcache.googleusercontent.com') && document.querySelector('script[src*=".medium.com/"]'))) {
   let url = window.location.href;
   let paywall = document.querySelector('article.meteredContent');
   if (paywall) {
@@ -4508,6 +4508,44 @@ else if (matchDomain(['techtarget.com', 'computerweekly.com', 'lemagit.fr'])) {
 else if (matchDomain('the-american-interest.com')) {
   let counter = document.getElementById('article-counter');
   removeDOMElement(counter);
+}
+
+else if (matchDomain('theamericanconservative.com')) {
+  let paywall = document.querySelector('section.c-blog-post__body--locked');
+  if (paywall && dompurify_loaded) {
+    paywall.classList.remove('c-blog-post__body--locked');
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    let json_url = json_url_dom.href;
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.content.rendered;
+          if (json_text.includes('<p class="has-drop-cap">')) {
+            let split = json_text.split(/(<p class="has-drop-cap">)/);
+            json_text = split[1] + split[2];
+          }
+          let content = document.querySelector('div.c-blog-post__content');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.innerHTML = '';
+            content.appendChild(content_new, content);
+          }
+        });
+      }
+    });
+  } else {
+    let img_dark = document.querySelector('div.c-hero-article__image-img.o-image');
+    if (img_dark)
+      img_dark.removeAttribute('class');
+  }
+  let modal = document.querySelector('div#emailsub-modal');
+  removeDOMElement(modal);
+  let noscroll = document.querySelector('body.modal-open');
+  if (noscroll)
+    noscroll.classList.remove('modal-open');
 }
 
 else if (matchDomain('theathletic.com')) {

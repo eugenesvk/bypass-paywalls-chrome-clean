@@ -628,6 +628,7 @@
     "*://*.theadvocate.com.au/*",
     "*://*.theadvocate.com/*",
     "*://*.theage.com.au/*",
+    "*://*.theamericanconservative.com/*",
     "*://*.theartnewspaper.com/*",
     "*://*.theathletic.com/*",
     "*://*.theatlantic.com/*",
@@ -781,5 +782,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.8.5"
+  "version": "3.2.8.6"
 }

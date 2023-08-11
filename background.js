@@ -122,10 +122,10 @@ function initSetRules() {
 }
 
 const userAgentDesktopG = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
-const userAgentMobileG = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)";
+const userAgentMobileG = "Chrome/115.0.5790.171 Mobile Safari/537.36 (compatible ; Googlebot/2.1 ; +http://www.google.com/bot.html)";
 
 const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
-const userAgentMobileB = "Chrome/80.0.3987.92 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
+const userAgentMobileB = "Chrome/115.0.5790.171 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
 
 const userAgentDesktopF = 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
 
@@ -626,7 +626,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // m.faz.net set user-agent to mobile
-const userAgentMobile = "Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Mobile Safari/537.36";
+const userAgentMobile = "Mozilla/5.0 (Linux; Android 12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.171 Mobile Safari/537.36";
 ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   if (!isSiteEnabled(details)) {
     return;
@@ -647,7 +647,7 @@ ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
   ["blocking", "requestHeaders"]);
 
 // webcache.googleusercontent.com set user-agent to Chrome (on Firefox for Android)
-if ((typeof browser !== 'object') && navigator_ua_mobile) {
+if ((typeof browser === 'object') && navigator_ua_mobile) {
   ext_api.webRequest.onBeforeSendHeaders.addListener(function (details) {
     let headers = details.requestHeaders;
     headers = headers.map(function (header) {
