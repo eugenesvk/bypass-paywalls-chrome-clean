@@ -8,6 +8,7 @@ Remove The Hollywood Reporter (no paywall)
 Fix Harvard Business Review (js)
 Fix Stylist.co.uk (css)
 Fix The Toronto Star (homepage)
+Fix Times of India (css)
 
 * v3.2.8.0 (2023-08-06)
 Add America's Test Kitchen

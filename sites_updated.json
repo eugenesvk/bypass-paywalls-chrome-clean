@@ -153,6 +153,22 @@
     "ld_json": "div.bg-paywall-fade|div.duet--article--article-body-component-container",
     "new_site": 1
   },
+  "Times of India": {
+    "domain": "###_timesofindia",
+    "group": [
+      "timesofindia.com",
+      "timesofindia.indiatimes.com"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "exception": [{
+        "domain": "timesofindia.indiatimes.com",
+        "allow_cookies": 1,
+        "amp_redirect": "div[id^='story-blocker]"
+      }
+    ],
+    "upd_version": "3.2.8.4"
+  },
   "TownNews sites (Blox CMS)": {
     "domain": "###_usa_townnews",
     "block_regex_general": "\\/shared-content\\/art\\/tncms\\/api\\/access\\.js",
