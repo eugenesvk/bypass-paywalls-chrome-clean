@@ -143,6 +143,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "eluniversal.com.mx"
   },
+  "Energy-storage.news": {
+    "allow_cookies": 1,
+    "domain": "energy-storage.news",
+    "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
+  },
   "Eviemagazine.com": {
     "allow_cookies": 1,
     "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
@@ -406,6 +411,11 @@
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "pressherald.com"
+  },
+  "Pv-tech.org": {
+    "allow_cookies": 1,
+    "domain": "pv-tech.org",
+    "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
   },
   "Quickmath.com": {
     "domain": "quickmath.com"

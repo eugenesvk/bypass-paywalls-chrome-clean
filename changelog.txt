@@ -12,6 +12,7 @@ Fix Stylist.co.uk (css)
 Fix The Toronto Star (homepage)
 Fix Times of India (css)
 Fix mobile user-agent for Google webcache (proper)
+Update custom sites (ld_json_url)
 
 * v3.2.8.0 (2023-08-06)
 Add America's Test Kitchen

@@ -82,6 +82,8 @@ var cs_code;
 var ld_json;
 // load text from json (script#__NEXT_DATA__)
 var ld_json_next;
+// load text from json (link[rel="alternate"][type="application/json"][href])
+var ld_json_url;
 // load text from Google webcache
 var ld_google_webcache;
 // add external link to article
@@ -109,6 +111,7 @@ function initSetRules() {
   cs_code = {};
   ld_json = {};
   ld_json_next = {};
+  ld_json_url = {};
   ld_google_webcache = {};
   add_ext_link = {};
   block_js_custom = [];
@@ -266,7 +269,7 @@ function addRules(domain, rule) {
   if (rule.amp_unhide > 0 && !amp_unhide.includes(domain))
     amp_unhide.push(domain);
   if (rule.amp_redirect)
-    amp_redirect[domain] = rule.amp_redirect.paywall ? rule.amp_redirect : {paywall: rule.amp_redirect};
+    amp_redirect[domain] = rule.amp_redirect;
   if (rule.cs_code) {
     if (typeof rule.cs_code === 'string') {
       try {
@@ -282,9 +285,11 @@ function addRules(domain, rule) {
     ld_json[domain] = rule.ld_json;
   if (rule.ld_json_next)
     ld_json_next[domain] = rule.ld_json_next;
+  if (rule.ld_json_url)
+    ld_json_url[domain] = rule.ld_json_url;
   if (rule.ld_google_webcache)
     ld_google_webcache[domain] = rule.ld_google_webcache;
-  if (rule.ld_json || rule.ld_json_next || rule.ld_google_webcache || rule.cs_dompurify)
+  if (rule.ld_json || rule.ld_json_next || rule.ld_json_url || rule.ld_google_webcache || rule.cs_dompurify)
     if (!dompurify_sites.includes(domain))
       dompurify_sites.push(domain);
   if (rule.add_ext_link && rule.add_ext_link_type)
@@ -789,23 +794,26 @@ if (typeof browser !== 'object') {
       bg2csData.optin_setcookie = 1;
     if (matchUrlDomain(amp_unhide, url))
       bg2csData.amp_unhide = 1;
-    let amp_redirect_domain = '';
-    if (amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url))
+    let amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url);
+    if (amp_redirect_domain)
       bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
-    let cs_code_domain = '';
-    if (cs_code_domain = matchUrlDomain(Object.keys(cs_code), url))
+    let cs_code_domain = matchUrlDomain(Object.keys(cs_code), url);
+    if (cs_code_domain)
       bg2csData.cs_code = cs_code[cs_code_domain];
-    let ld_json_domain = '';
-    if (ld_json_domain = matchUrlDomain(Object.keys(ld_json), url))
+    let ld_json_domain = matchUrlDomain(Object.keys(ld_json), url);
+    if (ld_json_domain)
       bg2csData.ld_json = ld_json[ld_json_domain];
-    let ld_json_next_domain = '';
-    if (ld_json_next_domain = matchUrlDomain(Object.keys(ld_json_next), url))
+    let ld_json_next_domain = matchUrlDomain(Object.keys(ld_json_next), url);
+    if (ld_json_next_domain)
       bg2csData.ld_json_next = ld_json_next[ld_json_next_domain];
-    let ld_google_webcache_domain = '';
-    if (ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url))
+    let ld_json_url_domain = matchUrlDomain(Object.keys(ld_json_url), url);
+    if (ld_json_url_domain)
+      bg2csData.ld_json_url = ld_json_url[ld_json_url_domain];
+    let ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url);
+    if (ld_google_webcache_domain)
       bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];
-    let add_ext_link_domain = '';
-    if (add_ext_link_domain = matchUrlDomain(Object.keys(add_ext_link), url))
+    let add_ext_link_domain = matchUrlDomain(Object.keys(add_ext_link), url);
+    if (add_ext_link_domain)
       bg2csData.add_ext_link = add_ext_link[add_ext_link_domain];
     let tab_runs = 5;
     for (let n = 0; n < tab_runs; n++) {
