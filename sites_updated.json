@@ -115,6 +115,18 @@
     "block_regex": "cdn\\.cxense\\.com\\/cx\\.js",
     "upd_version": "3.2.6.6"
   },
+  "The Economic Times (ET Prime)": {
+    "domain": "###_economictimes",
+    "group": [
+      "economictimes.com",
+      "economictimes.indiatimes.com"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "cs_dompurify": 1,
+    "cs_code": "[{\"cond\":\"div.article_wrap[style]\", \"rm_attrib\":\"style\"}]",
+    "upd_version": "3.2.8.9"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

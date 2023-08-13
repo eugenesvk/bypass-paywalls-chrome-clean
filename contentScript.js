@@ -3609,6 +3609,9 @@ else if (matchDomain('economictimes.indiatimes.com')) {
     let page_content = document.querySelector('div.pageContent:not([style])');
     if (page_content)
       page_content.setAttribute('style', 'height: auto !important;');
+    let article_wrap = document.querySelector('div.article_wrap[style]');
+    if (article_wrap)
+      article_wrap.removeAttribute('style');
   }
 }
 

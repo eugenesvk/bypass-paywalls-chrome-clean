@@ -195,7 +195,7 @@
     "allow_cookies": 1,
     "domain": "gp.se"
   },
-  "Gplanet.co.il": {
+  "Gplanet.co.il (not lectures)": {
     "allow_cookies": 1,
     "domain": "gplanet.co.il",
     "ld_json": "div.subscription-form|div.content-inner"
