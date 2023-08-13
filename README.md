@@ -646,6 +646,7 @@ Grouped in options:\
 *Gruppo GEDI.it* sites like\
 [Italian.tech](https://www.italian.tech) -
 [L'Espresso](https://espresso.repubblica.it) -
+[La Stampa](https://www.lastampa.it) -
 [Le Scienze](https://www.lescienze.it)
 
 [Il Messaggero](https://www.ilmessaggero.it) and regional sites like

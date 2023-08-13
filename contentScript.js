@@ -27,7 +27,7 @@ var fr_groupe_ebra_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.fr', '
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'ladepeche.fr', 'lindependant.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr', 'rugbyrama.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
-var it_gedi_domains = ['italian.tech', 'lescienze.it', 'repubblica.it'];
+var it_gedi_domains = ['italian.tech', 'lastampa.it', 'lescienze.it', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
@@ -2112,14 +2112,27 @@ else if (matchDomain(it_gedi_domains)) {
         video.parentNode.replaceChild(elem, video);
       }
     }
+  } else if (matchDomain('lastampa.it')) {
+    if (window.location.pathname.includes('/news/')) {
+      if (!window.location.pathname.match(/\amp(\/)?$/)) {
+        csDoneOnce = true;
+        let story_text = document.querySelector('div.story__text');
+        if (!story_text)
+          refreshCurrentTab();
+        let modal = document.querySelector('aside#widgetDP');
+        removeDOMElement(modal);
+      } else
+        ampToHtml();
+    }
   } else {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
       let paywall = document.querySelector('div#paywall');
-      let ads = document.querySelectorAll('div[id^="adv"]');
-      removeDOMElement(paywall, ...ads);
+      removeDOMElement(paywall);
     } else
       ampToHtml();
   }
+  let ads = document.querySelectorAll('div[id^="adv"]');
+  removeDOMElement(...ads);
 }
 
 else if (matchDomain('money.it')) {

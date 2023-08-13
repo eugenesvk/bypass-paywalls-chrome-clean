@@ -52,6 +52,11 @@
     "block_regex": "cdn\\.cxense\\.com",
     "upd_version": "3.2.8.2"
   },
+  "La Stampa": {
+    "domain": "lastampa.it",
+    "block_js_inline": "\\.lastampa\\.it",
+    "remove_cookies_select_drop": ["blaize_session"]
+  },
   "Mannheimer Morgen": {
     "domain": "mannheimer-morgen.de",
     "allow_cookies": 1,

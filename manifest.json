@@ -375,6 +375,7 @@
     "*://*.larioja.com/*",
     "*://*.lasegunda.com/*",
     "*://*.lasprovincias.es/*",
+    "*://*.lastampa.it/*",
     "*://*.latercera.com/*",
     "*://*.latimes.com/*",
     "*://*.latribune.fr/*",
@@ -782,5 +783,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.8.7"
+  "version": "3.2.8.8"
 }
