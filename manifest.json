@@ -517,7 +517,6 @@
     "*://*.paris-normandie.fr/*",
     "*://*.parismatch.com/*",
     "*://*.parool.nl/*",
-    "*://*.pe.com/*",
     "*://*.pelotonmagazine.com/*",
     "*://*.penews.com/*",
     "*://*.pennlive.com/*",
@@ -534,6 +533,7 @@
     "*://*.popularmechanics.com/*",
     "*://*.post-gazette.com/*",
     "*://*.precisiononcologynews.com/*",
+    "*://*.pressenterprise.com/*",
     "*://*.prevention.com/*",
     "*://*.profi.de/*",
     "*://*.project-syndicate.org/*",
@@ -783,5 +783,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.9.0"
+  "version": "3.2.9.1"
 }

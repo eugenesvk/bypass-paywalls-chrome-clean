@@ -1424,7 +1424,7 @@ var defaultSites = {
       "eastbaytimes.com",
       "mercurynews.com",
       "ocregister.com",
-      "pe.com",
+      "pressenterprise.com",
       "twincities.com"
     ],
     allow_cookies: 1,

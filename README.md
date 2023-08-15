@@ -50,7 +50,7 @@ Specifically for the add-on you can also use Firefox Beta or a Firefox clone lik
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
 * add-on will stay active & automatically updates to the latest version
-*  in add-ons it will be labeled as not yet available and also has no more option to enable the add-on in private browsing
+* in add-ons it will be labeled as not yet available and also has no more option to enable the add-on in private browsing (in Firefox 116+ it may only show the option on automatic update of the add-on)
 
 The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url (Settings > Advanced settings > Sideload XPI).\
 No option to enable the add-on in private browsing though.
@@ -367,7 +367,7 @@ Grouped in options:\
 [St. Paul Pioneer Press](https://www.twincities.com) -
 [The Denver Post](https://www.denverpost.com) -
 [The Mercury News](https://www.mercurynews.com) -
-[The Press-Enterprise](https://www.pe.com)\
+[The Press-Enterprise](https://www.pressenterprise.com)\
 *[The Atlanta Journal-Constitution](https://www.ajc.com) + Cox First Media* (opt-in to custom sites)\
 *TownNews sites (Blox CMS)* sites (opt-in to custom sites)\
 *Tribune Publishing Company* sites like\
