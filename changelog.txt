@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Delinian Group
+Remove Initium Media (fix obsolete)
 Fix The Press-Enterprise (new domain)
 
 * v3.2.9.0 (2023-08-13)

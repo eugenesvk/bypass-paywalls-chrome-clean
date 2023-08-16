@@ -4773,11 +4773,6 @@ else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
   insert_script(hindu_main);
 }
 
-else if (matchDomain('theinitium.com')) {
-  let paywall = document.querySelector('section.c-wall');
-  removeDOMElement(paywall);
-}
-
 else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
   let paywall = pageContains('div.font-mono', /\Read this article and many more by subscribing today/);
   if (paywall.length) {
