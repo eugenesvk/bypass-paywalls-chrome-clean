@@ -3657,14 +3657,22 @@ else if (matchDomain('euobserver.com')) {
     div_hidden.classList.remove('show');
 }
 
-else if (matchDomain('euromoney.com')) {
+else if (matchDomain(['euromoney.com', 'globalcapital.com', 'iflr.com', 'insuranceinsider.com', 'institutionalinvestor.com', 'internationaltaxreview.com', 'managingip.com', 'trading-risk.com'])) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.paywall');
+  let paywall_sel = 'div.paywall';
+  let article_sel = 'div[class*="-articleContainer"]';
+  if (matchDomain(['insuranceinsider.com', 'trading-risk.com'])) {
+    paywall_sel = 'div[class*="-articleContainer"] div.sectionBlock';
+  } else if (matchDomain('institutionalinvestor.com')) {
+    paywall_sel = 'div.call_to_action';
+    article_sel = 'div.Page-articleBody';
+  }
+  let paywall = document.querySelector(paywall_sel);
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.Paywall-content');
+    replaceDomElementExt(url_cache, true, false, article_sel);
   }
   let fade = document.querySelector('div[style*="background-image: linear-gradient"]');
   removeDOMElement(fade);

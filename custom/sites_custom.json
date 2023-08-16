@@ -226,11 +226,6 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
-  "Iflr.com": {
-    "allow_cookies": 1,
-    "domain": "iflr.com",
-    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
-  },
   "Ilglobo.com": {
     "allow_cookies": 1,
     "domain": "ilglobo.com",
@@ -244,11 +239,6 @@
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
-  },
-  "Internationaltaxreview.com": {
-    "allow_cookies": 1,
-    "domain": "internationaltaxreview.com",
-    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
   },
   "Investmentweek.co.uk": {
     "allow_cookies": 1,
@@ -309,11 +299,6 @@
     "allow_cookies": 1,
     "domain": "makorrishon.co.il",
     "useragent": "googlebot"
-  },
-  "Managingip.com": {
-    "allow_cookies": 1,
-    "domain": "managingip.com",
-    "ld_google_webcache": "div.paywall|div.ArticlePage-articleContainer"
   },
   "Manilatimes.net": {
     "allow_cookies": 1,

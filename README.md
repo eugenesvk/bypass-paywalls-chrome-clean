@@ -421,7 +421,6 @@ Grouped in options:\
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Business Post](https://www.businesspost.ie) -
 [Citywire](https://www.citywire.com) -
-[Euromoney](https://www.euromoney.com) -
 [Evening Standard](https://www.standard.co.uk) -
 [Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
@@ -450,6 +449,15 @@ Grouped in options:\
 [UnHerd](https://unherd.com)
 
 Grouped in options:\
+*Delinian Group* sites like\
+[Euromoney](https://www.euromoney.com) -
+[GlobalCapital](https://www.globalcapital.com) -
+[Institutional Investor](https://www.institutionalinvestor.com) -
+[Insurance Insider](https://www.insuranceinsider.com) -
+[International Financial Law Review](https://www.iflr.com) -
+[International Tax Review](https://www.internationaltaxreview.com) -
+[Managing Intellectual Property](https://www.managingip.com) -
+[Trading Risk](https://www.trading-risk.com)\
 *National World Publishing* sites like (opt-in to custom sites for unlisted)\
 [The Scotsman](https://www.scotsman.com) -
 [Yorkshire Post](https://www.yorkshirepost.co.uk)
