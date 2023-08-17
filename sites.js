@@ -1140,11 +1140,13 @@ var defaultSites = {
   },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.zephr\.com\/zephr\/decide/
   },
   "Kölnische Rundschau": {
     domain: "rundschau-online.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.zephr\.com\/zephr\/decide/
   },
   "Krautreporter.de": {
     domain: "krautreporter.de"

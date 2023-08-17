@@ -946,21 +946,36 @@ else if (matchDomain('krautreporter.de')) {
 }
 
 else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
-  let paywall = document.querySelector('div[data-tm-placeholder]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let span_hidden = document.querySelector('div.dm-paint');
-    if (span_hidden)
-      span_hidden.removeAttribute('class');
-  } else {
-    let paywall_new = document.querySelector('div.paywalled-content');
-    if (paywall_new)
-      paywall_new.removeAttribute('class');
-    let wrapper = document.querySelector('div.dm-paywall-wrapper');
-    removeDOMElement(wrapper);
-  }
+  window.setTimeout(function () {
+    let paywall = document.querySelector('div.dm-paywall-wrapper');
+    if (paywall) {
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        removeDOMElement(paywall);
+        try {
+          let json = JSON.parse(json_script.text);
+          if (json && json['@graph']) {
+            let json_data = json['@graph'].filter(x => x.articleBody)[0];
+            let url_json = json_data['@id'];
+            if (url_json && !url_json.includes(window.location.pathname))
+              refreshCurrentTab();
+            let json_text = json_data.articleBody;
+            let article = document.querySelector('article');
+            if (json_text && article) {
+              let article_new = document.createElement('p');
+              article_new.setAttribute('class', 'dm-paragraph my-8 dm-article-content-width');
+              article_new.innerText = json_text;
+              article.appendChild(article_new);
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    }
+  }, 1000);
   let banners = document.querySelectorAll('div.dm-slot, div[id^="taboola-feed"]');
-  removeDOMElement(...banners);
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('kurier.at')) {

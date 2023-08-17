@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Delinian Group
 Remove Initium Media (fix obsolete)
+Fix Ksta.de & Rundschau-online.de (json)
 Fix The Press-Enterprise (new domain)
 
 * v3.2.9.0 (2023-08-13)
@@ -315,7 +316,7 @@ Update custom sites (add_ext_link)
 * v3.0.5.0 (2023-02-12)
 Add L'Informe (fr)
 Add LePoint.fr
-Fix Koelner Stadt-Anzeiger
+Fix Ksta.de
 Fix Leaky Paywall (identify site)
 Fix LesEchos.fr (json)
 Fix McClatchy Group (amp-redirect)
@@ -483,7 +484,7 @@ Remove GElocal.it & Huffintonpost.it (fix obsolete)
 Remove Il Secolo XIX, La Stampa & Limes Online (fix obsolete)
 Fix Cmjornal.pt
 Fix Grupo Vocento
-Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
+Fix Ksta.de & Rundschau-online.de
 Fix La Croix
 Fix NHST Media Group
 Fix Tagesspiegel.de (link to archive.is)
@@ -686,7 +687,7 @@ Update custom sites (import from GitLab)
 * v2.7.6.0 (2022-07-17)
 Add The Japan Times
 Fix ilTirreno.it & LaNuovaSardegna.it
-Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
+Fix Ksta.de & Rundschau-online.de
 Fix Nrc.nl
 Fix NYTimes (Cooking)
 Update popup (archive-links)
@@ -729,7 +730,7 @@ Remove Valor Economico (fix obsolete)
 Fix Business-standard.com
 Fix El Mercurio
 Fix Helsingin Sanomat (dynamic-json)
-Fix Koelner Stadt-Anzeiger & Koelnische Rundschau
+Fix Ksta.de & Rundschau-online.de
 Fix LesEchos.fr
 Fix Nautilus
 Fix Repubblica.it & LaStampa.it (videos-gtm)
@@ -1019,7 +1020,7 @@ Fix National Geographic USA (magazine)
 Remove tabs-permission (amo - Firefox 86+)
 
 * v2.4.7.0 (2021-12-12)
-Add Koelner Stadt-Anzeiger & Koelnische Rundschau
+Add Ksta.de & Rundschau-online.de
 Add The (New Orleans) Advocate
 Remove Caixin Global (fix obsolete)
 Fix Bloomberg (subscriber-only)

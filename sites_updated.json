@@ -2,19 +2,14 @@
   "America's Test Kitchen": {
     "domain": "americastestkitchen.com",
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com"
+    "block_regex": "\\.tinypass\\.com",
+    "upd_version": "3.2.7.9"
   },
   "Autocar.co.uk": {
     "domain": "autocar.co.uk",
     "allow_cookies": 1,
     "ld_google_webcache": "div.ms-block,div.register-block|div.content-wrapper",
-    "new_site": 1
-  },
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_9G4.+\\.js",
-    "upd_version": "3.2.6.6"
+    "upd_version": "3.2.7.5"
   },
   "Bar and Bench": {
     "domain": "barandbench.com",
@@ -28,24 +23,11 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "Cxense": {
-    "domain": "cxense.com",
-    "allow_cookies": 1,
-    "block_regex_general": "cdn\\.cxense\\.com",
-    "excluded_domains": ["bizjournals.com"],
-    "upd_version": "3.2.6.6"
-  },
   "EUobserver": {
     "domain": "euobserver.com",
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.membership-upsell.show\", \"rm_class\":\"show\"}]",
     "upd_version": "3.2.7.4"
-  },
-  "Haaretz English": {
-    "domain": "haaretz.com",
-    "allow_cookies": 1,
-    "useragent": "facebookbot",
-    "upd_version": "3.0.8.3"
   },
   "Harvard Business Review": {
     "domain": "hbr.org",
@@ -57,24 +39,6 @@
     "block_js_inline": "\\.lastampa\\.it",
     "remove_cookies_select_drop": ["blaize_session"]
   },
-  "Mannheimer Morgen": {
-    "domain": "mannheimer-morgen.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot"
-  },
-  "New Scientist": {
-    "domain": "newscientist.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "cs_dompurify": 1,
-    "upd_version": "3.2.6.2"
-  },
-  "Nordwest Zeitung": {
-    "domain": "nwzonline.de",
-    "allow_cookies": 1,
-    "ld_json": "div.offerlist-wrapper|div.article-body|1",
-    "upd_version": "3.2.6.0"
-  },
   "Piano.io (+ TinyPass)": {
     "domain": "piano.io",
     "allow_cookies": 1,
@@ -82,18 +46,12 @@
     "excluded_domains": ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"],
     "upd_version": "3.2.8.2"
   },
-  "Star Tribune": {
-    "domain": "startribune.com",
-    "remove_cookies_select_drop": ["client_id"],
-    "cs_code": "[{\"cond\":\"div.ReactModalPortal\", \"rm_elem\": 1}, {\"cond\":\"body.ReactModal__Body--open\", \"rm_class\": \"ReactModal__Body--open\"}]",
-    "upd_version": "3.2.6.3"
-  },
   "Swarajyamag": {
     "domain": "swarajyamag.com",
     "allow_cookies": 1,
     "remove_cookies": 1,
     "cs_code": "[{\"cond\":\"div#story-notification\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div#non-subscriber-text\", \"rm_attrib\": \"id\"}, {\"cond\":\"div.subscriber-text\", \"rm_attrib\": \"class\"}]}]",
-    "new_site": 1
+    "upd_version": "3.2.7.8"
   },
   "The Athletic": {
     "domain": "###_usa_theathletic",
@@ -103,17 +61,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\/theathletic\\.com\\/_next\\/static\\/chunks\\/pages\\/article\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "upd_version": "3.2.1.1"
-  },
-  "The Atlantic": {
-    "domain": "theatlantic.com",
-    "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/pages\\/.+\\/archive",
-    "remove_cookies_select_drop": ["articleViews"],
-    "upd_version": "3.0.3.8"
-  },
-  "The Business Journals (free articles only": {
-    "domain": "bizjournals.com",
-    "block_regex": "cdn\\.cxense\\.com\\/cx\\.js",
-    "upd_version": "3.2.6.6"
   },
   "The Economic Times (ET Prime)": {
     "domain": "###_economictimes",
@@ -133,13 +80,6 @@
     "block_regex": "\\.tinypass\\.com",
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
-  },
-  "The Japan Times (recent/last 2 months articles only; do not block Piano.io-script externally)": {
-    "domain": "japantimes.co.jp",
-    "block_regex": "cdn\\.cxense\\.com",
-    "remove_cookies_select_drop": ["xbc"],
-    "ld_json": "div.blocker > div.tp-container-inner|div.article-body|1",
-    "upd_version": "3.2.6.4"
   },
   "The New York Times": {
     "domain": "nytimes.com",
@@ -164,21 +104,17 @@
     "cs_dompurify": 1,
     "upd_version": "3.2.8.3"
   },
-  "The Verge (newsletter)": {
-    "domain": "theverge.com",
-    "allow_cookies": 1,
-    "ld_json": "div.bg-paywall-fade|div.duet--article--article-body-component-container",
-    "new_site": 1
-  },
   "The Week - UK": {
     "domain": "theweek.co.uk",
     "allow_cookies": 1,
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "upd_version": "3.2.8.5"
   },
   "The Week - USA": {
     "domain": "theweek.com",
     "allow_cookies": 1,
-    "useragent": "googlebot"
+    "useragent": "googlebot",
+    "upd_version": "3.2.8.5"
   },
   "Times of India": {
     "domain": "###_timesofindia",
@@ -201,28 +137,10 @@
     "block_regex_general": "\\/shared-content\\/art\\/tncms\\/api\\/access\\.js",
     "upd_version": "3.2.8.3"
   },
-  "Verlagsgruppe Rhein Main": {
-    "allow_cookies": 1,
-    "domain": "###_de_vrm",
-    "group": [
-      "allgemeine-zeitung.de",
-      "echo-online.de",
-      "wiesbadener-kurier.de"
-    ],
-    "block_regex": "cdn\\.cxense\\.com",
-    "useragent": "googlebot",
-    "upd_version": "3.2.6.7"
-  },
   "Washington Examiner": {
     "domain": "washingtonexaminer.com",
     "allow_cookies": 1,
     "block_regex": "\\.zephr\\.com\\/zephr-browser",
-    "new_site": 1
-  },
-  "Weltkunst": {
-    "domain": "weltkunst.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.2.6.9"
+    "upd_version": "3.2.7.8"
   }
 }
