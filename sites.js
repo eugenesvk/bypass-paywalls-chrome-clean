@@ -385,21 +385,20 @@ var defaultSites = {
   "Crain Communications": {
     domain: "###_usa_craincomm",
     group: [
+      "360dx.com",
       "adage.com",
       "autonews.com",
       "chicagobusiness.com",
       "crainscleveland.com",
       "crainsdetroit.com",
       "crainsnewyork.com",
-      "modernhealthcare.com"
+      "genomeweb.com",
+      "modernhealthcare.com",
+      "pionline.com",
+      "precisionmedicineonline.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.tinypass\\.com\\/|[\\.\\/]{domain}\\/.+\\/js\\/js_.+\\.js)",
-    exception: [{
-        domain: "autonews.com",
-        block_regex: "(\\.tinypass\\.com\\/|\\.{domain}\\/.+\\/js\\/js_.+\\.js)"
-      }
-    ]
+    block_regex: /(js\.pelcro\.com\/|\.com\/.+\/js\/js_.+\.js)/
   },
   "Crikey.com.au": {
     domain: "crikey.com.au",
@@ -718,16 +717,6 @@ var defaultSites = {
     domain: "gauchazh.clicrbs.com.br",
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/api\/tinypass\.min\.js|\.clicrbs\.com\.br\/paywall-api\/count\/)/
-  },
-  "GenomeWeb": {
-    domain: "###_usa_genomeweb",
-    group: [
-      "360dx.com",
-      "genomeweb.com",
-      "precisiononcologynews.com"
-    ],
-    allow_cookies: 1,
-    block_regex: /crain-platform-.+-prod\.s3\.amazonaws\.com\/s3fs-public\/js\/js_.+\.js/
   },
   "Glassdoor (regwall)": {
     domain: "glassdoor.com"

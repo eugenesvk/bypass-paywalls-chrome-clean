@@ -4,10 +4,13 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Delinian Group
+Add Pensions & Investments (Crain)
+Add Precision Medicine Online (Crain)
 Remove Initium Media (fix obsolete)
 Fix Ksta.de & Rundschau-online.de (json)
 Fix The Press-Enterprise (new domain)
 Fix WSJ (remove option to disable Googlebot)
+Grouping/fix GenomeWeb sites (Crain)
 
 * v3.2.9.0 (2023-08-13)
 Add 4 more Lee Enterprises Group sites

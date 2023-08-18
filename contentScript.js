@@ -40,9 +40,8 @@ var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_arizent_custom_domains = ['accountingtoday.com', 'benefitnews.com', 'bondbuyer.com', 'dig-in.com', 'financial-planning.com', 'nationalmortgagenews.com'];
 var usa_conde_nast_domains = ['architecturaldigest.com', 'bonappetit.com', 'epicurious.com', 'gq.com' , 'newyorker.com', 'vanityfair.com', 'vogue.com', 'wired.com'];
-var usa_craincomm_domains = ['adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'modernhealthcare.com'];
+var usa_craincomm_domains = ['360dx.com', 'adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'genomeweb.com', 'modernhealthcare.com', 'pionline.com', 'precisionmedicineonline.com'];
 var usa_gannett_domains = ['azcentral.com', 'cincinnati.com', 'commercialappeal.com', 'courier-journal.com', 'democratandchronicle.com', 'detroitnews.com', 'freep.com', 'indystar.com', 'jsonline.com', 'knoxnews.com', 'news-press.com', 'northjersey.com', 'oklahoman.com', 'statesman.com', 'tennessean.com'];
-var usa_genomeweb_domains = ['360dx.com', 'genomeweb.com', 'precisiononcologynews.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'journalstar.com', 'madison.com', 'nwitimes.com', 'omaha.com', 'richmond.com', 'stltoday.com', 'tucson.com', 'tulsaworld.com'];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'mcclatchydc.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
@@ -2161,6 +2160,9 @@ else if (matchDomain('money.it')) {
         window.location.href = 'https://www.money.it/?page=amp&id_article=' + article_id;
       }
     }
+  } else {
+    let ads = document.querySelectorAll('amp-ad');
+    removeDOMElement(...ads);
   }
 }
 
@@ -5166,9 +5168,6 @@ else if (matchDomain(usa_craincomm_domains)) {
   let sponsored_article = document.querySelector('div.sponsored-article');
   if (sponsored_article)
     sponsored_article.classList.remove('sponsored-article');
-}
-
-else if (matchDomain(usa_genomeweb_domains)) {
   let banners = document.querySelectorAll('div.footer__ads-footer');
   removeDOMElement(...banners);
 }

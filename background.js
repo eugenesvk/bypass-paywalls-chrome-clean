@@ -161,6 +161,10 @@ function check_sites_updated() {
   .then(response => {
     if (response.ok) {
       response.json().then(json => {
+        json = filterObject(json, function (val, key) {
+          let domain_filter = ['###_usa_genomeweb', '###_usa_theathletic'];
+          return (val.domain && !domain_filter.includes(val.domain) && !(val.new_site || (val.upd_version && (val.upd_version <= ext_version))))
+        });
         expandSiteRules(json, true);
         ext_api.storage.local.set({
           sites_updated: json
@@ -330,7 +334,7 @@ function set_rules(sites, sites_updated, sites_custom) {
       if (site_default) {
         rule = defaultSites[site_default];
         let site_updated = Object.keys(sites_updated).find(updated_key => compareKey(updated_key, site));
-        if (site_updated && !(sites_updated[site_updated].new_site || (sites_updated[site_updated].upd_version && (sites_updated[site_updated].upd_version <= ext_version))))
+        if (site_updated)
           rule = sites_updated[site_updated];
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];
@@ -445,7 +449,7 @@ ext_api.storage.local.get({
   });
 
   // Enable new sites by default (opt-in)
-  updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain) && updatedSites[x].domain !== '###_usa_theathletic');
+  updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain));
   for (let site_updated_new of updatedSites_new)
     defaultSites[site_updated_new] = updatedSites[site_updated_new];
   if (ext_version > ext_version_old || updatedSites_new.length > 0) {
@@ -468,7 +472,8 @@ ext_api.storage.local.get({
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
           let new_groups = ['###_de_mhs', '###_uk_delinian'];
-          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
+          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
+		  (!enabledSites.includes('###_usa_craincomm') && enabledSites.includes('###_usa_genomeweb'));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }
@@ -544,7 +549,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
       var sites_updated = storageChange.newValue ? storageChange.newValue : {};
       updatedSites = sites_updated;
       updatedSites_domains_new = Object.values(updatedSites).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
-      updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain) && updatedSites[x].domain !== '###_usa_theathletic');
+      updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain));
       if (updatedSites_new.length > 0) {
         if (enabledSites.includes('#options_enable_new_sites')) {
           for (let site_updated_new of updatedSites_new)

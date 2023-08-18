@@ -128,7 +128,8 @@ Grouped in options:\
 [Crain's Cleveland Business](https://www.crainscleveland.com) -
 [Crain's Detroit Business](https://www.crainsdetroit.com) -
 [Crain's New York Business](https://www.crainsnewyork.com) -
-[Modern Healthcare](https://www.modernhealthcare.com)
+[Modern Healthcare](https://www.modernhealthcare.com) -
+[Pensions & Investments](https://www.pionline.com)
 
 *[PEI Media](https://www.pei.group/brands)* sites (opt-in to custom sites)
 
@@ -149,10 +150,10 @@ Grouped in options:\
 [VentureBeat](https://venturebeat.com)
 
 Grouped in options:\
-*GenomeWeb* sites like\
+*Crain Communications* sites like\
 [360Dx](https://www.360dx.com) -
 [GenomeWeb](https://www.genomeweb.com) -
-[Precision Oncology News](https://www.precisiononcologynews.com)\
+[Precision Medicine Online](https://www.precisionmedicineonline.com)\
 *TechTarget Group* sites like\
 [Computer Weekly](https://www.computerweekly.com) -
 [TechTarget](https://www.techtarget.com)\

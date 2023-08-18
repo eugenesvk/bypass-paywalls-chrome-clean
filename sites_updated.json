@@ -29,6 +29,16 @@
     "cs_code": "[{\"cond\":\"div.membership-upsell.show\", \"rm_class\":\"show\"}]",
     "upd_version": "3.2.7.4"
   },
+  "GenomeWeb": {
+    "domain": "###_usa_genomeweb",
+    "group": [
+      "360dx.com",
+      "genomeweb.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.com\\/.+\\/js\\/js_.+\\.js",
+    "upd_version": "3.2.9.5"
+  },
   "Harvard Business Review": {
     "domain": "hbr.org",
     "block_regex": "cdn\\.cxense\\.com",
@@ -37,7 +47,8 @@
   "La Stampa": {
     "domain": "lastampa.it",
     "block_js_inline": "\\.lastampa\\.it",
-    "remove_cookies_select_drop": ["blaize_session"]
+    "remove_cookies_select_drop": ["blaize_session"],
+    "upd_version": "3.2.8.8"
   },
   "Piano.io (+ TinyPass)": {
     "domain": "piano.io",
@@ -45,6 +56,19 @@
     "block_regex_general": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
     "excluded_domains": ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"],
     "upd_version": "3.2.8.2"
+  },
+  "Pensions & Investments": {
+    "domain": "pionline.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.pionline\\.com\\/.+\\/js\\/js_.+\\.js",
+    "cs_code": "[{\"cond\":\"body[class]\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.2.9.5"
+  },
+  "Precision Medicine Online": {
+    "domain": "precisionmedicineonline.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.precisionmedicineonline\\.com\\/.+\\/js\\/js_.+\\.js",
+    "upd_version": "3.2.9.5"
   },
   "Swarajyamag": {
     "domain": "swarajyamag.com",

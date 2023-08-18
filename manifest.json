@@ -532,13 +532,14 @@
     "*://*.philomag.de/*",
     "*://*.philosophynow.org/*",
     "*://*.pilotonline.com/*",
+    "*://*.pionline.com/*",
     "*://*.piqd.de/*",
     "*://*.podiumrunner.com/*",
     "*://*.politicaexterior.com/*",
     "*://*.popsci.com/*",
     "*://*.popularmechanics.com/*",
     "*://*.post-gazette.com/*",
-    "*://*.precisiononcologynews.com/*",
+    "*://*.precisionmedicineonline.com/*",
     "*://*.pressenterprise.com/*",
     "*://*.prevention.com/*",
     "*://*.profi.de/*",
@@ -768,7 +769,6 @@
     "*://*.tribdss.com/*",
     "*://*.weborama.fr/*",
     "*://*.zephr.com/*",
-    "*://*.amazonaws.com/*",
     "*://*.blink.net/*",
     "*://*.bwbx.io/*",
     "*://*.californiatimes.com/*",
@@ -789,5 +789,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.9.4"
+  "version": "3.2.9.5"
 }
