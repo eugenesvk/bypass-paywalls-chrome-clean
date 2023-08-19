@@ -512,6 +512,12 @@
     "block_regex": "\\.thefashionlaw\\.com\\/evolok\\/.+\\/ev-widgets\\.min\\.js",
     "domain": "thefashionlaw.com"
   },
+  "Theinformation.com": {
+    "add_ext_link": "div[data-paywall]|div.locked",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "theinformation.com"
+  },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"
   },

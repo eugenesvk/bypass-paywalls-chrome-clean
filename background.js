@@ -432,7 +432,7 @@ ext_api.storage.local.get({
   var sites_default = items.sites_default;
   customSites = items.sites_custom;
   customSites = filterObject(customSites, function (val, key) {
-    return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+    return !(val.add_ext_link && !val.add_ext_link_type)
   });
   customSites_domains = Object.values(customSites).map(x => x.domain);
   updatedSites = items.sites_updated;

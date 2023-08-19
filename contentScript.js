@@ -223,6 +223,9 @@ if (bg2csData.add_ext_link) {
           case 'google_webcache':
             article.firstChild.before(googleWebcacheLink(url));
             break;
+          case 'google_search_tool':
+            article.firstChild.before(googleSearchToolLink(url));
+            break;
           }
         }
       }
@@ -5606,6 +5609,10 @@ function archiveLink(url, text_fail = 'BPC > Try for full article text (only rep
 
 function googleWebcacheLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
+}
+
+function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test url & copy html (tab) code to [https://codebeautify.org/htmlviewer] or [https://html.onlineviewer.net]):\r\n') {
+  return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
 function ext_12ftLink(url, text_fail = 'BPC > Try for full article text:\r\n') {

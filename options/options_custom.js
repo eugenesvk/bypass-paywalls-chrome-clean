@@ -9,7 +9,7 @@ var custom_switch = ((manifestData.optional_permissions && manifestData.optional
 var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
 var random_ip_options = ['', 'all', 'eu'];
-var add_ext_link_type_options = ['', 'archive.is', '12ft.io', 'google_webcache']
+var add_ext_link_type_options = ['', 'archive.is', '12ft.io', 'google_webcache', 'google_search_tool'];
 
 function capitalize(str) {
   return (typeof str === 'string') ? str.charAt(0).toUpperCase() + str.slice(1) : '';
@@ -37,7 +37,7 @@ function save_options() {
   if (textareaEl.value) {
     var sites_custom = JSON.parse(textareaEl.value);
     sites_custom = filterObject(sites_custom, function (val, key) {
-      return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+      return !(val.add_ext_link && !val.add_ext_link_type)
     });
   }
   ext_api.storage.local.set({
@@ -95,7 +95,7 @@ function import_json(result) {
       sites_custom[site] = sites_custom_new[site];
     }
     sites_custom = filterObject(sites_custom, function (val, key) {
-      return !(val.add_ext_link && (!val.add_ext_link_type || val.add_ext_link_type === 'google_search_tool'))
+      return !(val.add_ext_link && !val.add_ext_link_type)
     });
     ext_api.storage.local.set({
       sites_custom: sites_custom
