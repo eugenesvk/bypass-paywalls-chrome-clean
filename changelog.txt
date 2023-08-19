@@ -9,7 +9,7 @@ Add Precision Medicine Online (Crain)
 Remove Initium Media (fix obsolete)
 Fix Ksta.de & Rundschau-online.de (json)
 Fix The Press-Enterprise (new domain)
-Fix WSJ (remove option to disable Googlebot)
+Fix WSJ (mobile & remove option to disable Googlebot)
 Grouping/fix GenomeWeb sites (Crain)
 Update custom sites (add_ext_link: Google Search Tool)
 
