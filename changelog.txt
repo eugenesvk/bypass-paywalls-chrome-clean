@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+
+* v3.3.0.0 (2023-08-20)
 Add Cieletespace.fr
 Add Delinian Group
 Add Pensions & Investments (Crain)
