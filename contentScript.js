@@ -3040,7 +3040,7 @@ else if (matchDomain(ar_grupo_clarin_domains)) {
   removeDOMElement(...ads);
 }
 
-else if (matchDomain('crusoe.uol.com.br')) {
+else if (matchDomain('crusoe.com.br')) {
   let ads = document.querySelectorAll('#gpt-leaderboard, .ads_desktop, .catchment-box');
   removeDOMElement(...ads);
 }
@@ -3153,24 +3153,11 @@ else if (matchDomain('estadao.com.br')) {
 }
 
 else if (matchDomain('folha.uol.com.br')) {
-  if (matchDomain('piaui.folha.uol.com.br')) {
-    if (window.location.search.startsWith('?amp')) {
-      amp_unhide_subscr_section();
-    } else {
-      let paywall = document.querySelector('.revista--interna__assineonly');
-      let amphtml = document.querySelector('link[rel="amphtml"]');
-      if (paywall && amphtml) {
-        removeDOMElement(paywall);
-        window.location.href = amphtml.href;
-      }
-    }
+  if (window.location.pathname.startsWith('/amp/')) {
+    amp_unhide_subscr_section('amp-ad, amp-sticky-ad, amp-embed');
   } else {
-    if (window.location.pathname.startsWith('/amp/')) {
-      amp_unhide_subscr_section('amp-ad, amp-sticky-ad, amp-embed');
-    } else {
-      let signup = document.querySelector('.c-top-signup');
-      removeDOMElement(signup);
-    }
+    let signup = document.querySelector('.c-top-signup');
+    removeDOMElement(signup);
   }
 }
 

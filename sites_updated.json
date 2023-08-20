@@ -23,6 +23,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Crusoe.com.br": {
+    "domain": "crusoe.com.br",
+    "allow_cookies": 1,
+    "block_regex": "\\.crusoe\\.com\\.br\\/assets\\/js\\/swg-wallcontent-crusoe\\.js",
+    "upd_version": "3.2.9.8"
+  },
   "EUobserver": {
     "domain": "euobserver.com",
     "allow_cookies": 1,

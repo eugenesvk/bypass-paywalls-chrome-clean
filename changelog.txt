@@ -7,6 +7,7 @@ Add Delinian Group
 Add Pensions & Investments (Crain)
 Add Precision Medicine Online (Crain)
 Remove Initium Media (fix obsolete)
+Fix Crusoe.com.br (new domain)
 Fix Ksta.de & Rundschau-online.de (json)
 Fix The Press-Enterprise (new domain)
 Fix WSJ (mobile & remove option to disable Googlebot)

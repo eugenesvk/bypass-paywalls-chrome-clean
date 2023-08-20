@@ -39,7 +39,7 @@ var restrictions = {
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
   'timeshighereducation.com': /\.timeshighereducation\.com\/((features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/,
-  'uol.com.br': /^((?!(conta|email)\.uol\.com\.br).)*$/,
+  'uol.com.br': /^((?!(conta|email|piaui\.folha)\.uol\.com\.br).)*$/,
 }
 
 for (let domain of au_news_corp_domains)

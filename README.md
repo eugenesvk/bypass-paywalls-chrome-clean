@@ -911,6 +911,7 @@ Grouped in options:\
 [Los Andes](https://www.losandes.com.ar)
 
 ##### Brazil
+[Crusoé](https://crusoe.com.br) -
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
 [GaúchaZH](https://gauchazh.clicrbs.com.br) -
@@ -921,9 +922,9 @@ Grouped in options:\
 
 Grouped in options:\
 *UOL* sites like\
-[Crusoé](https://crusoe.uol.com.br) -
 [Folha de S. Paulo](https://www.folha.uol.com.br) -
 [UOL](https://www.uol.com.br)
+
 ##### Chile
 [Diario Financiero](https://www.df.cl) -
 [El Mercurio (+ regional/opt-in to custom sites)](https://digital.elmercurio.com) -
