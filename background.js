@@ -496,6 +496,8 @@ ext_api.storage.local.get({
   check_sites_custom_ext();
   if (optin_update)
     check_update();
+  if (!Object.keys(items.sites).length)
+    ext_api.runtime.openOptionsPage();
 });
 
 // Listen for changes to options

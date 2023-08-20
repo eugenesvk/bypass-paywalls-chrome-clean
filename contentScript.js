@@ -1508,6 +1508,17 @@ else if (matchDomain('charliehebdo.fr')) {
   }, 500);
 }
 
+else if (matchDomain('cieletespace.fr')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.article-content__subscribe');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.article-content');
+  }
+}
+
 else if (matchDomain('connaissancedesarts.com')) {
   let ads = document.querySelectorAll('div.ad-container');
   removeDOMElement(...ads);
@@ -2306,7 +2317,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('link[href*
                         figure.appendChild(img);
                         if (child.relation.caption && child.relation.caption.length > 2) {
                           let caption = document.createElement('figcaption');
-                          caption.innerText = item.caption;
+                          caption.innerText = child.relation.caption;
                           figure.appendChild(caption);
                         }
                         elem.appendChild(figure);
@@ -5492,7 +5503,7 @@ function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail =
     }
     let parser = new DOMParser();
     window.setTimeout(function () {
-      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['layout', 'itemprop'], ADD_TAGS: ['amp-img', 'iframe']}), 'text/html');
+      let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_ATTR: ['frameborder', 'layout', 'itemprop'], ADD_TAGS: ['amp-img', 'iframe']}), 'text/html');
       //console.log(DOMPurify.removed);
       let article_new = doc.querySelector(selector_source);
       if (article_new) {

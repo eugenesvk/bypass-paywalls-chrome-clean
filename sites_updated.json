@@ -23,6 +23,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Ciel & espace": {
+    "domain": "cieletespace.fr",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.article-content__subscribe|div.article-content",
+    "upd_version": "3.2.9.8"
+  },
   "Crusoe.com.br": {
     "domain": "crusoe.com.br",
     "allow_cookies": 1,

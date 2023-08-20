@@ -330,6 +330,11 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
+  "Ciel & espace": {
+    domain: "cieletespace.fr",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Citywire": {
     domain: "citywire.com",
     allow_cookies: 1,

@@ -142,6 +142,7 @@
     "*://*.chicagotribune.com/*",
     "*://*.chronicle.com/*",
     "*://*.cicero.de/*",
+    "*://*.cieletespace.fr/*",
     "*://*.cincinnati.com/*",
     "*://*.citywire.com/*",
     "*://*.clarin.com/*",
@@ -789,5 +790,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.2.9.7"
+  "version": "3.2.9.8"
 }
