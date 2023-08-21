@@ -1420,7 +1420,7 @@ var defaultSites = {
       "lc.nl"
     ],
     allow_cookies: 1,
-    block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/)/,
+    block_regex: /(\.evolok\.net\/|\.ndcmediagroep\.nl\/js\/evolok\/|\.nl\/_\/zh\/worker)/,
     cs_dompurify: 1
   },
   "MediaNews Group": {
