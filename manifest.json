@@ -198,7 +198,6 @@
     "*://*.diariovasco.com/*",
     "*://*.digiday.com/*",
     "*://*.discovermagazine.com/*",
-    "*://*.dn.no/*",
     "*://*.dna.fr/*",
     "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
@@ -790,5 +789,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.0.1"
+  "version": "3.3.0.2"
 }

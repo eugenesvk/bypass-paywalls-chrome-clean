@@ -3541,42 +3541,6 @@ else if (matchDomain('discovermagazine.com')) {
   }, 1000);
 }
 
-else if (matchDomain('dn.no')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#dn-ncp-popup, div.paywall, iframe[title="Paywall"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article_sel = 'article';
-    let article = document.querySelector(article_sel);
-    if (article) {
-      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-      replaceDomElementExt(url_cache, true, false, article_sel);
-    } else {
-      article = document.querySelector('main#main-story, main.lp_article_content');
-      if (article)
-        article.firstChild.before(googleWebcacheLink(url));
-    }
-  }
-  window.setTimeout(function () {
-    let preview = document.querySelector('html.dn-preview-page');
-    if (preview)
-      preview.removeAttribute('class');
-    let infobox_content = document.querySelector('div.infobox__content');
-    if (infobox_content)
-      infobox_content.removeAttribute('class');
-    let lazy_images = document.querySelectorAll('img[class*="lazy"][data-srcset]:not([src])');
-    for (let elem of lazy_images) {
-      elem.src = elem.getAttribute('data-srcset').split(' ')[0];
-      if (elem.classList.contains('lazy'))
-        elem.classList.remove('lazy');
-      else
-        elem.removeAttribute('class');
-    }
-    let ads = document.querySelectorAll('div[id^="googlead-"]');
-    removeDOMElement(...ads);
-  }, 1000);
-}
-
 else if (matchDomain('economictimes.com')) {
   if (window.location.pathname.includes('/amp_')) {
     let paywall = document.querySelector('.paywall_wrap');
