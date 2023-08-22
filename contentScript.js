@@ -2045,6 +2045,12 @@ else if (matchDomain('ilmanifesto.it')) {
 
 else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it']) || matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it'])) {
   if (window.location.pathname.includes('/news/')) {
+    let paywall = document.querySelector('span > img[alt*="Paywall"]');
+    if (paywall) {
+      let header = paywall.parentNode.parentNode;
+      header_nofix(header);
+      removeDOMElement(paywall.parentNode);
+    }
     window.setTimeout(function () {
       let banners = document.querySelectorAll('div.MuiSnackbar-root, div.css-16cchgy');
       removeDOMElement(...banners);
@@ -5196,17 +5202,24 @@ else if (matchDomain('winnipegfreepress.com')) {
 }
 
 else if (matchDomain('wsj.com')) {
-  if (window.location.pathname.includes('/amp/')) {
-    amp_unhide_subscr_section();
-    let masthead_link = document.querySelector('div.masthead > a[href*="/articles/"]');
-    if (masthead_link)
-      masthead_link.href = 'https://www.wsj.com';
-  } else {
-    let snippet = false;//document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
-    let wsj_pro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
-    if (snippet || wsj_pro) {
-      removeDOMElement(snippet, wsj_pro);
-      window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
+  let url_article = window.location.pathname.includes('/articles/');
+  let path_article = window.location.pathname.match(/((\w)+(\-)+){3,}\w+/);
+  if (url_article || path_article) {
+    if (window.location.pathname.startsWith('/amp/')) {
+      amp_unhide_subscr_section();
+      let masthead_link = document.querySelector('div.masthead > a[href*="-"]');
+      if (masthead_link)
+        masthead_link.href = 'https://www.wsj.com';
+    } else {
+      let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
+      let wsj_pro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
+      if (snippet || wsj_pro) {
+        removeDOMElement(snippet, wsj_pro);
+        if (url_article)
+          window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
+        else
+          window.location.href = '/amp/articles/' + path_article[0];
+      }
     }
   }
   let ads = document.querySelectorAll('div.wsj-ad, div.adWrapper, div.uds-ad-container');

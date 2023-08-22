@@ -936,7 +936,7 @@ Grouped in options:\
 ##### Mexico
 [Mexico News Daily](https://mexiconewsdaily.com)
 ##### Peru
-*Grupo El Comercio* sites like
+*Grupo El Comercio* sites like\
 [Diario Correo](https://diariocorreo.pe) -
 [El Comercio](https://elcomercio.pe) -
 [Gestión](https://gestion.pe)
