@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove DN.no (fix obsolete)
+Fix Media Group Westfalen (identify sites)
 Fix Mediahuis Noord (json)
 Fix WSJ (amp 404 & restore option to disable Googlebot)
 

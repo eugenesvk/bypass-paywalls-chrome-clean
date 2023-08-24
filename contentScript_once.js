@@ -63,7 +63,7 @@ window.setTimeout(function () {
         group = '###_de_haas_medien';
       else if (document.querySelector('link[href*=".rndtech.de/"]'))
         group = '###_de_madsack';
-      else if (document.querySelector('div.mgw-integration > a.mgw__link'))
+      else if (document.querySelector('a.mgw-logo[href^="https://mgw.de"]'))
         group = '###_de_mgw';
       else if (matchDomain(['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de']))
         group = '###_de_mhs';
