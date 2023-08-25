@@ -38,6 +38,12 @@
     "remove_cookies_select_drop": ["blaize_session"],
     "upd_version": "3.2.8.8"
   },
+  "LeTemps.ch": {
+    "domain": "letemps.ch",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.post-subscribe|div.post-body-wrapper",
+    "upd_version": "3.3.0.5"
+  },
   "Mediahuis Noord": {
     "domain": "###_nl_mediahuis_noord",
     "group": [

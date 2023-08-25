@@ -994,6 +994,29 @@ else if (matchDomain('kurier.at')) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain('letemps.ch')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.post-subscribe');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.post-body-wrapper');
+    window.setTimeout(function () {
+      let lazy_images = document.querySelectorAll('img.lazy[src="/placeholder.png"][data-src]');
+      for (let elem of lazy_images) {
+        elem.src = elem.getAttribute('data-src');
+        elem.removeAttribute('class');
+      }
+      let fade = document.querySelector('div.post__content--faded');
+      if (fade)
+        fade.classList.remove('post__content--faded');
+    }, 1000);
+  }
+  let ads = document.querySelectorAll('div.topad');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');
