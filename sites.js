@@ -612,6 +612,11 @@ var defaultSites = {
     domain: "exame.com",
     block_regex: /\/exame\.com\/.+\/js\/pywll-dyn\.js/
   },
+  "Fast Company": {
+    domain: "fastcompany.com",
+    allow_cookies: 1,
+    block_regex: /(\.tinypass\.com\/|\.fastcompany\.com\/script\.js)/
+  },
   "Field & Stream": {
     domain: "fieldandstream.com",
     allow_cookies: 1

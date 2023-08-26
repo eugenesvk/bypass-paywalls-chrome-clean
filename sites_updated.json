@@ -17,6 +17,12 @@
     "block_regex": "\\.crusoe\\.com\\.br\\/assets\\/js\\/swg-wallcontent-crusoe\\.js",
     "upd_version": "3.2.9.8"
   },
+  "Fast Company": {
+    "domain": "fastcompany.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com|\\.fastcompany\\.com\\/script\\.js)",
+    "upd_version": "3.3.0.6"
+  },
   "GenomeWeb": {
     "domain": "###_usa_genomeweb",
     "group": [

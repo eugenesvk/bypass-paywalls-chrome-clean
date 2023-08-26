@@ -248,6 +248,7 @@
     "*://*.expansion.com/*",
     "*://*.expressnews.com/*",
     "*://*.farodevigo.es/*",
+    "*://*.fastcompany.com/*",
     "*://*.faz.net/*",
     "*://*.fd.nl/*",
     "*://*.femmesdaujourdhui.be/*",
@@ -790,5 +791,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.0.5"
+  "version": "3.3.0.6"
 }

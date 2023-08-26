@@ -3689,6 +3689,11 @@ else if (matchDomain(['euromoney.com', 'globalcapital.com', 'iflr.com', 'insuran
   removeDOMElement(fade);
 }
 
+else if (matchDomain('fastcompany.com')) {
+  let ads = document.querySelectorAll('div[class*="ad-wrapper"]');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('fieldandstream.com')) {
   let overlay = document.querySelectorAll('div[class^="mailmunch-"]');
   removeDOMElement(...overlay);

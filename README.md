@@ -95,6 +95,7 @@ _* free articles only._
 [Business Insider](https://www.businessinsider.com) -
 [CNBC](https://www.cnbc.com) -
 [Digiday](https://digiday.com) -
+[Fast Company](https://www.fastcompany.com) -
 [Forbes](https://www.forbes.com) -
 [Fortune](https://fortune.com) -
 [Harvard Business Review](https://www.hbr.org) -

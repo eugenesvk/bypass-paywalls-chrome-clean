@@ -159,11 +159,6 @@
     "allow_cookies": 1,
     "domain": "ewmagazine.nl"
   },
-  "Fastcompany.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "fastcompany.com"
-  },
   "Finansavisen.no": {
     "allow_cookies": 1,
     "domain": "finansavisen.no",
