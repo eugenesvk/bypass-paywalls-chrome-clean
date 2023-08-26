@@ -324,6 +324,11 @@
     "domain": "mining-journal.com",
     "ld_json": "div.article-teaser|div.article-content>p"
   },
+  "Nation.africa": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
+    "domain": "nation.africa"
+  },
   "Nationalobserver.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

@@ -275,6 +275,12 @@ var defaultSites = {
     block_js_inline: /\.bqprime\.com\/.+\/.+\?rel=geo_block/,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "Bridge Tower Media (opt-in to custom sites)": {
+    domain: "###_usa_bridge_tower",
+    group: [],
+    allow_cookies: 1,
+    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
+  },
   "Bulletin of the Atomic Scientists": {
     domain: "thebulletin.org",
     allow_cookies: 1,
@@ -2076,7 +2082,7 @@ var defaultSites = {
   "The Dallas Morning News": {
     domain: "dallasnews.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    block_regex: /(\.blueconic\.net\/|\.dallasnews\.com\/script\.js|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
   "The Diplomat": {

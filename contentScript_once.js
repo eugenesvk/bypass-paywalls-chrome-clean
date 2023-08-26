@@ -109,6 +109,8 @@ window.setTimeout(function () {
         group = '###_ca_postmedia';
       else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]'))
         group = '###_uk_axate.io';
+      else if (document.querySelector('script[src="https://cdn.blueconic.net/bridgetowermedia.js"], header.site-header > div.btm-header'))
+        group = '###_usa_bridge_tower';
       else if (document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], link[href*=".gannett-cdn.com/"]'))
         group = '###_usa_gannett';
       else if (document.querySelector('script[src*="/treg.hearstnp.com/"]'))

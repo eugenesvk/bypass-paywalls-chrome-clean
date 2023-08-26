@@ -116,6 +116,8 @@ _* free articles only._
 Grouped in options:\
 *[American Banker](https://www.americanbanker.com) (+ [Arizent](https://www.arizent.com/brands)*; opt-in to custom sites)
 
+*[Bridge Tower Media](https://bridgetowermedia.com/markets)* sites (opt-in to custom sites)
+
 *California Business Journals* sites like\
 [Los Angeles Business Journal](https://labusinessjournal.com) -
 [Orange County Business Journal](https://www.ocbj.com) -
