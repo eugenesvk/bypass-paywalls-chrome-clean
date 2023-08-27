@@ -7,8 +7,10 @@ Add Bridge Tower Media (opt-in to custom sites)
 Add Fast Company
 Add LeTemps.ch
 Remove DN.no (fix obsolete)
+Fix Financial Times (refresh)
 Fix Media Group Westfalen (identify sites)
 Fix Mediahuis Noord (json)
+Fix Nikkei Asian Review (refresh)
 Fix WSJ (amp 404 & restore option to disable Googlebot)
 
 * v3.3.0.0 (2023-08-20)

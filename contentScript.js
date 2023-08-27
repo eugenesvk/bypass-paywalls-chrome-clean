@@ -2798,12 +2798,13 @@ else if (matchDomain('citywire.com')) {
 }
 
 else if (matchDomain('ft.com')) {
-  if (window.location.hostname.startsWith('amp.')) {
-    amp_unhide_subscr_section('.ad-container, amp-ad');
-  } else {
-    let banners = document.querySelectorAll('.o-cookie-message, .js-article-ribbon, .o-ads, .o-banner');
-    removeDOMElement(...banners);
+  let paywall = document.querySelector('div.js-primary-offers-container');
+  if (paywall) {
+    removeDOMElement(paywall);
+    refreshCurrentTab();
   }
+  let banners = document.querySelectorAll('.o-cookie-message, .js-article-ribbon, .o-ads, .o-banner');
+  removeDOMElement(...banners);
 }
 
 else if (matchDomain('independent.co.uk')) {
@@ -3325,6 +3326,11 @@ else if (matchDomain('artnet.com')) {
 }
 
 else if (matchDomain('asia.nikkei.com')) {
+  let paywall = document.querySelector('div.tp-container-inner');
+  if (paywall) {
+    removeDOMElement(paywall);
+    refreshCurrentTab();
+  }
   let popup = document.querySelector('#pianoj_ribbon');
   removeDOMElement(popup);
 }
