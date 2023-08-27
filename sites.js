@@ -2375,6 +2375,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.tribdss\\.com\\/|\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.zephr\\.com\\/zephr-browser\\/.+\\/zephr-browser\\.umd\\.js)"
   },
+  "Tuttosport": {
+    domain: "tuttosport.com",
+    allow_cookies: 1,
+    block_regex: /\.tuttosport\.com\/_next\/static\/chunks\/pages\/news\/%5B.+\.js/
+  },
   "UnHerd": {
     domain: "unherd.com",
     allow_cookies: 1,

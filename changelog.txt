@@ -6,6 +6,7 @@ Post-release
 Add Bridge Tower Media (opt-in to custom sites)
 Add Fast Company
 Add LeTemps.ch
+Add Tuttosport
 Remove DN.no (fix obsolete)
 Fix Financial Times (refresh)
 Fix Forbes (js)

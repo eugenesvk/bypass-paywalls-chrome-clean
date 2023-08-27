@@ -1929,7 +1929,7 @@ else if (matchDomain('lamontagne.fr') || document.querySelector('ul.list-inline 
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.it') || matchDomain(['eastwest.eu', 'italian.tech', 'limesonline.com', 'quotidiano.net'])) {//italy
+} else if (window.location.hostname.endsWith('.it') || matchDomain(['eastwest.eu', 'italian.tech', 'limesonline.com', 'quotidiano.net', 'tuttosport.com'])) {//italy
 
 if (matchDomain('corriere.it')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -2207,6 +2207,21 @@ else if (matchDomain('money.it')) {
     let ads = document.querySelectorAll('amp-ad');
     removeDOMElement(...ads);
   }
+}
+
+else if (matchDomain('tuttosport.com')) {
+  let article_images = document.querySelectorAll('div > img[data-src]:not([src])');
+  for (let elem of article_images) {
+    elem.src = elem.getAttribute('data-src');
+    elem.removeAttribute('class');
+    elem.parentNode.removeAttribute('style');
+  }
+  let main_images = document.querySelectorAll('div > img[class*="ArticleImage_image__"][src]');
+  for (let elem of main_images) {
+    elem.removeAttribute('class');
+  }
+  let ads = document.querySelectorAll('div[class^="AdUnit_"]');
+  hideDOMElement(...ads);
 }
 
 else

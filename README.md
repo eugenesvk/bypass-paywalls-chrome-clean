@@ -653,7 +653,8 @@ Grouped in options:\
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
 [La Gazzetta dello Sport](https://www.gazzetta.it) -
-[Money.it](https://www.money.it)
+[Money.it](https://www.money.it) -
+[Tuttosport](https://www.tuttosport.com)
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\

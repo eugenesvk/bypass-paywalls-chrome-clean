@@ -479,6 +479,11 @@
     "allow_cookies": 1,
     "domain": "tagesspiegel.de"
   },
+  "Taxscan.in": {
+    "allow_cookies": 1,
+    "domain": "taxscan.in",
+    "ld_json": "div.pmpro_content_message|div.singlepost_container>p"
+  },
   "The-past.com": {
     "domain": "the-past.com"
   },

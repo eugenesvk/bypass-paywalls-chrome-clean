@@ -703,6 +703,7 @@
     "*://*.tubantia.nl/*",
     "*://*.tucson.com/*",
     "*://*.tulsaworld.com/*",
+    "*://*.tuttosport.com/*",
     "*://*.twincities.com/*",
     "*://*.unherd.com/*",
     "*://*.uol.com.br/*",
@@ -791,5 +792,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.0.8"
+  "version": "3.3.0.9"
 }
