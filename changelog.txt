@@ -8,6 +8,7 @@ Add Fast Company
 Add LeTemps.ch
 Remove DN.no (fix obsolete)
 Fix Financial Times (refresh)
+Fix Forbes (js)
 Fix Media Group Westfalen (identify sites)
 Fix Mediahuis Noord (json)
 Fix Nikkei Asian Review (refresh)

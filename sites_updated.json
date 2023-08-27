@@ -23,6 +23,13 @@
     "block_regex": "(\\.tinypass\\.com|\\.fastcompany\\.com\\/script\\.js)",
     "upd_version": "3.3.0.6"
   },
+  "Forbes": {
+    "domain": "forbes.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.forbes\\.com\\/sites",
+    "block_regex": "(\\.tinypass\\.com|\\.blueconic\\.net)",
+    "upd_version": "3.3.0.8"
+  },
   "GenomeWeb": {
     "domain": "###_usa_genomeweb",
     "group": [
