@@ -1927,7 +1927,7 @@ var defaultSites = {
   },
   "Star Tribune": {
     domain: "startribune.com",
-    remove_cookies_select_drop: ["client_id"]
+    allow_cookies: 1
   },
   "Statista": {
     domain: "statista.com",

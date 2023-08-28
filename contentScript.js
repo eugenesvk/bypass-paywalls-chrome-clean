@@ -4479,15 +4479,12 @@ else if (matchDomain('staradvertiser.com')) {
 }
 
 else if (matchDomain('startribune.com')) {
-  let modal = document.querySelector('body.ReactModal__Body--open');
-  if (modal)
-    modal.classList.remove('ReactModal__Body--open');
-  let banner = document.querySelector('div#meterContent, div[class*="Limit-container-"]');
-  let banner_modal;
-  if (banner)
-    banner_modal = banner.closest('div.ReactModalPortal');
+  let noscroll = document.querySelector('body[class]');
+  if (noscroll)
+    noscroll.style = 'overflow: auto !important; position: static !important;';
+  let modal = document.querySelector('div.modal-backdrop');
   let ads = document.querySelectorAll('div.ad-placeholder');
-  removeDOMElement(banner_modal, ...ads);
+  removeDOMElement(modal, ...ads);
 }
 
 else if (matchDomain('statista.com')) {

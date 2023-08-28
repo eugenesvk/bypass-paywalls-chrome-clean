@@ -903,7 +903,7 @@ if (typeof browser !== 'object') {
 ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   let tab_status = changeInfo.status;
   if (/^http/.test(tab.url)) {
-    if ((tab_status && tab_status === 'complete') || (changeInfo.url)) {
+    if ((tab_status && (tab_status === 'complete' || matchUrlDomain(['startribune.com'], tab.url))) || changeInfo.url) {
       let timeout = changeInfo.url ? 500 : 0;
       setTimeout(function () {
         if (isSiteEnabled(tab)) {
