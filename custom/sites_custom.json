@@ -309,6 +309,12 @@
   "Marketscreener.com (only free articles)": {
     "domain": "marketscreener.com"
   },
+  "Mediapart.fr": {
+    "add_ext_link": "div#paywall_no_variance|main",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "mediapart.fr"
+  },
   "Medpagetoday.com": {
     "allow_cookies": 1,
     "domain": "medpagetoday.com",

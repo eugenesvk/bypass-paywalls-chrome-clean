@@ -1151,7 +1151,7 @@ ext_api.tabs.onUpdated.addListener(function (tabId, info, tab) { updateBadge(tab
 ext_api.tabs.onActivated.addListener(function (activeInfo) { if (activeInfo.tabId) ext_api.tabs.get(activeInfo.tabId, updateBadge); });
 
 function updateBadge(activeTab) {
-  if (ext_api.runtime.lastError || !activeTab || (activeTab.url && urlHost(activeTab.url).match(/^archive\.[a-z]{2}$/)))
+  if (ext_api.runtime.lastError || !activeTab || !activeTab.active)
     return;
   let badgeText = '';
   let color = 'red';
@@ -1427,7 +1427,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     });
   }
   if (message.request === 'refreshCurrentTab') {
-    ext_api.tabs.reload({bypassCache: true});
+    ext_api.tabs.reload(sender.tab.id, {bypassCache: true});
   }
   if (message.request === 'getExtSrc' && message.data) {
     fetch(message.data.url)
@@ -1446,26 +1446,12 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
             if (article_new)
               message.data.html = article_new.outerHTML;
           }
-          ext_api.tabs.query({
-            active: true,
-            currentWindow: true
-          }, function (tabs) {
-            if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
-              ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-            }
-          });
+          ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
         });
       }
     }).catch(function (err) {
       message.data.html = '';
-      ext_api.tabs.query({
-        active: true,
-        currentWindow: true
-      }, function (tabs) {
-        if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
-          ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-        }
-      });
+      ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
     });
   }
   if (message.scheme && (![chrome_scheme, 'undefined'].includes(message.scheme) || focus_changed)) {
