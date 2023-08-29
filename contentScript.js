@@ -3732,6 +3732,11 @@ else if (matchDomain('firstthings.com')) {
   removeDOMElement(paywall);
 }
 
+else if (matchDomain('forbes.com')) {
+  waitDOMAttribute('body', 'body', 'class', node => node.removeAttribute('class'), true);
+  csDoneOnce = true;
+}
+
 else if (matchDomain('foreignaffairs.com')) {
   window.setTimeout(function () {
     let paywall = document.querySelector('.paywall');

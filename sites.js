@@ -656,8 +656,7 @@ var defaultSites = {
   "Forbes": {
     domain: "forbes.com",
     allow_cookies: 1,
-    block_js_inline: /\.forbes\.com\/sites\//,
-    block_regex: /(\.tinypass\.com\/|\.blueconic\.net\/)/
+    block_regex: /(\.forbes\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Foreign Affairs": {
     domain: "foreignaffairs.com",
