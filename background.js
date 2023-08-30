@@ -162,7 +162,7 @@ function check_sites_updated() {
     if (response.ok) {
       response.json().then(json => {
         json = filterObject(json, function (val, key) {
-          let domain_filter = ['###_usa_genomeweb', '###_usa_theathletic'];
+          let domain_filter = ['###_usa_theathletic'];
           return (val.domain && !domain_filter.includes(val.domain) && !(val.new_site || (val.upd_version && (val.upd_version <= ext_version))))
         });
         expandSiteRules(json, true);

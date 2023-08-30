@@ -1887,7 +1887,7 @@ var defaultSites = {
   "Scientific American": {
     domain: "scientificamerican.com",
     allow_cookies: 1,
-    remove_cookies: 1
+    block_regex: /\.scientificamerican\.com\/api\/tinypass\.min\.js/
   },
   "Seeking Alpha": {
     domain: "seekingalpha.com",

@@ -5,18 +5,6 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "Ciel & espace": {
-    "domain": "cieletespace.fr",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div.article-content__subscribe|div.article-content",
-    "upd_version": "3.2.9.8"
-  },
-  "Crusoe.com.br": {
-    "domain": "crusoe.com.br",
-    "allow_cookies": 1,
-    "block_regex": "\\.crusoe\\.com\\.br\\/assets\\/js\\/swg-wallcontent-crusoe\\.js",
-    "upd_version": "3.2.9.8"
-  },
   "Fast Company": {
     "domain": "fastcompany.com",
     "allow_cookies": 1,
@@ -29,27 +17,6 @@
     "block_js_inline": "\\.forbes\\.com\\/sites",
     "block_regex": "(\\.tinypass\\.com|\\.blueconic\\.net)",
     "upd_version": "3.3.0.8"
-  },
-  "GenomeWeb": {
-    "domain": "###_usa_genomeweb",
-    "group": [
-      "360dx.com",
-      "genomeweb.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.com\\/.+\\/js\\/js_.+\\.js",
-    "upd_version": "3.2.9.5"
-  },
-  "Harvard Business Review": {
-    "domain": "hbr.org",
-    "block_regex": "cdn\\.cxense\\.com",
-    "upd_version": "3.2.8.2"
-  },
-  "La Stampa": {
-    "domain": "lastampa.it",
-    "block_js_inline": "\\.lastampa\\.it",
-    "remove_cookies_select_drop": ["blaize_session"],
-    "upd_version": "3.2.8.8"
   },
   "LeTemps.ch": {
     "domain": "letemps.ch",
@@ -68,25 +35,11 @@
     "cs_dompurify": 1,
     "upd_version": "3.3.0.1"
   },
-  "Piano.io (+ TinyPass)": {
-    "domain": "piano.io",
+  "Scientific American": {
+    "domain": "scientificamerican.com",
     "allow_cookies": 1,
-    "block_regex_general": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
-    "excluded_domains": ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"],
-    "upd_version": "3.2.8.2"
-  },
-  "Pensions & Investments": {
-    "domain": "pionline.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.pionline\\.com\\/.+\\/js\\/js_.+\\.js",
-    "cs_code": "[{\"cond\":\"body[class]\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.2.9.5"
-  },
-  "Precision Medicine Online": {
-    "domain": "precisionmedicineonline.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.precisionmedicineonline\\.com\\/.+\\/js\\/js_.+\\.js",
-    "upd_version": "3.2.9.5"
+    "block_regex": "\\.scientificamerican\\.com\\/api\\/tinypass\\.min\\.js",
+    "upd_version": "3.3.1.4"
   },
   "The Athletic": {
     "domain": "###_usa_theathletic",
@@ -96,18 +49,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\/theathletic\\.com\\/_next\\/static\\/chunks\\/pages\\/article\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "upd_version": "3.2.1.1"
-  },
-  "The Economic Times (ET Prime)": {
-    "domain": "###_economictimes",
-    "group": [
-      "economictimes.com",
-      "economictimes.indiatimes.com"
-    ],
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "cs_dompurify": 1,
-    "cs_code": "[{\"cond\":\"div.article_wrap[style]\", \"rm_attrib\":\"style\"}]",
-    "upd_version": "3.2.8.9"
   },
   "The Economist": {
     "domain": "economist.com",
@@ -122,54 +63,5 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "The Toronto Star (+ local TorStar sites)": {
-    "domain": "###_ca_torstar",
-    "group": [
-      "niagarafallsreview.ca",
-      "stcatharinesstandard.ca",
-      "thepeterboroughexaminer.com",
-      "therecord.com",
-      "thespec.com",
-      "thestar.com",
-      "wellandtribune.ca"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.(com|ca)\\/shared-content\\/art\\/tncms\\/api\\/access\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_dompurify": 1,
-    "upd_version": "3.2.8.3"
-  },
-  "The Week - UK": {
-    "domain": "theweek.co.uk",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.2.8.5"
-  },
-  "The Week - USA": {
-    "domain": "theweek.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.2.8.5"
-  },
-  "Times of India": {
-    "domain": "###_timesofindia",
-    "group": [
-      "timesofindia.com",
-      "timesofindia.indiatimes.com"
-    ],
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "exception": [{
-        "domain": "timesofindia.indiatimes.com",
-        "allow_cookies": 1,
-        "amp_redirect": "div[id^='story-blocker]"
-      }
-    ],
-    "upd_version": "3.2.8.4"
-  },
-  "TownNews sites (Blox CMS)": {
-    "domain": "###_usa_townnews",
-    "block_regex_general": "\\/shared-content\\/art\\/tncms\\/api\\/access\\.js",
-    "upd_version": "3.2.8.3"
   }
 }

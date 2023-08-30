@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Forbes (menu)
+Fix Scientific American (js)
 Fix Star Tribune (css)
 Fix WSJ (amp live coverage)
 Maintenance background tab
