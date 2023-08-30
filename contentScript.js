@@ -5247,23 +5247,44 @@ else if (matchDomain('winnipegfreepress.com')) {
 }
 
 else if (matchDomain('wsj.com')) {
-  let url_article = window.location.pathname.includes('/articles/');
-  let path_article = window.location.pathname.match(/((\w)+(\-)+){3,}\w+/);
-  if (url_article || path_article) {
-    if (window.location.pathname.startsWith('/amp/')) {
-      amp_unhide_subscr_section();
-      let masthead_link = document.querySelector('div.masthead > a[href*="-"]');
-      if (masthead_link)
-        masthead_link.href = 'https://www.wsj.com';
-    } else {
-      let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
-      let wsj_pro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
-      if (snippet || wsj_pro) {
-        removeDOMElement(snippet, wsj_pro);
-        if (url_article)
-          window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
-        else
-          window.location.href = '/amp/articles/' + path_article[0];
+  if (window.location.pathname.startsWith('/livecoverage/')) {
+    window.setTimeout(function () {
+      let paywall = document.querySelector('div#cx-lc-snippet');
+      let amphtml = document.querySelector('link[rel="amphtml"]');
+      if (paywall) {
+        removeDOMElement(paywall);
+        if (amphtml) {
+          window.location.href = amphtml.href;
+        } else if (window.location.pathname.includes('/card/')) {
+          let article = document.querySelector('div > div[class*="-ParagraphContainer"]');
+          if (article) {
+            let weblink = document.createElement('a');
+            weblink.href = window.location.href.split('/card/')[0];
+            weblink.innerText = 'BPC > full text in feed';
+            article.parentNode.firstChild.before(weblink);
+          }
+        }
+      }
+    }, 1000);
+  } else {
+    let url_article = window.location.pathname.includes('/articles/');
+    let path_article = window.location.pathname.match(/((\w)+(\-)+){3,}\w+/);
+    if (url_article || path_article) {
+      if (window.location.pathname.startsWith('/amp/')) {
+        amp_unhide_subscr_section();
+        let masthead_link = document.querySelector('div.masthead > a[href*="-"]');
+        if (masthead_link)
+          masthead_link.href = 'https://www.wsj.com';
+      } else {
+        let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
+        let wsj_pro = document.querySelector('meta[name="page.site"][content="wsjpro"]');
+        if (snippet || wsj_pro) {
+          removeDOMElement(snippet, wsj_pro);
+          if (url_article)
+            window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
+          else
+            window.location.href = '/amp/articles/' + path_article[0];
+        }
       }
     }
   }
