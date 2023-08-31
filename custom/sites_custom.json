@@ -391,6 +391,11 @@
     "domain": "oz-online.de",
     "ld_json": "div.paywall|div.pointer-events-none"
   },
+  "Pebmed.com.br": {
+    "allow_cookies": 1,
+    "block_regex": "\\/pebmed\\.com\\.br\\/wp-content\\/.+\\/paywall\\/dist\\/js\\/app\\.js",
+    "domain": "pebmed.com.br"
+  },
   "Phillymag.com": {
     "allow_cookies": 1,
     "domain": "phillymag.com",
@@ -577,6 +582,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "washingtontimes.com"
+  },
+  "Welt.de": {
+    "add_ext_link": "div.contains_walled_content|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "welt.de"
   },
   "Wuv.de": {
     "allow_cookies": 1,

@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Forbes (menu)
+Fix Nikkei Asian Review (Google webcache)
 Fix Scientific American (js)
 Fix Star Tribune (css)
 Fix WSJ (amp live coverage)
@@ -91,7 +92,7 @@ Add TorStar local
 Add Weltkunst.de
 Fix Ad Age (js)
 Fix Australian Community Media (css & identify sites)
-Fix Euromoney (ld_google_webcache)
+Fix Euromoney (Google webcache)
 Fix Medium (identify member-only)
 Fix Puck.news (cached articles only)
 Fix Star Tribune (images/comments)

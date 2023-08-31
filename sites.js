@@ -1600,9 +1600,11 @@ var defaultSites = {
     cs_dompurify: 1,
     referer: "facebook"
   },
-  "Nikkei Asian Review (do not block Piano.io-script externally)": {
+  "Nikkei Asian Review": {
     domain: "asia.nikkei.com",
-    remove_cookies_select_drop: ["xbc"]
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\/api\/piano\.js/,
+    cs_dompurify: 1
   },
   "Nordwest Zeitung": {
     domain: "nwzonline.de",
@@ -2556,7 +2558,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"]
+    excluded_domains: ["piano.io", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

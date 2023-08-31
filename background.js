@@ -6,7 +6,7 @@ var ext_name = manifestData.name;
 var ext_version = manifestData.version;
 var navigator_ua = navigator.userAgent;
 var navigator_ua_mobile = navigator_ua.toLowerCase().includes('mobile');
-var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser');
+var kiwi_browser = navigator_ua_mobile && (url_loc === 'chrome') && !navigator_ua.toLowerCase().includes('yabrowser') && (navigator_ua.includes('Chrome/') && navigator_ua.match(/Chrome\/(\d+)/)[1] < 116);
 
 if (typeof ext_api.action !== 'object') {
   ext_api.action = ext_api.browserAction;
@@ -1288,8 +1288,6 @@ function remove_cookies_fn(domainVar, exclusions = false) {
             storeId = store.id;
         }
         storeId = storeId.toString();
-        if (domainVar === 'asia.nikkei.com')
-          domainVar = 'nikkei.com';
         var cookie_get_options = {
           domain: domainVar
         };
