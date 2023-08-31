@@ -3778,10 +3778,9 @@ else if (matchDomain('foreignpolicy.com')) {
 }
 
 else if (matchDomain('fortune.com')) {
-  let paywall = document.querySelector('.paywall');
+  let paywall = document.querySelector('div.paywallActive');
   if (window.location.pathname.match(/\/amp(\/)?/)) {
-    amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', '[class^="amp-ad"]');
-    removeDOMElement(paywall);
+    amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '="p.showPayWall"', '[class^="amp-ad"], div.paywall');
   } else {
     if (paywall)
       paywall.removeAttribute('class');

@@ -11,6 +11,13 @@
     "block_regex": "(\\.tinypass\\.com|\\.fastcompany\\.com\\/script\\.js)",
     "upd_version": "3.3.0.6"
   },
+  "Fortune": {
+    "domain": "fortune.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div.paywallActive\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.3.1.5"
+  },
   "Forbes": {
     "domain": "forbes.com",
     "allow_cookies": 1,
