@@ -49,6 +49,13 @@
     "ld_google_webcache": "div#paywall-offer|div#article-body-preview",
     "upd_version": "3.3.1.5"
   },
+  "Revista Oeste": {
+    "domain": "revistaoeste.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/revistaoeste\\.com\\/wp-content\\/.+\\/js\\/app\\..+\\.js",
+    "cs_code": "[{\"cond\":\"div.hidden[data-url]\", \"rm_class\":\"hidden\", \"elems\":[{\"cond\":\"div.is-locked\", \"rm_elem\": 1}, {\"cond\":\"div.subscribe-panel\", \"rm_elem\": 1}]}, {\"cond\":\"div.expandable\", \"rm_class\":\"expandable\"}]",
+    "upd_version": "3.3.1.5"
+  },
   "Scientific American": {
     "domain": "scientificamerican.com",
     "allow_cookies": 1,

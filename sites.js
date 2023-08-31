@@ -1824,6 +1824,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\/data/
   },
+  "Revista Oeste": {
+    domain: "revistaoeste.com",
+    allow_cookies: 1,
+    block_regex: /\/revistaoeste\.com\/wp-content\/.+\/js\/app\..+\.js/
+  },
   "Rhein-Zeitung": {
     domain: "rhein-zeitung.de",
     allow_cookies: 1,
