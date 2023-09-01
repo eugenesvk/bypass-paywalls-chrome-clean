@@ -854,6 +854,7 @@ var defaultSites = {
     domain: "###_fr_synerj",
     group: [],
     allow_cookies: 1,
+    ld_json_url: "div#encart_abo|div.article_bloc_texte",
     useragent: "googlebot"
   },
   "Grupo Abril": {

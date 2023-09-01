@@ -6,6 +6,7 @@ Post-release
 Add Revista Oeste (Brazil)
 Fix Fortune (css)
 Fix Forbes (menu)
+Fix Groupe SynerJ Media
 Fix Nikkei Asian Review (Google webcache)
 Fix Scientific American (js)
 Fix Star Tribune (css)
