@@ -5,6 +5,13 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "BQ Prime": {
+    "domain": "bqprime.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.bqprime\\.com\\/.+\\/.+\\?rel=geo_block",
+    "block_regex": "(\\.tinypass\\.com\\/api\\/tinypass\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.3.1.7"
+  },
   "Fast Company": {
     "domain": "fastcompany.com",
     "allow_cookies": 1,

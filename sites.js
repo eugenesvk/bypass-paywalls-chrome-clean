@@ -273,7 +273,7 @@ var defaultSites = {
     domain: "bqprime.com",
     allow_cookies: 1,
     block_js_inline: /\.bqprime\.com\/.+\/.+\?rel=geo_block/,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(\.tinypass\.com\/api\/tinypass\.min\.js|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Bridge Tower Media (opt-in to custom sites)": {
     domain: "###_usa_bridge_tower",
