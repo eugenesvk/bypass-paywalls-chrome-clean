@@ -1,4 +1,10 @@
 {
+  "Bild der Wissenschaft": {
+    "domain": "wissenschaft.de",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.3.1.7"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,

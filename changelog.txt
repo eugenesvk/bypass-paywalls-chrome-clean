@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Revista Oeste (Brazil)
+Add Wissenschaft.de
 Fix BQ Prime (js)
 Fix Fortune (css)
 Fix Forbes (menu)

@@ -574,6 +574,7 @@ Grouped in options:\
 [Automobilwoche](https://www.automobilwoche.de) -
 [Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
+[Bild der Wissenschaft](https://www.wissenschaft.de) -
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -
 [Cicero](https://www.cicero.de) -
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -

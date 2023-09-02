@@ -254,6 +254,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "bingbot"
   },
+  "Bild der Wissenschaft": {
+    domain: "wissenschaft.de",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Bloomberg": {
     domain: "bloomberg.com",
     allow_cookies: 1,
