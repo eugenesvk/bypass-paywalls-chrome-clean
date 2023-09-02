@@ -436,7 +436,7 @@ ext_api.storage.local.get({
   });
   customSites_domains = Object.values(customSites).map(x => x.domain);
   updatedSites = items.sites_updated;
-  updatedSites_domains_new = Object.values(updatedSites).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
+  updatedSites_domains_new = Object.values(updatedSites).filter(x => x.domain && !defaultSites_domains.includes(x.domain) || x.group).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)).concat([x.domain]) : x.domain).flat();
   var ext_version_old = items.ext_version_old;
   optin_setcookie = items.optIn;
   optin_update = items.optInUpdate;
@@ -450,8 +450,11 @@ ext_api.storage.local.get({
 
   // Enable new sites by default (opt-in)
   updatedSites_new = Object.keys(updatedSites).filter(x => updatedSites[x].domain && !defaultSites_domains.includes(updatedSites[x].domain));
-  for (let site_updated_new of updatedSites_new)
-    defaultSites[site_updated_new] = updatedSites[site_updated_new];
+  for (let site_updated in updatedSites) {
+    defaultSites[site_updated] = updatedSites[site_updated];
+    if (updatedSites[site_updated].group)
+      grouped_sites[updatedSites[site_updated].domain] = updatedSites[site_updated].group;
+  }
   if (ext_version > ext_version_old || updatedSites_new.length > 0) {
     if (enabledSites.includes('#options_enable_new_sites')) {
       let sites_new = Object.keys(defaultSites).filter(x => defaultSites[x].domain && !defaultSites[x].domain.match(/^(#options_|###$)/) && !sites_default.some(key => compareKey(key, x)));
@@ -473,7 +476,7 @@ ext_api.storage.local.get({
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
           let new_groups = ['###_de_mhs', '###_uk_delinian'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
-		  (!enabledSites.includes('###_usa_craincomm') && enabledSites.includes('###_usa_genomeweb'));
+            (!enabledSites.includes('###_usa_craincomm') && enabledSites.includes('###_usa_genomeweb'));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }
@@ -1236,8 +1239,14 @@ function site_switch() {
           isDefaultSite = Object.keys(grouped_sites).find(key => grouped_sites[key].includes(isDefaultSiteGroup));
       }
       if (!isDefaultSite) {
-        let sites_updated_domains_new = Object.values(updatedSites).filter(x => x.domain && !defaultSites_domains.includes(x.domain));
+        let sites_updated_domains_new = Object.values(updatedSites).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.domain);
         let isUpdatedSite = matchUrlDomain(sites_updated_domains_new, currentUrl);
+        if (!isUpdatedSite) {
+          let sites_updated_group_domains_new = Object.values(updatedSites).filter(x => x.group).map(x => x.group.filter(y => !defaultSites_domains.includes(y))).flat();
+          let isUpdatedSite_group = matchUrlDomain(sites_updated_group_domains_new, currentUrl);
+          if (isUpdatedSite_group)
+            isUpdatedSite = Object.values(updatedSites).filter(x => x.group && x.group.includes(isUpdatedSite_group)).map(x => x.domain)[0];
+        }
         if (isUpdatedSite)
           isDefaultSite = isUpdatedSite;
       }
@@ -1411,7 +1420,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
         if (!isExcludedSite) {
           let isDefaultSite = matchUrlDomain(defaultSites_domains, currentUrl);
           let isCustomSite = matchUrlDomain(Object.values(customSites_domains), currentUrl);
-          domain = isDefaultSite || isCustomSite;
+          let isUpdatedSite = matchUrlDomain(updatedSites_domains_new, currentUrl);
+          domain = isDefaultSite || isCustomSite || isUpdatedSite;
           if (domain)
             ext_api.runtime.sendMessage({
               msg: "popup_show_toggle",
