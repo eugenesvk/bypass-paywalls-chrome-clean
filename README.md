@@ -721,6 +721,7 @@ Grouped in options:\
 *[ProMedia Group](https://www.promedia.nl/publicaties)* sites (opt-in to custom sites)\
 *Roularta Media Group* sites like\
 [Artsenkrant](https://www.artsenkrant.com) -
+[Beleggers Belangen](https://www.beleggersbelangen.nl) -
 [Flair.be](https://www.flair.be/nl) -
 [Knack](https://www.knack.be) -
 [Krant van West-Vlaanderen](https://kw.be) -

@@ -8,7 +8,7 @@ var dompurify_loaded = (typeof DOMPurify === 'function');
 
 var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
 var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
-var be_roularta_domains = ['artsenkrant.com', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
+var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
@@ -2257,31 +2257,44 @@ else if (matchDomain('ftm.nl')) {
 }
 
 else if (matchDomain(be_roularta_domains)) {
-  let paywall = document.querySelector('div[id*="wall-modal"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let html = document.querySelector('html[class]');
-    if (html)
-      html.removeAttribute('class');
-    function roularta_noscroll(node) {
-      node.removeAttribute('style');
-      node.removeAttribute('class');
+  if (matchDomain('beleggersbelangen.nl')) {
+    let paywall = document.querySelector('div.unlimited-access');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let no_account = document.querySelector('div.no-account');
+      if (no_account)
+        no_account.classList.remove('no-account');
+      let content_inner = document.querySelector('div.content-inner[style]');
+      if (content_inner)
+        content_inner.removeAttribute('style');
+    } else {
+      let paywall = document.querySelector('div[id*="wall-modal"]');
+      if (paywall) {
+        removeDOMElement(paywall);
+        let html = document.querySelector('html[class]');
+        if (html)
+          html.removeAttribute('class');
+        function roularta_noscroll(node) {
+          node.removeAttribute('style');
+          node.removeAttribute('class');
+        }
+        waitDOMAttribute('html', 'html', 'class', roularta_noscroll, true);
+        let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
+        removeDOMElement(...intro);
+        let locked = document.querySelector('body.locked');
+        if (locked)
+          locked.classList.remove('locked');
+      }
+      if (!window.navigator.userAgent.toLowerCase().includes('chrome') && !matchDomain(['artsenkrant.com', 'kw.be']) && window.location.href.match(/\/((\w)+(\-)+){3,}/)) {
+        let lazy_images = document.querySelectorAll('[src^="data:image/"][data-lazy-src]');
+        for (let elem of lazy_images) {
+          elem.src = elem.getAttribute('data-lazy-src');
+        }
+      }
     }
-    waitDOMAttribute('html', 'html', 'class', roularta_noscroll, true);
-    let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
-    removeDOMElement(...intro);
-    let locked = document.querySelector('body.locked');
-    if (locked)
-      locked.classList.remove('locked');
+    let ads = document.querySelectorAll('div.rmgAd');
+    hideDOMElement(...ads);
   }
-  if (!window.navigator.userAgent.toLowerCase().includes('chrome') && !matchDomain(['artsenkrant.com', 'kw.be']) && window.location.href.match(/\/((\w)+(\-)+){3,}/)) {
-    let lazy_images = document.querySelectorAll('[src^="data:image/"][data-lazy-src]');
-    for (let elem of lazy_images) {
-      elem.src = elem.getAttribute('data-lazy-src');
-    }
-  }
-  let ads = document.querySelectorAll('div.rmgAd');
-  hideDOMElement(...ads);
 }
 
 else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('link[href*=".ndcmediagroep.nl/"]')) {

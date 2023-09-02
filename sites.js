@@ -1844,6 +1844,7 @@ var defaultSites = {
     domain: "###_be_roularta",
     group: [
       "artsenkrant.com",
+      "beleggersbelangen.nl",
       "femmesdaujourdhui.be",
       "flair.be",
       "knack.be",

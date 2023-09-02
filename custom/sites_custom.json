@@ -76,6 +76,7 @@
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",
+    "ld_json": "div.paywall|div.story-content|1",
     "useragent": "googlebot"
   },
   "Chicago.suntimes.com": {
