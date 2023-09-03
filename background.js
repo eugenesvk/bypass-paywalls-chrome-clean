@@ -76,6 +76,8 @@ var blockedJsInlineDomains = [];
 var amp_unhide;
 // redirect to amp-page
 var amp_redirect;
+// block contentScript
+var cs_block;
 // code for contentScript
 var cs_code;
 // load text from json (script[type="application/ld+json"])
@@ -108,6 +110,7 @@ function initSetRules() {
   change_headers = [];
   amp_unhide = [];
   amp_redirect = {};
+  cs_block = {};
   cs_code = {};
   ld_json = {};
   ld_json_next = {};
@@ -274,6 +277,8 @@ function addRules(domain, rule) {
     amp_unhide.push(domain);
   if (rule.amp_redirect)
     amp_redirect[domain] = rule.amp_redirect;
+  if (rule.cs_block)
+    cs_block[domain] = 1;
   if (rule.cs_code) {
     if (typeof rule.cs_code === 'string') {
       try {
@@ -807,6 +812,7 @@ if (typeof browser !== 'object') {
     let amp_redirect_domain = matchUrlDomain(Object.keys(amp_redirect), url);
     if (amp_redirect_domain)
       bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
+    let cs_block_domain = matchUrlDomain(Object.keys(cs_block), url);
     let cs_code_domain = matchUrlDomain(Object.keys(cs_code), url);
     if (cs_code_domain)
       bg2csData.cs_code = cs_code[cs_code_domain];
@@ -828,6 +834,7 @@ if (typeof browser !== 'object') {
     let tab_runs = 5;
     for (let n = 0; n < tab_runs; n++) {
       setTimeout(function () {
+        if (!cs_block_domain) {
         // run contentScript.js on page
         ext_api.tabs.executeScript(tabId, {
           file: lib_file,
@@ -850,6 +857,7 @@ if (typeof browser !== 'object') {
             ext_api.tabs.sendMessage(tabId, {msg: "bg2cs", data: bg2csData});
           }, 500);
         }
+        } // !cs_block_domain
         // remove cookies after page load
         if (rc_domain_enabled) {
           remove_cookies_fn(rc_domain, true);

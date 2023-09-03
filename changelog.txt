@@ -7,6 +7,7 @@ Add Beleggersbelangen.nl (Roularta)
 Add Revista Oeste (Brazil)
 Add Wissenschaft.de
 Fix BQ Prime (js)
+Fix Clarin (js & error)
 Fix Fortune (css)
 Fix Forbes (menu)
 Fix Groupe SynerJ Media
@@ -15,7 +16,7 @@ Fix Scientific American (js)
 Fix Star Tribune (css)
 Fix WSJ (amp live coverage)
 Maintenance background tab
-Maintenance updated sites (toggle, custom flex & grouped)
+Maintenance updated sites (cs_block, toggle, custom flex & grouped)
 
 * v3.3.1.0 (2023-08-27)
 Add Bridge Tower Media (opt-in to custom sites)

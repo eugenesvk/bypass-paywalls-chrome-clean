@@ -875,7 +875,7 @@ var defaultSites = {
       "losandes.com.ar"
     ],
     allow_cookies: 1,
-    block_regex: /\.clarin\.com\/.+\/auth\d\.js/,
+    block_regex: /\.clarin\.com\/js\/meter\w*\.js/,
     exception: [{
         domain: "lavoz.com.ar",
         allow_cookies: 1,
