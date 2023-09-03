@@ -4656,6 +4656,16 @@ else if (matchDomain('the-american-interest.com')) {
   removeDOMElement(counter);
 }
 
+else if (matchDomain('the-scientist.com')) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    paywall.classList.remove('paywall');
+    let fader = document.querySelector('div.gated-fader');
+    let modal = document.querySelector('div#Modal');
+    removeDOMElement(fader, modal);
+  }
+}
+
 else if (matchDomain('theamericanconservative.com')) {
   let paywall = document.querySelector('section.c-blog-post__body--locked');
   if (paywall && dompurify_loaded) {

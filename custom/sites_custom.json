@@ -266,6 +266,12 @@
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
   },
+  "Lefigaro.fr": {
+    "add_ext_link": "div#fig-premium-paywall|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "lefigaro.fr"
+  },
   "Libraryjournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
@@ -404,6 +410,13 @@
   },
   "Physicsworld.com": {
     "domain": "physicsworld.com"
+  },
+  "Portfolio.hu": {
+    "add_ext_link": "section.paywall|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "portfolio.hu",
+    "useragent": "googlebot"
   },
   "Pressandjournal.co.uk": {
     "allow_cookies": 1,

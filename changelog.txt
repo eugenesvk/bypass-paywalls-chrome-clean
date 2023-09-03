@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Beleggersbelangen.nl (Roularta)
 Add Revista Oeste (Brazil)
+Add The Scientist (archive)
 Add Wissenschaft.de
 Fix BQ Prime (js)
 Fix Clarin (js & error)

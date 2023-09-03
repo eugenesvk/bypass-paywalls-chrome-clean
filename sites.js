@@ -2267,6 +2267,10 @@ var defaultSites = {
     domain: "thesaturdaypaper.com.au",
     block_regex: /\.thesaturdaypaper\.com\.au\/sites\/all\/modules\/custom\/node_meter\/pw\.js/
   },
+  "The Scientist (archive)": {
+    domain: "the-scientist.com",
+    allow_cookies: 1
+  },
   "The Seattle Times": {
     domain: "seattletimes.com",
     allow_cookies: 1,

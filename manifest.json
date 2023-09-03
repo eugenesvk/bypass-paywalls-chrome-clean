@@ -637,6 +637,7 @@
     "*://*.tennessean.com/*",
     "*://*.tes.com/*",
     "*://*.the-american-interest.com/*",
+    "*://*.the-scientist.com/*",
     "*://*.the-tls.co.uk/*",
     "*://*.theadvocate.com.au/*",
     "*://*.theadvocate.com/*",
@@ -795,5 +796,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.1.7"
+  "version": "3.3.1.8"
 }

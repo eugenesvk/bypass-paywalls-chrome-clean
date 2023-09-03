@@ -149,6 +149,7 @@ Grouped in options:\
 [Popular Science](https://www.popsci.com) -
 [Science](https://www.science.org)* -
 [Scientific American](https://www.scientificamerican.com) -
+[The Scientist](https://www.the-scientist.com) -
 [Times Higher Education](https://www.timeshighereducation.com) -
 [VentureBeat](https://venturebeat.com)
 

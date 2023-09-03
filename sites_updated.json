@@ -104,5 +104,11 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "The Scientist (archive)": {
+    "domain": "the-scientist.com",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"div.gated-fader\", \"rm_elem\": 1}, {\"cond\":\"div#Modal\", \"rm_elem\": 1}]}]",
+    "upd_version": "3.3.1.8"
   }
 }
