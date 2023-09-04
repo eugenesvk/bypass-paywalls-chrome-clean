@@ -45,6 +45,12 @@
     "block_regex": "(\\.tinypass\\.com|\\.blueconic\\.net)",
     "upd_version": "3.3.0.8"
   },
+  "Inc42": {
+    "domain": "inc42.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.inc42\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "upd_version": "3.3.2.2"
+  },
   "Ippen.space": {
     "domain": "ippen.space",
     "allow_cookies": 1,

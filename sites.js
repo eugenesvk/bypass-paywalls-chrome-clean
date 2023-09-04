@@ -1093,7 +1093,7 @@ var defaultSites = {
   "Inc42": {
     domain: "inc42.com",
     allow_cookies: 1,
-    cs_dompurify: 1
+    block_regex: /(\.inc42\.com\/wp-content\/plugins\/leaky-paywall\/js\/leaky-paywall-cookie\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "India Today": {
     domain: "indiatoday.in",

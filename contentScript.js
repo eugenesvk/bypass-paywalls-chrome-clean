@@ -3925,37 +3925,21 @@ else if (matchDomain(usa_hearst_comm_domains)) {
 }
 
 else if (matchDomain('inc42.com')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#inc42_article_content_lock');
-  let article_sel = 'div.content-wrapper, section[amp-access="status"]';
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, article_sel);
+  if (window.location.pathname.endsWith('/amp/')) {
+    amp_unhide_access_hide('="status"', '="NOT status"', 'amp-ad, amp-embed, div.wru-widget');
+    let amp_images = document.querySelectorAll('body amp-img[src^="https://"]');
+    for (let amp_image of amp_images) {
+      let elem = document.createElement('img');
+      Object.assign(elem, {
+        src: amp_image.getAttribute('src'),
+        alt: amp_image.getAttribute('alt')
+      });
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
+  } else {
+    let banner = document.querySelector('div[id*="_leaderboard_"]');
+    hideDOMElement(banner);
   }
-  window.setTimeout(function () {
-    if (window.location.pathname.endsWith('/amp/')) {
-      let lazy_images = document.querySelectorAll('img.lazyload[src^="data:image/"][data-src]');
-      for (let elem of lazy_images) {
-        elem.src = elem.getAttribute('data-src');
-        elem.classList.remove('lazyload');
-        if (elem.width > 1000) {
-          let ratio = elem.width / 640;
-          if (window.navigator.userAgent.toLowerCase().includes('mobile'))
-            ratio = elem.width / 320;
-          elem.width = elem.width / ratio;
-          elem.height = elem.height / ratio;
-        }
-      }
-    }
-    let also_read = document.querySelector('div > .also-read');
-    if (also_read) {
-      let article = document.querySelector(article_sel);
-      if (article)
-        article.appendChild(also_read.parentNode);
-    }
-  }, 1000);
 }
 
 else if (matchDomain('indianexpress.com')) {
