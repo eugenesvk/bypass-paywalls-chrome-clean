@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Tes Magazine (css)
+Update block general paywall script (fix Ippen.space)
 
 * v3.3.2.0 (2023-09-03)
 Add Beleggersbelangen.nl (Roularta)

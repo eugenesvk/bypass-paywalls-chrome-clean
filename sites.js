@@ -2538,7 +2538,7 @@ var defaultSites = {
   "Ippen.space": {
     domain: "ippen.space",
     allow_cookies: 1,
-    block_regex_general: /\.ippen\.space\/js\/paywall\.js/
+    block_regex_general: /(\.ippen\.space\/js\/paywall\.js|\/sub\/js\/pc-offer-west\.js)/
   },
   "Leaky Paywall (WordPress plugin)": {
     domain: "###_wp_leaky_paywall",

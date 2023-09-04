@@ -393,6 +393,12 @@
     "domain": "onet.pl",
     "remove_cookies": 1
   },
+  "Ovb-online.de": {
+    "allow_cookies": 1,
+    "block_regex": "\\.ovb-online\\.de\\/sub\\/js\\/pc-offer-west\\.js",
+    "cs_code": "[{\"cond\":\"div.id-TBeepSlot\", \"rm_elem\":1}]",
+    "domain": "ovb-online.de"
+  },
   "Oz-online.de": {
     "allow_cookies": 1,
     "domain": "oz-online.de",
