@@ -82,6 +82,12 @@
     "block_regex": "\\.scientificamerican\\.com\\/api\\/tinypass\\.min\\.js",
     "upd_version": "3.3.1.4"
   },
+  "Tes Magazine": {
+    "domain": "tes.com",
+    "remove_cookies_select_drop": ["tg_paywall"],
+    "cs_code": "[{\"cond\":\"div.tg-paywall-message\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.tg-paywall-body-overlay\", \"rm_attrib\": \"class\"}]}]",
+    "upd_version": "3.3.2.1"
+  },
   "The Athletic": {
     "domain": "###_usa_theathletic",
     "group": [

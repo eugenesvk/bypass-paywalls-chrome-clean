@@ -3010,6 +3010,13 @@ else if (matchDomain('telegraph.co.uk')) {
 }
 
 else if (matchDomain('tes.com')) {
+  let paywall = document.querySelector('div.tg-paywall-message');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let overlay = document.querySelector('div.tg-paywall-body-overlay');
+    if (overlay)
+      overlay.removeAttribute('class');
+  }
   let banner = document.querySelector('div.js-paywall-info');
   removeDOMElement(banner);
 }
