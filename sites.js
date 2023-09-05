@@ -2099,7 +2099,7 @@ var defaultSites = {
     block_regex: /(\.blueconic\.net\/|\.dallasnews\.com\/script\.js|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
-  "The Diplomat": {
+  "The Diplomat (refresh magazine)": {
     domain: "thediplomat.com",
     block_regex: /\/thediplomat\.com\/.+\/js\/angular-cookies\.min\.js/,
     remove_cookies_select_drop: ["dpl-pw"]

@@ -6,6 +6,7 @@ Post-release
 Fix Inc42 (js)
 Fix Puck.news (ld_json_url)
 Fix Tes Magazine (css)
+Fix The Diplomat (magazine)
 Update block general paywall script (fix Ippen.space)
 
 * v3.3.2.0 (2023-09-03)
