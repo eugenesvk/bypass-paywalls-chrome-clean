@@ -4345,13 +4345,31 @@ else if (matchDomain('project-syndicate.org')) {
 }
 
 else if (matchDomain('puck.news')) {
-  let url = window.location.href;
   let paywall = document.querySelectorAll('div[class*="paywall"]');
-  if (paywall.length) {
+  if (paywall.length && dompurify_loaded) {
     removeDOMElement(...paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div.entry-content');
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    if (json_url_dom) {
+      let json_url = json_url_dom.href;
+      fetch(json_url)
+      .then(response => {
+        if (response.ok) {
+          response.json().then(json => {
+            let json_text = json.content.rendered;
+            let content = document.querySelector('div.entry-content');
+            if (json_text && content) {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              content.innerHTML = '';
+              let content_new = doc.querySelector('div');
+              content.appendChild(content_new, content);
+            }
+          });
+        }
+      });
+    }
+    let modal = document.querySelector('div#paywall-modal');
+    removeDOMElement(modal);
     let overlay = document.querySelector('body.paywall-active');
     if (overlay)
       overlay.classList.remove('paywall-active');

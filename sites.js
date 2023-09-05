@@ -1788,7 +1788,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.poool\.fr\//
   },
-  "Puck.news (cached articles only)": {
+  "Puck.news": {
     domain: "puck.news",
     allow_cookies: 1,
     cs_dompurify: 1

@@ -81,6 +81,13 @@
     "ld_google_webcache": "div#paywall-offer|div#article-body-preview",
     "upd_version": "3.3.1.5"
   },
+  "Puck.news": {
+    "domain": "puck.news",
+    "allow_cookies": 1,
+    "ld_json_url": "div[class*='paywall']|div.entry-content|1",
+    "cs_block": 1,
+    "upd_version": "3.3.2.3"
+  },
   "Revista Oeste": {
     "domain": "revistaoeste.com",
     "allow_cookies": 1,
