@@ -4124,12 +4124,12 @@ else if (matchDomain('magazine.atavist.com')) {
 }
 
 else if (matchDomain('marketwatch.com')) {
-  let premium = document.querySelector('html.is-paywall');
-  let url = window.location.href;
-  if (!url.includes('/amp/')) {
-    if (premium) {
-      premium.classList.remove('is-paywall');
-      window.location.href = url.replace('.marketwatch.com/', '.marketwatch.com/amp/');
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div#cx-snippet');
+    let amphtml = document.querySelector('link[rel="amphtml"]');
+    if (paywall && amphtml) {
+      removeDOMElement(paywall);
+      window.location.href = amphtml.href;
     }
   } else {
     let meter = document.querySelector('div.meter');

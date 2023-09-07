@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Inc42 (js)
+Fix MarketWatch (amp-redirect)
 Fix Puck.news (ld_json_url)
 Fix Tes Magazine (css)
 Fix The Diplomat (magazine)
