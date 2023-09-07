@@ -2353,8 +2353,8 @@ var defaultSites = {
   },
   "The Wrap": {
     domain: "thewrap.com",
-    allow_cookies: 1,
-    block_regex: /\.wallkit\.net\/js\//
+    remove_cookies_select_drop: ["blaize_session"],
+    cs_dompurify: 1
   },
   "Times Higher Education": {
     domain: "timeshighereducation.com",

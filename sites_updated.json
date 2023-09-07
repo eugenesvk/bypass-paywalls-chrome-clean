@@ -135,5 +135,11 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"div.gated-fader\", \"rm_elem\": 1}, {\"cond\":\"div#Modal\", \"rm_elem\": 1}]}]",
     "upd_version": "3.3.1.8"
+  },
+  "The Wrap": {
+    "domain": "thewrap.com",
+    "remove_cookies_select_drop": ["blaize_session"],
+    "ld_json_url": "div#zephr-payment-form-root|div.entry-content|1",
+    "upd_version": "3.3.2.5"
   }
 }

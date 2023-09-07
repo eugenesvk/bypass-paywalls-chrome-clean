@@ -73,6 +73,12 @@
     "domain": "businessnews.com.au",
     "useragent": "googlebot"
   },
+  "Cambiocolombia.com": {
+    "allow_cookies": 1,
+    "amp_redirect": "div#require-access",
+    "amp_unhide": 1,
+    "domain": "cambiocolombia.com"
+  },
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",
@@ -112,6 +118,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "dailyherald.com"
+  },
+  "Dealstreetasia.com": {
+    "allow_cookies": 1,
+    "domain": "dealstreetasia.com",
+    "ld_json_next": "div.subscribe-now|article"
   },
   "Diabeteshealth.co.in": {
     "allow_cookies": 1,

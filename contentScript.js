@@ -5122,9 +5122,32 @@ else if (matchDomain('theverge.com')) {
 }
 
 else if (matchDomain('thewrap.com')) {
-  let paywall = document.querySelector('.wrappro-paywall');
-  if (paywall)
-    paywall.classList.remove('wrappro-paywall');
+  let paywall = document.querySelector('div#zephr-payment-form-root');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('link[rel="alternate"][type="application/json"][href]');
+    if (json_url_dom) {
+      let json_url = json_url_dom.href;
+      fetch(json_url)
+      .then(response => {
+        if (response.ok) {
+          response.json().then(json => {
+            let json_text = json.content.rendered;
+            let content = document.querySelector('div.entry-content');
+            if (json_text && content) {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              content.innerHTML = '';
+              let content_new = doc.querySelector('div');
+              content.appendChild(content_new, content);
+            }
+          });
+        }
+      });
+    }
+    let fade = document.querySelector('div.content-area div[style*="background-image: linear-gradient"]');
+    removeDOMElement(fade);
+  }
 }
 
 else if (matchDomain('timeshighereducation.com')) {
@@ -5648,11 +5671,12 @@ function amp_iframes_replace(weblink = false, source = '') {
       elem = document.createElement('iframe');
       Object.assign(elem, {
         src: amp_iframe.getAttribute('src'),
-        sandbox: amp_iframe.getAttribute('sandbox'),
         height: amp_iframe.getAttribute('height'),
         width: 'auto',
         style: 'border: 0px;'
       });
+      if (amp_iframe.getAttribute('sandbox'))
+        elem.sandbox = amp_iframe.getAttribute('sandbox');
       amp_iframe.parentNode.replaceChild(elem, amp_iframe);
     } else {
       par = document.createElement('p');
