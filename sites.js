@@ -1678,23 +1678,17 @@ var defaultSites = {
       "betternutrition.com",
       "cleaneatingmag.com",
       "climbing.com",
-      "cyclingtips.com",
-      "gymclimber.com",
       "outsideonline.com",
       "oxygenmag.com",
-      "pelotonmagazine.com",
-      "podiumrunner.com",
-      "rockandice.com",
       "skimag.com",
       "trailrunnermag.com",
       "triathlete.com",
       "vegetariantimes.com",
-      "velonews.com",
       "womensrunning.com",
       "yogajournal.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/.+\\/(scripts\\/contentGate|MegaRegWall).+\\.js|\\.tinypass\\.com\\/)"
+    block_regex: /\.tinypass\.com\//
   },
   "Palo Alto Online": {
     domain: "paloaltoonline.com"

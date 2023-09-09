@@ -46,7 +46,7 @@ var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchr
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'journalstar.com', 'madison.com', 'nwitimes.com', 'omaha.com', 'richmond.com', 'stltoday.com', 'tucson.com', 'tulsaworld.com'];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'mcclatchydc.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pressenterprise.com', 'twincities.com'];
-var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition.com", "cleaneatingmag.com", "climbing.com", "cyclingtips.com", "gymclimber.com", "outsideonline.com", "oxygenmag.com", "pelotonmagazine.com", "podiumrunner.com", "rockandice.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "velonews.com", "womensrunning.com", "yogajournal.com"];
+var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition.com", "cleaneatingmag.com", "climbing.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
@@ -5277,18 +5277,8 @@ else if (matchDomain(usa_craincomm_domains)) {
 }
 
 else if (matchDomain(usa_outside_mag_domains)) {
-  let paywall = document.querySelector('div.o-membership-overlay');
-  if (paywall) {
-    let is_gated = document.querySelectorAll('[class*="is-gated"]');
-    for (let elem of is_gated)
-      removeClassesByPrefix(elem, 'is-gated');
-    removeDOMElement(paywall);
-  }
-  if (matchDomain('cyclingtips.com')) {
-    localStorage.removeItem('av');
-    let ads = document.querySelectorAll('div[data-block-name="ads"], div#takeover');
-    hideDOMElement(...ads);
-  }
+  let ads = document.querySelectorAll('div.js-ad');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(usa_tribune_domains)) {

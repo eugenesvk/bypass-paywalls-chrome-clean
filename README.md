@@ -265,18 +265,12 @@ Grouped in options:\
 [Better Nutrition](https://www.betternutrition.com) -
 [Clean Eating](https://www.cleaneatingmag.com) -
 [Climbing](https://www.climbing.com) -
-[Cycling Tips](https://cyclingtips.com) -
-[Gym Climber](https://www.gymclimber.com) -
 [Outside](https://www.outsideonline.com) -
 [Oxygen](https://www.oxygenmag.com) -
-[Peloton](https://www.pelotonmagazine.com) -
-[Podium Runner](https://www.podiumrunner.com) -
-[Rock and Ice](https://www.rockandice.com) -
 [SKI](https://www.skimag.com) -
 [Trail Runner](https://www.trailrunnermag.com) -
 [Triathlete](https://www.triathlete.com) -
 [Vegetarian Times](https://www.vegetariantimes.com) -
-[Velo News](https://www.velonews.com) -
 [Women's Running](https://www.womensrunning.com) -
 [Yoga Journal](https://www.yogajournal.com)\
 *Penske Media Corporation* sites like\
