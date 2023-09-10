@@ -1759,6 +1759,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "Pour la Science.fr": {
+    domain: "pourlascience.fr",
+    allow_cookies: 1,
+    block_regex: /\.qiota\.com\//
+  },
   "Private Equity News": {
     domain: "penews.com",
     useragent: "googlebot"

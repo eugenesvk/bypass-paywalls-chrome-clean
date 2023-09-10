@@ -502,6 +502,7 @@ Grouped in options:\
 [Marianne](https://www.marianne.net) -
 [Paris Match](https://www.parismatch.com) -
 [Philosophie Magazine](https://www.philomag.com) -
+[Pour la Science](https://www.pourlascience.fr) -
 [Public](https://www.public.fr) -
 [Revue Conflits](https://www.revueconflits.com) -
 [Science & Vie](https://www.science-et-vie.com) -

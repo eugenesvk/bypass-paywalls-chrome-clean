@@ -532,6 +532,11 @@
     "domain": "taxscan.in",
     "ld_json": "div.pmpro_content_message|div.singlepost_container>p"
   },
+  "The-fence.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.hadrianpaywall\\.com",
+    "domain": "the-fence.com"
+  },
   "The-past.com": {
     "domain": "the-past.com"
   },

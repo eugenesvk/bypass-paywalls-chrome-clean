@@ -539,6 +539,7 @@
     "*://*.popsci.com/*",
     "*://*.popularmechanics.com/*",
     "*://*.post-gazette.com/*",
+    "*://*.pourlascience.fr/*",
     "*://*.precisionmedicineonline.com/*",
     "*://*.pressenterprise.com/*",
     "*://*.prevention.com/*",
@@ -790,5 +791,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.2.6"
+  "version": "3.3.2.7"
 }
