@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add PourLaScience.fr
+Fix Automobilwoche.de (js)
 Fix Inc42 (js)
 Fix MarketWatch (amp-redirect)
 Fix Outside magazines (domains obsolete)
@@ -11,6 +12,7 @@ Fix Puck.news (ld_json_url)
 Fix Tes Magazine (css)
 Fix The Diplomat (magazine)
 Fix The Wrap (ld_json_url)
+Fix Tijd.be (belegger subdomain)
 Update block general paywall script (fix Ippen.space)
 
 * v3.3.2.0 (2023-09-03)

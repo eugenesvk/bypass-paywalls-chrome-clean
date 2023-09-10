@@ -1,4 +1,10 @@
 {
+  "Automobilwoche": {
+    "domain": "automobilwoche.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_wB7.+\\.js",
+    "upd_version": "3.3.2.8"
+  },
   "Beleggersbelangen.nl": {
     "domain": "beleggersbelangen.nl",
     "allow_cookies": 1,
@@ -25,11 +31,11 @@
     "block_regex": "(\\.tinypass\\.com\\/api\\/tinypass\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "upd_version": "3.3.1.7"
   },
-  "Fast Company": {
-    "domain": "fastcompany.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com|\\.fastcompany\\.com\\/script\\.js)",
-    "upd_version": "3.3.0.6"
+  "De Tijd": {
+    "domain": "tijd.be",
+    "referer": "google",
+    "cs_code": "[{\"cond\":\"body.js-overflow-hidden\", \"rm_class\":\"js-overflow-hidden\"}, {\"cond\":\"[inert]\", \"rm_attrib\": \"inert\"}, {\"cond\":\"div[data-id='react-paywall-investor']\", \"rm_elem\": 1}]",
+    "upd_version": "3.3.2.8"
   },
   "Fortune": {
     "domain": "fortune.com",
@@ -37,13 +43,6 @@
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "cs_code": "[{\"cond\":\"div.paywallActive\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.3.1.5"
-  },
-  "Forbes": {
-    "domain": "forbes.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.forbes\\.com\\/sites",
-    "block_regex": "(\\.tinypass\\.com|\\.blueconic\\.net)",
-    "upd_version": "3.3.0.8"
   },
   "Inc42": {
     "domain": "inc42.com",
@@ -57,29 +56,12 @@
     "block_regex_general": "(\\.ippen\\.space\\/js\\/paywall\\.js|\\/sub\\/js\\/pc-offer-west\\.js)",
     "upd_version": "3.3.2.2"
   },
-  "LeTemps.ch": {
-    "domain": "letemps.ch",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div.post-subscribe|div.post-body-wrapper",
-    "upd_version": "3.3.0.5"
-  },
   "MarketWatch": {
     "domain": "marketwatch.com",
     "allow_cookies": 1,
     "block_regex": "(cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "amp_redirect": "div#cx-snippet",
     "upd_version": "3.3.2.6"
-  },
-  "Mediahuis Noord": {
-    "domain": "###_nl_mediahuis_noord",
-    "group": [
-      "dvhn.nl",
-      "lc.nl"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.evolok\\.net\\/|\\.ndcmediagroep\\.nl\\/js\\/evolok\\/|\\.nl\\/_\\/zh\\/worker)",
-    "cs_dompurify": 1,
-    "upd_version": "3.3.0.1"
   },
   "Nikkei Asian Review": {
     "domain": "asia.nikkei.com",

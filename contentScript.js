@@ -2639,6 +2639,19 @@ else if (matchDomain('telegraaf.nl')) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain('tijd.be')) {
+  if (matchDomain('belegger.tijd.be')) {
+    let noscroll = document.querySelector('body.js-overflow-hidden');
+    if (noscroll)
+      noscroll.classList.remove('js-overflow-hidden');
+    let inert = document.querySelectorAll('[inert]');
+    for (let elem of inert)
+      elem.removeAttribute('inert');
+    let banner = document.querySelector('div[data-id="react-paywall-investor"]');
+    removeDOMElement(banner);
+  }
+}
+
 else if (matchDomain('vn.nl')) {
   let paywall = document.querySelector('div.content__message-no-access-container');
   if (paywall && dompurify_loaded) {
