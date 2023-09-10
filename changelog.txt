@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add PourLaScience.fr
+Add SpringerMedizin.de
 Fix Automobilwoche.de (js)
 Fix Inc42 (js)
 Fix MarketWatch (amp-redirect)

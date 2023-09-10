@@ -1937,6 +1937,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.blueconic\.net\//
   },
+  "Springer Medizin": {
+    domain: "springermedizin.de",
+    allow_cookies: 1
+  },
   "Star Tribune": {
     domain: "startribune.com",
     allow_cookies: 1

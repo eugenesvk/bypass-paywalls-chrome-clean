@@ -1122,6 +1122,26 @@ else if (matchDomain('spiegel.de')) {
   }
 }
 
+else if (matchDomain('springermedizin.de')) {
+  let paywall = document.querySelector('div#pay-wall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = json.articleBody;
+        let article = document.querySelector('div > p.intro--paragraph');
+        if (json_text && article) {
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          article.parentNode.replaceChild(article_new, article);
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de']) || matchDomain(de_mhs_custom_domains)) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);

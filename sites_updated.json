@@ -96,6 +96,12 @@
     "block_regex": "\\.scientificamerican\\.com\\/api\\/tinypass\\.min\\.js",
     "upd_version": "3.3.1.4"
   },
+  "Springer Medizin": {
+    "domain": "springermedizin.de",
+    "allow_cookies": 1,
+    "ld_json": "div#pay-wall|div>p.intro--paragraph",
+    "upd_version": "3.3.2.9"
+  },
   "Tes Magazine": {
     "domain": "tes.com",
     "remove_cookies_select_drop": ["tg_paywall"],

@@ -601,6 +601,7 @@
     "*://*.spglobal.com/*",
     "*://*.spiegel.de/*",
     "*://*.sportico.com/*",
+    "*://*.springermedizin.de/*",
     "*://*.standard.co.uk/*",
     "*://*.standard.net.au/*",
     "*://*.star-telegram.com/*",
@@ -791,5 +792,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.2.8"
+  "version": "3.3.2.9"
 }
