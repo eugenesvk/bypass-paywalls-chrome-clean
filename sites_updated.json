@@ -96,6 +96,13 @@
     "block_regex": "\\.scientificamerican\\.com\\/api\\/tinypass\\.min\\.js",
     "upd_version": "3.3.1.4"
   },
+  "South China Morning Post": {
+    "domain": "scmp.com",
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
+    "amp_unhide": 1,
+    "cs_code": "[{\"cond\":\"section[data-qa='ContentBody-ContentBodyContainer'][class]\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.3.3.1"
+  },
   "Springer Medizin": {
     "domain": "springermedizin.de",
     "allow_cookies": 1,

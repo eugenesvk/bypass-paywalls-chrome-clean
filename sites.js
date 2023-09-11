@@ -1920,7 +1920,7 @@ var defaultSites = {
   },
   "South China Morning Post": {
     domain: "scmp.com",
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Southern Weekly": {
     domain: "infzm.com",
