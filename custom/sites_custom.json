@@ -277,6 +277,12 @@
     "allow_cookies": 1,
     "domain": "lefigaro.fr"
   },
+  "Lemonde.fr": {
+    "add_ext_link": "section.paywall|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "lemonde.fr"
+  },
   "Lepoint.fr": {
     "add_ext_link": "div.info-paywall|div.ArticleBody>p",
     "add_ext_link_type": "archive.is",
@@ -617,8 +623,9 @@
   },
   "Vikatan.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.vikatan\\.com\\/evolok\\/ev-dab\\/ev-em\\.min\\.js",
-    "domain": "vikatan.com"
+    "cs_code": "[{\"cond\":\"div[class^='styles-m__story-card-wrapper_']\", \"rm_attrib\":\"class\"}]",
+    "domain": "vikatan.com",
+    "ld_json": "div#paywallDisplay|div.story-element>div"
   },
   "Washingtontimes.com": {
     "allow_cookies": 1,

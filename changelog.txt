@@ -4,7 +4,9 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Cambio Colombia
+Fix LaStampa.it (video articles)
 Fix South China Morning Post (mobile & amp)
+Fix WSJ (disable amp-redirect for www)
 
 * v3.3.3.0 (2023-09-10)
 Add PourLaScience.fr

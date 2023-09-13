@@ -961,7 +961,7 @@ var defaultSites = {
     useragent: "googlebot",
     exception: [{
         domain: "lastampa.it",
-        block_js_inline: /\.lastampa\.it\//,
+        block_js_inline: /\.lastampa\.it\/.+\/news\//,
         remove_cookies_select_drop: ["blaize_session"]
       }
     ]
@@ -2335,7 +2335,7 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "The Wall Street Journal (when blocked disable Googlebot in BPC-settings)": {
+  "The Wall Street Journal": {
     domain: "wsj.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
@@ -2647,9 +2647,6 @@ var defaultSites = {
   },
   "Barron's - no Googlebot (http error 500)": {
     domain: "#options_disable_gb_barrons"
-  },
-  "The Wall Street Journal - no Googlebot (http error 500)": {
-    domain: "#options_disable_gb_wsj"
   },
 }
 
