@@ -31,6 +31,13 @@
     "block_regex": "(\\.tinypass\\.com\\/api\\/tinypass\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "upd_version": "3.3.1.7"
   },
+  "Cambio Colombia": {
+    "domain": "cambiocolombia.com",
+    "allow_cookies": 1,
+    "amp_redirect": "div#require-access",
+    "amp_unhide": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
+  },
   "De Tijd": {
     "domain": "tijd.be",
     "referer": "google",

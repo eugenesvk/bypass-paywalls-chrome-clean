@@ -936,6 +936,7 @@ Grouped in options:\
 [La Segunda](https://digital.lasegunda.com) -
 [La Tercera](https://www.latercera.com)
 ##### Colombia
+[Cambio Colombia](https://cambiocolombia.com) -
 [El Espectador](https://www.elespectador.com) -
 [El Tiempo](https://www.eltiempo.com)
 ##### Mexico

@@ -318,6 +318,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/olytics\.omeda\.com\//
   },
+  "Cambio Colombia": {
+    domain: "cambiocolombia.com",
+    allow_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
+  },
   "Causeur": {
     domain: "causeur.fr",
     allow_cookies: 1,

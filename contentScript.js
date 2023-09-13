@@ -3134,7 +3134,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'globo.com', 'lasegunda.com', 'latercera.com', 'revistaoeste.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['cambiocolombia.com', 'clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'globo.com', 'lasegunda.com', 'latercera.com', 'revistaoeste.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -3154,6 +3154,18 @@ else if (matchDomain(ar_grupo_clarin_domains)) {
   let ads_inline = document.querySelectorAll('div > div.sticky, div > div[id^="div-gpt-ad-inread"], div > div[id^="div-gpt-ad-caja"], div > div[id^="div-gpt-ad-horizontal"]');
   for (let ad of ads_inline)
     hideDOMElement(ad.parentNode);
+}
+
+else if (matchDomain('cambiocolombia.com')) {
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div#require-access');
+    if (paywall) {
+      removeDOMElement(paywall);
+      window.location.href = '/amp' + window.location.pathname;
+    }
+  } else {
+    amp_unhide_subscr_section('amp-ad, amp-embed');
+  }
 }
 
 else if (matchDomain('crusoe.com.br')) {

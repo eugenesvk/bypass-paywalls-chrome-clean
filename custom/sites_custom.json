@@ -73,12 +73,6 @@
     "domain": "businessnews.com.au",
     "useragent": "googlebot"
   },
-  "Cambiocolombia.com": {
-    "allow_cookies": 1,
-    "amp_redirect": "div#require-access",
-    "amp_unhide": 1,
-    "domain": "cambiocolombia.com"
-  },
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",
@@ -531,6 +525,12 @@
     "allow_cookies": 1,
     "domain": "taxscan.in",
     "ld_json": "div.pmpro_content_message|div.singlepost_container>p"
+  },
+  "Tetu.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com",
+    "domain": "tetu.com",
+    "ld_json_url": "div.qiota-for-free-article|div.article-content"
   },
   "The-fence.com": {
     "allow_cookies": 1,
