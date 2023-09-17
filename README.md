@@ -890,6 +890,7 @@ Grouped in options:\
 [The Hindu](https://www.thehindu.com) -
 [The Hindu BusinessLine](https://www.thehindubusinessline.com) -
 [The Indian Express](https://indianexpress.com) -
+[The News Minute](https://www.thenewsminute.com) -
 [The Quint](https://www.thequint.com) -
 [Times of India](https://timesofindia.indiatimes.com)
 

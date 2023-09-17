@@ -5,51 +5,25 @@
     "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_wB7.+\\.js",
     "upd_version": "3.3.2.8"
   },
-  "Beleggersbelangen.nl": {
-    "domain": "beleggersbelangen.nl",
-    "allow_cookies": 1,
-    "block_regex": "(\\.beleggersbelangen\\.nl\\/script\\.js|\\.blueconic\\.net\\/)",
-    "cs_code": "[{\"cond\":\"div.unlimited-access\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.no-account\", \"rm_class\": \"no-account\"}, {\"cond\":\"div.content-inner[style]\", \"rm_attrib\": \"style\"}]}]",
-    "upd_version": "3.3.1.8"
-  },
-  "Bild der Wissenschaft": {
-    "domain": "wissenschaft.de",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.3.1.7"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "BQ Prime": {
-    "domain": "bqprime.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.bqprime\\.com\\/.+\\/.+\\?rel=geo_block",
-    "block_regex": "(\\.tinypass\\.com\\/api\\/tinypass\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "upd_version": "3.3.1.7"
-  },
   "Cambio Colombia": {
     "domain": "cambiocolombia.com",
     "allow_cookies": 1,
     "amp_redirect": "div#require-access",
     "amp_unhide": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js"
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
+    "upd_version": "3.3.3.2"
   },
   "De Tijd": {
     "domain": "tijd.be",
     "referer": "google",
     "cs_code": "[{\"cond\":\"body.js-overflow-hidden\", \"rm_class\":\"js-overflow-hidden\"}, {\"cond\":\"[inert]\", \"rm_attrib\": \"inert\"}, {\"cond\":\"div[data-id='react-paywall-investor']\", \"rm_elem\": 1}]",
     "upd_version": "3.3.2.8"
-  },
-  "Fortune": {
-    "domain": "fortune.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div.paywallActive\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.3.1.5"
   },
   "Inc42": {
     "domain": "inc42.com",
@@ -70,13 +44,6 @@
     "amp_redirect": "div#cx-snippet",
     "upd_version": "3.3.2.6"
   },
-  "Nikkei Asian Review": {
-    "domain": "asia.nikkei.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/api\\/piano\\.js",
-    "ld_google_webcache": "div#paywall-offer|div#article-body-preview",
-    "upd_version": "3.3.1.5"
-  },
   "Pour la Science.fr": {
     "domain": "pourlascience.fr",
     "allow_cookies": 1,
@@ -89,19 +56,6 @@
     "ld_json_url": "div[class*='paywall']|div.entry-content|1",
     "cs_block": 1,
     "upd_version": "3.3.2.3"
-  },
-  "Revista Oeste": {
-    "domain": "revistaoeste.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/revistaoeste\\.com\\/wp-content\\/.+\\/js\\/app\\..+\\.js",
-    "cs_code": "[{\"cond\":\"div.hidden[data-url]\", \"rm_class\":\"hidden\", \"elems\":[{\"cond\":\"div.is-locked\", \"rm_elem\": 1}, {\"cond\":\"div.subscribe-panel\", \"rm_elem\": 1}]}, {\"cond\":\"div.expandable\", \"rm_class\":\"expandable\"}]",
-    "upd_version": "3.3.1.5"
-  },
-  "Scientific American": {
-    "domain": "scientificamerican.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.scientificamerican\\.com\\/api\\/tinypass\\.min\\.js",
-    "upd_version": "3.3.1.4"
   },
   "South China Morning Post": {
     "domain": "scmp.com",
@@ -145,11 +99,11 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
-  "The Scientist (archive)": {
-    "domain": "the-scientist.com",
+  "The News Minute": {
+    "domain": "thenewsminute.com",
     "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"div.gated-fader\", \"rm_elem\": 1}, {\"cond\":\"div#Modal\", \"rm_elem\": 1}]}]",
-    "upd_version": "3.3.1.8"
+    "ld_json": "div#paywall-banner|div.arr--story-page-card-wrapper",
+    "upd_version": "3.3.3.6"
   },
   "The Wrap": {
     "domain": "thewrap.com",

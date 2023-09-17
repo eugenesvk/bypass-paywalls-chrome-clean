@@ -2258,6 +2258,10 @@ var defaultSites = {
     block_regex: /(\.nytimes\.com\/meter\.js|mwcm\.nyt\.com\/.+\.js|cooking\.nytimes\.com\/api\/.+\/access)/,
     useragent: "googlebot"
   },
+  "The News Minute": {
+    domain: "thenewsminute.com",
+    allow_cookies: 1
+  },
   "The Philadelphia Inquirer": {
     domain: "inquirer.com",
     allow_cookies: 1,

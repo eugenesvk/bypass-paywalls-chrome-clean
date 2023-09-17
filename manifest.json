@@ -666,6 +666,7 @@
     "*://*.thenation.com/*",
     "*://*.thenewatlantis.com/*",
     "*://*.theneweuropean.co.uk/*",
+    "*://*.thenewsminute.com/*",
     "*://*.thepeterboroughexaminer.com/*",
     "*://*.thepointmag.com/*",
     "*://*.theprovince.com/*",
@@ -793,5 +794,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.3.5"
+  "version": "3.3.3.6"
 }

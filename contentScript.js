@@ -5066,6 +5066,27 @@ else if (matchDomain('thenewatlantis.com')) {
     article_gated.classList.remove('article-gated');
 }
 
+else if (matchDomain('thenewsminute.com')) {
+  let paywall = document.querySelector('div#paywall-banner');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = breakText(parseHtmlEntities(json.articleBody.replace(/\.\./g, '.\r\n\r\n')));
+        let article = document.querySelector('div.arr--story-page-card-wrapper');
+        if (json_text && article) {
+          article.innerHTML = '';
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          article.appendChild(article_new);
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('thepointmag.com')) {
   let overlay = document.querySelectorAll('div.overlay, div#tpopup-');
   removeDOMElement(...overlay);
