@@ -2447,6 +2447,11 @@ var defaultSites = {
     block_regex: /cdn\.cxense\.com\//,
     useragent: "googlebot"
   },
+  "Vikatan": {
+    domain: "vikatan.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Vogue Business": {
     allow_cookies: 1,
     domain: "voguebusiness.com",

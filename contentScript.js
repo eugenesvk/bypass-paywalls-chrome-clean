@@ -5381,6 +5381,32 @@ else if (matchDomain('venturebeat.com')) {
   }, 500);
 }
 
+else if (matchDomain('vikatan.com')) {
+  window.setTimeout(function () {
+    let paywall = document.querySelector('div#paywallDisplay');
+    if (paywall && dompurify_loaded) {
+      removeDOMElement(paywall);
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let json_text = parseHtmlEntities(json.articleBody);
+          let content = document.querySelector('div.story-element > div');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.parentNode.replaceChild(content_new, content);
+          }
+        }
+      }
+    }
+    let story_hidden = document.querySelector('div[class^="styles-m__story-card-wrapper_"]');
+    if (story_hidden)
+      story_hidden.removeAttribute('class');
+  }, 500);
+}
+
 else if (matchDomain('washingtonpost.com')) {
   let leaderboard = document.querySelector('#leaderboard-wrapper');
   let ads = document.querySelectorAll('div[data-qa$="-ad"]');

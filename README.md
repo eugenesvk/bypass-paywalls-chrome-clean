@@ -892,7 +892,8 @@ Grouped in options:\
 [The Indian Express](https://indianexpress.com) -
 [The News Minute](https://www.thenewsminute.com) -
 [The Quint](https://www.thequint.com) -
-[Times of India](https://timesofindia.indiatimes.com)
+[Times of India](https://timesofindia.indiatimes.com) -
+[Vikatan](https://www.vikatan.com)
 
 ##### Israel
 [Globes](https://www.globes.co.il) -

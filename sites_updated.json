@@ -110,5 +110,12 @@
     "remove_cookies_select_drop": ["blaize_session"],
     "ld_json_url": "div#zephr-payment-form-root|div.entry-content|1",
     "upd_version": "3.3.2.5"
+  },
+  "Vikatan": {
+    "domain": "vikatan.com",
+    "allow_cookies": 1,
+    "ld_json": "div#paywallDisplay|div.story-element>div",
+    "cs_code": "[{\"cond\":\"div[class^='styles-m__story-card-wrapper_']\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.3.3.7"
   }
 }

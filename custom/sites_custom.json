@@ -149,6 +149,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "eluniversal.com.mx"
   },
+  "Endpts.com": {
+    "allow_cookies": 1,
+    "domain": "endpts.com",
+    "ld_json_url": "div.epn_limit|div.epn_content"
+  },
   "Energy-storage.news": {
     "allow_cookies": 1,
     "domain": "energy-storage.news",
@@ -459,6 +464,11 @@
   "Quickmath.com": {
     "domain": "quickmath.com"
   },
+  "Researchprofessionalnews.com": {
+    "allow_cookies": 1,
+    "domain": "researchprofessionalnews.com",
+    "ld_json_url": "section.single-locked-message|section.single-locked-content"
+  },
   "Reviewjournal.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
@@ -620,12 +630,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
     "domain": "toolkits.com"
-  },
-  "Vikatan.com": {
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div[class^='styles-m__story-card-wrapper_']\", \"rm_attrib\":\"class\"}]",
-    "domain": "vikatan.com",
-    "ld_json": "div#paywallDisplay|div.story-element>div"
   },
   "Washingtontimes.com": {
     "allow_cookies": 1,
