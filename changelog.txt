@@ -6,6 +6,7 @@ Post-release
 Add Cambio Colombia
 Add The News Minute (India)
 Fix LaStampa.it (video articles)
+Fix Roularta Media Group (modal)
 Fix South China Morning Post (mobile & amp)
 Fix WSJ (disable amp-redirect for www)
 

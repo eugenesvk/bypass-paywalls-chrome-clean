@@ -2291,34 +2291,34 @@ else if (matchDomain(be_roularta_domains)) {
       let content_inner = document.querySelector('div.content-inner[style]');
       if (content_inner)
         content_inner.removeAttribute('style');
-    } else {
-      let paywall = document.querySelector('div[id*="wall-modal"]');
-      if (paywall) {
-        removeDOMElement(paywall);
-        let html = document.querySelector('html[class]');
-        if (html)
-          html.removeAttribute('class');
-        function roularta_noscroll(node) {
-          node.removeAttribute('style');
-          node.removeAttribute('class');
-        }
-        waitDOMAttribute('html', 'html', 'class', roularta_noscroll, true);
-        let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
-        removeDOMElement(...intro);
-        let locked = document.querySelector('body.locked');
-        if (locked)
-          locked.classList.remove('locked');
+    }
+  } else {
+    let paywall = document.querySelector('div[id*="wall-modal"]');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let html = document.querySelector('html[class]');
+      if (html)
+        html.removeAttribute('class');
+      function roularta_noscroll(node) {
+        node.removeAttribute('style');
+        node.removeAttribute('class');
       }
-      if (!window.navigator.userAgent.toLowerCase().includes('chrome') && !matchDomain(['artsenkrant.com', 'kw.be']) && window.location.href.match(/\/((\w)+(\-)+){3,}/)) {
-        let lazy_images = document.querySelectorAll('[src^="data:image/"][data-lazy-src]');
-        for (let elem of lazy_images) {
-          elem.src = elem.getAttribute('data-lazy-src');
-        }
+      waitDOMAttribute('html', 'html', 'class', roularta_noscroll, true);
+      let intro = document.querySelectorAll('div.article-body > p, div.article-body > style');
+      removeDOMElement(...intro);
+      let locked = document.querySelector('body.locked');
+      if (locked)
+        locked.classList.remove('locked');
+    }
+    if (!window.navigator.userAgent.toLowerCase().includes('chrome') && !matchDomain(['artsenkrant.com', 'kw.be']) && window.location.href.match(/\/((\w)+(\-)+){3,}/)) {
+      let lazy_images = document.querySelectorAll('img[src^="data:image/"][data-lazy-src]');
+      for (let elem of lazy_images) {
+        elem.src = elem.getAttribute('data-lazy-src');
       }
     }
-    let ads = document.querySelectorAll('div.rmgAd');
-    hideDOMElement(...ads);
   }
+  let ads = document.querySelectorAll('div.rmgAd');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('link[href*=".ndcmediagroep.nl/"]')) {
