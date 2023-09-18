@@ -105,6 +105,15 @@
     "ld_json": "div#paywall-banner|div.arr--story-page-card-wrapper",
     "upd_version": "3.3.3.6"
   },
+  "The Week (regwall)": {
+    "domain": "###_uk_theweek",
+    "group": [
+      "theweek.com"
+    ],
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.kiosq-main-layer\", \"rm_elem\":1}, {\"cond\":\"div.paywall-locker\", \"rm_class\":\"paywall-locker\"}]",
+    "upd_version": "3.3.4.1"
+  },
   "The Wrap": {
     "domain": "thewrap.com",
     "remove_cookies_select_drop": ["blaize_session"],

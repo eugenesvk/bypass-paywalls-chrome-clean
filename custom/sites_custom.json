@@ -1,4 +1,8 @@
 {
+  "###_remove_sites": {
+    "cs_code": "africaintelligence.fr, bild.de, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
+    "domain": "###"
+  },
   "Abajournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
@@ -68,6 +72,13 @@
     "cs_code": "[{\"cond\":\"div.text-gradient\", \"rm_class\":\"text-gradient\"}]",
     "domain": "businessam.be"
   },
+  "Businessinsider.de": {
+    "add_ext_link": "div.piano-article__paywall|div.piano-article__content>p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "domain": "businessinsider.de"
+  },
   "Businessnews.com.au": {
     "allow_cookies": 1,
     "domain": "businessnews.com.au",
@@ -118,6 +129,12 @@
     "domain": "dealstreetasia.com",
     "ld_json_next": "div.subscribe-now|article"
   },
+  "Deutsche-wirtschafts-nachrichten.de": {
+    "add_ext_link": "div#article-teaser-blocks|div.teaser_extra",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "deutsche-wirtschafts-nachrichten.de"
+  },
   "Diabeteshealth.co.in": {
     "allow_cookies": 1,
     "domain": "diabeteshealth.co.in",
@@ -127,6 +144,12 @@
     "allow_cookies": 1,
     "domain": "diariodenavarra.es",
     "ld_json": "div#paywall_message|div.free-html"
+  },
+  "Die-glocke.de": {
+    "add_ext_link": "div.cardPw|div.mainContent",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "die-glocke.de"
   },
   "Doorbraak.be": {
     "allow_cookies": 1,
@@ -305,6 +328,12 @@
     "cs_code": "[{\"cond\":\"div.td-post-content\", \"rm_class\": \"td-post-content\"}]",
     "domain": "limerickpost.ie"
   },
+  "Limesonline.com": {
+    "add_ext_link": "iframe#__limio_frame|div.sommario",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "limesonline.com"
+  },
   "Lindipendente.online": {
     "allow_cookies": 1,
     "domain": "lindipendente.online",
@@ -438,6 +467,12 @@
   },
   "Physicsworld.com": {
     "domain": "physicsworld.com"
+  },
+  "Politiken.dk": {
+    "add_ext_link": "div.stopsign|div.article__body",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "politiken.dk"
   },
   "Portfolio.hu": {
     "add_ext_link": "section.paywall|article",

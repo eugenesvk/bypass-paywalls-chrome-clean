@@ -86,7 +86,7 @@ function renderOptions() {
       let sites_arr = site_types[site_type].sites;
       for (let key in sites_arr) {
         let domain = sites_arr[key]['domain'];
-        if (!domain || (!site_types[site_type].default_sites && (defaultSites.hasOwnProperty(key) || defaultSites_domains.includes(domain))))
+        if (!domain || (key === '###_remove_sites') || (!site_types[site_type].default_sites && (defaultSites.hasOwnProperty(key) || defaultSites_domains.includes(domain))))
           continue;
         labelEl = document.createElement('label');
         let inputEl = document.createElement('input');

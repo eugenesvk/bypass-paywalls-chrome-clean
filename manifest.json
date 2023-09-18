@@ -680,7 +680,6 @@
     "*://*.thestate.com/*",
     "*://*.thetimes.co.uk/*",
     "*://*.theverge.com/*",
-    "*://*.theweek.co.uk/*",
     "*://*.theweek.com/*",
     "*://*.thewest.com.au/*",
     "*://*.thewrap.com/*",
@@ -795,5 +794,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.4.0"
+  "version": "3.3.4.2"
 }

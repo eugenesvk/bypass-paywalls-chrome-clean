@@ -2351,13 +2351,8 @@ var defaultSites = {
     block_regex: /\.washingtonpost\.com\/tetro\/metering\/evaluate/
   },
   "The Week (regwall)": {
-    domain: "###_uk_theweek",
-    group: [
-      "theweek.co.uk",
-      "theweek.com"
-    ],
-    allow_cookies: 1,
-    useragent: "googlebot"
+    domain: "theweek.com",
+    allow_cookies: 1
   },
   "The West Australian (+ regional/opt-in to custom sites)": {
     domain: "thewest.com.au",

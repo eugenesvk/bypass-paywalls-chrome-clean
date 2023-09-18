@@ -88,11 +88,18 @@ function import_json(result) {
   }, function (items) {
     var sites_custom = items.sites_custom;
     var sites_custom_new = JSON.parse(result);
+    var customSitesExt_remove = [];
+    if (sites_custom_new['###_remove_sites'] && sites_custom_new['###_remove_sites'].cs_code)
+      customSitesExt_remove = sites_custom_new['###_remove_sites'].cs_code.split(/,\s?/);
     for (let site in sites_custom_new) {
-      let customSite_diff = Object.keys(sites_custom).find(key => sites_custom[key].domain === sites_custom_new[site].domain && key !== site);
-      if (customSite_diff)
-        delete sites_custom[customSite_diff];
-      sites_custom[site] = sites_custom_new[site];
+      if (customSitesExt_remove.includes(site.domain))
+        delete sites_custom[site];
+      else {
+        let customSite_diff = Object.keys(sites_custom).find(key => sites_custom[key].domain === sites_custom_new[site].domain && key !== site);
+        if (customSite_diff)
+          delete sites_custom[customSite_diff];
+        sites_custom[site] = sites_custom_new[site];
+      }
     }
     sites_custom = filterObject(sites_custom, function (val, key) {
       return !(val.add_ext_link && !val.add_ext_link_type)
@@ -394,7 +401,8 @@ function renderOptions() {
     for (let key in sites_custom) {
       optionEl = document.createElement('option');
       let domain = sites_custom[key]['domain'];
-      perm_origins.push(domain);
+      if (domain && domain !== '###')
+        perm_origins.push(domain);
       let isDefaultSite = defaultSites_domains.includes(domain);
       optionEl.text = isDefaultSite ? '*' : '';
       optionEl.text += key + ': ' + domain +

@@ -373,7 +373,7 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (!custom) {
           let isCustomSite = matchDomain(customSites_domains, domain);
           let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite) : '';
-          if (customSite_title && !(rule.add_ext_link || ['swarajyamag.com', 'vikatan.com'].includes(isCustomSite))) {
+          if (customSite_title && !(rule.add_ext_link || customSitesExt_remove.includes(isCustomSite))) {
             // add default block_regex
             let block_regex_default = '';
             if (rule.hasOwnProperty('block_regex'))
@@ -468,7 +468,8 @@ ext_api.storage.local.get({
         sites[site_new] = defaultSites[site_new].domain;
       // reset ungrouped sites
       let ungrouped_sites = {
-        'The Athletic': 'theathletic.com'
+        'The Athletic': 'theathletic.com',
+        'The Week (regwall)': 'theweek.com'
       };
       for (let key in ungrouped_sites) {
         if (sites[key] && sites[key] !== ungrouped_sites[key])
@@ -1149,6 +1150,8 @@ function check_sites_custom_ext() {
     if (response.ok) {
       response.json().then(json => {
         customSitesExt = Object.values(json).map(x => x.domain);
+        if (json['###_remove_sites'] && json['###_remove_sites'].cs_code)
+          customSitesExt_remove = json['###_remove_sites'].cs_code.split(/,\s?/);
       })
     }
   }).catch(function (err) {
@@ -1157,6 +1160,7 @@ function check_sites_custom_ext() {
 }
 
 var customSitesExt = [];
+var customSitesExt_remove = [];
 var sites_custom_ext_json = 'custom/sites_custom.json';
 
 ext_api.tabs.onUpdated.addListener(function (tabId, info, tab) { updateBadge(tab); });
