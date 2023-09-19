@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Remove HBR China (fix obsolete)
 Fix The Week (css)
 Update custom sites (import - remove obsolete)
 
@@ -1134,7 +1135,7 @@ Check for update version on startup/options (now opt-out)
 Update group rules (post-release)
 
 * v2.4.3.0 (2021-11-07)
-Add Harvard Business Review China
+Add HBR China
 Add Mitteldeutsche Zeitung
 Remove Liberation.fr (fix obsolete)
 Fix ElMundo.es (amp)
@@ -2021,7 +2022,7 @@ Fix Espresso.repubblica.it
 Fix TheAdvocate.com.au
 
 * v1.6.4.1 (2020-01-31)
-Add Harvard Business Review Taiwan
+Add HBR Taiwan
 Add Modern Healthcare
 Add National Review
 Add The Christian Science Monitor

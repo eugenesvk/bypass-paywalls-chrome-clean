@@ -3572,7 +3572,7 @@ else if (matchDomain('business-standard.com')) {
       }
     }
     let banner = document.querySelector('section.sbcrbtmlfull');
-    let ads = document.querySelectorAll('div.advertisement-bg');
+    let ads = document.querySelectorAll('div.advertisement-bg, div[id^="between_article_content_"]');
     hideDOMElement(banner, ...ads);
   } else
     ampToHtml();
@@ -3896,12 +3896,6 @@ else if (matchDomain('hbr.org')) {
     if (main_hidden)
       main_hidden.removeAttribute('style');
   }
-}
-
-else if (matchDomain('hbrchina.org')) {
-  let div_hidden = document.querySelector('div#the_content');
-  if (div_hidden)
-    div_hidden.removeAttribute('style');
 }
 
 else if (matchDomain('hilltimes.com')) {

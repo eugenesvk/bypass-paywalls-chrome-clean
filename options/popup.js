@@ -80,9 +80,11 @@ function showArchiveLinks() {
     currentWindow: true
   }, function (tabs) {
     if (tabs && tabs[0] && /^http/.test(tabs[0].url)) {
-      let url = tabs[0].url.split(/[#\?]/)[0];
-      let url_enc = encodeURIComponent(url);
+      let url = tabs[0].url;
       let hostname = urlHost(url);
+      if (!matchDomain(['hbrchina.org'], hostname))
+        url = url.split(/[#\?]/)[0];
+      let url_enc = encodeURIComponent(url);
       let archive_array = {
         'Archive.today': 'https://archive.today?run=1&url=' + url_enc,
         'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url_enc,
