@@ -8,6 +8,11 @@
     "block_regex": "\\.piano\\.io",
     "domain": "abajournal.com"
   },
+  "Acadienouvelle.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.acadienouvelle\\.com\\/script\\.js",
+    "domain": "acadienouvelle.com"
+  },
   "Airmail.news": {
     "add_ext_link": "div.paywall-card|div.article-text",
     "add_ext_link_type": "archive.is",
@@ -508,6 +513,12 @@
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
+  },
+  "Rp-online.de": {
+    "add_ext_link": "div.paid-content,span.park-widget|article",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "rp-online.de"
   },
   "Schwaebische-post.de": {
     "allow_cookies": 1,

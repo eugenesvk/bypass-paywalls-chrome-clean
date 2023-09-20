@@ -2515,7 +2515,7 @@ var defaultSites = {
   "BlueConic": {
     domain: "blueconic.net",
     allow_cookies: 1,
-    block_regex_general: /\.blueconic\.net\//
+    block_regex_general: /(\.blueconic\.net\/|[a-z]{1}[0-9]{2,3}\.[\w-]+\.com\/script\.js)/
   },
   "Cxense": {
     domain: "cxense.com",

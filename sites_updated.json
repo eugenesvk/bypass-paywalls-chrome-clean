@@ -1,15 +1,15 @@
 {
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_wB7.+\\.js",
-    "upd_version": "3.3.2.8"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
+  },
+  "BlueConic": {
+    "domain": "blueconic.net",
+    "allow_cookies": 1,
+    "block_regex_general": "(\\.blueconic\\.net\\/|[a-z]{1}[0-9]{2,3}\\.[\\w-]+\\.com\\/script\\.js)",
+    "upd_version": "3.3.4.3"
   },
   "Cambio Colombia": {
     "domain": "cambiocolombia.com",
@@ -19,71 +19,12 @@
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
     "upd_version": "3.3.3.2"
   },
-  "De Tijd": {
-    "domain": "tijd.be",
-    "referer": "google",
-    "cs_code": "[{\"cond\":\"body.js-overflow-hidden\", \"rm_class\":\"js-overflow-hidden\"}, {\"cond\":\"[inert]\", \"rm_attrib\": \"inert\"}, {\"cond\":\"div[data-id='react-paywall-investor']\", \"rm_elem\": 1}]",
-    "upd_version": "3.3.2.8"
-  },
-  "Inc42": {
-    "domain": "inc42.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.inc42\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "upd_version": "3.3.2.2"
-  },
-  "Ippen.space": {
-    "domain": "ippen.space",
-    "allow_cookies": 1,
-    "block_regex_general": "(\\.ippen\\.space\\/js\\/paywall\\.js|\\/sub\\/js\\/pc-offer-west\\.js)",
-    "upd_version": "3.3.2.2"
-  },
-  "MarketWatch": {
-    "domain": "marketwatch.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "amp_redirect": "div#cx-snippet",
-    "upd_version": "3.3.2.6"
-  },
-  "Pour la Science.fr": {
-    "domain": "pourlascience.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com",
-    "upd_version": "3.3.2.7"
-  },
-  "Puck.news": {
-    "domain": "puck.news",
-    "allow_cookies": 1,
-    "ld_json_url": "div[class*='paywall']|div.entry-content|1",
-    "cs_block": 1,
-    "upd_version": "3.3.2.3"
-  },
   "South China Morning Post": {
     "domain": "scmp.com",
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "amp_unhide": 1,
     "cs_code": "[{\"cond\":\"section[data-qa='ContentBody-ContentBodyContainer'][class]\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.3.3.1"
-  },
-  "Springer Medizin": {
-    "domain": "springermedizin.de",
-    "allow_cookies": 1,
-    "ld_json": "div#pay-wall|div>p.intro--paragraph",
-    "upd_version": "3.3.2.9"
-  },
-  "Tes Magazine": {
-    "domain": "tes.com",
-    "remove_cookies_select_drop": ["tg_paywall"],
-    "cs_code": "[{\"cond\":\"div.tg-paywall-message\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.tg-paywall-body-overlay\", \"rm_attrib\": \"class\"}]}]",
-    "upd_version": "3.3.2.1"
-  },
-  "The Athletic": {
-    "domain": "###_usa_theathletic",
-    "group": [
-      "theathletic.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\/theathletic\\.com\\/_next\\/static\\/chunks\\/pages\\/article\\/.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "upd_version": "3.2.1.1"
   },
   "The Economist": {
     "domain": "economist.com",
@@ -113,12 +54,6 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.kiosq-main-layer\", \"rm_elem\":1}, {\"cond\":\"div.paywall-locker\", \"rm_class\":\"paywall-locker\"}]",
     "upd_version": "3.3.4.1"
-  },
-  "The Wrap": {
-    "domain": "thewrap.com",
-    "remove_cookies_select_drop": ["blaize_session"],
-    "ld_json_url": "div#zephr-payment-form-root|div.entry-content|1",
-    "upd_version": "3.3.2.5"
   },
   "Vikatan": {
     "domain": "vikatan.com",
