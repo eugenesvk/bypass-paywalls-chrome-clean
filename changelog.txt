@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove HBR China (fix obsolete)
+Remove VentureBeat (no paywall)
 Fix The Week (css)
 Update block general paywall script (fix BlueConic)
 Update custom sites (import - remove obsolete)

@@ -484,6 +484,7 @@ var defaultSites = {
   },
   "Digiday": {
     domain: "digiday.com",
+    allow_cookies: 1,
     block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Discover Magazine": {
@@ -2421,11 +2422,6 @@ var defaultSites = {
     domain: "valeursactuelles.com",
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
-  },
-  "VentureBeat": {
-    domain: "venturebeat.com",
-    allow_cookies: 1,
-    block_regex: /\.wallkit\.net\/js\//
   },
   "Verlagsgruppe Rhein Main": {
     allow_cookies: 1,
