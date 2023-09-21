@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Incisive Media (opt-in to custom sites)
 Remove HBR China (fix obsolete)
 Remove VentureBeat (no paywall)
 Fix The Week (css)

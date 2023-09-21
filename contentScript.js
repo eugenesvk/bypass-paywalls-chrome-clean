@@ -36,6 +36,7 @@ var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 
 var no_nhst_media_domains = ['europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
+var uk_incisive_media_domains = ['businessgreen.com', 'internationalinvestment.net', 'investmentweek.co.uk', 'professionaladviser.com', 'professionalpensions.com'];
 var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_arizent_custom_domains = ['accountingtoday.com', 'benefitnews.com', 'bondbuyer.com', 'dig-in.com', 'financial-planning.com', 'nationalmortgagenews.com'];
@@ -349,7 +350,7 @@ if (ext_api.runtime) {
 // Content workarounds/domain
 
 if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDomain('webcache.googleusercontent.com') && document.querySelector('script[src*=".medium.com/"]'))) {
-  let url = window.location.href;
+  let url = window.location.href.split('?')[0];
   let paywall = document.querySelector('article.meteredContent');
   if (paywall) {
     paywall.removeAttribute('class');
@@ -2708,7 +2709,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ie|uk)$/) || matchDomain(['citywire.com', 'ft.com', 'scotsman.com', 'tes.com'])) {//united kingdom/ireland
+} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['citywire.com', 'ft.com', 'scotsman.com', 'tes.com'])) {//united kingdom/ireland
 
 if (matchDomain('autocar.co.uk')) {
   let url = window.location.href;
@@ -5322,6 +5323,26 @@ else if (matchDomain(no_nhst_media_domains)) {
   }
 }
 
+else if (matchDomain(uk_incisive_media_domains)) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#d-wrapper');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let live_blog = document.querySelector('meta[name="description"][content^="In this live blog"]');
+    let article_sel = 'div.article-content';
+    let article = document.querySelector('div.article-content');
+    if (article) {
+      if (live_blog) {
+        article.firstChild.before(googleWebcacheLink(url));
+      } else {
+        let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+        replaceDomElementExt(url_cache, true, false, article_sel);
+      }
+    }
+  }
+}
+
 else if (matchDomain(usa_conde_nast_domains)) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_subscr_section('amp-ad, amp-embed, .ad');
@@ -5840,7 +5861,7 @@ function ext_12ftLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
 function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full article text:\r\n') {
   let text_fail_div = document.createElement('div');
   text_fail_div.id = 'bpc_archive';
-  text_fail_div.setAttribute('style', 'margin: 20px; font-weight: bold; color: red;');
+  text_fail_div.setAttribute('style', 'margin: 20px; font-size: 15px; font-weight: bold; color: red;');
   let parser = new DOMParser();
   text_fail = text_fail.replace(/\[([^\]]+)\]/g, "<a href='$1' target='_blank' style='color: red'>$1</a>");
   let doc = parser.parseFromString('<span>' + text_fail + '</span>', 'text/html');

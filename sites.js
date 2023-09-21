@@ -1097,6 +1097,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.inc42\.com\/wp-content\/plugins\/leaky-paywall\/js\/leaky-paywall-cookie\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Incisive Media (opt-in to custom sites)": {
+    domain: "###_uk_incisive_media",
+    group: [],
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "India Today": {
     domain: "indiatoday.in",
     allow_cookies: 1,

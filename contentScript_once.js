@@ -102,6 +102,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.co.uk')) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';
+      else if (matchDomain(['investmentweek.co.uk']))
+        group = '###_uk_incisive_media';
     } else if (hostname.match(/\.(ca|com|net|news|org)$/)) {
       if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
         group = '###_ca_gcm';
@@ -109,6 +111,8 @@ window.setTimeout(function () {
         group = '###_ca_postmedia';
       else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]'))
         group = '###_uk_axate.io';
+      else if (matchDomain(['businessgreen.com', 'internationalinvestment.net', 'professionaladviser.com', 'professionalpensions.com']))
+        group = '###_uk_incisive_media';
       else if (document.querySelector('script[src="https://cdn.blueconic.net/bridgetowermedia.js"], header.site-header > div.btm-header'))
         group = '###_usa_bridge_tower';
       else if (document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], link[href*=".gannett-cdn.com/"]'))
