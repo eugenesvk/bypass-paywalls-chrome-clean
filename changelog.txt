@@ -6,6 +6,7 @@ Post-release
 Add Incisive Media (opt-in to custom sites)
 Remove HBR China (fix obsolete)
 Remove VentureBeat (no paywall)
+Fix MediaNews Group (identify sites)
 Fix The Week (css)
 Update block general paywall script (fix BlueConic)
 Update custom sites (import - remove obsolete)
