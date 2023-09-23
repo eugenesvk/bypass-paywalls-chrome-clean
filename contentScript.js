@@ -350,7 +350,7 @@ if (ext_api.runtime) {
 // Content workarounds/domain
 
 if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDomain('webcache.googleusercontent.com') && document.querySelector('script[src*=".medium.com/"]'))) {
-  let url = window.location.href.split('?')[0];
+  let url = window.location.href;
   let paywall = document.querySelector('article.meteredContent');
   if (paywall) {
     paywall.removeAttribute('class');
@@ -3419,6 +3419,17 @@ else if (matchDomain('americanbanker.com') || matchDomain(usa_arizent_custom_dom
   }
 }
 
+else if (matchDomain('arkansasonline.com')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.bee-page-container');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div#article_body');
+  }
+}
+
 else if (matchDomain('artnet.com')) {
   if (window.location.pathname.endsWith('/amp-page')) {
     amp_unhide_subscr_section();
@@ -5847,6 +5858,8 @@ function archiveLink(url, text_fail = 'BPC > Try for full article text (only rep
 }
 
 function googleWebcacheLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
+  if (!matchUrlDomain(['hbrchina.org'], url))
+    url = url.split('?')[0];
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
 }
 

@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, bild.de, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -23,9 +23,6 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"body.nodetype--memo\", \"rm_class\":\"nodetype--memo\"}, {\"cond\":\"div.memo--callout--wrapper\",\"rm_elem\":1}]",
     "domain": "al-monitor.com"
-  },
-  "Arkansasonline.com": {
-    "domain": "arkansasonline.com"
   },
   "Asiamoney.com": {
     "allow_cookies": 1,

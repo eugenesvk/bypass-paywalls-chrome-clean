@@ -61,7 +61,7 @@ Or switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/detail
 Visit the [Chrome repository](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean) of Bypass Paywall Clean.
 
 #### iOS/iPadOS
-Use adblocker with custom (content)filter & userscript (manager): https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters
+Use adblocker with custom (content)filter & userscript (manager): https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters (read instructions).
 
 ### Troubleshooting
 * If a site doesn't work, first try to turn off your adblocker (or other extension) and refresh page.
@@ -281,6 +281,7 @@ Grouped in options:\
 
 ##### Local USA news
 [Albuquerque Journal](https://www.abqjournal.com) -
+[Arkansas Democrat-Gazette](https://www.arkansasonline.com) -
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
 [Los Angeles Times](https://www.latimes.com) -
 [Mountain View Voice](https://www.mv-voice.com) -

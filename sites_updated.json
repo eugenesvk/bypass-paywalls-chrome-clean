@@ -1,4 +1,10 @@
 {
+  "Arkansas Democrat-Gazette": {
+    "domain": "arkansasonline.com",
+    "remove_cookies_select_drop": ["blaize_session"],
+    "ld_google_webcache": "div.bee-page-container|div#article_body",
+    "upd_version": "3.3.4.7"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
