@@ -589,6 +589,7 @@ Grouped in options:\
 [Rhein-Zeitung](https://www.rhein-zeitung.de) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
+[Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 

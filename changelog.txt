@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Arkansas Democrat-Gazette
 Add Incisive Media (opt-in to custom sites)
+Add Vol.at
 Remove HBR China (fix obsolete)
 Remove VentureBeat (no paywall)
 Fix MediaNews Group (identify sites)

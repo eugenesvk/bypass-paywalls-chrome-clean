@@ -51,7 +51,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'uol.com.br', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'uol.com.br', 'vol.at', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -406,8 +406,8 @@ else if (matchDomain('macrobusiness.com.au')) {
         let json_text = json.filter(x => typeof x === 'string' && x.match(/(<|\\u003C)p>/))[0];
         let parser = new DOMParser();
         let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
-        let content_new = doc.querySelector('div')
-          let article = document.querySelector('div.content');
+        let content_new = doc.querySelector('div');
+        let article = document.querySelector('div.content');
         if (article) {
           article.innerHTML = '';
           article.appendChild(content_new);
@@ -1146,6 +1146,53 @@ else if (matchDomain('springermedizin.de')) {
 else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de']) || matchDomain(de_mhs_custom_domains)) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);
+}
+
+else if (matchDomain('vol.at')) {
+  if (!window.location.pathname.match(/\/amp\/?$/)) {
+    window.setTimeout(function () {
+      let paywall = document.querySelector('div.vodl-region-article__premium-content');
+      if (paywall && dompurify_loaded) {
+        paywall.removeAttribute('class');
+        if (!paywall.hasChildNodes()) {
+          console.log('empty');
+          let json_script = document.querySelector('script#externalPostDataNode');
+          if (json_script) {
+            try {
+              let json = JSON.parse(json_script.text);
+              let json_text = json.content.data.post.content;
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div class="entry-content">' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              let article_new = doc.querySelector('div');
+              let hidden_images = article_new.querySelectorAll('img[src^="/"][srcset]');
+              let json_domain = json.content.data.post.thumbnail.src.match(/https:\/\/(www\.)?\w+\.at/)[0];
+              for (let elem of hidden_images) {
+                elem.src = elem.src.replace('https://www.vol.at', json_domain);
+                elem.removeAttribute('srcset');
+              }
+              let hidden_comments = document.querySelector('div.vodl-region-article__content[hidden]');
+              if (hidden_comments) {
+                hidden_comments.removeAttribute('hidden');
+                let blurred = hidden_comments.querySelector('div.blur');
+                if (blurred)
+                  blurred.classList.remove('blur');
+              }
+              let article = document.querySelector('div.article-body');
+              if (article) {
+                article.innerHTML = '';
+                article.appendChild(article_new);
+              }
+            } catch (err) {
+              console.log(err);
+            }
+          }
+        }
+      }
+    }, 500);
+    let banners = document.querySelectorAll('div[id^="rm-adslot-"], div[id^="piano_rec"]');
+    hideDOMElement(...banners);
+  } else
+    ampToHtml();
 }
 
 else if (matchDomain('zeit.de')) {

@@ -2455,6 +2455,12 @@ var defaultSites = {
     domain: "voguebusiness.com",
     useragent: "facebookbot"
   },
+  "Vorarlberg Online": {
+    domain: "vol.at",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//,
+    cs_dompurify: 1
+  },
   "Vrij Nederland": {
     domain: "vn.nl",
     allow_cookies: 1,
