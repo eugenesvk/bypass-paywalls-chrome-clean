@@ -155,6 +155,7 @@
     "*://*.climbing.com/*",
     "*://*.cmjornal.pt/*",
     "*://*.cnbc.com/*",
+    "*://*.cntraveler.com/*",
     "*://*.codesports.com.au/*",
     "*://*.commentary.org/*",
     "*://*.commercialappeal.com/*",
@@ -793,5 +794,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.5.0"
+  "version": "3.3.5.1"
 }

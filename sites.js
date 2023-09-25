@@ -378,6 +378,7 @@ var defaultSites = {
     group: [
       "architecturaldigest.com",
       "bonappetit.com",
+      "cntraveler.com",
       "epicurious.com",
       "gq.com",
       "newyorker.com",
@@ -2339,7 +2340,7 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: /(\.(com|ca)\/shared-content\/art\/tncms\/api\/access\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+    block_regex: "(\\.{domain}\\/script\.js|\\.(com|ca)\\/shared-content\\/art\\/tncms\\/api\\/access\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     cs_dompurify: 1
   },
   "The Verge (newsletter)": {
