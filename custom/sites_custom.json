@@ -296,6 +296,11 @@
     "domain": "lagazettedescommunes.com",
     "useragent": "googlebot"
   },
+  "Lasvegasadvisor.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.lasvegasadvisor\\.com\\/opt\\/.+\\.js",
+    "domain": "lasvegasadvisor.com"
+  },
   "Lefigaro.fr": {
     "add_ext_link": "div#fig-premium-paywall|article",
     "add_ext_link_type": "archive.is",
@@ -536,6 +541,11 @@
     "allow_cookies": 1,
     "block_regex": "\\/spectator\\.org\\/.+\\/evolok",
     "domain": "spectator.org"
+  },
+  "Spectrejournal.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\/spectrejournal\\.com\\/wp-content\\/plugins\\/elementor\\/.+\\/dialog\\.min\\.js",
+    "domain": "spectrejournal.com"
   },
   "Speld.nl": {
     "domain": "speld.nl"
