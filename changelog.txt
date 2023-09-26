@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Conde Nast Traveler
 Fix Mediahuis Noord (json)
+Fix Mexico News Daily
 
 * v3.3.5.0 (2023-09-24)
 Add Arkansas Democrat-Gazette

@@ -4256,6 +4256,12 @@ else if (matchDomain('medscape.com')) {
   hideDOMElement(...ads);
 }
 
+else if (matchDomain('mexiconewsdaily.com')) {
+  let div_hidden = document.querySelector('body.single div.td-post-content > div.tdb-block-inner');
+  if (div_hidden)
+    div_hidden.classList.remove('tdb-block-inner');
+}
+
 else if (matchDomain('mid-day.com')) {
   if (window.location.pathname.startsWith('/amp/')) {
     amp_unhide_access_hide('="granted"', '="NOT granted"', 'amp-ad, amp-embed, [class*="BannerAd"]');

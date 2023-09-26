@@ -33,6 +33,12 @@
     "useragent": "googlebot",
     "upd_version": "3.3.5.1"
   },
+  "Mexico News Daily": {
+    "domain": "mexiconewsdaily.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/mexiconewsdaily\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
+    "upd_version": "3.3.5.2"
+  },
   "South China Morning Post": {
     "domain": "scmp.com",
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",

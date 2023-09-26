@@ -1502,7 +1502,7 @@ var defaultSites = {
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
     allow_cookies: 1,
-    block_regex: /\.piano\.io\/api\/tinypass\.min\.js/
+    block_regex: /\/mexiconewsdaily\.com\/wp-content\/plugins\/leaky-paywall\/js\/leaky-paywall-cookie\.js/
   },
   "Mid-Day": {
     domain: "mid-day.com",
