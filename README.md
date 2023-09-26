@@ -295,6 +295,7 @@ Grouped in options:\
 [Tampa Bay Times](https://www.tampabay.com) -
 [The Advocate](https://www.theadvocate.com) -
 [The Boston Globe](https://www.bostonglobe.com) -
+[The Columbian](https://www.columbian.com) -
 [The Dallas Morning News](https://www.dallasnews.com) -
 [The Hill](https://thehill.com) -
 [The New Orleans Advocate/The Times-Picayune](https://www.nola.com) -

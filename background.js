@@ -166,8 +166,8 @@ function check_sites_updated() {
     if (response.ok) {
       response.json().then(json => {
         json = filterObject(json, function (val, key) {
-          let domain_filter = ['###_usa_theathletic'];
-          return (val.domain && !domain_filter.includes(val.domain) && !(val.new_site || (val.upd_version && (val.upd_version <= ext_version))))
+          let domain_filter = [];
+          return (val.domain && !domain_filter.includes(val.domain) && !(val.upd_version && (val.upd_version <= ext_version)))
         });
         expandSiteRules(json, true);
         ext_api.storage.local.set({

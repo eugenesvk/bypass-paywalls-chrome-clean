@@ -46,6 +46,12 @@
     "cs_code": "[{\"cond\":\"section[data-qa='ContentBody-ContentBodyContainer'][class]\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.3.3.1"
   },
+  "The Columbian": {
+    "domain": "columbian.com",
+    "remove_cookies_select_drop": ["blaize_session"],
+    "ld_google_webcache": "div#inline-paywall,div.modal|div[itemprop='articleBody']",
+    "upd_version": "3.3.5.3"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

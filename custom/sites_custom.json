@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -108,11 +108,6 @@
     "cs_code": "[{\"cond\":\"div.td-post-content\", \"rm_class\": \"td-post-content\"}]",
     "domain": "clareecho.ie"
   },
-  "Columbian.com": {
-    "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net",
-    "domain": "columbian.com"
-  },
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
@@ -215,6 +210,12 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "frieze.com"
   },
+  "Gazetadopovo.com.br": {
+    "allow_cookies": 1,
+    "amp_unhide": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "domain": "gazetadopovo.com.br"
+  },
   "Gazetaprawna.pl": {
     "allow_cookies": 1,
     "amp_redirect": "div.displayMode_simplePaywall",
@@ -298,7 +299,7 @@
   },
   "Lasvegasadvisor.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.lasvegasadvisor\\.com\\/opt\\/.+\\.js",
+    "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
     "domain": "lasvegasadvisor.com"
   },
   "Lefigaro.fr": {

@@ -2098,6 +2098,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
   },
+  "The Columbian": {
+    domain: "columbian.com",
+    remove_cookies_select_drop: ["blaize_session"],
+    cs_dompurify: 1
+  },
   "The Critic": {
     domain: "thecritic.co.uk",
     block_regex: /\.hadrianpaywall\.com\//
