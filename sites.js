@@ -1890,6 +1890,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/loader-cdn\.azureedge\.net\//
   },
+  "Salzburger Nachrichten": {
+    domain: "sn.at",
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\//,
+    cs_dompurify: 1
+  },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
     block_regex: /\.californiatimes\.com\/meteringjs/

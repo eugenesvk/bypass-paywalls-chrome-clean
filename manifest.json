@@ -598,6 +598,7 @@
     "*://*.slideshare.net/*",
     "*://*.sloanreview.mit.edu/*",
     "*://*.smh.com.au/*",
+    "*://*.sn.at/*",
     "*://*.sofrep.com/*",
     "*://*.spectator.co.uk/*",
     "*://*.spectator.com.au/*",
@@ -795,5 +796,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.5.4"
+  "version": "3.3.5.5"
 }

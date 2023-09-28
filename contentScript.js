@@ -1112,6 +1112,17 @@ else if (matchDomain('schwaebische.de')) {
   }, 1000);
 }
 
+else if (matchDomain('sn.at')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.article-sections__paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div.article-body-text');
+  }
+}
+
 else if (matchDomain('spiegel.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div[data-area="paywall"]');

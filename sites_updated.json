@@ -39,6 +39,13 @@
     "block_regex": "\\/mexiconewsdaily\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
     "upd_version": "3.3.5.2"
   },
+  "Salzburger Nachrichten": {
+    "domain": "sn.at",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io",
+    "ld_google_webcache": "div.article-sections__paywall|div.article-body-text",
+    "upd_version": "3.3.5.5"
+  },
   "South China Morning Post": {
     "domain": "scmp.com",
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
