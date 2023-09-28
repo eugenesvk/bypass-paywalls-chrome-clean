@@ -7,6 +7,7 @@ Add Conde Nast Traveler
 Add The Columbian
 Fix Mediahuis Noord (json)
 Fix Mexico News Daily
+Update custom sites (import - remove obsolete)
 
 * v3.3.5.0 (2023-09-24)
 Add Arkansas Democrat-Gazette
@@ -17,7 +18,7 @@ Remove VentureBeat (no paywall)
 Fix MediaNews Group (identify sites)
 Fix The Week (css)
 Update block general paywall script (fix BlueConic)
-Update custom sites (import - remove obsolete)
+Update custom sites (import - ignore obsolete)
 
 * v3.3.4.0 (2023-09-17)
 Add Cambio Colombia

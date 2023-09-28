@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -147,6 +147,12 @@
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "die-glocke.de"
+  },
+  "Dominionpost.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.dominionpost\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
+    "cs_code": "[{\"cond\":\"article>div.entry-content\", \"rm_class\":\"entry-content\"}]",
+    "domain": "dominionpost.com"
   },
   "Doorbraak.be": {
     "allow_cookies": 1,
@@ -659,11 +665,6 @@
     "allow_cookies": 1,
     "domain": "thestage.co.uk",
     "ld_google_webcache": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle']"
-  },
-  "Thetexan.news": {
-    "allow_cookies": 1,
-    "domain": "thetexan.news",
-    "useragent": "googlebot"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,
