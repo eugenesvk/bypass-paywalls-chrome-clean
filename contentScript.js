@@ -4385,6 +4385,18 @@ else if (matchDomain('newscientist.com')) {
     let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
     for (let elem of lazy_images)
       elem.src = elem.getAttribute('data-src').split('?')[0] + '?width=800';
+    let break_pre_array = pageContains('div.non-paywall > p', /…\s?$/);
+    if (break_pre_array.length) {
+      let break_pre = break_pre_array[0];
+      let break_post = document.querySelector('div.paywall > p');
+      if (break_post) {
+        let parser = new DOMParser();
+        let doc = parser.parseFromString('<p>' + DOMPurify.sanitize(break_pre.innerHTML.replace(/\s…\s?/, ' ') + break_post.innerHTML) + '</p>', 'text/html');
+        let content_new = doc.querySelector('p');
+        break_pre.parentNode.replaceChild(content_new, break_pre);
+        removeDOMElement(break_post);
+      }
+    }
     let ads = document.querySelectorAll('div[class*="Advert"]');
     hideDOMElement(...ads);
   }, 1000);

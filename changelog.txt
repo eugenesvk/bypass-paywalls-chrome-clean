@@ -8,6 +8,7 @@ Add Salzburger Nachrichten
 Add The Columbian
 Fix Mediahuis Noord (json)
 Fix Mexico News Daily
+Fix New Scientist (text-break)
 Update custom sites (import - remove obsolete)
 
 * v3.3.5.0 (2023-09-24)
