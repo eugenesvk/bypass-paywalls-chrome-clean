@@ -188,7 +188,7 @@ var defaultSites = {
       "watoday.com.au"
     ],
     allow_cookies: 1,
-    block_regex: "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
+    block_regex: "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
   },
   "Auto Motor und Sport": {
     domain: "auto-motor-und-sport.de",

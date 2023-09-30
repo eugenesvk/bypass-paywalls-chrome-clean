@@ -6,9 +6,11 @@ Post-release
 Add Conde Nast Traveler
 Add Salzburger Nachrichten
 Add The Columbian
+Fix Groupe La Depeche (json)
 Fix Mediahuis Noord (json)
 Fix Mexico News Daily
 Fix New Scientist (text-break)
+Update amp-redirect (disable loop)
 Update custom sites (import - remove obsolete)
 
 * v3.3.5.0 (2023-09-24)
