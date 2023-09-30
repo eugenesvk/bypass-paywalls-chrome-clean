@@ -52,7 +52,7 @@ window.setTimeout(function () {
         if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be']))
           group = '###_be_mediahuis';// no fix
     } else if (hostname.endsWith('.cl')) {
-      if (document.querySelector('meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))
+      if (document.querySelector('head > meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';
     } else if (hostname.match(/\.(de|at|ch)$/) || matchDomain(['horizont.net', 'lebensmittelzeitung.net'])) {
       if (document.querySelector('script[src*="/dfv.containers.piwik.pro/"]'))
@@ -61,7 +61,7 @@ window.setTimeout(function () {
         group = '###_de_funke_medien';
       else if (document.querySelector('div.navigation__personalization > a[href^="https://www.haas-mediengruppe.de/"]'))
         group = '###_de_haas_medien';
-      else if (document.querySelector('link[href*=".rndtech.de/"]'))
+      else if (document.querySelector('head > link[href*=".rndtech.de/"]'))
         group = '###_de_madsack';
       else if (document.querySelector('a.mgw-logo[href^="https://mgw.de"]'))
         group = '###_de_mgw';
@@ -71,30 +71,30 @@ window.setTimeout(function () {
         group = '###_de_rp_aachen_medien';// no fix
       else if (matchDomain(['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de']))
         group = '###_de_vrm';
-      else if (document.querySelector('link[href*="/assets.static-chmedia.ch/"]'))
+      else if (document.querySelector('head > link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
-      else if (document.querySelector('link[href*=".tamedia.ch/"]'))
+      else if (document.querySelector('head > link[href*=".tamedia.ch/"]'))
         group = '###_ch_tamedia';// no fix
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
-      if (document.querySelector('link[href*="/estaticos-cdn."]'))
+      if (document.querySelector('head > link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';
       else if (document.querySelector('div > ul > li > a[href="https://www.sportlife.es/"]'))
         group = '###_es_sport_life';
     } else if (hostname.endsWith('.fi')) {
-      if (document.querySelector('link[href^="https://assets.almatalent.fi"]'))
+      if (document.querySelector('head > link[href^="https://assets.almatalent.fi"]'))
         group = '###_fi_alma_talent';// no fix
     } else if (hostname.endsWith('.fr')) {
-      if (document.querySelector('link[href*=".fr/static/bloc/ripolinage/header/cf-header/"]'))
+      if (document.querySelector('head > link[href*=".fr/static/bloc/ripolinage/header/cf-header/"]'))
         group = '###_fr_gcf';
     } else if (hostname.endsWith('.it')) {
-      if (document.querySelector('link[href^="//citynews.stgy.ovh/"]'))
+      if (document.querySelector('head > link[href^="//citynews.stgy.ovh/"]'))
         group = '###_it_citynews';// no fix
       else if (matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it']))
         group = '###_it_gruppo_sae';
     } else if (hostname.endsWith('.nl')) {
-      if (document.querySelector('link[href*=".ndcmediagroep.nl/"]'))
+      if (document.querySelector('head > link[href*=".ndcmediagroep.nl/"]'))
         group = '###_nl_mediahuis_noord';
-      else if (document.querySelector('link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
+      else if (document.querySelector('head > link[rel="dns-prefetch"][href^="https://vmn-"][href$="imgix.net"]'))
        group = '###_nl_vmnmedia';// no fix
     } else if (hostname.endsWith('.se')) {
       if (document.querySelector('footer > div > div > a[href="https://www.nwtmedia.se/"]'))
@@ -107,7 +107,7 @@ window.setTimeout(function () {
     } else if (hostname.match(/\.(ca|com|net|news|org)$/)) {
       if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
         group = '###_ca_gcm';
-      else if (document.querySelector('script[src*=".postmedia.digital/"], meta[content*=".postmedia.digital/"]'))
+      else if (document.querySelector('script[src*=".postmedia.digital/"], head > meta[content*=".postmedia.digital/"]'))
         group = '###_ca_postmedia';
       else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]'))
         group = '###_uk_axate.io';
@@ -115,7 +115,7 @@ window.setTimeout(function () {
         group = '###_uk_incisive_media';
       else if (document.querySelector('script[src="https://cdn.blueconic.net/bridgetowermedia.js"], header.site-header > div.btm-header'))
         group = '###_usa_bridge_tower';
-      else if (document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], link[href*=".gannett-cdn.com/"]'))
+      else if (document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], head > link[href*=".gannett-cdn.com/"]'))
         group = '###_usa_gannett';
       else if (document.querySelector('script[src*="/treg.hearstnp.com/"]'))
         group = '###_usa_hearst_comm';
@@ -123,14 +123,14 @@ window.setTimeout(function () {
         group = '###_usa_lee_ent';
       else if (document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]'))
         group = '###_usa_townnews';
-      else if (document.querySelector('meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"], script[src*=".mcclatchyinteractive.com/"]'))
+      else if (document.querySelector('head > meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"], script[src*=".mcclatchyinteractive.com/"]'))
         group = '###_usa_mcc';
       else if (document.querySelector('script[src*="/wp-content/plugins/dfm"], amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))
         group = '###_usa_mng';
       else if (hostname.match(/\.com$/)) {
         if (matchDomain(['journalauto.com', 'journaldupneu.com', 'j2rauto.com']))
           group = '###_fr_synerj';
-        else if (document.querySelector('link[href*=".com/wp-content/themes/madavor/"]'))
+        else if (document.querySelector('head > link[href*=".com/wp-content/themes/madavor/"]'))
           group = '###_usa_madavor';
         else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
           group = '###_usa_pei';
