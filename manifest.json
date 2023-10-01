@@ -246,7 +246,7 @@
     "*://*.euobserver.com/*",
     "*://*.eurekareport.com.au/*",
     "*://*.euromoney.com/*",
-    "*://*.europower-energi.no/*",
+    "*://*.europower.no/*",
     "*://*.exame.com/*",
     "*://*.examiner.com.au/*",
     "*://*.expansion.com/*",
@@ -796,5 +796,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.5.7"
+  "version": "3.3.5.8"
 }

@@ -731,7 +731,7 @@ Grouped in options:\
 ##### Norway
 Grouped in options:\
 *NHST Media Group* sites like\
-[Europower](https://www.europower-energi.no) -
+[Europower](https://www.europower.no) -
 [Fiskeribladet](https://www.fiskeribladet.no) -
 [Intrafish](https://www.intrafish.com) -
 [Intrafish.no](https://www.intrafish.no) -

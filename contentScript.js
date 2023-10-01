@@ -33,7 +33,7 @@ var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'pzc.nl', 'tubantia.nl'];
 var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 'margriet.nl', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
-var no_nhst_media_domains = ['europower-energi.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
+var no_nhst_media_domains = ['europower.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
 var uk_incisive_media_domains = ['businessgreen.com', 'internationalinvestment.net', 'investmentweek.co.uk', 'professionaladviser.com', 'professionalpensions.com'];
@@ -5288,30 +5288,37 @@ else if (matchDomain(no_nhst_media_domains)) {
       blurred.removeAttribute('style');
   } else {
     window.setTimeout(function () {
-      let paywall = document.querySelector('iframe#paywall-iframe');
+      let paywall = document.querySelector('iframe#paywall-iframe, div#sub-paywall-container');
       if (paywall && dompurify_loaded) {
-        let intro = document.querySelector('div.global-article-selector');
         let article = paywall.parentNode;
-        removeDOMElement(paywall, intro);
+        removeDOMElement(paywall);
         fetch(url)
         .then(response => {
           if (response.ok) {
             response.text().then(html => {
-              let split1 = html.split('window.__INITIAL_STATE__=')[1];
-              let state = (split1.split('};')[0] + '}').split('</script>')[0];
-              if (state) {
-                let json = JSON.parse(state);
-                if (json) {
-                  let json_text = json.article.body;
-                  let parser = new DOMParser();
-                  let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_ATTR: ['itemprop'], ADD_TAGS: ['link']}) + '</div>', 'text/html');
-                  let article_new = doc.querySelector('div');
-                  if (article && article_new)
-                    article.appendChild(article_new);
-                  let promo = document.querySelectorAll('div[data-ah5-type="promobox"], div.dn-relation-block');
-                  removeDOMElement(...promo);
+              if (html.includes('window.__INITIAL_STATE__=')) {
+                let split1 = html.split('window.__INITIAL_STATE__=')[1];
+                let state = (split1.split('};')[0] + '}').split('</script>')[0];
+                if (state) {
+                  try {
+                    let json = JSON.parse(state);
+                    if (json) {
+                      let json_text = json.article.body;
+                      let parser = new DOMParser();
+                      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, {ADD_ATTR: ['itemprop'], ADD_TAGS: ['link']}) + '</div>', 'text/html');
+                      let article_new = doc.querySelector('div');
+                      if (article && article_new)
+                        article.appendChild(article_new);
+                      let intro = document.querySelector('div.global-article-selector');
+                      let promo = document.querySelectorAll('div[data-ah5-type="promobox"], div.dn-relation-block');
+                      removeDOMElement(intro, ...promo);
+                    }
+                  } catch (err) {
+                    console.log(err);
+                  }
                 }
-              }
+              } else
+                header_nofix(article);
             })
           }
         })

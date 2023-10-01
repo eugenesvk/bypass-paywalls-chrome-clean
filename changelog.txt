@@ -10,6 +10,7 @@ Fix Groupe La Depeche (json)
 Fix Mediahuis Noord (json)
 Fix Mexico News Daily
 Fix New Scientist (text-break)
+Fix NHST Media Group
 Fix The Hill Times (css)
 Update amp-redirect (disable loop)
 Update custom sites (import - remove obsolete)

@@ -1608,7 +1608,7 @@ var defaultSites = {
   "NHST Media Group": {
     domain: "###_no_nhst_media",
     group: [
-      "europower-energi.no",
+      "europower.no",
       "fiskeribladet.no",
       "intrafish.com",
       "intrafish.no",
