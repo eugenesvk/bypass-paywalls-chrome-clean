@@ -2,8 +2,8 @@
   "addons": {
     "magnolia_limited_permissions@12.34": {
       "updates": [
-        { "version": "3.3.5.0",
-            "update_link": "https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-3.3.5.0-custom.xpi" }
+        { "version": "3.3.6.0",
+            "update_link": "https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-3.3.6.0-custom.xpi" }
         ]
     }
   }
