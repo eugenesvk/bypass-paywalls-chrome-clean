@@ -407,6 +407,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "nationalobserver.com"
   },
+  "Naturalgasworld.com": {
+    "allow_cookies": 1,
+    "domain": "naturalgasworld.com",
+    "useragent": "googlebot"
+  },
   "Newbostonpost.com": {
     "allow_cookies": 1,
     "block_regex": "\\/newbostonpost\\.com\\/.+\\/paywall\\/js\\/main\\.js",

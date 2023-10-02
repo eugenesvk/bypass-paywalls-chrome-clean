@@ -188,7 +188,7 @@ var defaultSites = {
       "watoday.com.au"
     ],
     allow_cookies: 1,
-    block_regex: "(api\\.{domain}\\/graphql\\?query=.+PaywallRuleQuery|\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
+    block_regex: "\.piano\.io\/xbuilder\/experience\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
   },
   "Auto Motor und Sport": {
     domain: "auto-motor-und-sport.de",
@@ -1442,7 +1442,7 @@ var defaultSites = {
       "noordhollandsdagblad.nl"
     ],
     allow_cookies: 1,
-    cs_dompurify: 1
+    block_regex: /\.tnet\.nl\/static\/assets\/js\/login_v\d\.js/
   },
   "Mediahuis Noord (+ regional; opt-in to custom sites)": {
     domain: "###_nl_mediahuis_noord",
@@ -2066,11 +2066,6 @@ var defaultSites = {
     domain: "theatlantic.com",
     block_regex: /cdn\.theatlantic\.com\/_next\/static\/chunks\/pages\/.+\/archive\//,
     remove_cookies_select_drop: ["articleViews"]
-  },
-  "The Australian Financial Review": {
-    domain: "afr.com",
-    allow_cookies: 1,
-    block_regex: /api\.afr\.com\/graphql\?query=.+PaywallRuleQuery/
   },
   "The Banker": {
     domain: "thebanker.com",

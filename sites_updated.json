@@ -17,14 +17,6 @@
     "block_regex_general": "(\\.blueconic\\.net\\/|[a-z]{1}[0-9]{2,3}\\.[\\w-]+\\.com\\/script\\.js)",
     "upd_version": "3.3.4.3"
   },
-  "Cambio Colombia": {
-    "domain": "cambiocolombia.com",
-    "allow_cookies": 1,
-    "amp_redirect": "div#require-access",
-    "amp_unhide": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "upd_version": "3.3.3.2"
-  },
   "Condé Nast Traveler": {
     "domain": "cntraveler.com",
     "allow_cookies": 1,
@@ -32,6 +24,19 @@
     "block_regex": "(\\.cntraveler\\.com\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "useragent": "googlebot",
     "upd_version": "3.3.5.1"
+  },
+  "Mediahuis Nederland Regional": {
+    "domain": "###_nl_mediahuis_region",
+    "group": [
+      "gooieneemlander.nl",
+      "haarlemsdagblad.nl",
+      "ijmuidercourant.nl",
+      "leidschdagblad.nl",
+      "noordhollandsdagblad.nl"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.tnet\\.nl\\/static\\/assets\\/js\\/login_v\\d\\.js",
+    "upd_version": "3.3.6.1"
   },
   "Mexico News Daily": {
     "domain": "mexiconewsdaily.com",
@@ -45,13 +50,6 @@
     "block_regex": "\\.piano\\.io",
     "ld_google_webcache": "div.article-sections__paywall|div.article-body-text",
     "upd_version": "3.3.5.5"
-  },
-  "South China Morning Post": {
-    "domain": "scmp.com",
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "amp_unhide": 1,
-    "cs_code": "[{\"cond\":\"section[data-qa='ContentBody-ContentBodyContainer'][class]\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.3.3.1"
   },
   "The Columbian": {
     "domain": "columbian.com",
@@ -73,12 +71,6 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
-  "The News Minute": {
-    "domain": "thenewsminute.com",
-    "allow_cookies": 1,
-    "ld_json": "div#paywall-banner|div.arr--story-page-card-wrapper",
-    "upd_version": "3.3.3.6"
-  },
   "The Week (regwall)": {
     "domain": "###_uk_theweek",
     "group": [
@@ -87,12 +79,5 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.kiosq-main-layer\", \"rm_elem\":1}, {\"cond\":\"div.paywall-locker\", \"rm_class\":\"paywall-locker\"}]",
     "upd_version": "3.3.4.1"
-  },
-  "Vikatan": {
-    "domain": "vikatan.com",
-    "allow_cookies": 1,
-    "ld_json": "div#paywallDisplay|div.story-element>div",
-    "cs_code": "[{\"cond\":\"div[class^='styles-m__story-card-wrapper_']\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.3.3.7"
   }
 }

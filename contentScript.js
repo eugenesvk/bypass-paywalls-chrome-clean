@@ -30,7 +30,6 @@ var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmat
 var it_gedi_domains = ['italian.tech', 'lastampa.it', 'lescienze.it', 'repubblica.it'];
 var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafolivorno.it', 'lanazione.it', 'quotidiano.net'];
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
-var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'pzc.nl', 'tubantia.nl'];
 var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 'margriet.nl', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
 var no_nhst_media_domains = ['europower.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
@@ -2429,92 +2428,6 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > lin
   }
   let ads = document.querySelectorAll('.top__ad, .marketingblock-article');
   hideDOMElement(...ads);
-}
-
-else if (matchDomain(nl_mediahuis_region_domains)) {
-  window.setTimeout(function () {
-    let close_button = document.querySelector('button[data-testid="button-close"]');
-    if (close_button)
-      close_button.click();
-    let premium = document.querySelector('div.common-components-plus_pluslabel--container');
-    if (premium && dompurify_loaded) {
-      let hidden_article = document.querySelector('div[data-auth-body="article"]');
-      if (hidden_article)
-        hidden_article.removeAttribute('style');
-      let paywall = document.querySelector('div[data-auth-root="paywall"]');
-      removeDOMElement(paywall);
-      let auth_body = document.querySelector('div[data-auth-body="article"]');
-      if (paywall && auth_body) {
-        let auth_body_par_count = auth_body.querySelectorAll('p');
-        if (auth_body_par_count.length < 2) {
-          let json_script = document.querySelector('script[data-fragment-type="PacoArticleContent"]');
-          let json_str = json_script.text.substring(json_script.textContent.indexOf('{'));
-          try {
-            let json = JSON.parse(json_str);
-            let article = Object.values(json)[0]['data']['article']['body'];
-            auth_body.innerHTML = '';
-            let par_html, par_dom, par_elem, par_div, par_key;
-            let parser = new DOMParser();
-            for (let par of article) {
-              for (let key in par) {
-                par_dom = document.createElement('p');
-                par_elem = '';
-                par_key = par[key];
-                if (key === 'subhead') {
-                  par_html = parser.parseFromString('<div><strong>' + DOMPurify.sanitize(par_key) + '</strong></div>', 'text/html');
-                  par_elem = par_html.querySelector('div');
-                } else if (key === 'twitter' || key === 'instagram') {
-                  par_elem = document.createElement('a');
-                  Object.assign(par_elem, {
-                    href: par_key,
-                    innerText: par_key.split('?')[0],
-                    target: '_blank'
-                  });
-                } else if (key === 'youtube') {
-                  par_elem = document.createElement('iframe');
-                  Object.assign(par_elem, {
-                    src: 'https://www.youtube.com/embed/' + par_key.id,
-                    id: 'ytplayer',
-                    type: 'text/html',
-                    width: 640,
-                    height: 360,
-                    frameborder: 0
-                  });
-                } else if (key === 'streamone') {
-                  par_elem = document.createElement('iframe');
-                  Object.assign(par_elem, {
-                    src: 'https://content.tmgvideo.nl/embed/item=' + par_key.id,
-                    type: 'text/html',
-                    width: 640,
-                    height: 360,
-                    frameborder: 0
-                  });
-                } else if (key === 'image') {
-                  par_elem = document.createElement('div');
-                  let par_img = document.createElement('img');
-                  par_img.src = par_key.url;
-                  par_elem.appendChild(par_img);
-                  par_div = document.createElement('div');
-                  par_div.innerText = par[key].caption ? par[key].caption : '';
-                  par_div.innerText += par[key].credit ? '\n' + par[key].credit : '';
-                  par_elem.appendChild(par_div);
-                } else {
-                  par_html = parser.parseFromString('<p style="font-size: 18px; line-height: 1.625;">' + DOMPurify.sanitize(par_key) + '</div>', 'text/html');
-                  par_elem = par_html.querySelector('p');
-                }
-                if (par_elem)
-                  par_dom.appendChild(par_elem);
-                auth_body.appendChild(par_dom);
-              }
-            }
-          } catch (err) {
-            console.warn('unable to parse text');
-            console.warn(err);
-          }
-        }
-      }
-    }
-  }, 500);
 }
 
 else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {

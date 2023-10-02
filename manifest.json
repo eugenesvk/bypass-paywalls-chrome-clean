@@ -793,8 +793,9 @@
     "*://*.ndcmediagroep.nl/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
+    "*://*.tnet.nl/*",
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.6.0"
+  "version": "3.3.6.1"
 }
