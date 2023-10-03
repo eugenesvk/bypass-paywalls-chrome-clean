@@ -244,6 +244,12 @@
     "domain": "gplanet.co.il",
     "ld_json": "div.subscription-form|div.content-inner"
   },
+  "Gramophone.co.uk (reviews)": {
+    "allow_cookies": 1,
+    "block_regex": "\\.gramophone\\.co\\.uk\\/script\\.js",
+    "domain": "gramophone.co.uk",
+    "useragent": "googlebot"
+  },
   "Hartenergy.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -411,6 +417,11 @@
     "allow_cookies": 1,
     "block_regex": "\\/newbostonpost\\.com\\/.+\\/paywall\\/js\\/main\\.js",
     "domain": "newbostonpost.com"
+  },
+  "Newoxfordreview.org": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.not-viewable\", \"rm_class\":\"not-viewable\"}]",
+    "domain": "newoxfordreview.org"
   },
   "Newspicks.com": {
     "allow_cookies": 1,

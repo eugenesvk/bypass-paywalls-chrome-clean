@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Interesting Engineering
 Fix Mediahuis Nederland Regional (js)
+Fix The Atlantic (images)
 
 * v3.3.6.0 (2023-10-01)
 Add Conde Nast Traveler

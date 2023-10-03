@@ -51,6 +51,13 @@
     "ld_google_webcache": "div.article-sections__paywall|div.article-body-text",
     "upd_version": "3.3.5.5"
   },
+  "The Atlantic": {
+    "domain": "theatlantic.com",
+    "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/pages\\/.+\\/archive",
+    "remove_cookies_select_drop": ["articleViews"],
+    "cs_code": "[{\"cond\":\"img.Image_lazy__hYWHV\", \"rm_class\":\"Image_lazy__hYWHV\"}]",
+    "upd_version": "3.3.6.3"
+  },
   "The Columbian": {
     "domain": "columbian.com",
     "remove_cookies_select_drop": ["blaize_session"],
