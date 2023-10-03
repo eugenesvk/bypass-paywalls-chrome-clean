@@ -3970,6 +3970,17 @@ else if (matchDomain('inkl.com')) {
   }
 }
 
+else if (matchDomain('interestingengineering.com')) {
+  let paywall = document.querySelectorAll('div#paywall-div');
+  if (paywall.length) {
+    hideDOMElement(...paywall);
+    let blurred = document.querySelectorAll('div[class*="Product_makeBlur__"]');
+    for (let elem of blurred)
+      elem.removeAttribute('class');
+    csDoneOnce = true;
+  }
+}
+
 else if (matchDomain('ipolitics.ca')) {
   let login = document.querySelector('div.login');
   if (login && dompurify_loaded) {

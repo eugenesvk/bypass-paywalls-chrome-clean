@@ -1132,6 +1132,10 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "Interesting Engineering": {
+    domain: "interestingengineering.com",
+    allow_cookies: 1
+  },
   "Internazionale.it": {
     domain: "internazionale.it",
     allow_cookies: 1,

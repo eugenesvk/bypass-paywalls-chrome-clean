@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -273,11 +273,6 @@
   "Ilglobo.com": {
     "allow_cookies": 1,
     "domain": "ilglobo.com",
-    "useragent": "googlebot"
-  },
-  "Interestingengineering.com": {
-    "allow_cookies": 1,
-    "domain": "interestingengineering.com",
     "useragent": "googlebot"
   },
   "Internationalepolitik.de": {
