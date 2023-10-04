@@ -643,6 +643,13 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "theday.com"
   },
+  "Thedispatch.com": {
+    "add_ext_link": "article:not(.newsletter) section.paywall-section|div.content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "thedispatch.com",
+    "ld_json_url": "article.newsletter section.paywall-section|div.content|1"
+  },
   "Thedriftmag.com": {
     "allow_cookies": 1,
     "block_regex": "\\.thedriftmag\\.com\\/wp-content\\/plugins\\/drift-paywall-plugin",

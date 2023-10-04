@@ -36,6 +36,7 @@
     ],
     "allow_cookies": 1,
     "block_regex": "\\.tnet\\.nl\\/static\\/assets\\/js\\/login_v\\d\\.js",
+    "cs_dompurify": 1,
     "upd_version": "3.3.6.1"
   },
   "Mexico News Daily": {
@@ -43,6 +44,22 @@
     "allow_cookies": 1,
     "block_regex": "\\/mexiconewsdaily\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
     "upd_version": "3.3.5.2"
+  },
+  "NHST Media Group": {
+    "domain": "###_no_nhst_media",
+    "group": [
+      "europower.no",
+      "fiskeribladet.no",
+      "intrafish.com",
+      "intrafish.no",
+      "rechargenews.com",
+      "tradewindsnews.com",
+      "upstreamonline.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "subscription-static-global\\.nhst\\.tech",
+    "cs_dompurify": 1,
+    "upd_version": "3.3.6.4"
   },
   "Salzburger Nachrichten": {
     "domain": "sn.at",

@@ -1621,8 +1621,7 @@ var defaultSites = {
       "upstreamonline.com"
     ],
     allow_cookies: 1,
-    cs_dompurify: 1,
-    referer: "facebook"
+    block_regex: /subscription-static-global\.nhst\.tech\//
   },
   "Nikkei Asian Review": {
     domain: "asia.nikkei.com",

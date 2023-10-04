@@ -792,11 +792,12 @@
     "*://*.kinja-static.com/*",
     "*://*.medscapestatic.com/*",
     "*://*.ndcmediagroep.nl/*",
+    "*://*.nhst.tech/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
     "*://*.tnet.nl/*",
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.6.3"
+  "version": "3.3.6.4"
 }
