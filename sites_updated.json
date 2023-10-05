@@ -5,6 +5,25 @@
     "ld_google_webcache": "div.bee-page-container|div#article_body",
     "upd_version": "3.3.4.7"
   },
+  "Australia Nine Entertainment": {
+    "domain": "###_au_nine_ent",
+    "group": [
+      "afr.com",
+      "brisbanetimes.com.au",
+      "smh.com.au",
+      "theage.com.au",
+      "watoday.com.au"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.3.6.6"
+  },
+  "Bhaskar": {
+    "domain": "bhaskar.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.bhaskar\\.com\\/assets\\/js\\/react-.+\\.bundle\\.js",
+    "upd_version": "3.3.6.5"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,

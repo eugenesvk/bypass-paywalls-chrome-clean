@@ -188,7 +188,7 @@ var defaultSites = {
       "watoday.com.au"
     ],
     allow_cookies: 1,
-    block_regex: "\.piano\.io\/xbuilder\/experience\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)"
+    block_regex: /(\.piano\.io\/xbuilder\/experience\/execute|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Auto Motor und Sport": {
     domain: "auto-motor-und-sport.de",
@@ -258,6 +258,11 @@ var defaultSites = {
     domain: "berlingske.dk",
     allow_cookies: 1,
     useragent: "bingbot"
+  },
+  "Bhaskar": {
+    domain: "bhaskar.com",
+    allow_cookies: 1,
+    block_regex: /\.bhaskar\.com\/assets\/js\/react-.+\.bundle\.js/
   },
   "Bild der Wissenschaft": {
     domain: "wissenschaft.de",

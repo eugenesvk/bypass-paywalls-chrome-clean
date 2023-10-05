@@ -74,9 +74,12 @@ if (bg2csData.ld_json && dompurify_loaded) {
             let json = JSON.parse(json_script.text.replace(/[\r\n]/g, '').replace(/(\\r)?\\n/g, '<br>'));
             let json_key, json_text;
             if (Array.isArray(json)) {
-              json = json.filter(x => json_key = Object.keys(x).find(key => key.match(/^articlebody$/i))) || json.filter(x => json_key = Object.keys(x).find(key => key.match(/^text$/i)));
-              if (json_key)
-                json_text = parseHtmlEntities(json[0][json_key]);
+              json = json.filter(x => Object.keys(x).find(key => key.match(/^articlebody$/i))) || json.filter(x => Object.keys(x).find(key => key.match(/^text$/i)));
+              if (json[0]) {
+                json_key = Object.keys(json[0]).find(key => key.match(/^(articlebody|text)$/i));
+                if (json_key)
+                  json_text = parseHtmlEntities(json[0][json_key]);
+              }
             } else {
               json_key = Object.keys(json).find(key => key.match(/^articlebody$/i)) || Object.keys(json).find(key => key.match(/^text$/i));
               json_text = parseHtmlEntities(json[json_key]);
@@ -1724,7 +1727,7 @@ else if (matchDomain('journaldunet.com')) {
 else if (matchDomain('la-croix.com')) {
   let url = window.location.href;
   if (!url.includes('la-croix.com/amp/')) {
-    let ads = document.querySelectorAll('div[class^="ads-wrapper-"]');
+    let ads = document.querySelectorAll('div[class^="ads-wrapper-"], div#poool-widget');
     hideDOMElement(...ads);
   } else {
     let paywall_block = document.querySelector('#paywall_block');
@@ -3392,6 +3395,12 @@ else if (matchDomain('barrons.com')) {
   } else {
     amp_unhide_subscr_section('.wsj-ad, amp-ad');
   }
+}
+
+else if (matchDomain('bhaskar.com')) {
+  let paywall = document.querySelector('div > img[alt="LockIcon"]');
+  if (paywall)
+    refreshCurrentTab_bg();
 }
 
 else if (matchDomain('billboard.com')) {

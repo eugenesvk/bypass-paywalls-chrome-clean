@@ -106,6 +106,7 @@
     "*://*.betamtb.com/*",
     "*://*.betternutrition.com/*",
     "*://*.betterprogramming.pub/*",
+    "*://*.bhaskar.com/*",
     "*://*.bicycling.com/*",
     "*://*.bienpublic.com/*",
     "*://*.billboard.com/*",
@@ -799,5 +800,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.6.4"
+  "version": "3.3.6.5"
 }

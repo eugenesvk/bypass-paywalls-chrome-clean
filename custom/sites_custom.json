@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -249,6 +249,12 @@
     "block_regex": "\\.gramophone\\.co\\.uk\\/script\\.js",
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
+  },
+  "Handelsblatt.com (refresh)": {
+    "add_ext_link": "app-paywall|app-storyline-paragraph",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "handelsblatt.com"
   },
   "Hartenergy.com": {
     "allow_cookies": 1,
@@ -539,6 +545,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",
     "domain": "schwaebische-post.de"
+  },
+  "Shrm.org": {
+    "allow_cookies": 1,
+    "block_regex": "\\.shrm\\.org\\/.+\\/js\\/paywall.+\\.js",
+    "domain": "shrm.org"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,

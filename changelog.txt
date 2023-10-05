@@ -3,11 +3,13 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Bhaskar (India)
 Add Interesting Engineering
 Fix Media Group Westfalen
 Fix Mediahuis Nederland Regional (js)
 Fix NHST Media Group (js)
 Fix The Atlantic (images)
+Update custom sites (ld_json: multi-entry array)
 
 * v3.3.6.0 (2023-10-01)
 Add Conde Nast Traveler
@@ -20,7 +22,7 @@ Fix New Scientist (text-break)
 Fix NHST Media Group
 Fix The Hill Times (css)
 Update amp-redirect (disable loop)
-Update custom sites (import - remove obsolete)
+Update custom sites (import: remove obsolete)
 
 * v3.3.5.0 (2023-09-24)
 Add Arkansas Democrat-Gazette
@@ -31,7 +33,7 @@ Remove VentureBeat (no paywall)
 Fix MediaNews Group (identify sites)
 Fix The Week (css)
 Update block general paywall script (fix BlueConic)
-Update custom sites (import - ignore obsolete)
+Update custom sites (import: ignore obsolete)
 
 * v3.3.4.0 (2023-09-17)
 Add Cambio Colombia
