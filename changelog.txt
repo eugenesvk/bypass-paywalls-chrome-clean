@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Bhaskar (India)
+Add Granta Magazine (UK)
 Add Interesting Engineering
 Fix Media Group Westfalen
 Fix Mediahuis Nederland Regional (js)

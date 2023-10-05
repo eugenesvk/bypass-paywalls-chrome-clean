@@ -44,6 +44,12 @@
     "useragent": "googlebot",
     "upd_version": "3.3.5.1"
   },
+  "Granta Magazine": {
+    "domain": "granta.com",
+    "allow_cookies": 1,
+    "ld_json_url": "div.article-sign-up-container|div.article-excerpt",
+    "upd_version": "3.3.6.6"
+  },
   "Mediahuis Nederland Regional": {
     "domain": "###_nl_mediahuis_region",
     "group": [

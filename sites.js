@@ -763,6 +763,11 @@ var defaultSites = {
     domain: "globes.co.il",
     block_regex: /\.tinypass\.com\//
   },
+  "Granta Magazine": {
+    domain: "granta.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Groene Amsterdammer": {
     domain: "groene.nl",
     remove_cookies_select_hold: ["accept-cookies", "popunder-hidden"],
