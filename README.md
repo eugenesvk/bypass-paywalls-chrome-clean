@@ -594,6 +594,7 @@ Grouped in options:\
 [Salzburger Nachrichten](https://www.sn.at) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
+[Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -
 [Westdeutsche Zeitung](https://www.wz.de)

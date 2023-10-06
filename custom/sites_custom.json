@@ -24,6 +24,11 @@
     "cs_code": "[{\"cond\":\"body.nodetype--memo\", \"rm_class\":\"nodetype--memo\"}, {\"cond\":\"div.memo--callout--wrapper\",\"rm_elem\":1}]",
     "domain": "al-monitor.com"
   },
+  "Artsprofessional.co.uk": {
+    "allow_cookies": 1,
+    "block_regex": "\\.artsprofessional\\.co\\.uk\\/.+\\/js\\/content_paywall\\.js",
+    "domain": "artsprofessional.co.uk"
+  },
   "Asiamoney.com": {
     "allow_cookies": 1,
     "domain": "asiamoney.com",
@@ -91,6 +96,11 @@
     "domain": "capital.bg",
     "ld_json": "div.paywall|div.story-content|1",
     "useragent": "googlebot"
+  },
+  "Catholicherald.co.uk": {
+    "allow_cookies": 1,
+    "block_regex": "\\.catholicherald\\.co\\.uk\\/c\\/assets\\/pigeon\\.js",
+    "domain": "catholicherald.co.uk"
   },
   "Chicago.suntimes.com": {
     "allow_cookies": 1,
@@ -389,6 +399,12 @@
     "allow_cookies": 1,
     "domain": "mediapart.fr"
   },
+  "Mediapost.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body[class]\", \"rm_attrib\":\"class\"}, {\"cond\":\"div.fade\", \"rm_elem\":1}]",
+    "domain": "mediapost.com",
+    "ld_google_webcache": "div.modal|div#article_body"
+  },
   "Medpagetoday.com": {
     "allow_cookies": 1,
     "domain": "medpagetoday.com",
@@ -549,7 +565,8 @@
   "Shrm.org": {
     "allow_cookies": 1,
     "block_regex": "\\.shrm\\.org\\/.+\\/js\\/paywall.+\\.js",
-    "domain": "shrm.org"
+    "domain": "shrm.org",
+    "useragent": "googlebot"
   },
   "Siliconrepublic.com": {
     "allow_cookies": 1,
@@ -693,7 +710,7 @@
   "Thestage.co.uk": {
     "allow_cookies": 1,
     "domain": "thestage.co.uk",
-    "ld_google_webcache": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle']"
+    "ld_google_webcache": "div#ao-MeteringDNAllow|div.aos-FeatureArticle"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,
@@ -709,6 +726,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
     "domain": "toolkits.com"
+  },
+  "Utilityweek.co.uk": {
+    "allow_cookies": 1,
+    "domain": "utilityweek.co.uk",
+    "useragent": "googlebot"
   },
   "Washingtontimes.com": {
     "allow_cookies": 1,

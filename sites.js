@@ -2475,6 +2475,12 @@ var defaultSites = {
     domain: "voguebusiness.com",
     useragent: "facebookbot"
   },
+  "Vorarlberg Nachrichten": {
+    domain: "vn.at",
+    allow_cookies: 1,
+    block_js_inline: /\.vn\.at\/.+\/\d{4}\//,
+    block_regex: /\.tinypass\.com\//,
+  },
   "Vorarlberg Online": {
     domain: "vol.at",
     allow_cookies: 1,

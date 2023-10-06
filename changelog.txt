@@ -6,6 +6,7 @@ Post-release
 Add Bhaskar (India)
 Add Granta Magazine (UK)
 Add Interesting Engineering
+Add Vn.at
 Fix Media Group Westfalen
 Fix Mediahuis Nederland Regional (js)
 Fix NHST Media Group (js)

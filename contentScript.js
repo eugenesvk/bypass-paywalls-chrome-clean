@@ -1147,6 +1147,25 @@ else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 's
   removeDOMElement(banner);
 }
 
+else if (matchDomain('vn.at')) {
+  if (window.location.href.match(/\.vn\.at\/.+\/\d{4}\//)) {
+    let paywall = document.querySelector('div.paywalled-content');
+    if (paywall) {
+      csDoneOnce = true;
+      let par = paywall.querySelector('p');
+      if (!par) {
+        refreshCurrentTab_bg();
+      } else {
+        let lazy_images = document.querySelectorAll('img[src^="data:image/"][lazy-src]');
+        for (let elem of lazy_images) {
+          elem.src = elem.getAttribute('lazy-src');
+        }
+      }
+    } else
+      refreshCurrentTab_bg();
+  }
+}
+
 else if (matchDomain('vol.at')) {
   if (!window.location.pathname.match(/\/amp\/?$/)) {
     window.setTimeout(function () {
