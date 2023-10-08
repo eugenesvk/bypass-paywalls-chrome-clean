@@ -1177,6 +1177,11 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
+  "Junge Freiheit": {
+    domain: "jungefreiheit.de",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Kölner Stadt-Anzeiger": {
     domain: "ksta.de",
     allow_cookies: 1,

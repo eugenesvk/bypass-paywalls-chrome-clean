@@ -362,6 +362,7 @@
     "*://*.journalstar.com/*",
     "*://*.jpost.com/*",
     "*://*.jsonline.com/*",
+    "*://*.jungefreiheit.de/*",
     "*://*.kansas.com/*",
     "*://*.kansascity.com/*",
     "*://*.kentucky.com/*",
@@ -805,5 +806,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.6.7"
+  "version": "3.3.6.8"
 }

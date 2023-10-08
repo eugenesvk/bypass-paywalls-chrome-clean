@@ -582,6 +582,7 @@ Grouped in options:\
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
 [Jacobin Magazin](https://jacobin.de) -
+[Junge Freiheit](https://jungefreiheit.de) -
 [Kölner Stadt-Anzeiger](https://www.ksta.de) -
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -

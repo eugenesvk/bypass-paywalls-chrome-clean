@@ -732,6 +732,16 @@
     "domain": "utilityweek.co.uk",
     "useragent": "googlebot"
   },
+  "Van-magazin.de": {
+    "allow_cookies": 1,
+    "domain": "van-magazin.de",
+    "ld_json_url": "div.newspack-metered-paywall-block|div.entry-content"
+  },
+  "Van-magazine.com": {
+    "allow_cookies": 1,
+    "domain": "van-magazine.com",
+    "ld_json_url": "div.newspack-metered-paywall-block|div.entry-content"
+  },
   "Washingtontimes.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

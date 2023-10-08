@@ -927,6 +927,39 @@ else if (matchDomain('jacobin.de')) {
   }
 }
 
+else if (matchDomain('jungefreiheit.de')) {
+  let paywall = document.querySelector('div.paywall-teaser-box');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let json_url_dom = document.querySelector('head > link[rel="alternate"][type="application/json"][href]');
+    if (json_url_dom) {
+      let json_url = json_url_dom.href;
+      fetch(json_url)
+      .then(response => {
+        if (response.ok) {
+          response.json().then(json => {
+            let json_text = json.content.rendered;
+            let content = document.querySelector('div.elementor-widget-container > p');
+            if (json_text && content) {
+              let parser = new DOMParser();
+              let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+              let content_new = doc.querySelector('div');
+              content.parentNode.replaceChild(content_new, content);
+            }
+          });
+        }
+      });
+    }
+    let fade = document.querySelector('div[style*="background-image: url"]');
+    removeDOMElement(fade);
+  }
+  window.setTimeout(function () {
+    let banners = document.querySelectorAll('div > small');
+    for (let elem of banners)
+      hideDOMElement(elem.parentNode);
+  }, 1000);
+}
+
 else if (matchDomain('krautreporter.de')) {
   let paywall = document.querySelector('.js-article-paywall');
   if (paywall) {
@@ -1173,7 +1206,6 @@ else if (matchDomain('vol.at')) {
       if (paywall && dompurify_loaded) {
         paywall.removeAttribute('class');
         if (!paywall.hasChildNodes()) {
-          console.log('empty');
           let json_script = document.querySelector('script#externalPostDataNode');
           if (json_script) {
             try {
@@ -4403,7 +4435,7 @@ else if (matchDomain('puck.news')) {
               let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
               content.innerHTML = '';
               let content_new = doc.querySelector('div');
-              content.appendChild(content_new, content);
+              content.appendChild(content_new);
             }
           });
         }
@@ -4734,7 +4766,7 @@ else if (matchDomain('theamericanconservative.com')) {
               let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
               let content_new = doc.querySelector('div');
               content.innerHTML = '';
-              content.appendChild(content_new, content);
+              content.appendChild(content_new);
             }
           });
         }
@@ -5205,7 +5237,7 @@ else if (matchDomain('thewrap.com')) {
               let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
               content.innerHTML = '';
               let content_new = doc.querySelector('div');
-              content.appendChild(content_new, content);
+              content.appendChild(content_new);
             }
           });
         }
