@@ -8,9 +8,6 @@
       "id": "magnolia@12.34",
       "update_url": "https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/updates.json",
       "strict_min_version": "86.0"
-    },
-    "gecko_android": {
-      "strict_min_version": "86.0"
     }
   },
   "browser_action": {
@@ -806,5 +803,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.6.8"
+  "version": "3.3.7.0"
 }
