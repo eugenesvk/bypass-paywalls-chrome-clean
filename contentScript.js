@@ -50,7 +50,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'uol.com.br', 'vol.at', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -2286,18 +2286,36 @@ else if (matchDomain('money.it')) {
 }
 
 else if (matchDomain('tuttosport.com')) {
-  let article_images = document.querySelectorAll('div > img[data-src]:not([src])');
-  for (let elem of article_images) {
-    elem.src = elem.getAttribute('data-src');
-    elem.removeAttribute('class');
-    elem.parentNode.removeAttribute('style');
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let article_images = document.querySelectorAll('div > img[data-src]:not([src])');
+    for (let elem of article_images) {
+      elem.src = elem.getAttribute('data-src');
+      elem.removeAttribute('class');
+      elem.parentNode.removeAttribute('style');
+    }
+    let main_images = document.querySelectorAll('div > img[class*="ArticleImage_image__"][src]');
+    for (let elem of main_images) {
+      elem.removeAttribute('class');
+    }
+    let video = document.querySelector('div[class^="VideoFloat_videoFloatCont__"]');
+    if (video) {
+      let og_image = document.querySelector('head > meta[property="og:image"][content]');
+      if (og_image) {
+        let og_image_url = og_image.getAttribute('content');
+        if (og_image_url) {
+          let elem = document.createElement('img');
+          elem.src = og_image_url;
+          elem.style = 'width: 95%;';
+          video.parentNode.replaceChild(elem, video);
+        }
+      }
+    }
+    let ads = document.querySelectorAll('div[class^="AdUnit_"]');
+    hideDOMElement(...ads);
+  } else {
+    let ads = document.querySelectorAll('amp-ad, amp-embed');
+    hideDOMElement(...ads);
   }
-  let main_images = document.querySelectorAll('div > img[class*="ArticleImage_image__"][src]');
-  for (let elem of main_images) {
-    elem.removeAttribute('class');
-  }
-  let ads = document.querySelectorAll('div[class^="AdUnit_"]');
-  hideDOMElement(...ads);
 }
 
 else
@@ -2943,7 +2961,7 @@ else if (matchDomain('stylist.co.uk')) {
                     let img = document.createElement('img');
                     img.src = img_elem.url;
                     img.alt = img_elem.alt;
-                    img.style = mobile ? 'width: 320px;' : 'width: 640px;';
+                    img.style = 'width: 95%;';
                     figure.appendChild(img);
                     if (img_elem.caption || img_elem.description || img_elem.alt) {
                       let caption = document.createElement('figcaption');
@@ -2974,7 +2992,7 @@ else if (matchDomain('stylist.co.uk')) {
                       let img = document.createElement('img');
                       img.src = sub_item.image.url;
                       img.alt = sub_item.image.alt;
-                      img.style = mobile ? 'width: 320px;' : 'width: 640px;';
+                      img.style = 'width: 95%;';
                       li.appendChild(img);
                       li.appendChild(document.createElement('br'));
                     }
