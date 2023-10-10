@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix NyTeknik.se
 Fix Tuttosport (image)
 
 * v3.3.7.0 (2023-10-08)
@@ -1264,7 +1265,7 @@ Fix Gestion & El Comercio (Peru)
 Fix Handelsblatt (only non-premium articles)
 Fix Il Fatto Quotidiano
 Fix Il Secolo XIX (mobile)
-Fix NyTeknik (images)
+Fix NyTeknik.se (images)
 Fix NzHerald
 Fix shz.de & svz.de
 
@@ -1438,12 +1439,12 @@ Add La Nazione (Italy)
 Add The Athletic
 Remove Rheinische Post Mediengruppe (fix obsolete)
 Fix Madsack Mediengruppe (opt-in to custom sites for unlisted)
-Fix NyTeknik (images)
+Fix NyTeknik.se (images)
 Fix Repubblica.it
 Update block TinyPass (cdn only)
 
 * v2.1.7.0 (2021-04-18)
-Add NyTeknik (Sweden)
+Add NyTeknik.se
 Add Reuters
 Fix Crain's Chicago Business
 Fix The Diplomat (magazine)

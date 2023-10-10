@@ -348,6 +348,13 @@
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
     "domain": "libraryjournal.com"
   },
+  "Limburger.nl": {
+    "add_ext_link": "div[data-cj-root='subscription-wall']|div[data-testid='article-author']",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.cj-root\", \"rm_elem\":1}, {\"cond\":\"html[class]\", \"rm_attrib\":\"class\"}]",
+    "domain": "limburger.nl"
+  },
   "Limerickpost.ie": {
     "allow_cookies": 1,
     "block_regex": "\\.limerickpost\\.ie\\/.+\\/flip-pay\\.js",
@@ -419,6 +426,12 @@
     "allow_cookies": 1,
     "domain": "mining-journal.com",
     "ld_json": "div.article-teaser|div.article-content>p"
+  },
+  "Nacion.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "cs_code": "[{\"cond\":\"div.post\", \"rm_elem\":1, \"elems\": [{\"cond\":\"div.article-body-wrapper__styled[style]\", \"rm_attrib\":\"style\"}]}]",
+    "domain": "nacion.com"
   },
   "Nation.africa": {
     "allow_cookies": 1,
@@ -541,6 +554,11 @@
   "Quickmath.com": {
     "domain": "quickmath.com"
   },
+  "Rawstory.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "domain": "rawstory.com"
+  },
   "Researchprofessionalnews.com": {
     "allow_cookies": 1,
     "domain": "researchprofessionalnews.com",
@@ -556,6 +574,9 @@
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "rp-online.de"
+  },
+  "Rp.pl (free articles only)": {
+    "domain": "rp.pl"
   },
   "Schwaebische-post.de": {
     "allow_cookies": 1,

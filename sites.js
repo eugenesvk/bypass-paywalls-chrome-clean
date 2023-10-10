@@ -1673,7 +1673,7 @@ var defaultSites = {
   "NyTeknik": {
     domain: "nyteknik.se",
     allow_cookies: 1,
-    block_regex: /\.nyteknik\.se\/.+\/static\/js\/site\.min\.js/
+    useragent: "googlebot"
   },
   "O Estado de S. Paulo": {
     domain: "estadao.com.br",
@@ -2626,7 +2626,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "hbr.org", "japantimes.co.jp", "kurier.at", "onet.pl"]
+    excluded_domains: ["piano.io", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

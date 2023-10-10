@@ -1394,17 +1394,6 @@ if (matchDomain('etc.se')) {
   }
 }
 
-else if (matchDomain('nyteknik.se')) {
-  let locked_article = document.querySelector('div.locked-article');
-  if (locked_article)
-    locked_article.classList.remove('locked-article');
-  window.setTimeout(function () {
-    let hidden_images = document.querySelectorAll('img[src=""][data-proxy-image]');
-    for (let hidden_image of hidden_images)
-      hidden_image.setAttribute('src', hidden_image.getAttribute('data-proxy-image').replace('_320', '_640'));
-  }, 2000);
-}
-
 else if (matchDomain('suomensotilas.fi')) {
   let obscured = document.querySelector('div.epfl-pw-obscured');
   if (obscured)

@@ -80,6 +80,12 @@
     "cs_dompurify": 1,
     "upd_version": "3.3.6.4"
   },
+  "NyTeknik": {
+    "domain": "nyteknik.se",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.3.7.2"
+  },
   "Salzburger Nachrichten": {
     "domain": "sn.at",
     "allow_cookies": 1,
