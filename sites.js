@@ -310,7 +310,7 @@ var defaultSites = {
   "Business Post.ie": {
     domain: "businesspost.ie",
     allow_cookies: 1,
-    block_regex: /\.piano\.io\//,
+    block_regex: /\.businesspost\.ie\/api\/tinypass\.min\.js/,
     cs_dompurify: 1
   },
   "Business Standard": {
