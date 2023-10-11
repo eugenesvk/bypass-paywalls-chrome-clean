@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Remove Mediahuis Nederland Regional (fix obsolete)
 Fix BusinessPost.ie (js)
+Fix Estadao.com.br (js)
 Fix NyTeknik.se
 Fix Tuttosport (image)
 
