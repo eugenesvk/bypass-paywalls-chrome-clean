@@ -352,7 +352,7 @@
     "add_ext_link": "div[data-cj-root='subscription-wall']|div[data-testid='article-author']",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.cj-root\", \"rm_elem\":1}, {\"cond\":\"html[class]\", \"rm_attrib\":\"class\"}]",
+    "cs_code": "[{\"cond\":\"div.cj-root\", \"rm_elem\":1, \"elems\":[{\"cond\":\"html.is-dialog-active\", \"rm_class\":\"is-dialog-active\"}]}]",
     "domain": "limburger.nl"
   },
   "Limerickpost.ie": {

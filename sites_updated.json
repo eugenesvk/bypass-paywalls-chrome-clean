@@ -51,20 +51,6 @@
     "ld_json_url": "div.paywall-teaser-box|div.elementor-widget-container > p",
     "upd_version": "3.3.6.8"
   },
-  "Mediahuis Nederland Regional": {
-    "domain": "###_nl_mediahuis_region",
-    "group": [
-      "gooieneemlander.nl",
-      "haarlemsdagblad.nl",
-      "ijmuidercourant.nl",
-      "leidschdagblad.nl",
-      "noordhollandsdagblad.nl"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.tnet\\.nl\\/static\\/assets\\/js\\/login_v\\d\\.js",
-    "cs_dompurify": 1,
-    "upd_version": "3.3.6.1"
-  },
   "Mexico News Daily": {
     "domain": "mexiconewsdaily.com",
     "allow_cookies": 1,
