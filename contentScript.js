@@ -1045,6 +1045,17 @@ else if (matchDomain('letemps.ch')) {
   hideDOMElement(...ads);
 }
 
+else if (matchDomain(['mz.de', 'volksstimme.de'])) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.fp-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    csDoneOnce = true;
+    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+    replaceDomElementExt(url_cache, true, false, 'div[data-t-name="Article"]');
+  }
+}
+
 else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
   if (window.location.pathname.endsWith('/amp')) {
     amp_unhide_access_hide('="NOT data.reduced"', '="data.reduced"', 'amp-ad, amp-embed, .ads-wrapper, #flying-carpet-wrapper');

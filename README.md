@@ -587,6 +587,7 @@ Grouped in options:\
 [Kölnische Rundschau](https://www.rundschau-online.de) -
 [Krautreporter](https://krautreporter.de) -
 [Kurier.at](https://kurier.at) -
+[Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
 [Nordwest Zeitung](https://www.nwzonline.de) -
 [Philosophie Magazin](https://www.philomag.de) -
@@ -595,6 +596,7 @@ Grouped in options:\
 [Salzburger Nachrichten](https://www.sn.at) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
+[Volksstimme](https://www.volksstimme.de) -
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -

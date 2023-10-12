@@ -63,6 +63,12 @@
     "block_regex": "\\/mexiconewsdaily\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
     "upd_version": "3.3.5.2"
   },
+  "Mitteldeutsche Zeitung": {
+    "domain": "mz.de",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.fp-paywall|div[data-t-name='Article']",
+    "upd_version": "3.3.7.5"
+  },
   "NHST Media Group": {
     "domain": "###_no_nhst_media",
     "group": [
@@ -118,5 +124,11 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "Volksstimme": {
+    "domain": "volksstimme.de",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.fp-paywall|div[data-t-name='Article']",
+    "upd_version": "3.3.7.5"
   }
 }

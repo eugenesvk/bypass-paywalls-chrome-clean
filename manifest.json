@@ -467,6 +467,7 @@
     "*://*.muensterschezeitung.de/*",
     "*://*.mundodeportivo.com/*",
     "*://*.mv-voice.com/*",
+    "*://*.mz.de/*",
     "*://*.nationalgeographic.com/*",
     "*://*.nationalpost.com/*",
     "*://*.nationalreview.com/*",
@@ -726,6 +727,7 @@
     "*://*.voguebusiness.com/*",
     "*://*.vol.at/*",
     "*://*.volkskrant.nl/*",
+    "*://*.volksstimme.de/*",
     "*://*.vosgesmatin.fr/*",
     "*://*.vulture.com/*",
     "*://*.washingtonexaminer.com/*",
@@ -797,5 +799,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.7.4"
+  "version": "3.3.7.5"
 }
