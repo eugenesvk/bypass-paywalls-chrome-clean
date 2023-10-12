@@ -546,6 +546,11 @@
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "pressherald.com"
   },
+  "Pv-digest.de": {
+    "allow_cookies": 1,
+    "domain": "pv-digest.de",
+    "useragent": "googlebot"
+  },
   "Pv-tech.org": {
     "allow_cookies": 1,
     "domain": "pv-tech.org",

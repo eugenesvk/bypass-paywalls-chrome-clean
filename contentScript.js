@@ -2695,7 +2695,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['citywire.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com'])) {//united kingdom/ireland
+} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['citywire.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
 
 if (matchDomain('autocar.co.uk')) {
   let url = window.location.href;
@@ -3124,6 +3124,16 @@ else if (matchDomain('thetimes.co.uk')) {
     removeDOMElement(paywall_page, block);
     let ads = document.querySelectorAll('#ad-article-inline, #sticky-ad-header, div[class*="InlineAdWrapper"], div[class*="NativeAd"], div.gyLkkj');
     hideDOMElement(...ads);
+  }
+}
+
+else if (matchDomain('unherd.com')) {
+  let preview = document.querySelector('div#premiumpreview');
+  if (preview) {
+    removeDOMElement(preview);
+    let premium = document.querySelector('div#premiumcontent');
+    if (premium)
+      premium.removeAttribute('id');
   }
 }
 

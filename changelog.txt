@@ -9,6 +9,7 @@ Fix BusinessPost.ie (js)
 Fix Estadao.com.br (js)
 Fix NyTeknik.se
 Fix Tuttosport (image)
+Fix Unherd (css)
 
 * v3.3.7.0 (2023-10-08)
 Add Bhaskar (India)
