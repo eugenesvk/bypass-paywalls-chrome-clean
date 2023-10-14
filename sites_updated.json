@@ -57,6 +57,13 @@
     "ld_json_url": "div.paywall-teaser-box|div.elementor-widget-container > p",
     "upd_version": "3.3.6.8"
   },
+  "Le Point": {
+    "domain": "lepoint.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr",
+    "ld_google_webcache": "aside.paywall|div#contenu",
+    "upd_version": "3.3.7.8"
+  },
   "Mexico News Daily": {
     "domain": "mexiconewsdaily.com",
     "allow_cookies": 1,

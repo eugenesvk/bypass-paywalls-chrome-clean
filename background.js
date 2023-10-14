@@ -374,7 +374,7 @@ function set_rules(sites, sites_updated, sites_custom) {
         if (!custom) {
           let isCustomSite = matchDomain(customSites_domains, domain);
           let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite) : '';
-          if (customSite_title && !(rule.add_ext_link || customSitesExt_remove.includes(isCustomSite))) {
+          if (customSite_title && !(sites_custom[customSite_title].add_ext_link || customSitesExt_remove.includes(isCustomSite))) {
             // add default block_regex
             let block_regex_default = '';
             if (rule.hasOwnProperty('block_regex'))

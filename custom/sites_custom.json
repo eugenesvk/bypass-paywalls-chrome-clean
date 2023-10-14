@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -336,12 +336,6 @@
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "lemonde.fr"
-  },
-  "Lepoint.fr": {
-    "add_ext_link": "div.info-paywall|div.ArticleBody>p",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "lepoint.fr"
   },
   "Libraryjournal.com": {
     "allow_cookies": 1,

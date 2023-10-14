@@ -314,13 +314,18 @@ if (ext_api.runtime) {
 window.addEventListener('message', function (event) {
   if (event.data) {
     if (event.data.type === 'from_page') {
-      if (matchDomain('businesspost.ie')) {
+      if (domain = matchDomain(['businesspost.ie', 'lepoint.fr'])) {
+        let article_options = {
+          'businesspost.ie': 'div.article-body-section',
+          'lepoint.fr': 'div#contenu'
+        };
+        let article_sel = article_options[domain];
         let data = event.data.data;
-        let article = document.querySelector('div.article-body-section');
+        let article = document.querySelector(article_sel);
         if (data && article && dompurify_loaded && !msg_once) {
           msg_once = true;
           let parser = new DOMParser();
-          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(data) + '</div>', 'text/html');
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(data, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
           let article_new = doc.querySelector('div');
           if (article_new) {
             article.innerHTML = '';
@@ -1857,6 +1862,66 @@ else if (matchDomain('leparisien.fr')) {
     }
   } else {
     amp_redirect('div.paywall');
+  }
+}
+
+else if (matchDomain('lepoint.fr')) {
+  function lepoint_main() {
+    function decryptVariable(a) {
+      var t = ["point", "les", "payants", "top"],
+      n = ["le", "avec", "articles", "c"],
+      o = (function () {
+        var o = [];
+        for (var e = 0; e < 4; e++)
+          o.push(n[e]), o.push(t[e]);
+        return o
+      })(),
+      e = {
+        stringify: function (o) {
+          var e = {
+            ct: o.ciphertext.toString(CryptoJS.enc.Base64)
+          };
+          return o.iv && (e.iv = o.iv.toString()),
+          o.salt && (e.s = o.salt.toString()),
+          JSON.stringify(e)
+        },
+        parse: function (o) {
+          var e = JSON.parse(o),
+          t = CryptoJS.lib.CipherParams.create({
+            ciphertext: CryptoJS.enc.Base64.parse(e.ct)
+          });
+          return e.iv && (t.iv = CryptoJS.enc.Hex.parse(e.iv)),
+          e.s && (t.salt = CryptoJS.enc.Hex.parse(e.s)),
+          t
+        }
+      };
+      return JSON.parse(CryptoJS.AES.decrypt(JSON.stringify(a), o.join(" "), {
+          format: e
+        }).toString(CryptoJS.enc.Utf8))
+    }
+    let article = document.querySelector('div#contenu');
+    if (article && window.variable_article_poool)
+      window.postMessage({type: 'from_page', data: decryptVariable(window.variable_article_poool)});
+  }
+  if (!matchDomain(['journal.lepoint.fr'])) {
+    let paywall = document.querySelectorAll('aside.paywall');
+    if (paywall.length) {
+      removeDOMElement(...paywall);
+      insert_script(lepoint_main);
+    }
+    window.setTimeout(function () {
+      let ads = document.querySelectorAll('div[id*="WRAP_"], div#StickyPaywall, div#paywall-sticky, div.slotpub, div.sticky-block');
+      hideDOMElement(...ads);
+    }, 1000);
+  } else {
+    let url = window.location.href;
+    let paywall = document.querySelectorAll('div.accnt-cmp');
+    if (paywall.length) {
+      removeDOMElement(...paywall);
+      let article = document.querySelector('article > section');
+      if (article)
+        article.firstChild.before(archiveLink(url));
+    }
   }
 }
 
