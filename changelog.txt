@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add LePoint.fr
 Add Mz.de & Volksstimme.de
+Add Texas Monthly
 Remove Mediahuis Nederland Regional (fix obsolete)
 Fix Belfast Telegraph/Independent.ie (images)
 Fix BusinessPost.ie (js)

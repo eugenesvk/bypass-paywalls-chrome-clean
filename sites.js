@@ -2047,6 +2047,11 @@ var defaultSites = {
     domain: "tes.com",
     remove_cookies_select_drop: ["tg_paywall"]
   },
+  "Texas Monthly": {
+    domain: "texasmonthly.com",
+    allow_cookies: 1,
+    block_regex: /\.texasmonthly\.com\/script\.js/
+  },
   "The (New Orleans) Advocate": {
     domain: "###_usa_theadvocate",
     group: [

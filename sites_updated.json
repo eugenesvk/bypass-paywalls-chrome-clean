@@ -105,6 +105,11 @@
     "ld_google_webcache": "div.article-sections__paywall|div.article-body-text",
     "upd_version": "3.3.5.5"
   },
+  "Texas Monthly": {
+    "domain": "texasmonthly.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.texasmonthly\\.com\\/script\\.js"
+  },
   "The Atlantic": {
     "domain": "theatlantic.com",
     "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/pages\\/.+\\/archive",

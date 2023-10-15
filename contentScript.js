@@ -4823,6 +4823,11 @@ else if (matchDomain(['techtarget.com', 'computerweekly.com', 'lemagit.fr'])) {
   }
 }
 
+else if (matchDomain('texasmonthly.com')) {
+  let ads = document.querySelectorAll('div.promo-in-body');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('the-american-interest.com')) {
   let counter = document.getElementById('article-counter');
   removeDOMElement(counter);
