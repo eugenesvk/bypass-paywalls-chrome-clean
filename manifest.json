@@ -650,6 +650,7 @@
     "*://*.theathletic.com/*",
     "*://*.theatlantic.com/*",
     "*://*.theaustralian.com.au/*",
+    "*://*.thebaffler.com/*",
     "*://*.thebanker.com/*",
     "*://*.thebulletin.org/*",
     "*://*.thechronicle.com.au/*",
@@ -801,5 +802,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.8.0"
+  "version": "3.3.8.1"
 }

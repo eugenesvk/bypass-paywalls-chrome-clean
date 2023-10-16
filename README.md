@@ -213,6 +213,7 @@ Grouped in options:\
 [The American Interest](https://www.the-american-interest.com) -
 [The Art Newspaper](https://www.theartnewspaper.com) -
 [The Atlantic](https://www.theatlantic.com) -
+[The Baffler](https://thebaffler.com) -
 [The Christian Science Monitor](https://www.csmonitor.com) -
 [The Intercept](https://theintercept.com) -
 [The Daily Beast](https://www.thedailybeast.com) -

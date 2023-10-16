@@ -2090,6 +2090,11 @@ var defaultSites = {
     block_regex: /cdn\.theatlantic\.com\/_next\/static\/chunks\/pages\/.+\/archive\//,
     remove_cookies_select_drop: ["articleViews"]
   },
+  "The Baffler": {
+    domain: "thebaffler.com",
+    allow_cookies: 1,
+    block_regex: /\/blink\.net\/.+\/blink-sdk\.js/
+  },
   "The Banker": {
     domain: "thebanker.com",
     allow_cookies: 1,

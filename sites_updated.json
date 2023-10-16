@@ -31,14 +31,6 @@
     "cs_dompurify": 1,
     "upd_version": "3.3.7.3"
   },
-  "Condé Nast Traveler": {
-    "domain": "cntraveler.com",
-    "allow_cookies": 1,
-    "remove_cookies": 1,
-    "block_regex": "(\\.cntraveler\\.com\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot",
-    "upd_version": "3.3.5.1"
-  },
   "O Estado de S. Paulo": {
     "domain": "estadao.com.br",
     "allow_cookies": 1,
@@ -63,12 +55,6 @@
     "block_regex": "\\.poool\\.fr",
     "ld_google_webcache": "aside.paywall|div#contenu",
     "upd_version": "3.3.7.8"
-  },
-  "Mexico News Daily": {
-    "domain": "mexiconewsdaily.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/mexiconewsdaily\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
-    "upd_version": "3.3.5.2"
   },
   "Mitteldeutsche Zeitung": {
     "domain": "mz.de",
@@ -98,17 +84,11 @@
     "useragent": "googlebot",
     "upd_version": "3.3.7.2"
   },
-  "Salzburger Nachrichten": {
-    "domain": "sn.at",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "ld_google_webcache": "div.article-sections__paywall|div.article-body-text",
-    "upd_version": "3.3.5.5"
-  },
   "Texas Monthly": {
     "domain": "texasmonthly.com",
     "allow_cookies": 1,
-    "block_regex": "\\.texasmonthly\\.com\\/script\\.js"
+    "block_regex": "\\.texasmonthly\\.com\\/script\\.js",
+    "upd_version": "3.3.6.9"
   },
   "The Atlantic": {
     "domain": "theatlantic.com",
@@ -117,11 +97,11 @@
     "cs_code": "[{\"cond\":\"img.Image_lazy__hYWHV\", \"rm_class\":\"Image_lazy__hYWHV\"}]",
     "upd_version": "3.3.6.3"
   },
-  "The Columbian": {
-    "domain": "columbian.com",
-    "remove_cookies_select_drop": ["blaize_session"],
-    "ld_google_webcache": "div#inline-paywall,div.modal|div[itemprop='articleBody']",
-    "upd_version": "3.3.5.3"
+  "The Baffler": {
+    "domain": "thebaffler.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
+    "upd_version": "3.3.8.3"
   },
   "The Economist": {
     "domain": "economist.com",
