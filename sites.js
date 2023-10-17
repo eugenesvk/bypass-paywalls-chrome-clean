@@ -294,7 +294,7 @@ var defaultSites = {
     domain: "###_usa_bridge_tower",
     group: [],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
+    block_regex: "\\.{domain}\\/script\\.js"
   },
   "Bulletin of the Atomic Scientists": {
     domain: "thebulletin.org",
@@ -1031,7 +1031,7 @@ var defaultSites = {
       "sfchronicle.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"
+    block_regex: "(\\.{domain}\\/script\\.js|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"
   },
   "Hearst Communications magazines": {
     domain: "###_usa_hearst_comm_mag",
@@ -1355,7 +1355,7 @@ var defaultSites = {
       "tulsaworld.com"
     ],
     allow_cookies: 1,
-    block_regex: /\.com\/shared-content\/art\/tncms\/api\/access\.js/
+    block_regex: /\.com\/.+\/tncms\/api\/access\.js/
   },
   "Les Échos": {
     domain: "lesechos.fr",
@@ -1561,7 +1561,7 @@ var defaultSites = {
   },
   "National Review": {
     domain: "nationalreview.com",
-    block_regex: /(\.nationalreview\.com\/script\.js|\.blueconic\.net\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.nationalreview\.com\/script\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "National World Publishing (UK)": {
     domain: "###_uk_nat_world",
@@ -1885,7 +1885,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_js_inline: /\.(femmesdaujourdhui|flair|knack|levif|libelle)\.be\/.+\/((\w)+(\-)+){3,}/,
-    block_regex: "((\\.|\\/){domain}\\/(script|js\\/responsive\\/rmg(Modal|Paywall))\\.js|\\.blueconic\\.net\\/)"
+    block_regex: "(\\.|\\/){domain}\\/(script|js\\/responsive\\/rmg(Modal|Paywall))\\.js"
   },
   "RugbyPass": {
     domain: "rugbypass.com",
@@ -2059,7 +2059,7 @@ var defaultSites = {
       "theadvocate.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.com\\/shared-content\\/art\\/tncms\\/user\\/user\\.js|js\\.matheranalytics\\.com\\/)"
+    block_regex: "(\\.{domain}\\/(script||.+\\/tncms\\/user\\/user)\\.js|js\\.matheranalytics\\.com\\/)"
   },
   "The American Conservative": {
     domain: "theamericanconservative.com",
@@ -2125,7 +2125,7 @@ var defaultSites = {
       "philanthropy.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/)"
+    block_regex: "\\.{domain}\\/script\\.js"
   },
   "The Columbian": {
     domain: "columbian.com",
@@ -2147,7 +2147,7 @@ var defaultSites = {
   "The Dallas Morning News": {
     domain: "dallasnews.com",
     allow_cookies: 1,
-    block_regex: /(\.blueconic\.net\/|\.dallasnews\.com\/script\.js|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    block_regex: /(\.dallasnews\.com\/script\.js|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
   "The Diplomat (refresh magazine)": {
@@ -2374,7 +2374,7 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/script\.js|\\.(com|ca)\\/shared-content\\/art\\/tncms\\/api\\/access\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    block_regex: "(\\.{domain}\\/(script|.+\\/tncms\\/api\\/access)\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     cs_dompurify: 1
   },
   "The Verge (newsletter)": {
@@ -2440,7 +2440,7 @@ var defaultSites = {
       "sun-sentinel.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.tribdss\\.com\\/|\\.{domain}\\/script\\.js|\\.blueconic\\.net\\/|\\.zephr\\.com\\/zephr-browser\\/.+\\/zephr-browser\\.umd\\.js)"
+    block_regex: "(\\.tribdss\\.com\\/|\\.{domain}\\/script\\.js|\\.zephr\\.com\\/zephr-browser\\/)"
   },
   "Tuttosport": {
     domain: "tuttosport.com",
@@ -2671,7 +2671,7 @@ var defaultSites = {
   },
   "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews",
-    block_regex_general: /\/shared-content\/art\/tncms\/api\/access\.js/
+    block_regex_general: /\/tncms\/api\/access\.js/
   },
   "TribDss": {
     domain: "tribdss.com",
