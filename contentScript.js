@@ -3380,6 +3380,11 @@ else if (matchDomain('blogfolha.uol.com.br')) {
 }
 
 else if (matchDomain('gauchazh.clicrbs.com.br')) {
+  let blink = document.querySelector('div.body.blink');
+  if (blink) {
+    csDoneOnce = true;
+    refreshCurrentTab_bg();
+  }
   let ads = document.querySelectorAll('div.ad-banner, div.ad-container');
   hideDOMElement(...ads);
 }
