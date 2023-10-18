@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add The Baffler
 Fix Australia News Corp (amp-fix for desktop)
+Fix Faz.net (json)
 Fix GauchaZH (refresh)
 
 * v3.3.8.0 (2023-10-15)

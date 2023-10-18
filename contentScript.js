@@ -797,17 +797,17 @@ else if (matchDomain('cicero.de')) {
 
 else if (matchDomain('faz.net')) {
   if (matchDomain('zeitung.faz.net')) {
-    let paywall_z = document.querySelector('.c-red-carpet');
+    let paywall_z = document.querySelector('div.c-red-carpet');
     if (paywall_z) {
       removeDOMElement(paywall_z);
       let og_url = document.querySelector('head > meta[property="og:url"][content]');
       if (og_url)
         window.location.href = og_url.content;
     }
-    let sticky_advt = document.querySelector('.sticky-advt');
+    let sticky_advt = document.querySelector('div.sticky-advt');
     removeDOMElement(sticky_advt);
   } else {
-    let paywall = document.querySelector('#paywall-form-container-outer, .atc-ContainerPaywall');
+    let paywall = document.querySelector('#paywall-form-container-outer, section.atc-ContainerPaywall');
     if (paywall) {
       removeDOMElement(paywall);
       let url = new URL(window.location.href);
@@ -822,34 +822,52 @@ else if (matchDomain('faz.net')) {
               let json = doc.querySelector('script[id="schemaOrgJson"]');
               if (json) {
                 let json_text = json.text.replace(/(\r|\n)/g, '');
-                let split1 = json_text.split('"ArticleBody": "');
-                let split2 = split1[1].split('","author":');
-                if (split2[0].includes('"'))
-                  json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/(\\)?"/g, "'") + '","author":' + split2[1];
                 try {
+                  let split1 = json_text.split('"ArticleBody": "');
+                  let split2 = split1[1].split('","author":');
+                  if (split2[0].includes('"'))
+                    json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/(\\)?"/g, "'") + '","author":' + split2[1];
                   json_text = JSON.parse(json_text).ArticleBody;
                 } catch (err) {
                   console.log(err);
                   return;
                 }
-                if (!json_text)
-                  return;
-                let article_text = document.querySelector('.art_txt.paywall,.atc-Text.js-atc-Text');
-                article_text.innerText = '';
-                json_text = breakText(json_text);
-                json_text.split("\n\n").forEach(
-                  (p_text) => {
-                  let elem;
-                  if (p_text.length < 80) {
-                    elem = document.createElement("h2");
-                    elem.setAttribute('class', 'atc-SubHeadline');
-                  } else {
-                    elem = document.createElement("p");
-                    elem.setAttribute('class', 'atc-TextParagraph');
-                  };
-                  elem.innerText = p_text;
-                  article_text.appendChild(elem);
-                });
+                if (json_text) {
+                  let article_text = document.querySelector('div.art_txt.paywall, div.atc-Text.js-atc-Text');
+                  if (article_text) {
+                    article_text.innerText = '';
+                    json_text = breakText(json_text);
+                    json_text.split("\n\n").forEach(
+                      (p_text) => {
+                      let elem;
+                      if (p_text.length < 80) {
+                        elem = document.createElement("h2");
+                        elem.setAttribute('class', 'atc-SubHeadline');
+                      } else {
+                        elem = document.createElement("p");
+                        elem.setAttribute('class', 'atc-TextParagraph');
+                      };
+                      elem.innerText = p_text;
+                      article_text.appendChild(elem);
+                    });
+                  }
+                } else {
+                  let json_script = getArticleJsonScript();
+                  if (json_script) {
+                    let json = JSON.parse(json_script.text);
+                    if (json) {
+                      let json_text = json.articleBody;
+                      let article_text = document.querySelectorAll('div.copy');
+                      if (json_text && article_text.length) {
+                        for (let elem of article_text)
+                          elem.innerText = '';
+                        article_text[0].innerText = json_text;
+                        let copy_intro = document.querySelector('p.copy--intro');
+                        removeDOMElement(copy_intro);
+                      }
+                    }
+                  }
+                }
               }
             })
           }
