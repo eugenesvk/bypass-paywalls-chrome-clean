@@ -849,6 +849,14 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.poool\.fr\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Groupe Québecor": {
+    domain: "###_ca_groupe_quebecor",
+    group: [
+      "journaldemontreal.com",
+      "journaldequebec.com"
+    ],
+    allow_cookies: 1
+  },
   "Groupe Rossel": {
     domain: "###_fr_be_groupe_rossel",
     group: [
@@ -2580,7 +2588,7 @@ var defaultSites = {
     domain: "cxense.com",
     allow_cookies: 1,
     block_regex_general: /cdn\.cxense\.com\//,
-    excluded_domains: ["bizjournals.com"]
+    excluded_domains: ["bizjournals.com", "journaldemontreal.com", "journaldequebec.com"]
   },
   "Ensighten": {
     domain: "ensighten.com",

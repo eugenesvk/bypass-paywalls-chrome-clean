@@ -72,6 +72,18 @@
     "ld_json_url": "div.article-sign-up-container|div.article-excerpt",
     "upd_version": "3.3.6.6"
   },
+  "Le Journal de Montréal": {
+    "domain": "journaldemontreal.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.journalde.+\\.com\\/",
+    "upd_version": "3.3.8.5"
+  },
+  "Le Journal de Québec": {
+    "domain": "journaldequebec.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.journalde.+\\.com\\/",
+    "upd_version": "3.3.8.5"
+  },
   "Junge Freiheit": {
     "domain": "jungefreiheit.de",
     "allow_cookies": 1,

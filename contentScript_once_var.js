@@ -19,7 +19,19 @@ if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndt
   insert_script(madsack_main);
 }
 
-} else if (matchDomain('nzherald.co.nz')) {
+}
+
+else if (matchDomain(['journaldemontreal.com', 'journaldequebec.com'])) {
+  for (let n = 0; n < 10; n++) {
+    window.setTimeout(function () {
+      let article = document.querySelector('div.article-main-txt.composer-content');
+      if (article)
+        article.classList.remove('composer-content');
+    }, n * 50);
+  }
+}
+
+else if (matchDomain('nzherald.co.nz')) {
   function nzherald_main() {
     for (let n = 0; n < 10; n++) {
       window.setTimeout(function () {

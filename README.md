@@ -398,6 +398,9 @@ Grouped in options:\
 Grouped in options:\
 *Groupe Capitales Médias* sites like (opt-in to custom sites for unlisted)\
 [Le Soleil](https://www.lesoleil.com)\
+*Groupe Québecor* sites like\
+[Le Journal de Montréal](https://www.journaldemontreal.com) -
+[Le Journal de Québec](https://www.journaldequebec.com)\
 *Postmedia Network* sites like (opt-in to custom sites for unlisted)\
 [Calgary Herald](https://calgaryherald.com) -
 [Financial Post](https://www.financialpost.com) -
