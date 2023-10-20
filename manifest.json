@@ -93,6 +93,7 @@
     "*://*.axios.com/*",
     "*://*.azcentral.com/*",
     "*://*.backpacker.com/*",
+    "*://*.balkaninsight.com/*",
     "*://*.baltimoresun.com/*",
     "*://*.barandbench.com/*",
     "*://*.barrons.com/*",
@@ -804,5 +805,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.8.5"
+  "version": "3.3.8.6"
 }

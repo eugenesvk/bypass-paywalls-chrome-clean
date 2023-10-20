@@ -220,6 +220,11 @@ var defaultSites = {
     allow_cookies: 1,
     useragent: "googlebot"
   },
+  "Balkan Insight": {
+    domain: "balkaninsight.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Bar and Bench": {
     domain: "barandbench.com",
     allow_cookies: 1,

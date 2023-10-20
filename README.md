@@ -419,6 +419,7 @@ Grouped in options:\
 
 #### Europe
 
+[Balkan Insight](https://balkaninsight.com) -
 [Bloomberg Adria](https://www.bloombergadria.com) -
 [EUobserver](https://euobserver.com) -
 [Follow the Money (ftm.eu)](https://www.ftm.eu)

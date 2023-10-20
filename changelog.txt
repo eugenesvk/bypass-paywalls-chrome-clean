@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Balkan Insight
 Add Groupe Quebecor
 Add The Baffler
 Fix Australia News Corp (amp-fix for desktop)
