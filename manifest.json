@@ -797,13 +797,15 @@
     "*://*.gitlab.com/magnolia1234/*",
     "*://*.hadrianpaywall.com/*",
     "*://*.kinja-static.com/*",
+    "*://*.masthead.me/*",
     "*://*.medscapestatic.com/*",
     "*://*.ndcmediagroep.nl/*",
     "*://*.nhst.tech/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
+    "*://*.wgchrrammzv.com/*",
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.8.6"
+  "version": "3.3.8.7"
 }

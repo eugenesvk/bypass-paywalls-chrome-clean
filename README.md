@@ -351,6 +351,7 @@ Grouped in options:\
 [Tulsa World](https://tulsaworld.com) -
 [Wisconsin State Journal](https://madison.com) -
 [Winston-Salem Journal](https://www.journalnow.com)\
+*[Maine Trust](https://www.metln.org)* sites (opt-in to custom sites)\
 *McClatchy Group* sites like (opt-in to custom sites for unlisted)\
 [Belleville News-Democrat](https://www.bnd.com) -
 [Fort Worth Star-Telegram](https://www.star-telegram.com) -

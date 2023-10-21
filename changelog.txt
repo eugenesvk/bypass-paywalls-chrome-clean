@@ -5,10 +5,12 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Balkan Insight
 Add Groupe Quebecor
+Add Maine Trust for Local News (opt-in to custom sites)
 Add The Baffler
 Fix Australia News Corp (amp-fix for desktop)
 Fix Faz.net (json)
 Fix GauchaZH (refresh)
+Fix WSJ (link to Google Search Tool)
 
 * v3.3.8.0 (2023-10-15)
 Add LePoint.fr

@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -534,11 +534,6 @@
     "allow_cookies": 1,
     "domain": "pressandjournal.co.uk",
     "useragent": "googlebot"
-  },
-  "Pressherald.com": {
-    "allow_cookies": 1,
-    "block_regex": "loader-cdn\\.azureedge\\.net",
-    "domain": "pressherald.com"
   },
   "Pv-digest.de": {
     "allow_cookies": 1,

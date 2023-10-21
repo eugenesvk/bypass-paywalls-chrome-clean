@@ -1426,6 +1426,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "Maine Trust for Local News (opt-in to custom sites)": {
+    domain: "###_usa_maine_trust",
+    group: [],
+    allow_cookies: 1,
+    block_regex: /loader\.masthead\.me\//
+  },
   "Mainichi Shimbun": {
     domain: "mainichi.jp",
     allow_cookies: 1,
@@ -1919,7 +1925,7 @@ var defaultSites = {
   "Saltwire Network": {
     domain: "saltwire.com",
     allow_cookies: 1,
-    block_regex: /\/loader-cdn\.azureedge\.net\//
+    block_regex: /\.zephr\.com\/zephr-browser\//
   },
   "Salzburger Nachrichten": {
     domain: "sn.at",
@@ -2031,7 +2037,7 @@ var defaultSites = {
   "Tampa Bay Times": {
     domain: "tampabay.com",
     allow_cookies: 1,
-    block_regex: /(loader-cdn\.azureedge\.net\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.zephr\.com\/zephr-browser\/|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "Tech in Asia": {
     domain: "techinasia.com",
@@ -2096,7 +2102,7 @@ var defaultSites = {
   "The Atlanta Journal-Constitution (+ Cox First Media; opt-in to custom sites)": {
     domain: "ajc.com",
     allow_cookies: 1,
-    block_regex: /(\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.com\/prod\/ajc\/loader\.min\.js|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
   "The Atlantic": {
     domain: "theatlantic.com",

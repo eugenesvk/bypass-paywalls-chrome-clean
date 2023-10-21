@@ -5414,8 +5414,8 @@ else if (matchDomain('wsj.com')) {
           } else if (window.location.search) {
             window.location.href = window.location.pathname;
           } else {
-            let header = document.querySelector('div.article-header, article > div');
-            header_nofix(header);
+            let article = document.querySelector('article');
+            article.firstChild.before(googleSearchToolLink(window.location.href));
           }
         }
       }

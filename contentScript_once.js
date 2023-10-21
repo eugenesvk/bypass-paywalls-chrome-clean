@@ -132,6 +132,8 @@ window.setTimeout(function () {
           group = '###_fr_synerj';
         else if (document.querySelector('head > link[href*=".com/wp-content/themes/madavor/"]'))
           group = '###_usa_madavor';
+        else if (matchDomain(['centralmaine.com', 'pressherald.com', 'sunjournal.com']))
+          group = '###_usa_maine_trust';
         else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
           group = '###_usa_pei';
         else if (matchDomain(['dayton.com', 'daytondailynews.com', 'journal-news.com', 'springfieldnewssun.com']))
