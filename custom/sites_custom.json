@@ -158,6 +158,12 @@
     "allow_cookies": 1,
     "domain": "die-glocke.de"
   },
+  "Dn.se": {
+    "add_ext_link": "div.esi-paywall|div.article__content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "dn.se"
+  },
   "Dominionpost.com": {
     "allow_cookies": 1,
     "block_regex": "\\.dominionpost\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
@@ -574,8 +580,9 @@
     "allow_cookies": 1,
     "domain": "rp-online.de"
   },
-  "Rp.pl (free articles only)": {
-    "domain": "rp.pl"
+  "Rp.pl": {
+    "domain": "rp.pl",
+    "ld_google_webcache": "div.paywallComponentWrapper|div.main--content--body"
   },
   "Schwaebische-post.de": {
     "allow_cookies": 1,
