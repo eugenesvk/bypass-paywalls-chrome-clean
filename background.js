@@ -31,7 +31,7 @@ var restrictions = {
   'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
   'hilltimes.com': /^((?!hilltimes\.com\/slideshow\/).)*$/,
-  'nytimes.com': /^((?!\/timesmachine\.nytimes\.com\/).)*$/,
+  'nytimes.com': /^((?!\/(myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,

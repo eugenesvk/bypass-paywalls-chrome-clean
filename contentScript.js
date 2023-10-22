@@ -332,6 +332,7 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDo
   let paywall = document.querySelector('article.meteredContent');
   if (paywall) {
     paywall.removeAttribute('class');
+    paywall.firstChild.before(freediumLink(url));
     paywall.firstChild.before(googleWebcacheLink(url));
   }
   window.setTimeout(function () {
@@ -5823,6 +5824,10 @@ function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test ur
 
 function ext_12ftLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
   return externalLink(['12ft.io'], 'https://{domain}/{url}', url, text_fail);
+}
+
+function freediumLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
+  return externalLink(['freedium.cfd'], 'https://{domain}/{url}', url, text_fail);
 }
 
 function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full article text:\r\n') {

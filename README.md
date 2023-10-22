@@ -134,6 +134,8 @@ Grouped in options:\
 [Modern Healthcare](https://www.modernhealthcare.com) -
 [Pensions & Investments](https://www.pionline.com)
 
+*[Inside Retail](https://octomedia.com.au/our-brands/inside-retail)* sites (opt-in to custom sites)
+
 *[PEI Media](https://www.pei.group/brands)* sites (opt-in to custom sites)
 
 ##### Tech/Science

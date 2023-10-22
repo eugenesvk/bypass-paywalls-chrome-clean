@@ -41,7 +41,7 @@ window.setTimeout(function () {
       group = '###_substack_custom';// no fix
     else if (document.querySelector('script[src*="/wp-content/themes/pmgnews/scripts/promedia.js"], form[action^="https://go.promedia.nl/"]'))
       group = '###_nl_promedia';
-    else if (hostname.match(/\.(com|net)\.au$/)) {
+    else if (hostname.match(/\.(com|net)\.au$/) && !matchDomain(['insideretail.com.au'])) {
       if (document.querySelector('a[href^="https://austcommunitymedia.my.site.com/"]'))
         group = '###_au_comm_media';
       else if (hostname.endsWith('.com.au')) {
@@ -141,6 +141,9 @@ window.setTimeout(function () {
         else if (matchDomain(['accountingtoday.com', 'benefitnews.com', 'bondbuyer.com', 'dig-in.com', 'financial-planning.com', 'nationalmortgagenews.com']))
           group = 'americanbanker.com';// Arizent
       }
+    } else {
+        if (matchDomain(['insideretail.asia', 'insideretail.co.nz' ,'insideretail.com.au', 'insideretail.us']))
+        group = '###_au_inside_retail';
     }
 
     ext_api.runtime.sendMessage({

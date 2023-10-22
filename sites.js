@@ -1150,6 +1150,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /js\.pelcro\.com\//
   },
+  "Inside Retail (opt-in to custom sites)": {
+    domain: "###_au_inside_retail",
+    group: [],
+    ld_json_url: "div#premium-box|div.article__text__holder|1"
+  },
   "Intelligent Investor": {
     domain: "intelligentinvestor.com.au",
     allow_cookies: 1,

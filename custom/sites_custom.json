@@ -206,6 +206,11 @@
     "allow_cookies": 1,
     "domain": "ewmagazine.nl"
   },
+  "Faithfullymagazine.com": {
+    "allow_cookies": 1,
+    "domain": "faithfullymagazine.com",
+    "ld_json": "div.pmpro_content_message|div.content-inner"
+  },
   "Finansavisen.no": {
     "allow_cookies": 1,
     "domain": "finansavisen.no",
