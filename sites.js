@@ -1034,7 +1034,8 @@ var defaultSites = {
   },
   "Harvard Business Review (do not block TinyPass-script externally)": {
     domain: "hbr.org",
-    block_regex: /cdn\.cxense\.com\//
+    block_regex: /cdn\.cxense\.com\//,
+    remove_cookies_select_drop: ["xbc"]
   },
   "Hearst Communications (newspapers)": {
     domain: "###_usa_hearst_comm",

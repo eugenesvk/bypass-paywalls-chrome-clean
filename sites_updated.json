@@ -28,25 +28,6 @@
     ],
     "upd_version": "3.3.8.3"
   },
-  "Australia Nine Entertainment": {
-    "domain": "###_au_nine_ent",
-    "group": [
-      "afr.com",
-      "brisbanetimes.com.au",
-      "smh.com.au",
-      "theage.com.au",
-      "watoday.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "upd_version": "3.3.6.6"
-  },
-  "Bhaskar": {
-    "domain": "bhaskar.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.bhaskar\\.com\\/assets\\/js\\/react-.+\\.bundle\\.js",
-    "upd_version": "3.3.6.5"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
@@ -66,11 +47,11 @@
     "block_regex": "(\\.estadao\\.com\\.br\\/(paywall\\/|access\\.js)|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "upd_version": "3.3.7.4"
   },
-  "Granta Magazine": {
-    "domain": "granta.com",
-    "allow_cookies": 1,
-    "ld_json_url": "div.article-sign-up-container|div.article-excerpt",
-    "upd_version": "3.3.6.6"
+  "Harvard Business Review": {
+    "domain": "hbr.org",
+    "block_regex": "cdn\\.cxense\\.com\\/",
+    "remove_cookies_select_drop": ["xbc"],
+    "upd_version": "3.3.9.1"
   },
   "Le Journal de Montréal": {
     "domain": "journaldemontreal.com",
@@ -83,12 +64,6 @@
     "allow_cookies": 1,
     "block_js_inline": "\\.journalde.+\\.com\\/",
     "upd_version": "3.3.8.5"
-  },
-  "Junge Freiheit": {
-    "domain": "jungefreiheit.de",
-    "allow_cookies": 1,
-    "ld_json_url": "div.paywall-teaser-box|div.elementor-widget-container > p",
-    "upd_version": "3.3.6.8"
   },
   "Le Point": {
     "domain": "lepoint.fr",
@@ -103,40 +78,11 @@
     "ld_google_webcache": "div.fp-paywall|div[data-t-name='Article']",
     "upd_version": "3.3.7.5"
   },
-  "NHST Media Group": {
-    "domain": "###_no_nhst_media",
-    "group": [
-      "europower.no",
-      "fiskeribladet.no",
-      "intrafish.com",
-      "intrafish.no",
-      "rechargenews.com",
-      "tradewindsnews.com",
-      "upstreamonline.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "subscription-static-global\\.nhst\\.tech",
-    "cs_dompurify": 1,
-    "upd_version": "3.3.6.4"
-  },
   "NyTeknik": {
     "domain": "nyteknik.se",
     "allow_cookies": 1,
     "useragent": "googlebot",
     "upd_version": "3.3.7.2"
-  },
-  "Texas Monthly": {
-    "domain": "texasmonthly.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.texasmonthly\\.com\\/script\\.js",
-    "upd_version": "3.3.6.9"
-  },
-  "The Atlantic": {
-    "domain": "theatlantic.com",
-    "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/pages\\/.+\\/archive",
-    "remove_cookies_select_drop": ["articleViews"],
-    "cs_code": "[{\"cond\":\"img.Image_lazy__hYWHV\", \"rm_class\":\"Image_lazy__hYWHV\"}]",
-    "upd_version": "3.3.6.3"
   },
   "The Baffler": {
     "domain": "thebaffler.com",
