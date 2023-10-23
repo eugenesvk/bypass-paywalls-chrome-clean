@@ -5404,19 +5404,22 @@ else if (matchDomain('wsj.com')) {
           masthead_link.href = 'https://www.wsj.com';
       } else {
         let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
-        let wsj_pro = document.querySelector('head > meta[name="page.site"][content="wsjpro"]');
-        if (snippet || wsj_pro) {
-          removeDOMElement(snippet, wsj_pro);
+        if (snippet) {
+          removeDOMElement(snippet);
           if (!matchDomain('www.wsj.com')) {
             if (url_article)
               window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
             else
               window.location.href = '/amp/articles/' + path_article[0];
-          } else if (window.location.search) {
-            window.location.href = window.location.pathname;
           } else {
+            let wsj_pro = snippet.querySelector('a[href^="https://wsjpro.com/"]');
             let article = document.querySelector('article');
-            article.firstChild.before(googleSearchToolLink(window.location.href));
+            if (article) {
+              if (wsj_pro)
+                article.firstChild.before(googleSearchToolLink(window.location.href));
+              else
+                article.firstChild.before(archiveLink(window.location.href));
+            }
           }
         }
       }

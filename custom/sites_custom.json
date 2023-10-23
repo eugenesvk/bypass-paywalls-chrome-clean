@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, bild.de, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -38,6 +38,12 @@
     "allow_cookies": 1,
     "domain": "bauernzeitung.ch",
     "useragent": "googlebot"
+  },
+  "Bild.de": {
+    "add_ext_link": "div.offer-module|div.article-body",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "bild.de"
   },
   "Bisnisindonesia.id": {
     "allow_cookies": 1,
