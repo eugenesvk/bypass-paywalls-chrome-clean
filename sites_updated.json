@@ -1,4 +1,8 @@
 {
+  "Apollo Magazine": {
+    "domain": "apollo-magazine.com",
+    "upd_version": "3.3.9.3"
+  },
   "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
     "domain": "###_au_news_corp",
     "group": [
@@ -103,6 +107,11 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "The Spectator Australia": {
+    "domain": "spectator.com.au",
+    "useragent": "googlebot",
+    "upd_version": "3.3.9.3"
   },
   "UnHerd": {
     "domain": "unherd.com",

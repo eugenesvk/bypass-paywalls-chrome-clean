@@ -68,9 +68,7 @@ var defaultSites = {
     block_regex: /\.tinypass\.com\//
   },
   "Apollo Magazine": {
-    domain: "apollo-magazine.com",
-    allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
+    domain: "apollo-magazine.com"
   },
   "ARA": {
     domain: "###_cat_ara",
@@ -2362,7 +2360,7 @@ var defaultSites = {
   },
   "The Spectator Australia": {
     domain: "spectator.com.au",
-    block_regex: /\.tinypass\.com\//
+    useragent: "googlebot"
   },
   "The Spectator World": {
     domain: "thespectator.com",
@@ -2792,8 +2790,8 @@ var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
-  "###_wp_leaky_paywall": ["dominionpost.com", "thewirechina.com"],
-  "###_uk_axate.io": ["thinkofx.net"],
+  "###_wp_leaky_paywall": ["dominionpost.com", "heisenbergreport.com", "thewirechina.com"],
+  "###_uk_axate.io": ["thecricketer.com", "thinkofx.net"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
   "###_usa_townnews": ["bloxdigital.com", "townnews.com"],

@@ -2693,9 +2693,14 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['citywire.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
+} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['apollo-magazine.com', 'citywire.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
 
-if (matchDomain('autocar.co.uk')) {
+if (matchDomain('apollo-magazine.com')) {
+  let banner = document.querySelector('#subscribe-ribbon');
+  removeDOMElement(banner);
+}
+
+else if (matchDomain('autocar.co.uk')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.ms-block, div.register-block');
   if (paywall) {
@@ -5811,7 +5816,7 @@ function refreshCurrentTab_bg() {
   ext_api.runtime.sendMessage({request: 'refreshCurrentTab'});
 }
 
-function archiveLink(url, text_fail = 'BPC > Try for full article text (only report issue if not working for over a week):\r\n') {
+function archiveLink(url, text_fail = 'BPC > Try for full article text (no need to report issue for external site):\r\n') {
   return externalLink(['archive.today', 'archive.is'], 'https://{domain}?run=1&url={url}', url, text_fail);
 }
 

@@ -109,7 +109,7 @@ window.setTimeout(function () {
         group = '###_ca_gcm';
       else if (document.querySelector('script[src*=".postmedia.digital/"], head > meta[content*=".postmedia.digital/"]'))
         group = '###_ca_postmedia';
-      else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]') && !matchDomain(['thecricketer.com']))
+      else if (document.querySelector('script[src*=".axate.io/"], script[src*=".agate.io/"]'))
         group = '###_uk_axate.io';
       else if (matchDomain(['businessgreen.com', 'internationalinvestment.net', 'professionaladviser.com', 'professionalpensions.com']))
         group = '###_uk_incisive_media';
