@@ -231,7 +231,7 @@ var defaultSites = {
   "Barron's (when blocked disable Googlebot in BPC-settings)": {
     domain: "barrons.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
   "BBC History Extra": {
@@ -2408,8 +2408,8 @@ var defaultSites = {
   "The Wall Street Journal": {
     domain: "wsj.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/,
-    useragent: "googlebot"
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
+    referer: "drudgereport"
   },
   "The Washington Post": {
     domain: "washingtonpost.com",

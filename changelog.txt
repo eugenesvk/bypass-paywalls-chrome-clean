@@ -4,9 +4,10 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Apollo Magazine
+Fix Barron's (amp-redirect)
 Fix Harvard Business Review (cookie)
 Fix Spectator.com.au
-Fix WSJ (non-pro; link to archive.is)
+Fix WSJ (hard refresh or non-pro; link to archive.is)
 
 * v3.3.9.0 (2023-10-22)
 Add Balkan Insight

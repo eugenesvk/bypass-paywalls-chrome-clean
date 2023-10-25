@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -118,6 +118,12 @@
     "domain": "christianitytoday.com",
     "useragent": "googlebot"
   },
+  "Churchtimes.co.uk": {
+    "allow_cookies": 1,
+    "block_js_inline": "\\.churchtimes\\.co\\.uk\\/articles\\/",
+    "domain": "churchtimes.co.uk",
+    "useragent": "googlebot"
+  },
   "Clareecho.ie": {
     "allow_cookies": 1,
     "block_regex": "\\.clareecho\\.ie\\/.+\\/flip-pay\\.js",
@@ -157,12 +163,6 @@
     "allow_cookies": 1,
     "domain": "diariodenavarra.es",
     "ld_json": "div#paywall_message|div.free-html"
-  },
-  "Die-glocke.de": {
-    "add_ext_link": "div.cardPw|div.mainContent",
-    "add_ext_link_type": "google_search_tool",
-    "allow_cookies": 1,
-    "domain": "die-glocke.de"
   },
   "Dn.se": {
     "add_ext_link": "div.esi-paywall|div.article__content",
@@ -222,6 +222,10 @@
     "allow_cookies": 1,
     "domain": "faithfullymagazine.com",
     "ld_json": "div.pmpro_content_message|div.content-inner"
+  },
+  "Farmersjournal.ie": {
+    "amp_redirect": "div#memberplusModal",
+    "domain": "farmersjournal.ie"
   },
   "Finansavisen.no": {
     "allow_cookies": 1,

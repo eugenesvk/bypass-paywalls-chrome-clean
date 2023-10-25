@@ -60,7 +60,7 @@ var remove_cookies_select_hold, remove_cookies_select_drop;
 // Set User-Agent
 var use_google_bot, use_bing_bot, use_facebook_bot;
 // Set Referer
-var use_facebook_referer, use_google_referer, use_twitter_referer;
+var use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer;
 // Set random IP-address
 var random_ip = {};
 var use_random_ip = [];
@@ -105,6 +105,7 @@ function initSetRules() {
   use_google_bot = [];
   use_bing_bot = [];
   use_facebook_bot = [];
+  use_drudgereport_referer = [];
   use_facebook_referer = [];
   use_google_referer = [];
   use_twitter_referer = [];
@@ -258,6 +259,10 @@ function addRules(domain, rule) {
   }
   if (rule.referer) {
     switch (rule.referer) {
+    case 'drudgereport':
+      if (!use_drudgereport_referer.includes(domain))
+        use_drudgereport_referer.push(domain);
+      break;
     case 'facebook':
       if (!use_facebook_referer.includes(domain))
         use_facebook_referer.push(domain);
@@ -404,7 +409,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -1022,6 +1027,8 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     if (requestHeader.name === 'Referer') {
       if (googlebotEnabled || matchUrlDomain(use_google_referer, details.url)) {
         requestHeader.value = 'https://www.google.com/';
+      } else if (matchUrlDomain(use_drudgereport_referer, details.url)) {
+        requestHeader.value = 'https://www.drudgereport.com/';
       } else if (matchUrlDomain(use_facebook_referer, details.url)) {
         requestHeader.value = 'https://www.facebook.com/';
       } else if (matchUrlDomain(use_twitter_referer, details.url)) {
@@ -1041,6 +1048,11 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.google.com/'
+      });
+    } else if (matchUrlDomain(use_drudgereport_referer, details.url)) {
+      requestHeaders.push({
+        name: 'Referer',
+        value: 'https://www.drudgereport.com/'
       });
     } else if (matchUrlDomain(use_facebook_referer, details.url)) {
       requestHeaders.push({

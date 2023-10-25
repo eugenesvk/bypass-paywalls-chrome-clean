@@ -3461,17 +3461,12 @@ else if (matchDomain('barandbench.com')) {
 else if (matchDomain('barrons.com')) {
   let url = window.location.href;
   if (!url.includes('barrons.com/amp/')) {
-    let body_continuous = document.querySelector('body.is-continuous');
-    let snippet = document.querySelector('head > meta[content="snippet"]');
-    if (body_continuous && snippet) {
-      removeDOMElement(snippet);
-      window.location.href = url.replace('barrons.com', 'barrons.com/amp');
-    }
+    amp_redirect('div#cx-interstitial-snippet', '', '/amp' + window.location.pathname);
     let continue_buttons = document.querySelectorAll('button.snippet__buttons--continue');
     for (let elem of continue_buttons)
       elem.addEventListener('click', function () { window.location.reload(); });
-    let barrons_ads = document.querySelectorAll('.barrons-body-ad-placement');
-    hideDOMElement(...barrons_ads);
+    let ads = document.querySelectorAll('div[class*="_AdWrapper-"], div[class*="-adWrapper-"]');
+    hideDOMElement(...ads);
   } else {
     amp_unhide_subscr_section('.wsj-ad, amp-ad');
   }
@@ -5424,6 +5419,8 @@ else if (matchDomain('wsj.com')) {
                 article.firstChild.before(googleSearchToolLink(window.location.href));
               else
                 article.firstChild.before(archiveLink(window.location.href));
+              if (!mobile)
+                header_nofix(document.querySelector('div#bpc_archive'), 'BPC > hard refresh page (for Windows: Ctrl + Enter in address bar) or use link below');
             }
           }
         }
