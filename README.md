@@ -535,8 +535,7 @@ Grouped in options:\
 [Le Dauphiné Libéré](https://www.ledauphine.com) -
 [Le Journal de Saône-et-Loire](https://www.lejsl.com) -
 [Le Progrès](https://www.leprogres.fr) -
-[Le Républicain Lorrain](https://www.republicain-lorrain.fr) -
-[Vosges Matin](https://www.vosgesmatin.fr)\
+[Le Républicain Lorrain](https://www.republicain-lorrain.fr)\
 *Groupe IPM* sites like\
 [DH Les Sports+](https://www.dhnet.be) -
 [L'Avenir](https://www.lavenir.net) -

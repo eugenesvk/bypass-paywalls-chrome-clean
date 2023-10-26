@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove CodeSports.com.au (fix obsolete)
+Remove VosgesMatin.fr (fix obsolete)
 Fix Apollo Magazine
 Fix Barron's (amp-redirect)
 Fix Harvard Business Review (cookie)
