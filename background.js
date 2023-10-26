@@ -730,7 +730,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // Australia News Corp redirect subscribe to amp
-var au_news_corp_no_amp_fix = ['codesports.com.au'];
+var au_news_corp_no_amp_fix = [];
 var au_news_corp_subscr = au_news_corp_domains.filter(domain => !au_news_corp_no_amp_fix.includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {

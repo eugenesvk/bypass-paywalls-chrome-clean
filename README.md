@@ -838,7 +838,6 @@ Grouped in options:\
 Grouped in options:\
 *Australia News Corp* sites like\
 [Cairns Post](https://www.cairnspost.com.au) -
-[Code Sports](https://www.codesports.com.au) -
 [Geelong Advertiser](https://www.geelongadvertiser.com.au) -
 [Gold Coast Bulletin](https://www.goldcoastbulletin.com.au) -
 [Herald Sun](https://www.heraldsun.com.au) -

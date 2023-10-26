@@ -115,7 +115,6 @@ var defaultSites = {
     group: [
       "adelaidenow.com.au",
       "cairnspost.com.au",
-      "codesports.com.au",
       "couriermail.com.au",
       "dailytelegraph.com.au",
       "geelongadvertiser.com.au",
@@ -134,11 +133,6 @@ var defaultSites = {
     exception: [{
         domain: "cairnspost.com.au",
         allow_cookies: 1,
-        block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
-      }, {
-        domain: "codesports.com.au",
-        allow_cookies: 1,
-        block_js_inline: /\.codesports\.com\.au\/.+\/news-story\//,
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }, {
         domain: "geelongadvertiser.com.au",
