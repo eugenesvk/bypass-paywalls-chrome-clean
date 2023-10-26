@@ -2217,12 +2217,12 @@ var defaultSites = {
   "The Hindu": {
     domain: "thehindu.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/xbuilder\/experience\/execute|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "The Hindu BusinessLine": {
     domain: "thehindubusinessline.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/xbuilder\/experience\/execute|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "The Independent": {
     domain: "independent.co.uk",

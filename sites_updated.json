@@ -101,6 +101,18 @@
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
   },
+  "The Hindu": {
+    "domain": "thehindu.com",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.3.9.5"
+  },
+  "The Hindu BusinessLine": {
+    "domain": "thehindubusinessline.com",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.3.9.5"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,
