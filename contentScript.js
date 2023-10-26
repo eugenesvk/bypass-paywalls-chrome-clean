@@ -767,38 +767,34 @@ else if (matchDomain('faz.net')) {
             response.text().then(html => {
               let parser = new DOMParser();
               let doc = parser.parseFromString(html, 'text/html');
-              let json = doc.querySelector('script[id="schemaOrgJson"]');
-              if (json) {
-                let json_text = json.text.replace(/(\r|\n)/g, '');
+              let json_script = doc.querySelector('script[id="schemaOrgJson"]');
+              if (json_script) {
+                let json_text;
                 try {
-                  let split1 = json_text.split('"ArticleBody": "');
-                  let split2 = split1[1].split('","author":');
-                  if (split2[0].includes('"'))
-                    json_text = split1[0] + '"ArticleBody": "' + split2[0].replace(/(\\)?"/g, "'") + '","author":' + split2[1];
-                  json_text = JSON.parse(json_text).ArticleBody;
+                  let json = JSON.parse(json_script.text.replace(/(\r|\n)/g, ''));
+                  json_text = json.articleBody;
                 } catch (err) {
                   console.log(err);
                   return;
                 }
-                if (json_text) {
-                  let article_text = document.querySelector('div.art_txt.paywall, div.atc-Text.js-atc-Text');
-                  if (article_text) {
-                    article_text.innerText = '';
-                    json_text = breakText(json_text);
-                    json_text.split("\n\n").forEach(
-                      (p_text) => {
-                      let elem;
-                      if (p_text.length < 80) {
-                        elem = document.createElement("h2");
-                        elem.setAttribute('class', 'atc-SubHeadline');
-                      } else {
-                        elem = document.createElement("p");
-                        elem.setAttribute('class', 'atc-TextParagraph');
-                      };
-                      elem.innerText = p_text;
-                      article_text.appendChild(elem);
-                    });
-                  }
+                let article_text = document.querySelector('div.art_txt.paywall, div.atc-Text.js-atc-Text');
+                if (json_text && article_text) {
+                  let pars = article_text.querySelectorAll('p.atc-TextParagraph');
+                  removeDOMElement(...pars);
+                  json_text = breakText(json_text);
+                  json_text.split("\n\n").forEach(
+                    (p_text) => {
+                    let elem;
+                    if (p_text.length < 80) {
+                      elem = document.createElement("h2");
+                      elem.setAttribute('class', 'atc-SubHeadline');
+                    } else {
+                      elem = document.createElement("p");
+                      elem.setAttribute('class', 'atc-TextParagraph');
+                    };
+                    elem.innerText = p_text;
+                    article_text.appendChild(elem);
+                  });
                 } else {
                   let json_script = getArticleJsonScript();
                   if (json_script) {

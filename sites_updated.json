@@ -43,6 +43,12 @@
     "block_regex": "(\\.estadao\\.com\\.br\\/(paywall\\/|access\\.js)|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "upd_version": "3.3.7.4"
   },
+  "Frankfurter Allgemeine Zeitung": {
+    "domain": "faz.net",
+    "allow_cookies": 1,
+    "ld_json": "header.atc-Header span.ico-Base_FazPlus|div.atc-Text.js-atc-Text",
+    "upd_version": "3.3.9.6"
+  },
   "Harvard Business Review": {
     "domain": "hbr.org",
     "block_regex": "cdn\\.cxense\\.com\\/",

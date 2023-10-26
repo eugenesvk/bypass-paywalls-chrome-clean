@@ -7,6 +7,7 @@ Remove CodeSports.com.au (fix obsolete)
 Remove VosgesMatin.fr (fix obsolete)
 Fix Apollo Magazine
 Fix Barron's (amp-redirect)
+Fix Faz.net (json)
 Fix Harvard Business Review (cookie)
 Fix Spectator.com.au
 Fix The Hindu (+ BusinessLine) epaper
