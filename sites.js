@@ -672,7 +672,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.ftm\.(nl|eu)\/js\/routing\?/
   },
-  "Forbes": {
+  "Forbes (not newsletters)": {
     domain: "forbes.com",
     allow_cookies: 1,
     block_regex: /(\.forbes\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
@@ -1462,7 +1462,7 @@ var defaultSites = {
       "thestate.com",
       "tri-cityherald.com"
     ],
-    block_regex: "(\\.{domain}\\/script\\.js|js\\.matheranalytics\\.com|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)"
+    block_regex: /(\.amplitude\.com\/|js\.matheranalytics\.com|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Media Group Westfalen": {
     domain: "###_de_mgw",
@@ -2576,6 +2576,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /cdn\.ampproject\.org\/.+\/amp-(access|(.+-)?ad|analytics|fx-flying-carpet|subscriptions)-.+\.(m)?js/,
     excluded_domains: ["cambridge.org", "cmjornal.pt"]
+  },
+  "Amplitude": {
+    domain: "amplitude.com",
+    allow_cookies: 1,
+    block_regex_general: /\.amplitude\.com\//,
+    excluded_domains: ["amplitude.com"]
   },
   "Axate.io": {
     domain: "###_uk_axate.io",

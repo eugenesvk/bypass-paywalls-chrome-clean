@@ -1,4 +1,11 @@
 {
+  "Amplitude": {
+    "domain": "amplitude.com",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.amplitude\\.com\\/",
+    "excluded_domains": ["amplitude.com"],
+    "upd_version": "3.3.9.7"
+  },
   "Apollo Magazine": {
     "domain": "apollo-magazine.com",
     "upd_version": "3.3.9.3"

@@ -9,9 +9,11 @@ Fix Apollo Magazine
 Fix Barron's (amp-redirect)
 Fix Faz.net (json)
 Fix Harvard Business Review (cookie)
+Fix McClatchy Group (js)
 Fix Spectator.com.au
 Fix The Hindu (+ BusinessLine) epaper
 Fix WSJ (hard refresh or non-pro; link to archive.is)
+Update block general paywall script (Amplitude)
 
 * v3.3.9.0 (2023-10-22)
 Add Balkan Insight
