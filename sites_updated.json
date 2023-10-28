@@ -53,7 +53,7 @@
   "Frankfurter Allgemeine Zeitung": {
     "domain": "faz.net",
     "allow_cookies": 1,
-    "ld_json": "header.atc-Header span.ico-Base_FazPlus|div.atc-Text.js-atc-Text",
+    "ld_json": "header.atc-Header span.ico-Base_FazPlus, div.art_topic > img.plus-icon|div.atc-Text.js-atc-Text",
     "upd_version": "3.3.9.6"
   },
   "Harvard Business Review": {

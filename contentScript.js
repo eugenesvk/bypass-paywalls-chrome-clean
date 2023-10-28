@@ -2518,7 +2518,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > lin
   hideDOMElement(...ads);
 }
 
-else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {
+else if (matchDomain(nl_dpg_adr_domains)) {
   let url = window.location.href;
   let paywall = document.querySelector('div#remaining-paid-content');
   if (paywall) {
