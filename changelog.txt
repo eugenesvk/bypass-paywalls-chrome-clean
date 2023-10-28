@@ -6,6 +6,7 @@ Post-release
 Remove CodeSports.com.au (fix obsolete)
 Remove Hln.be (fix obsolete)
 Remove VosgesMatin.fr (fix obsolete)
+Fix Albuquerque Journal (css)
 Fix Apollo Magazine
 Fix Barron's (amp-redirect)
 Fix Faz.net (json)

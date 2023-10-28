@@ -5453,7 +5453,7 @@ else if (matchDomain(usa_gannett_domains) || document.querySelector('img[srcset^
     window.location.href = decodeURIComponent(window.location.href.split('?return=')[1]);
 }
 
-else if ((domain = matchDomain(usa_lee_ent_domains)) || matchDomain(ca_torstar_domains) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {
+else if ((domain = matchDomain(usa_lee_ent_domains)) || matchDomain(ca_torstar_domains.concat(['abqjournal.com'])) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {
   if (window.location.pathname.endsWith('.amp.html')) {
     amp_unhide_access_hide('="hasAccess"', '="NOT hasAccess"', 'amp-ad, amp-embed, .amp-ads-container');
     let elem_hidden = document.querySelectorAll('html[class], body[class]');

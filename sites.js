@@ -27,7 +27,8 @@ var defaultSites = {
   "Albuquerque Journal": {
     domain: "abqjournal.com",
     allow_cookies: 1,
-    block_regex: /\.abqjournal\.com\/.+\/abq-pw-manager\.js/
+    block_regex: /\.abqjournal\.com\/.+\/tncms\/api\/access\.js/,
+    cs_dompurify: 1
   },
   "Algemeen Dagblad (+ regional; link to archive.is)": {
     domain: "###_nl_dpg_adr",
