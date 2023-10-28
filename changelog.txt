@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add CartaCapital.com.br
 Remove CodeSports.com.au (fix obsolete)
 Remove FnLondon.com (fix obsolete)
 Remove Hln.be (fix obsolete)

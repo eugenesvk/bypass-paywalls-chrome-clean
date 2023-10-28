@@ -927,6 +927,7 @@ Grouped in options:\
 [Los Andes](https://www.losandes.com.ar)
 
 ##### Brazil
+[CartaCapital](https://www.cartacapital.com.br) -
 [Crusoé](https://crusoe.com.br) -
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -

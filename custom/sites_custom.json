@@ -569,6 +569,11 @@
   "Quickmath.com": {
     "domain": "quickmath.com"
   },
+  "Racketmn.com (refresh)": {
+    "allow_cookies": 1,
+    "domain": "racketmn.com",
+    "ld_google_webcache": "div[class^='ContentGate_']|div[class^='PostContent_']"
+  },
   "Rawstory.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

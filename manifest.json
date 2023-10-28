@@ -135,6 +135,7 @@
     "*://*.cambiocolombia.com/*",
     "*://*.canberratimes.com.au/*",
     "*://*.capitalgazette.com/*",
+    "*://*.cartacapital.com.br/*",
     "*://*.causeur.fr/*",
     "*://*.cen.acs.org/*",
     "*://*.centralwesterndaily.com.au/*",
@@ -804,5 +805,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.3.9.7"
+  "version": "3.3.9.8"
 }

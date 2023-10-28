@@ -51,6 +51,12 @@
     "cs_dompurify": 1,
     "upd_version": "3.3.7.3"
   },
+  "CartaCapital": {
+    "domain": "cartacapital.com.br",
+    "allow_cookies": 1,
+    "ld_json": "aside.paywall|section.s-content__text|1",
+    "upd_version": "3.3.9.8"
+  },
   "O Estado de S. Paulo": {
     "domain": "estadao.com.br",
     "allow_cookies": 1,
