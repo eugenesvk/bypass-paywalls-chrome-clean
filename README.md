@@ -433,7 +433,6 @@ Grouped in options:\
 [Business Post](https://www.businesspost.ie) -
 [Citywire](https://www.citywire.com) -
 [Evening Standard](https://www.standard.co.uk) -
-[Financial News](https://www.fnlondon.com) -
 [Financial Times](https://www.ft.com) -
 [Granta Magazine](https://granta.com) -
 [iNews](https://inews.co.uk) -
