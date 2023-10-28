@@ -489,6 +489,7 @@ Grouped in options:\
 [Charlie Hebdo](https://charliehebdo.fr) -
 [Ciel & espace](https://www.cieletespace.fr) -
 [Connaissance des Arts](https://www.connaissancedesarts.com) -
+[Cosmopolitan](https://www.cosmopolitan.fr) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
 [Franc-Tireur](https://www.franc-tireur.fr) -

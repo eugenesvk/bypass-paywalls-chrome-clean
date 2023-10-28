@@ -57,6 +57,12 @@
     "ld_json": "aside.paywall|section.s-content__text|1",
     "upd_version": "3.3.9.8"
   },
+  "Cosmopolitan.fr": {
+    "domain": "cosmopolitan.fr",
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\/",
+    "upd_version": "3.3.9.8"
+  },
   "O Estado de S. Paulo": {
     "domain": "estadao.com.br",
     "allow_cookies": 1,

@@ -416,6 +416,11 @@ var defaultSites = {
     domain: "corrieredellosport.it",
     remove_cookies_select_drop: ["paywall_articles"]
   },
+  "Cosmopolitan.fr": {
+    domain: "cosmopolitan.fr",
+    allow_cookies: 1,
+    block_regex: /\.qiota\.com\//
+  },
   "Crain Communications": {
     domain: "###_usa_craincomm",
     group: [

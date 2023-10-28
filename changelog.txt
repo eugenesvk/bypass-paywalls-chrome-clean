@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add CartaCapital.com.br
+Add Cosmopolitan.fr
 Remove CodeSports.com.au (fix obsolete)
 Remove FnLondon.com (fix obsolete)
 Remove Hln.be (fix obsolete)
