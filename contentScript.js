@@ -2682,7 +2682,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['apollo-magazine.com', 'citywire.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
+} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk'])) || matchDomain(['apollo-magazine.com', 'citywire.com', 'fnlondon.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
 
 if (matchDomain('apollo-magazine.com')) {
   let banner = document.querySelector('#subscribe-ribbon');
@@ -2840,6 +2840,11 @@ else if (matchDomain('citywire.com')) {
     if (article)
       removeDOMElement(article.nextSibling);
   }, 1000);
+}
+
+else if (matchDomain('fnlondon.com')) {
+  let signin = document.querySelector('div[data-testid="articleSignInSubscribeWrapper"]');
+  removeDOMElement(signin);
 }
 
 else if (matchDomain('ft.com')) {
