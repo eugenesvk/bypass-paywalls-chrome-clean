@@ -81,6 +81,13 @@
     "ld_json": "header.atc-Header span.ico-Base_FazPlus, div.art_topic > img.plus-icon|div.atc-Text.js-atc-Text",
     "upd_version": "3.3.9.6"
   },
+  "GaúchaZH": {
+    "domain": "gauchazh.clicrbs.com.br",
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/api\\/tinypass\\.min\\.js|\\.clicrbs\\.com\\.br\\/paywall-api\\/count\\/)",
+    "cs_block": 1,
+    "upd_version": "3.3.9.8"
+  },
   "Harvard Business Review": {
     "domain": "hbr.org",
     "block_regex": "cdn\\.cxense\\.com\\/",

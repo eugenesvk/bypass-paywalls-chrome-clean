@@ -13,6 +13,7 @@ Fix Apollo Magazine
 Fix Barron's (amp-redirect)
 Fix Faz.net (json)
 Fix Financial News (London)
+Fix GauchaZH (timing refresh)
 Fix Harvard Business Review (cookie)
 Fix McClatchy Group (js)
 Fix Spectator.com.au
