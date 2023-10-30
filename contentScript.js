@@ -195,8 +195,8 @@ if (bg2csData.add_ext_link) {
           case 'archive.is':
             article.firstChild.before(archiveLink(url));
             break;
-          case '12ft.io':
-            article.firstChild.before(ext_12ftLink(url));
+          case '1ft.io':
+            article.firstChild.before(nftLink(url));
             break;
           case 'google_webcache':
             article.firstChild.before(googleWebcacheLink(url));
@@ -5848,8 +5848,8 @@ function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test ur
   return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 
-function ext_12ftLink(url, text_fail = 'BPC > Try for full article text:\r\n') {
-  return externalLink(['12ft.io'], 'https://{domain}/{url}', url, text_fail);
+function nftLink(url, text_fail = 'BPC > Full article text:\r\n') {
+  return externalLink(['1ft.io'], 'https://{domain}/{url}', url, text_fail);
 }
 
 function freediumLink(url, text_fail = 'BPC > Try for full article text:\r\n') {

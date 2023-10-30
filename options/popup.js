@@ -89,7 +89,7 @@ function showArchiveLinks() {
         'Archive.today': 'https://archive.today?run=1&url=' + url_enc,
         'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url_enc,
         'Clearthis.page': 'https://clearthis.page?u=' + url,
-        '12ft.io': 'https://12ft.io/' + url,
+        '1ft.io': 'https://1ft.io/' + url,
         'Google Search Tool\n(use online html-viewer - no fix)': 'https://search.google.com/test/rich-results?url=' + url_enc
       };
       let archive_id = document.querySelector('span#archive');
@@ -99,7 +99,7 @@ function showArchiveLinks() {
           let elem_div = document.createElement('div');
           let elem = document.createElement('a');
           elem.innerText = key;
-          if (!(matchDomain(['12ft.io', 'clearthis.page', 'google.com', 'googleusercontent.com'], hostname) || hostname.match(/^archive\.\w{2}$/))) {
+          if (!(matchDomain(['1ft.io', 'clearthis.page', 'google.com', 'googleusercontent.com'], hostname) || hostname.match(/^archive\.\w{2}$/))) {
             elem.href = archive_array[key];
             elem.target = '_blank';
             elem_div.appendChild(elem);

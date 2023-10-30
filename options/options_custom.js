@@ -9,7 +9,7 @@ var custom_switch = ((manifestData.optional_permissions && manifestData.optional
 var useragent_options = ['', 'googlebot', 'bingbot', 'facebookbot'];
 var referer_options = ['', 'facebook', 'google', 'twitter'];
 var random_ip_options = ['', 'all', 'eu'];
-var add_ext_link_type_options = ['', 'archive.is', '12ft.io', 'google_webcache', 'google_search_tool'];
+var add_ext_link_type_options = ['', 'archive.is', '1ft.io', 'google_webcache', 'google_search_tool'];
 
 function capitalize(str) {
   return (typeof str === 'string') ? str.charAt(0).toUpperCase() + str.slice(1) : '';
