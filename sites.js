@@ -2407,7 +2407,8 @@ var defaultSites = {
     domain: "wsj.com",
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
-    referer: "drudgereport"
+    referer: "drudgereport",
+    useragent: "googlebot"
   },
   "The Washington Post": {
     domain: "washingtonpost.com",

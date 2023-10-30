@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix WSJ (Googlebot for cn/jp subdomain)
 Update custom sites (link to 1ft.io)
 
 * v3.4.0.0 (2023-10-29)
