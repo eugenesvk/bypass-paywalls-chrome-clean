@@ -44,13 +44,6 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "Business Post.ie": {
-    "domain": "businesspost.ie",
-    "allow_cookies": 1,
-    "block_regex": "\\.businesspost\\.ie\\/api\\/tinypass\\.min\\.js",
-    "cs_dompurify": 1,
-    "upd_version": "3.3.7.3"
-  },
   "CartaCapital": {
     "domain": "cartacapital.com.br",
     "allow_cookies": 1,
@@ -62,12 +55,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com\/",
     "upd_version": "3.3.9.8"
-  },
-  "O Estado de S. Paulo": {
-    "domain": "estadao.com.br",
-    "allow_cookies": 1,
-    "block_regex": "(\\.estadao\\.com\\.br\\/(paywall\\/|access\\.js)|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "upd_version": "3.3.7.4"
   },
   "Financial News (London)": {
     "domain": "fnlondon.com",
@@ -106,25 +93,6 @@
     "block_js_inline": "\\.journalde.+\\.com\\/",
     "upd_version": "3.3.8.5"
   },
-  "Le Point": {
-    "domain": "lepoint.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.poool\\.fr",
-    "ld_google_webcache": "aside.paywall|div#contenu",
-    "upd_version": "3.3.7.8"
-  },
-  "Mitteldeutsche Zeitung": {
-    "domain": "mz.de",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div.fp-paywall|div[data-t-name='Article']",
-    "upd_version": "3.3.7.5"
-  },
-  "NyTeknik": {
-    "domain": "nyteknik.se",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.3.7.2"
-  },
   "The Baffler": {
     "domain": "thebaffler.com",
     "allow_cookies": 1,
@@ -150,6 +118,12 @@
     "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "upd_version": "3.3.9.5"
   },
+  "The Impression": {
+    "domain": "theimpression.com",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div#modalpostsubscribe\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.blureffect\", \"rm_class\":\"blureffect\"}]}]",
+    "upd_version": "3.4.0.2"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,
@@ -161,18 +135,5 @@
     "domain": "spectator.com.au",
     "useragent": "googlebot",
     "upd_version": "3.3.9.3"
-  },
-  "UnHerd": {
-    "domain": "unherd.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io",
-    "cs_code": "[{\"cond\":\"div#premiumpreview\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div#premiumcontent\", \"rm_attrib\":\"id\"}]}]",
-    "upd_version": "3.3.7.6"
-  },
-  "Volksstimme": {
-    "domain": "volksstimme.de",
-    "allow_cookies": 1,
-    "ld_google_webcache": "div.fp-paywall|div[data-t-name='Article']",
-    "upd_version": "3.3.7.5"
   }
 }

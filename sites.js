@@ -2222,6 +2222,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|\.piano\.io\/xbuilder\/experience\/execute|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
+  "The Impression": {
+    "domain": "theimpression.com",
+    "allow_cookies": 1
+  },
   "The Independent": {
     domain: "independent.co.uk",
     allow_cookies: 1,

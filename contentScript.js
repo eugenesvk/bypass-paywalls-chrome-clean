@@ -4927,6 +4927,15 @@ else if (matchDomain(['thehindu.com', 'thehindubusinessline.com'])) {
   insert_script(hindu_main);
 }
 
+else if (matchDomain('theimpression.com')) {
+  let paywall = document.querySelector('div#modalpostsubscribe');
+  if (paywall) {
+    let blureffect = document.querySelectorAll('div.blureffect');
+    for (let elem of blureffect)
+      elem.classList.remove('blureffect');
+  }
+}
+
 else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
   let paywall = pageContains('div.font-mono', /\Read this article and many more by subscribing today/);
   if (paywall.length) {

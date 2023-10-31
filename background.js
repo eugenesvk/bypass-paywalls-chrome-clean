@@ -487,9 +487,8 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_au_nine_ent', '###_uk_delinian'];
-          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain))) ||
-            (!enabledSites.includes('###_usa_craincomm') && enabledSites.includes('###_usa_genomeweb'));
+          let new_groups = [];
+          let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();
         }
