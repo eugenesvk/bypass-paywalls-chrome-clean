@@ -4,7 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add The Impression
-Fix WSJ (Googlebot for cn/jp subdomain)
+Fix WSJ (mobile & Googlebot for cn/jp subdomain)
 Update custom sites (link to 1ft.io)
 
 * v3.4.0.0 (2023-10-29)

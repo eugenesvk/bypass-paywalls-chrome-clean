@@ -5404,6 +5404,8 @@ else if (matchDomain('winnipegfreepress.com')) {
 }
 
 else if (matchDomain('wsj.com')) {
+  if (matchDomain('www.wsj.com'))
+    blockJsReferrer();
   if (window.location.pathname.startsWith('/livecoverage/')) {
     window.setTimeout(function () {
       let paywall = document.querySelector('div#cx-lc-snippet');
@@ -5412,14 +5414,10 @@ else if (matchDomain('wsj.com')) {
         removeDOMElement(paywall);
         if (amphtml) {
           amp_redirect_not_loop(amphtml);
-        } else if (window.location.pathname.includes('/card/')) {
-          let article = document.querySelector('div > div[class*="-ParagraphContainer"]');
-          if (article) {
-            let weblink = document.createElement('a');
-            weblink.href = window.location.href.split('/card/')[0];
-            weblink.innerText = 'BPC > full text in feed';
-            article.parentNode.firstChild.before(weblink);
-          }
+        } else {
+          let fade = document.querySelectorAll('div[class*="-CardWrapper"]');
+          for (let elem of fade)
+            elem.removeAttribute('class');
         }
       }
     }, 1000);
@@ -5445,12 +5443,15 @@ else if (matchDomain('wsj.com')) {
             let wsj_pro = snippet.querySelector('a[href^="https://wsjpro.com/"]');
             let article = document.querySelector('article');
             if (article) {
-              if (wsj_pro)
-                article.firstChild.before(googleSearchToolLink(window.location.href));
-              else
-                article.firstChild.before(archiveLink(window.location.href));
-              if (!mobile)
-                header_nofix(document.querySelector('div#bpc_archive'), 'BPC > hard refresh page (for Windows: Ctrl + Enter in address bar) or use link below');
+              window.setTimeout(function () {
+                if (wsj_pro) {
+                  article.firstChild.before(googleSearchToolLink(window.location.href));
+                  article.firstChild.before(archiveLink(window.location.href, 'BPC > Try for full article text (articles before 2023-10-28)'));
+                } else
+                  article.firstChild.before(archiveLink(window.location.href));
+              }, 500);
+              csDoneOnce = true;
+              waitDOMElement('div.paywall', 'DIV', node => hideDOMElement(...document.querySelectorAll('div#bpc_archive')), false);
             }
           }
         }
@@ -5674,6 +5675,15 @@ function header_nofix(header, msg = 'BPC > no fix') {
     nofix_div.setAttribute('style', 'margin: 20px; font-size: 20px; font-weight: bold; color: red;');
     nofix_div.innerText = msg;
     header.before(nofix_div);
+  }
+}
+
+function blockJsReferrer() {
+  if (document.head && !document.querySelector('head > meta[name="referrer"][content="no-referrer"]')) {
+    var meta = document.createElement('meta');
+    meta.name = "referrer";
+    meta.content = "no-referrer";
+    document.head.appendChild(meta);
   }
 }
 
