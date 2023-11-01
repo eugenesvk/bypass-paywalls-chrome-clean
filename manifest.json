@@ -404,11 +404,13 @@
     "*://*.lecourrierdesstrateges.fr/*",
     "*://*.ledauphine.com/*",
     "*://*.ledevoir.com/*",
+    "*://*.lefigaro.fr/*",
     "*://*.legrandcontinent.eu/*",
     "*://*.lehighvalleylive.com/*",
     "*://*.lejdd.fr/*",
     "*://*.lejsl.com/*",
     "*://*.lemagit.fr/*",
+    "*://*.lemonde.fr/*",
     "*://*.lenouveleconomiste.fr/*",
     "*://*.lenouvelliste.ch/*",
     "*://*.leparisien.fr/*",
@@ -808,5 +810,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.0.3"
+  "version": "3.4.0.4"
 }

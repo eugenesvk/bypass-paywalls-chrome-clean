@@ -1768,6 +1768,17 @@ else if (matchDomain('lecourrierdesstrateges.fr')) {
   }, 500);
 }
 
+else if (matchDomain('lefigaro.fr')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#fig-premium-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.fig-content-body');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+}
+
 else if (matchDomain('legrandcontinent.eu')) {
   let paywall = document.querySelector('body.paywall, body.pw, body.softwall');
   if (paywall)
@@ -1785,6 +1796,20 @@ else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
   if (bottom_hide) {
     bottom_hide.removeAttribute('data-poool-mode');
     bottom_hide.removeAttribute('style');
+  }
+}
+
+else if (matchDomain('lemonde.fr')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('section.paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+    let hide = document.querySelector('section.article__content--restricted-media');
+    if (hide)
+      hide.classList.remove('article__content--restricted-media');
   }
 }
 

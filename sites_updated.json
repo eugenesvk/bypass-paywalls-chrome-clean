@@ -81,6 +81,13 @@
     "remove_cookies_select_drop": ["xbc"],
     "upd_version": "3.3.9.1"
   },
+  "Le Figaro (link to archive.is)": {
+    "domain": "lefigaro.fr",
+    "allow_cookies": 1,
+    "add_ext_link": "div#fig-premium-paywall|div.fig-content-body",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.0.4"
+  },
   "Le Journal de Montréal": {
     "domain": "journaldemontreal.com",
     "allow_cookies": 1,
@@ -92,6 +99,14 @@
     "allow_cookies": 1,
     "block_js_inline": "\\.journalde.+\\.com\\/",
     "upd_version": "3.3.8.5"
+  },
+  "Le Monde (link to archive.is)": {
+    "domain": "lemonde.fr",
+    "allow_cookies": 1,
+    "add_ext_link": "section.paywall|article",
+    "add_ext_link_type": "archive.is",
+    "cs_code": "[{\"cond\":\"section.article__content--restricted-media\", \"rm_class\":\"article__content--restricted-media\"}]",
+    "upd_version": "3.4.0.4"
   },
   "The Baffler": {
     "domain": "thebaffler.com",

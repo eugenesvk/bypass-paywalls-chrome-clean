@@ -346,18 +346,6 @@
     "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
     "domain": "lasvegasadvisor.com"
   },
-  "Lefigaro.fr": {
-    "add_ext_link": "div#fig-premium-paywall|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "lefigaro.fr"
-  },
-  "Lemonde.fr": {
-    "add_ext_link": "section.paywall|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "lemonde.fr"
-  },
   "Libraryjournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
