@@ -56,6 +56,14 @@
     "block_regex": "\\.qiota\\.com\/",
     "upd_version": "3.3.9.8"
   },
+  "El País": {
+    "domain": "elpais.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.elpais\\.com\\/.+\\.html",
+    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div.a_b_wall\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.4.0.5"
+  },
   "Financial News (London)": {
     "domain": "fnlondon.com",
     "allow_cookies": 1,
@@ -107,6 +115,15 @@
     "add_ext_link_type": "archive.is",
     "cs_code": "[{\"cond\":\"section.article__content--restricted-media\", \"rm_class\":\"article__content--restricted-media\"}]",
     "upd_version": "3.4.0.4"
+  },
+  "Süddeutsche Zeitung (link to archive.is)": {
+    "domain": "sueddeutsche.de",
+    "allow_cookies": 1,
+    "add_ext_link": "div#sz-paywall|div.article-content,div.text",
+    "add_ext_link_type": "archive.is",
+    "block_regex": "\\.sueddeutsche\\.de\\/api\\/tinypass\\.min\\.js",
+    "cs_code": "[{\"cond\":\"p.sz-article-body__paragraph--reduced\", \"rm_class\":\"sz-article-body__paragraph--reduced\"}]",
+    "upd_version": "3.4.0.5"
   },
   "The Baffler": {
     "domain": "thebaffler.com",

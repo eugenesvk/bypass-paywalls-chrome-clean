@@ -31,7 +31,7 @@ PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addon
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder.
 
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you added yourself (or click *clear cookies* (BPC-icon) to ask for permission for current site).\
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you've added yourself (or click *clear cookies* (BPC-icon) to ask for host permission for current site).\
 You can also install the custom add-on version (with host permissions for all sites).
 
 ### Update
@@ -66,7 +66,7 @@ Use adblocker with custom (content)filter & userscript (manager): https://gitlab
 ### Troubleshooting
 * If a site doesn't work, first try to turn off your adblocker (or other extension) and refresh page.
 * Make sure the (new) site is checked under Options.
-* Clear cookies by add-on's icon and grant permission for site (or opt-in to custom sites)
+* Clear cookies by add-on's icon and grant host permission for site (or opt-in to custom sites)
 * You will be logged out for some of the sites you have enabled.
 * Make sure you're running the latest version of Bypass Paywalls Clean.
 * Some sites need to redirect to an amp-page (this may cause a redirect-loop by an amp-to-html add-on or browser setting).
@@ -609,6 +609,7 @@ Grouped in options:\
 [Salzburger Nachrichten](https://www.sn.at) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
+[Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
 [Volksstimme](https://www.volksstimme.de) -
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
@@ -973,7 +974,7 @@ _* free articles only._
 
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
-Click on the BPC-icon and then *clear cookies*-button in the popup (for unsupported sites grant permission for domain).  
+Click on the BPC-icon and then *clear cookies*-button in the popup (for unsupported sites grant host permission for domain).  
 If removing the cookies works you can also add the site as a custom site.
 
 ### New site requests
@@ -981,16 +982,18 @@ You can [submit a request for a new website](https://gitlab.com/magnolia1234/byp
 Please use the issue template (check READ FIRST issue), read the following instructions and share your results for a quicker process.  
 Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/issues?scope=all&state=all) before asking for a new website.  
 1. Open incognito window and search for article in Google search (or webcache).
-2. Clear cookies for the site (by this add-on: opt-in to custom sites or grant permission for the site; also enables blocking of general paywall scripts).
+2. Clear cookies for the site (by this add-on: opt-in to custom sites or grant host permission for the site; also enables blocking of general paywall scripts).
 3. Disable Javascript on the site (by browser, uBlock Origin or other add-on).
 4. Add the domain as custom site for more bypass options.
 5. Open page in reader view (by browser or add-on).
-6. Try one of the archive sites (for Google Search Tool test url & copy html (tab) code to https://codebeautify.org/htmlviewer).
+6. Try one of the archive sites:
+* archive.is/today will not work with Secured DNS by Cloudflare (or when you change referer/user-agent for the archive site)
+* for Google Search Tool test url & copy html (tab) code to https://codebeautify.org/htmlviewer
 
 ### Add custom site
 Add your own custom site (also for testing).  
 Check 'Options'-link in popup-menu and go to custom sites.
-\* by default BPC has limited permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you added yourself (or *clear cookies* (BPC-icon) to ask for permission for current site).
+\* by default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you added yourself (or *clear cookies* (BPC-icon) to ask for host permission for current site).
 
 By default sites' cookies/local storage are blocked/removed (for example to bypass article limit when metered paywall).
 

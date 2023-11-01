@@ -1137,6 +1137,22 @@ else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 's
   removeDOMElement(banner);
 }
 
+else if (matchDomain('sueddeutsche.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#sz-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article-content, div.text');
+    if (article)
+      article.firstChild.before(archiveLink(url), article.firstChild);
+    let reduced = document.querySelector('p.sz-article-body__paragraph--reduced');
+    if (reduced)
+      reduced.classList.remove('sz-article-body__paragraph--reduced');
+    let ads = document.querySelectorAll('div.ad-container');
+    hideDOMElement(...ads);
+  }
+}
+
 else if (matchDomain('vn.at')) {
   if (window.location.href.match(/\.vn\.at\/.+\/\d{4}\//)) {
     let paywall = document.querySelector('div.paywalled-content');
@@ -1427,8 +1443,10 @@ else if (matchDomain('elpais.com')) {
   if (window.location.pathname.endsWith('.amp.html') || window.location.search.match(/(\?|&)outputType=amp/)) {
     amp_unhide_access_hide('="vip"], [amp-access="success"', '="NOT vip"], [amp-access="NOT success"');
   } else {
-    let banners = document.querySelectorAll('div#ctn_freemium_article, div#ctn_premium_article, div.ad');
-    hideDOMElement(...banners);
+    let paywall = document.querySelector('div#ctn_freemium_article, div#ctn_premium_article');
+    removeDOMElement(paywall);
+    let ads = document.querySelectorAll('div.ad');
+    hideDOMElement(...ads);
   }
 }
 
