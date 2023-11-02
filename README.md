@@ -501,6 +501,7 @@ Grouped in options:\
 [L'Informé](https://www.linforme.com) -
 [L'Obs](https://www.nouvelobs.com) -
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
+[L'Opinion](https://www.lopinion.fr) -
 [L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -

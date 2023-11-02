@@ -20,7 +20,7 @@ var blocked_referer = false;
 // defaultSites are loaded from sites.js at installation extension
 
 var restrictions = {
-  'bhaskar.com': /^((?!bhaskar\.com\/(.+\/)?video(s(\/)?$|\/)).)*$/,
+  'bhaskar.com': /^((?!\.bhaskar\.com\/(.+\/)?video(s(\/)?$|\/)).)*$/,
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'bloombergadria.com': /^((?!\.bloombergadria\.com\/video\/).)*$/,
   'dailywire.com': /^((?!\.dailywire\.com\/(episode|show|videos|watch)).)*$/,
@@ -30,7 +30,8 @@ var restrictions = {
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
   'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
-  'hilltimes.com': /^((?!hilltimes\.com\/slideshow\/).)*$/,
+  'hilltimes.com': /^((?!\.hilltimes\.com\/slideshow\/).)*$/,
+  'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
   'nytimes.com': /^((?!\/(myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,

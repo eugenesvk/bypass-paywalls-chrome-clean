@@ -89,6 +89,12 @@
     "remove_cookies_select_drop": ["xbc"],
     "upd_version": "3.3.9.1"
   },
+  "L'Opinion": {
+    "domain": "lopinion.fr",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.4.0.6"
+  },
   "Le Figaro (link to archive.is)": {
     "domain": "lefigaro.fr",
     "allow_cookies": 1,
