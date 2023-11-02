@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -317,6 +317,12 @@
     "allow_cookies": 1,
     "domain": "ilglobo.com",
     "useragent": "googlebot"
+  },
+  "Institutionalinvestor.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div[style*='background-image: linear-gradient']\", \"rm_elem\":1}]",
+    "domain": "institutionalinvestor.com",
+    "ld_google_webcache": "div.call_to_action|div.Page-articleBody"
   },
   "Internationalepolitik.de": {
     "allow_cookies": 1,
