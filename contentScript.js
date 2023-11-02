@@ -1073,9 +1073,9 @@ else if (matchDomain('philomag.de')) {
 
 else if (matchDomain('schwaebische.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.sve-paywall-wrapper');
+  let paywall = document.querySelector('div > div.sve-paywall-wrapper_overlay');
   if (paywall) {
-    removeDOMElement(paywall);
+    removeDOMElement(paywall.parentNode);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
     replaceDomElementExt(url_cache, true, false, 'div.article_body');
@@ -2438,7 +2438,7 @@ else if (matchDomain(be_roularta_domains)) {
       }
     }
   }
-  let ads = document.querySelectorAll('div.rmgAd');
+  let ads = document.querySelectorAll('div.rmgAd, div.c-header__ad');
   hideDOMElement(...ads);
 }
 
@@ -2877,8 +2877,8 @@ else if (matchDomain('citywire.com')) {
     replaceDomElementExt(url_cache, true, false, 'div.cw-article-body');
   }
   window.setTimeout(function () {
-    let banner = document.querySelector('div#lockedLoginPanel');
-    removeDOMElement(banner);
+    let banners = document.querySelectorAll('div#lockedLoginPanel, div#lockedContentPlaceholder');
+    removeDOMElement(...banners);
     let article = document.querySelector('div.cw-article-body');
     if (article)
       removeDOMElement(article.nextSibling);
@@ -4355,7 +4355,7 @@ else if (matchDomain('newrepublic.com')) {
 
 else if (matchDomain('newscientist.com')) {
   let url = window.location.href;
-  let paywall = document.querySelector('#subscription-barrier');
+  let paywall = document.querySelector('section#subscription-barrier');
   if (paywall) {
     removeDOMElement(paywall);
     csDoneOnce = true;
@@ -5341,7 +5341,7 @@ else if (matchDomain(uk_incisive_media_domains)) {
     csDoneOnce = true;
     let live_blog = document.querySelector('head > meta[name="description"][content^="In this live blog"]');
     let article_sel = 'div.article-content';
-    let article = document.querySelector('div.article-content');
+    let article = document.querySelector(article_sel);
     if (article) {
       if (live_blog) {
         article.firstChild.before(googleWebcacheLink(url));

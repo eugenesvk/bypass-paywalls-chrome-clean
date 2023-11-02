@@ -9,6 +9,7 @@ Add LeMonde.fr (link to archive.is)
 Add Sueddeutsche Zeitung (link to archive.is)
 Add The Impression
 Fix El Pais (mobile)
+Fix Schwaebische.de
 Fix WSJ (mobile & Googlebot for cn/jp subdomain)
 Update custom sites (link to 1ft.io)
 
