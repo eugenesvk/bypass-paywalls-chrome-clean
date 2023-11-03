@@ -4825,14 +4825,8 @@ else if (matchDomain('theatlantic.com')) {
 }
 
 else if (matchDomain('thebulletin.org')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div.article--cropped');
-  if (paywall) {
-    removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div#body-copy');
-  }
+  if (dompurify_loaded)
+    getJsonUrl('div.article--cropped', '', 'div#body-copy', {art_append: true});
 }
 
 else if (matchDomain('thedailybeast.com')) {
@@ -6012,6 +6006,8 @@ function getJsonUrlAdd(json_text, article, art_options = {}) {
       art_type = art_options.art_type;
     if (art_options.art_class)
       art_attrib += ' class="' + art_options.art_class + '"';
+    if (art_options.art_id)
+      art_attrib += ' id="' + art_options.art_id + '"';
     if (art_options.art_style)
       art_attrib += ' style="' + art_options.art_style + '"';
     if (art_options.func_text)

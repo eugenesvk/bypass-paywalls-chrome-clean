@@ -11,6 +11,7 @@ Add The Impression
 Remove Delinian Group (fix obsolete)
 Fix El Pais (mobile)
 Fix Schwaebische.de
+Fix TheBulletin.org (ld_json_url)
 Fix WSJ (mobile & Googlebot for cn/jp subdomain)
 Update custom sites (link to 1ft.io)
 
@@ -556,7 +557,7 @@ Fix The Seattle Times (comments)
 Fix TheSaturdayPaper.com.au
 
 * v2.9.9.0 (2022-12-27)
-Add Bulletin of the Atomic Scientists
+Add TheBulletin.org
 Add Limburger.nl (link to archive.is)
 Add Republic.ru
 Add The-Village.ru

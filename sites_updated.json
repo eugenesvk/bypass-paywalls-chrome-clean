@@ -44,6 +44,13 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Bulletin of the Atomic Scientists": {
+    "domain": "thebulletin.org",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "ld_json_url": "div.article--cropped|div#body-copy|1",
+    "upd_version": "3.4.0.7"
+  },
   "CartaCapital": {
     "domain": "cartacapital.com.br",
     "allow_cookies": 1,
