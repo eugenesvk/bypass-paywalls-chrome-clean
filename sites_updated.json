@@ -129,6 +129,12 @@
     "cs_code": "[{\"cond\":\"section.article__content--restricted-media\", \"rm_class\":\"article__content--restricted-media\"}]",
     "upd_version": "3.4.0.4"
   },
+  "Schweizer Monat": {
+    "domain": "schweizermonat.ch",
+    "allow_cookies": 1,
+    "ld_json_url": "div.entry-paywall-login|div.entry-main > div.entry__post-content",
+    "upd_version": "3.4.0.7"
+  },
   "Süddeutsche Zeitung (link to archive.is)": {
     "domain": "sueddeutsche.de",
     "allow_cookies": 1,

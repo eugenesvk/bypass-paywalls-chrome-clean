@@ -207,6 +207,11 @@
     "domain": "energy-storage.news",
     "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
   },
+  "Engineersireland.ie": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.free-wrapper\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.article-body[style]\", \"rm_attrib\":\"style\"}]}]",
+    "domain": "engineersireland.ie"
+  },
   "Eviemagazine.com": {
     "allow_cookies": 1,
     "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
@@ -235,6 +240,11 @@
   "Finanz-szene.de": {
     "allow_cookies": 1,
     "domain": "finanz-szene.de",
+    "useragent": "googlebot"
+  },
+  "Flz.de": {
+    "allow_cookies": 1,
+    "domain": "flz.de",
     "useragent": "googlebot"
   },
   "Freitag.de": {
@@ -327,6 +337,11 @@
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
+  },
+  "Ipe.com": {
+    "allow_cookies": 1,
+    "domain": "ipe.com",
+    "useragent": "googlebot"
   },
   "Irishexaminer.com": {
     "allow_cookies": 1,

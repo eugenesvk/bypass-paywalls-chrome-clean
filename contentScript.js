@@ -1090,6 +1090,11 @@ else if (matchDomain('schwaebische.de')) {
   }, 1000);
 }
 
+else if (matchDomain('schweizermonat.ch')) {
+  if (dompurify_loaded)
+    getJsonUrl('div.entry-paywall-login', '', 'div.entry-main > div.entry__post-content');
+}
+
 else if (matchDomain('sn.at')) {
   let url = window.location.href;
   let paywall = document.querySelector('div.article-sections__paywall');

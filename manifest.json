@@ -579,6 +579,7 @@
     "*://*.sandiegouniontribune.com/*",
     "*://*.schwaebische.de/*",
     "*://*.schwarzwaelder-bote.de/*",
+    "*://*.schweizermonat.ch/*",
     "*://*.science-et-vie.com/*",
     "*://*.science.org/*",
     "*://*.sciencesetavenir.fr/*",
@@ -804,5 +805,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.0.6"
+  "version": "3.4.0.7"
 }

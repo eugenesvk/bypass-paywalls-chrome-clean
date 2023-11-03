@@ -811,6 +811,7 @@ Grouped in options:\
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Le Temps](https://www.letemps.ch) -
 [Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)](https://www.nzz.ch) -
+[Schweizer Monat](https://schweizermonat.ch) -
 [The Market](https://themarket.ch)
 
 Grouped in options:\
