@@ -286,6 +286,10 @@ Grouped in options:\
 [Variety](https://variety.com) -
 [WWD](https://wwd.com)
 
+*The Epoch Times* sites like (opt-in to custom sites for cz|de|fr|jp|ro sites)\
+[Epoch.org.il](https://epoch.org.il) -
+[The Epoch Times](https://www.theepochtimes.com)
+
 ##### Local USA news
 [Albuquerque Journal](https://www.abqjournal.com) -
 [Arkansas Democrat-Gazette](https://www.arkansasonline.com) -

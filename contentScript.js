@@ -3831,6 +3831,11 @@ else if (matchDomain('enotes.com')) {
   }
 }
 
+else if (matchDomain('epoch.org.il')) {
+  if (dompurify_loaded)
+    getJsonUrl('div.register-login-box', '', 'div.m-article > div.paywall');
+}
+
 else if (matchDomain('espn.com')) {
   let url = window.location.href;
   let paywall = document.querySelector('aside.espn-plus-container-wrapper');

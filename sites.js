@@ -2199,6 +2199,22 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "The Epoch Times (+ cz|de|fr|jp|ro; opt-in to custom sites)": {
+    domain: "###_usa_epochtimes",
+    group: [
+      "epoch.org.il",
+      "theepochtimes.com"
+    ],
+    allow_cookies: 1,
+    block_regex: /subs\.(theepochtimes\.com|epochbase\.(com|eu))\/rules\/get/,
+    exception: [{
+        domain: "epoch.org.il",
+        allow_cookies: 1,
+        block_js_inline: /\/epoch\.org\.il\//,
+        cs_dompurify: 1
+      }
+    ]
+  },
   "The Financial Express": {
     domain: "financialexpress.com",
     allow_cookies: 1,

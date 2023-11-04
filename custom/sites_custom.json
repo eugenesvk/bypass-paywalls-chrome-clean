@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -726,11 +726,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.thedriftmag\\.com\\/wp-content\\/plugins\\/drift-paywall-plugin",
     "domain": "thedriftmag.com"
-  },
-  "Theepochtimes.com": {
-    "allow_cookies": 1,
-    "block_regex": "subs\\.theepochtimes\\.com\\/lib\\/api\\.bundle\\.js",
-    "domain": "theepochtimes.com"
   },
   "Thefashionlaw.com": {
     "allow_cookies": 1,

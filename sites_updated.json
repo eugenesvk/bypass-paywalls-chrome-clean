@@ -71,6 +71,13 @@
     "cs_code": "[{\"cond\":\"div.a_b_wall\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.4.0.5"
   },
+  "Epoch.org.il": {
+    "domain": "epoch.org.il",
+    "allow_cookies": 1,
+    "block_js_inline": "\\/epoch\\.org\\.il\\/",
+    "ld_json_url": "div.register-login-box|div.m-article>div.paywall",
+    "upd_version": "3.4.0.8"
+  },
   "Financial News (London)": {
     "domain": "fnlondon.com",
     "allow_cookies": 1,
@@ -156,6 +163,12 @@
     "block_regex": "\\.tinypass\\.com",
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
+  },
+  "The Epoch Times": {
+    "domain": "theepochtimes.com",
+    "allow_cookies": 1,
+    "block_regex": "subs\\.theepochtimes\\.com\\/rules\\/get",
+    "upd_version": "3.4.0.8"
   },
   "The Hindu": {
     "domain": "thehindu.com",

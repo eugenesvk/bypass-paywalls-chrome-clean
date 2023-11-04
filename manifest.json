@@ -240,6 +240,7 @@
     "*://*.enotes.com/*",
     "*://*.epe.es/*",
     "*://*.epicurious.com/*",
+    "*://*.epoch.org.il/*",
     "*://*.espn.com/*",
     "*://*.esprit.presse.fr/*",
     "*://*.esquire.com/*",
@@ -660,6 +661,7 @@
     "*://*.thecut.com/*",
     "*://*.thedailybeast.com/*",
     "*://*.thediplomat.com/*",
+    "*://*.theepochtimes.com/*",
     "*://*.theglobeandmail.com/*",
     "*://*.thehill.com/*",
     "*://*.thehindu.com/*",
@@ -805,5 +807,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.0.7"
+  "version": "3.4.0.8"
 }

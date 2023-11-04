@@ -8,6 +8,7 @@ Add LeFigaro.fr (link to archive.is)
 Add LeMonde.fr (link to archive.is)
 Add SchweizerMonat.ch
 Add Sueddeutsche Zeitung (link to archive.is)
+Add The Epoch Times & Epoch.org.il (+ international; opt-in to custom sites)
 Add The Impression
 Remove Delinian Group (fix obsolete)
 Fix El Pais (mobile)
