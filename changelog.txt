@@ -16,7 +16,7 @@ Fix El Pais (mobile)
 Fix Schwaebische.de
 Fix TheBulletin.org (ld_json_url)
 Fix WSJ (mobile & Googlebot for cn/jp subdomain)
-Update custom sites (link to 1ft.io)
+Update custom sites (group & link to 1ft.io)
 
 * v3.4.0.0 (2023-10-29)
 Add CartaCapital.com.br

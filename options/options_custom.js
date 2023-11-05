@@ -160,8 +160,11 @@ function add_options() {
       if (elem.dataset.value) {
         if (elem.checked)
           sites_custom[title][elem.dataset.key] = parseInt(elem.dataset.value);
-      } else if (elem.value)
+      } else if (elem.value) {
+        if (elem.dataset.key === 'group')
+          elem.value = elem.value.replace(/(\s|www\.)/g, '');
         sites_custom[title][elem.dataset.key] = elem.value;
+      }
     }
   }
   
@@ -238,6 +241,7 @@ function edit_options() {
     var edit_site = sites_custom[title];
     document.querySelector('input[data-key="title"]').value = title;
     document.querySelector('input[data-key="domain"]').value = edit_site.domain;
+    document.querySelector('textarea[data-key="group"]').value = edit_site.group ? edit_site.group : '';
     document.querySelector('input[data-key="allow_cookies"]').checked = (edit_site.allow_cookies > 0);
     document.querySelector('input[data-key="remove_cookies"]').checked = (edit_site.remove_cookies > 0);
     document.querySelector('select[data-key="useragent"]').selectedIndex = (edit_site.googlebot > 0) ? 1 : useragent_options.indexOf(edit_site.useragent);
@@ -293,6 +297,7 @@ function renderOptions() {
     sites_updated: {}
   }, function (items) {
     var sites_custom = items.sites_custom;
+    var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').map(x => x.trim()) : x.domain).flat();
     var sites_updated = items.sites_updated;
     var sites_updated_domains_new = Object.values(sites_updated).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
     var sitesEl = document.getElementById('bypass_sites');
@@ -312,6 +317,7 @@ function renderOptions() {
     var add_checkboxes = {
       'title': 0,
       'domain': 0,
+      'group': 0,
       'allow_cookies': 1,
       'remove_cookies': 1,
       'useragent': 0,
@@ -352,7 +358,7 @@ function renderOptions() {
             inputEl.appendChild(option);
           }
         } else {
-          if (!['cs_code'].includes(key)) {
+          if (!['cs_code', 'group'].includes(key)) {
             inputEl = document.createElement('input');
             inputEl.size = 25;
           } else {
@@ -363,6 +369,7 @@ function renderOptions() {
           let placeholders = {
             title: 'Example',
             domain: 'example.com',
+            group: 'example1.com,example2.com',
             block_js_inline: '\\.example\\.com\\/article\\/',
             block_regex: '\\.example\\.com\\/js\\/',
             amp_redirect: 'div.paywall',
@@ -393,12 +400,12 @@ function renderOptions() {
     selectEl.id = 'sites';
     selectEl.size = 6;
     var optionEl;
-    perm_origins = [];
+    
     for (let key in sites_custom) {
       optionEl = document.createElement('option');
       let domain = sites_custom[key]['domain'];
-      if (domain && domain !== '###')
-        perm_origins.push(domain);
+      let group = sites_custom[key]['group'];
+      
       let isDefaultSite = defaultSites_domains.includes(domain);
       optionEl.text = isDefaultSite ? '*' : '';
       optionEl.text += key + ': ' + domain +
@@ -433,7 +440,7 @@ function renderOptions() {
       custom_sitesEl.appendChild(labelEl);
     }
     
-    perm_origins = perm_origins.concat(sites_updated_domains_new).map(x => '*://*.' + x + '/*');
+    perm_origins = sites_custom_domains_new.concat(sites_updated_domains_new).filter(x => !x.includes('###')).map(x => '*://*.' + x + '/*');
     var perm_custom = document.getElementById('perm-custom');
     ext_api.permissions.contains({
       origins: perm_origins

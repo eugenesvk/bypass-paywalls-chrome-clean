@@ -989,7 +989,7 @@ Remember to check the [previous requests](https://gitlab.com/magnolia1234/bypass
 * for Google Search Tool test url & copy html (tab) code to https://codebeautify.org/htmlviewer
 
 ### Add custom site
-Add your own custom site (also for testing).  
+Add your own custom site/group (for group use comma-separated list; set domain like group_...).  
 Check 'Options'-link in popup-menu and go to custom sites.
 \* by default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you added yourself (or *clear cookies* (BPC-icon) to ask for host permission for current site).
 

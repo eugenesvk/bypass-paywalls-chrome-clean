@@ -359,7 +359,7 @@ function set_rules(sites, sites_updated, sites_custom) {
       let domains = [site_domain];
       let group = false;
       if (rule.hasOwnProperty('group')) {
-        domains = rule.group;
+        domains = (typeof rule.group !== 'string') ? rule.group : rule.group.split(',');
         group = true;
       }
       let rule_default = {};
@@ -420,11 +420,22 @@ function add_grouped_enabled_domains(groups) {
       enabledSites = enabledSites.concat(groups[key]);
     else
       disabledSites = disabledSites.concat(groups[key]);
-    for (let site of excludedSites) {
-      if (enabledSites.includes(site)) {
-        enabledSites.splice(enabledSites.indexOf(site), 1);
-        disabledSites.push(site);
-      }
+  }
+  // custom
+  for (let site in customSites) {
+    let group = customSites[site].group;
+    if (group) {
+      let group_array = group.split(',');
+      if (enabledSites.includes(customSites[site].domain))
+        enabledSites = enabledSites.concat(group_array);
+      else
+        disabledSites = disabledSites.concat(group_array);
+    }
+  }
+  for (let site of excludedSites) {
+    if (enabledSites.includes(site)) {
+      enabledSites.splice(enabledSites.indexOf(site), 1);
+      disabledSites.push(site);
     }
   }
 }
@@ -447,7 +458,7 @@ ext_api.storage.local.get({
   customSites = filterObject(customSites, function (val, key) {
     return !(val.add_ext_link && !val.add_ext_link_type)
   });
-  customSites_domains = Object.values(customSites).map(x => x.domain);
+  customSites_domains = Object.values(customSites).map(x => x.group ? x.group.split(',').map(x => x.trim()).concat([x.domain]) : x.domain).flat();
   updatedSites = items.sites_updated;
   updatedSites_domains_new = Object.values(updatedSites).filter(x => x.domain && !defaultSites_domains.includes(x.domain) || x.group).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)).concat([x.domain]) : x.domain).flat();
   var ext_version_old = items.ext_version_old;
@@ -538,7 +549,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
       var sites_custom = storageChange.newValue ? storageChange.newValue : {};
       var sites_custom_old = storageChange.oldValue ? storageChange.oldValue : {};
       customSites = sites_custom;
-      customSites_domains = Object.values(sites_custom).map(x => x.domain);
+      customSites_domains = Object.values(sites_custom).map(x => x.group ? x.group.split(',').map(x => x.trim()).concat([x.domain]) : x.domain).flat();
       
       // add/remove custom sites in options (not for default site(group))
       var sites_custom_added = Object.keys(sites_custom).filter(x => !Object.keys(sites_custom_old).includes(x) && !defaultSites.hasOwnProperty(x) && !defaultSites_domains.includes(sites_custom[x].domain));
@@ -1278,7 +1289,7 @@ function site_switch() {
       }
       let defaultSite_title = isDefaultSite ? Object.keys(defaultSites).find(key => defaultSites[key].domain === isDefaultSite) : '';
       let isCustomSite = matchUrlDomain(Object.values(customSites_domains), currentUrl);
-      let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite) : '';
+      let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite || (customSites[key].group && customSites[key].group.split(',').includes(isCustomSite))) : '';
       let site_title = defaultSite_title || customSite_title;
       let domain = isDefaultSite || isCustomSite;
       if (domain && site_title) {

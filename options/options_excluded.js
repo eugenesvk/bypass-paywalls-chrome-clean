@@ -5,7 +5,7 @@ function save_options() {
     var textareaEl = document.querySelector('#excluded_sites textarea');
     var sites_excluded = [];
     if (textareaEl.value !== '')
-        var sites_excluded = textareaEl.value.split(',').map(function(item) { return item.trim().replace('www.', ''); });
+        var sites_excluded = textareaEl.value.split(',').map(x => x.trim().replace('www.', ''));
     ext_api.storage.local.set({
         sites_excluded: sites_excluded
     }, function () {
@@ -20,7 +20,7 @@ function sort_options() {
     var textareaEl = document.querySelector('#excluded_sites textarea');
     var sites_excluded = [];
     if (textareaEl.value !== '') {
-        var sites_excluded = textareaEl.value.split(',').map(function(item) { return item.trim().replace('www.', ''); });
+        var sites_excluded = textareaEl.value.split(',').map(x => x.trim().replace('www.', ''));
 		var sites_excluded_sorted = sites_excluded.sort();
 		textareaEl.value = sites_excluded_sorted.join();
 	}
