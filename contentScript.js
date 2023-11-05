@@ -50,7 +50,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'the-tls.co.uk', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'inews.co.uk', 'janes.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nwzonline.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'telegraph.co.uk', 'tes.com', 'the-tls.co.uk', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, de_westfalen_medien_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_ebra_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -2753,10 +2753,16 @@ else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
   if (flip_pay && dompurify_loaded) {
     let content = document.querySelector('script[data-fragment-type="ArticleContent"]');
     if (content) {
-      let fade = document.querySelector('div[class*="_fadetowhite"]');
-      removeDOMElement(flip_pay, fade);
-      let intro = document.querySelector('div[data-auth-intro="article"]');
-      if (intro && intro.parentNode) {
+      window.setTimeout(function () {
+        let fade = document.querySelector('div[class*="_fadetowhite"]');
+        removeDOMElement(flip_pay, fade);
+      }, 500);
+      let intro = document.querySelector('div > div[data-auth-intro="article"]');
+      if (intro) {
+        let intro_par = intro.querySelector('p[class]');
+        let intro_par_class;
+        if (intro_par)
+          intro_par_class = intro_par.getAttribute('class');
         let content_text = content.innerText;
         if (content_text.includes('__PRELOADED_STATE_GRAPH')) {
           content_text = content_text.replace(/window\["__PRELOADED_STATE_GRAPH__.+"\]\s=\s/, '');
@@ -2802,7 +2808,7 @@ else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
                       }
                     }
                   } else if (!['ad', 'streamone'].includes(type)) {
-                    let html = parser.parseFromString('<p style="font-size: 18px; font-family: Georgia, serif; margin: 10px;">' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</p>', 'text/html');
+                    let html = parser.parseFromString('<p class="' + intro_par_class + '">' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</p>', 'text/html');
                     elem = html.querySelector('p');
                     if (!['p', 'subhead', 'legacy-ml'].includes(type)) {
                       console.log(type);
@@ -4153,6 +4159,27 @@ else if (matchDomain('ipolitics.ca')) {
         }
       } catch (err) {
         console.log(err);
+      }
+    }
+  }
+}
+
+else if (matchDomain('janes.com')) {
+  let articles = document.querySelectorAll('div.article-box');
+  for (let article of articles) {
+    let gated_text = article.querySelector('div > div.gated-text');
+    if (gated_text) {
+      let art_link = article.querySelector('a[href^="mailto:"][href*="&body="]');
+      if (art_link) {
+        let url = decodeURIComponent(art_link.href.split('&body=')[1]);
+        let url_pathname = new URL(url).pathname;
+        let og_url = url_pathname.match(/\/[\w-]+\//)[0] + 'news-detail' + url_pathname.match(/\/[\w-]+$/)[0];
+        let par = document.createElement('p');
+        let weblink = document.createElement('a');
+        weblink.href = og_url;
+        weblink.innerText = 'BPC > full text';
+        par.appendChild(weblink);
+        gated_text.parentNode.replaceChild(par, gated_text);
       }
     }
   }

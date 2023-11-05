@@ -203,6 +203,7 @@ Grouped in options:\
 [Field & Stream](https://www.fieldandstream.com) -
 [First Things](https://www.firstthings.com) -
 [Harper's Magazine](https://harpers.org) -
+[Jane's Defence Weekly](https://www.janes.com/defence-news/) -
 [National Review](https://www.nationalreview.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
 [Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -

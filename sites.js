@@ -1177,6 +1177,10 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
+  "Jane's Defence Weekly": {
+    domain: "janes.com",
+    allow_cookies: 1
+  },
   "Junge Freiheit": {
     domain: "jungefreiheit.de",
     allow_cookies: 1,
