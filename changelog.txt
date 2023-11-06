@@ -3,6 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Haymarket Media Group (opt-in to custom sites)
+Add Haymarket Medical Network (opt-in to custom sites)
+Update custom sites (delete default sites)
 
 * v3.4.1.0 (2023-11-05)
 Add Jane's Defence Weekly
@@ -308,7 +311,7 @@ Fix Mediahuis Noord (json)
 Fix Quora (AI bot crash)
 Fix TheTimes.co.uk (overlay)
 Fix TownNews sites (encrypted)
-Update popup (Google Search Tool)
+Update popup (link to Google Search Tool)
 
 * v3.1.9.0 (2023-05-21)
 Remove (custom) Substack (fix obsolete)
@@ -372,7 +375,7 @@ Fix Berlingske.dk
 Fix NYTimes (Googlebot)
 Fix Tagesspiegel.de (background; link to Google Search Tool)
 Update block general paywall script (Ippen.space)
-Update popup (12ft.io)
+Update popup (link to 12ft.io)
 
 * v3.1.3.0 (2023-04-10)
 Add Haas Mediengruppe (opt-in to custom sites)
@@ -538,7 +541,7 @@ Fix National Review (no amp)
 Fix The Athletic (error)
 Fix Vogue Business
 Update custom sites (default block cookies)
-Update popup (Google Search Tool)
+Update popup (link to Google Search Tool)
 
 * v3.0.0.0 (2023-01-08)
 Add Deutscher Fachverlag Mediengruppe (opt-in to custom sites)

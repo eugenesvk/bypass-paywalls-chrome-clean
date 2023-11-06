@@ -41,6 +41,10 @@ window.setTimeout(function () {
       group = '###_substack_custom';// no fix
     else if (document.querySelector('script[src*="/wp-content/themes/pmgnews/scripts/promedia.js"], form[action^="https://go.promedia.nl/"]'))
       group = '###_nl_promedia';
+    else if (hostname.match(/\.com$/) && document.querySelector('span#hmn-logo > a[href="https://www.haymarketmedicalnetwork.com/about"], footer a[href="https://www.haymarketmediaus.com/haymarket-media-inc-privacy-policy/"]'))
+      group = '###_uk_haymarket_medical';
+    else if (matchDomain(['asianinvestor.net', 'campaignindia.in', 'taspo.de']) || (hostname.match(/\.co(m|\.uk)$/) && document.querySelector('footer a[href^="http://www.haymarket.com"]')))
+      group = '###_uk_haymarket';
     else if (matchDomain(['epochtimes-romania.com']) || hostname.match(/\.epochtimes\.(cz|de|fr|jp)/))
       group = '###_usa_epochtimes';
     else if (hostname.match(/\.(com|net)\.au$/) && !matchDomain(['insideretail.com.au'])) {

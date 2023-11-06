@@ -232,6 +232,12 @@
     "amp_redirect": "div#memberplusModal",
     "domain": "farmersjournal.ie"
   },
+  "Finance.si": {
+    "add_ext_link": "div[id^='hardlock_']|div#article_main",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "finance.si"
+  },
   "Finansavisen.no": {
     "allow_cookies": 1,
     "domain": "finansavisen.no",

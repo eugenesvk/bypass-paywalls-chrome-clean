@@ -1023,6 +1023,18 @@ var defaultSites = {
     block_regex: /cdn\.cxense\.com\//,
     remove_cookies_select_drop: ["xbc"]
   },
+  "Haymarket Media Group (opt-in to custom sites)": {
+    domain: "###_uk_haymarket",
+    group: [],
+    useragent: "googlebot"
+  },
+  "Haymarket Medical Network (opt-in to custom sites)": {
+    domain: "###_uk_haymarket_medical",
+    group: [],
+    allow_cookies: 1,
+    remove_cookies: 1,
+    cs_code: [{"cond":"div#modal-register-popup, div.gating-banner", "rm_elem":1}, {"cond":"div[data-gated]", "rm_attrib":"data-gated"}]
+  },
   "Hearst Communications (newspapers)": {
     domain: "###_usa_hearst_comm",
     group: [
@@ -2829,6 +2841,8 @@ var custom_flex_not = {
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
   "###_wp_leaky_paywall": ["dominionpost.com", "heisenbergreport.com", "thewirechina.com"],
   "###_uk_axate.io": ["thecricketer.com", "thinkofx.net"],
+  "###_uk_haymarket": ["gpbusiness.co.uk", "scmagazineuk.com", "thecorporatetreasurer.com"],
+  "###_uk_haymarket_medical": ["mycme.com"],
   "###_usa_hearst_comm": ["sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
   "###_usa_townnews": ["bloxdigital.com", "townnews.com"],

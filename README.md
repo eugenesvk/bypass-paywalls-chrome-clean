@@ -466,6 +466,8 @@ Grouped in options:\
 [UnHerd](https://unherd.com)
 
 Grouped in options:\
+*[Haymarket Media Group](https://haymarket.com/brands)* sites (opt-in to custom sites)\
+*[Haymarket Medical Network](https://www.haymarketmedicalnetwork.com)* sites (opt-in to custom sites)\
 *[Incisive Media](https://www.incisivemedia.com/brands)* sites (opt-in to custom sites)\
 *National World Publishing* sites like (opt-in to custom sites for unlisted)\
 [The Scotsman](https://www.scotsman.com) -

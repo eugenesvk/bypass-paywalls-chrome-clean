@@ -63,7 +63,6 @@ function sort_options() {
     var sites_custom_sorted = sortJson(sites_custom);
     textareaEl.value = JSON.stringify(sites_custom_sorted);
   }
-  
 }
 
 // Export custom sites to file
@@ -217,6 +216,29 @@ function delete_options() {
       // Update status to let user know custom site was deleted.
       var status_delete = document.getElementById('status_delete');
       status_delete.textContent = 'Site deleted.';
+      setTimeout(function () {
+        //status.textContent = '';
+        renderOptions();
+      }, 800);
+    });
+  });
+}
+
+// Delete custom (& default) sites from ext_api.storage
+function delete_default_options() {
+  ext_api.storage.local.get({
+    sites_custom: {}
+  }, function (items) {
+    sites_custom = filterObject(items.sites_custom, function (val, key) {
+      return !defaultSites_domains.includes(val.domain);
+    });
+    
+    ext_api.storage.local.set({
+      sites_custom: sites_custom
+    }, function () {
+      // Update status to let user know custom & default sites were deleted.
+      var status_delete = document.getElementById('status_delete');
+      status_delete.textContent = 'Default sites deleted.';
       setTimeout(function () {
         //status.textContent = '';
         renderOptions();
@@ -474,6 +496,7 @@ document.getElementById('importInput').addEventListener("change", import_options
 document.getElementById('import_gitlab').addEventListener('click', import_gitlab_options);
 document.getElementById('add').addEventListener('click', add_options);
 document.getElementById('delete').addEventListener('click', delete_options);
+document.getElementById('delete_default').addEventListener('click', delete_default_options);
 document.getElementById('edit').addEventListener('click', edit_options);
 if (custom_switch) {
   document.getElementById('perm_request').addEventListener('click', request_permissions);

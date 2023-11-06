@@ -17,27 +17,6 @@
     "domain": "apollo-magazine.com",
     "upd_version": "3.3.9.3"
   },
-  "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
-    "domain": "###_au_news_corp",
-    "group": [
-      "adelaidenow.com.au",
-      "cairnspost.com.au",
-      "couriermail.com.au",
-      "dailytelegraph.com.au",
-      "geelongadvertiser.com.au",
-      "goldcoastbulletin.com.au",
-      "heraldsun.com.au",
-      "ntnews.com.au",
-      "theaustralian.com.au",
-      "thechronicle.com.au",
-      "themercury.com.au",
-      "townsvillebulletin.com.au",
-      "weeklytimesnow.com.au"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js",
-    "upd_version": "3.3.9.5"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
@@ -116,18 +95,6 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.0.4"
   },
-  "Le Journal de Montréal": {
-    "domain": "journaldemontreal.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.journalde.+\\.com\\/",
-    "upd_version": "3.3.8.5"
-  },
-  "Le Journal de Québec": {
-    "domain": "journaldequebec.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.journalde.+\\.com\\/",
-    "upd_version": "3.3.8.5"
-  },
   "Le Monde (link to archive.is)": {
     "domain": "lemonde.fr",
     "allow_cookies": 1,
@@ -150,12 +117,6 @@
     "block_regex": "\\.sueddeutsche\\.de\\/api\\/tinypass\\.min\\.js",
     "cs_code": "[{\"cond\":\"p.sz-article-body__paragraph--reduced\", \"rm_class\":\"sz-article-body__paragraph--reduced\"}]",
     "upd_version": "3.4.0.5"
-  },
-  "The Baffler": {
-    "domain": "thebaffler.com",
-    "allow_cookies": 1,
-    "block_regex": "\\/blink\\.net\\/.+\\/blink-sdk\\.js",
-    "upd_version": "3.3.8.3"
   },
   "The Economist": {
     "domain": "economist.com",

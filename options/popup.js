@@ -101,6 +101,7 @@ function showArchiveLinks() {
           elem.innerText = key;
           if (!(matchDomain(['1ft.io', 'clearthis.page', 'google.com', 'googleusercontent.com'], hostname) || hostname.match(/^archive\.\w{2}$/))) {
             elem.href = archive_array[key];
+            elem.title = elem.href;
             elem.target = '_blank';
             elem_div.appendChild(elem);
             archive_id.appendChild(elem_div);
