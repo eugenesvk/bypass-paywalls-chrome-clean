@@ -54,9 +54,6 @@ window.setTimeout(function () {
         if (document.querySelector('li > a[href*=".sevenwestmedia.com.au"]'))
           group = 'thewest.com.au';
       }
-    } else if (hostname.endsWith('.be')) {
-        if (matchDomain(['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be']))
-          group = '###_be_mediahuis';// no fix
     } else if (hostname.endsWith('.cl')) {
       if (document.querySelector('head > meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))
         group = 'elmercurio.com';
@@ -73,8 +70,6 @@ window.setTimeout(function () {
         group = '###_de_mgw';
       else if (matchDomain(['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de']))
         group = '###_de_mhs';
-      else if (matchDomain(['aachener-nachrichten.de', 'aachener-zeitung.de', 'ga.de', 'rp-online.de', 'saarbruecker-zeitung.de', 'volksfreund.de']))
-        group = '###_de_rp_aachen_medien';// no fix
       else if (matchDomain(['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de']))
         group = '###_de_vrm';
       else if (document.querySelector('head > link[href*="/assets.static-chmedia.ch/"]'))

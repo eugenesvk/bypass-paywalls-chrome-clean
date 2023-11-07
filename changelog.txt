@@ -6,6 +6,7 @@ Post-release
 Add Haymarket Media Group (opt-in to custom sites)
 Add Haymarket Medical Network (opt-in to custom sites)
 Fix Bloomberg (overlay)
+Fix The Diplomat
 Update custom sites (delete default sites)
 
 * v3.4.1.0 (2023-11-05)

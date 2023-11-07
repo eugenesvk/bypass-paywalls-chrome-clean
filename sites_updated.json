@@ -118,6 +118,11 @@
     "cs_code": "[{\"cond\":\"p.sz-article-body__paragraph--reduced\", \"rm_class\":\"sz-article-body__paragraph--reduced\"}]",
     "upd_version": "3.4.0.5"
   },
+  "The Diplomat (refresh magazine)": {
+    "domain": "thediplomat.com",
+    "useragent": "facebookbot",
+    "upd_version": "3.4.1.2"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,
