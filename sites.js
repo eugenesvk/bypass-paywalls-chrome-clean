@@ -848,7 +848,7 @@ var defaultSites = {
     ],
     allow_cookies: 1
   },
-  "Groupe Rossel": {
+  "Groupe Rossel (link to archive.is)": {
     domain: "###_fr_be_groupe_rossel",
     group: [
       "aisnenouvelle.fr",
@@ -864,8 +864,7 @@ var defaultSites = {
       "sudinfo.be"
     ],
     allow_cookies: 1,
-    block_regex: /\.qiota\.com\//,
-    useragent: "googlebot"
+    block_regex: /\.qiota\.com\//
   },
   "Groupe Sud Ouest": {
     domain: "###_fr_groupe_sud_ouest",

@@ -1629,26 +1629,13 @@ else if (matchDomain('elle.fr')) {
 }
 
 else if (matchDomain(fr_be_groupe_rossel)) {
-  if (matchDomain('sudinfo.be')) {
-    let paywall = document.querySelector('div.r-blurred');
-    if (paywall) {
-      let paywall_header = document.querySelector('.r-paywall--header');
-      let intro = document.querySelector('div.r-not-blurred');
-      removeDOMElement(paywall, paywall_header, intro);
-      let json_script = getArticleJsonScript();
-      if (json_script) {
-        let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text = json.articleBody.replace(/&nbsp;/g, '').replace(/\[.*\]/, '');
-          let content = document.querySelector('article');
-          if (json_text && content) {
-            let par = document.createElement('p');
-            par.innerText = '\r\n' + json_text;
-            content.appendChild(par);
-          }
-        }
-      }
-    }
+  let url = window.location.href;
+  let paywall = document.querySelector('div.qiota_reserve, r-panel.r-paywall--header');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(archiveLink(url));
   }
   let ads = document.querySelectorAll('div[id^="article_"], r-pub, div#rossel-leader-top');
   hideDOMElement(...ads);

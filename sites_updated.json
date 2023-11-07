@@ -76,6 +76,27 @@
     "cs_block": 1,
     "upd_version": "3.3.9.8"
   },
+  "Groupe Rossel": {
+    "domain": "###_fr_be_groupe_rossel",
+    "group": [
+      "aisnenouvelle.fr",
+      "courrier-picard.fr",
+      "lardennais.fr",
+      "lavoixdunord.fr",
+      "lesoir.be",
+      "lest-eclair.fr",
+      "liberation-champagne.fr",
+      "lunion.fr",
+      "nordlittoral.fr",
+      "paris-normandie.fr",
+      "sudinfo.be"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com\\/",
+    "add_ext_link": "div.qiota_reserve, r-panel.r-paywall--header|article",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.1.3"
+  },
   "Harvard Business Review": {
     "domain": "hbr.org",
     "block_regex": "cdn\\.cxense\\.com\\/",

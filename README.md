@@ -555,7 +555,7 @@ Grouped in options:\
 [Monaco-Matin](https://www.monacomatin.mc) -
 [Nice-Matin](https://www.nicematin.com) -
 [Var-Matin](https://www.varmatin.com)\
-*Groupe Rossel* sites like\
+*Groupe Rossel* (link to archive.is) sites like\
 [L'Aisne nouvelle](https://www.aisnenouvelle.fr) -
 [L'Ardennais](https://www.lardennais.fr) -
 [L'Est-Éclair](https://www.lest-eclair.fr) -
