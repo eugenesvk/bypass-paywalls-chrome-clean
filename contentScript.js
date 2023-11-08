@@ -2577,73 +2577,34 @@ else if (matchDomain('telegraaf.nl')) {
   }
   let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="PaywallHandler"]');
   let article_body = document.querySelector('div.DetailBodyBlocks, section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
-  if (paywall && article_body) {
+  if (paywall && article_body && dompurify_loaded) {
     let div_main = document.createElement('div');
     div_main.style = 'margin: 20px 0px;';
     let div_elem = document.createElement('div');
     let par_style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
     let scripts = document.querySelectorAll('script:not([src]):not([type])');
-    let apollo_script;
+    let window_script;
     for (let script of scripts) {
-      if (script.text.includes('window.__APOLLO_STATE__=')) {
-        apollo_script = script;
+      if (script.text.length > 2500 && script.text.includes('window.telegraaf.articleBodyBlocks')) {
+        window_script = script;
         break;
       }
     }
-    if (apollo_script) {
+    if (window_script) {
       removeDOMElement(paywall);
-      try {
-        let apollo_json = JSON.parse(apollo_script.text.replace(/(^window.__APOLLO_STATE__=|;$)/g, ''));
-        let start = false;
-        for (let key in apollo_json) {
-          let elem = apollo_json[key];
-          if (!start) {
-            if (key.includes('.introBlocks.'))
-              start = true;
-          } else {
-            let typename = elem.__typename;
-            if (key.startsWith('Article:') || ['ArticleAuthorBiography'].includes(typename))
-              break;
-            else {
-              let par = document.createElement('p');
-              if (typename === 'HtmlBlock') {
-                let item = document.createElement('p');
-                item.innerText = elem.contentHTML.replace(/((<|\\u003c)([^>]+)(>|\\u003e))/gi, '');
-                item.style = par_style;
-                par.appendChild(item);
-              } else if (typename === 'SubheadBlock') {
-                let item = document.createElement('p');
-                item.innerText = elem.text.replace(/((<|\\u003c)([^>]+)(>|\\u003e))/gi, '');
-                item.style = par_style;
-                par.appendChild(item);
-              } else if (typename === 'Image') {
-                let figure = document.createElement('figure');
-                let img = document.createElement('img');
-                img.src = elem.url.startsWith('https:') ? elem.url : 'https:' + elem.url;
-                img.width = !mobile ? 640 : 320;
-                figure.appendChild(img);
-                if (elem.description) {
-                  let caption = document.createElement('figcaption');
-                  caption.innerText = elem.description + (elem.copyright ? ' | ' + elem.copyright : '');
-                  figure.appendChild(caption);
-                }
-                par.appendChild(figure);
-              } else if (typename === 'Article') {
-                let item = document.createElement('a');
-                item.href = elem.url.startsWith('https:') ? elem.url : 'https:' + elem.url;
-                item.innerText = elem.title;
-                par.appendChild(item);
-              } else if (!['ImageBlock', 'InlineRelatedArticlesBlock', 'Video', 'Webshop'].includes(typename))
-                console.log(elem);
-              if (par.childNodes) {
-                div_main.appendChild(par); ;
-              }
-            }
-          }
-        }
-      } catch (err) {
-        console.log(err);
-      }
+      let window_text = window_script.text.split('window.telegraaf.articleBodyBlocks')[1].replace(/(^\s?=\s?"|";$|\\")/gm, '').replace(/\\\\u003c/gm, '<');
+      let parser = new DOMParser();
+      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(window_text) + '</div>', 'text/html');
+      let article_new = doc.querySelector('div');
+      let pars = article_new.querySelectorAll('p');
+      for (let par of pars)
+        par.style = 'margin: 10px 0px;';
+      let placeholders = article_new.querySelectorAll('div.TeaserImage__placeholder');
+      for (let elem of placeholders)
+        elem.removeAttribute('class');
+      let newsletter = article_new.querySelector('div.NewsletterForm');
+      removeDOMElement(newsletter);
+      div_main.appendChild(article_new);
     } else {
       let json_script = getArticleJsonScript();
       if (json_script) {
@@ -2657,12 +2618,12 @@ else if (matchDomain('telegraaf.nl')) {
               if (intro)
                 json_text = json_text.replace(intro.innerText + '\n\n', '');
               let text_array = json_text.split('\\n');
-              text_array.forEach(p_text => {
+              for (let p_text of text_array) {
                 let p_div = document.createElement('p');
                 p_div.innerText = p_text;
                 p_div.style = par_style;
                 div_elem.appendChild(p_div);
-              });
+              };
               div_main.appendChild(div_elem);
             }
           }

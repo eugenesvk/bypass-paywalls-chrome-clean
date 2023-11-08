@@ -8,6 +8,7 @@ Add Haymarket Medical Network (opt-in to custom sites)
 Remove Observador.pt (fix obsolete)
 Fix Bloomberg (overlay)
 Fix Groupe Rossel (link to archive.is)
+Fix Telegraaf.nl (images)
 Fix The Diplomat
 Update custom sites (delete default sites)
 
