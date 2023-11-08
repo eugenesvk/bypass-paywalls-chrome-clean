@@ -6,6 +6,7 @@ Post-release
 Add Haymarket Media Group (opt-in to custom sites)
 Add Haymarket Medical Network (opt-in to custom sites)
 Remove Observador.pt (fix obsolete)
+Fix Belfast Telegraph/Independent.ie
 Fix Bloomberg (overlay)
 Fix Groupe Rossel (link to archive.is)
 Fix Telegraaf.nl (images)

@@ -670,6 +670,11 @@
     "cs_code": "[{\"cond\":\"div.c-memberships-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"body.access-restricted\",\"rm_class\":\"access-restricted\"}]}]",
     "domain": "stateaffairs.com"
   },
+  "Stripes.com": {
+    "allow_cookies": 1,
+    "block_regex": "js\\.pelcro\\.com",
+    "domain": "stripes.com"
+  },
   "Suedkurier.de": {
     "add_ext_link": "aside.article-paywall|section.article-content",
     "add_ext_link_type": "archive.is",

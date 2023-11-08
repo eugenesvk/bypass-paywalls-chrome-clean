@@ -2602,8 +2602,8 @@ else if (matchDomain('telegraaf.nl')) {
       let placeholders = article_new.querySelectorAll('div.TeaserImage__placeholder');
       for (let elem of placeholders)
         elem.removeAttribute('class');
-      let newsletter = article_new.querySelector('div.NewsletterForm');
-      removeDOMElement(newsletter);
+      let media = article_new.querySelectorAll('div.NewsletterForm, div.DetailArticleVideo');
+      removeDOMElement(...media);
       div_main.appendChild(article_new);
     } else {
       let json_script = getArticleJsonScript();
@@ -2687,14 +2687,12 @@ else if (matchDomain('autocar.co.uk')) {
 }
 
 else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
-  let flip_pay = document.querySelector('div#flip-pay[style]');
-  if (flip_pay && dompurify_loaded) {
+  let flip_pay = document.querySelector('div#flip-pay');
+  if (flip_pay && flip_pay.hasChildNodes() && dompurify_loaded) {
     let content = document.querySelector('script[data-fragment-type="ArticleContent"]');
     if (content) {
-      window.setTimeout(function () {
-        let fade = document.querySelector('div[class*="_fadetowhite"]');
-        removeDOMElement(flip_pay, fade);
-      }, 500);
+      let fade = document.querySelector('div[class*="_fadetowhite"]');
+      removeDOMElement(flip_pay, fade);
       let intro = document.querySelector('div > div[data-auth-intro="article"]');
       if (intro) {
         let intro_par = intro.querySelector('p[class]');
@@ -2745,7 +2743,7 @@ else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
                         elem.appendChild(document.createElement('br'));
                       }
                     }
-                  } else if (!['ad', 'streamone'].includes(type)) {
+                  } else if (!['ad', 'quote', 'streamone'].includes(type)) {
                     let html = parser.parseFromString('<p class="' + intro_par_class + '">' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</p>', 'text/html');
                     elem = html.querySelector('p');
                     if (!['p', 'subhead', 'legacy-ml'].includes(type)) {
@@ -2765,8 +2763,7 @@ else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
           }
         }
       }
-    } else
-      flip_pay.removeAttribute('style');
+    }
   }
   let ads = document.querySelectorAll('div[id^="ad_article"]');
   hideDOMElement(...ads);
@@ -2993,7 +2990,7 @@ else if (matchDomain('stylist.co.uk')) {
                   }
                 } else if (!['newsletter_signup', 'pull-quote'].includes(par.acf_fc_layout))
                   console.log(par);
-                if (elem.hasChildNodes) {
+                if (elem.hasChildNodes()) {
                   elem.style = 'font-family: "Source Serif Pro"; font-size: 20px; line-height: 34px;';
                   article.appendChild(elem);
                 }
@@ -5052,7 +5049,7 @@ else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
               } else {
                 console.log(par);
               }
-              if (elem.hasChildNodes) {
+              if (elem.hasChildNodes()) {
                 article.appendChild(document.createElement('br'));
                 article.appendChild(elem);
               }
@@ -5194,7 +5191,7 @@ else if (matchDomain('theverge.com')) {
               }
             } else
               console.log(par);
-            if (elem.hasChildNodes)
+            if (elem.hasChildNodes())
               article.appendChild(elem);
           }
         }
