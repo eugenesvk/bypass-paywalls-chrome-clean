@@ -1520,16 +1520,6 @@ else if (matchDomain(['lavanguardia.com', 'mundodeportivo.com'])) {
   hideDOMElement(...ads);
 }
 
-else if (matchDomain('observador.pt')) {
-  if (!window.location.pathname.endsWith('/amp/')) {
-    amp_redirect('body.premium-article', {rm_class: "premium-article"});
-    let ads = document.querySelectorAll('div.obs-ad-placeholder');
-    hideDOMElement(...ads);
-  } else {
-    amp_unhide_subscr_section('amp-ad, amp-consent, section > .modal');
-  }
-}
-
 else if (matchDomain('politicaexterior.com')) {
   let paywall = document.querySelector('div[class^="paywall-"]');
   if (paywall) {
