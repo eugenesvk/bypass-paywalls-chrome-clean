@@ -12,6 +12,7 @@ Fix Groupe Rossel (link to archive.is)
 Fix Telegraaf.nl (images)
 Fix The Diplomat
 Update custom sites (delete default sites)
+Update Leaky Paywall (identify more sites)
 
 * v3.4.1.0 (2023-11-05)
 Add Jane's Defence Weekly
