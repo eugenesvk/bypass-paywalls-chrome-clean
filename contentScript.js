@@ -2290,7 +2290,7 @@ else if (matchDomain(it_gedi_domains)) {
     }
   } else {
     if (!window.location.pathname.match(/\amp(\/)?$/)) {
-      let paywall = document.querySelector('div#paywall');
+      let paywall = document.querySelector('div#ph-paywall');
       removeDOMElement(paywall);
     } else
       ampToHtml();

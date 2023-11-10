@@ -9,6 +9,7 @@ Remove Observador.pt (fix obsolete)
 Fix Belfast Telegraph/Independent.ie
 Fix Bloomberg (overlay)
 Fix Groupe Rossel (link to archive.is)
+Fix Italian.tech (GEDI.it)
 Fix Telegraaf.nl (images)
 Fix The Diplomat
 Update custom sites (delete default sites)
@@ -178,7 +179,7 @@ Update custom sites (add_ext_link: Google Search Tool)
 
 * v3.2.9.0 (2023-08-13)
 Add 4 more Lee Enterprises Group sites
-Add LaStampa.it (GEDI)
+Add LaStampa.it (GEDI.it)
 Add The American Conservative
 Add The Week (UK & USA)
 Remove The Hollywood Reporter (no paywall)
