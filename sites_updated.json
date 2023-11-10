@@ -175,6 +175,13 @@
     "block_regex": "subs\\.theepochtimes\\.com\\/rules\\/get",
     "upd_version": "3.4.0.8"
   },
+  "The Globe and Mail": {
+    "domain": "theglobeandmail.com",
+    "block_js_inline": "\\.theglobeandmail\\.com\\/.+\\/article-.+\\?rel=premium",
+    "block_regex": "smartwall\\.theglobeandmail\\.com\\/",
+    "cs_code": "[{\"cond\":\"html.no-js\", \"rm_class\":\"no-js\"}]",
+    "upd_version": "3.4.1.7"
+  },
   "The Hindu": {
     "domain": "thehindu.com",
     "allow_cookies": 1,

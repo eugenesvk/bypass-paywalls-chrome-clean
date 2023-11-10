@@ -4893,6 +4893,9 @@ else if (matchDomain('theglobeandmail.com')) {
       window.location.href = window.location.pathname + '?rel=premium';
     }
   } else {
+    let html_nojs = document.querySelector('html.no-js');
+    if (html_nojs)
+      html_nojs.classList.remove('no-js');
     let header_hidden = document.querySelectorAll('div.o-primary-header, div.c-article-meta');
     for (let elem of header_hidden)
       elem.setAttribute('style', 'display: block !important;');

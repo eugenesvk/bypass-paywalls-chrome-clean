@@ -12,6 +12,7 @@ Fix Groupe Rossel (link to archive.is)
 Fix Italian.tech (GEDI.it)
 Fix Telegraaf.nl (images)
 Fix The Diplomat
+Fix The Globe and Mail (css)
 Update block general paywall script (fix TownNews)
 Update custom sites (delete default sites)
 Update Leaky Paywall (identify more sites)
