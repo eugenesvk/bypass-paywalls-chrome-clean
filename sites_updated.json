@@ -2,9 +2,9 @@
   "Albuquerque Journal": {
     "domain": "abqjournal.com",
     "allow_cookies": 1,
-    "block_regex": "\\.abqjournal\\.com\\/.+\\/tncms\\/api\\/access\\.js",
+    "block_regex": "\\.abqjournal\\.com\\/.+\\/tncms\\/api\\/access\\..+\\.js",
     "cs_dompurify": 1,
-    "upd_version": "3.3.9.8"
+    "upd_version": "3.4.1.6"
   },
   "Amplitude": {
     "domain": "amplitude.com",
@@ -124,6 +124,24 @@
     "cs_code": "[{\"cond\":\"section.article__content--restricted-media\", \"rm_class\":\"article__content--restricted-media\"}]",
     "upd_version": "3.4.0.4"
   },
+  "Lee Enterprises Group": {
+    "domain": "###_usa_lee_ent",
+    "group": [
+      "buffalonews.com",
+      "journalnow.com",
+      "journalstar.com",
+      "madison.com",
+      "nwitimes.com",
+      "omaha.com",
+      "richmond.com",
+      "stltoday.com",
+      "tucson.com",
+      "tulsaworld.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.com\\/.+\\/tncms\\/api\\/access\\..+\\.js",
+    "upd_version": "3.4.1.6"
+  },
   "Schweizer Monat": {
     "domain": "schweizermonat.ch",
     "allow_cookies": 1,
@@ -186,5 +204,27 @@
     "domain": "spectator.com.au",
     "useragent": "googlebot",
     "upd_version": "3.3.9.3"
+  },
+  "The Toronto Star (+ local TorStar sites)": {
+    "domain": "###_ca_torstar",
+    "group": [
+      "niagarafallsreview.ca",
+      "stcatharinesstandard.ca",
+      "thepeterboroughexaminer.com",
+      "therecord.com",
+      "thespec.com",
+      "thestar.com",
+      "wellandtribune.ca"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/(script|.+\\/tncms\\/api\\/access\\..+)\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_dompurify": 1,
+    "upd_version": "3.4.1.6"
+  },
+  "TownNews sites (Blox CMS)": {
+    "domain": "###_usa_townnews",
+    "block_regex_general": "\\/tncms\\/api\\/access(\\..+)?\\.js",
+    "cs_dompurify": 1,
+    "upd_version": "3.4.1.6"
   }
 }

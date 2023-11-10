@@ -27,7 +27,7 @@ var defaultSites = {
   "Albuquerque Journal": {
     domain: "abqjournal.com",
     allow_cookies: 1,
-    block_regex: /\.abqjournal\.com\/.+\/tncms\/api\/access\.js/,
+    block_regex: /\.abqjournal\.com\/.+\/tncms\/api\/access\..+\.js/,
     cs_dompurify: 1
   },
   "Algemeen Dagblad (+ regional; link to archive.is)": {
@@ -1381,7 +1381,7 @@ var defaultSites = {
       "tulsaworld.com"
     ],
     allow_cookies: 1,
-    block_regex: /\.com\/.+\/tncms\/api\/access\.js/
+    block_regex: /\.com\/.+\/tncms\/api\/access\..+\.js/
   },
   "Les Échos": {
     domain: "lesechos.fr",
@@ -2431,7 +2431,7 @@ var defaultSites = {
       "wellandtribune.ca"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/(script|.+\\/tncms\\/api\\/access)\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    block_regex: "(\\.{domain}\\/(script|.+\\/tncms\\/api\\/access\\..+)\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     cs_dompurify: 1
   },
   "The Verge (newsletter)": {
@@ -2737,7 +2737,8 @@ var defaultSites = {
   },
   "TownNews sites (Blox CMS)": {
     domain: "###_usa_townnews",
-    block_regex_general: /\/tncms\/api\/access\.js/
+    block_regex_general: /\/tncms\/api\/access(\..+)?\.js/,
+    cs_dompurify: 1
   },
   "TribDss": {
     domain: "tribdss.com",

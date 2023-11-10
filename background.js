@@ -1415,8 +1415,6 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
               if (!set_var_sites.includes(custom_domain))
                 set_var_sites.push(custom_domain);
             } else if (group === '###_usa_townnews') {
-              if (!dompurify_sites.includes(custom_domain))
-                dompurify_sites.push(custom_domain);
               if (['berkshireeagle.com'].includes(custom_domain))
                 rules.useragent = 'googlebot';
             }
