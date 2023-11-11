@@ -14,7 +14,7 @@ var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 't
 var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
-var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de', 'verlagshaus-jaumann.de'];
+var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
 var de_vrm_custom_domains = ['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
@@ -1137,7 +1137,7 @@ else if (matchDomain('springermedizin.de')) {
   }
 }
 
-else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de']) || matchDomain(de_mhs_custom_domains)) {
+else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de']) || matchDomain(de_mhs_custom_domains)) {
   let banner = document.querySelector('div.mod-paywall');
   removeDOMElement(banner);
 }

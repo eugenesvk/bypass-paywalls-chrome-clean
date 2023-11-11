@@ -647,7 +647,6 @@ Grouped in options:\
 *[Media Group Westfalen](https://mgw.de/portfolio/tageszeitungen)* sites like (opt-in to custom sites for unlisted)\
 [Ruhr Nachrichten](https://www.ruhrnachrichten.de)\
 *Medienholding Süd* sites like (opt-in to custom sites for unlisted)\
-[Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
 [Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
 [Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de)\
 *NOZ/MHN Mediengruppe* sites like\
