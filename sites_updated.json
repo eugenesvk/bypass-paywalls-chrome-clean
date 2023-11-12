@@ -74,7 +74,7 @@
     "allow_cookies": 1,
     "block_regex": "(\\.piano\\.io\\/api\\/tinypass\\.min\\.js|\\.clicrbs\\.com\\.br\\/paywall-api\\/count\\/)",
     "cs_block": 1,
-    "upd_version": "3.3.9.8"
+    "upd_version": "3.4.1.7"
   },
   "Groupe Rossel": {
     "domain": "###_fr_be_groupe_rossel",

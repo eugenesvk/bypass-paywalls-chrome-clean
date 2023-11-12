@@ -312,7 +312,8 @@ var defaultSites = {
   },
   "Business Standard": {
     domain: "business-standard.com",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "California Business Journals": {
     domain: "###_usa_cbj",
@@ -2842,10 +2843,12 @@ var custom_flex_not = {
   "###_usa_townnews": ["bloxdigital.com", "townnews.com"],
   "thewest.com.au": ["perthnow.com.au"]
 }
+var custom_flex;
 var custom_flex_domains;
 var custom_flex_not_domains;
 
 function init_custom_flex_domains() {
+  custom_flex = {};
   custom_flex_domains = [];
   custom_flex_not_domains = [].concat.apply([], Object.values(custom_flex_not));
 }

@@ -9,6 +9,8 @@ Remove Observador.pt (fix obsolete)
 Remove Schwarzwaelder-bote.de (fix obsolete)
 Fix Belfast Telegraph/Independent.ie
 Fix Bloomberg (overlay)
+Fix Business-standard.com (ld_json_next)
+Fix GauchaZH (refresh)
 Fix Groupe Rossel (link to archive.is)
 Fix Italian.tech (GEDI.it)
 Fix Telegraaf.nl (images)
@@ -17,6 +19,7 @@ Fix The Globe and Mail (css)
 Update block general paywall script (fix TownNews)
 Update custom sites (delete default sites)
 Update Leaky Paywall (identify more sites)
+Update popup (toggle for custom flex sites)
 
 * v3.4.1.0 (2023-11-05)
 Add Jane's Defence Weekly

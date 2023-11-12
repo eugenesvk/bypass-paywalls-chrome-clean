@@ -1288,10 +1288,13 @@ function site_switch() {
           isDefaultSite = isUpdatedSite;
       }
       let defaultSite_title = isDefaultSite ? Object.keys(defaultSites).find(key => defaultSites[key].domain === isDefaultSite) : '';
-      let isCustomSite = matchUrlDomain(Object.values(customSites_domains), currentUrl);
+      let isCustomSite = matchUrlDomain(customSites_domains, currentUrl);
       let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite || (customSites[key].group && customSites[key].group.split(',').includes(isCustomSite))) : '';
-      let site_title = defaultSite_title || customSite_title;
-      let domain = isDefaultSite || isCustomSite;
+      let isCustomFlexSite = matchUrlDomain(custom_flex_domains, currentUrl);
+      let isCustomFlexGroupSite = isCustomFlexSite ? Object.keys(custom_flex).find(key => custom_flex[key].includes(isCustomFlexSite)) : '';
+      let customFlexSite_title = isCustomFlexGroupSite ? Object.keys(defaultSites).find(key => defaultSites[key].domain === isCustomFlexGroupSite) : '';
+      let site_title = defaultSite_title || customSite_title || customFlexSite_title;
+      let domain = isDefaultSite || isCustomSite || isCustomFlexGroupSite;
       if (domain && site_title) {
         let added_site = [];
         let removed_site = [];
@@ -1408,7 +1411,11 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     if (group) {
       let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom', '###_uk_delinian'];
       if (!custom_flex_domains.includes(custom_domain)) {
+        custom_flex[group] = custom_flex[group] ? custom_flex[group].push(custom_domain) : [custom_domain];
+        custom_flex_domains.push(custom_domain);
         if (enabledSites.includes(group)) {
+          if (!enabledSites.includes(custom_domain))
+            enabledSites.push(custom_domain);
           let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
           if (rules) {
             if (group === '###_de_madsack') {
@@ -1421,14 +1428,12 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
           } else
             rules = Object.values(customSites).filter(x => x.domain === group)[0];
           if (rules) {
-            custom_flex_domains.push(custom_domain);
-            if (!enabledSites.includes(custom_domain))
-              enabledSites.push(custom_domain);
             customFlexAddRules(custom_domain, rules);
           }
-        } else if (disabledSites.includes(group))
-          custom_flex_not_domains.push(custom_domain);
-        else if (nofix_groups.includes(group))
+        } else if (disabledSites.includes(group)) {
+          if (!disabledSites.includes(custom_domain))
+            disabledSites.push(custom_domain);
+        } else if (nofix_groups.includes(group))
           nofix_sites.push(custom_domain);
     }
   } else
@@ -1454,9 +1459,10 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
         let isExcludedSite = matchUrlDomain(excludedSites, currentUrl);
         if (!isExcludedSite) {
           let isDefaultSite = matchUrlDomain(defaultSites_domains, currentUrl);
-          let isCustomSite = matchUrlDomain(Object.values(customSites_domains), currentUrl);
+          let isCustomSite = matchUrlDomain(customSites_domains, currentUrl);
           let isUpdatedSite = matchUrlDomain(updatedSites_domains_new, currentUrl);
-          domain = isDefaultSite || isCustomSite || isUpdatedSite;
+          let isCustomFlexSite = matchUrlDomain(custom_flex_domains, currentUrl);
+          domain = isDefaultSite || isCustomSite || isUpdatedSite || isCustomFlexSite;
           if (domain)
             ext_api.runtime.sendMessage({
               msg: "popup_show_toggle",

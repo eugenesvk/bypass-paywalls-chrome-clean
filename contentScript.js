@@ -781,9 +781,8 @@ else if (matchDomain('faz.net')) {
                 if (json_text && article_text) {
                   let pars = article_text.querySelectorAll('p.atc-TextParagraph');
                   removeDOMElement(...pars);
-                  json_text = breakText(json_text);
-                  json_text.split("\n\n").forEach(
-                    (p_text) => {
+                  json_text = breakText_faz(json_text).split("\n\n");
+                  for (let p_text of json_text) {
                     let elem;
                     if (p_text.length < 80) {
                       elem = document.createElement("h2");
@@ -794,7 +793,7 @@ else if (matchDomain('faz.net')) {
                     };
                     elem.innerText = p_text;
                     article_text.appendChild(elem);
-                  });
+                  };
                 } else {
                   let json_script = getArticleJsonScript();
                   if (json_script) {
@@ -3286,10 +3285,10 @@ else if (matchDomain('blogfolha.uol.com.br')) {
 
 else if (matchDomain('gauchazh.clicrbs.com.br')) {
   window.setTimeout(function () {
-    let blink = document.querySelector('div.body.blink');
+    let blink = document.querySelector('div:not(.hidden) > div.body.blink');
     if (blink) {
       csDoneOnce = true;
-      refreshCurrentTab_bg();
+      refreshCurrentTab();
     }
   }, 2000);
   let ads = document.querySelectorAll('div.ad-banner, div.ad-container');
@@ -3454,6 +3453,9 @@ else if (matchDomain('barandbench.com')) {
   let paywall = document.querySelector('div#paywall-banner');
   if (paywall) {
     removeDOMElement(paywall);
+    let fade = document.querySelector('div[class^="paywall-story-styles-"]');
+    if (fade)
+      fade.removeAttribute('class');
     let json_script = getArticleJsonScript();
     if (json_script) {
       let json = JSON.parse(json_script.text);
@@ -3557,23 +3559,39 @@ else if (matchDomain('bqprime.com')) {
 }
 
 else if (matchDomain('business-standard.com')) {
-  if (!window.location.pathname.startsWith('/amp/')) {
-    let paywall = document.querySelector('div.subscribe-page');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let json_script = getArticleJsonScript();
-      if (json_script) {
+  function bs_main(node) {
+    removeDOMElement(node);
+    let json_script = document.querySelector('script#__NEXT_DATA__');
+    if (json_script) {
+      try {
         let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text = breakText(parseHtmlEntities(json.articleBody));
+        if (json && json.props.pageProps.data.htmlContent) {
+          let json_text = json.props.pageProps.data.htmlContent;
           let content = document.querySelector('div.storycontent');
           if (json_text && content) {
-            content.innerHTML = '';
-            let article_new = document.createElement('p');
-            article_new.innerText = json_text;
-            content.appendChild(article_new);
+            let intro = content.querySelectorAll('div:not([class]');
+            removeDOMElement(...intro);
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div');
+            content.firstChild.before(content_new);
           }
-        }
+        } else
+          refreshCurrentTab();
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+  if (!window.location.pathname.startsWith('/amp/')) {
+    if (dompurify_loaded) {
+      let paywall_sel = 'div.subscribe-page';
+      let paywall = document.querySelector(paywall_sel);
+      if (paywall) {
+        bs_main(paywall)
+      } else {
+        csDoneOnce = true;
+        waitDOMElement(paywall_sel, 'DIV', bs_main, false);
       }
     }
     let banner = document.querySelector('section.sbcrbtmlfull');
@@ -5086,6 +5104,9 @@ else if (matchDomain('thenewsminute.com')) {
   let paywall = document.querySelector('div#paywall-banner');
   if (paywall) {
     removeDOMElement(paywall);
+    let fade = document.querySelector('div[class^="paywall-story-styles-"]');
+    if (fade)
+      fade.removeAttribute('class');
     let json_script = getArticleJsonScript();
     if (json_script) {
       let json = JSON.parse(json_script.text);
@@ -6069,10 +6090,15 @@ function pageContains(selector, text) {
 function breakText(str) {
   str = str.replace(/(?:^|[A-Za-z\"\“\)])(\.|\?|!)(?=[A-ZÖÜ\„\d][A-Za-zÀ-ÿ\„\d]{1,})/gm, "$&\n\n");
   str = str.replace(/(([a-z]{2,}|[\"\“]))(?=[A-Z](?=[A-Za-zÀ-ÿ]+))/gm, "$&\n\n");
+  return str;
+}
+
+function breakText_faz(str) {
+  str = breakText(str);
   // exceptions: names with alternating lower/uppercase (no general fix)
-  let str_rep_arr = ['AstraZeneca', 'BaFin', 'BerlHG', 'BfArM', 'BilMoG', 'BioNTech', 'DiGA', 'EuGH', 'FinTechRat', 'GlaxoSmithKline', 'IfSG', 'medRxiv', 'mmHg', 'PlosOne', 'StVO'];
-  let str_rep_split,
-  str_rep_src;
+  let str_rep_arr = ['AstraZeneca', 'BaFin', 'BerlHG', 'BfArM', 'BilMoG', 'BioNTech', 'ChatGPT', 'DiGA', 'EuGH', 'FinTechRat', 'GlaxoSmithKline', 'IfSG', 'medRxiv', 'mmHg', 'OpenAI', 'PlosOne', 'StVO'];
+  let str_rep_split;
+  let str_rep_src;
   for (let str_rep of str_rep_arr) {
     str_rep_split = str_rep.split(/([a-z]+)(?=[A-Z](?=[A-Za-z]+))/);
     str_rep_src = str_rep_split.reduce(function (accumulator, currentValue) {
