@@ -1619,7 +1619,7 @@ else if (matchDomain('elle.fr')) {
 
 else if (matchDomain(fr_be_groupe_rossel)) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.qiota_reserve, r-panel.r-paywall--header');
+  let paywall = document.querySelector('div.qiota_reserve, r-panel.r-paywall--header, r-panel.r-panel--paywall');
   if (paywall) {
     removeDOMElement(paywall);
     let article = document.querySelector('article');
