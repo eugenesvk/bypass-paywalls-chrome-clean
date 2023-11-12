@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+
+* v3.4.2.0 (2023-11-12)
 Add Haymarket Media Group (opt-in to custom sites)
 Add Haymarket Medical Network (opt-in to custom sites)
 Remove Observador.pt (fix obsolete)
