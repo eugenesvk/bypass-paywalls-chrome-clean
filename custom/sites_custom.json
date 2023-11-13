@@ -499,7 +499,7 @@
   },
   "Nu.nl": {
     "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.login-wall\",\"rm_elem\":1,\"elems\":[{\"cond\":\"div.authorized-content\",\"rm_class\":\"authorized-content\"}]}]",
+    "cs_code": "[{\"cond\":\"article#LOGIN\",\"rm_elem\":1},{\"cond\":\"div.authorized-content\",\"rm_class\":\"authorized-content\"}]",
     "domain": "nu.nl"
   },
   "Nv.ua": {

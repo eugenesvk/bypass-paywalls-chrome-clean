@@ -34,6 +34,13 @@
     "ld_json_url": "div.register-login-box|div.m-article>div.paywall",
     "upd_version": "3.4.0.8"
   },
+  "Freie Presse": {
+    "domain": "freiepresse.de",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.freiepresse\\.de\\/.+-artikel",
+    "ld_google_webcache": "div.article-teaser|article",
+    "upd_version": "3.4.2.3"
+  },
   "GaúchaZH": {
     "domain": "gauchazh.clicrbs.com.br",
     "allow_cookies": 1,

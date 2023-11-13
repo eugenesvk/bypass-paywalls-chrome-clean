@@ -826,16 +826,27 @@ else if (matchDomain('faz.net')) {
 }
 
 else if (matchDomain('freiepresse.de')) {
-  let url = window.location.href;
-  let article_teaser = document.querySelector('div.article-teaser');
-  if (article_teaser && url.match(/(\-artikel)(\d){6,}/)) {
+  if (window.location.pathname.includes('-artikel')) {
+    let url = window.location.href;
+    let paywall = document.querySelector('div.article-teaser');
+    if (paywall) {
+      removeDOMElement(paywall);
+      csDoneOnce = true;
+      let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+      replaceDomElementExt(url_cache, true, false, 'article');
+    }
     window.setTimeout(function () {
-      window.location.href = url.replace('-artikel', '-amp');
-    }, 500);
-  } else if (url.match(/(\-amp)(\d){6,}/)) {
-    let amp_ads = document.querySelectorAll('amp-fx-flying-carpet, amp-ad, amp-embed');
-    let pw_layer = document.querySelector('.pw-layer');
-    hideDOMElement(...amp_ads, pw_layer);
+      let lazy_images = document.querySelectorAll('picture.lazy');
+      for (let elem of lazy_images) {
+        elem.removeAttribute('class');
+        let source = elem.querySelector('source[data-srcset]');
+        if (source) {
+          let img_new = document.createElement('img');
+          img_new.src = source.getAttribute('data-srcset').split(' ')[0];
+          source.parentNode.replaceChild(img_new, source);
+        }
+      }
+    }, 1000);
   }
 }
 

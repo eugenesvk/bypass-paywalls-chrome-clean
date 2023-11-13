@@ -704,7 +704,8 @@ var defaultSites = {
   "Freie Presse": {
     domain: "freiepresse.de",
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
+    block_js_inline: /\.freiepresse\.de\/.+-artikel/,
+    cs_dompurify: 1
   },
   "Funke Mediengruppe": {
     domain: "###_de_funke_medien",

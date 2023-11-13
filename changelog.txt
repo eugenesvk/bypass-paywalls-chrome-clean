@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Doorbraak.be
 Add Moda.it (GEDI.it)
+Fix FreiePresse.de
 
 * v3.4.2.0 (2023-11-12)
 Add Haymarket Media Group (opt-in to custom sites)
