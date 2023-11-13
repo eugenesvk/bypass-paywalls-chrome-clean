@@ -963,12 +963,13 @@ var defaultSites = {
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/,
     useragent: "googlebot"
   },
-  "Gruppo GEDI.it (italian.tech, lastampa.it, lescienze.it & espresso.repubblica.it)": {
+  "Gruppo GEDI.it (listed sites only)": {
     domain: "###_it_gedi",
     group: [
       "italian.tech",
       "lastampa.it",
       "lescienze.it",
+      "moda.it",
       "espresso.repubblica.it"
     ],
     allow_cookies: 1,

@@ -681,7 +681,8 @@ Grouped in options:\
 [Italian.tech](https://www.italian.tech) -
 [L'Espresso](https://espresso.repubblica.it) -
 [La Stampa](https://www.lastampa.it) -
-[Le Scienze](https://www.lescienze.it)
+[Le Scienze](https://www.lescienze.it) -
+[Moda & Beauty](https://www.moda.it)
 
 [Il Messaggero](https://www.ilmessaggero.it) and regional sites like
 [Corriere Adriatico](https://www.corriereadriatico.it) -

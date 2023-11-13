@@ -6,17 +6,6 @@
     "cs_dompurify": 1,
     "upd_version": "3.4.1.6"
   },
-  "Amplitude": {
-    "domain": "amplitude.com",
-    "allow_cookies": 1,
-    "block_regex_general": "\\.amplitude\\.com\\/",
-    "excluded_domains": ["amplitude.com"],
-    "upd_version": "3.3.9.7"
-  },
-  "Apollo Magazine": {
-    "domain": "apollo-magazine.com",
-    "upd_version": "3.3.9.3"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
@@ -29,18 +18,6 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "ld_json_url": "div.article--cropped|div#body-copy|1",
     "upd_version": "3.4.0.7"
-  },
-  "CartaCapital": {
-    "domain": "cartacapital.com.br",
-    "allow_cookies": 1,
-    "ld_json": "aside.paywall|section.s-content__text|1",
-    "upd_version": "3.3.9.8"
-  },
-  "Cosmopolitan.fr": {
-    "domain": "cosmopolitan.fr",
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com\/",
-    "upd_version": "3.3.9.8"
   },
   "El País": {
     "domain": "elpais.com",
@@ -56,18 +33,6 @@
     "block_js_inline": "\\/epoch\\.org\\.il\\/",
     "ld_json_url": "div.register-login-box|div.m-article>div.paywall",
     "upd_version": "3.4.0.8"
-  },
-  "Financial News (London)": {
-    "domain": "fnlondon.com",
-    "allow_cookies": 1,
-    "referer": "twitter",
-    "upd_version": "3.3.9.8"
-  },
-  "Frankfurter Allgemeine Zeitung": {
-    "domain": "faz.net",
-    "allow_cookies": 1,
-    "ld_json": "header.atc-Header span.ico-Base_FazPlus, div.art_topic > img.plus-icon|div.atc-Text.js-atc-Text",
-    "upd_version": "3.3.9.6"
   },
   "GaúchaZH": {
     "domain": "gauchazh.clicrbs.com.br",
@@ -96,12 +61,6 @@
     "add_ext_link": "div.qiota_reserve, r-panel.r-paywall--header, r-panel.r-panel--paywall|article",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.1.8"
-  },
-  "Harvard Business Review": {
-    "domain": "hbr.org",
-    "block_regex": "cdn\\.cxense\\.com\\/",
-    "remove_cookies_select_drop": ["xbc"],
-    "upd_version": "3.3.9.1"
   },
   "L'Opinion": {
     "domain": "lopinion.fr",
@@ -182,18 +141,6 @@
     "cs_code": "[{\"cond\":\"html.no-js\", \"rm_class\":\"no-js\"}]",
     "upd_version": "3.4.1.7"
   },
-  "The Hindu": {
-    "domain": "thehindu.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "upd_version": "3.3.9.5"
-  },
-  "The Hindu BusinessLine": {
-    "domain": "thehindubusinessline.com",
-    "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|\\.piano\\.io\\/xbuilder\\/experience\\/execute|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "upd_version": "3.3.9.5"
-  },
   "The Impression": {
     "domain": "theimpression.com",
     "allow_cookies": 1,
@@ -206,11 +153,6 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "The Spectator Australia": {
-    "domain": "spectator.com.au",
-    "useragent": "googlebot",
-    "upd_version": "3.3.9.3"
   },
   "The Toronto Star (+ local TorStar sites)": {
     "domain": "###_ca_torstar",
