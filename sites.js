@@ -499,6 +499,11 @@ var defaultSites = {
     block_regex: /(\.editorialedomani\.it\/pelcro\.js|js\.pelcro\.com\/)/,
     useragent: "googlebot"
   },
+  "Doorbraak.be": {
+    domain: "doorbraak.be",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "DPG Media (not ADR)": {
     domain: "###_nl_dpg_media",
     group: [

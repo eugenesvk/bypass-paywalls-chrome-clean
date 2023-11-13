@@ -2367,6 +2367,36 @@ if (matchDomain(be_groupe_ipm_domains)) {
   hideDOMElement(...ads);
 }
 
+else if (matchDomain('doorbraak.be')) {
+  let paywall_sel = 'div.paywall';
+  let paywall = document.querySelector(paywall_sel);
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    waitDOMElement(paywall_sel, 'DIV', removeDOMElement, false);
+    let json_script = document.querySelector('script#__NUXT_DATA__');
+    if (json_script) {
+      try {
+        if (!json_script.text.substr(0, 500).includes(window.location.pathname))
+          refreshCurrentTab();
+        let json = JSON.parse(json_script.text);
+        json = json.filter(x => typeof x === 'string' && x.startsWith('<p>'));
+        let json_text = json[0];
+        if (json_text) {
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          let article = document.querySelector('div > div.prose');
+          if (article) {
+            article.appendChild(content_new);
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+}
+
 else if (matchDomain('fd.nl')) {
   let paywall = document.querySelectorAll('section.upsell, div.upsell-modal-background');
   if (paywall.length) {

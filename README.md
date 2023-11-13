@@ -702,6 +702,7 @@ Grouped in options:\
 
 ##### Netherlands/Flanders
 [De Tijd](https://www.tijd.be) -
+[Doorbraak](https://doorbraak.be) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -

@@ -206,6 +206,7 @@
     "*://*.digiday.com/*",
     "*://*.discovermagazine.com/*",
     "*://*.dna.fr/*",
+    "*://*.doorbraak.be/*",
     "*://*.dvhn.nl/*",
     "*://*.eastbaytimes.com/*",
     "*://*.eastwest.eu/*",
@@ -806,5 +807,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.2.1"
+  "version": "3.4.2.2"
 }
