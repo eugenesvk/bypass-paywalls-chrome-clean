@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Doorbraak.be
 Add Moda.it (GEDI.it)
+Add Welt.de (link to archive.is)
 Fix FreiePresse.de
 
 * v3.4.2.0 (2023-11-12)

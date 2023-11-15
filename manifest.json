@@ -742,6 +742,7 @@
     "*://*.waz.de/*",
     "*://*.weeklytimesnow.com.au/*",
     "*://*.wellandtribune.ca/*",
+    "*://*.welt.de/*",
     "*://*.weltkunst.de/*",
     "*://*.westernadvocate.com.au/*",
     "*://*.westfalen-blatt.de/*",
@@ -807,5 +808,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.2.3"
+  "version": "3.4.2.4"
 }

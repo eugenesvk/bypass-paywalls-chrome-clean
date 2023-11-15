@@ -19,6 +19,13 @@
     "ld_json_url": "div.article--cropped|div#body-copy|1",
     "upd_version": "3.4.0.7"
   },
+  "Die Welt": {
+    "domain": "welt.de",
+    "allow_cookies": 1,
+    "add_ext_link": "div.contains_walled_content|article",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.2.4"
+  },
   "El País": {
     "domain": "elpais.com",
     "allow_cookies": 1,

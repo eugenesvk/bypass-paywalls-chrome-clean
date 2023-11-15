@@ -1233,6 +1233,19 @@ else if (matchDomain('vol.at')) {
     ampToHtml();
 }
 
+else if (matchDomain('welt.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div.contains_walled_content');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('article');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+  let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
+  removeDOMElement(...ads);
+}
+
 else if (matchDomain('zeit.de')) {
   let url = window.location.href.split(/[#\?]/)[0];
   let paywall = document.querySelector('aside#paywall');
@@ -3549,7 +3562,7 @@ else if (matchDomain('bloomberg.com')) {
     }, 15 * 60 * 1000);
   }
   window.setTimeout(function () {
-    let shimmering = document.querySelector('div[class^="Placeholder_placeholderParagraphWrapper-"]');
+    let shimmering = document.querySelector('article.first-story div[class^="Placeholder_placeholderParagraphWrapper-"]');
     if (shimmering) {
       header_nofix(shimmering.parentNode, 'BPC > disable Dark Reader or enable Javascript for site');
     }
