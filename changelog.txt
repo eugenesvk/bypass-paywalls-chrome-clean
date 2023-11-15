@@ -7,6 +7,7 @@ Add Doorbraak.be
 Add Moda.it (GEDI.it)
 Add Welt.de (link to archive.is)
 Fix FreiePresse.de
+Fix South China Morning Post (css)
 
 * v3.4.2.0 (2023-11-12)
 Add Haymarket Media Group (opt-in to custom sites)

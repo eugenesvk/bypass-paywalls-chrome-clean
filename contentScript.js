@@ -4582,7 +4582,10 @@ else if (matchDomain('scmp.com')) {
     let section_hidden = document.querySelectorAll('section[data-qa="ContentBody-ContentBodyContainer"][class]');
     for (let elem of section_hidden)
       elem.removeAttribute('class');
-    let ads = document.querySelectorAll('div[data-qa*="AdSlot"]');
+    let paywalled = document.querySelector('div.paywalled-content');
+    if (paywalled)
+      paywalled.removeAttribute('class');
+    let ads = document.querySelectorAll('div[data-qa*="AdSlot"], div.adblock-message');
     hideDOMElement(...ads);
   }
 }
