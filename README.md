@@ -132,7 +132,14 @@ Grouped in options:\
 [Crain's Detroit Business](https://www.crainsdetroit.com) -
 [Crain's New York Business](https://www.crainsnewyork.com) -
 [Modern Healthcare](https://www.modernhealthcare.com) -
-[Pensions & Investments](https://www.pionline.com)
+[Pensions & Investments](https://www.pionline.com)\
+Global Polymer Group:
+[European Rubber Journal](https://www.european-rubber-journal.com) -
+[Plastics News](https://www.plasticsnews.com) -
+[Rubber News](https://www.rubbernews.com) -
+[Sustainable Plastics](https://www.sustainableplastics.com) -
+[Tire Business](https://www.tirebusiness.com) -
+[Urethanes Technology International](https://www.utech-polyurethane.com)
 
 *[Inside Retail](https://octomedia.com.au/our-brands/inside-retail)* sites (opt-in to custom sites)
 

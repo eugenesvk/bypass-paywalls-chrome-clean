@@ -431,13 +431,24 @@ var defaultSites = {
       "crainscleveland.com",
       "crainsdetroit.com",
       "crainsnewyork.com",
+      "european-rubber-journal.com",
       "genomeweb.com",
       "modernhealthcare.com",
       "pionline.com",
-      "precisionmedicineonline.com"
+      "plasticsnews.com",
+      "precisionmedicineonline.com",
+      "rubbernews.com",
+      "sustainableplastics.com",
+      "tirebusiness.com",
+      "utech-polyurethane.com"
     ],
     allow_cookies: 1,
-    block_regex: /(js\.pelcro\.com\/|\.com\/.+\/js\/js_.+\.js)/
+    block_regex: /(js\.pelcro\.com\/|\.com\/.+\/js\/js_.+\.js)/,
+    exception: [{
+        domain: "european-rubber-journal.com",
+        allow_cookies: 1,
+      }
+    ]
   },
   "Crikey.com.au": {
     domain: "crikey.com.au",

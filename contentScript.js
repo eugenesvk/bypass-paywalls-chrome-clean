@@ -40,7 +40,7 @@ var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
 var usa_arizent_custom_domains = ['accountingtoday.com', 'benefitnews.com', 'bondbuyer.com', 'dig-in.com', 'financial-planning.com', 'nationalmortgagenews.com'];
 var usa_conde_nast_domains = ['architecturaldigest.com', 'bonappetit.com', 'cntraveler.com', 'epicurious.com', 'gq.com' , 'newyorker.com', 'vanityfair.com', 'vogue.com', 'wired.com'];
-var usa_craincomm_domains = ['360dx.com', 'adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'genomeweb.com', 'modernhealthcare.com', 'pionline.com', 'precisionmedicineonline.com'];
+var usa_craincomm_domains = ['360dx.com', 'adage.com', 'autonews.com', 'chicagobusiness.com', 'crainscleveland.com', 'crainsdetroit.com', 'crainsnewyork.com', 'european-rubber-journal.com', 'genomeweb.com', 'modernhealthcare.com', 'pionline.com', 'plasticsnews.com', 'precisionmedicineonline.com', 'rubbernews.com', 'sustainableplastics.com', 'tirebusiness.com', 'utech-polyurethane.com'];
 var usa_gannett_domains = ['azcentral.com', 'cincinnati.com', 'commercialappeal.com', 'courier-journal.com', 'democratandchronicle.com', 'detroitnews.com', 'freep.com', 'indystar.com', 'jsonline.com', 'knoxnews.com', 'news-press.com', 'northjersey.com', 'oklahoman.com', 'statesman.com', 'tennessean.com'];
 var usa_hearst_comm_domains = ['expressnews.com', 'houstonchronicle.com', 'sfchronicle.com'];
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'journalstar.com', 'madison.com', 'nwitimes.com', 'omaha.com', 'richmond.com', 'stltoday.com', 'tucson.com', 'tulsaworld.com'];
@@ -2115,6 +2115,15 @@ else if (matchDomain('eastwest.eu')) {
     let intro = document.querySelectorAll('div#testo_articolo > p, div#testo_articolo > h3');
     let offerta = document.querySelectorAll('div.offerta_abbonamenti');
     removeDOMElement(...intro, ...offerta);
+  }
+}
+
+else if (matchDomain('editorialedomani.it')) {
+  if (window.location.search.startsWith('?amp=1'))
+    ampToHtml();
+  else {
+    let ads = document.querySelectorAll('div.ad-container');
+    hideDOMElement(...ads);
   }
 }
 
@@ -5396,19 +5405,30 @@ else if (matchDomain(usa_conde_nast_domains)) {
 }
 
 else if (matchDomain(usa_craincomm_domains)) {
-  let body_hidden = document.querySelector('body[class]');
-  if (body_hidden)
-    body_hidden.removeAttribute('class');
-  let lazy_images = document.querySelectorAll('img.lazy[data-src]');
-  for (let lazy_image of lazy_images) {
-    lazy_image.src = lazy_image.getAttribute('data-src');
-    lazy_image.removeAttribute('class');
+  if (matchDomain('european-rubber-journal.com')) {
+    let paywall = document.querySelector('div.article-overlay');
+    if (paywall) {
+      let fade = document.querySelector('div.gradient');
+      removeDOMElement(paywall, fade);
+      let truncated = document.querySelector('div.truncated');
+      if (truncated)
+        truncated.classList.remove('truncated');
+    }
+  } else {
+    let body_hidden = document.querySelector('body[class]');
+    if (body_hidden)
+      body_hidden.removeAttribute('class');
+    let lazy_images = document.querySelectorAll('img.lazy[data-src]');
+    for (let lazy_image of lazy_images) {
+      lazy_image.src = lazy_image.getAttribute('data-src');
+      lazy_image.removeAttribute('class');
+    }
+    let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
+    removeDOMElement(...lazy_sources);
+    let sponsored_article = document.querySelector('div.sponsored-article');
+    if (sponsored_article)
+      sponsored_article.classList.remove('sponsored-article');
   }
-  let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
-  removeDOMElement(...lazy_sources);
-  let sponsored_article = document.querySelector('div.sponsored-article');
-  if (sponsored_article)
-    sponsored_article.classList.remove('sponsored-article');
   let banners = document.querySelectorAll('div.footer__ads-footer');
   hideDOMElement(...banners);
 }
@@ -5848,6 +5868,7 @@ function amp_iframes_replace(weblink = false, source = '') {
       amp_iframe.parentNode.replaceChild(elem, amp_iframe);
     } else {
       par = document.createElement('p');
+      par.style = 'margin: 20px 0px;';
       elem = document.createElement('a');
       elem.innerText = 'Media-link';
       elem.setAttribute('href', amp_iframe.getAttribute('src'));
