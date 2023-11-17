@@ -638,11 +638,6 @@ var defaultSites = {
     domain: "euobserver.com",
     allow_cookies: 1
   },
-  "Eureka Report": {
-    domain: "eurekareport.com.au",
-    allow_cookies: 1,
-    useragent: "googlebot"
-  },
   "Evening Standard (UK)": {
     domain: "standard.co.uk",
     allow_cookies: 1,

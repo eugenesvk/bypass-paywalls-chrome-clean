@@ -50,10 +50,10 @@ Specifically for the add-on you can also use Firefox Beta or a Firefox clone lik
 * download add-on's xpi-file (custom version if you want to use custom sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox
 * now you can update Firefox to the latest version
 * add-on will stay active & automatically updates to the latest version
-* in add-ons it will be labeled as not yet available and also has no more option to enable the add-on in private browsing (in Firefox 116+ it may only show the option on automatic update of the add-on)
 
-The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url (Settings > Advanced settings > Sideload XPI).\
-No option to enable the add-on in private browsing though.
+The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url (Settings > Advanced settings > Sideload XPI).
+
+Or install a [cloned amo-version](https://www.google.com/search?q=bypass+paywalls+clean+addons.mozilla.org+-lee) in Firefox for Android 120+.
 
 Or switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters)
 
@@ -838,7 +838,6 @@ Grouped in options:\
 ##### Australia/New Zealand
 
 [Crikey](https://www.crikey.com.au) -
-[Eureka Report](https://www.eurekareport.com.au) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
