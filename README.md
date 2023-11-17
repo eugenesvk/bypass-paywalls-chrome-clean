@@ -825,9 +825,9 @@ Grouped in options:\
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Le Temps](https://www.letemps.ch) -
-[Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)](https://www.nzz.ch) -
 [Schweizer Monat](https://schweizermonat.ch) -
-[The Market](https://themarket.ch)
+[The Market](https://themarket.ch)\
+[Neue Zürcher Zeitung](https://www.nzz.ch) (+ regional/CH Media; opt-in to custom sites)
 
 Grouped in options:\
 *[Groupe ESH Médias](https://www.eshmedias.ch)* sites like\
@@ -838,7 +838,6 @@ Grouped in options:\
 ##### Australia/New Zealand
 
 [Crikey](https://www.crikey.com.au) -
-[Intelligent Investor](https://www.intelligentinvestor.com.au) -
 [MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
@@ -880,7 +879,10 @@ Grouped in options:\
 [The Examiner](https://www.examiner.com.au) -
 [The Northern Daily Leader](https://www.northerndailyleader.com.au) -
 [The Standard](https://www.standard.net.au) -
-[Western Advocate](https://www.westernadvocate.com.au)
+[Western Advocate](https://www.westernadvocate.com.au)\
+*InvestSmart* sites like\
+[InvestSmart](https://www.investsmart.com.au) -
+[Intelligent Investor](https://www.intelligentinvestor.com.au)
 
 ##### East Asia
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -

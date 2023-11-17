@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Doorbraak.be
+Add InvestSmart.com.au
 Add Moda.it (GEDI.it)
 Add Global Polymer Group (Crain)
 Add Welt.de (link to archive.is)

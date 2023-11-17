@@ -86,7 +86,7 @@ if (bg2csData.ld_json && dompurify_loaded) {
             }
             if (json_text) {
               let parser = new DOMParser();
-              let doc = parser.parseFromString('<div style="margin: 25px 0px">' + DOMPurify.sanitize(json_text, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
+              let doc = parser.parseFromString('<div style="margin: 25px 0px">' + DOMPurify.sanitize(breakText(json_text).replace(/\n\n/g, '<br><br>'), {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
               let article_new = doc.querySelector('div');
               if (article_append || !article.parentNode) {
                 article.innerHTML = '';

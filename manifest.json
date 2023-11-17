@@ -341,6 +341,7 @@
     "*://*.intrafish.com/*",
     "*://*.intrafish.no/*",
     "*://*.investorschronicle.co.uk/*",
+    "*://*.investsmart.com.au/*",
     "*://*.ipolitics.ca/*",
     "*://*.irishtimes.com/*",
     "*://*.italian.tech/*",
@@ -813,5 +814,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.2.6"
+  "version": "3.4.2.7"
 }

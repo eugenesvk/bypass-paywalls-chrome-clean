@@ -76,6 +76,12 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.1.8"
   },
+  "Investsmart.com.au": {
+    "domain": "investsmart.com.au",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.4.2.7"
+  },
   "L'Opinion": {
     "domain": "lopinion.fr",
     "allow_cookies": 1,
