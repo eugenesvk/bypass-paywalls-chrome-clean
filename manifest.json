@@ -552,6 +552,7 @@
     "*://*.pressenterprise.com/*",
     "*://*.prevention.com/*",
     "*://*.profi.de/*",
+    "*://*.profil.at/*",
     "*://*.project-syndicate.org/*",
     "*://*.prospectmagazine.co.uk/*",
     "*://*.public.fr/*",
@@ -814,5 +815,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.2.7"
+  "version": "3.4.2.8"
 }

@@ -7,6 +7,7 @@ Add Doorbraak.be
 Add InvestSmart.com.au
 Add Moda.it (GEDI.it)
 Add Global Polymer Group (Crain)
+Add Profil.at
 Add Welt.de (link to archive.is)
 Remove EurekaReport.com.au (domain obsolete)
 Fix FreiePresse.de

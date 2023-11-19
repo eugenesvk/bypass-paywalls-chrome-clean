@@ -1081,6 +1081,16 @@ else if (matchDomain('philomag.de')) {
   }
 }
 
+else if (matchDomain('profil.at')) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall) {
+    paywall.removeAttribute('class');
+    paywall.removeAttribute('style');
+    let fade = document.querySelector('div#cfs-paywall-container');
+    hideDOMElement(fade);
+  }
+}
+
 else if (matchDomain('schwaebische.de')) {
   let url = window.location.href;
   let paywall = document.querySelector('div > div.sve-paywall-wrapper_overlay');

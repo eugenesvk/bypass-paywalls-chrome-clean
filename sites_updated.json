@@ -121,6 +121,13 @@
     "block_regex": "\\.com\\/.+\\/tncms\\/api\\/access\\..+\\.js",
     "upd_version": "3.4.1.6"
   },
+  "Profil.at": {
+    "domain": "profil.at",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/",
+    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]",
+    "upd_version": "3.4.2.8"
+  },
   "Schweizer Monat": {
     "domain": "schweizermonat.ch",
     "allow_cookies": 1,
