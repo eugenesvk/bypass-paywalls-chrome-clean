@@ -12,6 +12,7 @@ Add Welt.de (link to archive.is)
 Remove EurekaReport.com.au (domain obsolete)
 Fix FreiePresse.de
 Fix South China Morning Post (css)
+Fix Tech in Asia (css)
 
 * v3.4.2.0 (2023-11-12)
 Add Haymarket Media Group (opt-in to custom sites)
