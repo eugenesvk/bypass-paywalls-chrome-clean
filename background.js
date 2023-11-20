@@ -1411,7 +1411,10 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     if (group) {
       let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom', '###_uk_delinian'];
       if (!custom_flex_domains.includes(custom_domain)) {
-        custom_flex[group] = custom_flex[group] ? custom_flex[group].push(custom_domain) : [custom_domain];
+        if (custom_flex[group])
+          custom_flex[group].push(custom_domain);
+        else
+          custom_flex[group] = [custom_domain];
         custom_flex_domains.push(custom_domain);
         if (enabledSites.includes(group)) {
           if (!enabledSites.includes(custom_domain))

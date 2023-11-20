@@ -2500,9 +2500,9 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > lin
   let paywall = document.querySelector('div.signupPlus, div.pw-wrapper');
   if (paywall && dompurify_loaded) {
     let intro = document.querySelector('div.startPayWall');
-    removeDOMElement(paywall, intro);
     let html = document.documentElement.outerHTML;
     if (html.includes('window.__NUXT__=')) {
+      removeDOMElement(paywall, intro);
       try {
         let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
         let url_nuxt = json.includes(',canonical:"') ? json.split(',canonical:"')[1].match(/\d+\.(html|ece)/)[0] : false;
