@@ -2269,7 +2269,8 @@ var defaultSites = {
     domain: "hilltimes.com",
     allow_cookies: 1,
     block_regex: /\.hilltimes\.com\/.+\/js\/loadingoverlay\/loadingoverlay\.min\.js/,
-    useragent: "googlebot"
+    useragent: "googlebot",
+    cs_dompurify: 1
   },
   "The Hindu": {
     domain: "thehindu.com",
