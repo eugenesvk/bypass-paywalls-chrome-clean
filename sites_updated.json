@@ -40,6 +40,18 @@
     "cs_block": 1,
     "upd_version": "3.4.1.7"
   },
+  "Groupe Nice-Matin": {
+    "domain": "###_fr_groupe_nice_matin",
+    "group": [
+      "monacomatin.mc",
+      "nicematin.com",
+      "varmatin.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div#poool-widget-content\", \"rm_elem\":1}]",
+    "upd_version": "3.4.3.4"
+  },
   "Groupe Rossel": {
     "domain": "###_fr_be_groupe_rossel",
     "group": [

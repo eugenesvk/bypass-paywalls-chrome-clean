@@ -1731,7 +1731,7 @@ else if (matchDomain(fr_groupe_nice_matin_domains)) {
     if (paywall)
       paywall.removeAttribute('id');
   }
-  let ads = document.querySelectorAll('div[class^="ad-slot-"]');
+  let ads = document.querySelectorAll('div[class^="ad-slot-"], div#poool-widget-content, div[class*="Rhoo"]');
   hideDOMElement(...ads);
 }
 
