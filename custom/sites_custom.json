@@ -681,12 +681,6 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
   },
-  "Tagesspiegel.de": {
-    "add_ext_link": "div#paywal|div.article--paid",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "tagesspiegel.de"
-  },
   "Taxscan.in": {
     "allow_cookies": 1,
     "domain": "taxscan.in",

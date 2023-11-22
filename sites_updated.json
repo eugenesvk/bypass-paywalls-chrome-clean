@@ -12,12 +12,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "Bulletin of the Atomic Scientists": {
-    "domain": "thebulletin.org",
+  "Der Tagesspiegel": {
+    "domain": "tagesspiegel.de",
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "ld_json_url": "div.article--cropped|div#body-copy|1",
-    "upd_version": "3.4.0.7"
+    "add_ext_link": "div#paywal,div#pw|div.article--paid,div.tslr-article>p",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.3.3"
   },
   "Die Welt": {
     "domain": "welt.de",
@@ -25,21 +25,6 @@
     "add_ext_link": "div.contains_walled_content|article",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.2.4"
-  },
-  "El País": {
-    "domain": "elpais.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.elpais\\.com\\/.+\\.html",
-    "block_regex": "(\\/elpais\\.com\\/arc\\/subs\\/p\\.min\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div.a_b_wall\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.4.0.5"
-  },
-  "Epoch.org.il": {
-    "domain": "epoch.org.il",
-    "allow_cookies": 1,
-    "block_js_inline": "\\/epoch\\.org\\.il\\/",
-    "ld_json_url": "div.register-login-box|div.m-article>div.paywall",
-    "upd_version": "3.4.0.8"
   },
   "Freie Presse": {
     "domain": "freiepresse.de",
@@ -82,27 +67,6 @@
     "useragent": "googlebot",
     "upd_version": "3.4.2.7"
   },
-  "L'Opinion": {
-    "domain": "lopinion.fr",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.4.0.6"
-  },
-  "Le Figaro (link to archive.is)": {
-    "domain": "lefigaro.fr",
-    "allow_cookies": 1,
-    "add_ext_link": "div#fig-premium-paywall|div.fig-content-body",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.0.4"
-  },
-  "Le Monde (link to archive.is)": {
-    "domain": "lemonde.fr",
-    "allow_cookies": 1,
-    "add_ext_link": "section.paywall|article",
-    "add_ext_link_type": "archive.is",
-    "cs_code": "[{\"cond\":\"section.article__content--restricted-media\", \"rm_class\":\"article__content--restricted-media\"}]",
-    "upd_version": "3.4.0.4"
-  },
   "Lee Enterprises Group": {
     "domain": "###_usa_lee_ent",
     "group": [
@@ -128,27 +92,12 @@
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]",
     "upd_version": "3.4.2.8"
   },
-  "Schweizer Monat": {
-    "domain": "schweizermonat.ch",
-    "allow_cookies": 1,
-    "ld_json_url": "div.entry-paywall-login|div.entry-main > div.entry__post-content",
-    "upd_version": "3.4.0.7"
-  },
   "South China Morning Post": {
     "domain": "scmp.com",
     "allow_cookies": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
     "cs_code": "[{\"cond\":\"div.paywalled-content\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.4.2.5"
-  },
-  "Süddeutsche Zeitung (link to archive.is)": {
-    "domain": "sueddeutsche.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div#sz-paywall|div.article-content,div.text",
-    "add_ext_link_type": "archive.is",
-    "block_regex": "\\.sueddeutsche\\.de\\/api\\/tinypass\\.min\\.js",
-    "cs_code": "[{\"cond\":\"p.sz-article-body__paragraph--reduced\", \"rm_class\":\"sz-article-body__paragraph--reduced\"}]",
-    "upd_version": "3.4.0.5"
   },
   "The Diplomat (refresh magazine)": {
     "domain": "thediplomat.com",
@@ -162,24 +111,12 @@
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
   },
-  "The Epoch Times": {
-    "domain": "theepochtimes.com",
-    "allow_cookies": 1,
-    "block_regex": "subs\\.theepochtimes\\.com\\/rules\\/get",
-    "upd_version": "3.4.0.8"
-  },
   "The Globe and Mail": {
     "domain": "theglobeandmail.com",
     "block_js_inline": "\\.theglobeandmail\\.com\\/.+\\/article-.+\\?rel=premium",
     "block_regex": "smartwall\\.theglobeandmail\\.com\\/",
     "cs_code": "[{\"cond\":\"html.no-js\", \"rm_class\":\"no-js\"}]",
     "upd_version": "3.4.1.7"
-  },
-  "The Impression": {
-    "domain": "theimpression.com",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div#modalpostsubscribe\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.blureffect\", \"rm_class\":\"blureffect\"}]}]",
-    "upd_version": "3.4.0.2"
   },
   "The New York Times": {
     "domain": "nytimes.com",

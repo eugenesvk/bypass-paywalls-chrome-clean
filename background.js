@@ -38,6 +38,7 @@ var restrictions = {
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
+  'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,

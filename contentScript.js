@@ -1178,6 +1178,17 @@ else if (matchDomain('sueddeutsche.de')) {
   }
 }
 
+else if (matchDomain('tagesspiegel.de')) {
+  let url = window.location.href;
+  let paywall = document.querySelector('div#paywal, div#pw');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.article--paid, div.tslr-article > p');
+    if (article)
+      article.firstChild.before(archiveLink(url));
+  }
+}
+
 else if (matchDomain('vn.at')) {
   if (window.location.href.match(/\.vn\.at\/.+\/\d{4}\//)) {
     let paywall = document.querySelector('div.paywalled-content');

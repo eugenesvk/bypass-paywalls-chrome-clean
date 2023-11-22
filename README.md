@@ -597,6 +597,7 @@ Grouped in options:\
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -
 [Cicero](https://www.cicero.de) -
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -
+[Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Die Welt (link to archive.is)](https://www.welt.de) -
 [Die Zeit (link to archive.is)](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -

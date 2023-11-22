@@ -637,6 +637,7 @@
     "*://*.svz.de/*",
     "*://*.swarajyamag.com/*",
     "*://*.syracuse.com/*",
+    "*://*.tagesspiegel.de/*",
     "*://*.tampabay.com/*",
     "*://*.techinasia.com/*",
     "*://*.technologyreview.com/*",
@@ -815,5 +816,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.3.2"
+  "version": "3.4.3.3"
 }
