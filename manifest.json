@@ -3,13 +3,6 @@
     "scripts": ["sites.js", "bpc_count_daily_users.js", "background.js"]
   },
   "content_security_policy": "script-src 'self'; object-src 'self'",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "magnolia@12.34",
-      "update_url": "https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/raw/master/updates.json",
-      "strict_min_version": "86.0"
-    }
-  },
   "browser_action": {
     "default_popup": "options/popup.html",
     "default_icon": {
