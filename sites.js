@@ -2515,6 +2515,11 @@ var defaultSites = {
       }
     ]
   },
+  "Tiroler Tageszeitung": {
+    domain: "tt.com",
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\/xbuilder\/experience\/execute/
+  },
   "Tribune Publishing Company": {
     domain: "###_usa_tribune",
     group: [

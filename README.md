@@ -619,6 +619,7 @@ Grouped in options:\
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
 [Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
+[Tiroler Tageszeitung](https://www.tt.com) -
 [Volksstimme](https://www.volksstimme.de) -
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -

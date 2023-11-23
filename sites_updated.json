@@ -153,6 +153,13 @@
     "cs_dompurify": 1,
     "upd_version": "3.4.1.6"
   },
+  "Tiroler Tageszeitung": {
+    "domain": "tt.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "cs_code": "[{\"cond\":\".exclusive-elem\", \"rm_class\":\"exclusive-elem\"}]",
+    "upd_version": "3.4.3.5"
+  },
   "TownNews sites (Blox CMS)": {
     "domain": "###_usa_townnews",
     "block_regex_general": "\\/tncms\\/api\\/access(\\..+)?\\.js",

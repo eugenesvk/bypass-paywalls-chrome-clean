@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Tagesspiegel.de (link to archive.is)
+Add Tiroler Tageszeitung
 Fix Groupe Nice-Matin (css)
 Fix The Hill Times (ld_json_url)
 Update popup (fix toggle for custom flex sites)
