@@ -133,8 +133,6 @@ window.setTimeout(function () {
           group = '###_fr_synerj';
         else if (!matchDomain('institutionalinvestor.com') && (matchDomain('thedeal.com') || document.querySelector('footer.Page-footer a.Link[href="https://www.delinian.com/privacy-policy"]')))
           group = '###_uk_delinian';// no fix
-        else if (document.querySelector('head > link[href*=".com/wp-content/themes/madavor/"]'))
-          group = '###_usa_madavor';
         else if (matchDomain(['centralmaine.com', 'pressherald.com', 'sunjournal.com']))
           group = '###_usa_maine_trust';
         else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))

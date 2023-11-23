@@ -272,7 +272,6 @@ Grouped in options:\
 [Town & Country](https://www.townandcountrymag.com) -
 [Women's Health](https://www.womenshealthmag.com)
 
-*[Madavor Media](https://www.madavor.com/brands)* sites (opt-in to custom sites)\
 *Outside magazines* sites like\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -

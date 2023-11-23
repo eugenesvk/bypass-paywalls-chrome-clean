@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Tagesspiegel.de (link to archive.is)
 Add Tiroler Tageszeitung
+Remove Madavor Media (domains obsolete)
 Fix Groupe Nice-Matin (css)
 Fix The Hill Times (ld_json_url)
 Update popup (fix toggle for custom flex sites)
@@ -766,7 +767,7 @@ Update block general paywall script (Leaky Paywall/Wordpress)
 * v2.8.5.0 (2022-09-18)
 Add 60 Millions de consommateurs
 Add BusinessPost.ie
-Add Madavor Media sites (opt-in to custom sites)
+Add Madavor Media (opt-in to custom sites)
 Add Private Equity News
 Add TheNewEuropean.co.uk
 Add Weltkunst.de

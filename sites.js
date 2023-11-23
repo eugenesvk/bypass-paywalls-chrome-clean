@@ -1445,11 +1445,6 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Madavor Media (opt-in to custom sites)": {
-    domain: "###_usa_madavor",
-    group: [],
-    cs_code: "[{\"cond\": \"div.free-articles-remaining\", \"rm_elem\": 1}]"
-  },
   "Madsack Mediengruppe": {
     domain: "###_de_madsack",
     group: [
