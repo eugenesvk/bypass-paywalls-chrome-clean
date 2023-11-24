@@ -211,6 +211,8 @@ Grouped in options:\
 [First Things](https://www.firstthings.com) -
 [Harper's Magazine](https://harpers.org) -
 [Jane's Defence Weekly](https://www.janes.com/defence-news/) -
+[Jazziz](https://www.jazziz.com) -
+[Jazzwise](https://www.jazzwise.com) -
 [National Review](https://www.nationalreview.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
 [Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -

@@ -79,6 +79,12 @@
     "useragent": "googlebot",
     "upd_version": "3.4.2.7"
   },
+  "Jazziz.com": {
+    "allow_cookies": 1,
+    "domain": "jazziz.com",
+    "ld_json_url": "div.emoxie-pay-wall|div.restricted-content",
+    "upd_version": "3.4.3.6"
+  },
   "Lee Enterprises Group": {
     "domain": "###_usa_lee_ent",
     "group": [

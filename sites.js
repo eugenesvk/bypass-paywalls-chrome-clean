@@ -1216,6 +1216,16 @@ var defaultSites = {
     domain: "janes.com",
     allow_cookies: 1
   },
+  "Jazziz": {
+    domain: "jazziz.com",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
+  "Jazzwise": {
+    domain: "jazzwise.com",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Junge Freiheit": {
     domain: "jungefreiheit.de",
     allow_cookies: 1,

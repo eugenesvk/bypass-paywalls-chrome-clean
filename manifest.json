@@ -349,6 +349,8 @@
     "*://*.jacobin.de/*",
     "*://*.janes.com/*",
     "*://*.japantimes.co.jp/*",
+    "*://*.jazziz.com/*",
+    "*://*.jazzwise.com/*",
     "*://*.jgnt.co/*",
     "*://*.journaldemontreal.com/*",
     "*://*.journaldequebec.com/*",
@@ -817,5 +819,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.3.5"
+  "version": "3.4.3.6"
 }
