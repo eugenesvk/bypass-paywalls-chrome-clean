@@ -777,7 +777,6 @@ Grouped in options:\
 [El Diario.es](https://www.eldiario.es) -
 [El Español](https://www.elespanol.com) -
 [El País](https://elpais.com) -
-[El Periódico de Catalunya](https://www.elperiodico.com) -
 [La Vanguardia](https://www.lavanguardia.com) -
 [Mundo Deportivo](https://www.mundodeportivo.com) -
 [Política Exterior](https://www.politicaexterior.com)
@@ -789,6 +788,7 @@ Grouped in options:\
 *Grupo Prensa Ibérica* sites like (opt-in to custom sites for unlisted)\
 [Diario de Mallorca](https://www.diariodemallorca.es) -
 [El Día](https://www.eldia.es) -
+[El Periódico de Catalunya](https://www.elperiodico.com) -
 [El Periódico de España](https://www.epe.es) -
 [Faro de Vigo](https://www.farodevigo.es) -
 [Información](https://www.informacion.es) -

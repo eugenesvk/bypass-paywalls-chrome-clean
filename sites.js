@@ -596,11 +596,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.elpais\.com\.uy\/user\/authStatus|\.evolok\.net\/|cdn\.cxense\.com\/)/
   },
-  "El Periódico (de Catalunya)": {
-    domain: "elperiodico.com",
-    allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
-  },
   "El Tiempo": {
     domain: "eltiempo.com",
     allow_cookies: 1,
@@ -942,6 +937,7 @@ var defaultSites = {
     group: [
       "diariodemallorca.es",
       "eldia.es",
+      "elperiodico.com",
       "epe.es",
       "farodevigo.es",
       "informacion.es",

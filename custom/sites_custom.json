@@ -71,6 +71,7 @@
   "Brusselstimes.com": {
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "cs_code": "[{\"cond\":\"div[style*='height: 0;']\", \"rm_attrib\":\"style\"}]",
     "domain": "brusselstimes.com"
   },
   "Bt.no": {
@@ -450,6 +451,11 @@
     "allow_cookies": 1,
     "domain": "mining-journal.com",
     "ld_json": "div.article-teaser|div.article-content>p"
+  },
+  "Museumsassociation.org": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"body[style]\", \"rm_attrib\":\"style\"}, {\"cond\":\"div#paywall-wrapper,div.advertising\", \"rm_elem\":1}]}]",
+    "domain": "museumsassociation.org"
   },
   "Nacion.com": {
     "allow_cookies": 1,

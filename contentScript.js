@@ -18,7 +18,7 @@ var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', '
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
 var de_vrm_custom_domains = ['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de'];
 var de_westfalen_medien_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
-var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
+var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'elperiodico.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
@@ -1507,34 +1507,6 @@ else if (matchDomain('elpais.com')) {
   }
 }
 
-else if (matchDomain('elperiodico.com')) {
-  let url = window.location.href;
-  if (!url.includes('amp.elperiodico.com')) {
-    let div_hidden = document.querySelector('div.closed');
-    if (div_hidden)
-      div_hidden.classList.remove('closed');
-    else {
-      let paywall = document.querySelector('.ep-masPeriodico-info-login');
-      removeDOMElement(paywall);
-      if (paywall)
-        window.location.href = url.replace('www.', 'amp.');
-    }
-  } else {
-    let not_logged = document.querySelector('.ep-masPeriodico-info-login');
-    if (not_logged) {
-      removeDOMElement(not_logged);
-      amp_unhide_access_hide('^="logged"', '^="NOT logged"');
-    }
-    window.setTimeout(function () {
-      let amp_img = document.querySelectorAll('amp-img > img');
-      for (let elem of amp_img) {
-        if (elem.src)
-          elem.src = elem.src.replace('amp.elperiodico.com/clip/', 'estaticos-cdn.elperiodico.com/clip/');
-      }
-    }, 3000);
-  }
-}
-
 else if (matchDomain(es_grupo_vocento_domains)) {
   let paywall_sel = '.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style*="display: none;"])';
   let paywall = document.querySelector(paywall_sel);
@@ -1559,10 +1531,17 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
     if (truncated)
       truncated.classList.remove('article-body--truncated');
     amp_unhide_access_hide('="NOT access"], [amp-access="FALSE"', '="access"');
-  } else if (window.location.hostname === 'amp.epe.es') {
+  } else if (['amp.elperiodico.com', 'amp.epe.es'].includes(window.location.hostname)) {
     amp_unhide_access_hide('="loggedIn"', '="NOT loggedIn"', 'amp-ad, amp-embed, amp-next-page');
+    let amp_images = document.querySelectorAll('div > amp-img[src]');
+    for (let amp_image of amp_images) {
+      let elem = document.createElement('img');
+      elem.src = amp_image.getAttribute('src');
+      elem.style = 'margin: 0px 50px;';
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
   } else {
-    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.sidebar--sticky__space, div[data-bbnx-id*="cxense"]');
+    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.sidebar--sticky__space, div[data-bbnx-id*="cxense"], div.container-ad');
     hideDOMElement(...ads);
   }
 }
@@ -2976,8 +2955,8 @@ else if (matchDomain('prospectmagazine.co.uk')) {
 }
 
 else if (matchDomain('spectator.co.uk')) {
-  let banner = document.querySelector('#subscribe-ribbon');
-  removeDOMElement(banner);
+  let banners = document.querySelectorAll('#subscribe-ribbon, div.ad-slot');
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('stylist.co.uk')) {
