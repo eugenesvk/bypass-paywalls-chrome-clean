@@ -690,8 +690,9 @@ Grouped in options:\
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
+[Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Italian.tech](https://www.italian.tech) -
-[L'Espresso](https://espresso.repubblica.it) -
+[La Repubblica](https://www.repubblica.it) -
 [La Stampa](https://www.lastampa.it) -
 [Le Scienze](https://www.lescienze.it) -
 [Moda & Beauty](https://www.moda.it)

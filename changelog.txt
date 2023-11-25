@@ -3,14 +3,17 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add ilSecoloXIX.it (GEDI.it)
 Add Jazziz
 Add Jazzwise
+Add Repubblica.it (GEDI.it)
 Add Tagesspiegel.de (link to archive.is)
 Add Tiroler Tageszeitung
 Remove Madavor Media (domains obsolete)
 Fix El Periodico de Catalunya (Grupo Prensa Iberica)
 Fix Groupe Nice-Matin (css)
 Fix The Hill Times (ld_json_url)
+Fix TheTimes.co.uk (mobile scroll)
 Update popup (fix toggle for custom flex sites)
 
 * v3.4.3.0 (2023-11-19)
