@@ -2881,7 +2881,7 @@ var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
-  "###_wp_leaky_paywall": ["dominionpost.com", "heisenbergreport.com", "thewirechina.com"],
+  "###_wp_leaky_paywall": ["dominionpost.com", "epsilontheory.com", "heisenbergreport.com", "thewirechina.com"],
   "###_uk_axate.io": ["thecricketer.com", "thinkofx.net"],
   "###_uk_haymarket": ["gpbusiness.co.uk", "scmagazineuk.com", "thecorporatetreasurer.com"],
   "###_uk_haymarket_medical": ["mycme.com"],
