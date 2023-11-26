@@ -275,6 +275,7 @@
     "*://*.franc-tireur.fr/*",
     "*://*.freep.com/*",
     "*://*.freiepresse.de/*",
+    "*://*.freitag.de/*",
     "*://*.fresnobee.com/*",
     "*://*.ft.com/*",
     "*://*.ftm.eu/*",
@@ -820,5 +821,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.3.7"
+  "version": "3.4.3.8"
 }

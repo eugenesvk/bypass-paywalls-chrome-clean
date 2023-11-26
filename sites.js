@@ -477,6 +477,10 @@ var defaultSites = {
     domain: "defector.com",
     remove_cookies_select_drop: ["lede_defector_user"]
   },
+  "Der Freitag": {
+    "domain": "freitag.de",
+    "allow_cookies": 1
+  },
   "Der Spiegel (link to archive.is)": {
     domain: "spiegel.de",
     allow_cookies: 1

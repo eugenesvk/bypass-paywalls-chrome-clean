@@ -249,11 +249,6 @@
     "domain": "flz.de",
     "useragent": "googlebot"
   },
-  "Freitag.de": {
-    "allow_cookies": 1,
-    "domain": "freitag.de",
-    "ld_json": "div.qa-paywall|div#x-article-text"
-  },
   "Frieze.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",

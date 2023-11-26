@@ -597,6 +597,7 @@ Grouped in options:\
 [Bild der Wissenschaft](https://www.wissenschaft.de) -
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -
 [Cicero](https://www.cicero.de) -
+[Der Freitag](https://www.freitag.de) -
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
 [Die Welt (link to archive.is)](https://www.welt.de) -

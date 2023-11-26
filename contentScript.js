@@ -850,6 +850,49 @@ else if (matchDomain('freiepresse.de')) {
   }
 }
 
+else if (matchDomain('freitag.de')) {
+  let paywall = document.querySelector('div.qa-paywall');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let related = document.querySelector('div.c-teaser-plus-related--paywall');
+    if (related)
+      related.classList.remove('c-teaser-plus-related--paywall');
+    let article = document.querySelector('div#x-article-text');
+    if (article) {
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let json_text = breakText(json.articleBody);
+          let pars = json_text.split(/\n\n/g);
+          if (json_text) {
+            let intro = article.querySelectorAll('p');
+            removeDOMElement(...intro);
+            let article_new = document.createElement('div');
+            for (let par of pars) {
+              let par_new = document.createElement('p');
+              par_new.innerText = par;
+              article_new.appendChild(par_new);
+            }
+            article.appendChild(article_new);
+          }
+        }
+      } else {
+        let hidden_article = document.querySelector('div.o-paywall');
+        if (hidden_article) {
+          article.appendChild(document.createTextNode('> > >'));
+          let pars = breakText(hidden_article.innerText).split(/\n\n/g);
+          for (let par of pars) {
+            let par_new = document.createElement('p');
+            par_new.innerText = par;
+            article.appendChild(par_new);
+          }
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('jacobin.de')) {
   let paywall = pageContains('h3.m-auto', 'Dieser Artikel ist nur mit Abo zugänglich.');
   if (paywall.length) {
@@ -4188,23 +4231,13 @@ else if (matchDomain('japantimes.co.jp')) {
       let paywall = document.querySelector('div.blocker > div.tp-container-inner');
       if (paywall) {
         removeDOMElement(paywall.parentNode);
-        let json_script = getArticleJsonScript();
-        if (json_script) {
-          let json = JSON.parse(json_script.text);
-          if (json) {
-            let json_text = json.articleBody;
-            let article = document.querySelector('div.article-body');
-            if (json_text && article) {
-              let article_new = document.createElement('p');
-              article_new.innerText = breakText(json_text);
-              article.innerHTML = '';
-              article.appendChild(article_new);
-              article.classList.remove('blurred-text');
-            }
-          }
+        let article = document.querySelector('div.article-body');
+        if (article) {
+          let url = window.location.href;
+          article.firstChild.before(nftLink(url));
         }
       }
-    }, 1000);
+    }, 2000);
   } else
     ampToHtml();
 }
