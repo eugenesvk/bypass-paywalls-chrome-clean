@@ -122,7 +122,6 @@
     "*://*.bordermail.com.au/*",
     "*://*.bostonglobe.com/*",
     "*://*.bqprime.com/*",
-    "*://*.braunschweiger-zeitung.de/*",
     "*://*.brisbanetimes.com.au/*",
     "*://*.britannica.com/*",
     "*://*.buffalonews.com/*",
@@ -312,6 +311,7 @@
     "*://*.humanite.fr/*",
     "*://*.humo.be/*",
     "*://*.ideal.es/*",
+    "*://*.ikz-online.de/*",
     "*://*.ilfattoquotidiano.it/*",
     "*://*.ilfoglio.it/*",
     "*://*.ilgazzettino.it/*",
@@ -821,5 +821,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.4.0"
+  "version": "3.4.4.1"
 }

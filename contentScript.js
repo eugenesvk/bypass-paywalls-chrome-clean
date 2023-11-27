@@ -11,7 +11,7 @@ var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
 var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
-var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
+var de_funke_medien_domains = ['abendblatt.de', 'ikz-online.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
@@ -859,6 +859,7 @@ else if (matchDomain('freitag.de')) {
       related.classList.remove('c-teaser-plus-related--paywall');
     let article = document.querySelector('div#x-article-text');
     if (article) {
+      let intro = article.querySelectorAll('p');
       let json_script = getArticleJsonScript();
       if (json_script) {
         let json = JSON.parse(json_script.text);
@@ -866,7 +867,6 @@ else if (matchDomain('freitag.de')) {
           let json_text = breakText(json.articleBody);
           let pars = json_text.split(/\n\n/g);
           if (json_text) {
-            let intro = article.querySelectorAll('p');
             removeDOMElement(...intro);
             let article_new = document.createElement('div');
             for (let par of pars) {
@@ -880,12 +880,23 @@ else if (matchDomain('freitag.de')) {
       } else {
         let hidden_article = document.querySelector('div.o-paywall');
         if (hidden_article) {
-          article.appendChild(document.createTextNode('> > >'));
+          let par_first = true;
           let pars = breakText(hidden_article.innerText).split(/\n\n/g);
           for (let par of pars) {
             let par_new = document.createElement('p');
-            par_new.innerText = par;
-            article.appendChild(par_new);
+            let overlap = '';
+            if (par_first) {
+              let intro_last = intro[intro.length - 1];
+              par = par.trim();
+              overlap = findOverlap(intro_last.innerText, par);
+              if (overlap)
+                intro_last.innerText = intro_last.innerText.replace(new RegExp(overlap + '$'), '') + par;
+              par_first = false;
+            }
+            if (!overlap) {
+              par_new.innerText = par;
+              article.appendChild(par_new);
+            }
           }
         }
       }
@@ -1315,7 +1326,7 @@ else if (matchDomain('welt.de')) {
       article.firstChild.before(archiveLink(url));
   }
   let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
-  removeDOMElement(...ads);
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('zeit.de')) {
@@ -1364,11 +1375,8 @@ else if (matchDomain(de_westfalen_medien_domains)) {
   }
 }
 
-else if (matchDomain(de_funke_medien_domains) || document.querySelector('a[href="https://www.funkemedien.de/"]')) {
-  if (window.location.search.startsWith('?service=amp'))
-    amp_unhide_access_hide('="NOT p.showRegWall AND NOT p.showPayWall"', '', 'amp-ad, amp-embed, amp-fx-flying-carpet');
-  else
-    sessionStorage.setItem('deobfuscate', 'true');
+else if (matchDomain(de_funke_medien_domains)) {
+  sessionStorage.setItem('deobfuscate', 'true');
 }
 
 else if (matchDomain(de_madsack_domains) || document.querySelector('head > link[href*=".rndtech.de/"]')) {
@@ -4440,7 +4448,7 @@ else if (matchDomain('newscientist.com')) {
     }
     let ads = document.querySelectorAll('div[class*="Advert"]');
     hideDOMElement(...ads);
-  }, 1000);
+  }, 1500);
 }
 
 else if (matchDomain('newsday.com')) {
@@ -4453,6 +4461,11 @@ else if (matchDomain('newsday.com')) {
     let ads = document.querySelectorAll('div[class^="ad_full-banner_"]');
     hideDOMElement(...ads);
   }
+}
+
+else if (matchDomain('newsweek.com')) {
+  let ads = document.querySelectorAll('div#topad, div[id^="dfp-ad-"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(['nola.com', 'theadvocate.com'])) {
@@ -6190,6 +6203,14 @@ function pageContains(selector, text) {
   return Array.prototype.filter.call(elements, function (element) {
     return RegExp(text).test(element.textContent);
   });
+}
+
+function findOverlap(a, b) {
+  if (b.length === 0)
+    return "";
+  if (a.endsWith(b))
+    return b;
+  return findOverlap(a, b.substring(0, b.length - 1));
 }
 
 function breakText(str) {

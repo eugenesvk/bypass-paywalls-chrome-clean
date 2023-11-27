@@ -630,10 +630,10 @@ Grouped in options:\
 
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
-*Funke Mediengruppe* sites like (opt-in to custom sites for unlisted)\
+*Funke Mediengruppe* sites like\
 [Berliner Morgenpost](https://www.morgenpost.de) -
-[Braunschweiger Zeitung](https://www.braunschweiger-zeitung.de) -
 [Hamburger Abendblatt](https://www.abendblatt.de) -
+[Iserlohner Kreisanzeiger und Zeitung](https://www.ikz-online.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
 [Ostthüringer Zeitung](https://www.otz.de) -
 [Thüringer Allgemeine](https://www.thueringer-allgemeine.de) -
