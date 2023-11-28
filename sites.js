@@ -1679,7 +1679,8 @@ var defaultSites = {
   },
   "New Zealand Herald": {
     domain: "nzherald.co.nz",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.nzherald\.co\.nz\/sales\/public\/v\d\/entitlements/
   },
   "Newsday": {
     domain: "newsday.com",

@@ -100,6 +100,7 @@ function insert_script(func, insertAfterDom) {
     script.setAttribute('id', 'bpc_script');
     script.appendChild(document.createTextNode('(' + func + ')();'));
     let insertAfter = insertAfterDom ? insertAfterDom : (document.body || document.head || document.documentElement);
-    insertAfter.appendChild(script);
+    if (insertAfter)
+      insertAfter.appendChild(script);
   }
 }
