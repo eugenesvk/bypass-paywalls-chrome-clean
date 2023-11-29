@@ -353,7 +353,10 @@ Grouped in options:\
 [The Record (North Jersey)](https://www.northjersey.com) -
 [The Tennessean](https://www.tennessean.com)\
 *Hearst Communications (newspapers)* sites like (opt-in to custom sites for unlisted)\
+[Albany Times Union](https://www.timesunion.com) -
+[Connecticut Post](https://www.ctpost.com) -
 [Houston Chronicle](https://www.houstonchronicle.com) -
+[New Haven Register](https://www.nhregister.com) -
 [San Antonio Express-News](https://www.expressnews.com) -
 [San Francisco Chronicle](https://www.sfchronicle.com)\
 *Lee Enterprises Group* sites like (opt-in to custom sites for unlisted)\

@@ -1063,9 +1063,12 @@ var defaultSites = {
   "Hearst Communications (newspapers)": {
     domain: "###_usa_hearst_comm",
     group: [
+      "ctpost.com",
       "expressnews.com",
       "houstonchronicle.com",
-      "sfchronicle.com"
+      "nhregister.com",
+      "sfchronicle.com",
+      "timesunion.com"
     ],
     allow_cookies: 1,
     block_regex: "(\\.{domain}\\/script\\.js|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)"

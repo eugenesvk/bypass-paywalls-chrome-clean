@@ -180,6 +180,7 @@
     "*://*.cronista.com/*",
     "*://*.crusoe.com.br/*",
     "*://*.csmonitor.com/*",
+    "*://*.ctpost.com/*",
     "*://*.curbed.com/*",
     "*://*.cw.com.tw/*",
     "*://*.dailyadvertiser.com.au/*",
@@ -492,6 +493,7 @@
     "*://*.newstatesman.com/*",
     "*://*.newsweek.com/*",
     "*://*.newyorker.com/*",
+    "*://*.nhregister.com/*",
     "*://*.niagarafallsreview.ca/*",
     "*://*.nicematin.com/*",
     "*://*.nikkei.com/*",
@@ -709,6 +711,7 @@
     "*://*.timeshighereducation.com/*",
     "*://*.timesofindia.com/*",
     "*://*.timesofindia.indiatimes.com/*",
+    "*://*.timesunion.com/*",
     "*://*.tirebusiness.com/*",
     "*://*.tlz.de/*",
     "*://*.topagrar.at/*",
@@ -821,5 +824,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.4.1"
+  "version": "3.4.4.2"
 }
