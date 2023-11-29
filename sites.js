@@ -1390,9 +1390,7 @@ var defaultSites = {
   },
   "Le Parisien": {
     domain: "leparisien.fr",
-    allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//,
-    useragent: "googlebot"
+    allow_cookies: 1
   },
   "Le Point": {
     domain: "lepoint.fr",

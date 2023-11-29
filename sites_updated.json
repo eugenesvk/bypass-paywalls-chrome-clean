@@ -56,6 +56,11 @@
     "ld_json_url": "div.emoxie-pay-wall|div.restricted-content",
     "upd_version": "3.4.3.6"
   },
+  "Le Parisien": {
+    "domain": "leparisien.fr",
+    "allow_cookies": 1,
+    "upd_version": "3.4.4.3"
+  },
   "Profil.at": {
     "domain": "profil.at",
     "allow_cookies": 1,
