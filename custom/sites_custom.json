@@ -288,6 +288,12 @@
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
   },
+  "Group_nation_media": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
+    "domain": "group_nation_media",
+    "group": "monitor.co.ug,nation.africa,thecitizen.co.tz"
+  },
   "Handelsblatt.com (refresh)": {
     "add_ext_link": "app-paywall|app-storyline-paragraph",
     "add_ext_link_type": "archive.is",
@@ -447,6 +453,11 @@
     "domain": "mining-journal.com",
     "ld_json": "div.article-teaser|div.article-content>p"
   },
+  "Mopo.de": {
+    "allow_cookies": 1,
+    "domain": "mopo.de",
+    "ld_json_url": "div#paywall|div.paywall-fade"
+  },
   "Museumsassociation.org": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"body.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"body[style]\", \"rm_attrib\":\"style\"}, {\"cond\":\"div#paywall-wrapper,div.advertising\", \"rm_elem\":1}]}]",
@@ -457,11 +468,6 @@
     "block_regex": "\\.tinypass\\.com",
     "cs_code": "[{\"cond\":\"div.post\", \"rm_elem\":1, \"elems\": [{\"cond\":\"div.article-body-wrapper__styled[style]\", \"rm_attrib\":\"style\"}]}]",
     "domain": "nacion.com"
-  },
-  "Nation.africa": {
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
-    "domain": "nation.africa"
   },
   "Nationalobserver.com": {
     "allow_cookies": 1,

@@ -6,6 +6,7 @@ Post-release
 Add 3 more Hearst newspapers
 Add Ikz-online.de (Funke)
 Remove Braunschweiger-zeitung.de (Funke; fix obsolete)
+Fix Defector
 Fix Freitag.de (text-break)
 Fix La Segunda
 Fix LeParisien.fr (amp-redirect)

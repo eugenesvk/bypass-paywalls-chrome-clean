@@ -475,7 +475,8 @@ var defaultSites = {
   },
   "Defector": {
     domain: "defector.com",
-    remove_cookies_select_drop: ["lede_defector_user"]
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Der Freitag": {
     "domain": "freitag.de",

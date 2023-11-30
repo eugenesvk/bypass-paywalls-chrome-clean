@@ -2688,7 +2688,7 @@ else if (matchDomain('telegraaf.nl')) {
     }
     if (window_script) {
       removeDOMElement(paywall);
-      let window_text = window_script.text.split('window.telegraaf.articleBodyBlocks')[1].replace(/(^\s?=\s?"|";$|\\")/gm, '').replace(/\\\\u003c/gm, '<');
+      let window_text = window_script.text.split('window.telegraaf.articleBodyBlocks')[1].split('window.telegraaf.')[0].replace(/(^\s?=\s?"|";$|\\")/gm, '').replace(/\\\\u003c/gm, '<');
       let parser = new DOMParser();
       let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(window_text) + '</div>', 'text/html');
       let article_new = doc.querySelector('div');
@@ -3789,7 +3789,30 @@ else if (matchDomain('dallasnews.com')) {
 
 else if (matchDomain('defector.com')) {
   let paywall = document.querySelector('div[class^="ContentGate_wrapper__"]');
-  removeDOMElement(paywall);
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let article_sel = 'div[class^="PostContent_wrapper__"]';
+    let article = document.querySelector(article_sel);
+    if (article) {
+      window.setTimeout(function () {
+        let pars = article.querySelectorAll('p');
+        if (pars.length < 3) {
+          let url = window.location.href.split('?')[0];
+          fetch(url)
+          .then(response => {
+            if (response.ok) {
+              response.text().then(html => {
+                let parser = new DOMParser();
+                let doc = parser.parseFromString(DOMPurify.sanitize(html, {ADD_TAGS: ['iframe'], ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'target']}), 'text/html');
+                let article_new = doc.querySelector(article_sel);
+                article.parentNode.replaceChild(article_new, article);
+              });
+            }
+          });
+        }
+      }, 1000);
+    }
+  }
 }
 
 else if (matchDomain('digiday.com')) {

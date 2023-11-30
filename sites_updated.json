@@ -5,6 +5,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Defector": {
+    "domain": "defector.com",
+    "allow_cookies": 1,
+    "block_regex": "\\/defector\\.com\\/_next\\/static\\/chunks\\/pages\\/_sites\\/%5BsiteSlug%5D\\/%5B.+\\.js",
+    "upd_version": "3.4.4.5"
+  },
   "Der Freitag": {
     "domain": "freitag.de",
     "allow_cookies": 1,
