@@ -3291,7 +3291,7 @@ else if (matchDomain('elespectador.com')) {
   }
 }
 
-else if (matchDomain('elmercurio.com')) {
+else if (matchDomain(['elmercurio.com', 'lasegunda.com'])) {
   window.setTimeout(function () {
     let elem_hidden = document.querySelectorAll('[style="visibility:hidden"]');
     for (let elem of elem_hidden)
@@ -3306,6 +3306,13 @@ else if (matchDomain('elmercurio.com')) {
     if (cont_articlelight)
       cont_articlelight.setAttribute('style', 'height: 100% !important; width: 90% !important');
   }, 3000);
+  if (window.location.pathname.startsWith('/mobile')) {
+    let lessreadmore = document.querySelectorAll('article.lessreadmore');
+    for (let article of lessreadmore)
+      article.classList.remove('lessreadmore');
+    let bt_readmore = document.querySelectorAll('div[id*="bt_readmore_"]');
+    removeDOMElement(...bt_readmore);
+  }
 }
 
 else if (matchDomain('elobservador.com.uy')) {
@@ -3410,17 +3417,6 @@ else if (matchDomain('ladiaria.com.uy')) {
 else if (matchDomain('latercera.com')) {
   let subscr_banner = document.querySelector('.empty');
   removeDOMElement(subscr_banner);
-}
-
-else if (matchDomain('lasegunda.com')) {
-  let url = window.location.href;
-  if (url.includes('digital.lasegunda.com/mobile')) {
-    let lessreadmore = document.querySelectorAll('article.lessreadmore');
-    for (let article of lessreadmore)
-      article.classList.remove('lessreadmore');
-    let bt_readmore = document.querySelectorAll('div[id*="bt_readmore_"]');
-    removeDOMElement(...bt_readmore);
-  }
 }
 
 else if (matchDomain('globo.com')) {
