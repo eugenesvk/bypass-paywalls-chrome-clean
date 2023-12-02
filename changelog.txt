@@ -11,6 +11,7 @@ Fix Freitag.de (text-break)
 Fix La Segunda
 Fix LeParisien.fr (amp-redirect)
 Fix NzHerald (xhr)
+Fix The West Australian (timing)
 
 * v3.4.4.0 (2023-11-26)
 Add Freitag.de

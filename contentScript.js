@@ -449,21 +449,19 @@ else {
     } else {
       // Australian Seven West Media
       if (matchDomain('thewest.com.au') || document.querySelector('li > a[href*=".sevenwestmedia.com.au"]')) {
-        window.setTimeout(function () {
-          let breach_screen = document.querySelector('div.paywall div[data-testid*="BreachScreen"], div[class*="StyledBreachWallContent"]');
-          if (breach_screen) {
-            let scripts = document.querySelectorAll('script:not([src]):not([type])');
-            let json_script;
-            for (let script of scripts) {
-              if (script.text.includes('window.PAGE_DATA =')) {
-                json_script = script;
-                break;
-              }
+        function thewest_main(node) {
+          let scripts = document.querySelectorAll('script:not([src]):not([type])');
+          let json_script;
+          for (let script of scripts) {
+            if (script.text.includes('window.PAGE_DATA =')) {
+              json_script = script;
+              break;
             }
-            if (json_script) {
-              let json_text = json_script.text.split('window.PAGE_DATA =')[1].split('</script')[0];
-              json_text = json_text.replace(/:undefined([,}])/g, ':"undefined"$1');
-              try {
+          }
+          if (json_script) {
+            let json_text = json_script.text.split('window.PAGE_DATA =')[1].split('</script')[0];
+            json_text = json_text.replace(/:undefined([,}])/g, ':"undefined"$1');
+            try {
               let json_article = JSON.parse(json_text);
               let json_pub;
               for (let key in json_article) {
@@ -566,22 +564,29 @@ else {
                 content.appendChild(par_dom);
               } else {
                 par_dom.setAttribute('style', 'margin: 20px;');
-                breach_screen.before(par_dom);
+                node.before(par_dom);
               }
-              } catch (err) {
-                console.log(err);
-              }
+            } catch (err) {
+              console.log(err);
             }
-            removeDOMElement(breach_screen);
           }
-        }, 2000);
-        let header_advert = document.querySelector('.headerAdvertisement');
+          removeDOMElement(node);
+        }
+        let paywall_sel = 'div.paywall div[data-testid*="BreachScreen"], div[class*="StyledBreachWallContent"]';
+        let paywall = document.querySelector(paywall_sel);
+        if (paywall)
+          thewest_main(paywall);
+        else {
+          csDoneOnce = true;
+          waitDOMElement(paywall_sel, 'DIV', thewest_main, false);
+        }
+        let header_advert = document.querySelector('div.headerAdvertisement');
         hideDOMElement(header_advert);
-      }
+      } else
+        csDone = true;
     }
-  }
-  else
-    csDone = true;
+  } else
+      csDone = true;
 }
 
 } else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['faz.net', 'topagrar.com', 'tt.com', 'wochenblatt.com'])) {//germany/austria/switzerland - ch
@@ -1795,12 +1800,11 @@ else if (matchDomain('humanite.fr')) {
 }
 
 else if (matchDomain('journaldunet.com')) {
-  let reg_wall = document.querySelector('.reg_wall');
+  let reg_wall = document.querySelector('div.reg_wall');
   removeDOMElement(reg_wall);
-  let entry_reg_wall = document.querySelector('.entry_reg_wall');
-  if (entry_reg_wall) {
+  let entry_reg_wall = document.querySelector('div.entry_reg_wall[style]');
+  if (entry_reg_wall)
     entry_reg_wall.removeAttribute('style');
-  }
 }
 
 else if (matchDomain('la-croix.com')) {
