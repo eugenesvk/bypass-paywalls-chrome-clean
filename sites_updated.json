@@ -5,6 +5,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Correio do Povo": {
+    "domain": "correiodopovo.com.br",
+    "allow_cookies": 1,
+    "block_regex": "(paywall\\.correiodopovo\\.com\\.br|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "upd_version": "3.4.4.7"
+  },
   "Defector": {
     "domain": "defector.com",
     "allow_cookies": 1,
@@ -37,6 +43,13 @@
     "block_js_inline": "\\.freiepresse\\.de\\/.+-artikel",
     "ld_google_webcache": "div.article-teaser|article",
     "upd_version": "3.4.2.3"
+  },
+  "Gazeta do Povo": {
+    "domain": "gazetadopovo.com.br",
+    "allow_cookies": 1,
+    "amp_unhide": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.4.4.7"
   },
   "Groupe Nice-Matin": {
     "domain": "###_fr_groupe_nice_matin",

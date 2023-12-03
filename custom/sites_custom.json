@@ -134,11 +134,6 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
-  "Correiodopovo.com.br": {
-    "allow_cookies": 1,
-    "block_regex": "paywall\\.correiodopovo\\.com\\.br",
-    "domain": "correiodopovo.com.br"
-  },
   "Dailyherald.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
@@ -253,12 +248,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "frieze.com"
-  },
-  "Gazetadopovo.com.br": {
-    "allow_cookies": 1,
-    "amp_unhide": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "gazetadopovo.com.br"
   },
   "Gazetaprawna.pl": {
     "allow_cookies": 1,

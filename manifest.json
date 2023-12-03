@@ -163,6 +163,7 @@
     "*://*.commercialappeal.com/*",
     "*://*.computerweekly.com/*",
     "*://*.connaissancedesarts.com/*",
+    "*://*.correiodopovo.com.br/*",
     "*://*.corriere.it/*",
     "*://*.corriereadriatico.it/*",
     "*://*.corrieredellosport.it/*",
@@ -280,6 +281,7 @@
     "*://*.ft.com/*",
     "*://*.ftm.eu/*",
     "*://*.ftm.nl/*",
+    "*://*.gazetadopovo.com.br/*",
     "*://*.gazzetta.it/*",
     "*://*.geelongadvertiser.com.au/*",
     "*://*.gelderlander.nl/*",
@@ -824,5 +826,5 @@
     "*://*.wyleex.com/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.4.6"
+  "version": "3.4.4.7"
 }

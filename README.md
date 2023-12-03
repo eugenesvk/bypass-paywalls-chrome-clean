@@ -955,10 +955,12 @@ Grouped in options:\
 
 ##### Brazil
 [CartaCapital](https://www.cartacapital.com.br) -
+[Correio do Povo](https://www.correiodopovo.com.br) -
 [Crusoé](https://crusoe.com.br) -
 [Estado de Minas](https://www.em.com.br) -
 [Exame](https://exame.com) -
 [GaúchaZH](https://gauchazh.clicrbs.com.br) -
+[Gazeta do Povo](https://www.gazetadopovo.com.br) -
 [Grupo Abril](https://grupoabril.com.br) -
 [O Estado de S. Paulo](https://estadao.com.br) -
 [O Globo](https://oglobo.globo.com) -
