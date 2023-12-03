@@ -8,6 +8,7 @@ Add Correiodopovo.com.br
 Add Gazetadopovo.com.br
 Add Ikz-online.de (Funke)
 Remove Braunschweiger-zeitung.de (Funke; fix obsolete)
+Fix Arkansas Democrat-Gazette
 Fix Defector
 Fix Freitag.de (text-break)
 Fix La Segunda

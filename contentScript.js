@@ -3517,7 +3517,7 @@ else if (matchDomain('arkansasonline.com')) {
     removeDOMElement(paywall);
     csDoneOnce = true;
     let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div#article_body');
+    replaceDomElementExt(url_cache, true, false, 'div.article__body');
   }
 }
 
