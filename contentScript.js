@@ -679,7 +679,7 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
       try {
         let json = JSON.parse(json_script.text);
         if (json) {
-          let url_id = json_script.text.includes('"gcid":"') ? json_script.text.split('"gcid":"')[1].split('","nid"')[0] : '';
+          let url_id = json_script.text.includes('"gcid":"') ? json_script.text.split('"gcid":"')[1].split('"')[0] : '';
           if (url_id && !window.location.pathname.endsWith(url_id))
             refreshCurrentTab();
           let pars = json.state;
@@ -691,11 +691,53 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
               paragraph.innerHTML = '';
             let parser = new DOMParser();
             for (let par in pars) {
-              let content = pars[par].text;
-              if (content) {
-                let content_new = parser.parseFromString('<div style="font-size: 1.7rem; margin: 50px;">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
-                let article_new = content_new.querySelector('div'); ;
-                article.appendChild(article_new);
+              let par_elem = pars[par];
+              let elem = document.createElement('div');
+              elem.style = 'font-size: 1.7rem; margin: 25px;';
+              let sub_elem = '';
+              if (par_elem.__typename === 'TextParagraph' && par_elem.text) {
+                let content_new = parser.parseFromString('<div>' + DOMPurify.sanitize(par_elem.text) + '</div>', 'text/html');
+                sub_elem = content_new.querySelector('div');
+              } else if (par_elem.__typename === 'EmbedParagraph' && par_elem.embedCode) {
+                let content_new = parser.parseFromString('<div>' + DOMPurify.sanitize(par_elem.embedCode, {ADD_TAGS: ['iframe'], ADD_ATTR: ['frameborder']}) + '</div>', 'text/html');
+                sub_elem = content_new.querySelector('div');
+                let iframe = sub_elem.querySelector('iframe[width]');
+                if (iframe) {
+                  let ratio = iframe.width / 640;
+                  if (mobile)
+                    ratio = iframe.width / 320;
+                  iframe.width = iframe.width / ratio;
+                  iframe.height = iframe.height / ratio;
+                }
+              } else if (par_elem.__typename === 'ImageFile') {
+                if (par_elem.origin) {
+                  sub_elem = document.createElement('img');
+                  sub_elem.src = par_elem.origin;
+                  sub_elem.alt = par_elem.alt;
+                  if (par_elem.width) {
+                    let ratio = par_elem.width / 640;
+                    if (mobile)
+                      ratio = par_elem.width / 320;
+                    sub_elem.width = par_elem.width / ratio;
+                    sub_elem.height = par_elem.height / ratio;
+                  }
+                }
+              } else if (par_elem.__typename === 'Image') {
+                if (par_elem.credit) {
+                  sub_elem = document.createElement('p');
+                  sub_elem.appendChild(document.createTextNode(par_elem.credit));
+                }
+              } else if (par_elem.__typename === 'ImageParagraph') {
+                if (par_elem.caption) {
+                  let content_new = parser.parseFromString('<div>' + DOMPurify.sanitize(par_elem.caption) + '</div>', 'text/html');
+                  sub_elem = content_new.querySelector('div');
+                }
+              } else if (!['Article', 'Author', 'Channel', 'LandingPage', 'Query'].includes(par_elem.__typename)) {
+                console.log(par_elem);
+              }
+              if (sub_elem) {
+                elem.appendChild(sub_elem);
+                article.appendChild(elem);
               }
             }
           }
