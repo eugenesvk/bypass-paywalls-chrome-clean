@@ -30,20 +30,6 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.3.3"
   },
-  "Die Welt": {
-    "domain": "welt.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div.contains_walled_content|article",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.2.4"
-  },
-  "Freie Presse": {
-    "domain": "freiepresse.de",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.freiepresse\\.de\\/.+-artikel",
-    "ld_google_webcache": "div.article-teaser|article",
-    "upd_version": "3.4.2.3"
-  },
   "Gazeta do Povo": {
     "domain": "gazetadopovo.com.br",
     "allow_cookies": 1,
@@ -63,12 +49,6 @@
     "cs_code": "[{\"cond\":\"div#poool-widget-content\", \"rm_elem\":1}]",
     "upd_version": "3.4.3.4"
   },
-  "Investsmart.com.au": {
-    "domain": "investsmart.com.au",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.4.2.7"
-  },
   "Jazziz.com": {
     "allow_cookies": 1,
     "domain": "jazziz.com",
@@ -79,20 +59,6 @@
     "domain": "leparisien.fr",
     "allow_cookies": 1,
     "upd_version": "3.4.4.3"
-  },
-  "Profil.at": {
-    "domain": "profil.at",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/",
-    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]",
-    "upd_version": "3.4.2.8"
-  },
-  "South China Morning Post": {
-    "domain": "scmp.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-(access|subscriptions)-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div.paywalled-content\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.4.2.5"
   },
   "The Economist": {
     "domain": "economist.com",

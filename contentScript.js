@@ -3532,13 +3532,10 @@ else if (matchDomain('artnet.com')) {
 }
 
 else if (matchDomain('asia.nikkei.com')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('div#paywall-offer');
-  if (paywall && dompurify_loaded) {
+  let paywall = document.querySelector('div#paywall-offer > div.tp-container-inner');
+  if (paywall) {
     removeDOMElement(paywall);
-    csDoneOnce = true;
-    let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-    replaceDomElementExt(url_cache, true, false, 'div#article-body-preview');
+    refreshCurrentTab();
   }
   let popup = document.querySelector('#pianoj_ribbon');
   removeDOMElement(popup);
@@ -3609,10 +3606,13 @@ else if (matchDomain('billboard.com')) {
 }
 
 else if (matchDomain('bloomberg.com')) {
-  let paywall = document.querySelectorAll('div[id^="fortress-"]');
+  let paywall_sel = 'div[id^="fortress-"]';
+  let paywall = document.querySelectorAll(paywall_sel);
   let leaderboard = document.querySelector('div[id^="leaderboard"], div[class^="leaderboard"], div.canopy-container');
-  let ads = document.querySelectorAll('div[data-ad-status], div.dvz-v0-ad, div[class^="FullWidthAd_"]');
+  let ads = document.querySelectorAll('div[data-ad-status], div[data-ad-type], div[class^="FullWidthAd_"], div.adWrapper');
   hideDOMElement(...paywall, leaderboard, ...ads);
+  csDoneOnce = true;
+  waitDOMElement(paywall_sel, 'DIV', removeDOMElement, true);
   waitDOMAttribute('body', 'BODY', 'data-paywall-overlay-status', node => node.removeAttribute('data-paywall-overlay-status'), true);
   if (window.location.pathname.startsWith('/live/')) {
     setInterval(function () {
@@ -3624,7 +3624,7 @@ else if (matchDomain('bloomberg.com')) {
     if (shimmering) {
       header_nofix(shimmering.parentNode, 'BPC > disable Dark Reader or enable Javascript for site');
     }
-  }, 3000);
+  }, 5000);
 }
 
 else if (matchDomain('bloombergadria.com')) {

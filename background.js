@@ -1338,6 +1338,8 @@ function remove_cookies_fn(domainVar, exclusions = false) {
             storeId = store.id;
         }
         storeId = storeId.toString();
+        if (domainVar === 'asia.nikkei.com')
+          domainVar = 'nikkei.com';
         var cookie_get_options = {
           domain: domainVar
         };
