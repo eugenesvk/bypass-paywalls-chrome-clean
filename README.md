@@ -904,8 +904,7 @@ Grouped in options:\
 [Southern Weekly](https://www.infzm.com) -
 [Tech in Asia](https://www.techinasia.com) -
 [The Diplomat](https://thediplomat.com) -
-[The Japan Times](https://www.japantimes.co.jp) -
-[The Star Malaysia](https://www.thestar.com.my)
+[The Japan Times](https://www.japantimes.co.jp)
 
 ##### India
 [Bar and Bench](https://www.barandbench.com) -
