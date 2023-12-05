@@ -731,7 +731,6 @@ var defaultSites = {
     group: [
       "abendblatt.de",
       "ikz-online.de",
-      "morgenpost.de",
       "nrz.de",
       "otz.de",
       "thueringer-allgemeine.de",
@@ -2910,7 +2909,7 @@ init_custom_flex_domains();
 
 // sites with no fix (background)
 var be_mediahuis_nofix_domains = ['gva.be', 'hbvl.be', 'nieuwsblad.be', 'standaard.be'];
-var de_funke_medien_nofix_domains = ['braunschweiger-zeitung.de', 'harzkurier.de'];
+var de_funke_medien_nofix_domains = ['braunschweiger-zeitung.de', 'harzkurier.de', 'morgenpost.de'];
 var de_rp_aachen_medien_nofix_domains = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'ga.de', 'rp-online.de', 'saarbruecker-zeitung.de', 'volksfreund.de'];
 var fr_indigo_nofix_domains = ['africaintelligence.com', 'africaintelligence.fr', 'glitz.paris', 'intelligenceonline.com', 'intelligenceonline.fr', 'lalettre.fr'];
 var it_gedi_nofix_domains = ['gelocal.it', 'huffingtonpost.it', 'limesonline.com'];

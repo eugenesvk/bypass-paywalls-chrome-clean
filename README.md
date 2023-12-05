@@ -637,7 +637,6 @@ Grouped in options:\
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
 *Funke Mediengruppe* sites like\
-[Berliner Morgenpost](https://www.morgenpost.de) -
 [Hamburger Abendblatt](https://www.abendblatt.de) -
 [Iserlohner Kreisanzeiger und Zeitung](https://www.ikz-online.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
