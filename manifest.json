@@ -822,7 +822,13 @@
     "*://*.pasedigital.cl/*",
     "*://*.wgchrrammzv.com/*",
     "*://*.wyleex.com/*",
+    "*://archive.fo/*",
+    "*://archive.is/*",
+    "*://archive.li/*",
+    "*://archive.md/*",
+    "*://archive.ph/*",
+    "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.5.3"
+  "version": "3.4.5.4"
 }
