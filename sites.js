@@ -457,8 +457,8 @@ var defaultSites = {
   },
   "Crikey.com.au": {
     domain: "crikey.com.au",
-    allow_cookies: 1,
-    cs_dompurify: 1
+    block_regex: /\.crickey\.com\.au\/zephr\/feature/,
+    remove_cookies_select_drop: ["blaize_session"]
   },
   "Crusoe.com.br": {
     domain: "crusoe.com.br",

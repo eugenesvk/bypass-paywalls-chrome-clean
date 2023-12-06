@@ -11,6 +11,12 @@
     "block_regex": "(paywall\\.correiodopovo\\.com\\.br|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "upd_version": "3.4.4.7"
   },
+  "Crikey.com.au": {
+    "domain": "crikey.com.au",
+    "block_regex": "\\.crickey\\.com\\.au\\/zephr\\/feature",
+    "remove_cookies_select_drop": ["blaize_session"],
+    "upd_version": "3.4.5.3"
+  },
   "Defector": {
     "domain": "defector.com",
     "allow_cookies": 1,

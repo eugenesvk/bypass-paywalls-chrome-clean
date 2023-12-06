@@ -7,6 +7,7 @@ Remove Morgenpost.de (Funke; fix obsolete)
 Remove The Star Malaysia (fix obsolete)
 Fix Beobachter.ch (json)
 Fix Bloomberg (css)
+Fix Crikey.com.au (cookie)
 Fix Nikkei Asian Review (cookie)
 
 * v3.4.5.0 (2023-12-03)

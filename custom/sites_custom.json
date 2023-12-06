@@ -244,6 +244,10 @@
     "domain": "flz.de",
     "useragent": "googlebot"
   },
+  "Foxnews.com (regwall)": {
+    "cs_code": "[{\"cond\":\"div.article-gating-wrapper\", \"rm_elem\":1}, {\"cond\":\"div[class*='gated-overlay']\", \"rm_attrib\":\"class\"}]",
+    "domain": "foxnews.com"
+  },
   "Frieze.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
