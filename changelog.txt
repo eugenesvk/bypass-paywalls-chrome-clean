@@ -9,6 +9,7 @@ Fix Beobachter.ch (json)
 Fix Bloomberg (css)
 Fix Crikey.com.au (cookie)
 Fix Nikkei Asian Review (cookie)
+Fix The Atlantic (menu & videos)
 Fix TheTimes.co.uk (fetch from archive.is)
 
 * v3.4.5.0 (2023-12-03)

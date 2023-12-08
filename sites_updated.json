@@ -66,6 +66,11 @@
     "allow_cookies": 1,
     "upd_version": "3.4.4.3"
   },
+  "The Atlantic": {
+    "domain": "theatlantic.com",
+    "remove_cookies_select_drop": ["articleViews"],
+    "upd_version": "3.4.5.5"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

@@ -4928,10 +4928,7 @@ else if (matchDomain('theathletic.com')) {
 }
 
 else if (matchDomain('theatlantic.com')) {
-  let lazy_images = document.querySelectorAll('img[class*="Image_lazy__"]');
-  for (let elem of lazy_images)
-    removeClassesByPrefix(elem, 'Image_lazy__');
-  let banners = document.querySelectorAll('.c-nudge__container, .c-non-metered-nudge, div[class^="ArticleInjector_"]');
+  let banners = document.querySelectorAll('aside#paywall, div[class^="LostInventoryMessage_"]');
   hideDOMElement(...banners);
 }
 

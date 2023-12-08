@@ -2176,7 +2176,6 @@ var defaultSites = {
   },
   "The Atlantic": {
     domain: "theatlantic.com",
-    block_regex: /cdn\.theatlantic\.com\/_next\/static\/chunks\/pages\/.+\/archive\//,
     remove_cookies_select_drop: ["articleViews"]
   },
   "The Baffler": {
