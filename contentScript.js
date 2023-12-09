@@ -264,6 +264,8 @@ function cs_code_elems(elems) {
       if (elem.elems)
         cs_code_elems(elem.elems);
     }
+    if (elem.rm_elem_wait)
+      waitDOMElement(elem.cond, elem.cond.match(/^\w+/)[0], removeDOMElement, true);
   }
 }
 
@@ -321,7 +323,7 @@ if (ext_api.runtime) {
     function (request, sender) {
     if (request.msg === 'showExtSrc' && !msg_once_ses) {
       msg_once_ses = true;
-      replaceDomElementExtSrc(request.data.url, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source);
+      replaceDomElementExtSrc(request.data.url, request.data.url_src, request.data.html, true, false, request.data.selector, request.data.text_fail, request.data.selector_source, request.data.selector_archive);
     }
   })
 }
@@ -1206,9 +1208,7 @@ else if (matchDomain('spiegel.de')) {
   let paywall = document.querySelector('div[data-area="paywall"]');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div[data-area="body"]');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    getArchive(url, 'div[data-area="body"]');
   }
 }
 
@@ -1244,7 +1244,7 @@ else if (matchDomain('sueddeutsche.de')) {
     removeDOMElement(paywall);
     let article = document.querySelector('div.article-content, div.text');
     if (article)
-      article.firstChild.before(archiveLink(url), article.firstChild);
+      article.firstChild.before(archiveLink(url));
     let reduced = document.querySelector('p.sz-article-body__paragraph--reduced');
     if (reduced)
       reduced.classList.remove('sz-article-body__paragraph--reduced');
@@ -1258,9 +1258,13 @@ else if (matchDomain('tagesspiegel.de')) {
   let paywall = document.querySelector('div#paywal, div#pw');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div.article--paid, div.tslr-article > p');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    if (matchDomain('www.tagesspiegel.de')) {
+      getArchive(url, 'div#story-elements');
+    } else if (matchDomain('interaktiv.tagesspiegel.de')) {
+      let article = document.querySelector('div.tslr-article > p');
+      if (article)
+        article.firstChild.before(archiveLink(url));
+    }
   }
 }
 
@@ -1342,9 +1346,7 @@ else if (matchDomain('welt.de')) {
   let paywall = document.querySelector('div.contains_walled_content');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('article');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    getArchive(url, 'article');
   }
   let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
   hideDOMElement(...ads);
@@ -1355,15 +1357,9 @@ else if (matchDomain('zeit.de')) {
   let paywall = document.querySelector('aside#paywall');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div.article-body');
-    if (article) {
-      if (document.querySelector('head > link[rel="next"]'))
-        url += '/komplettansicht';
-      article.firstChild.before(archiveLink(url));
-    }
-    let fade = document.querySelector('div.paragraph--faded');
-    if (fade)
-      fade.classList.remove('paragraph--faded');
+    if (document.querySelector('head > link[rel="next"]'))
+      url += '/komplettansicht';
+    getArchive(url, 'article');
   }
 }
 
@@ -1717,9 +1713,9 @@ else if (matchDomain('elle.fr')) {
 
 else if (matchDomain(fr_be_groupe_rossel)) {
   let url = window.location.href;
-  let paywall = document.querySelector('div.qiota_reserve, r-panel.r-paywall--header, r-panel.r-panel--paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
+  let paywall = document.querySelectorAll('r-panel.r-paywall--header, r-panel.r-panel--paywall');
+  if (paywall.length) {
+    removeDOMElement(...paywall);
     let article = document.querySelector('article');
     if (article)
       article.firstChild.before(archiveLink(url));
@@ -1869,9 +1865,7 @@ else if (matchDomain('lefigaro.fr')) {
   let paywall = document.querySelector('div#fig-premium-paywall');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div.fig-content-body');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    getArchive(url, 'div[data-component="fig-content-body"]');
   }
 }
 
@@ -1900,12 +1894,10 @@ else if (matchDomain('lemonde.fr')) {
   let paywall = document.querySelector('section.paywall');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('article');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-    let hide = document.querySelector('section.article__content--restricted-media');
+    getArchive(url, 'article');
+    let hide = document.querySelector('section.article__wrapper--premium');
     if (hide)
-      hide.classList.remove('article__content--restricted-media');
+      removeClassesByPrefix(hide, 'article__content--restricted');
   }
 }
 
@@ -1980,9 +1972,7 @@ else if (matchDomain('lepoint.fr')) {
     let paywall = document.querySelectorAll('div.accnt-cmp');
     if (paywall.length) {
       removeDOMElement(...paywall);
-      let article = document.querySelector('article > section');
-      if (article)
-        article.firstChild.before(archiveLink(url));
+      getArchive(url, 'article');
     }
   }
 }
@@ -2658,9 +2648,7 @@ else if (matchDomain(nl_dpg_adr_domains)) {
   let paywall = document.querySelector('div#remaining-paid-content');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div.article__body');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    getArchive(url, 'div.article__body', '', 'div#remaining-paid-content');
   }
 }
 
@@ -3153,8 +3141,7 @@ else if (matchDomain('thetimes.co.uk')) {
     let paywall = document.querySelector('div#paywall-portal-article-footer');
     if (paywall && !url.includes('?shareToken=')) {
       removeDOMElement(paywall);
-      let url_archive = 'https://' + archiveRandomDomain() + '/' + url;
-      replaceDomElementExt(url_archive, true, false, 'article:not([id])');
+      getArchive(url, 'article:not([id])');
       window.setTimeout(function () {
         let headings = document.querySelectorAll('div > div[role="heading"]');
         for (let elem of headings)
@@ -4385,22 +4372,25 @@ else if (matchDomain('nationalgeographic.com')) {
       body.removeAttribute('style');
     }
   }
+  let paywall = document.querySelector('div[id^="fittPortal"]');
+  if (paywall)
+    natgeo_func(paywall);
   waitDOMElement('div[id^="fittPortal"]', 'DIV', natgeo_func, false);
   csDoneOnce = true;
   window.setTimeout(function () {
     let url = window.location.href;
-    let subscribed = document.querySelector('.Article__Content--gated');
-    let overlay = document.querySelector('.Article__Content__Overlay--gated');
+    let subscribed = document.querySelector('div.Article__Content--gated');
     let msg = document.querySelector('div#bpc_archive');
     if (subscribed && !msg) {
       subscribed.appendChild(archiveLink(url));
       subscribed.setAttribute('style', 'overflow: visible !important;');
-      if (overlay)
-        overlay.classList.remove('Article__Content__Overlay--gated');
     }
+    let overlay = document.querySelector('div.Article__Content__Overlay--gated');
+    if (overlay)
+      overlay.classList.remove('Article__Content__Overlay--gated');
     let ads = document.querySelectorAll('div.ad-slot, div.InsertedAd');
     hideDOMElement(...ads);
-  }, 1000);
+  }, 2000);
 }
 
 else if (matchDomain('nationalreview.com')) {
@@ -4558,9 +4548,7 @@ else if (matchDomain('project-syndicate.org')) {
   let paywall = document.querySelector('div.paywall--base');
   if (paywall) {
     removeDOMElement(paywall);
-    let article = document.querySelector('div[data-page-area="article-body"]');
-    if (article)
-      article.firstChild.before(archiveLink(url));
+    getArchive(url, 'div[data-page-area="article-body"]');
   }
 }
 
@@ -4928,6 +4916,12 @@ else if (matchDomain('theathletic.com')) {
 }
 
 else if (matchDomain('theatlantic.com')) {
+  let lazy_images = document.querySelectorAll('img[class*="Image_lazy__"]');
+  for (let elem of lazy_images)
+    removeClassesByPrefix(elem, 'Image_lazy__');
+  let videos = document.querySelectorAll('iframe[data-src]:not([src])');
+  for (let video of videos)
+    video.src = video.getAttribute('data-src');
   let banners = document.querySelectorAll('aside#paywall, div[class^="LostInventoryMessage_"]');
   hideDOMElement(...banners);
 }
@@ -5844,7 +5838,7 @@ function clearPaywall(paywall, paywall_action) {
 }
 
 function getGoogleWebcache(url, paywall_sel, paywall_action = '', article_sel, func_post = '', article_new_sel = article_sel) {
-  let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
+  let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split(/[#\?]/)[0];
   let paywall = document.querySelectorAll(paywall_sel);
   if (paywall.length) {
     clearPaywall(paywall, paywall_action);
@@ -5858,7 +5852,12 @@ function getGoogleWebcache(url, paywall_sel, paywall_action = '', article_sel, f
   }
 }
 
-function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector) {
+function getArchive(url, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
+  let url_archive = 'https://' + archiveRandomDomain() + '/' + url.split(/[#\?]/)[0];
+  replaceDomElementExt(url_archive, true, false, selector, text_fail, selector_source, selector_archive);
+}
+
+function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
   if (proxy) {
     if (!text_fail) {
       if (url.startsWith('https://webcache.googleusercontent.com'))
@@ -5866,7 +5865,7 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
       else if (url.startsWith('https://archive.'))
         text_fail = 'BPC > Try for full article text (no need to report issue for external site):\r\n';
     }
-    ext_api.runtime.sendMessage({request: 'getExtSrc', data: {url: url, selector: selector, selector_source: selector_source, base64: base64, text_fail: text_fail}});
+    ext_api.runtime.sendMessage({request: 'getExtSrc', data: {url: url, selector: selector, selector_source: selector_source, selector_archive: selector_archive, base64: base64, text_fail: text_fail}});
   } else {
     let options = {};
     if (matchUrlDomain('espn.com', url))
@@ -5889,7 +5888,7 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
   }
 }
 
-function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail = '', selector_source = selector) {
+function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
   let article = document.querySelector(selector);
   if (html) {
     if (base64) {
@@ -5898,28 +5897,32 @@ function replaceDomElementExtSrc(url, html, proxy, base64, selector, text_fail =
     }
     let parser = new DOMParser();
     window.setTimeout(function () {
-     if (url.startsWith('https://archive.')) {
-       let domain_archive = url.match(/^https:\/\/(archive\.\w{2})/)[1];
-       let pathname = new URL(url).pathname;
-       html = html.replace(new RegExp('https:\\/\\/' + domain_archive.replace('.', '\\.') + '\\/o\\/\\w+\\/', 'g'), '').replace(new RegExp("(src=\"|background-image:url\\(')" + pathname.replace('/', '\\/'), 'g'), "$1" + 'https://' + domain_archive + pathname);
-     }
-     let doc = parser.parseFromString(DOMPurify.sanitize(html, dompurify_options), 'text/html');
-     //console.log(DOMPurify.removed);
-     let article_new = doc.querySelector(selector_source);
-     if (article_new) {
-       if (article && article.parentNode) {
-         if (url.startsWith('https://archive.')) {
-           article_new.firstChild.before(archiveLink_renew(window.location.href));
-           article_new.firstChild.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
-           window.setTimeout(function () {
-             let targets = document.querySelectorAll('a[target="_blank"][href^="https://' + window.location.hostname + '"]');
-             for (let elem of targets)
-               elem.removeAttribute('target');
-           }, 1500);
-         }
-         article.parentNode.replaceChild(article_new, article);
-       }
-     }
+      if (url.startsWith('https://archive.') && url_src) {
+        let domain_archive = url.match(/^https:\/\/(archive\.\w{2})/)[1];
+        let pathname = new URL(url_src).pathname;
+        html = html.replace(new RegExp('https:\\/\\/' + domain_archive.replace('.', '\\.') + '\\/o\\/\\w+\\/', 'g'), '').replace(new RegExp("(src=\"|background-image:url\\(')" + pathname.replace('/', '\\/'), 'g'), "$1" + 'https://' + domain_archive + pathname);
+      }
+      let doc = parser.parseFromString(DOMPurify.sanitize(html, dompurify_options), 'text/html');
+      //console.log(DOMPurify.removed);
+      let article_new = doc.querySelector(selector_source);
+      if (article_new) {
+        if (article && article.parentNode) {
+          if (url.startsWith('https://archive.')) {
+            let arch_dom = (selector_archive !== selector) ? article_new.querySelector(selector_archive) : article_new;
+            if (arch_dom) {
+              arch_dom.firstChild.before(archiveLink_renew(window.location.href));
+              arch_dom.firstChild.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
+            }
+            window.setTimeout(function () {
+              let targets = document.querySelectorAll('a[target="_blank"][href^="https://' + window.location.hostname + '"]');
+              for (let elem of targets)
+                elem.removeAttribute('target');
+            }, 1500);
+          }
+          article.parentNode.replaceChild(article_new, article);
+        }
+      } else
+        replaceTextFail(url, article, proxy, text_fail);
     }, 200);
   } else {
     replaceTextFail(url, article, proxy, text_fail);
@@ -5932,11 +5935,15 @@ function replaceTextFail(url, article, proxy, text_fail) {
     text_fail_div.setAttribute('style', 'margin: 0px 50px; font-weight: bold; color: red;');
     text_fail_div.appendChild(document.createTextNode(text_fail));
     if (proxy) {
-      let a_link = document.createElement('a');
-      a_link.innerText = url;
-      a_link.href = url;
-      a_link.target = '_blank';
-      text_fail_div.appendChild(a_link);
+      if (url.startsWith('https://archive.')) {
+        text_fail_div = archiveLink(url.replace(/^https:\/\/archive\.\w{2}\//, ''));
+      } else {
+        let a_link = document.createElement('a');
+        a_link.innerText = url;
+        a_link.href = url;
+        a_link.target = '_blank';
+        text_fail_div.appendChild(a_link);
+      }
     }
     article.firstChild.before(text_fail_div);
   }
@@ -5982,11 +5989,11 @@ function amp_redirect_not_loop(amphtml) {
 }
 
 function amp_redirect(paywall_sel, paywall_action = '', amp_url = '') {
-  let paywall = document.querySelector(paywall_sel);
+  let paywall = document.querySelectorAll(paywall_sel);
   let amphtml = document.querySelector('head > link[rel="amphtml"]');
   if (!amphtml && amp_url)
     amphtml = {href: amp_url};
-  if (paywall && amphtml) {
+  if (paywall.length && amphtml) {
     clearPaywall(paywall, paywall_action);
     amp_redirect_not_loop(amphtml);
   }

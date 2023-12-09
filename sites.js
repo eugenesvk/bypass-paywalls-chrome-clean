@@ -43,7 +43,8 @@ var defaultSites = {
       "tubantia.nl"
     ],
     allow_cookies: 1,
-    block_regex: /temptation\..+\.nl\/temptation\.js/
+    block_regex: /temptation\..+\.nl\/temptation\.js/,
+    cs_dompurify: 1
   },
   "Alternatives Economiques": {
     domain: "alternatives-economiques.fr",
@@ -489,11 +490,13 @@ var defaultSites = {
   },
   "Der Spiegel (link to archive.is)": {
     domain: "spiegel.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Der Tagesspiegel (link to archive.is/not background/checkpoint)": {
     domain: "tagesspiegel.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Deutscher Fachverlag Mediengruppe (opt-in to custom sites)": {
     domain: "###_de_dfv_medien",
@@ -508,11 +511,13 @@ var defaultSites = {
   },
   "Die Welt (link to archive.is)": {
     domain: "welt.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Die Zeit (link to archive.is)": {
     domain: "zeit.de",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Digiday": {
     domain: "digiday.com",
@@ -1374,7 +1379,8 @@ var defaultSites = {
   },
   "Le Figaro (link to archive.is)": {
     domain: "lefigaro.fr",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Le Grand Continent": {
     domain: "legrandcontinent.eu",
@@ -1391,7 +1397,8 @@ var defaultSites = {
   },
   "Le Monde (link to archive.is)": {
     domain: "lemonde.fr",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "Le Nouvel Economiste": {
     domain: "lenouveleconomiste.fr",
@@ -1879,7 +1886,8 @@ var defaultSites = {
   },
   "Project Syndicate (link to archive.is)": {
     domain: "project-syndicate.org",
-    allow_cookies: 1
+    allow_cookies: 1,
+    cs_dompurify: 1
   },
   "ProMedia.nl Group (opt-in to custom sites)": {
     domain: "###_nl_promedia",
@@ -2176,6 +2184,7 @@ var defaultSites = {
   },
   "The Atlantic": {
     domain: "theatlantic.com",
+    block_regex: /cdn\.theatlantic\.com\/_next\/static\/chunks\/pages\/.+\/archive\//,
     remove_cookies_select_drop: ["articleViews"]
   },
   "The Baffler": {

@@ -87,6 +87,7 @@ function showArchiveLinks() {
       let url_enc = encodeURIComponent(url);
       let archive_array = {
         'Archive.today': 'https://archive.today?run=1&url=' + url_enc,
+        'Archive.today (renew)': 'https://archive.today?renew=1&url=' + url_enc,
         'Google webcache': 'https://webcache.googleusercontent.com/search?q=cache:' + url_enc,
         'Clearthis.page': 'https://clearthis.page?u=' + url,
         '1ft.io': 'https://1ft.io/' + url,

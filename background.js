@@ -1493,7 +1493,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
           response.text().then(html => {
             if (html.includes('<div class="TEXT-BLOCK"')) {
               let url_src = html.split('<div class="TEXT-BLOCK"')[1].split('</div>')[0].split('href="')[1].split('"')[0];
-              message.data.url = url_src;
+              message.data.url_src = url_src;
               getArticleSrc(message);
             } else {
               message.data.html = html;
@@ -1507,7 +1507,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     } else
       getArticleSrc(message);
     function getArticleSrc(message) {
-      fetch(message.data.url)
+      let url_src = message.data.url_src || message.data.url;
+      fetch(message.data.url_src)
       .then(response => {
         if (response.ok) {
           response.text().then(html => {
