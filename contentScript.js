@@ -426,21 +426,12 @@ else {
     // Australia News Corp
     let au_news_corp_domains = ['adelaidenow.com.au', 'cairnspost.com.au', 'couriermail.com.au', 'dailytelegraph.com.au', 'geelongadvertiser.com.au', 'goldcoastbulletin.com.au', 'heraldsun.com.au', 'ntnews.com.au', 'theaustralian.com.au', 'thechronicle.com.au', 'themercury.com.au', 'townsvillebulletin.com.au', 'weeklytimesnow.com.au'];
     if (matchDomain(au_news_corp_domains)) {
-      if (window.location.hostname.startsWith('amp.') || window.location.search.match(/[&\?]amp/)) {
+      if (window.location.search.match(/[&\?]amp/)) {
+        amp_unhide_subscr_section('amp-ad, amp-embed, [id^="ad-mrec-"], [class*="ad-container"]', false);
         let figure_stretch = document.querySelectorAll('figure.stretch');
         for (let elem of figure_stretch)
           elem.classList.remove('stretch');
-        let amp_ads_sel = 'amp-ad, amp-embed, [id^="ad-mrec-"], [class*="ad-container"]';
-        let comments;
-        if (window.location.hostname.startsWith('amp.')) {
-          amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
-          comments = document.querySelector('#story-comments, .comments-wrapper');
-        } else if (window.location.search.match(/(\?|&)amp/)) {
-          amp_unhide_subscr_section(amp_ads_sel, true, true, '.newscdn.com.au');
-          comments = document.querySelector('#comments-load, .comments-module');
-          let amp_iframe_sizers = document.querySelectorAll('amp-iframe > i-amphtml-sizer');
-          removeDOMElement(...amp_iframe_sizers)
-        }
+        let comments = document.querySelector('#comments-load, .comments-module');
         removeDOMElement(comments);
       } else {
         let ads = document.querySelectorAll('.header_ads-container, .ad-block, .ad-container');
@@ -829,14 +820,10 @@ else if (matchDomain('faz.net')) {
                   removeDOMElement(...pars);
                   json_text = breakText_headers(json_text).split("\n\n");
                   for (let p_text of json_text) {
-                    let elem;
-                    if (p_text.length < 80) {
-                      elem = document.createElement("h2");
-                      elem.setAttribute('class', 'atc-SubHeadline');
-                    } else {
-                      elem = document.createElement("p");
-                      elem.setAttribute('class', 'atc-TextParagraph');
-                    };
+                    let elem = document.createElement("p");
+                    elem.setAttribute('class', 'atc-TextParagraph');
+                    if (p_text.length < 80)
+                      elem.style = 'font-weight: bold;';
                     elem.innerText = p_text;
                     article_text.appendChild(elem);
                   };
@@ -4235,9 +4222,10 @@ else if (matchDomain('janes.com')) {
 else if (matchDomain('japantimes.co.jp')) {
   if (!window.location.pathname.endsWith('/amp')) {
     window.setTimeout(function () {
-      let paywall = document.querySelector('div.blocker > div.tp-container-inner');
+      let paywall = document.querySelector('div.subscribe');
       if (paywall) {
-        removeDOMElement(paywall.parentNode);
+        let banner = document.querySelector('div.blocker > div.tp-container-inner');
+        removeDOMElement(paywall, banner);
         let article = document.querySelector('div.article-body');
         if (article) {
           let url = window.location.href;
