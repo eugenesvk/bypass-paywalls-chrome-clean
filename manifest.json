@@ -364,7 +364,6 @@
     "*://*.journalstar.com/*",
     "*://*.jpost.com/*",
     "*://*.jsonline.com/*",
-    "*://*.jungefreiheit.de/*",
     "*://*.kansas.com/*",
     "*://*.kansascity.com/*",
     "*://*.kentucky.com/*",
@@ -765,7 +764,6 @@
     "*://*.wiesbadener-kurier.de/*",
     "*://*.winnipegfreepress.com/*",
     "*://*.wired.com/*",
-    "*://*.wissenschaft.de/*",
     "*://*.wn.de/*",
     "*://*.wochenblatt.com/*",
     "*://*.womenshealthmag.com/*",
@@ -830,5 +828,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.6.0"
+  "version": "3.4.6.1"
 }

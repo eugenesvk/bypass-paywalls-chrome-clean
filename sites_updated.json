@@ -23,43 +23,12 @@
     "block_regex": "\\/defector\\.com\\/_next\\/static\\/chunks\\/pages\\/_sites\\/%5BsiteSlug%5D\\/%5B.+\\.js",
     "upd_version": "3.4.4.5"
   },
-  "Der Freitag": {
-    "domain": "freitag.de",
-    "allow_cookies": 1,
-    "ld_json": "div.qa-paywall|div#x-article-text",
-    "upd_version": "3.4.3.8"
-  },
-  "Der Tagesspiegel": {
-    "domain": "tagesspiegel.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div#paywal,div#pw|div.article--paid,div.tslr-article>p",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.3.3"
-  },
   "Gazeta do Povo": {
     "domain": "gazetadopovo.com.br",
     "allow_cookies": 1,
     "amp_unhide": 1,
     "block_regex": "(\\.tinypass\\.com\\/|cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
     "upd_version": "3.4.4.7"
-  },
-  "Groupe Nice-Matin": {
-    "domain": "###_fr_groupe_nice_matin",
-    "group": [
-      "monacomatin.mc",
-      "nicematin.com",
-      "varmatin.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.poool\\.fr\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div#poool-widget-content\", \"rm_elem\":1}]",
-    "upd_version": "3.4.3.4"
-  },
-  "Jazziz.com": {
-    "allow_cookies": 1,
-    "domain": "jazziz.com",
-    "ld_json_url": "div.emoxie-pay-wall|div.restricted-content",
-    "upd_version": "3.4.3.6"
   },
   "Le Parisien": {
     "domain": "leparisien.fr",
@@ -85,13 +54,6 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "Tiroler Tageszeitung": {
-    "domain": "tt.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
-    "cs_code": "[{\"cond\":\".exclusive-elem\", \"rm_class\":\"exclusive-elem\"}]",
-    "upd_version": "3.4.3.5"
   },
   "TownNews sites (Blox CMS)": {
     "domain": "###_usa_townnews",

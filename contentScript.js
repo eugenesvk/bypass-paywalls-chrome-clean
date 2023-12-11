@@ -1000,18 +1000,6 @@ else if (matchDomain('jacobin.de')) {
   }
 }
 
-else if (matchDomain('jungefreiheit.de')) {
-  if (dompurify_loaded)
-    getJsonUrl('div.paywall-teaser-box', '', 'div.elementor-widget-container > p');
-  let fade = document.querySelector('div[style*="background-image: url"]');
-  removeDOMElement(fade);
-  window.setTimeout(function () {
-    let banners = document.querySelectorAll('div > small');
-    for (let elem of banners)
-      hideDOMElement(elem.parentNode);
-  }, 1000);
-}
-
 else if (matchDomain('krautreporter.de')) {
   let paywall = document.querySelector('.js-article-paywall');
   if (paywall) {
