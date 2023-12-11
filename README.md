@@ -544,15 +544,6 @@ Grouped in options:\
 Grouped in options:\
 *Groupe Centre France* sites like (opt-in to custom sites for unlisted)\
 [La Montagne](https://www.lamontagne.fr)\
-*Groupe EBRA* sites like\
-[Dernières Nouvelles d'Alsace](https://www.dna.fr) -
-[L'Alsace](https://www.lalsace.fr) -
-[L'Est Républicain](https://www.estrepublicain.fr) -
-[Le Bien Public](https://www.bienpublic.com) -
-[Le Dauphiné Libéré](https://www.ledauphine.com) -
-[Le Journal de Saône-et-Loire](https://www.lejsl.com) -
-[Le Progrès](https://www.leprogres.fr) -
-[Le Républicain Lorrain](https://www.republicain-lorrain.fr)\
 *Groupe IPM* sites like\
 [DH Les Sports+](https://www.dhnet.be) -
 [L'Avenir](https://www.lavenir.net) -
