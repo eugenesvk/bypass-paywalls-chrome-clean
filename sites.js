@@ -1427,6 +1427,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
+  "Literary Review (UK)": {
+    domain: "literaryreview.co.uk",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Live Law": {
     domain: "livelaw.in",
     allow_cookies: 1

@@ -459,6 +459,7 @@ Grouped in options:\
 [iNews](https://inews.co.uk) -
 [Investors' Chronicle](https://www.investorschronicle.co.uk) -
 [Irish Independent](https://www.independent.ie) -
+[Literary Review](https://literaryreview.co.uk) -
 [London Review of Books](https://www.lrb.co.uk) -
 [Monocle](https://monocle.com) -
 [New Left Review](https://newleftreview.org) -

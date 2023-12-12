@@ -514,7 +514,7 @@ ext_api.storage.local.get({
     });
   }
 
-  disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
+  disabledSites = defaultSites_grouped_domains.concat(customSites_domains, updatedSites_domains_new).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
   if (enabledSites.includes('#options_optin_update_rules')) {
@@ -542,7 +542,7 @@ ext_api.storage.onChanged.addListener(function (changes, namespace) {
       }).map(function (val) {
         return val.toLowerCase();
       });
-      disabledSites = defaultSites_grouped_domains.concat(customSites_domains).filter(x => !enabledSites.includes(x));
+      disabledSites = defaultSites_grouped_domains.concat(customSites_domains, updatedSites_domains_new).filter(x => !enabledSites.includes(x));
       add_grouped_enabled_domains(grouped_sites);
       set_rules(sites, updatedSites, customSites);
     }
@@ -874,7 +874,11 @@ if (typeof browser !== 'object') {
         // send bg2csData to contentScript.js
         if (Object.keys(bg2csData).length) {
           setTimeout(function () {
-            ext_api.tabs.sendMessage(tabId, {msg: "bg2cs", data: bg2csData});
+            try {
+              ext_api.tabs.sendMessage(tabId, {msg: "bg2cs", data: bg2csData});
+            } catch (err) {
+              false;
+            }
           }, 500);
         }
         } // !cs_block_domain
@@ -1029,6 +1033,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || !mobile || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
+    !(matchUrlDomain('nytimes.com', details.url) && details.url.includes('.nytimes.com/live/')) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
     !(matchUrlDomain('www.wsj.com', details.url));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url);

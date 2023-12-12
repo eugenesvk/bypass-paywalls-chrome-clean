@@ -1109,13 +1109,8 @@ else if (matchDomain('nwzonline.de')) {
 }
 
 else if (matchDomain('nzz.ch')) {
-  if (!window.location.href.includes('/amp/')) {
-    let ads = document.querySelectorAll('div.resor');
-    hideDOMElement(...ads);
-  } else {
-    let amp_ads = document.querySelectorAll('amp-ad');
-    hideDOMElement(...amp_ads);
-  }
+  let ads = document.querySelectorAll('div.resor');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('philomag.de')) {
@@ -1353,8 +1348,8 @@ else if (matchDomain(de_lv_domains)) {
       div_hidden.removeAttribute('style');
     }
   }
-  let banners = document.querySelectorAll('.adZone');
-  removeDOMElement(...banners);
+  let ads = document.querySelectorAll('div.adZone');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(de_westfalen_medien_domains)) {
@@ -2919,6 +2914,11 @@ else if (matchDomain('independent.co.uk')) {
   }
 }
 
+else if (matchDomain('literaryreview.co.uk')) {
+  if (dompurify_loaded)
+    getJsonUrl('p.subscribe-for-more', '', 'div#_articlereview');
+}
+
 else if (matchDomain('prospectmagazine.co.uk')) {
   let url = window.location.href;
   getGoogleWebcache(url, 'div.paywall_overlay_blend, div.paywall', '', 'main');
@@ -4449,13 +4449,17 @@ else if (matchDomain('nybooks.com')) {
   let paywall_article = document.querySelector('.paywall-article');
   if (paywall_article)
     paywall_article.classList.remove('paywall-article');
-  let banner = document.querySelector('div.toast-cta, div.inline-ad');
-  removeDOMElement(banner);
+  let banners = document.querySelectorAll('div.toast-cta, div.inline-ad');
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('nytimes.com')) {
-  let banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.expanded-dock, div.pz-ad-box');
-  removeDOMElement(...banners);
+  waitDOMElement('div#dock-container', 'DIV', removeDOMElement, false);
+  csDoneOnce = true;
+  window.setTimeout(function () {
+    let banners = document.querySelectorAll('div[data-testid="inline-message"], div[id^="ad-"], div.pz-ad-box');
+    hideDOMElement(...banners);
+  }, 1000);
 }
 
 else if (matchDomain('nzherald.co.nz')) {

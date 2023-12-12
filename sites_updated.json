@@ -35,6 +35,12 @@
     "allow_cookies": 1,
     "upd_version": "3.4.4.3"
   },
+  "Literary Review (UK)": {
+    "domain": "literaryreview.co.uk",
+    "allow_cookies": 1,
+    "ld_json_url": "p.subscribe-for-more|div#_articlereview",
+    "upd_version": "3.4.6.3"
+  },
   "The Atlantic": {
     "domain": "theatlantic.com",
     "block_regex": "cdn\\.theatlantic\\.com\\/_next\\/static\\/chunks\\/pages\\/.+\\/archive\\/",
