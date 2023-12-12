@@ -1,5 +1,5 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
-var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
+var url_loc = 'firefox';
 
 var manifestData = ext_api.runtime.getManifest();
 var versionString = 'v' + manifestData.version;

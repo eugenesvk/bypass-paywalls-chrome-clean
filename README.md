@@ -597,6 +597,7 @@ Grouped in options:\
 [Der Freitag](https://www.freitag.de) -
 [Der Spiegel (link to archive.is)](https://www.spiegel.de) -
 [Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
+[Die Presse](https://www.diepresse.com) -
 [Die Welt (link to archive.is)](https://www.welt.de) -
 [Die Zeit (link to archive.is)](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
@@ -622,6 +623,7 @@ Grouped in options:\
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -
+[Weser-Kurier](https://www.weser-kurier.de) -
 [Westdeutsche Zeitung](https://www.wz.de)
 
 Grouped in options:\

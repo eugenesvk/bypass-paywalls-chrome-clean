@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -263,12 +263,6 @@
     "allow_cookies": 1,
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "gazette.com"
-  },
-  "Gp.se": {
-    "add_ext_link": "div.c-premium-lockscreen__subscribe|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "gp.se"
   },
   "Gplanet.co.il (not lectures)": {
     "allow_cookies": 1,

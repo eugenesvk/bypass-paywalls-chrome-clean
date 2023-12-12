@@ -3,7 +3,9 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Die Presse (at)
 Add LiteraryReview.co.uk
+Add Weser-Kurier.de
 Remove JungeFreiheit.de (fix obsolete)
 Remove Groupe EBRA (fix obsolete)
 Remove Wissenschaft.de (fix obsolete)

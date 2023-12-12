@@ -203,6 +203,7 @@
     "*://*.diariodemallorca.es/*",
     "*://*.diariosur.es/*",
     "*://*.diariovasco.com/*",
+    "*://*.diepresse.com/*",
     "*://*.digiday.com/*",
     "*://*.discovermagazine.com/*",
     "*://*.doorbraak.be/*",
@@ -752,6 +753,7 @@
     "*://*.wellandtribune.ca/*",
     "*://*.welt.de/*",
     "*://*.weltkunst.de/*",
+    "*://*.weser-kurier.de/*",
     "*://*.westernadvocate.com.au/*",
     "*://*.westfalen-blatt.de/*",
     "*://*.wiesbadener-kurier.de/*",
@@ -821,5 +823,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.6.3"
+  "version": "3.4.6.4"
 }
