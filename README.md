@@ -609,7 +609,6 @@ Grouped in options:\
 [Kurier.at](https://kurier.at) -
 [Mitteldeutsche Zeitung](https://www.mz.de) -
 [Neue Westfälische](https://www.nw.de) -
-[Nordwest Zeitung](https://www.nwzonline.de) -
 [Philosophie Magazin](https://www.philomag.de) -
 [Piqd](https://www.piqd.de) -
 [Profil.at](https://www.profil.at) -

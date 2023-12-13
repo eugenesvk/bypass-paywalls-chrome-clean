@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -33,6 +33,11 @@
     "allow_cookies": 1,
     "domain": "asiamoney.com",
     "useragent": "googlebot"
+  },
+  "Athensreviewofbooks.com": {
+    "allow_cookies": 1,
+    "domain": "athensreviewofbooks.com",
+    "ld_json": "div.freeUser|div.itemBody"
   },
   "Bauernzeitung.ch": {
     "allow_cookies": 1,
@@ -739,11 +744,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "thenational.scot"
-  },
-  "Thestage.co.uk": {
-    "allow_cookies": 1,
-    "domain": "thestage.co.uk",
-    "ld_google_webcache": "div#ao-MeteringDNAllow|div.aos-FeatureArticle"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,

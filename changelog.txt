@@ -8,6 +8,7 @@ Add LiteraryReview.co.uk
 Add Weser-Kurier.de
 Remove JungeFreiheit.de (fix obsolete)
 Remove Groupe EBRA (fix obsolete)
+Remove Nordwest Zeitung (fix obsolete)
 Remove Wissenschaft.de (fix obsolete)
 Fix Australia News Corp (media on amp)
 
