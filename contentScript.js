@@ -335,7 +335,7 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDo
   if (paywall) {
     paywall.removeAttribute('class');
     paywall.firstChild.before(freediumLink(url));
-    paywall.firstChild.before(googleWebcacheLink(url));
+    paywall.firstChild.before(googleWebcacheLink(url, 'BPC > Try for full article text (articles before 2023-12-10)'));
   }
   window.setTimeout(function () {
     let banner = pageContains('div > div > p', /author made this story available to/);
@@ -832,17 +832,7 @@ else if (matchDomain('diepresse.com')) {
 }
 
 else if (matchDomain('faz.net')) {
-  if (matchDomain('zeitung.faz.net')) {
-    let paywall_z = document.querySelector('div.c-red-carpet');
-    if (paywall_z) {
-      removeDOMElement(paywall_z);
-      let og_url = document.querySelector('head > meta[property="og:url"][content]');
-      if (og_url)
-        window.location.href = og_url.content;
-    }
-    let sticky_advt = document.querySelector('div.sticky-advt');
-    removeDOMElement(sticky_advt);
-  } else {
+  if (!matchDomain('zeitung.faz.net')) {
     let paywall = document.querySelector('#paywall-form-container-outer, section.atc-ContainerPaywall');
     if (paywall) {
       removeDOMElement(paywall);

@@ -11,6 +11,7 @@ Remove Groupe EBRA (fix obsolete)
 Remove Nordwest Zeitung (fix obsolete)
 Remove Wissenschaft.de (fix obsolete)
 Fix Australia News Corp (media on amp)
+Fix Faz.net (disable Zeitung subdomain)
 
 * v3.4.6.0 (2023-12-10)
 Remove Morgenpost.de (Funke; fix obsolete)

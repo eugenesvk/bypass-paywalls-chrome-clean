@@ -28,6 +28,7 @@ var restrictions = {
   'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
+  'faz.net': /^((?!\/zeitung\.faz\.net\/).)*$/,
   'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
   'hilltimes.com': /^((?!\.hilltimes\.com\/slideshow\/).)*$/,
