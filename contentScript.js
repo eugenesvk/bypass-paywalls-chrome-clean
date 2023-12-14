@@ -3779,17 +3779,7 @@ else if (matchDomain('defector.com')) {
         let pars = article.querySelectorAll('p');
         if (pars.length < 3) {
           let url = window.location.href.split('?')[0];
-          fetch(url)
-          .then(response => {
-            if (response.ok) {
-              response.text().then(html => {
-                let parser = new DOMParser();
-                let doc = parser.parseFromString(DOMPurify.sanitize(html, dompurify_options), 'text/html');
-                let article_new = doc.querySelector(article_sel);
-                article.parentNode.replaceChild(article_new, article);
-              });
-            }
-          });
+          replaceDomElementExt(url, false, false, article_sel);
         }
       }, 1000);
     }
@@ -4421,7 +4411,7 @@ else if (matchDomain('newrepublic.com')) {
 
 else if (matchDomain('newscientist.com')) {
   let url = window.location.href;
-  func_post = function () {
+  let func_post = function () {
     let lazy_images = document.querySelectorAll('img.lazyload[data-src]:not([src])');
     for (let elem of lazy_images)
       elem.src = elem.getAttribute('data-src').split('?')[0] + '?width=800';
@@ -5871,7 +5861,7 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
       let article = document.querySelector(selector);
       if (response.ok) {
         response.text().then(html => {
-          replaceDomElementExtSrc(url, html, false, base64, selector, text_fail, selector_source);
+          replaceDomElementExtSrc(url, '', html, false, base64, selector, text_fail, selector_source);
         });
       } else {
         replaceTextFail(url, article, proxy, text_fail);

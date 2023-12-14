@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, al-monitor.com, arkansasonline.com, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -18,11 +18,6 @@
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "airmail.news"
-  },
-  "Al-monitor.com": {
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"body.nodetype--memo\", \"rm_class\":\"nodetype--memo\"}, {\"cond\":\"div.memo--callout--wrapper\",\"rm_elem\":1}]",
-    "domain": "al-monitor.com"
   },
   "Artsprofessional.co.uk": {
     "allow_cookies": 1,

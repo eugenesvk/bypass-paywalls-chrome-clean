@@ -1514,7 +1514,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       getArticleSrc(message);
     function getArticleSrc(message) {
       let url_src = message.data.url_src || message.data.url;
-      fetch(message.data.url_src)
+      fetch(url_src)
       .then(response => {
         if (response.ok) {
           response.text().then(html => {
