@@ -660,6 +660,19 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   }
 }
 
+else if (matchDomain('automobilwoche.de')) {
+  let body_hidden = document.querySelector('body[class]');
+  if (body_hidden)
+    body_hidden.removeAttribute('class');
+  let lazy_images = document.querySelectorAll('img.lazy[data-src]');
+  for (let elem of lazy_images) {
+    elem.src = elem.getAttribute('data-src');
+    elem.removeAttribute('class');
+  }
+  let lazy_sources = document.querySelectorAll('source[srcset^="data:image"]');
+  removeDOMElement(...lazy_sources);
+}
+
 else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
   let paywall = document.querySelector('div#piano-inlined');
   if (paywall && dompurify_loaded) {
@@ -832,7 +845,19 @@ else if (matchDomain('diepresse.com')) {
 }
 
 else if (matchDomain('faz.net')) {
-  if (!matchDomain('zeitung.faz.net')) {
+  if (matchDomain('zeitung.faz.net')) {// legacy
+    let paywall_z = document.querySelector('div.c-red-carpet');
+    if (paywall_z) {
+      removeDOMElement(paywall_z);
+      let og_url = document.querySelector('head > meta[property="og:url"][content]');
+      if (og_url)
+        window.location.href = og_url.content;
+      else
+        header_nofix(document.querySelector('div.article__text'));
+    }
+    let sticky_advt = document.querySelector('div.sticky-advt');
+    removeDOMElement(sticky_advt);
+  } else {
     let paywall = document.querySelector('#paywall-form-container-outer, section.atc-ContainerPaywall');
     if (paywall) {
       removeDOMElement(paywall);

@@ -1,4 +1,10 @@
 {
+  "Automobilwoche": {
+    "domain": "automobilwoche.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_8J_.+\\.js",
+    "upd_version": "3.4.7.1"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
