@@ -1630,9 +1630,11 @@ var defaultSites = {
     block_regex: /\.blueconic\.net\//,
     random_ip: "eu"
   },
-  "National Review": {
+  "National Review (disable adblocker)": {
     domain: "nationalreview.com",
-    block_regex: /(\.nationalreview\.com\/script\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    allow_cookies: 1,
+    remove_cookies: 1,
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "National World Publishing (UK)": {
     domain: "###_uk_nat_world",
@@ -2687,7 +2689,8 @@ var defaultSites = {
   "BlueConic": {
     domain: "blueconic.net",
     allow_cookies: 1,
-    block_regex_general: /(\.blueconic\.net\/|[a-z]{1}[0-9]{2,3}\.[\w-]+\.(co(m|\.uk)|net|org)\/script\.js)/
+    block_regex_general: /(\.blueconic\.net\/|[a-z]{1}[0-9]{2,3}\.[\w-]+\.(co(m|\.uk)|net|org)\/script\.js)/,
+    excluded_domains: ["nationalreview.com"]
   },
   "Cxense": {
     domain: "cxense.com",
@@ -2802,8 +2805,7 @@ var defaultSites = {
   "Zephr": {
     domain: "zephr.com",
     allow_cookies: 1,
-    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/,
-    excluded_domains: ["nationalreview.com"]
+    block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/
   },
   "* BPC settings": {
     domain: "###"

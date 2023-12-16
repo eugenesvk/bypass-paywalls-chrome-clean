@@ -11,6 +11,13 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "BlueConic": {
+    "domain": "blueconic.net",
+    "allow_cookies": 1,
+    "block_regex_general": "(\\.blueconic\\.net\\/|[a-z]{1}[0-9]{2,3}\\.[\\w-]+\\.(co(m|\\.uk)|net|org)\\/script\\.js)",
+    "excluded_domains": ["nationalreview.com"],
+    "upd_version": "3.4.7.3"
+  },
   "Correio do Povo": {
     "domain": "correiodopovo.com.br",
     "allow_cookies": 1,
@@ -46,6 +53,14 @@
     "allow_cookies": 1,
     "ld_json_url": "p.subscribe-for-more|div#_articlereview",
     "upd_version": "3.4.6.3"
+  },
+  "National Review": {
+    "domain": "nationalreview.com",
+    "allow_cookies": 1,
+    "remove_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "cs_block": 1,
+    "upd_version": "3.4.7.3"
   },
   "The Economist": {
     "domain": "economist.com",

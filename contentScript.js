@@ -4408,10 +4408,10 @@ else if (matchDomain('nationalreview.com')) {
         removeDOMElement(paywall);
         refreshCurrentTab();
       }
-    }, 1000);
+    }, 5000);
   }
-  let zephr_wrapper = document.querySelector('div.zephr-wrapper');
-  hideDOMElement(zephr_wrapper);
+  let banners = document.querySelectorAll('div.zephr-wrapper, div#bc-root, div.cookie-text');
+  hideDOMElement(...banners);
   let ads = document.querySelectorAll('amp-ad, .ad-unit, .ad-skeleton, amp-connatix-player, div[class*="-connatix-"]');
   hideDOMElement(...ads);
 }
