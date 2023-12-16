@@ -658,6 +658,8 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   } else {
     amp_unhide_subscr_section();
   }
+  let banners = document.querySelectorAll('div.piano-article');
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('automobilwoche.de')) {
@@ -4037,7 +4039,7 @@ else if (matchDomain('hbr.org')) {
   }
   let popup = document.querySelector('.persistent-banner');
   removeDOMElement(popup);
-  let paywall = document.querySelector('site-paywall');
+  let paywall = document.querySelector('div#paywall');
   if (paywall) {
     removeDOMElement(paywall);
     insert_script(hbr_main);
