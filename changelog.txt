@@ -6,6 +6,7 @@ Post-release
 Fix Automobilwoche.de (js)
 Fix Harvard Business Review (script)
 Fix National Review (cookies)
+Enable optional host permissions on Android (Firefox 120+)
 
 * v3.4.7.0 (2023-12-14)
 Add Die Presse (at)
