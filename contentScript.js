@@ -758,7 +758,7 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
 
 else if (matchDomain('berliner-zeitung.de')) {
   window.setTimeout(function () {
-    let ads = document.querySelectorAll('[id^="traffective-ad"], [class^="ad-slot_wrapper"], [class^="outbrain_container"]');
+    let ads = document.querySelectorAll('[class^="traffective_"], [class^="article_billboard-"], [class^="outbrain_container"]');
     hideDOMElement(...ads);
   }, 1000);
 }

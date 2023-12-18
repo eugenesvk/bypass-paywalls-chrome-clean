@@ -54,6 +54,12 @@
     "ld_json_url": "p.subscribe-for-more|div#_articlereview",
     "upd_version": "3.4.6.3"
   },
+  "London Review of Books": {
+    "domain": "lrb.co.uk",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.lrb\\.co\\.uk\\/",
+    "upd_version": "3.4.7.4"
+  },
   "National Review": {
     "domain": "nationalreview.com",
     "allow_cookies": 1,

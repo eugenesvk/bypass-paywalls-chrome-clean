@@ -1453,7 +1453,7 @@ var defaultSites = {
   "London Review of Books": {
     domain: "lrb.co.uk",
     allow_cookies: 1,
-    block_regex: /\.tinypass\.com\//
+    block_js_inline: /\.lrb\.co\.uk\//
   },
   "Los Angeles Times": {
     domain: "latimes.com",
