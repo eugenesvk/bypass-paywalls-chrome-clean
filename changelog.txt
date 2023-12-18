@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Automobilwoche.de (js)
+Fix Groupe Centre France (identify sites)
 Fix Harvard Business Review (script)
 Fix London Review of Books (js-inline)
 Fix National Review (cookies)

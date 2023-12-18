@@ -83,7 +83,7 @@ window.setTimeout(function () {
       if (document.querySelector('head > link[href^="https://assets.almatalent.fi"]'))
         group = '###_fi_alma_talent';// no fix
     } else if (hostname.endsWith('.fr')) {
-      if (document.querySelector('head > link[href*=".fr/static/bloc/ripolinage/header/cf-header/"]'))
+      if (document.querySelector('head > meta[name="google-play-app"][content^="app-id=com.centrefrance"]'))
         group = '###_fr_gcf';
     } else if (hostname.endsWith('.it')) {
       if (document.querySelector('head > link[href^="//citynews.stgy.ovh/"]'))

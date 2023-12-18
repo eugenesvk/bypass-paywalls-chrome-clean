@@ -533,6 +533,11 @@
     "block_regex": "\\/pebmed\\.com\\.br\\/wp-content\\/.+\\/paywall\\/dist\\/js\\/app\\.js",
     "domain": "pebmed.com.br"
   },
+  "Pharmaceutical-journal.com": {
+    "allow_cookies": 1,
+    "domain": "pharmaceutical-journal.com",
+    "useragent": "googlebot"
+  },
   "Phillymag.com": {
     "allow_cookies": 1,
     "domain": "phillymag.com",
