@@ -5,6 +5,13 @@
     "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_8J_.+\\.js",
     "upd_version": "3.4.7.1"
   },
+  "Bild (link to archive.is)": {
+    "domain": "bild.de",
+    "allow_cookies": 1,
+    "add_ext_link": "div.offer-module|div.article-body",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.7.5"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,

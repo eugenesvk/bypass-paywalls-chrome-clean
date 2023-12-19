@@ -109,6 +109,7 @@
     "*://*.betterprogramming.pub/*",
     "*://*.bhaskar.com/*",
     "*://*.bicycling.com/*",
+    "*://*.bild.de/*",
     "*://*.billboard.com/*",
     "*://*.bizjournals.com/*",
     "*://*.bloomberg.com/*",
@@ -822,5 +823,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.7.4"
+  "version": "3.4.7.5"
 }
