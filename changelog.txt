@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Bild.de (link to archive.is)
+Remove Money.it (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Groupe Centre France (identify sites)
 Fix Harvard Business Review (script)

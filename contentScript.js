@@ -2359,23 +2359,6 @@ else if (matchDomain(it_gedi_domains)) {
   hideDOMElement(...ads);
 }
 
-else if (matchDomain('money.it')) {
-  if (!window.location.search.startsWith('?page=amp')) {
-    let paywall = document.querySelector('div#paywall');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let article_id_dom = document.querySelector('div[data-idarticle]');
-      if (article_id_dom) {
-        let article_id = article_id_dom.getAttribute('data-idarticle');
-        window.location.href = 'https://www.money.it/?page=amp&id_article=' + article_id;
-      }
-    }
-  } else {
-    let ads = document.querySelectorAll('amp-ad');
-    hideDOMElement(...ads);
-  }
-}
-
 else if (matchDomain('tuttosport.com')) {
   if (!window.location.pathname.startsWith('/amp/')) {
     let article_images = document.querySelectorAll('div > img[data-src]:not([src])');

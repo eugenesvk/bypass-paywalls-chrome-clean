@@ -43,6 +43,12 @@
     "block_js_inline": "\\.lrb\\.co\\.uk\\/",
     "upd_version": "3.4.7.4"
   },
+  "Money.it": {
+    "domain": "money.it",
+    "allow_cookies": 1,
+    "cs_block": 1,
+    "upd_version": "3.4.7.5"
+  },
   "National Review": {
     "domain": "nationalreview.com",
     "allow_cookies": 1,

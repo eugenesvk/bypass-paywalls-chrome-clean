@@ -44,7 +44,7 @@ For new sites you also have to opt-in to custom sites/request host permissions f
 Add-on was removed by Mozilla from [add-on store (AMO)](https://addons.mozilla.org).\
 Current installations (by custom collection in Firefox Beta/Nightly or Firefox-fork) will stay active, but with no more updates.
 
-[Firefox Nightly 122+](https://play.google.com/store/apps/details?id=org.mozilla.fenix) can still install/sideload a xpi-file (manual updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
+[Firefox Beta 122+](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) and [Firefox Nightly 122+](https://play.google.com/store/apps/details?id=org.mozilla.fenix) can still install/sideload a xpi-file (manual updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
 
 Or use the Firefox-fork [Iceraven](https://github.com/fork-maintainers/iceraven-browser) v2.13.2+ (manual updates).\
 You can install/update Iceraven manually or use the app [FFUpdater](https://github.com/Tobi823/ffupdater)
@@ -687,7 +687,6 @@ Grouped in options:\
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
 [La Gazzetta dello Sport](https://www.gazzetta.it) -
-[Money.it](https://www.money.it) -
 [Tuttosport](https://www.tuttosport.com)
 
 Grouped in options:\
