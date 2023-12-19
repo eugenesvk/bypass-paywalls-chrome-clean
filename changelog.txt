@@ -7,6 +7,7 @@ Add Bild.de (link to archive.is)
 Fix Automobilwoche.de (js)
 Fix Groupe Centre France (identify sites)
 Fix Harvard Business Review (script)
+Fix LeParisien.fr (amp-redirect)
 Fix London Review of Books (js-inline)
 Fix Media Group Westfalen
 Fix National Review (cookies)

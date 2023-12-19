@@ -1891,8 +1891,8 @@ else if (matchDomain('lemonde.fr')) {
 }
 
 else if (matchDomain('leparisien.fr')) {
-  let paywall = document.querySelector('div.paywall');
   if (window.location.pathname.startsWith('/amp/')) {
+    let paywall = document.querySelector('div.paywall');
     if (paywall) {
       let paywall_sticky = document.querySelector('div.paywall-sticky');
       removeDOMElement(paywall, paywall_sticky);
@@ -1904,7 +1904,7 @@ else if (matchDomain('leparisien.fr')) {
         mask.classList.remove('amp-premium-first-content');
     }
   } else {
-    amp_redirect('div.paywall');
+    amp_redirect('div.paywall', '', '/amp' + window.location.pathname);
   }
 }
 
