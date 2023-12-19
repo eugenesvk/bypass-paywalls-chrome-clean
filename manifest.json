@@ -802,6 +802,7 @@
     "*://*.californiatimes.com/*",
     "*://*.cedscdn.it/*",
     "*://*.cedsdigital.it/*",
+    "*://*.cloudfront.net/*",
     "*://*.corriereobjects.it/*",
     "*://*.emol.cl/*",
     "*://*.gitlab.com/magnolia1234/*",

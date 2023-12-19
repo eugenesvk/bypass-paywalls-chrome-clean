@@ -1686,6 +1686,7 @@ var defaultSites = {
       "thecut.com",
       "vulture.com"
     ],
+    block_regex: /\.cloudfront\.net\/embed\/widget\/subx.+\.js/,
     remove_cookies_select_drop: ["nymcid", "first-nymcid"]
   },
   "New Zealand Herald": {

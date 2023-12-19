@@ -51,6 +51,19 @@
     "cs_block": 1,
     "upd_version": "3.4.7.3"
   },
+  "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
+    "domain": "###_usa_nymag",
+    "group": [
+      "curbed.com",
+      "grubstreet.com",
+      "nymag.com",
+      "thecut.com",
+      "vulture.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js",
+    "upd_version": "3.4.7.6"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

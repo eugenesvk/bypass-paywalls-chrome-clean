@@ -11,6 +11,7 @@ Fix LeParisien.fr (amp-redirect)
 Fix London Review of Books (js-inline)
 Fix Media Group Westfalen
 Fix National Review (cookies)
+Fix NYmag-sites (js)
 Enable optional host permissions on Android (Firefox 120+)
 
 * v3.4.7.0 (2023-12-14)

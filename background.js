@@ -1419,32 +1419,34 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     if (group) {
       let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom', '###_uk_delinian'];
       if (!custom_flex_domains.includes(custom_domain)) {
-        if (custom_flex[group])
-          custom_flex[group].push(custom_domain);
-        else
-          custom_flex[group] = [custom_domain];
-        custom_flex_domains.push(custom_domain);
-        if (enabledSites.includes(group)) {
-          if (!enabledSites.includes(custom_domain))
-            enabledSites.push(custom_domain);
-          let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
-          if (rules) {
-            if (group === '###_de_madsack') {
-              if (!set_var_sites.includes(custom_domain))
-                set_var_sites.push(custom_domain);
-            } else if (group === '###_usa_townnews') {
-              if (['berkshireeagle.com'].includes(custom_domain))
-                rules.useragent = 'googlebot';
+        if (!nofix_groups.includes(group)) {
+          if (custom_flex[group])
+            custom_flex[group].push(custom_domain);
+          else
+            custom_flex[group] = [custom_domain];
+          custom_flex_domains.push(custom_domain);
+          if (enabledSites.includes(group)) {
+            if (!enabledSites.includes(custom_domain))
+              enabledSites.push(custom_domain);
+            let rules = Object.values(defaultSites).filter(x => x.domain === group)[0];
+            if (rules) {
+              if (group === '###_de_madsack') {
+                if (!set_var_sites.includes(custom_domain))
+                  set_var_sites.push(custom_domain);
+              } else if (group === '###_usa_townnews') {
+                if (['berkshireeagle.com'].includes(custom_domain))
+                  rules.useragent = 'googlebot';
+              }
+            } else
+              rules = Object.values(customSites).filter(x => x.domain === group)[0];
+            if (rules) {
+              customFlexAddRules(custom_domain, rules);
             }
-          } else
-            rules = Object.values(customSites).filter(x => x.domain === group)[0];
-          if (rules) {
-            customFlexAddRules(custom_domain, rules);
+          } else if (disabledSites.includes(group)) {
+            if (!disabledSites.includes(custom_domain))
+              disabledSites.push(custom_domain);
           }
-        } else if (disabledSites.includes(group)) {
-          if (!disabledSites.includes(custom_domain))
-            disabledSites.push(custom_domain);
-        } else if (nofix_groups.includes(group))
+        } else
           nofix_sites.push(custom_domain);
     }
   } else

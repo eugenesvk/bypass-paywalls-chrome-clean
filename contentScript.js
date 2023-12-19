@@ -46,6 +46,7 @@ var usa_hearst_comm_domains = ['ctpost.com', 'expressnews.com', 'houstonchronicl
 var usa_lee_ent_domains = ['buffalonews.com', 'journalnow.com', 'journalstar.com', 'madison.com', 'nwitimes.com', 'omaha.com', 'richmond.com', 'stltoday.com', 'tucson.com', 'tulsaworld.com'];
 var usa_mcc_domains = ['bnd.com', 'charlotteobserver.com', 'fresnobee.com', 'kansas.com', 'kansascity.com', 'kentucky.com', 'mcclatchydc.com', 'miamiherald.com', 'newsobserver.com', 'sacbee.com', 'star-telegram.com', 'thestate.com', 'tri-cityherald.com'];
 var usa_mng_domains =   ['denverpost.com', 'eastbaytimes.com', 'mercurynews.com', 'ocregister.com', 'pressenterprise.com', 'twincities.com'];
+var usa_nymag_domains = ['curbed.com', 'grubstreet.com', 'nymag.com', 'thecut.com', 'vulture.com'];
 var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition.com", "cleaneatingmag.com", "climbing.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
@@ -2546,7 +2547,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > lin
               let elem = document.createElement('p');
               if (par.code) {
                 let parser = new DOMParser();
-                let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code, {ADD_TAGS: ['iframe']}) + '</div>', 'text/html');
+                let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code, dompurify_options) + '</div>', 'text/html');
                 elem = article_html.querySelector('div');
               } else if (par.insertbox_head || par.insertbox_text) {
                 if (par.insertbox_head && par.insertbox_head.length > 2) {
@@ -2825,7 +2826,7 @@ else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
                       }
                     }
                   } else if (!['ad', 'quote', 'streamone'].includes(type)) {
-                    let html = parser.parseFromString('<p class="' + intro_par_class + '">' + DOMPurify.sanitize(item, {ADD_TAGS: ['iframe']}) + '</p>', 'text/html');
+                    let html = parser.parseFromString('<p class="' + intro_par_class + '">' + DOMPurify.sanitize(item, dompurify_options) + '</p>', 'text/html');
                     elem = html.querySelector('p');
                     if (!['p', 'subhead', 'legacy-ml'].includes(type)) {
                       console.log(type);
@@ -5458,6 +5459,11 @@ else if (matchDomain(usa_craincomm_domains)) {
   }
   let banners = document.querySelectorAll('div.footer__ads-footer');
   hideDOMElement(...banners);
+}
+
+else if (matchDomain(usa_nymag_domains)) {
+  let ads = document.querySelectorAll('div.m-ad');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(usa_outside_mag_domains)) {
