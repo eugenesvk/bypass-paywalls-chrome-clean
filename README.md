@@ -594,7 +594,6 @@ Grouped in options:\
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Auto Motor und Sport](https://www.auto-motor-und-sport.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
-[Badische Neueste Nachrichten](https://www.bnn.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Bild (link to archive.is)](https://www.bild.de) -
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -

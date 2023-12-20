@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Bild.de (link to archive.is)
 Add Rp.pl
+Remove Bnn.de (fix obsolete)
 Remove Money.it (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Groupe Centre France (identify sites)
@@ -1103,7 +1104,7 @@ Fix Madsack Mediengruppe
 Fix NzHerald
 
 * v2.6.2.0 (2022-03-27)
-Add Badische Neueste Nachrichten
+Add Bnn.de
 Add iPolitics.ca
 Add LeNouvelEconomiste.fr
 Add Muenstersche Zeitung

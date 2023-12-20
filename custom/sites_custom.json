@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, al-monitor.com, arkansasonline.com, bild.de, columbian.com, die-glocke.de, doorbraak.be, gp.se, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, politiken.dk, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com, thestage.co.uk",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -578,12 +578,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
-  },
-  "Rp-online.de": {
-    "add_ext_link": "div.paid-content,span.park-widget|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "rp-online.de"
   },
   "Schwaebische-post.de": {
     "allow_cookies": 1,

@@ -1443,7 +1443,7 @@ else if (matchDomain('ruhrnachrichten.de') || document.querySelector('a.mgw-logo
   if (pathname.includes('-p-'))
     article_id = pathname.split('-p-')[1].split('/')[0];
   if (dompurify_loaded)
-    getJsonUrl('body.is_plus_article', {rm_class: 'is_plus_article'}, 'article', {art_append: 1, art_hold: 1}, article_id);
+    getJsonUrl('body.is_plus_article', {rm_class: 'is_plus_article'}, 'article', {art_append: 1, art_hold: 1, art_class: 'article__content'}, article_id);
   let ads = document.querySelector('div.OUTBRAIN');
   hideDOMElement(ads);
   if (!matchDomain('ruhrnachrichten.de')) {
