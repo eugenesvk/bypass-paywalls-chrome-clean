@@ -70,6 +70,11 @@
     "block_regex": "\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js",
     "upd_version": "3.4.7.6"
   },
+  "Rzeczpospolita": {
+    "domain": "rp.pl",
+    "ld_google_webcache": "div.paywallComponentWrapper|div.main--content--body",
+    "upd_version": "3.4.7.6"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

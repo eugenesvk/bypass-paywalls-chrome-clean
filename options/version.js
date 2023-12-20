@@ -18,7 +18,9 @@ function show_update(ext_version_new, check = true) {
           ext_version_new: ext_version_new
         });
         anchorEl = document.createElement('a');
-        if (manifestData.applications && manifestData.applications.gecko.id.includes('magnolia')) {
+        anchorEl.target = '_blank';
+        let manifest_id = manifestData.applications ? manifestData.applications.gecko.id : '';
+        if (manifest_id && manifest_id.includes('magnolia')) {
           if (installType === 'development')
             anchorEl.href = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean';
           else {
@@ -31,9 +33,15 @@ function show_update(ext_version_new, check = true) {
         anchorEl.innerText = 'New release v' + ext_version_new;
         anchorEl.target = '_blank';
         versionString_new.appendChild(anchorEl);
+        let warning;
         if (!manifestData.name.includes('Clean')) {
+          warning = 'fake';
+        } else if (manifest_id && !manifest_id.match(/^magnolia(_limited_permissions)?@12\.34$/)) {
+          warning = 'cloned';
+        }
+        if (warning) {
           let par = document.createElement('p');
-          par.innerHTML = "<strong>You've installed a fake version of BPC (check GitLab)</strong>";
+          par.innerHTML = "<strong>You've installed a " + warning + " version of BPC (check GitLab)</strong>";
           versionString_new.appendChild(par);
         }
       }

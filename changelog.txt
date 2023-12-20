@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Bild.de (link to archive.is)
+Add Rp.pl
 Remove Money.it (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Groupe Centre France (identify sites)
@@ -14,6 +15,7 @@ Fix Media Group Westfalen
 Fix National Review (cookies)
 Fix NYmag-sites (js)
 Enable optional host permissions on Android (Firefox 120+)
+Update ld_json_url (default url)
 
 * v3.4.7.0 (2023-12-14)
 Add Die Presse (at)

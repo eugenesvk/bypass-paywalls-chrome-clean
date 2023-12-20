@@ -573,6 +573,7 @@
     "*://*.rnd.de/*",
     "*://*.roadandtrack.com/*",
     "*://*.rollingstone.com/*",
+    "*://*.rp.pl/*",
     "*://*.rubbernews.com/*",
     "*://*.rugbypass.com/*",
     "*://*.rugbyrama.fr/*",
@@ -823,5 +824,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.7.5"
+  "version": "3.4.7.6"
 }

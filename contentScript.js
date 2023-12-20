@@ -1438,8 +1438,12 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('head > link[
 }
 
 else if (matchDomain('ruhrnachrichten.de') || document.querySelector('a.mgw-logo[href^="https://mgw.de"]')) {
+  let pathname = window.location.pathname;
+  let article_id;
+  if (pathname.includes('-p-'))
+    article_id = pathname.split('-p-')[1].split('/')[0];
   if (dompurify_loaded)
-    getJsonUrl('body.is_plus_article', {rm_class: 'is_plus_article'}, 'article');
+    getJsonUrl('body.is_plus_article', {rm_class: 'is_plus_article'}, 'article', {art_append: 1, art_hold: 1}, article_id);
   let ads = document.querySelector('div.OUTBRAIN');
   hideDOMElement(ads);
   if (!matchDomain('ruhrnachrichten.de')) {
@@ -4568,6 +4572,11 @@ else if (matchDomain('quora.com')) {
   }, 500);
 }
 
+else if (matchDomain('rp.pl')) {
+  let url = window.location.href;
+  getGoogleWebcache(url, 'div.paywallComponentWrapper', '', 'div.main--content--body');
+}
+
 else if (matchDomain('rugbypass.com')) {
   if (window.location.pathname.startsWith('/plus/')) {
     let paywall = document.querySelector('.premium-fold-bottom');
@@ -6141,22 +6150,26 @@ function findKeyJson(json, keys, min_val_len = 0) {
   return source;
 }
 
-function getJsonUrlText(article, callback) {
+function getJsonUrlText(article, callback, article_id = '') {
   let json_url_dom = document.querySelector('head > link[rel="alternate"][type="application/json"][href]');
   let json_url = json_url_dom.href;
-  fetch(json_url)
-  .then(response => {
-    if (response.ok) {
-      response.json().then(json => {
-        try {
-          let json_text = parseHtmlEntities(json.content.rendered);
-          callback(json_text, article);
-        } catch (err) {
-          console.log(err);
-        }
-      });
-    }
-  });
+  if (!json_url && article_id)
+    json_url = 'https://' + window.location.hostname + '/wp-json/wp/v2/posts/' + article_id;
+  if (json_url) {
+    fetch(json_url)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          try {
+            let json_text = parseHtmlEntities(json.content.rendered);
+            callback(json_text, article);
+          } catch (err) {
+            console.log(err);
+          }
+        });
+      }
+    });
+  }
 }
 
 function getJsonUrlAdd(json_text, article, art_options = {}) {
@@ -6185,7 +6198,7 @@ function getJsonUrlAdd(json_text, article, art_options = {}) {
     article.parentNode.replaceChild(article_new, article);
 }
   
-function getJsonUrl(paywall_sel, paywall_action = '', article_sel, art_options = {}) {
+function getJsonUrl(paywall_sel, paywall_action = '', article_sel, art_options = {}, article_id = '') {
   let paywall = document.querySelectorAll(paywall_sel);
   let article = document.querySelector(article_sel);
   if (paywall.length && article && dompurify_loaded) {
@@ -6193,7 +6206,7 @@ function getJsonUrl(paywall_sel, paywall_action = '', article_sel, art_options =
     getJsonUrlText(article, (json_text, article) => {
       if (json_text && article)
         getJsonUrlAdd(json_text, article, art_options);
-    });
+    }, article_id);
   }
 }
 

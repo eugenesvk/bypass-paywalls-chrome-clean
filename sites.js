@@ -1964,6 +1964,10 @@ var defaultSites = {
     block_js_inline: /\.rugbypass\.com\/plus\//,
     block_regex: /\.tinypass\.com\//
   },
+  "Rzeczpospolita": {
+    domain: "rp.pl",
+    cs_dompurify: 1
+  },
   "S&P Global": {
     domain: "spglobal.com",
     allow_cookies: 1,

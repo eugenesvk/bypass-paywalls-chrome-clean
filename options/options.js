@@ -1,10 +1,7 @@
-// defaultSites are loaded from sites.js at installation extension (and are saved to local storage)
-// var defaultSites = {};
-var ext_api = chrome || browser;
+var ext_api = (typeof browser === 'object') ? browser : chrome;
 
 // Saves options to ext_api.storage
 function save_options() {
-  var gh_url = document.getElementById('bypass_sites').value;
   var inputEls = document.querySelectorAll('#bypass_sites input');
   var sites = {};
 

@@ -766,6 +766,9 @@ Grouped in options:\
 [TradeWinds](https://www.tradewindsnews.com) -
 [Upstream](https://www.upstreamonline.com)
 
+##### Poland
+[Rzeczpospolita](https://www.rp.pl)
+
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
 [Record](https://www.record.pt) -

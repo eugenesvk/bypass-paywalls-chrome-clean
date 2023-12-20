@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "africaintelligence.fr, al-monitor.com, arkansasonline.com, bild.de, columbian.com, die-glocke.de, doorbraak.be, gp.se, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
+    "cs_code": "africaintelligence.fr, al-monitor.com, arkansasonline.com, bild.de, columbian.com, die-glocke.de, doorbraak.be, gp.se, handelsblatt.com, intelligenceonline.com, intelligenceonline.fr, interestingengineering.com, jeuneafrique.com, lalettrea.fr, lastampa.it, lavozdegalicia.es, law360.com, lepoint.fr, limburger.nl, manager-magazin.de, ouest-france.fr, politiken.dk, pressherald.com, repubblica.it, risk.net, saechsische.de, sueddeutsche.de, swarajyamag.com, theepochtimes.com, theinformation.com, thestage.co.uk, thetexan.news, theweek.com, vikatan.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -81,10 +81,10 @@
     "domain": "businessam.be"
   },
   "Businessinsider.de": {
-    "add_ext_link": "div.piano-article__paywall|div.piano-article__content>p",
+    "add_ext_link": "div.piano-article__paywall|div.piano-article__content",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
+    "block_regex": "\\.piano\\.io",
     "domain": "businessinsider.de"
   },
   "Businessnews.com.au": {
@@ -274,12 +274,6 @@
     "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
     "domain": "group_nation_media",
     "group": "monitor.co.ug,nation.africa,thecitizen.co.tz"
-  },
-  "Handelsblatt.com (refresh)": {
-    "add_ext_link": "app-paywall|app-storyline-paragraph",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "handelsblatt.com"
   },
   "Hartenergy.com": {
     "allow_cookies": 1,
@@ -540,12 +534,6 @@
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
-  "Politiken.dk": {
-    "add_ext_link": "div.stopsign|div.article__body",
-    "add_ext_link_type": "google_search_tool",
-    "allow_cookies": 1,
-    "domain": "politiken.dk"
-  },
   "Portfolio.hu": {
     "add_ext_link": "section.paywall|article",
     "add_ext_link_type": "archive.is",
@@ -596,10 +584,6 @@
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "rp-online.de"
-  },
-  "Rp.pl": {
-    "domain": "rp.pl",
-    "ld_google_webcache": "div.paywallComponentWrapper|div.main--content--body"
   },
   "Schwaebische-post.de": {
     "allow_cookies": 1,
