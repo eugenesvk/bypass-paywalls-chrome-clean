@@ -295,6 +295,11 @@ var defaultSites = {
     block_regex: /\.tinypass\.com\//,
     cs_dompurify: 1
   },
+  "BusinessAM.be": {
+    domain: "businessam.be",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "Business Insider": {
     domain: "businessinsider.com",
     allow_cookies: 1,

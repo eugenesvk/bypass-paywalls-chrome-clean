@@ -709,9 +709,7 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
                 sub_elem = content_new.querySelector('div');
                 let iframe = sub_elem.querySelector('iframe[width]');
                 if (iframe) {
-                  let ratio = iframe.width / 640;
-                  if (mobile)
-                    ratio = iframe.width / 320;
+                  let ratio = iframe.width / (mobile ? 320 : 640);
                   iframe.width = iframe.width / ratio;
                   iframe.height = iframe.height / ratio;
                 }
@@ -721,9 +719,7 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
                   sub_elem.src = par_elem.origin;
                   sub_elem.alt = par_elem.alt;
                   if (par_elem.width) {
-                    let ratio = par_elem.width / 640;
-                    if (mobile)
-                      ratio = par_elem.width / 320;
+                    let ratio = par_elem.width / (mobile ? 320 : 640);
                     sub_elem.width = par_elem.width / ratio;
                     sub_elem.height = par_elem.height / ratio;
                   }
@@ -1470,9 +1466,7 @@ if (matchDomain('etc.se')) {
   let video_iframes = document.querySelectorAll('div.embed-block > iframe[width][height]');
   for (let elem of video_iframes) {
     if (elem.width > 1000) {
-      let ratio = elem.width / 640;
-      if (window.navigator.userAgent.toLowerCase().includes('mobile'))
-        ratio = elem.width / 320;
+      let ratio = elem.width / (mobile ? 320 : 640);
       elem.width = elem.width / ratio;
       elem.height = elem.height / ratio;
     }
@@ -2396,6 +2390,35 @@ if (matchDomain(be_groupe_ipm_domains)) {
   }
   let ads = document.querySelectorAll('div.ap-AdContainer, div.ap-Outbrain');
   hideDOMElement(...ads);
+}
+
+else if (matchDomain('businessam.be')) {
+  let paywall = document.querySelector('div.paywall');
+  if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
+    let article = document.querySelector('div.text-gradient');
+    if (article) {
+      let scripts = document.querySelectorAll('script:not([src]):not([type])');
+      let content_script;
+      for (let script of scripts) {
+        if (script.text.match(/window\.fullcontent64\s?=\s?"/)) {
+          content_script = script;
+          break;
+        }
+      }
+      if (content_script) {
+        try {
+          let content = decode_utf8(atob(content_script.text.split(/window\.fullcontent64\s?=\s?"/)[1].split('";')[0]));
+          let parser = new DOMParser();
+          let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(content, dompurify_options) + '</div>', 'text/html');
+          let content_new = doc.querySelector('div');
+          article.parentNode.replaceChild(content_new, article);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    }
+  }
 }
 
 else if (matchDomain('doorbraak.be')) {

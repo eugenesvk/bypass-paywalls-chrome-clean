@@ -125,6 +125,7 @@
     "*://*.britannica.com/*",
     "*://*.buffalonews.com/*",
     "*://*.business-standard.com/*",
+    "*://*.businessam.be/*",
     "*://*.businessinsider.com/*",
     "*://*.businessoffashion.com/*",
     "*://*.businesspost.ie/*",
@@ -822,5 +823,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.7.6"
+  "version": "3.4.7.7"
 }
