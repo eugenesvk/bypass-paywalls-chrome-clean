@@ -1126,23 +1126,6 @@ else if (matchDomain('kurier.at')) {
   removeDOMElement(...banners);
 }
 
-else if (matchDomain('letemps.ch')) {
-  let url = window.location.href;
-  let func_post = function () {
-    let lazy_images = document.querySelectorAll('img.lazy[src="/placeholder.png"][data-src]');
-    for (let elem of lazy_images) {
-      elem.src = elem.getAttribute('data-src');
-      elem.removeAttribute('class');
-    }
-    let fade = document.querySelector('div.post__content--faded');
-    if (fade)
-      fade.classList.remove('post__content--faded');
-  }
-  getGoogleWebcache(url, 'div.post-subscribe', '', 'div.post-body-wrapper', func_post);
-  let ads = document.querySelectorAll('div.topad');
-  hideDOMElement(...ads);
-}
-
 else if (matchDomain(['mz.de', 'volksstimme.de'])) {
   let url = window.location.href;
   getGoogleWebcache(url, 'div.fp-paywall', '', 'div[data-t-name="Article"]');

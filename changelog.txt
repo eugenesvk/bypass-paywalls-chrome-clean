@@ -6,6 +6,7 @@ Post-release
 Add Bild.de (link to archive.is)
 Add Rp.pl
 Remove Bnn.de (fix obsolete)
+Remove LeTemps.ch (fix obsolete)
 Remove Money.it (fix obsolete)
 Fix Automobilwoche.de (js)
 Fix Groupe Centre France (identify sites)

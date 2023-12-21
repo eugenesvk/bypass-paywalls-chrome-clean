@@ -832,7 +832,6 @@ Grouped in options:\
 ##### Switzerland
 [Beobachter](https://www.beobachter.ch) -
 [Handelszeitung](https://www.handelszeitung.ch) -
-[Le Temps](https://www.letemps.ch) -
 [Schweizer Monat](https://schweizermonat.ch) -
 [The Market](https://themarket.ch)\
 [Neue Zürcher Zeitung](https://www.nzz.ch) (+ regional/CH Media; opt-in to custom sites)
