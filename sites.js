@@ -1020,13 +1020,13 @@ var defaultSites = {
       "lanuovasardegna.it"
     ]
   },
-  "Haaretz English": {
-    domain: "haaretz.com",
-    allow_cookies: 1,
-    useragent: "facebookbot"
-  },
-  "Haaretz": {
-    domain: "haaretz.co.il",
+  "Haaretz Group": {
+    domain: "###_il_haaretz_group",
+    group: [
+      "haaretz.co.il",
+      "haaretz.com",
+      "themarker.com"
+    ],
     allow_cookies: 1,
     useragent: "facebookbot"
   },
@@ -2345,11 +2345,6 @@ var defaultSites = {
     domain: "thelawyersdaily.ca",
     allow_cookies: 1,
     useragent: "googlebot"
-  },
-  "The Marker": {
-    domain: "themarker.com",
-    allow_cookies: 1,
-    useragent: "facebookbot"
   },
   "The Market.ch": {
     domain: "themarket.ch",

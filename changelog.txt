@@ -17,6 +17,7 @@ Fix London Review of Books (js-inline)
 Fix Media Group Westfalen
 Fix National Review (cookies)
 Fix NYmag-sites (js)
+Grouping Haaretz sites
 Enable optional host permissions on Android (Firefox 120+)
 Update ld_json_url (default url)
 
