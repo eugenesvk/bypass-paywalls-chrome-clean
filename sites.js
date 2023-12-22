@@ -272,6 +272,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_js_inline: /\.bloombergadria\.com\/.+\/news\//
   },
+  "BNP Media (opt-in to custom sites)": {
+    domain: "###_usa_bnp_media",
+    allow_cookies: 1,
+    block_regex: /\/paywall\/evercookie_get\.js/
+  },
   "Börsen-Zeitung": {
     domain: "boersen-zeitung.de",
     allow_cookies: 1,
@@ -2698,6 +2703,11 @@ var defaultSites = {
     domain: "ensighten.com",
     allow_cookies: 1,
     block_regex_general: /\.ensighten\.com\/.+\/Bootstrap\.js/
+  },
+  "EverCookie": {
+    domain: "###_evercookie",
+    allow_cookies: 1,
+    block_regex_general: /\/paywall\/evercookie_get\.js/
   },
   "Evolok": {
     domain: "evolok.net",

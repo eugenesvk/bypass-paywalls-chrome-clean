@@ -123,6 +123,8 @@ _* free articles only._
 Grouped in options:\
 *[American Banker](https://www.americanbanker.com) (+ [Arizent](https://www.arizent.com/brands)*; opt-in to custom sites)
 
+*[BNP Media](https://www.bnpmedia.com/our-audiences)* sites (opt-in to custom sites)
+
 *[Bridge Tower Media](https://bridgetowermedia.com/markets)* sites (opt-in to custom sites)
 
 *California Business Journals* sites like\

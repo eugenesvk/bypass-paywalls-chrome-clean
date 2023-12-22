@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Bild.de (link to archive.is)
+Add BNP Media (opt-in to custom sites)
 Add BusinessAM.be
 Add Rp.pl
 Remove Bnn.de (fix obsolete)
@@ -19,6 +20,7 @@ Fix National Review (cookies)
 Fix NYmag-sites (js)
 Grouping Haaretz sites
 Enable optional host permissions on Android (Firefox 120+)
+Update block general paywall script (EverCookie)
 Update ld_json_url (default url)
 
 * v3.4.7.0 (2023-12-14)
