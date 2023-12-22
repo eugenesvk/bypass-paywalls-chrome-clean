@@ -94,6 +94,12 @@ function import_json(result) {
       let customSite_diff = Object.keys(sites_custom).find(key => sites_custom[key].domain === sites_custom_new[site].domain && key !== site);
       if (customSite_diff)
         delete sites_custom[customSite_diff];
+      if (sites_custom_new[site].group) {
+        let group = sites_custom_new[site].group;
+        let customSites_group = Object.keys(sites_custom).filter(key => group.split(',').includes(sites_custom[key].domain));
+        for (let key of customSites_group)
+          delete sites_custom[key];
+      }
       sites_custom[site] = sites_custom_new[site];
     }
     sites_custom = filterObject(sites_custom, function (val, key) {

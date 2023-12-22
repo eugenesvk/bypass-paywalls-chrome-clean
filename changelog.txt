@@ -6,6 +6,7 @@ Post-release
 Add Bild.de (link to archive.is)
 Add BNP Media (opt-in to custom sites)
 Add BusinessAM.be
+Add Fox News (regwall)
 Add Rp.pl
 Remove Bnn.de (fix obsolete)
 Remove LeTemps.ch (fix obsolete)

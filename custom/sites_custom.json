@@ -225,10 +225,6 @@
     "domain": "flz.de",
     "useragent": "googlebot"
   },
-  "Foxnews.com (regwall)": {
-    "cs_code": "[{\"cond\":\"div.article-gating-wrapper\", \"rm_elem\":1}, {\"cond\":\"div[class*='gated-overlay']\", \"rm_attrib\":\"class\"}]",
-    "domain": "foxnews.com"
-  },
   "Frieze.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -256,6 +252,12 @@
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
   },
+  "Group_media_source_inc": {
+    "allow_cookies": 1,
+    "block_regex": "\\.com\\/.+\\/js\\/metering\\.js",
+    "domain": "group_media_source_inc",
+    "group": "hbook.com,libraryjournal.com,slj.com"
+  },
   "Group_nation_media": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
@@ -266,11 +268,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "hartenergy.com"
-  },
-  "Hbook.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.hbook\\.com\\/.+\\/js\\/metering\\.js",
-    "domain": "hbook.com"
   },
   "Hbrtaiwan.com": {
     "domain": "hbrtaiwan.com"
@@ -340,11 +337,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
     "domain": "lasvegasadvisor.com"
-  },
-  "Libraryjournal.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.libraryjournal.com\\.com\\/.+\\/js\\/metering\\.js",
-    "domain": "libraryjournal.com"
   },
   "Limerickpost.ie": {
     "allow_cookies": 1,
@@ -584,11 +576,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "siliconrepublic.com"
-  },
-  "Slj.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.slj\\.com\\/.+\\/js\\/metering\\.js",
-    "domain": "slj.com"
   },
   "Sltrib.com": {
     "allow_cookies": 1,

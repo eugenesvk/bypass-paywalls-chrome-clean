@@ -31,6 +31,12 @@
     "remove_cookies_select_drop": ["blaize_session"],
     "upd_version": "3.4.5.3"
   },
+  "Fox News (regwall)": {
+    "domain": "foxnews.com",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.article-gating-wrapper\", \"rm_elem\":1}, {\"cond\":\"div[class*='gated-overlay']\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.4.7.8"
+  },
   "Literary Review (UK)": {
     "domain": "literaryreview.co.uk",
     "allow_cookies": 1,
