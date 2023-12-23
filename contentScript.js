@@ -1138,9 +1138,9 @@ else if (matchDomain(['noz.de', 'shz.de', 'svz.de'])) {
 
 else if (matchDomain('nw.de')) {
   if (!window.location.pathname.endsWith('.amp.html')) {
-    amp_redirect('div[data-tracking-visible^="paywall-"]');
+    amp_redirect('a[data-event-value="paywall-overlay-click"]');
   } else {
-    amp_unhide_access_hide('="loggedIn AND hasAbo"', '', 'amp-ad, amp-embed, .banner');
+    amp_unhide_access_hide('="loggedIn AND hasAbo"', '', 'amp-ad, amp-embed, .banner', false);
   }
 }
 

@@ -63,6 +63,13 @@
     "cs_block": 1,
     "upd_version": "3.4.7.3"
   },
+  "Neue Westfälische": {
+    "domain": "nw.de",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": "a[data-event-value='paywall-overlay-click']",
+    "upd_version": "3.4.7.9"
+  },
   "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
     "domain": "###_usa_nymag",
     "group": [

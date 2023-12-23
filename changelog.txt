@@ -18,6 +18,7 @@ Fix LeParisien.fr (amp-redirect)
 Fix London Review of Books (js-inline)
 Fix Media Group Westfalen
 Fix National Review (cookies)
+Fix Nw.de (amp-redirect)
 Fix NYmag-sites (js)
 Grouping Haaretz sites
 Enable optional host permissions on Android (Firefox 120+)
