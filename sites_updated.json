@@ -106,12 +106,12 @@
     "domain": "###_usa_townnews",
     "block_regex_general": "\\/tncms\\/api\\/access(\\..+)?\\.js",
     "cs_dompurify": 1,
-    "upd_version": "3.4.1.6",
+    "upd_version": "3.4.1.6"
+  },
   "Weser-Kurier": {
     "domain": "weser-kurier.de",
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io\\/",
     "upd_version": "3.4.6.4"
-  }
   }
 }

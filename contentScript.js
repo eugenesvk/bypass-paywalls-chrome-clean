@@ -3967,25 +3967,11 @@ else if (matchDomain('foreignpolicy.com')) {
     removeDOMElement(content_ungated);
     let content_gated = document.querySelector('div.content-gated');
     if (content_gated) {
-      content_gated.classList.remove('content-gated');
       let insider = document.querySelector('body.is-fp-insider');
-      if (insider) {
-        window.setTimeout(function () {
-          let json_script = getArticleJsonScript();
-          if (json_script) {
-            let json = JSON.parse(json_script.text);
-            if (json) {
-              let content = json.Articlebody.replace(/\r\n/g, '<br>');
-              if (content) {
-                let parser = new DOMParser();
-                let doc = parser.parseFromString('<div style="margin: 50px;">' + DOMPurify.sanitize(content) + '</div>', 'text/html');
-                let content_new = doc.querySelector('div');
-                content_gated.before(content_new);
-              }
-            }
-          }
-        }, 500);
-      }
+      if (insider)
+        getJsonUrl('div.content-gated', {rm_class: 'content-gated'}, 'div.content-gated');
+      else
+        content_gated.classList.remove('content-gated');
     }
   }
 }
