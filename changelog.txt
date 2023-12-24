@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+
+* v3.4.8.0 (2023-12-24)
 Add Bild.de (link to archive.is)
 Add BNP Media (opt-in to custom sites)
 Add BusinessAM.be
