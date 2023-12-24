@@ -569,7 +569,7 @@ else {
           thewest_main(paywall);
         else {
           csDoneOnce = true;
-          waitDOMElement(paywall_sel, 'DIV', thewest_main, false);
+          waitDOMElement(paywall_sel, 'DIV', thewest_main, true);
         }
         let header_advert = document.querySelector('div.headerAdvertisement');
         hideDOMElement(header_advert);

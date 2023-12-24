@@ -41,7 +41,8 @@ function show_update(ext_version_new, check = true) {
         }
         if (warning) {
           let par = document.createElement('p');
-          par.innerHTML = "<strong>You've installed a " + warning + " version of BPC (check GitLab)</strong>";
+          par.innerText = "You've installed a " + warning + " version of BPC (check help/GitLab)";
+          par.style = 'font-weight: bold;';
           versionString_new.appendChild(par);
         }
       }
