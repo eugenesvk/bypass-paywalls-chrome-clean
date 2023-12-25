@@ -1513,9 +1513,10 @@ else if (matchDomain('elconfidencial.com')) {
 
 else if (matchDomain('eldiario.es')) {
   if (window.location.pathname.endsWith('.amp.html')) {
-    amp_unhide_access_hide('^="access"');
+    amp_unhide_access_hide('^="access"', '="NOT access"');
   } else {
-    let ads = document.querySelectorAll('.edi-advertising, .header-ad');
+    amp_redirect('aside.paywall');
+    let ads = document.querySelectorAll('div.edi-advertising, div.header-ad');
     hideDOMElement(...ads);
   }
 }

@@ -31,6 +31,13 @@
     "remove_cookies_select_drop": ["blaize_session"],
     "upd_version": "3.4.5.3"
   },
+  "El Diario.es": {
+    "domain": "eldiario.es",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": "aside.paywall",
+    "upd_version": "3.4.8.1"
+  },
   "Fox News (regwall)": {
     "domain": "foxnews.com",
     "allow_cookies": 1,

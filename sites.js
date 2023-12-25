@@ -580,6 +580,7 @@ var defaultSites = {
   },
   "El Diario.es": {
     domain: "eldiario.es",
+    allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "El Español": {
