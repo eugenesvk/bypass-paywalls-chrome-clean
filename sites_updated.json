@@ -95,6 +95,13 @@
     "ld_google_webcache": "div.paywallComponentWrapper|div.main--content--body",
     "upd_version": "3.4.7.6"
   },
+  "S&P Global": {
+    "domain": "spglobal.com",
+    "allow_cookies": 1,
+    "block_js_inline": "\\.spglobal\\.com\\/",
+    "block_regex": "\\.spglobal\\.com\\/script\\.js",
+    "upd_version": "3.4.8.1"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,

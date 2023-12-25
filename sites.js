@@ -1976,7 +1976,8 @@ var defaultSites = {
   "S&P Global": {
     domain: "spglobal.com",
     allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//
+    block_js_inline: /\.spglobal\.com\//,
+    block_regex: /\.spglobal\.com\/script\.js/
   },
   "Sábado (not video)": {
     domain: "sabado.pt",

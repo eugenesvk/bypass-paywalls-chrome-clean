@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix elDiario.es (amp-redirect)
+Fix S&P Global (js-inline)
 
 * v3.4.8.0 (2023-12-24)
 Add Bild.de (link to archive.is)
