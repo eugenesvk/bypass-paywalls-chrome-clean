@@ -252,6 +252,12 @@
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
   },
+  "Group_haaretz": {
+    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link_type": "google_search_tool",
+    "domain": "group_haaretz",
+    "group": "haaretz.co.il,haaretz.com,themarker.com"
+  },
   "Group_media_source_inc": {
     "allow_cookies": 1,
     "block_regex": "\\.com\\/.+\\/js\\/metering\\.js",
@@ -337,6 +343,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
     "domain": "lasvegasadvisor.com"
+  },
+  "Legalbites.in": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div#subscription_paid_message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.hide.paywall-content\", \"rm_attrib\": \"class\"}, {\"cond\": \"div.restricted_message>div.story\", \"rm_elem\":1}]}]",
+    "domain": "legalbites.in"
   },
   "Limerickpost.ie": {
     "allow_cookies": 1,
@@ -685,6 +696,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.thefashionlaw\\.com\\/evolok\\/.+\\/ev-widgets\\.min\\.js",
     "domain": "thefashionlaw.com"
+  },
+  "Thefederal.com": {
+    "allow_cookies": 1,
+    "amp_redirect": "div#premium_access_message_text",
+    "cs_code": "[{\"cond\":\"div.access-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.hide.paywall-content\", \"rm_attrib\":\"class\"}]}]",
+    "domain": "thefederal.com"
   },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"

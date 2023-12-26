@@ -44,6 +44,32 @@
     "cs_code": "[{\"cond\":\"div.article-gating-wrapper\", \"rm_elem\":1}, {\"cond\":\"div[class*='gated-overlay']\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.4.7.8"
   },
+  "Haaretz": {
+    "domain": "haaretz.co.il",
+    "allow_cookies": 1,
+    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link_type": "google_search_tool",
+    "upd_version": "3.4.7.7"
+  },
+  "Haaretz English": {
+    "domain": "haaretz.com",
+    "allow_cookies": 1,
+    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link_type": "google_search_tool",
+    "upd_version": "3.4.7.7"
+  },
+  "Haaretz Group": {
+    "domain": "###_il_haaretz_group",
+    "group": [
+      "haaretz.co.il",
+      "haaretz.com",
+      "themarker.com"
+    ],
+    "allow_cookies": 1,
+    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link_type": "google_search_tool",
+    "upd_version": "3.4.8.2"
+  },
   "Literary Review (UK)": {
     "domain": "literaryreview.co.uk",
     "allow_cookies": 1,
@@ -108,6 +134,13 @@
     "block_regex": "\\.tinypass\\.com\\/",
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
+  },
+  "The Marker": {
+    "domain": "themarker.com",
+    "allow_cookies": 1,
+    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link_type": "google_search_tool",
+    "upd_version": "3.4.7.7"
   },
   "The New York Times": {
     "domain": "nytimes.com",
