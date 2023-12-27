@@ -308,7 +308,16 @@ var defaultSites = {
   "Business Insider": {
     domain: "businessinsider.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /\.tinypass\.com\//
+  },
+  "Business Insider Nederland": {
+    domain: "businessinsider.nl",
+    allow_cookies: 1,
+    block_regex: /\.piano\.io\//
+  },
+  "Business Insider Polska": {
+    domain: "businessinsider.com.pl",
+    remove_cookies_select_drop: ["xbc"]
   },
   "Business Post.ie": {
     domain: "businesspost.ie",
@@ -2764,7 +2773,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",
@@ -2921,4 +2930,4 @@ var fr_indigo_nofix_domains = ['africaintelligence.com', 'africaintelligence.fr'
 var il_haaretz_group_nofix_domains = ['haaretz.co.il', 'haaretz.com', 'themarker.com'];
 var it_gedi_nofix_domains = ['gelocal.it', 'limesonline.com'];
 var nl_mediahuis_region_nofix_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
-var nofix_sites = ['aamulehti.fi', 'aftenposten.no', 'aftonbladet.se', 'allgaeuer-zeitung.de', 'asahi.com', 'asiatimes.com', 'autosport.com', 'aviationweek.com', 'badische-zeitung.de', 'bloomberglaw.com', 'bloombergtax.com', 'bnn.de', 'borsen.dk', 'businessinsider.de', 'businesslive.co.za', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'codesports.com.au', 'compactmag.com', 'courrierinternational.com', 'coursehero.com',  'deutsche-wirtschafts-nachrichten.de', 'die-glocke.de', 'dn.no', 'dn.se', 'elordenmundial.com', 'entrepreneur.com', 'epw.in', 'expresso.pt', 'falter.at', 'finance.si', 'ftchinese.com', 'ftchineselive.com', 'gamestar.de', 'geo.de', 'golem.de', 'gp.se', 'handelsblatt.com', 'hbrchina.org', 'hbrfrance.fr', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'information.dk', 'investors.com', 'iltalehti.fi', 'jacobin.com', 'jeuneafrique.com', 'jungefreiheit.de', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.co.uk', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lequipe.fr', 'lesjours.fr', 'letemps.ch', 'liberation.fr', 'limburger.nl', 'main-echo.de', 'mainpost.de', 'manager-magazin.de', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'money.it', 'moneycontrol.com', 'moodys.com', 'morningstar.com', 'moz.de', 'nachrichten.at', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'newslaundry.com', 'nn.de', 'nwzonline.de', 'observador.pt', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'quillette.com', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'sciencedirect.com', 'springer.com', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'substack.com', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'theinitium.com', 'themorningcontext.com', 'theparisreview.org', 'thestar.com.my', 'thewirechina.com', 'weltwoche.ch', 'weltwoche.de', 'wissenschaft.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(be_mediahuis_nofix_domains, de_funke_medien_nofix_domains, de_rp_aachen_medien_nofix_domains, fr_groupe_ebra_nofix_domains, fr_indigo_nofix_domains, il_haaretz_group_nofix_domains, it_gedi_nofix_domains, nl_mediahuis_region_nofix_domains);
+var nofix_sites = ['aamulehti.fi', 'aftenposten.no', 'aftonbladet.se', 'allgaeuer-zeitung.de', 'asahi.com', 'asiatimes.com', 'autosport.com', 'aviationweek.com', 'badische-zeitung.de', 'bloomberglaw.com', 'bloombergtax.com', 'bnn.de', 'borsen.dk', 'businessinsider.de', 'businessinsider.jp', 'businesslive.co.za', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'codesports.com.au', 'compactmag.com', 'courrierinternational.com', 'coursehero.com',  'deutsche-wirtschafts-nachrichten.de', 'die-glocke.de', 'dn.no', 'dn.se', 'elordenmundial.com', 'entrepreneur.com', 'epw.in', 'expresso.pt', 'falter.at', 'finance.si', 'ftchinese.com', 'ftchineselive.com', 'gamestar.de', 'geo.de', 'golem.de', 'gp.se', 'handelsblatt.com', 'hbrchina.org', 'hbrfrance.fr', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'information.dk', 'investors.com', 'iltalehti.fi', 'jacobin.com', 'jeuneafrique.com', 'jungefreiheit.de', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.co.uk', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lequipe.fr', 'lesjours.fr', 'letemps.ch', 'liberation.fr', 'limburger.nl', 'main-echo.de', 'mainpost.de', 'manager-magazin.de', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'money.it', 'moneycontrol.com', 'moodys.com', 'morningstar.com', 'moz.de', 'nachrichten.at', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'newslaundry.com', 'nn.de', 'nwzonline.de', 'observador.pt', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'quillette.com', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'saechsische.de', 'schwarzwaelder-bote.de', 'sciencedirect.com', 'springer.com', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'substack.com', 'suedkurier.de', 'swp.de', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'theinitium.com', 'themorningcontext.com', 'theparisreview.org', 'thestar.com.my', 'thewirechina.com', 'weltwoche.ch', 'weltwoche.de', 'wissenschaft.de', 'wiwo.de', 'worldpoliticsreview.com', 'ynet.co.il'].concat(be_mediahuis_nofix_domains, de_funke_medien_nofix_domains, de_rp_aachen_medien_nofix_domains, fr_groupe_ebra_nofix_domains, fr_indigo_nofix_domains, il_haaretz_group_nofix_domains, it_gedi_nofix_domains, nl_mediahuis_region_nofix_domains);

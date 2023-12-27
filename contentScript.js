@@ -2422,6 +2422,11 @@ else if (matchDomain('businessam.be')) {
   }
 }
 
+else if (matchDomain('businessinsider.nl')) {
+  if (dompurify_loaded)
+    getJsonUrl('div.piano-article__paywall', '', 'div.piano-article__content');
+}
+
 else if (matchDomain('doorbraak.be')) {
   let paywall_sel = 'div.paywall';
   let paywall = document.querySelector(paywall_sel);
@@ -3681,6 +3686,11 @@ else if (matchDomain('business-standard.com')) {
     hideDOMElement(banner, ...ads);
   } else
     ampToHtml();
+}
+
+else if (matchDomain('businessinsider.com.pl')) {
+  let paywall = document.querySelector('div#content-premium-offer');
+  removeDOMElement(paywall);
 }
 
 else if (matchDomain('businessinsider.com')) {

@@ -25,6 +25,18 @@
     "excluded_domains": ["nationalreview.com"],
     "upd_version": "3.4.7.3"
   },
+  "Business Insider Nederland": {
+    "domain": "businessinsider.nl",
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/",
+    "ld_json_url": "div.piano-article__paywall|div.piano-article__content",
+    "upd_version": "3.4.8.4"
+  },
+  "Business Insider Polska": {
+    "domain": "businessinsider.com.pl",
+    "remove_cookies_select_drop": ["xbc"],
+    "upd_version": "3.4.8.4"
+  },
   "Crikey.com.au": {
     "domain": "crikey.com.au",
     "block_regex": "\\.crickey\\.com\\.au\\/zephr\\/feature",
@@ -115,6 +127,13 @@
     "allow_cookies": 1,
     "block_regex": "\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js",
     "upd_version": "3.4.7.6"
+  },
+  "Piano.io (+ TinyPass)": {
+    "domain": "piano.io",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
+    "excluded_domains": ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"],
+    "upd_version": "3.4.8.4"
   },
   "Rzeczpospolita": {
     "domain": "rp.pl",
