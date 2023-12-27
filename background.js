@@ -883,7 +883,7 @@ if (typeof browser !== 'object') {
         }
         } // !cs_block_domain
         // remove cookies after page load
-        if (rc_domain_enabled) {
+        if (rc_domain_enabled && !['huffingtonpost.it', 'lastampa.it', 'repubblica.it'].includes(rc_domain)) {
           remove_cookies_fn(rc_domain, true);
         }
       }, n * 200);

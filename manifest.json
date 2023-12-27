@@ -309,6 +309,7 @@
     "*://*.housebeautiful.com/*",
     "*://*.houstonchronicle.com/*",
     "*://*.hoy.es/*",
+    "*://*.huffingtonpost.it/*",
     "*://*.humanite.fr/*",
     "*://*.humo.be/*",
     "*://*.ideal.es/*",
@@ -821,5 +822,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.8.2"
+  "version": "3.4.8.3"
 }

@@ -693,6 +693,7 @@ Grouped in options:\
 
 Grouped in options:\
 *Gruppo GEDI.it* sites like\
+[Huffingtonpost.it](https://www.huffingtonpost.it) -
 [Il Secolo XIX](https://www.ilsecoloxix.it) -
 [Italian.tech](https://www.italian.tech) -
 [La Repubblica](https://www.repubblica.it) -
