@@ -1103,7 +1103,7 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
         }
       }
     }
-  }, 1000);
+  }, 2000);
   let banners = document.querySelectorAll('div.dm-slot, div[id^="taboola-feed"]');
   hideDOMElement(...banners);
 }
@@ -5054,22 +5054,28 @@ else if (matchDomain('theimpression.com')) {
 }
 
 else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
-  let paywall = pageContains('div.font-mono', /\Read this article and many more by subscribing today/);
+  let paywall = pageContains('div.font-mono', /(Read this article and many more by subscribing today|Join today to read the full story)/);
   if (paywall.length) {
     removeDOMElement(paywall[0].parentNode);
     let json_script = document.querySelector('script#__NEXT_DATA__');
     if (json_script) {
       try {
-        let json = JSON.parse(json_script.innerText);
+        let json = JSON.parse(json_script.text);
         if (json && json.props.pageProps.post) {
           let url_next = json.query.slug;
           if (url_next && !window.location.pathname.includes(url_next))
             refreshCurrentTab();
           let pars = json.props.pageProps.post.fields.textEssay.fields.body.content;
-          let article = document.querySelector('div.opacity-50');
+          window.setTimeout(function () {
+          let article = document.querySelector('div[class*="opacity-"]');
           if (article) {
             article.innerHTML = '';
             article.removeAttribute('class');
+            let fade = document.querySelectorAll('div.bg-gradient-to-b');
+            for (let elem of fade)
+              elem.removeAttribute('class');
+            let modal = document.querySelector('div#headlessui-portal-root');
+            removeDOMElement(modal);
             let par_first = true;
             function attach_text(sub_item, elem) {
               if (sub_item.value) {
@@ -5117,7 +5123,7 @@ else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
             }
             for (let par of pars) {
               let elem = document.createElement('p');
-              if (['paragraph', 'heading-1'].includes(par.nodeType)) {
+              if (par.nodeType.match(/^(paragraph|heading-\d)$/)) {
                 attach_paragraph(par, elem);
               } else if (['blockquote'].includes(par.nodeType)) {
                 if (par.content && par.content.length) {
@@ -5177,6 +5183,7 @@ else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
               }
             }
           }
+          }, 1000);
         } else
           refreshCurrentTab();
       } catch (err) {

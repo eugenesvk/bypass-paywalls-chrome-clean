@@ -61,7 +61,7 @@
     "domain": "haaretz.com",
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
-    "add_ext_link_type": "archive.is",
+    "add_ext_link_type": "google_search_tool",
     "upd_version": "3.4.7.7"
   },
   "Haaretz Group": {
@@ -73,12 +73,12 @@
     ],
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
-    "add_ext_link_type": "archive.is",
+    "add_ext_link_type": "google_search_tool",
     "exception": [{
-        "domain": "haaretz.co.il",
+        "domain": "themarker.com",
         "allow_cookies": 1,
         "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
-        "add_ext_link_type": "google_search_tool"
+        "add_ext_link_type": "archive.is"
       }
     ]
   },

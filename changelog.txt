@@ -10,6 +10,7 @@ Remove Haaretz Group (fix obsolete)
 Fix elDiario.es (amp-redirect)
 Fix Inc42 (css)
 Fix S&P Global (js-inline)
+Fix The Juggernaut
 Update block general paywall script (Leaky-js-cookie)
 
 * v3.4.8.0 (2023-12-24)
