@@ -37,12 +37,6 @@
     "remove_cookies_select_drop": ["xbc"],
     "upd_version": "3.4.8.4"
   },
-  "Crikey.com.au": {
-    "domain": "crikey.com.au",
-    "block_regex": "\\.crickey\\.com\\.au\\/zephr\\/feature",
-    "remove_cookies_select_drop": ["blaize_session"],
-    "upd_version": "3.4.5.3"
-  },
   "El Diario.es": {
     "domain": "eldiario.es",
     "allow_cookies": 1,
@@ -59,15 +53,15 @@
   "Haaretz": {
     "domain": "haaretz.co.il",
     "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
     "add_ext_link_type": "google_search_tool",
     "upd_version": "3.4.7.7"
   },
   "Haaretz English": {
     "domain": "haaretz.com",
     "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
-    "add_ext_link_type": "google_search_tool",
+    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
+    "add_ext_link_type": "archive.is",
     "upd_version": "3.4.7.7"
   },
   "Haaretz Group": {
@@ -78,9 +72,22 @@
       "themarker.com"
     ],
     "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
-    "add_ext_link_type": "google_search_tool",
-    "upd_version": "3.4.8.2"
+    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
+    "add_ext_link_type": "archive.is",
+    "exception": [{
+        "domain": "haaretz.co.il",
+        "allow_cookies": 1,
+        "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
+        "add_ext_link_type": "google_search_tool"
+      }
+    ]
+  },
+  "Inc42": {
+    "domain": "inc42.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.inc42\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div.single-post-content\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.4.8.5"
   },
   "Literary Review (UK)": {
     "domain": "literaryreview.co.uk",
@@ -93,12 +100,6 @@
     "allow_cookies": 1,
     "block_js_inline": "\\.lrb\\.co\\.uk\\/",
     "upd_version": "3.4.7.4"
-  },
-  "Money.it": {
-    "domain": "money.it",
-    "allow_cookies": 1,
-    "cs_block": 1,
-    "upd_version": "3.4.7.5"
   },
   "National Review": {
     "domain": "nationalreview.com",
@@ -157,8 +158,8 @@
   "The Marker": {
     "domain": "themarker.com",
     "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
-    "add_ext_link_type": "google_search_tool",
+    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
+    "add_ext_link_type": "archive.is",
     "upd_version": "3.4.7.7"
   },
   "The New York Times": {

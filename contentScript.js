@@ -3415,7 +3415,7 @@ else if (matchDomain('globo.com')) {
   } else if (window.location.pathname.includes('/amp/'))
     ampToHtml();
   if (!window.location.pathname.includes('/amp/')) {
-    let ads = document.querySelectorAll('div[id^="ad-container"], div.content-ads, div[class^="block__advertising"]');
+    let ads = document.querySelectorAll('div[id^="ad-container"], div.content-ads, div[class^="block__advertising"], div#pub-in-text-wrapper');
     hideDOMElement(...ads);
   }
 }
@@ -4094,6 +4094,9 @@ else if (matchDomain('inc42.com')) {
       amp_image.parentNode.replaceChild(elem, amp_image);
     }
   } else {
+    let div_hidden = document.querySelector('div.single-post-content');
+    if (div_hidden)
+      div_hidden.removeAttribute('class');
     let banner = document.querySelector('div[id*="_leaderboard_"]');
     hideDOMElement(banner);
   }
@@ -5718,6 +5721,18 @@ else if (document.querySelector('script[src*=".axate.io/"]')) {
   let premium = document.querySelector('.premium, div[class*="-premium"]');
   if (premium)
     premium.removeAttribute('class');
+}
+
+else if (document.querySelector('head > link[href*="/leaky-paywall"], script[src*="/leaky-paywall"], div[id^="issuem-leaky-paywall-"]')) {
+  let js_cookie = document.querySelector('script#leaky_paywall_cookie_js-js-extra');
+  if (js_cookie && js_cookie.text.includes('"post_container":"')) {
+    let post_sel = js_cookie.text.split('"post_container":"')[1].split('"')[0];
+    if (post_sel) {
+      let post = document.querySelector(post_sel);
+      if (post)
+        post.removeAttribute('class');
+    }
+  }
 }
 
 else

@@ -153,12 +153,6 @@
     "allow_cookies": 1,
     "domain": "dn.se"
   },
-  "Dominionpost.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.dominionpost\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js",
-    "cs_code": "[{\"cond\":\"article>div.entry-content\", \"rm_class\":\"entry-content\"}]",
-    "domain": "dominionpost.com"
-  },
   "Edweek.org": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -253,7 +247,7 @@
     "useragent": "googlebot"
   },
   "Group_haaretz": {
-    "add_ext_link": "meta[property='og:url'][content*='/.premium/']|article p",
+    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
     "add_ext_link_type": "google_search_tool",
     "domain": "group_haaretz",
     "group": "haaretz.co.il,haaretz.com,themarker.com"
