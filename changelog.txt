@@ -9,7 +9,9 @@ Add Huffingtonpost.it
 Remove Haaretz Group (fix obsolete)
 Fix elDiario.es (amp-redirect)
 Fix Inc42 (css)
+Fix Independent.co.uk (fetch from archive.is)
 Fix S&P Global (js-inline)
+Fix Sueddeutsche Zeitung (fetch from archive.is)
 Fix The Juggernaut
 Update block general paywall script (Leaky-js-cookie)
 
@@ -1265,7 +1267,7 @@ Add Capital Gazette (local USA)
 Add Groupe Nice-Matin (France)
 Add Il Foglio (Italy)
 Add Science (free articles only)
-Add The Independent (UK - archive.today for premium)
+Add Independent.co.uk (archive.is for premium)
 Fix group Tribune Publishing Company (js)
 Fix The New Statesman (Evolok)
 Update popup (permission to clear cookies)
@@ -2079,7 +2081,7 @@ Fix WSJ (amp for pro/login)
 * v1.7.5.0 (2020-06-14)
 Add BBC History Extra
 Add Discover Magazine
-Add Irish Independent
+Add Independent.ie
 Add Republic.ru
 Fix Telegraph.co.uk (cookies)
 Fix The Globe and Mail (cleanup)

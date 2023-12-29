@@ -163,8 +163,7 @@ function setDefaultOptions() {
   });
 }
 
-function check_sites_updated() {
-  let sites_updated_json = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/sites_updated.json';
+function check_sites_updated(sites_updated_json) {
   fetch(sites_updated_json)
   .then(response => {
     if (response.ok) {
@@ -183,6 +182,10 @@ function check_sites_updated() {
     false;
   });
 }
+
+var ext_path = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/';
+var sites_updated_json = 'sites_updated.json';
+var sites_updated_json_online = ext_path + sites_updated_json;
 
 function clear_sites_updated() {
   ext_api.storage.local.set({
@@ -518,9 +521,10 @@ ext_api.storage.local.get({
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
   if (enabledSites.includes('#options_optin_update_rules')) {
-    check_sites_updated();
-    sites_custom_ext_json = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/custom/sites_custom.json';
-  } 
+    sites_updated_json = sites_updated_json_online;
+    sites_custom_ext_json = ext_path + 'custom/sites_custom.json';
+  }
+  check_sites_updated(sites_updated_json);
   check_sites_custom_ext();
   if (optin_update)
     check_update();
@@ -1456,7 +1460,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     site_switch();
   }
   if (message.request === 'check_sites_updated') {
-    check_sites_updated();
+    check_sites_updated(sites_updated_json_online);
   }
   if (message.request === 'clear_sites_updated') {
     clear_sites_updated();

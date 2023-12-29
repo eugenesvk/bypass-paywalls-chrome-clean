@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com, thestage.co.uk",
+    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -704,6 +704,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "thenational.scot"
+  },
+  "Thestage.co.uk": {
+    "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "thestage.co.uk"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,

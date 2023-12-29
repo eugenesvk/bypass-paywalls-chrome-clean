@@ -1244,18 +1244,24 @@ else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de']) |
 
 else if (matchDomain('sueddeutsche.de')) {
   let url = window.location.href;
-  let paywall = document.querySelector('div#sz-paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let article = document.querySelector('div.article-content, div.text');
-    if (article)
-      article.firstChild.before(archiveLink(url));
-    let reduced = document.querySelector('p.sz-article-body__paragraph--reduced');
-    if (reduced)
-      reduced.classList.remove('sz-article-body__paragraph--reduced');
-    let ads = document.querySelectorAll('div.ad-container');
-    hideDOMElement(...ads);
+  let paywall;
+  if (window.location.pathname.startsWith('/projekte/artikel/')) {
+    paywall = document.querySelector('div.offer-page');
+    if (paywall && dompurify_loaded) {
+      removeDOMElement(paywall);
+      getArchive(url, 'main');
+    }
+  } else {
+    paywall = document.querySelector('p.sz-article-body__paragraph--reduced');
+    if (paywall && dompurify_loaded) {
+      paywall.removeAttribute('class');
+      getArchive(url, 'div[itemprop="articleBody"]');
+    }
   }
+  window.setTimeout(function () {
+    let ads = document.querySelectorAll('div.ad-container, er-ad-slot');
+    hideDOMElement(...ads);
+  }, 1500);
 }
 
 else if (matchDomain('tagesspiegel.de')) {
@@ -2934,12 +2940,10 @@ else if (matchDomain('independent.co.uk')) {
   } else {
     let paywall = document.querySelector('div.article-premium');
     let related = document.querySelector('div.related');
-    let msg = document.querySelector('div#bpc_archive');
-    if (paywall && !related && !msg) {
+    if (paywall && !related && dompurify_loaded) {
       paywall.classList.remove('article-premium');
-      let article = document.querySelector('div#main');
-      if (article)
-        article.firstChild.before(archiveLink(url));
+      csDoneOnce = true;
+      getArchive(url, 'div#main');
     }
   }
 }
