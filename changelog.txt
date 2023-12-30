@@ -6,8 +6,8 @@ Post-release
 Add Business Insider Nederland
 Add Business Insider Polska
 Add Huffingtonpost.it
-Remove Haaretz Group (fix obsolete)
 Fix elDiario.es (amp-redirect)
+Fix Haaretz Group (fetch from archive.is)
 Fix Inc42 (css)
 Fix Independent.co.uk (fetch from archive.is)
 Fix S&P Global (js-inline)

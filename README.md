@@ -937,6 +937,12 @@ Grouped in options:\
 [Globes](https://www.globes.co.il) -
 [The Jerusalem Post](https://www.jpost.com)
 
+Grouped in options:\
+*Haaretz Group* sites like\
+[Haaretz.co.il](https://www.haaretz.co.il) -
+[Haaretz.com](https://www.haaretz.com) -
+[The Marker](https://www.themarker.com)
+
 #### Latin America
 
 ##### Argentina

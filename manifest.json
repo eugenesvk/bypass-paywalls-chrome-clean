@@ -298,6 +298,8 @@
     "*://*.granta.com/*",
     "*://*.groene.nl/*",
     "*://*.grubstreet.com/*",
+    "*://*.haaretz.co.il/*",
+    "*://*.haaretz.com/*",
     "*://*.handelszeitung.ch/*",
     "*://*.harpers.org/*",
     "*://*.harpersbazaar.com/*",
@@ -678,6 +680,7 @@
     "*://*.theintercept.com/*",
     "*://*.thejuggernaut.com/*",
     "*://*.thelawyersdaily.ca/*",
+    "*://*.themarker.com/*",
     "*://*.themarket.ch/*",
     "*://*.themercury.com.au/*",
     "*://*.thenation.com/*",
@@ -824,5 +827,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.8.7"
+  "version": "3.4.8.8"
 }

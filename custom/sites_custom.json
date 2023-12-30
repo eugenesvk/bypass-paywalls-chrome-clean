@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com",
+    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -245,12 +245,6 @@
     "block_regex": "\\.gramophone\\.co\\.uk\\/script\\.js",
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
-  },
-  "Group_haaretz": {
-    "add_ext_link": "meta[property='og:url'][content*='/.']|article p",
-    "add_ext_link_type": "google_search_tool",
-    "domain": "group_haaretz",
-    "group": "haaretz.co.il,haaretz.com,themarker.com"
   },
   "Group_media_source_inc": {
     "allow_cookies": 1,

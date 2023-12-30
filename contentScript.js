@@ -4014,6 +4014,31 @@ else if (matchDomain('ftm.eu')) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain(['haaretz.co.il', 'haaretz.com', 'themarker.com'])) {
+  let paywall_sel = 'div[data-test="paywallMidpage"]';
+  let paywall = document.querySelector(paywall_sel);
+  if (paywall) {
+    removeDOMElement(paywall);
+    let url = window.location.href;
+    let article_link_sel = 'article header';
+    let article = document.querySelector(article_link_sel);
+    if (article) {
+      if (matchDomain('haaretz.co.il'))
+        article.firstChild.before(googleSearchToolLink(url));
+      else {
+        getArchive(url, 'div[data-test="articleBody"]');
+        window.setTimeout(function () {
+          let paywall = document.querySelector(paywall_sel);
+          if (paywall) {
+            removeDOMElement(paywall);
+            article.firstChild.before(googleSearchToolLink(url));
+          }
+        }, 2000);
+      }
+    }
+  }
+}
+
 else if (matchDomain('hbr.org')) {
   function hbr_main() {
     window.top.postMessage({type: 'article-paywall:full-content'}, '*');
@@ -5912,6 +5937,12 @@ function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', sele
   }
 }
 
+function getSelectorLevel(selector) {
+  if (selector.replace(/,\s+/g, ',').match(/[>\s]+/))
+    selector = selector.replace(/,\s+/g, ',').split(',').map(x => x.match(/[>\s]+/) ? x + ', ' + x.split(/[>\s]+/).pop() : x).join(', ');
+  return selector;
+}
+
 function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
   let article = document.querySelector(selector);
   if (html) {
@@ -5928,7 +5959,7 @@ function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, te
       }
       let doc = parser.parseFromString(DOMPurify.sanitize(html, dompurify_options), 'text/html');
       //console.log(DOMPurify.removed);
-      let article_new = doc.querySelector(selector_source);
+      let article_new = doc.querySelector(getSelectorLevel(selector_source));
       if (article_new) {
         if (article && article.parentNode) {
           if (url.startsWith('https://archive.')) {
@@ -5937,13 +5968,15 @@ function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, te
               arch_dom.firstChild.before(archiveLink_renew(window.location.href));
               arch_dom.firstChild.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
             }
-            window.setTimeout(function () {
-              let targets = document.querySelectorAll('a[target="_blank"][href^="https://' + window.location.hostname + '"]');
-              for (let elem of targets)
-                elem.removeAttribute('target');
-            }, 1500);
+            let targets = article_new.querySelectorAll('a[target="_blank"][href^="https://' + window.location.hostname + '"]');
+            for (let elem of targets)
+              elem.removeAttribute('target');
+            let invalid_links = article_new.querySelectorAll('link[rel="preload"]:not([href]');
+            removeDOMElement(...invalid_links);
           }
-          article.parentNode.replaceChild(article_new, article);
+          window.setTimeout(function () {
+            article.parentNode.replaceChild(article_new, article);
+          }, 200);
         }
       } else
         replaceTextFail(url, article, proxy, text_fail);
