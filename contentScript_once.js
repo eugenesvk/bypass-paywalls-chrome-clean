@@ -135,7 +135,7 @@ window.setTimeout(function () {
           group = '###_usa_bnp_media';
         else if (matchDomain(['centralmaine.com', 'pressherald.com', 'sunjournal.com']))
           group = '###_usa_maine_trust';
-        else if (document.querySelector('img[data-src*="/wp-content/plugins/pragmatic-pei-rebranding/"]'))
+        else if (document.querySelector('head > meta[name="peim_article_access_type"]'))
           group = '###_usa_pei';
         else if (matchDomain(['dayton.com', 'daytondailynews.com', 'journal-news.com', 'springfieldnewssun.com']))
           group = 'ajc.com';// Cox First Media

@@ -10,6 +10,7 @@ Fix elDiario.es (amp-redirect)
 Fix Haaretz Group (fetch from archive.is)
 Fix Inc42 (css)
 Fix Independent.co.uk (fetch from archive.is)
+Fix PEI Media (identify site)
 Fix S&P Global (js-inline)
 Fix Sueddeutsche Zeitung (fetch from archive.is)
 Fix The Juggernaut
