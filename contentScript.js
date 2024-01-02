@@ -4015,28 +4015,29 @@ else if (matchDomain('ftm.eu')) {
 }
 
 else if (matchDomain(['haaretz.co.il', 'haaretz.com', 'themarker.com'])) {
-  let paywall_sel = 'div[data-test="paywallMidpage"]';
-  let paywall = document.querySelector(paywall_sel);
-  if (paywall) {
-    removeDOMElement(paywall);
-    let url = window.location.href;
-    let article_link_sel = 'article header';
-    let article = document.querySelector(article_link_sel);
-    if (article) {
-      if (matchDomain('haaretz.co.il'))
-        article.firstChild.before(googleSearchToolLink(url));
-      else {
-        getArchive(url, 'div[data-test="articleBody"]');
+  if (window.location.pathname.includes('/.')) {
+    let paywall_sel = 'div[data-test="paywallMidpage"]';
+    let paywall = document.querySelector(paywall_sel);
+    if (paywall) {
+      removeDOMElement(paywall);
+      let url = window.location.href;
+      let article_link_sel = 'article header';
+      let article_link = document.querySelector(article_link_sel);
+      if (article_link) {
+        let article_sel = 'div[data-test="articleBody"]';
+        getArchive(url, article_sel);
         window.setTimeout(function () {
-          let paywall = document.querySelector(paywall_sel);
+          let article_new = document.querySelector(article_sel);
+          paywall = article_new.querySelector(paywall_sel);
           if (paywall) {
             removeDOMElement(paywall);
-            article.firstChild.before(googleSearchToolLink(url));
+            article_link.firstChild.before(googleSearchToolLink(url));
           }
         }, 2000);
       }
     }
-  }
+  } else
+    csDoneOnce = true;
 }
 
 else if (matchDomain('hbr.org')) {
@@ -5966,7 +5967,7 @@ function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, te
               arch_dom.firstChild.before(archiveLink_renew(window.location.href));
               arch_dom.firstChild.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
             }
-            let targets = article_new.querySelectorAll('a[target="_blank"][href^="https://' + window.location.hostname + '"]');
+            let targets = article_new.querySelectorAll('a[target="_blank"][href^="' + window.location.origin + '"]');
             for (let elem of targets)
               elem.removeAttribute('target');
             let invalid_links = article_new.querySelectorAll('link[rel="preload"]:not([href]');
@@ -6224,7 +6225,7 @@ function getJsonUrlText(article, callback, article_id = '') {
   let json_url_dom = document.querySelector('head > link[rel="alternate"][type="application/json"][href]');
   let json_url = json_url_dom.href;
   if (!json_url && article_id)
-    json_url = 'https://' + window.location.hostname + '/wp-json/wp/v2/posts/' + article_id;
+    json_url = window.location.origin + '/wp-json/wp/v2/posts/' + article_id;
   if (json_url) {
     fetch(json_url)
     .then(response => {

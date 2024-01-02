@@ -986,7 +986,7 @@ var defaultSites = {
       "expansion.com",
       "marca.com"],
     allow_cookies: 1,
-    block_regex: /cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js/
+    block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
   "Grupo Vocento": {
     domain: "###_es_grupo_vocento",
@@ -1053,12 +1053,7 @@ var defaultSites = {
       "themarker.com"
     ],
     allow_cookies: 1,
-    cs_dompurify: 1,
-    exception: [{
-        domain: "haaretz.co.il",
-        allow_cookies: 1
-      }
-    ]
+    cs_dompurify: 1
   },
   "Haas Mediengruppe (opt-in to custom sites)": {
     domain: "###_de_haas_medien",

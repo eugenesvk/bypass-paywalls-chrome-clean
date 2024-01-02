@@ -54,14 +54,14 @@
     "domain": "haaretz.co.il",
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "google_search_tool",
-    "upd_version": "3.4.7.7"
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.4.9.2"
   },
   "Haaretz English": {
     "domain": "haaretz.com",
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "google_search_tool",
+    "add_ext_link_type": "archive.is",
     "upd_version": "3.4.7.7"
   },
   "Haaretz Group": {
@@ -73,14 +73,7 @@
     ],
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "google_search_tool",
-    "exception": [{
-        "domain": "themarker.com",
-        "allow_cookies": 1,
-        "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-        "add_ext_link_type": "archive.is"
-      }
-    ],
+    "add_ext_link_type": "archive.is",
     "upd_version": "3.4.8.8"
   },
   "Inc42": {
