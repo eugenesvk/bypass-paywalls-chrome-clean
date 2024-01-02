@@ -189,6 +189,12 @@
     "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
     "domain": "eviemagazine.com"
   },
+  "Ewmagazine.nl": {
+    "add_ext_link": "div.paywall|div.entry-content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "ewmagazine.nl"
+  },
   "Faithfullymagazine.com": {
     "allow_cookies": 1,
     "domain": "faithfullymagazine.com",

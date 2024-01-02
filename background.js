@@ -1497,16 +1497,37 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
   }
   if (message.request === 'getExtSrc' && message.data) {
     message.data.html = '';
-    if (message.data.url.startsWith('https://archive.')) {
-      fetch(message.data.url)
+    function getArticleSrc(message) {
+      let url_src = message.data.url_src || message.data.url;
+      fetch(url_src)
       .then(response => {
         if (response.ok) {
           response.text().then(html => {
-            if (html.includes('<div class="TEXT-BLOCK"')) {
-              let url_src = html.split('<div class="TEXT-BLOCK"')[1].split('</div>')[0].split('href="')[1].split('"')[0];
-              message.data.url_src = url_src;
-              getArticleSrc(message);
-            } else {
+            let recursive;
+            if (message.data.url.startsWith('https://archive.')) {
+              if (url_src.includes('/https')) {
+                if (html.includes('<div class="TEXT-BLOCK"')) {
+                  message.data.url_src = html.split('<div class="TEXT-BLOCK"')[1].split('</div>')[0].split('href="')[1].split('"')[0];
+                  getArticleSrc(message);
+                  recursive = true;
+                } else
+                  html = '';
+              }
+            }
+            if (!recursive) {
+              if (html) {
+                if (message.data.base64) {
+                  html = decode_utf8(atob(html));
+                  message.data.selector_source = 'body';
+                }
+                if (typeof DOMParser === 'function') {
+                  let parser = new DOMParser();
+                  let doc = parser.parseFromString(html, 'text/html');
+                  let article_new = doc.querySelector(message.data.selector_source);
+                  if (article_new)
+                    html = article_new.outerHTML;
+                }
+              }
               message.data.html = html;
               ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
             }
@@ -1515,33 +1536,8 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
       }).catch(function (err) {
         ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
       });
-    } else
-      getArticleSrc(message);
-    function getArticleSrc(message) {
-      let url_src = message.data.url_src || message.data.url;
-      fetch(url_src)
-      .then(response => {
-        if (response.ok) {
-          response.text().then(html => {
-            if (message.data.base64) {
-              html = decode_utf8(atob(html));
-              message.data.selector_source = 'body';
-            }
-            message.data.html = html;
-            if (typeof DOMParser === 'function') {
-              let parser = new DOMParser();
-              let doc = parser.parseFromString(html, 'text/html');
-              let article_new = doc.querySelector(message.data.selector_source);
-              if (article_new)
-                message.data.html = article_new.outerHTML;
-            }
-            ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-          });
-        }
-      }).catch(function (err) {
-        ext_api.tabs.sendMessage(sender.tab.id, {msg: "showExtSrc", data: message.data});
-      });
     }
+    getArticleSrc(message);
   }
   if (message.scheme && (![chrome_scheme, 'undefined'].includes(message.scheme) || focus_changed)) {
       let icon_path = {path: {'128': 'bypass.png'}};

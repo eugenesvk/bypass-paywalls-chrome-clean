@@ -3139,7 +3139,7 @@ else if (matchDomain('thetimes.co.uk')) {
     let paywall = document.querySelector('div#paywall-portal-article-footer');
     if (paywall && !url.includes('?shareToken=')) {
       removeDOMElement(paywall);
-      getArchive(url, 'article:not([id])');
+      getArchive(url, 'article#article-main');
       window.setTimeout(function () {
         let headings = document.querySelectorAll('div > div[role="heading"]');
         for (let elem of headings)
@@ -5022,14 +5022,9 @@ else if (matchDomain('thedailybeast.com')) {
 
 else if (matchDomain('thediplomat.com')) {
   if (matchDomain('magazine.thediplomat.com')) {
-    csDoneOnce = true;
-    for (let n = 0; n < 5; n++) {
-      setTimeout(function () {
-        let preview = document.querySelector('article.dpl-preview');
-        if (preview)
-          preview.classList.remove('dpl-preview');
-      }, n * 500);
-    }
+    let preview = document.querySelector('article.dpl-preview');
+    if (preview)
+      preview.classList.remove('dpl-preview');
   }
 }
 
@@ -5886,13 +5881,13 @@ function clearPaywall(paywall, paywall_action) {
   }
 }
 
-function getGoogleWebcache(url, paywall_sel, paywall_action = '', article_sel, func_post = '', article_new_sel = article_sel) {
+function getGoogleWebcache(url, paywall_sel, paywall_action = '', selector, func_post = '', selector_source = selector) {
   let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split(/[#\?]/)[0];
   let paywall = document.querySelectorAll(paywall_sel);
   if (paywall.length) {
     clearPaywall(paywall, paywall_action);
     csDoneOnce = true;
-    replaceDomElementExt(url_cache, true, false, article_sel, '', article_new_sel);
+    replaceDomElementExt(url_cache, true, false, selector, '', selector_source);
     if (func_post) {
       window.setTimeout(function () {
         func_post();
@@ -5907,6 +5902,9 @@ function getArchive(url, selector, text_fail = '', selector_source = selector, s
 }
 
 function replaceDomElementExt(url, proxy, base64, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
+  let article = document.querySelector(selector);
+  if (!article)
+    return;
   if (proxy) {
     if (!text_fail) {
       if (url.startsWith('https://webcache.googleusercontent.com'))
@@ -5946,7 +5944,7 @@ function getSelectorLevel(selector) {
 function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, text_fail = '', selector_source = selector, selector_archive = selector) {
   let article = document.querySelector(selector);
   if (html) {
-    if (base64) {
+    if (!proxy && base64) {
       html = decode_utf8(atob(html));
       selector_source = 'body';
     }
@@ -6136,7 +6134,9 @@ function externalLink(domains, ext_url_templ, url, text_fail = 'BPC > Full artic
   text_fail_div.id = 'bpc_archive';
   text_fail_div.setAttribute('style', 'margin: 20px; font-size: 20px; font-weight: bold; color: red;');
   let parser = new DOMParser();
-  text_fail = text_fail.replace(/\[([^\]]+)\]/g, "<a href='$1' target='_blank' style='color: red'>$1</a>");
+  text_fail = text_fail.replace(/\[(?<url>[^\]]+)\]/g, function (match, url) {
+    return "<a href='" + url + "' target='_blank' style='color: red'>" + new URL(url).hostname + "</a>";
+  });
   let doc = parser.parseFromString('<span>' + text_fail + '</span>', 'text/html');
   let elem = doc.querySelector('span');
   text_fail_div.appendChild(elem);
