@@ -1053,6 +1053,7 @@ var defaultSites = {
       "themarker.com"
     ],
     allow_cookies: 1,
+    useragent: "semrushbot",
     cs_dompurify: 1
   },
   "Haas Mediengruppe (opt-in to custom sites)": {

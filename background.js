@@ -60,7 +60,7 @@ var remove_cookies = [];
 var remove_cookies_select_hold, remove_cookies_select_drop;
 
 // Set User-Agent
-var use_google_bot, use_bing_bot, use_facebook_bot;
+var use_google_bot, use_bing_bot, use_facebook_bot, use_semrush_bot;
 // Set Referer
 var use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer;
 // Set random IP-address
@@ -107,6 +107,7 @@ function initSetRules() {
   use_google_bot = [];
   use_bing_bot = [];
   use_facebook_bot = [];
+  use_semrush_bot = [];
   use_drudgereport_referer = [];
   use_facebook_referer = [];
   use_google_referer = [];
@@ -139,6 +140,8 @@ const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bin
 const userAgentMobileB = "Chrome/115.0.5790.171 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
 
 const userAgentDesktopF = 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
+
+const userAgentDesktopS = "Mozilla/5.0 (compatible; SemrushBot; +http://www.semrush.com/bot.html)";
 
 var enabledSites = [];
 var disabledSites = [];
@@ -259,6 +262,10 @@ function addRules(domain, rule) {
     case 'facebookbot':
       if (!use_facebook_bot.includes(domain))
         use_facebook_bot.push(domain);
+      break;
+    case 'semrushbot':
+      if (!use_semrush_bot.includes(domain))
+        use_semrush_bot.push(domain);
       break;
     }
   }
@@ -414,7 +421,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_semrush_bot, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -1042,6 +1049,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     !(matchUrlDomain('www.wsj.com', details.url));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url);
   var facebookbotEnabled = matchUrlDomain(use_facebook_bot, details.url);
+  var semrushbotEnabled = matchUrlDomain(use_semrush_bot, details.url);
 
   // if referer exists, set it
   requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -1113,6 +1121,14 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     requestHeaders.push({
       "name": "User-Agent",
       "value": userAgentDesktopF
+    })
+  }
+
+  // override User-Agent to use Semrushbot
+  if (semrushbotEnabled) {
+    requestHeaders.push({
+      "name": "User-Agent",
+      "value": userAgentDesktopS
     })
   }
 
