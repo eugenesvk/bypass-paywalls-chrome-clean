@@ -6,6 +6,7 @@ Post-release
 Remove Bhaskar (fix obsolete)
 Fix Haaretz Group (Semrushbot)
 Fix The Diplomat (magazine)
+Fix Times of India (epaper)
 
 * v3.4.9.0 (2023-12-31)
 Add Business Insider Nederland

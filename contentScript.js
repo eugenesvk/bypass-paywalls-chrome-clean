@@ -34,7 +34,7 @@ var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.n
 var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 'margriet.nl', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
 var no_nhst_media_domains = ['europower.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
-var timesofindia_domains = ['timesofindia.com', 'timesofindia.indiatimes.com'];
+var timesofindia_domains = ['epaper.indiatimes.com', 'timesofindia.com', 'timesofindia.indiatimes.com'];
 var uk_incisive_media_domains = ['businessgreen.com', 'internationalinvestment.net', 'investmentweek.co.uk', 'professionaladviser.com', 'professionalpensions.com'];
 var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
 var usa_adv_local_domains = ['al.com', 'cleveland.com', 'lehighvalleylive.com', 'masslive.com', 'mlive.com', 'nj.com', 'oregonlive.com', 'pennlive.com', 'silive.com', 'syracuse.com'];
@@ -5390,27 +5390,56 @@ else if (matchDomain('timeshighereducation.com')) {
 }
 
 else if (matchDomain(timesofindia_domains)) {
-  let url = window.location.href;
-  let region_block = document.querySelector('div.plan-popup.active');
-  if (region_block) {
-    removeDOMElement(region_block);
-    let overflow = document.querySelector('html[style]');
-    if (overflow)
-      overflow.removeAttribute('style');
-  }
-  if (!window.location.pathname.includes('/amp_')) {
-    amp_redirect('div[id^="story-blocker"]', '', url.replace('/timesofindia.indiatimes.com/', '/m.timesofindia.com/').replace('/articleshow/', '/amp_articleshow/'));
+  if (matchDomain('epaper.indiatimes.com')) {
+    let blocker = document.querySelector('section.epaper-blocker');
+    removeDOMElement(blocker);
+    if (window.location.pathname.startsWith('/english-news-paper-today-toi-print-edition/')) {
+      let paywall = document.querySelector('section#blocker');
+      if (paywall) {
+        let fq = document.querySelector('section#fq');
+        removeDOMElement(paywall, fq);
+        let json_script = getArticleJsonScript();
+        if (json_script) {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = json.articleBody;
+            let content = document.querySelector('section[type="synopsis"]');
+            if (json_text && content) {
+              let article_new = document.createElement('p');
+              article_new.innerText = breakText(json_text);
+              content.innerHTML = '';
+              let sheet = document.createElement('style');
+              sheet.innerText = '[type="synopsis"]::after {background: none !important;}';
+              document.body.appendChild(sheet);
+              content.appendChild(article_new);
+            }
+          }
+        }
+      }
+    }
   } else {
-    let amp_images = document.querySelectorAll('div.inline-image > div.inline-imgecontent > amp-img[src]');
-    for (let amp_image of amp_images) {
-      amp_image.parentNode.removeAttribute('class');
-      amp_image.parentNode.parentNode.removeAttribute('class');
-      let elem = document.createElement('img');
-      Object.assign(elem, {
-        src: amp_image.getAttribute('src'),
-        alt: amp_image.getAttribute('alt')
-      });
-      amp_image.parentNode.replaceChild(elem, amp_image);
+    let url = window.location.href;
+    let region_block = document.querySelector('div.plan-popup.active');
+    if (region_block) {
+      removeDOMElement(region_block);
+      let overflow = document.querySelector('html[style]');
+      if (overflow)
+        overflow.removeAttribute('style');
+    }
+    if (!window.location.pathname.includes('/amp_')) {
+      amp_redirect('div[id^="story-blocker"]', '', url.replace('/timesofindia.indiatimes.com/', '/m.timesofindia.com/').replace('/articleshow/', '/amp_articleshow/'));
+    } else {
+      let amp_images = document.querySelectorAll('div.inline-image > div.inline-imgecontent > amp-img[src]');
+      for (let amp_image of amp_images) {
+        amp_image.parentNode.removeAttribute('class');
+        amp_image.parentNode.parentNode.removeAttribute('class');
+        let elem = document.createElement('img');
+        Object.assign(elem, {
+          src: amp_image.getAttribute('src'),
+          alt: amp_image.getAttribute('alt')
+        });
+        amp_image.parentNode.replaceChild(elem, amp_image);
+      }
     }
   }
 }

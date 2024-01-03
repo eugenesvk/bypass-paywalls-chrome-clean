@@ -2533,14 +2533,15 @@ var defaultSites = {
   "Times of India": {
     domain: "###_timesofindia",
     group: [
+      "epaper.indiatimes.com",
       "timesofindia.com",
       "timesofindia.indiatimes.com"
     ],
     allow_cookies: 1,
-    useragent: "googlebot",
     exception: [{
-        domain: "timesofindia.indiatimes.com",
-        allow_cookies: 1
+        domain: "timesofindia.com",
+        allow_cookies: 1,
+        useragent: "googlebot"
       }
     ]
   },

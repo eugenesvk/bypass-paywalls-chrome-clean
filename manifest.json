@@ -214,7 +214,6 @@
     "*://*.eastwest.eu/*",
     "*://*.echo-online.de/*",
     "*://*.economictimes.com/*",
-    "*://*.economictimes.indiatimes.com/*",
     "*://*.economist.com/*",
     "*://*.ed.nl/*",
     "*://*.editorialedomani.it/*",
@@ -334,6 +333,7 @@
     "*://*.independent.co.uk/*",
     "*://*.independent.ie/*",
     "*://*.indianexpress.com/*",
+    "*://*.indiatimes.com/*",
     "*://*.indiatoday.in/*",
     "*://*.indystar.com/*",
     "*://*.inews.co.uk/*",
@@ -705,7 +705,6 @@
     "*://*.tijd.be/*",
     "*://*.timeshighereducation.com/*",
     "*://*.timesofindia.com/*",
-    "*://*.timesofindia.indiatimes.com/*",
     "*://*.timesunion.com/*",
     "*://*.tirebusiness.com/*",
     "*://*.tlz.de/*",
@@ -826,5 +825,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.4.9.3"
+  "version": "3.4.9.4"
 }
