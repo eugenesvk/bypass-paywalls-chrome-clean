@@ -3572,12 +3572,6 @@ else if (matchDomain('barrons.com')) {
   }
 }
 
-else if (matchDomain('bhaskar.com')) {
-  let paywall = document.querySelector('div > img[alt="LockIcon"]');
-  if (paywall)
-    refreshCurrentTab_bg();
-}
-
 else if (matchDomain('billboard.com')) {
   if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_subscr_section('amp-ad, amp-embed');

@@ -637,7 +637,7 @@
   "Taxscan.in": {
     "allow_cookies": 1,
     "domain": "taxscan.in",
-    "ld_json": "div.pmpro_content_message|div.singlepost_container>p"
+    "ld_json": "div.pmpro_content_message|div.the-content>p"
   },
   "Tetu.com": {
     "allow_cookies": 1,

@@ -20,7 +20,6 @@ var blocked_referer = false;
 // defaultSites are loaded from sites.js at installation extension
 
 var restrictions = {
-  'bhaskar.com': /^((?!\.bhaskar\.com\/(.+\/)?video(s(\/)?$|\/)).)*$/,
   'bloomberg.com': /^((?!\.bloomberg\.com\/news\/terminal\/).)*$/,
   'bloombergadria.com': /^((?!\.bloombergadria\.com\/video\/).)*$/,
   'dailywire.com': /^((?!\.dailywire\.com\/(episode|show|videos|watch)).)*$/,
