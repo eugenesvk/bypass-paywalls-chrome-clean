@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove Bhaskar (fix obsolete)
+Remove Westfalische Mediengruppe (fix obsolete)
 Fix Haaretz Group (Semrushbot)
 Fix The Diplomat (magazine)
 Fix Times of India (epaper)

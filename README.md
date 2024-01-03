@@ -672,11 +672,7 @@ Grouped in options:\
 *Verlagsgruppe Rhein Main* sites like (opt-in to custom sites for unlisted)\
 [Allgemeine Zeitung (Mainz)](https://www.allgemeine-zeitung.de) -
 [Darmstädter Echo](https://www.echo-online.de) -
-[Wiesbadener Kurier](https://www.wiesbadener-kurier.de)\
-*Westfälische Mediengruppe* sites like\
-[Münstersche Zeitung](https://www.muensterschezeitung.de) -
-[Westfalen-Blatt](https://www.westfalen-blatt.de) -
-[Westfälische Nachrichten](https://www.wn.de)
+[Wiesbadener Kurier](https://www.wiesbadener-kurier.de)
 
 ##### Italy
 [Corriere della Sera](https://www.corriere.it) -
