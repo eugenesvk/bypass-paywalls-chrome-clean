@@ -16,6 +16,7 @@ var dompurify_sites = [];
 var optin_setcookie = false;
 var optin_update = true;
 var blocked_referer = false;
+var domain;
 
 // defaultSites are loaded from sites.js at installation extension
 
@@ -59,9 +60,9 @@ var remove_cookies = [];
 var remove_cookies_select_hold, remove_cookies_select_drop;
 
 // Set User-Agent
-var use_google_bot, use_bing_bot, use_facebook_bot, use_semrush_bot;
+var use_google_bot, use_bing_bot, use_facebook_bot, use_semrush_bot, use_useragent_custom, use_useragent_custom_obj;
 // Set Referer
-var use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer;
+var use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_referer_custom_obj;
 // Set random IP-address
 var random_ip = {};
 var use_random_ip = [];
@@ -107,10 +108,14 @@ function initSetRules() {
   use_bing_bot = [];
   use_facebook_bot = [];
   use_semrush_bot = [];
+  use_useragent_custom = [];
+  use_useragent_custom_obj = {};
   use_drudgereport_referer = [];
   use_facebook_referer = [];
   use_google_referer = [];
   use_twitter_referer = [];
+  use_referer_custom = [];
+  use_referer_custom_obj = {};
   random_ip = {};
   change_headers = [];
   amp_unhide = [];
@@ -165,7 +170,7 @@ function setDefaultOptions() {
   });
 }
 
-function check_sites_updated(sites_updated_json) {
+function check_sites_updated(sites_updated_json, check_sites_updated_ext_version = false) {
   fetch(sites_updated_json)
   .then(response => {
     if (response.ok) {
@@ -178,6 +183,11 @@ function check_sites_updated(sites_updated_json) {
         ext_api.storage.local.set({
           sites_updated: json
         });
+        if (check_sites_updated_ext_version) {
+          let updated_ext_version_new = Object.values(json).map(x => x.upd_version || '').sort().pop();
+          if (updated_ext_version_new)
+            setExtVersionNew(updated_ext_version_new);
+        }
       })
     }
   }).catch(function (err) {
@@ -267,6 +277,11 @@ function addRules(domain, rule) {
         use_semrush_bot.push(domain);
       break;
     }
+  } else if (rule.useragent_custom) {
+    if (!use_useragent_custom.includes(domain)) {
+      use_useragent_custom.push(domain);
+      use_useragent_custom_obj[domain] = rule.useragent_custom;
+    }
   }
   if (rule.referer) {
     switch (rule.referer) {
@@ -286,6 +301,11 @@ function addRules(domain, rule) {
       if (!use_twitter_referer.includes(domain))
         use_twitter_referer.push(domain);
       break;
+    }
+  } else if (rule.referer_custom) {
+    if (!use_referer_custom.includes(domain)) {
+      use_referer_custom.push(domain);
+      use_referer_custom_obj[domain] = rule.referer_custom;
     }
   }
   if (rule.random_ip) {
@@ -420,7 +440,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_semrush_bot, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_semrush_bot, use_useragent_custom, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -526,14 +546,17 @@ ext_api.storage.local.get({
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains, updatedSites_domains_new).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
+  let check_sites_updated_ext_version;
+  if (optin_update)
+    check_update();
+  else
+    check_sites_updated_ext_version = true;
   if (enabledSites.includes('#options_optin_update_rules')) {
     sites_updated_json = sites_updated_json_online;
     sites_custom_ext_json = ext_path + 'custom/sites_custom.json';
   }
-  check_sites_updated(sites_updated_json);
+  check_sites_updated(sites_updated_json, check_sites_updated_ext_version);
   check_sites_custom_ext();
-  if (optin_update)
-    check_update();
   if (!Object.keys(sites).length)
     ext_api.runtime.openOptionsPage();
 });
@@ -1049,6 +1072,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url);
   var facebookbotEnabled = matchUrlDomain(use_facebook_bot, details.url);
   var semrushbotEnabled = matchUrlDomain(use_semrush_bot, details.url);
+  var useragent_customEnabled = matchUrlDomain(use_useragent_custom, details.url);
 
   // if referer exists, set it
   requestHeaders = requestHeaders.map(function (requestHeader) {
@@ -1061,6 +1085,8 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
         requestHeader.value = 'https://www.facebook.com/';
       } else if (matchUrlDomain(use_twitter_referer, details.url)) {
         requestHeader.value = 'https://t.co/';
+      } else if (domain = matchUrlDomain(use_referer_custom, details.url)) {
+        requestHeader.value = use_referer_custom_obj[domain];
       }
       setReferer = true;
     }
@@ -1092,6 +1118,11 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
         name: 'Referer',
         value: 'https://t.co/'
       });
+    } else if (domain = matchUrlDomain(use_referer_custom, details.url)) {
+      requestHeaders.push({
+        name: 'Referer',
+        value: use_referer_custom_obj[domain]
+      });
     }
   }
 
@@ -1108,7 +1139,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   }
 
   // override User-Agent to use Bingbot
-  if (bingbotEnabled) {
+  else if (bingbotEnabled) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": useUserAgentMobile ? userAgentMobileB : userAgentDesktopB
@@ -1116,7 +1147,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   }
 
   // override User-Agent to use Facebookbot
-  if (facebookbotEnabled) {
+  else if (facebookbotEnabled) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": userAgentDesktopF
@@ -1124,10 +1155,18 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   }
 
   // override User-Agent to use Semrushbot
-  if (semrushbotEnabled) {
+  else if (semrushbotEnabled) {
     requestHeaders.push({
       "name": "User-Agent",
       "value": userAgentDesktopS
+    })
+  }
+
+  // override User-Agent to custom
+  else if (domain = useragent_customEnabled) {
+    requestHeaders.push({
+      "name": "User-Agent",
+      "value": use_useragent_custom_obj[domain]
     })
   }
 
@@ -1263,6 +1302,19 @@ function updateBadge(activeTab) {
       ext_api.action.setBadgeText({text: badgeText});
 }
 
+function setExtVersionNew(check_ext_version_new) {
+  ext_api.management.getSelf(function (result) {
+    var installType = result.installType;
+    var ext_version_len = (installType === 'development') ? 7 : 5;
+    ext_version_new = check_ext_version_new;
+    if (ext_version_new.substring(0, ext_version_len) <= ext_version.substring(0, ext_version_len))
+      ext_version_new = '';
+    ext_api.storage.local.set({
+      ext_version_new: ext_version_new
+    });
+  });
+}
+
 var ext_version_new;
 function check_update() {
   let manifest_new = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/raw/master/manifest.json';
@@ -1270,16 +1322,8 @@ function check_update() {
   .then(response => {
     if (response.ok) {
       response.json().then(json => {
-        ext_api.management.getSelf(function (result) {
-          var installType = result.installType;
-          var ext_version_len = (installType === 'development') ? 7 : 5;
-          ext_version_new = json['version'];
-          if (ext_version_new.substring(0, ext_version_len) <= ext_version.substring(0, ext_version_len))
-            ext_version_new = '';
-          ext_api.storage.local.set({
-            ext_version_new: ext_version_new
-          });
-        });
+        let json_ext_version_new = json['version'];
+        setExtVersionNew(json_ext_version_new);
       })
     }
   }).catch(function (err) {

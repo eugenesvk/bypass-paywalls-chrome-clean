@@ -335,7 +335,7 @@ if (matchDomain('medium.com') || matchDomain(medium_custom_domains) || (!matchDo
   if (paywall) {
     paywall.removeAttribute('class');
     paywall.firstChild.before(freediumLink(url));
-    paywall.firstChild.before(googleWebcacheLink(url, 'BPC > Try for full article text (articles before 2023-12-10)'));
+    paywall.firstChild.before(googleWebcacheLink(url));
   }
   window.setTimeout(function () {
     let banner = pageContains('div > div > p', /author made this story available to/);
