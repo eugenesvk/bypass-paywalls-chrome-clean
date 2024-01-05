@@ -7,6 +7,7 @@ Add Motor Presse Stuttgart
 Add JournaldeMillau.fr (Groupe La Depeche)
 Remove Bhaskar (fix obsolete)
 Remove Westfalische Mediengruppe (fix obsolete)
+Fix Ad.nl (reduced only)
 Fix Haaretz Group (Semrushbot)
 Fix The Diplomat (magazine)
 Fix Times of India (epaper)
