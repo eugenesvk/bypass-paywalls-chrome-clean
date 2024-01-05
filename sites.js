@@ -860,6 +860,7 @@ var defaultSites = {
     domain: "###_fr_groupe_la_depeche",
     group: [
       "centrepresseaveyron.fr",
+      "journaldemillau.fr",
       "ladepeche.fr",
       "lindependant.fr",
       "midilibre.fr",

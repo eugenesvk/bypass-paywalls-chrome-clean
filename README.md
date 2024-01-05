@@ -558,6 +558,7 @@ Grouped in options:\
 [La Libre](https://www.lalibre.be)\
 *Groupe La Dépêche* sites like\
 [Centre Presse](https://www.centrepresseaveyron.fr) -
+[Journal de Millau](https://www.journaldemillau.fr) -
 [L'Indépendant](https://www.lindependant.fr) -
 [La Dépêche du Midi](https://www.ladepeche.fr) -
 [La Nouvelle République des Pyrénées](https://www.nrpyrenees.fr) -
