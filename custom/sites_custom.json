@@ -201,7 +201,7 @@
     "ld_json": "div.pmpro_content_message|div.content-inner"
   },
   "Farmersjournal.ie": {
-    "amp_redirect": "div#memberplusModal",
+    "amp_redirect": "div#memberplusModal.in",
     "domain": "farmersjournal.ie"
   },
   "Finance.si": {

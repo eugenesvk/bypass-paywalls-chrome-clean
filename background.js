@@ -32,7 +32,7 @@ var restrictions = {
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
   'hilltimes.com': /^((?!\.hilltimes\.com\/slideshow\/).)*$/,
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
-  'nytimes.com': /^((?!\/(myaccount|timesmachine)\.nytimes\.com\/).)*$/,
+  'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
@@ -529,7 +529,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_au_investsmart', '###_es_epiberica, ###_il_haaretz_group'];
+          let new_groups = ['###_au_investsmart', '###_de_motor_presse', '###_es_epiberica, ###_il_haaretz_group'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();

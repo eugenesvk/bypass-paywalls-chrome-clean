@@ -122,7 +122,7 @@ if (bg2csData.ld_json_next && dompurify_loaded) {
             let url_next = findKeyJson(json, ['slug']);
             if (url_next && !window.location.pathname.endsWith(url_next))
               refreshCurrentTab();
-            let json_text = parseHtmlEntities(findKeyJson(json, ['body', 'content', 'description'], 500));
+            let json_text = parseHtmlEntities(findKeyJson(json, ['body', 'content', 'contentHtml', 'description'], 500));
             if (json_text) {
               let parser = new DOMParser();
               let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, dompurify_options) + '</div>', 'text/html');
@@ -1119,6 +1119,11 @@ else if (matchDomain('kurier.at')) {
   }
   let banners = document.querySelectorAll('div#view-offer, app-paywall, adfullbanner, outbrain');
   removeDOMElement(...banners);
+}
+
+else if (matchDomain('motorradonline.de')) {
+  if (window.location.pathname.endsWith('/amp/'))
+    ampToHtml();
 }
 
 else if (matchDomain(['mz.de', 'volksstimme.de'])) {

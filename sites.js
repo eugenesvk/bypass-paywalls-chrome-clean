@@ -184,11 +184,6 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/xbuilder\/experience\/execute|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
-  "Auto Motor und Sport": {
-    domain: "auto-motor-und-sport.de",
-    allow_cookies: 1,
-    block_regex: /\.auto-motor-und-sport\.de\/thenewsbar\/static\/pw\.js/
-  },
   "Autocar.co.uk": {
     domain: "autocar.co.uk",
     allow_cookies: 1,
@@ -1633,6 +1628,18 @@ var defaultSites = {
   "Monocle": {
     domain: "monocle.com",
     useragent: "googlebot"
+  },
+  "Motor Presse Stuttgart": {
+    domain: "###_de_motor_presse",
+    group: [
+      "aerokurier.de",
+      "auto-motor-und-sport.de",
+      "flugrevue.de",
+      "motorradonline.de",
+      "womenshealth.de"
+    ],
+    allow_cookies: 1,
+    block_regex: /\.de\/thenewsbar\/static\/pw\.js/
   },
   "Mountain View Voice": {
     domain: "mv-voice.com"

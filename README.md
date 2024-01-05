@@ -596,7 +596,6 @@ Grouped in options:\
 ##### Germany/Austria
 [Ärzte Zeitung](https://www.aerztezeitung.de) -
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
-[Auto Motor und Sport](https://www.auto-motor-und-sport.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
 [Bild (link to archive.is)](https://www.bild.de) -
@@ -666,6 +665,12 @@ Grouped in options:\
 *Medienholding Süd* sites like (opt-in to custom sites for unlisted)\
 [Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
 [Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de)\
+*[Motor Presse Stuttgart](https://www.motorpresse.de)* sites like\
+[Aerokurier](https://www.aerokurier.de) -
+[Auto Motor und Sport](https://www.auto-motor-und-sport.de) -
+[Flug Revue](https://www.flugrevue.de) -
+[Motorrad](https://www.motorradonline.de) -
+[Women's Health](https://www.womenshealth.de)\
 *NOZ/MHN Mediengruppe* sites like\
 [Neue Osnabrücker Zeitung](https://www.noz.de) -
 [Schleswig-Holsteinischer Zeitungsverlag](https://www.shz.de) -
