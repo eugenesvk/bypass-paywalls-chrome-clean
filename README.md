@@ -346,6 +346,7 @@ Grouped in options:\
 [The Plain Dealer](https://www.cleveland.com) -
 [The Post-Standard](https://www.syracuse.com) -
 [The Republican](https://www.masslive.com)\
+*[Forum Communications](https://www.forumcomm.com/brands)* sites (opt-in to custom sites)\
 *Gannett Group (local USA Today)* sites like (opt-in to custom sites for unlisted)\
 [Austin American-Statesman](https://www.statesman.com) -
 [Democrat and Chronicle](https://www.democratandchronicle.com) -

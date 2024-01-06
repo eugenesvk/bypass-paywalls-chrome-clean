@@ -131,6 +131,8 @@ window.setTimeout(function () {
           group = '###_fr_synerj';
         else if (!matchDomain('institutionalinvestor.com') && (matchDomain('thedeal.com') || document.querySelector('footer.Page-footer a.Link[href="https://www.delinian.com/privacy-policy"]')))
           group = '###_uk_delinian';// no fix
+        else if (document.querySelector('head > meta[property][content^="https://cdn.forumcomm.com/"]'))
+          group = '###_usa_forum_comm';
         else if (document.querySelector('li > a[href^="https://www.bnpmedia.com/"]'))
           group = '###_usa_bnp_media';
         else if (matchDomain(['centralmaine.com', 'pressherald.com', 'sunjournal.com']))

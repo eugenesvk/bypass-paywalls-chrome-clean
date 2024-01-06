@@ -728,6 +728,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Forum Communications (opt-in to custom sites)": {
+    domain: "###_usa_forum_comm",
+    group: [],
+    allow_cookies: 1,
+    block_regex: /loader-cdn\.azureedge\.net\//
+  },
   "Fox News (regwall)": {
     domain: "foxnews.com",
     allow_cookies: 1
