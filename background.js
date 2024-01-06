@@ -40,7 +40,6 @@ var restrictions = {
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
   'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
-  'theatlantic.com': /^((?!\/newsletters\.theatlantic\.com\/).)*$/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
   'timeshighereducation.com': /\.timeshighereducation\.com\/((features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/,
   'uol.com.br': /^((?!(conta|email|piaui\.folha)\.uol\.com\.br).)*$/,

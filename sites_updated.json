@@ -136,6 +136,12 @@
     "block_regex": "\\.spglobal\\.com\\/script\\.js",
     "upd_version": "3.4.8.1"
   },
+  "The Atlantic": {
+    "domain": "theatlantic.com",
+    "remove_cookies_select_drop": ["articleViews"],
+    "useragent": "googlebot",
+    "upd_version": "3.4.9.8"
+  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,
