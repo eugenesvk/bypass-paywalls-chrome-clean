@@ -1692,6 +1692,8 @@ else if (matchDomain('elle.fr')) {
     let subscription_bar = document.querySelector('.tc-subscription-bar');
     removeDOMElement(subscription_bar);
   }
+  let ads = document.querySelectorAll('div[class*="--placeholder"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(fr_be_groupe_rossel)) {
@@ -2039,18 +2041,25 @@ else if (matchDomain('loeildelaphotographie.com')) {
 else if (matchDomain('marianne.net')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall && dompurify_loaded) {
+    removeDOMElement(paywall);
     let article_source = document.querySelector('div.article-body[data-content-src]');
     if (article_source) {
       let article_text = decode_utf8(atob(article_source.getAttribute('data-content-src')));
       let parser = new DOMParser();
       let html = parser.parseFromString('<div>' + DOMPurify.sanitize(article_text) + '</div>', 'text/html');
       let article = html.querySelector('div');
+      let lazy_images = article.querySelectorAll('img.lazyload[data-src]:not([src])');
+      for (let elem of lazy_images) {
+        elem.src = elem.getAttribute('data-src');
+        elem.classList.remove('lazyload');
+      }
       article_source.innerHTML = '';
       article_source.appendChild(article);
       article_source.removeAttribute('data-content-src');
     }
-    removeDOMElement(paywall);
   }
+  let ads = document.querySelectorAll('div[class*="--placeholder"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('nouvelobs.com')) {
@@ -2515,121 +2524,7 @@ else if (matchDomain(be_roularta_domains)) {
 }
 
 else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > link[href*=".ndcmediagroep.nl/"]')) {
-  let paywall = document.querySelector('div.signupPlus, div.pw-wrapper');
-  if (paywall && dompurify_loaded) {
-    let intro = document.querySelector('div.startPayWall');
-    let html = document.documentElement.outerHTML;
-    if (html.includes('window.__NUXT__=')) {
-      removeDOMElement(paywall, intro);
-      try {
-        let json = html.split('window.__NUXT__=')[1].split('</script>')[0].trim();
-        let url_nuxt = json.includes(',canonical:"') ? json.split(',canonical:"')[1].match(/\d+\.(html|ece)/)[0] : false;
-        if (!url_nuxt)
-          url_nuxt = json.match(/[(,]null,/) ? json.split(/[(,]null,/)[1].match(/\d+\.(html|ece)/)[0] : false;
-        if (url_nuxt && !window.location.pathname.includes(url_nuxt))
-          refreshCurrentTab();
-        else if (json.includes(',body:')) {
-          let json_text = json.split(',body:')[1].split(/,(leadText|brand_key|tts):/)[0].replace(/([{,])(\w+)(?=:(["\{\[]|[\w$]{1,2}[,\}]))/g, "$1\"$2\"").replace(/(Image\\":)(\d)([,}])/g, '$1\\"$2\\"$3').replace(/\":(\[)?([\w\$\.]+)([\]},])/g, "\":$1\"$2\"$3");
-          let article = document.querySelector('div.content');
-          if (article) {
-            article.innerHTML = '';
-            let pars = JSON.parse(json_text);
-            function addParText(elem, par_text, add_br = false) {
-              if (par_text.length > 2) {
-                let span = document.createElement('span');
-                span.innerText = par_text;
-                elem.appendChild(span);
-                if (add_br)
-                  elem.appendChild(document.createElement('br'));
-              }
-            }
-            for (let par of pars) {
-              let elem = document.createElement('p');
-              if (par.code) {
-                let parser = new DOMParser();
-                let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(par.code, dompurify_options) + '</div>', 'text/html');
-                elem = article_html.querySelector('div');
-              } else if (par.insertbox_head || par.insertbox_text) {
-                if (par.insertbox_head && par.insertbox_head.length > 2) {
-                  addParText(elem, par.insertbox_head, true);
-                }
-                if (par.insertbox_text) {
-                  for (let item of par.insertbox_text) {
-                    if (item.children) {
-                      for (let child of item.children) {
-                        if (child.text) {
-                          addParText(elem, child.text, true);
-                        } else if (child.href && child.href.length > 2) {
-                          let par_link = document.createElement('a');
-                          par_link.href = child.href;
-                          par_link.innerText = child.children[0].text;
-                          elem.appendChild(par_link);
-                          elem.appendChild(document.createElement('br'));
-                        } else if (child.children) {
-                          for (let sub_child of child.children) {
-                            if (sub_child.text) {
-                              addParText(elem, sub_child.text);
-                            } else if (sub_child.children && sub_child.children.length && sub_child.children[0].text) {
-                              addParText(elem, sub_child.children[0].text);
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              } else if (par.text) {
-                addParText(elem, par.text);
-              } else if (par.children) {
-                for (let child of par.children) {
-                  if (child.relation) {
-                    if (child.type === 'img' && child.relation.href) {
-                      let figure = document.createElement('figure');
-                      let img = document.createElement('img');
-                      img.src = child.relation.href;
-                      figure.appendChild(img);
-                      if (child.relation.caption && child.relation.caption.length > 2) {
-                        let caption = document.createElement('figcaption');
-                        caption.innerText = child.relation.caption;
-                        figure.appendChild(caption);
-                      }
-                      elem.appendChild(figure);
-                    } else if (child.relation.link && child.relation.link.length > 2 && ((child.relation.title && child.relation.title.length > 2) || child.relation.imageAlt)) {
-                      let par_link = document.createElement('a');
-                      par_link.href = child.relation.link;
-                      par_link.innerText = child.relation.title.length > 2 ? child.relation.title : (child.relation.imageAlt.length > 2 ? child.relation.imageAlt : child.relation.link);
-                      elem.appendChild(par_link);
-                    }
-                  } else if (child.text) {
-                    addParText(elem, child.text);
-                  } else if (child.children && child.children[0]) {
-                    if (child.children[0].text && child.children[0].text.length > 2) {
-                      if ((child.href && child.href.length > 2) || (child.relation && child.relation.follow && child.relation.follow.url)) {
-                        let par_link = document.createElement('a');
-                        par_link.href = child.href || child.relation.follow.url;
-                        par_link.innerText = child.children[0].text;
-                        elem.appendChild(par_link);
-                      } else {
-                        addParText(elem, child.children[0].text);
-                      }
-                    } else if (child.children[0].children && child.children[0].children[0] && child.children[0].children[0].text && child.children[0].children[0].text.length > 2)
-                      addParText(elem, child.children[0].children[0].text);
-                  }
-                }
-              } else if (par.typename.length > 2)
-                console.log(par);
-              if (elem.hasChildNodes()) {
-                article.appendChild(elem);
-              }
-            }
-          }
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  }
-  let ads = document.querySelectorAll('.top__ad, .marketingblock-article');
+  let ads = document.querySelectorAll('div.top__ad, div.marketingblock-article');
   hideDOMElement(...ads);
 }
 
