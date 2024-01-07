@@ -2348,7 +2348,7 @@ var defaultSites = {
   "The Indian Express": {
     domain: "indianexpress.com",
     allow_cookies: 1,
-    block_regex: /(\/indianexpress\.com\/.+\/(evolok\/.+|premiumContent)\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
   "The Intercept": {
     domain: "theintercept.com",

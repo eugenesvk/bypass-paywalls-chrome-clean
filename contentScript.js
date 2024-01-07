@@ -4018,14 +4018,20 @@ else if (matchDomain('inc42.com')) {
 
 else if (matchDomain('indianexpress.com')) {
   if (window.location.pathname.endsWith('/lite/'))
-    amp_unhide_access_hide('="metering.result=\'ALLOW_ACCESS\'"', '', 'amp-ad, amp-embed');
+    amp_unhide_access_hide('="metering.result=\'ALLOW_ACCESS\'"', '', 'div.amp-ad, amp-embed');
   else {
-    let paywall = document.querySelector('div#pcl-rest-content[style]');
-    if (paywall)
-      paywall.removeAttribute('style');
-    let register = document.querySelector('div#app-pcl');
-    let ads = document.querySelectorAll('div[class^="adsbox"]');
-    hideDOMElement(register, ...ads);
+    let paywall = document.querySelector('ev-engagement');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let meter_content = document.querySelector('div.ev-meter-content[style]');
+      if (meter_content)
+        meter_content.removeAttribute('style');
+      let intro = document.querySelector('p.first_intro_para');
+      if (intro)
+        intro.removeAttribute('class');
+    }
+    let ads = document.querySelectorAll('div[class^="adsbox"], div.adboxtop, div.add-first, div.osv-ad-class, div.ie-int-campign-ad');
+    hideDOMElement(...ads);
   }
 }
 

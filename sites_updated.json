@@ -136,18 +136,19 @@
     "block_regex": "\\.spglobal\\.com\\/script\\.js",
     "upd_version": "3.4.8.1"
   },
-  "The Atlantic": {
-    "domain": "theatlantic.com",
-    "remove_cookies_select_drop": ["articleViews"],
-    "useragent": "googlebot",
-    "upd_version": "3.4.9.8"
-  },
   "The Economist": {
     "domain": "economist.com",
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com\\/",
     "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
     "upd_version": "3.2.7.6"
+  },
+  "The Indian Express": {
+    "domain": "indianexpress.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "cs_code": "[{\"cond\":\"ev-engagement\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.ev-meter-content\", \"rm_attrib\": \"style\"}, {\"cond\":\"p.first_intro_para\", \"rm_attrib\": \"class\"}]}]",
+    "upd_version": "3.4.9.9"
   },
   "The Marker": {
     "domain": "themarker.com",

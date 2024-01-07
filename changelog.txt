@@ -13,6 +13,7 @@ Fix Haaretz Group (Semrushbot)
 Fix Mediahuis Noord (js & xhr only)
 Fix The Atlantic (menu & footer)
 Fix The Diplomat (magazine)
+Fix The Indian Express (css)
 Fix Times of India (epaper)
 Update custom sites (custom useragent/referer)
 

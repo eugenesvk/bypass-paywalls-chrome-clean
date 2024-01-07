@@ -169,7 +169,7 @@ function setDefaultOptions() {
   });
 }
 
-function check_sites_updated(sites_updated_json, check_sites_updated_ext_version = false) {
+function check_sites_updated(sites_updated_json, optin_update = false) {
   fetch(sites_updated_json)
   .then(response => {
     if (response.ok) {
@@ -182,7 +182,7 @@ function check_sites_updated(sites_updated_json, check_sites_updated_ext_version
         ext_api.storage.local.set({
           sites_updated: json
         });
-        if (check_sites_updated_ext_version) {
+        if (!optin_update) {
           let updated_ext_version_new = Object.values(json).map(x => x.upd_version || '').sort().pop();
           if (updated_ext_version_new)
             setExtVersionNew(updated_ext_version_new);
@@ -545,16 +545,13 @@ ext_api.storage.local.get({
   disabledSites = defaultSites_grouped_domains.concat(customSites_domains, updatedSites_domains_new).filter(x => !enabledSites.includes(x));
   add_grouped_enabled_domains(grouped_sites);
   set_rules(sites, updatedSites, customSites);
-  let check_sites_updated_ext_version;
   if (optin_update)
     check_update();
-  else
-    check_sites_updated_ext_version = true;
   if (enabledSites.includes('#options_optin_update_rules')) {
     sites_updated_json = sites_updated_json_online;
     sites_custom_ext_json = ext_path + 'custom/sites_custom.json';
   }
-  check_sites_updated(sites_updated_json, check_sites_updated_ext_version);
+  check_sites_updated(sites_updated_json, optin_update);
   check_sites_custom_ext();
   if (!Object.keys(sites).length)
     ext_api.runtime.openOptionsPage();
@@ -1090,7 +1087,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       setReferer = true;
     }
     if (requestHeader.name === 'User-Agent') {
-      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr'], details.url);
+      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr', 'theatlantic.com'], details.url);
     }
     return requestHeader;
   });
@@ -1275,7 +1272,7 @@ function updateBadge(activeTab) {
     }
     if (matchUrlDomain('webcache.googleusercontent.com', currentUrl))
       badgeText = '';
-    if (ext_version_new)
+    if (ext_version_new > ext_version)
       badgeText = '^' + badgeText;
     let isDefaultSite = matchUrlDomain(defaultSites_domains, currentUrl);
     let isCustomSite = matchUrlDomain(customSites_domains, currentUrl);
