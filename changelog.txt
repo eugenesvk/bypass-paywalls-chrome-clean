@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+
+* v3.5.0.0 (2024-01-07)
 Add Forum Communications (opt-in to custom sites)
 Add Motor Presse Stuttgart
 Add JournaldeMillau.fr (Groupe La Depeche)
