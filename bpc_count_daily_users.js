@@ -1,5 +1,6 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
-var url_loc = (typeof browser === 'object') ? 'firefox' : 'chrome';
+var manifestData = ext_api.runtime.getManifest();
+var url_loc = manifestData.key ? 'chrome' : 'firefox';
 
 // daily users counter
 function bpc_count_daily_users(dateStr) {

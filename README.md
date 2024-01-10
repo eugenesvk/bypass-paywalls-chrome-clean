@@ -81,15 +81,13 @@ Although [Orion Browser](https://apps.apple.com/us/app/orion-browser-by-kagi/id1
 * This add-on works best alongside the adblocker [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin).
 * If you live in the EU, also consider adding these filters to your adblocker (in order to remove cookie warnings): [Easylist Cookies](https://secure.fanboy.co.nz/fanboy-cookiemonster.txt) | [I don't care about cookies custom filter](https://www.i-dont-care-about-cookies.eu/abp). Some sites need to set a consent-cookie for (social) media.
 
+[Go to top](#bypass-paywalls-clean-for-firefox)
+
 ### List of supported websites
 
 _* free articles only._
 
-##### International news
-[Foreign Affairs](https://www.foreignaffairs.com) -
-[Foreign Policy](https://www.foreignpolicy.com) -
-[Inkl](https://www.inkl.com) -
-[Newsweek](https://www.newsweek.com) -
+##### National USA news
 [Reuters](https://www.reuters.com) -
 [The New York Times](https://www.nytimes.com) -
 [The Washington Post](https://www.washingtonpost.com)
@@ -218,11 +216,14 @@ Grouped in options:\
 [Defector](https://defector.com) -
 [Field & Stream](https://www.fieldandstream.com) -
 [First Things](https://www.firstthings.com) -
+[Foreign Affairs](https://www.foreignaffairs.com) -
+[Foreign Policy](https://www.foreignpolicy.com) -
 [Harper's Magazine](https://harpers.org) -
 [Jane's Defence Weekly](https://www.janes.com/defence-news/) -
 [Jazziz](https://www.jazziz.com) -
 [Jazzwise](https://www.jazzwise.com) -
 [National Review](https://www.nationalreview.com) -
+[Newsweek](https://www.newsweek.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
 [Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -
 [Puck.news](https://puck.news) -
@@ -630,8 +631,7 @@ Grouped in options:\
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -
-[Weser-Kurier](https://www.weser-kurier.de) -
-[Westdeutsche Zeitung](https://www.wz.de)
+[Weser-Kurier](https://www.weser-kurier.de)
 
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
@@ -855,6 +855,7 @@ Grouped in options:\
 ##### Australia/New Zealand
 
 [Crikey](https://www.crikey.com.au) -
+[Inkl](https://www.inkl.com) -
 [MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -
 [The Saturday Paper](https://www.thesaturdaypaper.com.au) -
@@ -1001,6 +1002,8 @@ Grouped in options:\
 
 _* free articles only._
 
+[Go to top](#bypass-paywalls-clean-for-firefox)
+
 ### Sites with limited number of free articles
 The free article limit can normally be bypassed by removing cookies for the site.  
 Click on the BPC-icon and then *clear cookies*-button in the popup (for unsupported sites grant host permission for domain).  
@@ -1056,3 +1059,5 @@ You can also exclude a specific domain which is grouped in options.
 
 ### Disclaimer
 * This software is provided for educational purposes only and is provided "AS IS", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+[Go to top](#bypass-paywalls-clean-for-firefox)

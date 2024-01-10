@@ -771,7 +771,6 @@
     "*://*.wr.de/*",
     "*://*.wsj.com/*",
     "*://*.wwd.com/*",
-    "*://*.wz.de/*",
     "*://*.yogajournal.com/*",
     "*://*.yorkshirepost.co.uk/*",
     "*://*.zeit.de/*",
@@ -827,5 +826,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.0.0"
+  "version": "3.5.0.1"
 }

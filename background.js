@@ -980,6 +980,7 @@ ext_api.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
+setTimeout(function () {
 setInterval(function () {
   let current_date_str = currentDateStr();
   if (last_date_str < current_date_str) {
@@ -987,6 +988,7 @@ setInterval(function () {
     last_date_str = current_date_str;
   }
 }, 60 * 60 * 1000);
+}, 1000);
 
 var extraInfoSpec = ['blocking', 'requestHeaders'];
 if (ext_api.webRequest.OnBeforeSendHeadersOptions.hasOwnProperty('EXTRA_HEADERS'))

@@ -326,7 +326,7 @@ function renderOptions() {
     sites_custom: {},
     sites_updated: {}
   }, function (items) {
-    var sites_custom = items.sites_custom;
+    var sites_custom = sortJson(items.sites_custom);
     var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').map(x => x.trim()) : x.domain).flat();
     var sites_updated = items.sites_updated;
     var sites_updated_domains_new = Object.values(sites_updated).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();

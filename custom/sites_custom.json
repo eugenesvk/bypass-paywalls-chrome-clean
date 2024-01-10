@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, interestingengineering.com, lastampa.it, politiken.dk, repubblica.it, rp-online.de, sueddeutsche.de, theepochtimes.com, theinformation.com",
+    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -302,6 +302,11 @@
   "Internationalepolitik.de": {
     "allow_cookies": 1,
     "domain": "internationalepolitik.de"
+  },
+  "Investmentnews.com": {
+    "allow_cookies": 1,
+    "domain": "investmentnews.com",
+    "ld_google_webcache": "div.leaky_paywall_message_wrap|div#article-main-featured-content"
   },
   "Ipe.com": {
     "allow_cookies": 1,
