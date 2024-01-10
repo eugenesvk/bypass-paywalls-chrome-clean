@@ -124,7 +124,7 @@ window.setTimeout(function () {
         group = '###_usa_townnews';
       else if (document.querySelector('head > meta[content^="https://www.mcclatchy-wires.com/"], a[href^="https://classifieds.mcclatchy.com/"], script[src*=".mcclatchyinteractive.com/"]'))
         group = '###_usa_mcc';
-      else if (document.querySelector('script[src*="/wp-content/plugins/dfm"], amp-img#paywall[src*=".com/wp-content/plugins/dfm-amp-mods/"]'))
+      else if (document.querySelector('head > link[rel="stylesheet"][id^="dfm-accuweather-"], footer li > a[href^="https://www.medianewsgroup.com"]'))
         group = '###_usa_mng';
       else if (hostname.match(/\.com$/)) {
         if (matchDomain(['journalauto.com', 'journaldupneu.com', 'j2rauto.com']))

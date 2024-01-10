@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove Wz.de (fix obsolete)
+Fix MediaNews Group (identify sites)
 
 * v3.5.0.0 (2024-01-07)
 Add Forum Communications (opt-in to custom sites)
