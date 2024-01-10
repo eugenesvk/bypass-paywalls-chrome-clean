@@ -1241,7 +1241,7 @@ else if (matchDomain('springermedizin.de')) {
   }
 }
 
-else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de']) || matchDomain(de_mhs_custom_domains)) {
+else if (matchDomain(['stuttgarter-nachrichten.de', 'stuttgarter-zeitung.de', 'schwarzwaelder-bote.de']) || matchDomain(de_mhs_custom_domains)) {
   let banners = document.querySelectorAll('div.mod-paywall, div.Billboard');
   hideDOMElement(...banners);
 }
@@ -4806,6 +4806,11 @@ else if (matchDomain('theamericanconservative.com')) {
   let noscroll = document.querySelector('body.modal-open');
   if (noscroll)
     noscroll.classList.remove('modal-open');
+}
+
+else if (matchDomain('theartnewspaper.com')) {
+  let ads = document.querySelectorAll('div.ad-container');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('theathletic.com')) {

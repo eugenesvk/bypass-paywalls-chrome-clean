@@ -1,29 +1,9 @@
 {
-  "Automobilwoche": {
-    "domain": "automobilwoche.de",
-    "allow_cookies": 1,
-    "block_regex": "\\.automobilwoche\\.de\\/sites\\/camw\\/files\\/js\\/js_8J_.+\\.js",
-    "upd_version": "3.4.7.1"
-  },
-  "Bild (link to archive.is)": {
-    "domain": "bild.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div.offer-module|div.article-body",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.7.5"
-  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
-  },
-  "BlueConic": {
-    "domain": "blueconic.net",
-    "allow_cookies": 1,
-    "block_regex_general": "(\\.blueconic\\.net\\/|[a-z]{1}[0-9]{2,3}\\.[\\w-]+\\.(co(m|\\.uk)|net|org)\\/script\\.js)",
-    "excluded_domains": ["nationalreview.com"],
-    "upd_version": "3.4.7.3"
   },
   "Business Insider Nederland": {
     "domain": "businessinsider.nl",
@@ -44,25 +24,12 @@
     "amp_redirect": "aside.paywall",
     "upd_version": "3.4.8.1"
   },
-  "Fox News (regwall)": {
-    "domain": "foxnews.com",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.article-gating-wrapper\", \"rm_elem\":1}, {\"cond\":\"div[class*='gated-overlay']\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.4.7.8"
-  },
   "Haaretz": {
     "domain": "haaretz.co.il",
     "allow_cookies": 1,
     "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.9.2"
-  },
-  "Haaretz English": {
-    "domain": "haaretz.com",
-    "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.7.7"
   },
   "Haaretz Group": {
     "domain": "###_il_haaretz_group",
@@ -83,39 +50,17 @@
     "cs_code": "[{\"cond\":\"div.single-post-content\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.4.8.5"
   },
-  "London Review of Books": {
-    "domain": "lrb.co.uk",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.lrb\\.co\\.uk\\/",
-    "upd_version": "3.4.7.4"
-  },
-  "National Review": {
-    "domain": "nationalreview.com",
-    "allow_cookies": 1,
-    "remove_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "cs_block": 1,
-    "upd_version": "3.4.7.3"
-  },
-  "Neue Westfälische": {
-    "domain": "nw.de",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "amp_redirect": "a[data-event-value='paywall-overlay-click']",
-    "upd_version": "3.4.7.9"
-  },
-  "New York Magazine (+ Curbed, Grub Street, The Cut & Vulture)": {
-    "domain": "###_usa_nymag",
+  "Medienholding Süd": {
+    "domain": "###_de_mhs",
     "group": [
-      "curbed.com",
-      "grubstreet.com",
-      "nymag.com",
-      "thecut.com",
-      "vulture.com"
+      "schwarzwaelder-bote.de",
+      "stuttgarter-nachrichten.de",
+      "stuttgarter-zeitung.de"
     ],
     "allow_cookies": 1,
-    "block_regex": "\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js",
-    "upd_version": "3.4.7.6"
+    "block_regex": "\\.piano\\.io\\/",
+    "useragent": "googlebot",
+    "upd_version": "3.5.0.2"
   },
   "Piano.io (+ TinyPass)": {
     "domain": "piano.io",
@@ -124,11 +69,6 @@
     "excluded_domains": ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"],
     "upd_version": "3.4.8.4"
   },
-  "Rzeczpospolita": {
-    "domain": "rp.pl",
-    "ld_google_webcache": "div.paywallComponentWrapper|div.main--content--body",
-    "upd_version": "3.4.7.6"
-  },
   "S&P Global": {
     "domain": "spglobal.com",
     "allow_cookies": 1,
@@ -136,26 +76,12 @@
     "block_regex": "\\.spglobal\\.com\\/script\\.js",
     "upd_version": "3.4.8.1"
   },
-  "The Economist": {
-    "domain": "economist.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"svelte-scroller-outer\", \"rm_elem\": 1}, {\"cond\":\"body > style\", \"rm_elem\": 1}]}]",
-    "upd_version": "3.2.7.6"
-  },
   "The Indian Express": {
     "domain": "indianexpress.com",
     "allow_cookies": 1,
     "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
     "cs_code": "[{\"cond\":\"ev-engagement\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.ev-meter-content\", \"rm_attrib\": \"style\"}, {\"cond\":\"p.first_intro_para\", \"rm_attrib\": \"class\"}]}]",
     "upd_version": "3.4.9.9"
-  },
-  "The Marker": {
-    "domain": "themarker.com",
-    "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.7.7"
   },
   "The New York Times": {
     "domain": "nytimes.com",
