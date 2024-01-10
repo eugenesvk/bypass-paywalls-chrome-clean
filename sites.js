@@ -1411,7 +1411,8 @@ var defaultSites = {
   },
   "Le Parisien": {
     domain: "leparisien.fr",
-    allow_cookies: 1
+    allow_cookies: 1,
+    useragent: "googlebot"
   },
   "Le Point": {
     domain: "lepoint.fr",

@@ -50,6 +50,12 @@
     "cs_code": "[{\"cond\":\"div.single-post-content\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.4.8.5"
   },
+  "Le Parisien": {
+    "domain": "leparisien.fr",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.5.0.3"
+  },
   "Medienholding Süd": {
     "domain": "###_de_mhs",
     "group": [

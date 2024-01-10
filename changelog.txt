@@ -6,6 +6,7 @@ Post-release
 Add Schwarzwaelder-bote.de
 Remove LeMonde.fr (fix obsolete)
 Remove Wz.de (fix obsolete)
+Fix LeParisien.fr
 Fix MediaNews Group (identify sites)
 
 * v3.5.0.0 (2024-01-07)

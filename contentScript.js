@@ -1865,21 +1865,8 @@ else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
 }
 
 else if (matchDomain('leparisien.fr')) {
-  if (window.location.pathname.startsWith('/amp/')) {
-    let paywall = document.querySelector('div.paywall');
-    if (paywall) {
-      let paywall_sticky = document.querySelector('div.paywall-sticky');
-      removeDOMElement(paywall, paywall_sticky);
-      let section_hidden = document.querySelectorAll('section[hidden]');
-      for (let elem of section_hidden)
-        elem.removeAttribute('hidden');
-      let mask = document.querySelector('.amp-premium-first-content');
-      if (mask)
-        mask.classList.remove('amp-premium-first-content');
-    }
-  } else {
-    amp_redirect('div.paywall', '', '/amp' + window.location.pathname);
-  }
+  if (window.location.pathname.startsWith('/amp/'))
+    ampToHtml();
 }
 
 else if (matchDomain('lepoint.fr')) {
