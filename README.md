@@ -225,7 +225,7 @@ Grouped in options:\
 [National Review](https://www.nationalreview.com) -
 [Newsweek](https://www.newsweek.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
-[Project Syndicate (link to archive.is)](https://www.project-syndicate.org) -
+[Project Syndicate](https://www.project-syndicate.org) -
 [Puck.news](https://puck.news) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
@@ -485,7 +485,7 @@ Grouped in options:\
 [The New Statesman](https://www.newstatesman.com) -
 [The Spectator](https://www.spectator.co.uk) -
 [The Telegraph](https://www.telegraph.co.uk) -
-[The Times (link to archive.is)](https://www.thetimes.co.uk) -
+[The Times](https://www.thetimes.co.uk) -
 [The Times Literary Supplement](https://www.the-tls.co.uk) -
 [UnHerd](https://unherd.com)
 
@@ -529,7 +529,7 @@ Grouped in options:\
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
 [Le Courrier des Stratèges](https://lecourrierdesstrateges.fr) -
-[Le Figaro (link to archive.is)](https://www.lefigaro.fr) -
+[Le Figaro](https://www.lefigaro.fr) -
 [Le Grand Continent](https://legrandcontinent.eu) -
 [Le Journal du Dimanche](https://lejdd.fr) -
 [Le Journal du Net](https://www.journaldunet.com) -
@@ -570,7 +570,7 @@ Grouped in options:\
 [Monaco-Matin](https://www.monacomatin.mc) -
 [Nice-Matin](https://www.nicematin.com) -
 [Var-Matin](https://www.varmatin.com)\
-*Groupe Rossel* (link to archive.is) sites like\
+*Groupe Rossel* sites like\
 [L'Aisne nouvelle](https://www.aisnenouvelle.fr) -
 [L'Ardennais](https://www.lardennais.fr) -
 [L'Est-Éclair](https://www.lest-eclair.fr) -
@@ -599,15 +599,15 @@ Grouped in options:\
 [Augsburger Allgemeine](https://www.augsburger-allgemeine.de) -
 [Automobilwoche](https://www.automobilwoche.de) -
 [Berliner Zeitung](https://www.berliner-zeitung.de) -
-[Bild (link to archive.is)](https://www.bild.de) -
+[Bild](https://www.bild.de) -
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -
 [Cicero](https://www.cicero.de) -
 [Der Freitag](https://www.freitag.de) -
-[Der Spiegel (link to archive.is)](https://www.spiegel.de) -
-[Der Tagesspiegel (link to archive.is)](https://www.tagesspiegel.de) -
+[Der Spiegel](https://www.spiegel.de) -
+[Der Tagesspiegel](https://www.tagesspiegel.de) -
 [Die Presse](https://www.diepresse.com) -
-[Die Welt (link to archive.is)](https://www.welt.de) -
-[Die Zeit (link to archive.is)](https://www.zeit.de) -
+[Die Welt](https://www.welt.de) -
+[Die Zeit](https://www.zeit.de) -
 [Frankfurter Allgemeine Zeitung](https://www.faz.net) -
 [Freie Presse](https://www.freiepresse.de) -
 [Jacobin Magazin](https://jacobin.de) -
@@ -624,7 +624,7 @@ Grouped in options:\
 [Salzburger Nachrichten](https://www.sn.at) -
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
-[Süddeutsche Zeitung (link to archive.is)](https://www.sueddeutsche.de) -
+[Süddeutsche Zeitung](https://www.sueddeutsche.de) -
 [Tiroler Tageszeitung](https://www.tt.com) -
 [Volksstimme](https://www.volksstimme.de) -
 [Vorarlberg Nachrichten](https://www.vn.at) -
@@ -725,6 +725,7 @@ Grouped in options:\
 [Business Insider Nederland](https://www.businessinsider.nl) -
 [De Tijd](https://www.tijd.be) -
 [Doorbraak](https://doorbraak.be) -
+[EWmagazine.nl](https://www.ewmagazine.nl) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
@@ -733,7 +734,7 @@ Grouped in options:\
 [Vrij Nederland](https://www.vn.nl)
 
 Grouped in options:\
-*Algemeen Dagblad (+ regional; link to archive.is)* sites like\
+*Algemeen Dagblad (+ regional/ADR)* sites like\
 [Algemeen Dagblad](https://www.ad.nl) -
 [BN DeStem](https://www.bndestem.nl) -
 [Brabants Dagblad](https://www.bd.nl) -

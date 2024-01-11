@@ -252,6 +252,7 @@
     "*://*.euobserver.com/*",
     "*://*.european-rubber-journal.com/*",
     "*://*.europower.no/*",
+    "*://*.ewmagazine.nl/*",
     "*://*.exame.com/*",
     "*://*.examiner.com.au/*",
     "*://*.expansion.com/*",
@@ -826,5 +827,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.0.3"
+  "version": "3.5.0.4"
 }

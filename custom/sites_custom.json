@@ -1,12 +1,17 @@
 {
   "###_remove_sites": {
-    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
+    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, dn.se, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
     "domain": "abajournal.com"
+  },
+  "Abcmais.com": {
+    "allow_cookies": 1,
+    "domain": "abcmais.com",
+    "ld_json_url": "section#section-iframe-assinante|div.degressing-opacity"
   },
   "Acadienouvelle.com": {
     "allow_cookies": 1,
@@ -147,12 +152,6 @@
     "domain": "diariodenavarra.es",
     "ld_json": "div#paywall_message|div.free-html"
   },
-  "Dn.se": {
-    "add_ext_link": "div.esi-paywall|div.article__content",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "dn.se"
-  },
   "Edweek.org": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -188,12 +187,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
     "domain": "eviemagazine.com"
-  },
-  "Ewmagazine.nl": {
-    "add_ext_link": "div.paywall|div.entry-content",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "ewmagazine.nl"
   },
   "Faithfullymagazine.com": {
     "allow_cookies": 1,

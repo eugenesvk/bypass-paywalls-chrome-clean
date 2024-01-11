@@ -24,6 +24,13 @@
     "amp_redirect": "aside.paywall",
     "upd_version": "3.4.8.1"
   },
+  "EWmagazine.nl": {
+    "domain": "ewmagazine.nl",
+    "allow_cookies": 1,
+    "add_ext_link": "div.paywall|div.entry-content",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.5.0.4"
+  },
   "Haaretz": {
     "domain": "haaretz.co.il",
     "allow_cookies": 1,
