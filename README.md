@@ -639,9 +639,6 @@ Grouped in options:\
 [Hamburger Abendblatt](https://www.abendblatt.de) -
 [Iserlohner Kreisanzeiger und Zeitung](https://www.ikz-online.de) -
 [Neue Ruhr Zeitung](https://www.nrz.de) -
-[Ostthüringer Zeitung](https://www.otz.de) -
-[Thüringer Allgemeine](https://www.thueringer-allgemeine.de) -
-[Thüringische Landeszeitung](https://www.tlz.de) -
 [Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
 [Westfalenpost](https://www.wp.de) -
 [Westfälische Rundschau](https://www.wr.de)\

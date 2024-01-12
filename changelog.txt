@@ -7,6 +7,7 @@ Add Boston Herald (MediaNews Group)
 Add EWmagazine.nl (link to archive.is)
 Add Schwarzwaelder-bote.de
 Remove LeMonde.fr (fix obsolete)
+Remove Otz.de, Thueringer-allgemeine.de & Tlz.de (Funke; fix obsolete)
 Remove Wz.de (fix obsolete)
 Fix LeParisien.fr
 Fix MediaNews Group (identify sites)

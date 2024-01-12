@@ -528,7 +528,6 @@
     "*://*.oregonlive.com/*",
     "*://*.orlandosentinel.com/*",
     "*://*.ostsee-zeitung.de/*",
-    "*://*.otz.de/*",
     "*://*.outdoorlife.com/*",
     "*://*.outlookbusiness.com/*",
     "*://*.outlookindia.com/*",
@@ -706,13 +705,11 @@
     "*://*.theweek.com/*",
     "*://*.thewest.com.au/*",
     "*://*.thewrap.com/*",
-    "*://*.thueringer-allgemeine.de/*",
     "*://*.tijd.be/*",
     "*://*.timeshighereducation.com/*",
     "*://*.timesofindia.com/*",
     "*://*.timesunion.com/*",
     "*://*.tirebusiness.com/*",
-    "*://*.tlz.de/*",
     "*://*.topagrar.at/*",
     "*://*.topagrar.com/*",
     "*://*.torontosun.com/*",
@@ -828,5 +825,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.0.4"
+  "version": "3.5.0.5"
 }
