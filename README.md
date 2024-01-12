@@ -398,6 +398,7 @@ Grouped in options:\
 [The Wichita Eagle](https://www.kansas.com) -
 [Tri-City Herald](https://www.tri-cityherald.com)\
 *MediaNews Group* sites like (opt-in to custom sites for unlisted/local sites)\
+[Boston Herald](https://www.bostonherald.com) -
 [East Bay Times](https://www.eastbaytimes.com) -
 [Orange County Register](https://www.ocregister.com) -
 [St. Paul Pioneer Press](https://www.twincities.com) -
@@ -663,8 +664,8 @@ Grouped in options:\
 *[Media Group Westfalen](https://mgw.de/portfolio/tageszeitungen)* sites like (opt-in to custom sites for unlisted)\
 [Ruhr Nachrichten](https://www.ruhrnachrichten.de)\
 *Medienholding Süd* sites like (opt-in to custom sites for unlisted)\
-[Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
 [Schwarzwälder Bote](https://www.schwarzwaelder-bote.de) -
+[Stuttgarter Nachrichten](https://www.stuttgarter-nachrichten.de) -
 [Stuttgarter Zeitung](https://www.stuttgarter-zeitung.de)\
 *[Motor Presse Stuttgart](https://www.motorpresse.de)* sites like\
 [Aerokurier](https://www.aerokurier.de) -

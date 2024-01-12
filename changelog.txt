@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Boston Herald (MediaNews Group)
 Add EWmagazine.nl (link to archive.is)
 Add Schwarzwaelder-bote.de
 Remove LeMonde.fr (fix obsolete)
@@ -33,7 +34,7 @@ Fix elDiario.es (amp-redirect)
 Fix Haaretz Group (fetch from archive.is)
 Fix Inc42 (css)
 Fix Independent.co.uk (fetch from archive.is)
-Fix PEI Media (identify site)
+Fix PEI Media (identify sites)
 Fix S&P Global (js-inline)
 Fix Sueddeutsche Zeitung (fetch from archive.is)
 Fix The Juggernaut

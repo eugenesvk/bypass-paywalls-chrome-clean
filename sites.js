@@ -1565,6 +1565,7 @@ var defaultSites = {
   "MediaNews Group": {
     domain: "###_usa_mng",
     group: [
+      "bostonherald.com",
       "denverpost.com",
       "eastbaytimes.com",
       "mercurynews.com",
