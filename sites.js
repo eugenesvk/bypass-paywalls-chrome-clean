@@ -2355,6 +2355,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.theintercept\.com\/api\/tinypass\.min\.js/
   },
+  "The Irish Examiner": {
+    domain: "irishexaminer.com",
+    allow_cookies: 1,
+    block_regex:  /\.irishexaminer\.com\/pu_examiner\/scripts\/engage/
+  },
   "The Irish Times": {
     domain: "irishtimes.com",
     allow_cookies: 1,

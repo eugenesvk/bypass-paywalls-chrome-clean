@@ -354,6 +354,7 @@
     "*://*.investorschronicle.co.uk/*",
     "*://*.investsmart.com.au/*",
     "*://*.ipolitics.ca/*",
+    "*://*.irishexaminer.com/*",
     "*://*.irishtimes.com/*",
     "*://*.italian.tech/*",
     "*://*.italiaoggi.it/*",
@@ -806,6 +807,7 @@
     "*://*.cloudfront.net/*",
     "*://*.corriereobjects.it/*",
     "*://*.emol.cl/*",
+    "*://*.flip-pay.com/*",
     "*://*.gitlab.com/magnolia1234/*",
     "*://*.hadrianpaywall.com/*",
     "*://*.kinja-static.com/*",
@@ -825,5 +827,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.0.5"
+  "version": "3.5.0.6"
 }

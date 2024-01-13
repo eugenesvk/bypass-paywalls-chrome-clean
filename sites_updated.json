@@ -96,6 +96,12 @@
     "cs_code": "[{\"cond\":\"ev-engagement\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.ev-meter-content\", \"rm_attrib\": \"style\"}, {\"cond\":\"p.first_intro_para\", \"rm_attrib\": \"class\"}]}]",
     "upd_version": "3.4.9.9"
   },
+  "The Irish Examiner": {
+    "domain": "irishexaminer.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
+    "upd_version": "3.5.0.6"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,

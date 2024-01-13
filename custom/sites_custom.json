@@ -152,6 +152,12 @@
     "domain": "diariodenavarra.es",
     "ld_json": "div#paywall_message|div.free-html"
   },
+  "Dn.no": {
+    "add_ext_link": "div#sub-paywall-container|article",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "dn.no"
+  },
   "Edweek.org": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
@@ -234,6 +240,11 @@
     "block_regex": "loader-cdn\\.azureedge\\.net",
     "domain": "gazette.com"
   },
+  "Gbnews.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.piano\\.io\\/",
+    "domain": "gbnews.com"
+  },
   "Gplanet.co.il (not lectures)": {
     "allow_cookies": 1,
     "domain": "gplanet.co.il",
@@ -281,6 +292,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
+  "Huisartsvandaag.nl": {
+    "allow_cookies": 1,
+    "domain": "huisartsvandaag.nl",
+    "ld_json_url": "div.article__paywall|div.article__body"
+  },
   "Ilglobo.com": {
     "allow_cookies": 1,
     "domain": "ilglobo.com",
@@ -305,11 +321,6 @@
     "allow_cookies": 1,
     "domain": "ipe.com",
     "useragent": "googlebot"
-  },
-  "Irishexaminer.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
-    "domain": "irishexaminer.com"
   },
   "Irishnews.com": {
     "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/(bundle|mpppaywall)\\.js",
@@ -412,6 +423,12 @@
     "allow_cookies": 1,
     "domain": "mining-journal.com",
     "ld_json": "div.article-teaser|div.article-content>p"
+  },
+  "Montelnews.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div[class*='articleText_cover_'\", \"rm_class\":\"articleText_cover__98U9v\"}]",
+    "domain": "montelnews.com",
+    "ld_json_next": "div[class^='articleTeaser_teaser_']|div[class^='articleText_mainText_']"
   },
   "Mopo.de": {
     "allow_cookies": 1,

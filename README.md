@@ -481,6 +481,7 @@ Grouped in options:\
 [The Critic](https://thecritic.co.uk) -
 [The Economist](https://www.economist.com) -
 [The Independent](https://www.independent.co.uk) -
+[The Irish Examiner](https://www.irishexaminer.com) -
 [The Irish Times](https://www.irishtimes.com) -
 [The New European](https://www.theneweuropean.co.uk) -
 [The New Statesman](https://www.newstatesman.com) -
