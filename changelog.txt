@@ -10,6 +10,7 @@ Add The Irish Examiner
 Remove LeMonde.fr (fix obsolete)
 Remove Otz.de, Thueringer-allgemeine.de & Tlz.de (Funke; fix obsolete)
 Remove Wz.de (fix obsolete)
+Fix Groupe Rossel (fetch from archive.is)
 Fix LeParisien.fr
 Fix MediaNews Group (identify sites)
 

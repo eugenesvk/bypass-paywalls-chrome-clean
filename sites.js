@@ -908,7 +908,8 @@ var defaultSites = {
       "sudinfo.be"
     ],
     allow_cookies: 1,
-    block_regex: /\.qiota\.com\//
+    block_regex: /\.qiota\.com\//,
+    cs_dompurify: 1
   },
   "Groupe Sud Ouest": {
     domain: "###_fr_groupe_sud_ouest",

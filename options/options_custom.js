@@ -167,7 +167,7 @@ function add_options() {
           sites_custom[title][elem.dataset.key] = parseInt(elem.dataset.value);
       } else if (elem.value) {
         if (elem.dataset.key === 'group')
-          elem.value = elem.value.replace(/(\s|www\.)/g, '');
+          elem.value = elem.value.replace(/,{2,}/g, ',').replace(/(\s|www\.|,$)/g, '');
         sites_custom[title][elem.dataset.key] = elem.value;
       }
     }
@@ -327,7 +327,7 @@ function renderOptions() {
     sites_updated: {}
   }, function (items) {
     var sites_custom = sortJson(items.sites_custom);
-    var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').map(x => x.trim()) : x.domain).flat();
+    var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').filter(x => x).map(x => x.trim()) : x.domain).flat();
     var sites_updated = items.sites_updated;
     var sites_updated_domains_new = Object.values(sites_updated).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
     var sitesEl = document.getElementById('bypass_sites');

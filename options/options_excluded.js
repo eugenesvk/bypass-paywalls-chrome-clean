@@ -5,7 +5,7 @@ function save_options() {
     var textareaEl = document.querySelector('#excluded_sites textarea');
     var sites_excluded = [];
     if (textareaEl.value !== '')
-        var sites_excluded = textareaEl.value.split(',').map(x => x.trim().replace('www.', ''));
+        var sites_excluded = textareaEl.value.split(',').filter(x => x).map(x => x.trim().replace('www.', ''));
     ext_api.storage.local.set({
         sites_excluded: sites_excluded
     }, function () {
