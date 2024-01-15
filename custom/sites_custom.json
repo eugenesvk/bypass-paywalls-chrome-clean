@@ -242,7 +242,7 @@
   },
   "Gbnews.com": {
     "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/",
+    "block_regex": "\\.piano\\.io",
     "domain": "gbnews.com"
   },
   "Gplanet.co.il (not lectures)": {
@@ -581,6 +581,11 @@
     "block_regex": "js\\.matheranalytics\\.com",
     "domain": "reviewjournal.com"
   },
+  "Rockdelux.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.bg-paywall\", \"rm_elem\":1, \"elems\": [{\"cond\":\"body\", \"rm_attrib\":\"class|style\"}, {\"cond\":\"div#body\", \"rm_attrib\":\"style\"}]}]",
+    "domain": "rockdelux.com"
+  },
   "Schwaebische-post.de": {
     "allow_cookies": 1,
     "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",
@@ -683,6 +688,11 @@
     "allow_cookies": 1,
     "domain": "thecourier.co.uk",
     "useragent": "googlebot"
+  },
+  "Thedailymash.co.uk": {
+    "allow_cookies": 1,
+    "block_regex": "\\.flip-pay\\.com",
+    "domain": "thedailymash.co.uk"
   },
   "Theday.com": {
     "allow_cookies": 1,

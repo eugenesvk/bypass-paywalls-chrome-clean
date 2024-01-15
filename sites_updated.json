@@ -17,6 +17,13 @@
     "remove_cookies_select_drop": ["xbc"],
     "upd_version": "3.4.8.4"
   },
+  "Die Zeit (link to archive.is)": {
+    "domain": "zeit.de",
+    "allow_cookies": 1,
+    "add_ext_link": "aside#paywall|article",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.5.1.2"
+  },
   "El Diario.es": {
     "domain": "eldiario.es",
     "allow_cookies": 1,
