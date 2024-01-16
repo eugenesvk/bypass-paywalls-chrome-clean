@@ -5,31 +5,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "Business Insider Nederland": {
-    "domain": "businessinsider.nl",
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/",
-    "ld_json_url": "div.piano-article__paywall|div.piano-article__content",
-    "upd_version": "3.4.8.4"
-  },
-  "Business Insider Polska": {
-    "domain": "businessinsider.com.pl",
-    "remove_cookies_select_drop": ["xbc"],
-    "upd_version": "3.4.8.4"
-  },
-  "Die Zeit (link to archive.is)": {
+  "Die Zeit": {
     "domain": "zeit.de",
     "allow_cookies": 1,
     "add_ext_link": "aside#paywall|article",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.1.2"
-  },
-  "El Diario.es": {
-    "domain": "eldiario.es",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "amp_redirect": "aside.paywall",
-    "upd_version": "3.4.8.1"
   },
   "EWmagazine.nl": {
     "domain": "ewmagazine.nl",
@@ -44,25 +25,6 @@
     "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.9.2"
-  },
-  "Haaretz Group": {
-    "domain": "###_il_haaretz_group",
-    "group": [
-      "haaretz.co.il",
-      "haaretz.com",
-      "themarker.com"
-    ],
-    "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.8.8"
-  },
-  "Inc42": {
-    "domain": "inc42.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.inc42\\.com\\/wp-content\\/plugins\\/leaky-paywall\\/js\\/leaky-paywall-cookie\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div.single-post-content\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.4.8.5"
   },
   "Le Parisien": {
     "domain": "leparisien.fr",
@@ -81,20 +43,6 @@
     "block_regex": "\\.piano\\.io\\/",
     "useragent": "googlebot",
     "upd_version": "3.5.0.2"
-  },
-  "Piano.io (+ TinyPass)": {
-    "domain": "piano.io",
-    "allow_cookies": 1,
-    "block_regex_general": "\\.piano\\.io\\/xbuilder\\/experience\\/execute",
-    "excluded_domains": ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"],
-    "upd_version": "3.4.8.4"
-  },
-  "S&P Global": {
-    "domain": "spglobal.com",
-    "allow_cookies": 1,
-    "block_js_inline": "\\.spglobal\\.com\\/",
-    "block_regex": "\\.spglobal\\.com\\/script\\.js",
-    "upd_version": "3.4.8.1"
   },
   "The Indian Express": {
     "domain": "indianexpress.com",
@@ -116,10 +64,11 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
-  "TownNews sites (Blox CMS)": {
-    "domain": "###_usa_townnews",
-    "block_regex_general": "\\/tncms\\/api\\/access(\\..+)?\\.js",
-    "cs_dompurify": 1,
-    "upd_version": "3.4.1.6"
+  "WirtschaftsWoche": {
+    "domain": "wiwo.de",
+    "allow_cookies": 1,
+    "add_ext_link": "div.o-paywall|article",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.5.1.3"
   }
 }

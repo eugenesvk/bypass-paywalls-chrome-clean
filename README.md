@@ -19,13 +19,13 @@ Weekly updates are released for fixes and new sites.
 
 ### Installation
 You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
-Download the [xpi-file](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi) (from latest release), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
+Download the [latest release by xpi-file](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
 Or go to Tools > Add-ons (about:addons) > Extensions > Settings/Cogwheel - Install Add-on from File\
 You can add/pin the add-on icon to the toolbar with the toolbar extensions menu (jigsaw puzzle shaped icon).\
 Custom xpi-file has host permissions for all sites.\
 Minumum browser requirement: Firefox 86+.
 
-PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addons.mozilla.org) the add-on is still signed and checked for security by Mozilla ('minor' delays can in reality be a few days or up to a week though):
+PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addons.mozilla.org) (because of DMCA Takedown Notice) the add-on is still signed and checked for security by Mozilla ('minor' delays can in reality be a few days or up to a week though):
 > Please be aware of a recent change to AMO’s review process: All extension submissions with a significantly large number of users are now subject to human review by the add-ons review team before approval. This may, occasionally, result in minor delays publishing new versions of your extension on AMO. We’ve made this change to provide Firefox users with even greater security assurances for some of AMO’s most popular extensions.
 
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
@@ -41,24 +41,12 @@ You can also check for update of site rules at startup (opt-in); only available 
 For new sites you also have to opt-in to custom sites/request host permissions for new domains (or wait for new release).
 
 ### Android
-Add-on was removed by Mozilla from [add-on store (AMO)](https://addons.mozilla.org).\
-Current installations (by custom collection in Firefox Beta/Nightly or Firefox-fork) will stay active, but with no more updates.
+Add-on was removed by Mozilla from the [add-on store (AMO)](https://addons.mozilla.org).
 
-[Firefox Beta 122+](https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta) and [Firefox Nightly 122+](https://play.google.com/store/apps/details?id=org.mozilla.fenix) can still install/sideload a xpi-file (automatic updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
+With Firefox 122+ you can still install/sideload this add-on by [xpi-file of latest release](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi) (automatic add-on updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
 
-Or use the Firefox-fork [Iceraven](https://github.com/fork-maintainers/iceraven-browser) v2.13.2+ (manual updates).\
+Or use the Firefox-fork [Iceraven](https://github.com/fork-maintainers/iceraven-browser) v2.13.2+ (manual add-on updates).\
 You can install/update Iceraven manually or use the app [FFUpdater](https://github.com/Tobi823/ffupdater)
-
-The experimental Mozac/GeckoView-based browser [SmartCookieWeb-Preview](https://github.com/CookieJarApps/SmartCookieWeb-Preview/releases) can also install/sideload a xpi-file by url (Settings > Advanced settings > Sideload XPI).
-
-There is still an elaborate workaround for regular Firefox (or Beta/fork) though:
-* install an old version of Firefox (like v68.11.0 from [archive.mozilla.org](https://archive.mozilla.org/pub/mobile/releases/68.11.0/) or [apkmirror.com](https://www.apkmirror.com/apk/mozilla/firefox/firefox-68-11-0-release)); first you have to remove your current Firefox app.\
-Specifically for the add-on you can also use Firefox Beta or a Firefox-fork like [Fennec F-Droid](https://f-droid.org/packages/org.mozilla.fennec_fdroid) where you can [set a custom add-on collection](https://blog.mozilla.org/addons/2020/09/29/expanded-extension-support-in-firefox-for-android-nightly) (for amo-listed add-ons); again first install an old version of [Firefox Beta v68.7](https://www.apkmirror.com/apk/mozilla/firefox-beta/firefox-beta-68-7-release) or [Fennec F-droid  v68.11.0](https://www.apkmirror.com/apk/mozilla/fennec-f-droid/fennec-f-droid-68-11-0-release)
-* download add-on's xpi-file (custom version has by default host permissions for all sites) from [releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases) and install/open in Firefox (from downloads)
-* now you can update Firefox to the latest version
-* add-on will stay active & automatically updates to the latest version
-
-Or install a [cloned amo-version](https://www.google.com/search?q=bypass+paywalls+clean+addons.mozilla.org+-lee) in Firefox for Android 120+.
 
 Or switch to [Kiwi browser (Chromium)](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) or use the [adblocker filter/userscripts](https://gitlab.com/magnolia1234/bypass-paywalls-clean-filters) (much less supported sites).
 
@@ -632,7 +620,8 @@ Grouped in options:\
 [Vorarlberg Nachrichten](https://www.vn.at) -
 [Vorarlberg Online](https://www.vol.at) -
 [Weltkunst](https://www.weltkunst.de) -
-[Weser-Kurier](https://www.weser-kurier.de)
+[Weser-Kurier](https://www.weser-kurier.de) -
+[WirtschaftsWoche](https://www.wiwo.de)
 
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
