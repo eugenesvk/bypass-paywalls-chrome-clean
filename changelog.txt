@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Wiwo.de (fetch from archive.is)
+Remove Franc-Tireur.fr (fix obsolete)
 Fix Independent.co.uk (premium images)
 Fix Zeit.de (bug; update rules)
 

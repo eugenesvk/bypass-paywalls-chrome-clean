@@ -29,7 +29,7 @@ PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addon
 > Please be aware of a recent change to AMO’s review process: All extension submissions with a significantly large number of users are now subject to human review by the add-ons review team before approval. This may, occasionally, result in minor delays publishing new versions of your extension on AMO. We’ve made this change to provide Firefox users with even greater security assurances for some of AMO’s most popular extensions.
 
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
-Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder.
+Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder).
 
 By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you've added yourself (or click *clear cookies* (BPC-icon) to ask for host permission for current site).\
 You can also install the custom add-on version (with host permissions for all sites).
@@ -506,7 +506,6 @@ Grouped in options:\
 [Cosmopolitan](https://www.cosmopolitan.fr) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
-[Franc-Tireur](https://www.franc-tireur.fr) -
 [L'Écho](https://lecho.be) -
 [L'Express](https://www.lexpress.fr) -
 [L'Humanité](https://www.humanite.fr) -

@@ -1756,11 +1756,6 @@ else if (matchDomain(fr_groupe_nice_matin_domains)) {
   hideDOMElement(...ads);
 }
 
-else if (matchDomain('franc-tireur.fr')) {
-  let paywall = document.querySelector('.paywall');
-  removeDOMElement(paywall);
-}
-
 else if (matchDomain('humanite.fr')) {
   if (window.location.search.startsWith('?amp')) {
     let qiota_script = document.querySelector('amp-script[src^="https://www.qiota.com/"]');
@@ -1848,7 +1843,7 @@ else if (matchDomain('legrandcontinent.eu')) {
 else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
   let poool_banners = document.querySelectorAll('#poool-container, #poool-widget-content, #poool-widget');
   let forbidden = document.querySelector('.forbidden');
-  let ads = document.querySelectorAll('div[class^="lmn-"]');
+  let ads = document.querySelectorAll('div[class^="lmn-"], div.premium-hidden, div.p-aside--placeholder');
   hideDOMElement(...poool_banners, forbidden, ...ads);
   let bottom_hide = document.querySelector('.cnt[data-poool-mode="hide"]');
   if (bottom_hide) {

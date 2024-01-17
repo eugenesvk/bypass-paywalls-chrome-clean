@@ -743,11 +743,6 @@ var defaultSites = {
     domain: "foxnews.com",
     allow_cookies: 1
   },
-  "Franc-Tireur": {
-    domain: "franc-tireur.fr",
-    allow_cookies: 1,
-    block_regex: /\.poool\.fr\//
-  },
   "Frankfurter Allgemeine Zeitung": {
     domain: "faz.net",
     allow_cookies: 1
@@ -2269,7 +2264,7 @@ var defaultSites = {
     block_regex: /(\.dallasnews\.com\/script\.js|js\.matheranalytics\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
-  "The Diplomat (refresh magazine)": {
+  "The Diplomat": {
     domain: "thediplomat.com",
     useragent: "facebookbot"
   },
@@ -2296,6 +2291,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /subs\.(theepochtimes\.com|epochbase\.(com|eu))\/rules\/get/,
+    cs_block: 1,
     exception: [{
         domain: "epoch.org.il",
         allow_cookies: 1,
@@ -2950,4 +2946,4 @@ var fr_groupe_ebra_nofix_domains = ['bienpublic.com', 'dna.fr', 'estrepublicain.
 var fr_indigo_nofix_domains = ['africaintelligence.com', 'africaintelligence.fr', 'glitz.paris', 'intelligenceonline.com', 'intelligenceonline.fr', 'lalettre.fr'];
 var it_gedi_nofix_domains = ['gelocal.it', 'limesonline.com'];
 var nl_mediahuis_region_nofix_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
-var nofix_sites = ['11freunde.de', 'aamulehti.fi', 'aftenposten.no', 'aftonbladet.se', 'allgaeuer-zeitung.de', 'asahi.com', 'asiatimes.com', 'autosport.com', 'aviationweek.com', 'badische-zeitung.de', 'bhaskar.com', 'bloomberglaw.com', 'bloombergtax.com', 'bnef.com', 'bnn.de', 'borsen.dk', 'businessinsider.de', 'businessinsider.jp', 'businesslive.co.za', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'chegg.com', 'codesports.com.au', 'compactmag.com', 'courrierinternational.com', 'coursehero.com',  'deutsche-wirtschafts-nachrichten.de', 'die-glocke.de', 'dn.no', 'dn.se', 'elordenmundial.com', 'entrepreneur.com', 'epw.in', 'expresso.pt', 'falter.at', 'finance.si', 'ftchinese.com', 'ftchineselive.com', 'gamestar.de', 'geo.de', 'golem.de', 'gp.se', 'handelsblatt.com', 'hbrarabic.com', 'hbrchina.org', 'hbrfrance.fr', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'information.dk', 'investors.com', 'iltalehti.fi', 'jacobin.com', 'jeuneafrique.com', 'jungefreiheit.de', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.co.uk', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lemonde.fr', 'lequipe.fr', 'lesjours.fr', 'letemps.ch', 'liberation.fr', 'limburger.nl', 'main-echo.de', 'mainpost.de', 'manager-magazin.de', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'money.it', 'moneycontrol.com', 'moodys.com', 'morningstar.com', 'motorsport.com', 'moz.de', 'nachrichten.at', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'news24.com', 'newslaundry.com', 'nn.de', 'nwzonline.de', 'observador.pt', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'quillette.com', 'rbc.ru', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'saechsische.de', 'sciencedirect.com', 'springer.com', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'streetinsider.com', 'substack.com', 'suedkurier.de', 'swp.de', 'taxation.co.uk', 'taxjournal.com', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'theinitium.com', 'themorningcontext.com', 'theparisreview.org', 'thestar.com.my', 'thewirechina.com', 'weltwoche.ch', 'weltwoche.de', 'wissenschaft.de', 'worldpoliticsreview.com', 'wz.de', 'ynet.co.il'].concat(be_mediahuis_nofix_domains, de_funke_medien_nofix_domains, de_rp_aachen_medien_nofix_domains, de_westfalen_medien_nofix_domains, fr_groupe_ebra_nofix_domains, fr_indigo_nofix_domains, it_gedi_nofix_domains, nl_mediahuis_region_nofix_domains);
+var nofix_sites = ['11freunde.de', 'aamulehti.fi', 'aftenposten.no', 'aftonbladet.se', 'allgaeuer-zeitung.de', 'asahi.com', 'asiatimes.com', 'autosport.com', 'aviationweek.com', 'badische-zeitung.de', 'bhaskar.com', 'bloomberglaw.com', 'bloombergtax.com', 'bnef.com', 'bnn.de', 'borsen.dk', 'businessinsider.de', 'businessinsider.jp', 'businesslive.co.za', 'businesstimes.com.sg', 'caixin.com', 'caixinglobal.com', 'caravanmagazine.in', 'catalyst-journal.com', 'chegg.com', 'codesports.com.au', 'compactmag.com', 'courrierinternational.com', 'coursehero.com',  'deutsche-wirtschafts-nachrichten.de', 'die-glocke.de', 'dn.no', 'dn.se', 'elordenmundial.com', 'entrepreneur.com', 'epw.in', 'expresso.pt', 'falter.at', 'finance.si', 'franc-tireur.fr', 'ftchinese.com', 'ftchineselive.com', 'gamestar.de', 'geo.de', 'golem.de', 'gp.se', 'handelsblatt.com', 'hbrarabic.com', 'hbrchina.org', 'hbrfrance.fr', 'heise.de', 'hln.be', 'hs.fi', 'ilsole24ore.com', 'information.dk', 'investors.com', 'iltalehti.fi', 'jacobin.com', 'jeuneafrique.com', 'jungefreiheit.de', 'kleinezeitung.at', 'lavie.fr', 'lavozdegalicia.es', 'law360.co.uk', 'law360.com', 'le1hebdo.fr', 'leconomiste.com', 'lefilmfrancais.com', 'lemonde.fr', 'lequipe.fr', 'lesjours.fr', 'letemps.ch', 'liberation.fr', 'limburger.nl', 'main-echo.de', 'mainpost.de', 'manager-magazin.de', 'medianama.com', 'mediapart.fr', 'milanofinanza.it', 'mittelbayerische.de', 'monde-diplomatique.fr', 'mondediplo.com', 'money.it', 'moneycontrol.com', 'moodys.com', 'morningstar.com', 'motorsport.com', 'moz.de', 'nachrichten.at', 'nationaljournal.com', 'nature.com', 'nbr.co.nz', 'news24.com', 'newslaundry.com', 'nn.de', 'nwzonline.de', 'observador.pt', 'ouest-france.fr', 'philonomist.com', 'pnp.de', 'politicopro.com', 'politiken.dk', 'pressreader.com', 'publico.pt', 'quillette.com', 'rbc.ru', 'republic.ru', 'rheinpfalz.de', 'risk.net', 'rnz.de', 'saechsische.de', 'sciencedirect.com', 'springer.com', 'statnews.com', 'stern.de', 'stimme.de', 'straitstimes.com', 'stratfor.com', 'streetinsider.com', 'substack.com', 'suedkurier.de', 'swp.de', 'taxation.co.uk', 'taxjournal.com', 'techcrunch.com', 'the-ken.com', 'theinformation.com', 'theinitium.com', 'themorningcontext.com', 'theparisreview.org', 'thestar.com.my', 'thewirechina.com', 'weltwoche.ch', 'weltwoche.de', 'wissenschaft.de', 'worldpoliticsreview.com', 'wz.de', 'ynet.co.il'].concat(be_mediahuis_nofix_domains, de_funke_medien_nofix_domains, de_rp_aachen_medien_nofix_domains, de_westfalen_medien_nofix_domains, fr_groupe_ebra_nofix_domains, fr_indigo_nofix_domains, it_gedi_nofix_domains, nl_mediahuis_region_nofix_domains);
