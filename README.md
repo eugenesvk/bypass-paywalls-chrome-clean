@@ -739,6 +739,12 @@ Grouped in options:\
 [Margriet](https://www.margriet.nl) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
+*Mediahuis Nederland Regional* sites like\
+[Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
+[Haarlems Dagblad](https://www.haarlemsdagblad.nl) -
+[Leidsch Dagblad](https://www.leidschdagblad.nl) -
+[IJmuider Courant](https://www.ijmuidercourant.nl) -
+[De Gooi- en Eemlander](https://www.gooieneemlander.nl)\
 *Mediahuis Noord* sites like (opt-in to custom sites for unlisted)\
 [Dagblad van het Noorden](https://www.dvhn.nl) -
 [Leeuwarder Courant](https://www.lc.nl)\

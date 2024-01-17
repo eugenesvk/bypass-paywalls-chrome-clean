@@ -295,12 +295,14 @@
     "*://*.globo.com/*",
     "*://*.goldcoastbulletin.com.au/*",
     "*://*.goodhousekeeping.com/*",
+    "*://*.gooieneemlander.nl/*",
     "*://*.gq.com/*",
     "*://*.granta.com/*",
     "*://*.groene.nl/*",
     "*://*.grubstreet.com/*",
     "*://*.haaretz.co.il/*",
     "*://*.haaretz.com/*",
+    "*://*.haarlemsdagblad.nl/*",
     "*://*.handelszeitung.ch/*",
     "*://*.harpers.org/*",
     "*://*.harpersbazaar.com/*",
@@ -318,6 +320,7 @@
     "*://*.humanite.fr/*",
     "*://*.humo.be/*",
     "*://*.ideal.es/*",
+    "*://*.ijmuidercourant.nl/*",
     "*://*.ikz-online.de/*",
     "*://*.ilfattoquotidiano.it/*",
     "*://*.ilfoglio.it/*",
@@ -416,6 +419,7 @@
     "*://*.lefigaro.fr/*",
     "*://*.legrandcontinent.eu/*",
     "*://*.lehighvalleylive.com/*",
+    "*://*.leidschdagblad.nl/*",
     "*://*.lejdd.fr/*",
     "*://*.lemagit.fr/*",
     "*://*.lenouveleconomiste.fr/*",
@@ -500,6 +504,7 @@
     "*://*.nikkei.com/*",
     "*://*.nj.com/*",
     "*://*.nola.com/*",
+    "*://*.noordhollandsdagblad.nl/*",
     "*://*.nordlittoral.fr/*",
     "*://*.northerndailyleader.com.au/*",
     "*://*.northjersey.com/*",
@@ -829,5 +834,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.1.3"
+  "version": "3.5.1.4"
 }

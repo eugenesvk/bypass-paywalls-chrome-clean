@@ -32,6 +32,20 @@
     "useragent": "googlebot",
     "upd_version": "3.5.0.3"
   },
+  "Mediahuis Nederland Regional": {
+    "domain": "###_nl_mediahuis_region",
+    "group": [
+      "gooieneemlander.nl",
+      "haarlemsdagblad.nl",
+      "ijmuidercourant.nl",
+      "leidschdagblad.nl",
+      "noordhollandsdagblad.nl"
+    ],
+    "allow_cookies": 1,
+    "add_ext_link": "div[data-auth-root='paywall']|article",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.5.1.4"
+  },
   "Medienholding Süd": {
     "domain": "###_de_mhs",
     "group": [
