@@ -26,6 +26,14 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.9.2"
   },
+  "Het Laatste Nieuws": {
+    "domain": "hln.be",
+    "allow_cookies": 1,
+    "add_ext_link": "div#remaining-paid-content|div.article__body",
+    "add_ext_link_type": "archive.is",
+    "block_regex": "temptation\\.hln\\.be\\/temptation\\.js",
+    "upd_version": "3.5.1.5"
+  },
   "Le Parisien": {
     "domain": "leparisien.fr",
     "allow_cookies": 1,

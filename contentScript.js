@@ -10,6 +10,7 @@ var dompurify_options = {ADD_TAGS: ['amp-img', 'iframe', 'list'], ADD_ATTR: ['al
 
 var ar_grupo_clarin_domains = ['clarin.com', 'lavoz.com.ar', 'losandes.com.ar'];
 var be_groupe_ipm_domains = ['dhnet.be', 'lalibre.be', 'lavenir.net'];
+var be_mediahuis_domains = ['hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
@@ -52,7 +53,7 @@ var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
 // clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'crikey.com.au', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'inews.co.uk', 'janes.com', 'jazziz.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'techinasia.com', 'telegraph.co.uk', 'tes.com', 'the-tls.co.uk', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tt.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'weser-kurier.de', 'wsj.com'].concat(be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
+var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'crikey.com.au', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'inews.co.uk', 'janes.com', 'jazziz.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'limburger.nl', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'techinasia.com', 'telegraph.co.uk', 'tes.com', 'the-tls.co.uk', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tt.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'weser-kurier.de', 'wsj.com'].concat(be_mediahuis_domains, be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
 if (!matchDomain(arr_localstorage_hold)) {
   window.localStorage.clear();
 }
@@ -2363,6 +2364,34 @@ if (matchDomain(be_groupe_ipm_domains)) {
   hideDOMElement(...ads);
 }
 
+else if (matchDomain(be_mediahuis_domains.concat(['limburger.nl']))) {
+  window.setTimeout(function () {
+    let paywall_sel = 'div[data-cj-root="subscription-wall"]';
+    let paywall = document.querySelector(paywall_sel);
+    if (paywall) {
+      let article_sel = 'div[data-fragment-name="articleDetail"]';
+      let article = document.querySelector(article_sel);
+      if (article) {
+        let article_new = document.createElement('div');
+        article_new.id = 'bpc_fetch';
+        article.appendChild(article_new);
+        let url = window.location.href;
+        getArchive(url, paywall_sel, '', 'div#bpc_fetch', '', 'div[data-auth-premium-content]', article_sel);
+      }
+    }
+    let button_close = document.querySelector('span[data-testid="button-close"]');
+    if (button_close)
+      button_close.click();
+    let banners = document.querySelectorAll('div.paywall--titel');
+    hideDOMElement(...banners);
+  }, 1500);
+  window.setTimeout(function () {
+    let overlay = document.querySelector('body.didomi-popup-open');
+    if (overlay)
+      overlay.classList.remove('didomi-popup-open');
+  }, 3000);
+}
+
 else if (matchDomain('businessam.be')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall && dompurify_loaded) {
@@ -2493,7 +2522,7 @@ else if (matchDomain(['lc.nl', 'dvhn.nl']) || document.querySelector('head > lin
   hideDOMElement(...ads);
 }
 
-else if (matchDomain(nl_dpg_adr_domains)) {
+else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {
   let url = window.location.href;
   getArchive(url, 'div#remaining-paid-content[data-reduced="true"]', '', 'div.article__body', '', 'div#remaining-paid-content');
 }
@@ -5900,7 +5929,10 @@ function replaceTextFail(url, article, proxy, text_fail) {
         text_fail_div.appendChild(a_link);
       }
     }
-    article.firstChild.before(text_fail_div);
+    if (article.firstChild)
+      article.firstChild.before(text_fail_div);
+    else
+      article.appendChild(text_fail_div);
   }
 }
 

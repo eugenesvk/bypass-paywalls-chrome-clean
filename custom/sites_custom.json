@@ -90,6 +90,11 @@
     "domain": "businessnews.com.au",
     "useragent": "googlebot"
   },
+  "Cafe.com (articles only)": {
+    "allow_cookies": 1,
+    "domain": "cafe.com",
+    "ld_json_url": "div.login-module|div.article-bottom-content-text-content"
+  },
   "Capital.bg": {
     "allow_cookies": 1,
     "domain": "capital.bg",
@@ -607,6 +612,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "sltrib.com"
   },
+  "Solarserver.de": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.paywall-box\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.paywall\", \"rm_attrib\":\"style\"}, {\"cond\":\"div.paywall-blurred\", \"rm_attrib\":\"class\"}]}]",
+    "domain": "solarserver.de"
+  },
   "Spectator.org": {
     "allow_cookies": 1,
     "block_regex": "\\/spectator\\.org\\/.+\\/evolok",
@@ -637,6 +647,11 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div.c-memberships-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"body.access-restricted\",\"rm_class\":\"access-restricted\"}]}]",
     "domain": "stateaffairs.com"
+  },
+  "Strategies.fr": {
+    "allow_cookies": 1,
+    "block_regex": "\\.qiota\\.com",
+    "domain": "strategies.fr"
   },
   "Stripes.com": {
     "allow_cookies": 1,

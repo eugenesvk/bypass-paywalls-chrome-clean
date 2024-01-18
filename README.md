@@ -710,12 +710,14 @@ Grouped in options:\
 ##### Netherlands/Flanders
 [Business AM](https://businessam.be) -
 [Business Insider Nederland](https://www.businessinsider.nl) -
+[De Limburger](https://www.limburger.nl) -
 [De Tijd](https://www.tijd.be) -
 [Doorbraak](https://doorbraak.be) -
 [EWmagazine.nl](https://www.ewmagazine.nl) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
+[Het Laatste Nieuws](https://www.hln.be) -
 [NRC Handelsblad](https://www.nrc.nl) -
 [Telegraaf](https://www.telegraaf.nl) -
 [Vrij Nederland](https://www.vn.nl)
@@ -739,6 +741,10 @@ Grouped in options:\
 [Margriet](https://www.margriet.nl) -
 [Parool](https://www.parool.nl) -
 [Trouw](https://www.trouw.nl)\
+*Mediahuis België* sites like\
+[De Standaard](https://www.standaard.be) -
+[Het Belang van Limburg](https://www.hbvl.be) -
+[Het Nieuwsblad](https://www.nieuwsblad.be)\
 *Mediahuis Nederland Regional* sites like\
 [Noordhollands Dagblad](https://www.noordhollandsdagblad.nl) -
 [Haarlems Dagblad](https://www.haarlemsdagblad.nl) -

@@ -308,11 +308,13 @@
     "*://*.harpersbazaar.com/*",
     "*://*.haz.de/*",
     "*://*.hbr.org/*",
+    "*://*.hbvl.be/*",
     "*://*.heraldsun.com.au/*",
     "*://*.hilltimes.com/*",
     "*://*.hindustantimes.com/*",
     "*://*.hindutamil.in/*",
     "*://*.historyextra.com/*",
+    "*://*.hln.be/*",
     "*://*.housebeautiful.com/*",
     "*://*.houstonchronicle.com/*",
     "*://*.hoy.es/*",
@@ -439,6 +441,7 @@
     "*://*.libelle.be/*",
     "*://*.libelle.nl/*",
     "*://*.liberation-champagne.fr/*",
+    "*://*.limburger.nl/*",
     "*://*.lindependant.fr/*",
     "*://*.linforme.com/*",
     "*://*.literaryreview.co.uk/*",
@@ -501,6 +504,7 @@
     "*://*.nhregister.com/*",
     "*://*.niagarafallsreview.ca/*",
     "*://*.nicematin.com/*",
+    "*://*.nieuwsblad.be/*",
     "*://*.nikkei.com/*",
     "*://*.nj.com/*",
     "*://*.nola.com/*",
@@ -624,6 +628,7 @@
     "*://*.spiegel.de/*",
     "*://*.sportico.com/*",
     "*://*.springermedizin.de/*",
+    "*://*.standaard.be/*",
     "*://*.standard.co.uk/*",
     "*://*.standard.net.au/*",
     "*://*.star-telegram.com/*",
@@ -834,5 +839,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.1.4"
+  "version": "3.5.1.5"
 }
