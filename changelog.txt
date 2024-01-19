@@ -10,6 +10,7 @@ Add Mediahuis Nederland Regional (fetch from archive.is)
 Add Wiwo.de (fetch from archive.is)
 Remove Franc-Tireur.fr (fix obsolete)
 Fix Independent.co.uk (premium images)
+Fix Times Higher Education (books)
 Fix Zeit.de (bug; update rules)
 
 * v3.5.1.0 (2024-01-14)

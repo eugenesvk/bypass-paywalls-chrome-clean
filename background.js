@@ -41,7 +41,7 @@ var restrictions = {
   'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
-  'timeshighereducation.com': /\.timeshighereducation\.com\/((features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/,
+  'timeshighereducation.com': /\.timeshighereducation\.com\/((books|features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/,
   'uol.com.br': /^((?!(conta|email|piaui\.folha)\.uol\.com\.br).)*$/,
 }
 
