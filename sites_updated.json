@@ -26,6 +26,32 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.4.9.2"
   },
+  "Hearst Communications magazines": {
+    "domain": "###_usa_hearst_comm_mag",
+    "group": [
+      "bicycling.com",
+      "cosmopolitan.com",
+      "countryliving.com",
+      "delish.com",
+      "elle.com",
+      "elledecor.com",
+      "esquire.com",
+      "goodhousekeeping.com",
+      "harpersbazaar.com",
+      "housebeautiful.com",
+      "menshealth.com",
+      "oprahdaily.com",
+      "popularmechanics.com",
+      "prevention.com",
+      "roadandtrack.com",
+      "runnersworld.com",
+      "townandcountrymag.com",
+      "womenshealthmag.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.com\\/_assets\\/jam\\/|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
+    "upd_version": "3.5.1.5"
+  },
   "Het Laatste Nieuws": {
     "domain": "hln.be",
     "allow_cookies": 1,

@@ -553,6 +553,12 @@
     "domain": "pressandjournal.co.uk",
     "useragent": "googlebot"
   },
+  "Publishersweekly.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.omeda\\.com",
+    "cs_code": "[{\"cond\":\"div#content div.loggedOutOnly\", \"rm_elem\":1}, {\"cond\":\"div#content div.loggedInOnly\", \"rm_attrib\": \"class|style\"}]",
+    "domain": "publishersweekly.com"
+  },
   "Pv-digest.de": {
     "allow_cookies": 1,
     "domain": "pv-digest.de",

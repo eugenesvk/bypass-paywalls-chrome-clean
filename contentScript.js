@@ -1181,6 +1181,8 @@ else if (matchDomain('profil.at')) {
     let fade = document.querySelector('div#cfs-paywall-container');
     hideDOMElement(fade);
   }
+  let overlay = document.querySelector('div.consentOverlay');
+  hideDOMElement(overlay);
 }
 
 else if (matchDomain('schwaebische.de')) {
@@ -4086,6 +4088,11 @@ else if (matchDomain('inkl.com')) {
       }
     }
   }
+}
+
+else if (matchDomain('insidehighered.com')) {
+  let ads = document.querySelectorAll('div[id^="block-dfptag"], div.wp-block-ihe-ad, section.section-ad_slot, div#roadblock');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('interestingengineering.com')) {

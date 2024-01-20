@@ -1128,7 +1128,7 @@ var defaultSites = {
       "womenshealthmag.com"
     ],
     allow_cookies: 1,
-    block_regex: /(\.com\/_assets\/jam\/journey-data\.js|\.ensighten\.com\/.+\/Bootstrap\.js)/
+    block_regex: /(\.com\/_assets\/jam\/|\.ensighten\.com\/.+\/Bootstrap\.js)/
   },
   "Het Laatste Nieuws (fetch from archive.is)": {
     domain: "hln.be",
