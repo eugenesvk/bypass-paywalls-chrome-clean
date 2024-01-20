@@ -11,6 +11,7 @@ Add Wiwo.de (fetch from archive.is)
 Remove Franc-Tireur.fr (fix obsolete)
 Fix Hearst magazines (js)
 Fix Independent.co.uk (premium images)
+Fix The (New Orleans) Advocate (gambit)
 Fix Times Higher Education (books)
 Fix Zeit.de (bug; update rules)
 

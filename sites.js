@@ -2206,7 +2206,7 @@ var defaultSites = {
       "theadvocate.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.{domain}\\/(script||.+\\/tncms\\/user\\/user)\\.js|js\\.matheranalytics\\.com\\/)"
+    block_regex: "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)"
   },
   "The American Conservative": {
     domain: "theamericanconservative.com",
