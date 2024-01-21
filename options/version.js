@@ -11,11 +11,13 @@ if (version_span_new)
   version_span_new.setAttribute('style', 'font-weight: bold;');
 var anchorEl;
 
-function show_update(ext_version_new, check = true) {
+function show_update(ext_version_new, ext_upd_version_new = '', check = true) {
   if (ext_version_new) {
     ext_api.management.getSelf(function (result) {
       var installType = result.installType;
       var version_len = (installType === 'development') ? 7 : 5;
+      if (version_len === 5 && ext_upd_version_new && ext_upd_version_new < ext_version_new)
+        ext_version_new = ext_upd_version_new;
       if (ext_version_new.substring(0, version_len) > manifestData.version.substring(0, version_len)) {
         ext_api.storage.local.set({
           ext_version_new: ext_version_new
@@ -67,7 +69,22 @@ function check_version_update(ext_version_new, popup) {
       if (response.ok) {
         response.json().then(json => {
           var version_new = json['version'];
-          show_update(version_new);
+          if (manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url) {
+            let json_upd_version_new = manifestData.browser_specific_settings.gecko.update_url;
+            fetch(json_upd_version_new)
+            .then(response => {
+              if (response.ok) {
+                response.json().then(upd_json => {
+                  let ext_id = manifestData.browser_specific_settings.gecko.id;
+                  let upd_version_new = upd_json.addons[ext_id].updates[0].version;
+                  show_update(version_new, upd_version_new);
+                })
+              }
+            }).catch(function (err) {
+              false;
+            });
+          } else
+            show_update(version_new);
         })
       } else {
         show_update(ext_version_new);
@@ -76,7 +93,7 @@ function check_version_update(ext_version_new, popup) {
       false;
     });
   } else
-    show_update(ext_version_new, false);
+    show_update(ext_version_new, '', false);
 }
 
 ext_api.storage.local.get({optInUpdate: true, ext_version_new: false}, function (result) {

@@ -1299,11 +1299,13 @@ function updateBadge(activeTab) {
       ext_api.action.setBadgeText({text: badgeText});
 }
 
-function setExtVersionNew(check_ext_version_new) {
+function setExtVersionNew(check_ext_version_new, check_ext_upd_version_new = '') {
   ext_api.management.getSelf(function (result) {
     var installType = result.installType;
     var ext_version_len = (installType === 'development') ? 7 : 5;
     ext_version_new = check_ext_version_new;
+    if (ext_version_len === 5 && check_ext_upd_version_new && check_ext_upd_version_new < check_ext_version_new)
+      ext_version_new = check_ext_upd_version_new;
     if (ext_version_new.substring(0, ext_version_len) <= ext_version.substring(0, ext_version_len))
       ext_version_new = '';
     ext_api.storage.local.set({
@@ -1320,7 +1322,22 @@ function check_update() {
     if (response.ok) {
       response.json().then(json => {
         let json_ext_version_new = json['version'];
-        setExtVersionNew(json_ext_version_new);
+        if (manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url) {
+          let json_upd_version_new = manifestData.browser_specific_settings.gecko.update_url;
+          fetch(json_upd_version_new)
+          .then(response => {
+            if (response.ok) {
+              response.json().then(upd_json => {
+                let ext_id = manifestData.browser_specific_settings.gecko.id;
+                let json_ext_upd_version_new = upd_json.addons[ext_id].updates[0].version;
+				setExtVersionNew(json_ext_version_new, json_ext_upd_version_new);
+              })
+            }
+          }).catch(function (err) {
+            false;
+          });
+        } else
+          setExtVersionNew(json_ext_version_new);
       })
     }
   }).catch(function (err) {
@@ -1675,8 +1692,8 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-function stripQueryStringAndHashFromPath(url) {
-  return url.split("?")[0].split("#")[0];
+function stripUrl(url) {
+  return url.split(/[\?#]/)[0];
 }
 
 function decode_utf8(str) {

@@ -640,6 +640,7 @@
     "*://*.stereogum.com/*",
     "*://*.stltoday.com/*",
     "*://*.stocknews.com/*",
+    "*://*.stratfor.com/*",
     "*://*.studocu.com/*",
     "*://*.stuttgarter-nachrichten.de/*",
     "*://*.stuttgarter-zeitung.de/*",
@@ -839,5 +840,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.1.7"
+  "version": "3.5.1.8"
 }

@@ -98,6 +98,12 @@
     "useragent": "googlebot",
     "upd_version": "3.5.0.2"
   },
+  "Stratfor": {
+    "domain": "stratfor.com",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "upd_version": "3.5.1.8"
+  },
   "The (New Orleans) Advocate": {
     "domain": "###_usa_theadvocate",
     "group": [

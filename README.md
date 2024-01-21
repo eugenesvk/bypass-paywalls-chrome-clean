@@ -218,6 +218,7 @@ Grouped in options:\
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [Stereogum](https://www.stereogum.com) -
+[Stratfor](https://stratfor.com) -
 [Texas Monthly](https://www.texasmonthly.com) -
 [The American Conservative](https://www.theamericanconservative.com) -
 [The American Interest](https://www.the-american-interest.com) -
