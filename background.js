@@ -1061,7 +1061,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   var mobile = details.requestHeaders.filter(x => x.name.toLowerCase() === "user-agent" && x.value.toLowerCase().includes("mobile")).length;
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain(es_grupo_vocento_domains, details.url) && mobile) &&
-    !(matchUrlDomain('barrons.com', details.url) && enabledSites.includes('#options_disable_gb_barrons')) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
     !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || !mobile || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
     !(matchUrlDomain('nytimes.com', details.url) && details.url.includes('.nytimes.com/live/')) &&

@@ -1,4 +1,10 @@
 {
+  "Barron's": {
+    "domain": "barrons.com",
+    "allow_cookies": 1,
+    "block_regex": "(cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "upd_version": "3.5.1.7"
+  },
   "Bloomberg": {
     "domain": "bloomberg.com",
     "allow_cookies": 1,
@@ -100,7 +106,7 @@
     ],
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)",
-    "upd_version": "3.5.1.6"
+    "upd_version": "3.5.1.7"
   },
   "The Indian Express": {
     "domain": "indianexpress.com",

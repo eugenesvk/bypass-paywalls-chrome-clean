@@ -3467,7 +3467,7 @@ else if (matchDomain('barrons.com')) {
     let ads = document.querySelectorAll('div[class*="_AdWrapper-"], div[class*="-adWrapper-"]');
     hideDOMElement(...ads);
   } else {
-    amp_unhide_subscr_section('.wsj-ad, amp-ad');
+    amp_unhide_subscr_section('.wsj-ad, amp-ad', false);
   }
 }
 

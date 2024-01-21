@@ -214,11 +214,10 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Barron's (when blocked disable Googlebot in BPC-settings)": {
+  "Barron's": {
     domain: "barrons.com",
     allow_cookies: 1,
-    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
-    useragent: "googlebot"
+    block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "BBC History Extra": {
     domain: "historyextra.com",
@@ -2885,9 +2884,6 @@ var defaultSites = {
   },
   "Australia News Corp - no Googlebot (blocked; only disabled when amp-fix)": {
     domain: "#options_disable_gb_au_news_corp"
-  },
-  "Barron's - no Googlebot (http error 500)": {
-    domain: "#options_disable_gb_barrons"
   },
 }
 
