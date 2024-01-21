@@ -929,8 +929,7 @@ var defaultSites = {
   },
   "Grupo Abril": {
     domain: "abril.com.br",
-    allow_cookies: 1,
-    block_js_inline: /\.abril\.com\.br\/.+\/(\w+\-+){3,}/
+    allow_cookies: 1
   },
   "Grupo Clarín": {
     domain: "###_ar_grupo_clarin",

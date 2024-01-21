@@ -6,7 +6,7 @@ var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'm
 
 if (hostname.match(/\.de$/)) {
 
-if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndtech.de/"]')) {
+if (matchDomain(de_madsack_domains) || document.querySelector('head > link[href*=".rndtech.de/"]')) {
   function madsack_main() {
     for (let n = 0; n < 10; n++) {
       window.setTimeout(function () {
@@ -19,6 +19,17 @@ if (matchDomain(de_madsack_domains) || document.querySelector('link[href*=".rndt
   insert_script(madsack_main);
 }
 
+}
+
+else if (matchDomain('abril.com.br')) {
+  function abril_main() {
+    for (let n = 0; n < 10; n++) {
+      window.setTimeout(function () {
+        window.wp_paywall_vars = '';
+      }, n * 50);
+    }
+  }
+  insert_script(abril_main);
 }
 
 else if (matchDomain(['journaldemontreal.com', 'journaldequebec.com'])) {
