@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "al-monitor.com, arkansasonline.com, bild.de, dn.se, doorbraak.be, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
+    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -331,6 +331,16 @@
     "block_regex": "\\.irishnews\\.com\\/.+\\/js\\/(bundle|mpppaywall)\\.js",
     "domain": "irishnews.com"
   },
+  "Jornaldocomercio.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.jornaldocomercio\\.com\\/.+\\/json\\/paywall\\.json",
+    "domain": "jornaldocomercio.com"
+  },
+  "Jota.info": {
+    "allow_cookies": 1,
+    "domain": "jota.info",
+    "ld_json_url": "div.jota-paywall-visible|div.jota-article__content>span>p"
+  },
   "Kapital.no": {
     "allow_cookies": 1,
     "domain": "kapital.no",
@@ -511,6 +521,11 @@
     "allow_cookies": 1,
     "domain": "onet.pl",
     "remove_cookies": 1
+  },
+  "Opovo.com.br": {
+    "allow_cookies": 1,
+    "block_regex": "\\.opovo\\.com\\.br\\/.+\\/js\\/auth\\/auth_new_menu.min\\.js",
+    "domain": "opovo.com.br"
   },
   "Ovb-online.de": {
     "allow_cookies": 1,

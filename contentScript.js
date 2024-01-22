@@ -1920,47 +1920,51 @@ else if (matchDomain('lesechos.fr')) {
     ampToHtml();
   } else {
     window.setTimeout(function () {
-      let abo_banner = document.querySelector('div[class*="pgxf3b-2"]');
-      let ad_blocks = document.querySelectorAll('[class*="jzxvkd"]');
-      hideDOMElement(...ad_blocks);
-      if (abo_banner && dompurify_loaded) {
-        removeDOMElement(abo_banner);
-        let url = window.location.href;
-        let html = document.documentElement.outerHTML;
-        try {
-          let split1 = html.split(/window\.__REACT_QUERY_STATE__\s?=/)[1];
-          let state = split1.split('</script>')[0].trim().replace(/;$/, '');
-          let data = JSON.parse(state);
-          let data_article = data.queries[1].state;
-          let url_loaded = data_article.data.path;
-          if (url_loaded && (!url_loaded.slice(-7).match(/\d+/) || !url.includes(url_loaded.slice(-7))))
-            refreshCurrentTab();
-          else {
-            let article = data_article.data.stripes[0].mainContent[0].data.description.replace(/allowfullscreen='(true)?'/g, '');
-            let paywallNode = document.querySelector('.post-paywall');
-            if (paywallNode) {
-              let contentNode = document.createElement('div');
-              let parser = new DOMParser();
-              let article_html = parser.parseFromString('<div>' + DOMPurify.sanitize(article) + '</div>', 'text/html');
-              let article_par = article_html.querySelector('div');
-              if (article_par) {
-                contentNode.appendChild(article_par);
-                contentNode.className = paywallNode.className;
-                paywallNode.before(contentNode);
-                removeDOMElement(paywallNode);
-                let paywallLastChildNode = document.querySelector('.post-paywall  > :last-child');
-                if (paywallLastChildNode) {
-                  paywallLastChildNode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+      let paywall = document.querySelector('div#paywall');
+      if (paywall && dompurify_loaded) {
+        removeDOMElement(paywall);
+        let scripts = document.querySelectorAll('script:not([src]):not([type])');
+        let json_script;
+        for (let script of scripts) {
+          if (script.text.match(/window\.__REACT_QUERY_STATE__\s?=\s?/)) {
+            json_script = script;
+            break;
+          }
+        }
+        if (json_script) {
+          try {
+            let json = JSON.parse(json_script.text.split(/window\.__REACT_QUERY_STATE__\s?=\s?/)[1].split('};')[0] + '}');
+            let data_article = json.queries[1].state;
+            let url = window.location.href;
+            let url_loaded = data_article.data.path;
+            if (url_loaded && (!url_loaded.slice(-7).match(/\d+/) || !url.includes(url_loaded.slice(-7))))
+              refreshCurrentTab();
+            else {
+              let json_text = data_article.data.stripes[0].mainContent[0].data.description.replace(/allowfullscreen='(true)?'/g, '');
+              let article = document.querySelector('div.post-paywall');
+              if (article) {
+                let contentNode = document.createElement('div');
+                let parser = new DOMParser();
+                let doc = parser.parseFromString('<div class="' + article.className + '">' + DOMPurify.sanitize(json_text, dompurify_options) + '</div>', 'text/html');
+                let article_new = doc.querySelector('div');
+                if (article.parentNode && article_new) {
+                  article.parentNode.replaceChild(article_new, article);
+                  let article_lastnode = document.querySelector('.post-paywall  > :last-child');
+                  if (article_lastnode) {
+                    article_lastnode.setAttribute('style', 'height: auto !important; overflow: hidden !important; max-height: none !important;');
+                  }
                 }
               }
+              let styleElem = document.head.appendChild(document.createElement('style'));
+              styleElem.innerText = ".post-paywall::after {height: auto !important;}";
             }
-            let styleElem = document.head.appendChild(document.createElement('style'));
-            styleElem.innerHTML = ".post-paywall::after {height: auto !important;}";
+          } catch (err) {
+            console.log(err);
           }
-        } catch (err) {
-          console.log(err);
         }
       }
+      let ads = document.querySelectorAll('[class*="jzxvkd"]');
+      hideDOMElement(...ads);
     }, 500);
   }
 }
@@ -3093,7 +3097,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
 else
   csDone = true;
 
-} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['cambiocolombia.com', 'clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'globo.com', 'lasegunda.com', 'latercera.com', 'revistaoeste.com'])) {//south america
+} else if (window.location.hostname.match(/\.(ar|br|cl|pe|uy)$/) || matchDomain(['cambiocolombia.com', 'clarin.com', 'elespectador.com', 'elmercurio.com', 'eltiempo.com', 'eltribuno.com', 'exame.com', 'globo.com', 'lasegunda.com', 'latercera.com', 'revistaoeste.com'])) {//south america
 
 if (matchDomain('abril.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
@@ -3102,7 +3106,7 @@ if (matchDomain('abril.com.br')) {
     let amp_ads = document.querySelectorAll('amp-ad, amp-embed');
     hideDOMElement(...amp_ads);
   } else {
-    let ads = document.querySelectorAll('div.ads, div[class^="ads-"]');
+    let ads = document.querySelectorAll('div.ads, div[class^="ads-"], div.MGID');
     hideDOMElement(...ads);
   }
 }
@@ -3260,6 +3264,11 @@ else if (matchDomain('estadao.com.br')) {
     let ads = document.querySelectorAll('div[class^="styles__Container-sc-"]');
     hideDOMElement(...ads);
   }
+}
+
+else if (matchDomain('exame.com')) {
+  let ads = document.querySelectorAll('div[id^="ads_"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('folha.uol.com.br')) {
@@ -5318,7 +5327,7 @@ else if (matchDomain(timesofindia_domains)) {
               content.innerHTML = '';
               let sheet = document.createElement('style');
               sheet.innerText = '[type="synopsis"]::after {background: none !important;}';
-              document.body.appendChild(sheet);
+              document.head.appendChild(sheet);
               content.appendChild(article_new);
             }
           }

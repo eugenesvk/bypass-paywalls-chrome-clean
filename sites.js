@@ -680,7 +680,7 @@ var defaultSites = {
   },
   "Exame": {
     domain: "exame.com",
-    block_regex: /\/exame\.com\/.+\/js\/pywll-dyn\.js/
+    allow_cookies: 1
   },
   "Fast Company": {
     domain: "fastcompany.com",
@@ -928,7 +928,8 @@ var defaultSites = {
   },
   "Grupo Abril": {
     domain: "abril.com.br",
-    allow_cookies: 1
+    allow_cookies: 1,
+    block_regex: /\.abril\.com\.br\/.+\/abril-paywall\//
   },
   "Grupo Clarín": {
     domain: "###_ar_grupo_clarin",

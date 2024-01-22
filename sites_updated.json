@@ -25,12 +25,11 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.0.4"
   },
-  "Haaretz": {
-    "domain": "haaretz.co.il",
+  "Grupo Abril": {
+    "domain": "abril.com.br",
     "allow_cookies": 1,
-    "add_ext_link": "meta[property='og:url'][content*='/.']|article header",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.4.9.2"
+    "block_regex": "\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/",
+    "upd_version": "3.5.2.1"
   },
   "Hearst Communications magazines": {
     "domain": "###_usa_hearst_comm_mag",
@@ -113,13 +112,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)",
     "upd_version": "3.5.1.7"
-  },
-  "The Indian Express": {
-    "domain": "indianexpress.com",
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "cs_code": "[{\"cond\":\"ev-engagement\", \"rm_elem\": 1, \"elems\":[{\"cond\":\"div.ev-meter-content\", \"rm_attrib\": \"style\"}, {\"cond\":\"p.first_intro_para\", \"rm_attrib\": \"class\"}]}]",
-    "upd_version": "3.4.9.9"
   },
   "The Irish Examiner": {
     "domain": "irishexaminer.com",

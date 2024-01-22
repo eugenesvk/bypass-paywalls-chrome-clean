@@ -21,17 +21,6 @@ if (matchDomain(de_madsack_domains) || document.querySelector('head > link[href*
 
 }
 
-else if (matchDomain('abril.com.br')) {
-  function abril_main() {
-    for (let n = 0; n < 10; n++) {
-      window.setTimeout(function () {
-        window.wp_paywall_vars = '';
-      }, n * 50);
-    }
-  }
-  insert_script(abril_main);
-}
-
 else if (matchDomain(['journaldemontreal.com', 'journaldequebec.com'])) {
   for (let n = 0; n < 10; n++) {
     window.setTimeout(function () {
