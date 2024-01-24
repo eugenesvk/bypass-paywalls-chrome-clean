@@ -499,6 +499,7 @@
     "*://*.newsobserver.com/*",
     "*://*.newstatesman.com/*",
     "*://*.newsweek.com/*",
+    "*://*.newsweek.pl/*",
     "*://*.newyorker.com/*",
     "*://*.nhregister.com/*",
     "*://*.niagarafallsreview.ca/*",
@@ -839,5 +840,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.2.1"
+  "version": "3.5.2.2"
 }

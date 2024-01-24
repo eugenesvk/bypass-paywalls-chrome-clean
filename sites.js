@@ -1755,6 +1755,11 @@ var defaultSites = {
     domain: "newsweek.com",
     block_regex: /(js\.pelcro\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
+  "Newsweek.pl (fetch from archive.is)": {
+    domain: "newsweek.pl",
+    allow_cookies: 1,
+    cs_dompurify: 1
+  },
   "NHST Media Group": {
     domain: "###_no_nhst_media",
     group: [

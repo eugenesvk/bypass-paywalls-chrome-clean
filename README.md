@@ -776,6 +776,7 @@ Grouped in options:\
 
 ##### Poland
 [Business Insider Polska](https://businessinsider.com.pl) -
+[Newsweek.pl](https://www.newsweek.pl) -
 [Rzeczpospolita](https://www.rp.pl)
 
 ##### Portugal

@@ -111,6 +111,13 @@
     "useragent": "googlebot",
     "upd_version": "3.5.0.2"
   },
+  "Newsweek.pl": {
+    "domain": "newsweek.pl",
+    "allow_cookies": 1,
+    "add_ext_link": "div#contentPremiumPlaceholder|div#article-content-body",
+    "add_ext_link_type": "archive.is",
+    "upd_version": "3.5.2.2"
+  },
   "Stratfor": {
     "domain": "stratfor.com",
     "allow_cookies": 1,
