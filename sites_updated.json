@@ -25,6 +25,20 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.0.4"
   },
+  "Funke Mediengruppe": {
+    "domain": "###_de_funke_medien",
+    "group": [
+      "ikz-online.de",
+      "nrz.de",
+      "waz.de",
+      "wp.de",
+      "wr.de"
+    ],
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "block_regex": "\\.tinypass\\.com\\/",
+    "upd_version": "3.5.2.2"
+  },
   "Grupo Abril": {
     "domain": "abril.com.br",
     "allow_cookies": 1,
