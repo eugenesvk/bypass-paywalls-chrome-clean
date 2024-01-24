@@ -45,6 +45,19 @@
     "block_regex": "\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/",
     "upd_version": "3.5.2.1"
   },
+  "Haaretz Group": {
+    "domain": "###_il_haaretz_group",
+    "group": [
+      "haaretz.co.il",
+      "haaretz.com",
+      "themarker.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.co(m|\\.il)\\/.+\\/magazine\\/page-.+\\.js",
+    "useragent": "semrushbot",
+    "cs_dompurify": 1,
+    "upd_version": "3.5.2.3"
+  },
   "Hearst Communications magazines": {
     "domain": "###_usa_hearst_comm_mag",
     "group": [

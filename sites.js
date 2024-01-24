@@ -1051,6 +1051,7 @@ var defaultSites = {
       "themarker.com"
     ],
     allow_cookies: 1,
+    block_regex: /\.co(m|\.il)\/.+\/magazine\/page-.+\.js/,
     useragent: "semrushbot",
     cs_dompurify: 1
   },

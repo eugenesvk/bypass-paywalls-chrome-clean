@@ -6,6 +6,7 @@ Post-release
 Add Newsweek.pl (fetch from archive.is)
 Remove Abendblatt.de (Funke; fix obsolete)
 Fix Grupo Abril (js)
+Fix Haaretz Group (anti-adblocker)
 Fix LesEchos.fr
 
 * v3.5.2.0 (2024-01-21)
