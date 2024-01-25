@@ -424,7 +424,7 @@ var defaultSites = {
   },
   "Corriere dello Sport": {
     domain: "corrieredellosport.it",
-    remove_cookies_select_drop: ["paywall_articles"]
+    allow_cookies: 1
   },
   "Cosmopolitan.fr": {
     domain: "cosmopolitan.fr",
@@ -724,6 +724,7 @@ var defaultSites = {
   },
   "Foreign Affairs": {
     domain: "foreignaffairs.com",
+    allow_cookies: 1,
     block_regex: /\.foreignaffairs\.com\/modules\/custom\/fa_paywall_js\/js\/paywall\.js/
   },
   "Foreign Policy": {
@@ -827,7 +828,7 @@ var defaultSites = {
       "lesoleil.com"
     ],
     allow_cookies: 1,
-    remove_cookies: 1
+    block_regex: /\.poool\.fr\//
   },
   "Groupe Centre France": {
     domain: "###_fr_gcf",
@@ -1139,7 +1140,7 @@ var defaultSites = {
     domain: "hindutamil.in",
     allow_cookies: 1
   },
-  "Hindustan Times": {
+  "Hindustan Times (not epaper)": {
     domain: "hindustantimes.com",
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
@@ -1373,9 +1374,15 @@ var defaultSites = {
     domain: "###_de_lv",
     group: [
       "profi.de",
-      "topagrar.at",
       "topagrar.com",
       "wochenblatt.com"
+    ],
+    allow_cookies: 1,
+    exception: [{
+        domain: "topagrar.com",
+        allow_cookies: 1,
+        block_js_inline: /\.topagrar\.com\/.+\/news\//
+      }
     ]
   },
   "Law.com (free articles only)": {
@@ -1469,7 +1476,7 @@ var defaultSites = {
     domain: "livelaw.in",
     allow_cookies: 1
   },
-  "LiveMint": {
+  "LiveMint (not epaper)": {
     domain: "livemint.com",
     allow_cookies: 1,
     block_regex: /(\.livemint\.com\/__js\/lm_subscription|\.piano\.io\/api\/tinypass\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
@@ -1484,6 +1491,7 @@ var defaultSites = {
   },
   "Los Angeles Times": {
     domain: "latimes.com",
+    allow_cookies: 1,
     block_regex: /\.californiatimes\.com\/meteringjs/
   },
   "MacroBusiness.com.au": {
@@ -1813,6 +1821,7 @@ var defaultSites = {
   },
   "O Globo (& Valor Econômico)": {
     domain: "globo.com",
+    allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/
   },
   "Outdoor Life": {
@@ -2054,6 +2063,7 @@ var defaultSites = {
   },
   "San Diego Union Tribune": {
     domain: "sandiegouniontribune.com",
+    allow_cookies: 1,
     block_regex: /\.californiatimes\.com\/meteringjs/
   },
   "Schwäbische Zeitung": {
@@ -2659,6 +2669,7 @@ var defaultSites = {
       "echo-online.de",
       "wiesbadener-kurier.de"
     ],
+    allow_cookies: 1,
     block_regex: /cdn\.cxense\.com\//,
     useragent: "googlebot"
   },

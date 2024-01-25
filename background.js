@@ -31,6 +31,8 @@ var restrictions = {
   'foreignaffairs.com': /^((?!\/reader\.foreignaffairs\.com\/).)*$/,
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
   'hilltimes.com': /^((?!\.hilltimes\.com\/slideshow\/).)*$/,
+  'hindustantimes.com': /^((?!\/epaper\.hindustantimes\.com\/).)*$/,
+  'livemint.com': /^((?!\/epaper\.livemint\.com\/).)*$/,
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
   'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
@@ -81,6 +83,8 @@ var amp_unhide;
 var amp_redirect;
 // block contentScript
 var cs_block;
+// clear localStorage in contentScript
+var cs_clear_lclstrg;
 // code for contentScript
 var cs_code;
 // load text from json (script[type="application/ld+json"])
@@ -120,6 +124,7 @@ function initSetRules() {
   amp_unhide = [];
   amp_redirect = {};
   cs_block = {};
+  cs_clear_lclstrg = [];
   cs_code = {};
   ld_json = {};
   ld_json_next = {};
@@ -211,6 +216,8 @@ function prep_regex_str(str, domain = '') {
 }
 
 function addRules(domain, rule) {
+  if (rule.remove_cookies > 0 || rule.hasOwnProperty('remove_cookies_select_hold') || !(rule.hasOwnProperty('allow_cookies') || rule.hasOwnProperty('remove_cookies_select_drop')))
+    cs_clear_lclstrg.push(domain);
   if (rule.hasOwnProperty('remove_cookies_select_drop') || rule.hasOwnProperty('remove_cookies_select_hold')) {
     rule.allow_cookies = 1;
     rule.remove_cookies = 1;
@@ -862,6 +869,9 @@ if (typeof browser !== 'object') {
     if (amp_redirect_domain)
       bg2csData.amp_redirect = amp_redirect[amp_redirect_domain];
     let cs_block_domain = matchUrlDomain(Object.keys(cs_block), url);
+    let cs_clear_lclstrg_domain = matchUrlDomain(cs_clear_lclstrg, url);
+    if (cs_clear_lclstrg_domain)
+      bg2csData.cs_clear_lclstrg = 1;
     let cs_code_domain = matchUrlDomain(Object.keys(cs_code), url);
     if (cs_code_domain)
       bg2csData.cs_code = cs_code[cs_code_domain];
@@ -1330,7 +1340,7 @@ function check_update() {
               response.json().then(upd_json => {
                 let ext_id = manifestData.browser_specific_settings.gecko.id;
                 let json_ext_upd_version_new = upd_json.addons[ext_id].updates[0].version;
-				setExtVersionNew(json_ext_version_new, json_ext_upd_version_new);
+                setExtVersionNew(json_ext_version_new, json_ext_upd_version_new);
               })
             }
           }).catch(function (err) {

@@ -721,7 +721,6 @@
     "*://*.timesofindia.com/*",
     "*://*.timesunion.com/*",
     "*://*.tirebusiness.com/*",
-    "*://*.topagrar.at/*",
     "*://*.topagrar.com/*",
     "*://*.torontosun.com/*",
     "*://*.towardsdatascience.com/*",
@@ -840,5 +839,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.2.3"
+  "version": "3.5.2.4"
 }

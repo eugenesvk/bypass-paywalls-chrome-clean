@@ -43,7 +43,7 @@ For new sites you also have to opt-in to custom sites/request host permissions f
 ### Android
 Add-on was removed by Mozilla from the [add-on store (AMO)](https://addons.mozilla.org).
 
-With Firefox 122+ you can still install/sideload this add-on by [xpi-file of latest release](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi) (automatic add-on updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
+With Firefox 122+ (& Android 10+) you can still install/sideload this add-on by [xpi-file of latest release](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi) (automatic add-on updates) when you enable the debug menu (settings > about > tap Firefox logo 5 times > return to settings).
 
 Or use the Firefox-fork [Iceraven](https://github.com/fork-maintainers/iceraven-browser) v2.13.2+ (manual add-on updates).\
 You can install/update Iceraven manually or use the app [FFUpdater](https://github.com/Tobi823/ffupdater)
@@ -635,8 +635,7 @@ Grouped in options:\
 [Mannheimer Morgen](https://www.mannheimer-morgen.de)\
 *Landwirtschaftsverlag* sites like\
 [Profi.de](https://www.profi.de) -
-[Top Agrar.at](https://www.topagrar.at) -
-[Top Agrar.com](https://www.topagrar.com) -
+[Top Agrar](https://www.topagrar.com) -
 [Wochenblatt für Landwirtschaft & Landleben](https://www.wochenblatt.com)\
 *Madsack Mediengruppe* sites like (opt-in to custom sites for unlisted)\
 [Hannoversche Allgemeine Zeitung](https://www.haz.de) -

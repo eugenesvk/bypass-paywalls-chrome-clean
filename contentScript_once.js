@@ -104,7 +104,7 @@ window.setTimeout(function () {
       else if (matchDomain(['investmentweek.co.uk']))
         group = '###_uk_incisive_media';
     } else if (hostname.match(/\.(ca|com|net|news|org)$/)) {
-      if (document.querySelector('picture > source[srcset*="%2Fgcm.omerlocdn.com%2F"]'))
+      if (matchDomain(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'lenouvelliste.ca', 'lequotidien.com']))
         group = '###_ca_gcm';
       else if (document.querySelector('script[src*=".postmedia.digital/"], head > meta[content*=".postmedia.digital/"]'))
         group = '###_ca_postmedia';

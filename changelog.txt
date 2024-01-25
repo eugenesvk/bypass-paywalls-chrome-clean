@@ -5,9 +5,11 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Newsweek.pl (fetch from archive.is)
 Remove Abendblatt.de (Funke; fix obsolete)
+Fix Groupe Capitales Medias (identify sites)
 Fix Grupo Abril (js)
 Fix Haaretz Group (anti-adblocker)
 Fix LesEchos.fr
+Fix TopAgrar (js-inline)
 
 * v3.5.2.0 (2024-01-21)
 Add Hln.be (fetch from archive.is)

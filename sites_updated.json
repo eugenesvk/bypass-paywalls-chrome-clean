@@ -92,6 +92,22 @@
     "block_regex": "temptation\\.hln\\.be\\/temptation\\.js",
     "upd_version": "3.5.1.5"
   },
+  "Landwirtschaftsverlag": {
+    "domain": "###_de_lv",
+    "group": [
+      "profi.de",
+      "topagrar.com",
+      "wochenblatt.com"
+    ],
+    "allow_cookies": 1,
+    "exception": [{
+        "domain": "topagrar.com",
+        "allow_cookies": 1,
+        "block_js_inline": "\\.topagrar\\.com\\/.+\\/news\\/"
+      }
+    ],
+    "upd_version": "3.5.2.4"
+  },
   "Le Parisien": {
     "domain": "leparisien.fr",
     "allow_cookies": 1,

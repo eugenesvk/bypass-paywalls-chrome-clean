@@ -15,7 +15,7 @@ var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdau
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var de_funke_medien_domains = ['ikz-online.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
-var de_lv_domains = ['profi.de', 'topagrar.at', 'topagrar.com', 'wochenblatt.com'];
+var de_lv_domains = ['profi.de', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
@@ -52,13 +52,15 @@ var usa_nymag_domains = ['curbed.com', 'grubstreet.com', 'nymag.com', 'thecut.co
 var usa_outside_mag_domains = ["backpacker.com", "betamtb.com", "betternutrition.com", "cleaneatingmag.com", "climbing.com", "outsideonline.com", "oxygenmag.com", "skimag.com", "trailrunnermag.com", "triathlete.com", "vegetariantimes.com", "womensrunning.com", "yogajournal.com"];
 var usa_tribune_domains = ['baltimoresun.com', 'chicagotribune.com', 'courant.com', 'dailypress.com', 'mcall.com', 'nydailynews.com', 'orlandosentinel.com', 'pilotonline.com', 'sun-sentinel.com'];
 
-// clean local storage of sites (with an exemption for hold-list)
-var arr_localstorage_hold = ['augsburger-allgemeine.de', 'barrons.com', 'business-standard.com', 'businessinsider.com', 'businessoffashion.com', 'businesspost.ie', 'challenges.fr', 'charliehebdo.fr', 'cmjornal.pt', 'columbian.com', 'corriere.it', 'corrieredellosport.it', 'crikey.com.au', 'cyclingtips.com', 'digiday.com', 'dvhn.nl', 'economictimes.com', 'eldiario.es', 'elespanol.com', 'elle.fr', 'elpais.com', 'elperiodico.com', 'enotes.com', 'estadao.com.br', 'forbes.com', 'fortune.com', 'freiepresse.de', 'gauchazh.clicrbs.com.br', 'globo.com', 'ilfoglio.it', 'inc42.com', 'indianexpress.com', 'indiatoday.in', 'inews.co.uk', 'janes.com', 'jazziz.com', 'ksta.de', 'kurier.at', 'lanouvellerepublique.fr', 'latimes.com', 'lc.nl', 'lesechos.fr', 'limburger.nl', 'livemint.com', 'mid-day.com', 'mundodeportivo.com', 'nationalreview.com', 'nrc.nl', 'nw.de', 'nytimes.com', 'nzherald.co.nz', 'record.pt', 'ruhrnachrichten.de', 'rundschau-online.de', 'sandiegouniontribune.com', 'scmp.com', 'seekingalpha.com', 'techinasia.com', 'telegraph.co.uk', 'tes.com', 'the-tls.co.uk', 'theatlantic.com', 'thebulletin.org', 'thecritic.co.uk', 'thetimes.co.uk', 'theweek.com', 'tt.com', 'tuttosport.com', 'uol.com.br', 'vol.at', 'weser-kurier.de', 'wsj.com'].concat(be_mediahuis_domains, be_roularta_domains, ca_gcm_domains, ca_torstar_domains, de_funke_medien_domains, de_lv_domains, de_vrm_domains, de_vrm_custom_domains, es_epiberica_domains, es_epiberica_custom_domains, es_grupo_vocento_domains, es_unidad_domains, fr_groupe_la_depeche_domains, fr_groupe_nice_matin_domains, it_gedi_domains, it_quotidiano_domains, nl_dpg_media_domains, no_nhst_media_domains, timesofindia_domains, usa_hearst_comm_domains, usa_mcc_domains);
-if (!matchDomain(arr_localstorage_hold)) {
+// clean local storage (when allow cookies)
+if (matchDomain(['bloomberg.com', 'csmonitor.com', 'exame.com', 'slideshare.net'])) {
   window.localStorage.clear();
 }
 
 function runOnMessage(bg2csData, dompurify_loaded) {
+// clear local storage (when remove cookies)
+if (bg2csData.cs_clear_lclstrg && !matchDomain(['nationalreview.com', 'thecritic.co.uk'].concat(usa_mcc_domains)))
+  window.localStorage.clear();
 // custom/updated sites: load text from json (script[type="application/ld+json"])
 if (bg2csData.ld_json && dompurify_loaded) {
   if (bg2csData.ld_json.includes('|')) {
@@ -316,6 +318,10 @@ window.addEventListener('message', function (event) {
     }
   }
 }, false);
+
+var overlay = document.querySelector('body.didomi-popup-open');
+if (overlay)
+  overlay.classList.remove('didomi-popup-open');
 
 if (!(csDone || csDoneOnce)) {
 
@@ -582,7 +588,7 @@ else {
       csDone = true;
 }
 
-} else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['diepresse.com', 'faz.net', 'topagrar.com', 'tt.com', 'wochenblatt.com'])) {//germany/austria/switzerland - ch
+} else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['diepresse.com', 'faz.net', 'tt.com', 'wochenblatt.com'])) {//germany/austria/switzerland - ch
 
 if (matchDomain('aerztezeitung.de')) {
   let paywall = document.querySelector('div.AZLoginModule');
@@ -1371,15 +1377,10 @@ else if (matchDomain('zeit.de')) {
 }
 
 else if (matchDomain(de_lv_domains)) {
-  let paywall_topagrar = document.querySelector('div > div.paywall-package');
-  let paywall_other = document.querySelector('div[id^="paymentprocess-"]');
-  if (paywall_topagrar || paywall_other) {
-    if (paywall_topagrar)
-      removeDOMElement(paywall_topagrar.parentNode);
-    else {
-      let intro = document.querySelector('div.m-paywall__textFadeOut');
-      removeDOMElement(paywall_other, intro);
-    }
+  let paywall = document.querySelector('div[id^="paymentprocess-"]');
+  if (paywall) {
+    let intro = document.querySelector('div.m-paywall__textFadeOut');
+    removeDOMElement(paywall, intro);
     let div_hidden = document.querySelector('div.paywall-full-content[style]');
     if (div_hidden) {
       div_hidden.removeAttribute('class');
@@ -2391,11 +2392,6 @@ else if (matchDomain(be_mediahuis_domains.concat(['limburger.nl']))) {
     let banners = document.querySelectorAll('div.paywall--titel');
     hideDOMElement(...banners);
   }, 1500);
-  window.setTimeout(function () {
-    let overlay = document.querySelector('body.didomi-popup-open');
-    if (overlay)
-      overlay.classList.remove('didomi-popup-open');
-  }, 3000);
 }
 
 else if (matchDomain('businessam.be')) {
@@ -3885,9 +3881,14 @@ else if (matchDomain('foreignpolicy.com')) {
     let content_gated = document.querySelector('div.content-gated');
     if (content_gated) {
       let insider = document.querySelector('body.is-fp-insider');
-      if (insider)
+      if (insider) {
         getJsonUrl('div.content-gated', {rm_class: 'content-gated'}, 'div.content-gated');
-      else
+        window.setTimeout(function () {
+          let lazy_images = document.querySelectorAll('img[loading="lazy"]');
+          for (let elem of lazy_images)
+            elem.removeAttribute('loading');
+        }, 1000);
+      } else
         content_gated.classList.remove('content-gated');
     }
   }
@@ -4206,7 +4207,7 @@ else if (matchDomain('jpost.com')) {
 }
 
 else if (matchDomain(['latimes.com', 'sandiegouniontribune.com'])) {
-  let ads = document.querySelectorAll('div.enhancement, div.google-dfp-ad-wrapper');
+  let ads = document.querySelectorAll('div.enhancement, div.google-dfp-ad-wrapper, div.revcontent');
   hideDOMElement(...ads);
 }
 
