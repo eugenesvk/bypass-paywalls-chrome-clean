@@ -233,6 +233,7 @@
     "*://*.elmercurio.com/*",
     "*://*.elmundo.es/*",
     "*://*.elnortedecastilla.es/*",
+    "*://*.elnuevoherald.com/*",
     "*://*.elobservador.com.uy/*",
     "*://*.elpais.com.uy/*",
     "*://*.elpais.com/*",
@@ -839,5 +840,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.2.4"
+  "version": "3.5.2.5"
 }

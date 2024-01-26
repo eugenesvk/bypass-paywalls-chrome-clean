@@ -1541,6 +1541,7 @@ var defaultSites = {
     group: [
       "bnd.com",
       "charlotteobserver.com",
+      "elnuevoherald.com",
       "fresnobee.com",
       "kansas.com",
       "kansascity.com",

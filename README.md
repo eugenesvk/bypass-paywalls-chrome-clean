@@ -374,6 +374,7 @@ Grouped in options:\
 *[Maine Trust](https://www.metln.org)* sites (opt-in to custom sites)\
 *McClatchy Group* sites like (opt-in to custom sites for unlisted)\
 [Belleville News-Democrat](https://www.bnd.com) -
+[El Nuevo Herald](https://www.elnuevoherald.com) -
 [Fort Worth Star-Telegram](https://www.star-telegram.com) -
 [Lexington Herald-Leader](https://www.kentucky.com) -
 [McClatchy DC](https://www.mcclatchydc.com) -
