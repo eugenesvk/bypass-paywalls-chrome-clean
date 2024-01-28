@@ -12,6 +12,7 @@ Fix Grupo Abril (js)
 Fix Haaretz Group (anti-adblocker)
 Fix LesEchos.fr
 Fix TopAgrar (js-inline)
+Fix WSJ Pro (fetch from archive.is)
 
 * v3.5.2.0 (2024-01-21)
 Add Hln.be (fetch from archive.is)

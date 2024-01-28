@@ -2577,7 +2577,8 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(cdn\.cxense\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     referer: "drudgereport",
-    useragent: "googlebot"
+    useragent: "googlebot",
+    cs_dompurify: 1
   },
   "The Washington Post": {
     domain: "washingtonpost.com",

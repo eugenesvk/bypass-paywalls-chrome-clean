@@ -5558,34 +5558,28 @@ else if (matchDomain('wsj.com')) {
         if (masthead_link)
           masthead_link.href = 'https://www.wsj.com';
       } else {
-        let snippet = document.querySelector('.snippet-promotion, div#cx-snippet-overlay');
-        if (snippet) {
-          removeDOMElement(snippet);
+        let paywall_sel = '.snippet-promotion, div#cx-snippet-overlay';
+        let paywall = document.querySelector(paywall_sel);
+        if (paywall) {
           if (!matchDomain('www.wsj.com')) {
+            removeDOMElement(paywall);
             if (url_article)
               window.location.href = window.location.href.replace('wsj.com', 'wsj.com/amp');
             else
               window.location.href = '/amp/articles/' + path_article[0];
-          } else {
-            let wsj_pro = snippet.querySelector('a[href^="https://wsjpro.com/"]');
-            let article = document.querySelector('article');
-            if (article) {
-              window.setTimeout(function () {
-                if (wsj_pro) {
-                  article.firstChild.before(googleSearchToolLink(window.location.href));
-                  article.firstChild.before(archiveLink(window.location.href, 'BPC > Try for full article text (articles before 2023-10-28)'));
-                } else
-                  article.firstChild.before(archiveLink(window.location.href));
-              }, 500);
-              csDoneOnce = true;
-              waitDOMElement('div.paywall', 'DIV', node => hideDOMElement(...document.querySelectorAll('div#bpc_archive')), false);
-            }
+          } else if (dompurify_loaded) {
+            let url = window.location.href;
+            let article_sel = 'article section';
+            let wsj_pro = paywall.querySelector('a[href^="https://wsjpro.com/"]');
+            if (wsj_pro)
+              article_sel = 'article';
+            getArchive(url, paywall_sel, '', article_sel);
           }
         }
       }
     }
   }
-  let ads = document.querySelectorAll('div.wsj-ad, div.adWrapper, div.uds-ad-container');
+  let ads = document.querySelectorAll('div.wsj-ad, div.adWrapper, div.uds-ad-container, div.css-xgokil-Box');
   hideDOMElement(...ads);
 }
 
