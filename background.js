@@ -40,6 +40,7 @@ var restrictions = {
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
+  'study.com': /\/study\.com\/.+\/lesson\//,
   'tagesspiegel.de': /^((?!\/(background|checkpoint)\.tagesspiegel\.de\/).)*$/,
   'techinasia.com': /\.techinasia\.com\/.+/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
@@ -1504,7 +1505,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_ch_tamedia', '###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom', '###_uk_delinian'];
+      let nofix_groups = ['###_fi_alma_talent', '###_it_citynews', '###_nl_vmnmedia', '###_substack_custom', '###_uk_delinian'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (!nofix_groups.includes(group)) {
           if (custom_flex[group])

@@ -1393,6 +1393,8 @@ else if (matchDomain(de_lv_domains)) {
 
 else if (matchDomain(de_funke_medien_domains)) {
   sessionStorage.setItem('deobfuscate', 'true');
+  let ads = document.querySelectorAll('div.ad');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(de_madsack_domains) || document.querySelector('head > link[href*=".rndtech.de/"]')) {
@@ -3323,7 +3325,7 @@ else if (matchDomain('globo.com')) {
   } else if (window.location.pathname.includes('/amp/'))
     ampToHtml();
   if (!window.location.pathname.includes('/amp/')) {
-    let ads = document.querySelectorAll('div[id^="ad-container"], div.content-ads, div[class^="block__advertising"], div#pub-in-text-wrapper');
+    let ads = document.querySelectorAll('div[id^="ad-container"], div.content-ads, div[class^="block__advertising"], div#pub-in-text-wrapper, div[id^="taboola-"]');
     hideDOMElement(...ads);
   }
 }
@@ -4728,6 +4730,17 @@ else if (matchDomain('studocu.com')) {
   }, 1000);
 }
 
+else if (matchDomain('study.com')) {
+  let faded_content = document.querySelector('div.faded-content');
+  if (faded_content)
+    faded_content.removeAttribute('class');
+  let div_hidden = document.querySelector('div.hidden[ng-non-bindable]');
+  if (div_hidden)
+    div_hidden.removeAttribute('class');
+  let banners = document.querySelectorAll('div.article-cutoff-div');
+  removeDOMElement(...banners);
+}
+
 else if (matchDomain('swarajyamag.com')) {
   let paywall = document.querySelector('div#story-notification');
   if (paywall) {
@@ -5919,8 +5932,10 @@ function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, te
           if (url.startsWith('https://archive.')) {
             let arch_dom = (selector_archive !== selector) ? (article_new.querySelector(selector_archive) || document.querySelector(selector_archive)) : article_new;
             if (arch_dom) {
-              arch_dom.firstChild.before(archiveLink_renew(window.location.href));
-              arch_dom.firstChild.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
+              if (arch_dom.firstChild)
+                arch_dom = arch_dom.firstChild;
+              arch_dom.before(archiveLink_renew(window.location.href));
+              arch_dom.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
             }
             let targets = article_new.querySelectorAll('a[target="_blank"][href^="' + window.location.origin + '"]');
             for (let elem of targets)

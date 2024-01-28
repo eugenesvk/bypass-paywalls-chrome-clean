@@ -2160,6 +2160,10 @@ var defaultSites = {
     domain: "studocu.com",
     allow_cookies: 1
   },
+  "Study.com (only lessons; no videos)": {
+    domain: "study.com",
+    allow_cookies: 1
+  },
   "Stylist.co.uk": {
     domain: "stylist.co.uk",
     allow_cookies: 1,

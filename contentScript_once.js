@@ -73,7 +73,7 @@ window.setTimeout(function () {
       else if (document.querySelector('head > link[href*="/assets.static-chmedia.ch/"]'))
         group = 'nzz.ch';
       else if (document.querySelector('head > link[href*=".tamedia.ch/"]'))
-        group = '###_ch_tamedia';// no fix
+        group = '###_ch_tamedia';// custom
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {
       if (document.querySelector('head > link[href*="/estaticos-cdn."]'))
         group = '###_es_epiberica';

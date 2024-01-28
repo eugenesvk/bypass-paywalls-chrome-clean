@@ -179,7 +179,8 @@ Grouped in options:\
 [Quora](https://www.quora.com) -
 [SlideShare](https://www.slideshare.net) -
 [Statista](https://www.statista.com) -
-[StuDocu](https://www.studocu.com)
+[StuDocu](https://www.studocu.com) -
+[Study.com (only lessons; no videos)](https://study.com)
 
 ###### Sports
 [ESPN USA](https://www.espn.com) -

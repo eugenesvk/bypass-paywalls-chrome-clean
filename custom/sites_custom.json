@@ -556,6 +556,11 @@
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
+  "Piratewires.com (refresh)": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div[class*='article_articleRestricted_']\", \"rm_attrib\":\"class\"}, {\"cond\":\"div[class^='fixedOverlay']\", \"rm_elem\":1}]",
+    "domain": "piratewires.com"
+  },
   "Portfolio.hu": {
     "add_ext_link": "section.paywall|article",
     "add_ext_link_type": "archive.is",
@@ -690,6 +695,12 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
   },
+  "Tamedia.ch (refresh)": {
+    "add_ext_link": "div#piano-premium|p[class^='ArticleParagraph_root_']",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "###_ch_tamedia"
+  },
   "Taxscan.in": {
     "allow_cookies": 1,
     "domain": "taxscan.in",
@@ -758,6 +769,12 @@
     "cs_code": "[{\"cond\":\"div.access-message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.hide.paywall-content\", \"rm_attrib\":\"class\"}]}]",
     "domain": "thefederal.com"
   },
+  "Theloadstar.com": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.post-info\", \"elems\":[{\"cond\":\"article>p\", \"rm_elem\":1}]}]",
+    "domain": "theloadstar.com",
+    "ld_json_url": "div#register_wrapper,div[id$=\"_req_container\"]|article|1|1"
+  },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"
   },
@@ -765,6 +782,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "thenational.scot"
+  },
+  "Thenationalpulse.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\/thenationalpulse\\.com\\/wp-content\\/.+\\/assets\\/js\\/national-pulse\\.js",
+    "domain": "thenationalpulse.com"
   },
   "Thestage.co.uk": {
     "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
