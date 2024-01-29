@@ -667,7 +667,7 @@ else if (matchDomain('augsburger-allgemeine.de')) {
   } else {
     amp_unhide_subscr_section();
   }
-  let banners = document.querySelectorAll('div.piano-article');
+  let banners = document.querySelectorAll('div.piano-article, div.p-ad');
   hideDOMElement(...banners);
 }
 
@@ -1149,7 +1149,7 @@ else if (matchDomain('nw.de')) {
   if (!window.location.pathname.endsWith('.amp.html')) {
     amp_redirect('a[data-event-value="paywall-overlay-click"]');
   } else {
-    amp_unhide_access_hide('="loggedIn AND hasAbo"', '', 'amp-ad, amp-embed, .banner', false);
+    amp_unhide_access_hide('="loggedIn AND hasAbo"', '', 'amp-ad, amp-embed, .banner');
   }
 }
 
@@ -3300,7 +3300,7 @@ else if (matchDomain('gauchazh.clicrbs.com.br')) {
 
 else if (matchDomain('gazetadopovo.com.br')) {
   if (window.location.pathname.endsWith('/amp/')) {
-    amp_unhide_subscr_section('div.ads-amp, amp-embed', false);
+    amp_unhide_subscr_section('div.ads-amp, amp-embed, div.tpl-wrapper', false);
   } else {
     let ads = document.querySelectorAll('div.c-ads');
     hideDOMElement(...ads);
@@ -3465,8 +3465,7 @@ else if (matchDomain('barandbench.com')) {
 }
 
 else if (matchDomain('barrons.com')) {
-  let url = window.location.href;
-  if (!url.includes('barrons.com/amp/')) {
+  if (!window.location.pathname.startsWith('/amp/')) {
     amp_redirect('div#cx-interstitial-snippet', '', '/amp' + window.location.pathname);
     let continue_buttons = document.querySelectorAll('button.snippet__buttons--continue');
     for (let elem of continue_buttons)
@@ -3474,7 +3473,15 @@ else if (matchDomain('barrons.com')) {
     let ads = document.querySelectorAll('div[class*="_AdWrapper-"], div[class*="-adWrapper-"]');
     hideDOMElement(...ads);
   } else {
-    amp_unhide_subscr_section('.wsj-ad, amp-ad', false);
+    amp_unhide_subscr_section('.wsj-ad, amp-ad');
+    let login = document.querySelector('div.login-section-container');
+    removeDOMElement(login);
+    let amp_images = document.querySelectorAll('div.article__body amp-img');
+    for (let amp_img of amp_images) {
+      let img_new = document.createElement('img');
+      img_new.src = amp_img.getAttribute('src');
+      amp_img.parentNode.replaceChild(img_new, amp_img);
+    }
   }
 }
 
@@ -4351,7 +4358,7 @@ else if (matchDomain('newrepublic.com')) {
 else if (matchDomain('newscientist.com')) {
   let clear_ads = function() {
     let ads = document.querySelectorAll('div[class*="Advert"]');
-    hideDOMElement(...ads);	  
+    hideDOMElement(...ads);
   }
   let url = window.location.href;
   func_post = function () {
@@ -4633,7 +4640,7 @@ else if (matchDomain('spglobal.com')) {
 
 else if (matchDomain('sportico.com')) {
   if (window.location.pathname.endsWith('/amp/'))
-    amp_unhide_subscr_section('amp-ad, amp-embed', false);
+    amp_unhide_subscr_section('amp-ad, amp-embed');
 }
 
 else if (matchDomain('staradvertiser.com')) {
@@ -5977,16 +5984,18 @@ function replaceTextFail(url, article, proxy, text_fail) {
 }
 
 function amp_iframes_replace(weblink = false, source = '') {
-  let amp_iframes = document.querySelectorAll('amp-iframe' + (source ? '[src*="'+ source + '"]' : ''));
+  let amp_iframes = document.querySelectorAll('amp-iframe' + (source ? '[src*="' + source + '"]' : ''));
   let par, elem;
   for (let amp_iframe of amp_iframes) {
     if (!weblink) {
-      elem = document.createElement('iframe');
-      elem.src = amp_iframe.getAttribute('src'),
-      elem.style = 'height: 100%; width: 100%; border: 0px;';
-      if (amp_iframe.getAttribute('sandbox'))
-        elem.sandbox = amp_iframe.getAttribute('sandbox');
-      amp_iframe.parentNode.replaceChild(elem, amp_iframe);
+      if (amp_iframe.offsetHeight > 10) {
+        elem = document.createElement('iframe');
+        elem.src = amp_iframe.getAttribute('src'),
+        elem.style = 'height: ' + amp_iframe.offsetHeight + 'px; width: 100%; border: 0px;';
+        if (amp_iframe.getAttribute('sandbox'))
+          elem.sandbox = amp_iframe.getAttribute('sandbox');
+        amp_iframe.parentNode.replaceChild(elem, amp_iframe);
+      }
     } else {
       par = document.createElement('p');
       par.style = 'margin: 20px 0px;';

@@ -3,6 +3,7 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Fix Augsburger-allgemeine.de (Googlebot)
 
 * v3.5.3.0 (2024-01-28)
 Add El Nuevo Herald (McClatchy Group)
@@ -75,7 +76,7 @@ Fix The Juggernaut
 Update block general paywall script (Leaky-js-cookie)
 
 * v3.4.8.0 (2023-12-24)
-Add Bild.de (link to archive.is)
+Add Bild.de (fetch from archive.is)
 Add BNP Media (opt-in to custom sites)
 Add BusinessAM.be
 Add Fox News (regwall)
@@ -1586,7 +1587,7 @@ Fix Le Parisien (Googlebot)
 Fix WaPo
 
 * v2.2.7.5 (2021-06-30)
-Fix Augsburger Allgemeine
+Fix Augsburger-allgemeine.de
 Fix National Geographic USA (magazine/link to archive.today)
 Fix Quartz (link to archive.today)
 Maintenance contentScript (sanitize html-input)
@@ -1769,7 +1770,7 @@ Update incognito window (Chrome-only split mode)
 Update limit contentScript (add image/sub_frame)
 
 * v2.0.8.0 (2021-02-14)
-Add Augsburger-Allgemeine.de
+Add Augsburger-allgemeine.de
 Add McClatchy Group (USA)
 Add Neue Osnabruecker Zeitung (Germany)
 Add Time Magazine

@@ -1,4 +1,11 @@
 {
+  "Augsburger Allgemeine": {
+    "domain": "augsburger-allgemeine.de",
+    "allow_cookies": 1,
+    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
+    "useragent": "googlebot",
+    "upd_version": "3.5.3.1"
+  },
   "Barron's": {
     "domain": "barrons.com",
     "allow_cookies": 1,
@@ -17,13 +24,6 @@
     "add_ext_link": "aside#paywall|article",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.1.2"
-  },
-  "EWmagazine.nl": {
-    "domain": "ewmagazine.nl",
-    "allow_cookies": 1,
-    "add_ext_link": "div.paywall|div.entry-content",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.5.0.4"
   },
   "Funke Mediengruppe": {
     "domain": "###_de_funke_medien",
@@ -108,12 +108,6 @@
     ],
     "upd_version": "3.5.2.4"
   },
-  "Le Parisien": {
-    "domain": "leparisien.fr",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.5.0.3"
-  },
   "Mediahuis Nederland Regional": {
     "domain": "###_nl_mediahuis_region",
     "group": [
@@ -127,18 +121,6 @@
     "add_ext_link": "div[data-auth-root='paywall']|article",
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.1.4"
-  },
-  "Medienholding Süd": {
-    "domain": "###_de_mhs",
-    "group": [
-      "schwarzwaelder-bote.de",
-      "stuttgarter-nachrichten.de",
-      "stuttgarter-zeitung.de"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.piano\\.io\\/",
-    "useragent": "googlebot",
-    "upd_version": "3.5.0.2"
   },
   "Newsweek.pl": {
     "domain": "newsweek.pl",
@@ -162,12 +144,6 @@
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)",
     "upd_version": "3.5.1.7"
-  },
-  "The Irish Examiner": {
-    "domain": "irishexaminer.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.irishexaminer\\.com\\/pu_examiner\\/scripts\\/engage",
-    "upd_version": "3.5.0.6"
   },
   "The New York Times": {
     "domain": "nytimes.com",
