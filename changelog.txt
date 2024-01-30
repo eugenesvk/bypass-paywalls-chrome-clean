@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Fix Augsburger-allgemeine.de (Googlebot)
+Fix Tribune Publishing Company (js)
 
 * v3.5.3.0 (2024-01-28)
 Add El Nuevo Herald (McClatchy Group)
@@ -1328,7 +1329,7 @@ Add Groupe Nice-Matin (France)
 Add Il Foglio (Italy)
 Add Science (free articles only)
 Add Independent.co.uk (archive.is for premium)
-Fix group Tribune Publishing Company (js)
+Fix Tribune Publishing Company (js)
 Fix The New Statesman (Evolok)
 Update popup (permission to clear cookies)
 
@@ -1603,7 +1604,7 @@ Remove The Northern Star (obsolete)
 Fix Atlantico.fr
 Fix Boston Globe (no opt-in)
 Fix Foreign Policy
-Fix group Tribune Publishing Company (overlay)
+Fix Tribune Publishing Company (overlay)
 Fix The Globe and Mail
 Fix The Spectator UK (amp)
 

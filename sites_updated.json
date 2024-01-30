@@ -152,6 +152,24 @@
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
   },
+  "Tribune Publishing Company": {
+    "domain": "###_usa_tribune",
+    "group": [
+      "baltimoresun.com",
+      "capitalgazette.com",
+      "chicagotribune.com",
+      "courant.com",
+      "dailypress.com",
+      "mcall.com",
+      "nydailynews.com",
+      "orlandosentinel.com",
+      "pilotonline.com",
+      "sun-sentinel.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/(script|.+\\/loader-wp\\/static\\/loader\\.min)\\.js)",
+    "upd_version": "3.5.3.2"
+  },
   "WirtschaftsWoche": {
     "domain": "wiwo.de",
     "allow_cookies": 1,

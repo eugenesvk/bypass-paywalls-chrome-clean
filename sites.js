@@ -2639,7 +2639,7 @@ var defaultSites = {
       "sun-sentinel.com"
     ],
     allow_cookies: 1,
-    block_regex: "(\\.tribdss\\.com\\/|\\.{domain}\\/script\\.js|\\.zephr\\.com\\/zephr-browser\\/)"
+    block_regex: "(\\.{domain}\\/(script|.+\\/loader-wp\\/static\\/loader\\.min)\\.js)"
   },
   "Tuttosport": {
     domain: "tuttosport.com",
@@ -2884,11 +2884,6 @@ var defaultSites = {
     block_regex_general: /\/tncms\/api\/access(\..+)?\.js/,
     cs_dompurify: 1
   },
-  "TribDss": {
-    domain: "tribdss.com",
-    allow_cookies: 1,
-    block_regex_general: /\.tribdss\.com\//
-  },
   "Weborama.fr": {
     domain: "weborama.fr",
     allow_cookies: 1,
@@ -2978,7 +2973,7 @@ var custom_flex_not = {
   "###_uk_axate.io": ["thecricketer.com", "thinkofx.net"],
   "###_uk_haymarket": ["gpbusiness.co.uk", "scmagazineuk.com", "thecorporatetreasurer.com"],
   "###_uk_haymarket_medical": ["mycme.com"],
-  "###_usa_hearst_comm": ["sfgate.com"],
+  "###_usa_hearst_comm": ["chron.com", "sfgate.com"],
   "###_usa_mcc": ["mcclatchy.com"],
   "###_usa_townnews": ["bloxdigital.com", "townnews.com"],
   "thewest.com.au": ["perthnow.com.au"]
