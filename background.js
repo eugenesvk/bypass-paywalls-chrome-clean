@@ -94,6 +94,8 @@ var ld_json;
 var ld_json_next;
 // load text from json (link[rel="alternate"][type="application/json"][href])
 var ld_json_url;
+// load text from archive.is
+var ld_archive_is;
 // load text from Google webcache
 var ld_google_webcache;
 // add external link to article
@@ -130,6 +132,7 @@ function initSetRules() {
   ld_json = {};
   ld_json_next = {};
   ld_json_url = {};
+  ld_archive_is = {};
   ld_google_webcache = {};
   add_ext_link = {};
   block_js_custom = [];
@@ -341,9 +344,11 @@ function addRules(domain, rule) {
     ld_json_next[domain] = rule.ld_json_next;
   if (rule.ld_json_url)
     ld_json_url[domain] = rule.ld_json_url;
+  if (rule.ld_archive_is)
+    ld_archive_is[domain] = rule.ld_archive_is;
   if (rule.ld_google_webcache)
     ld_google_webcache[domain] = rule.ld_google_webcache;
-  if (rule.ld_json || rule.ld_json_next || rule.ld_json_url || rule.ld_google_webcache || rule.cs_dompurify)
+  if (rule.ld_json || rule.ld_json_next || rule.ld_json_url || rule.ld_archive_is || rule.ld_google_webcache || rule.cs_dompurify)
     if (!dompurify_sites.includes(domain))
       dompurify_sites.push(domain);
   if (rule.add_ext_link && rule.add_ext_link_type)
@@ -885,6 +890,9 @@ if (typeof browser !== 'object') {
     let ld_json_url_domain = matchUrlDomain(Object.keys(ld_json_url), url);
     if (ld_json_url_domain)
       bg2csData.ld_json_url = ld_json_url[ld_json_url_domain];
+    let ld_archive_is_domain = matchUrlDomain(Object.keys(ld_archive_is), url);
+    if (ld_archive_is_domain)
+      bg2csData.ld_archive_is = ld_archive_is[ld_archive_is_domain];
     let ld_google_webcache_domain = matchUrlDomain(Object.keys(ld_google_webcache), url);
     if (ld_google_webcache_domain)
       bg2csData.ld_google_webcache = ld_google_webcache[ld_google_webcache_domain];

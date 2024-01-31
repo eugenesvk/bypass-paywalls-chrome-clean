@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Fix Augsburger-allgemeine.de (Googlebot)
 Fix Tribune Publishing Company (js)
+Update custom sites (ld_archive_is)
 
 * v3.5.3.0 (2024-01-28)
 Add El Nuevo Herald (McClatchy Group)

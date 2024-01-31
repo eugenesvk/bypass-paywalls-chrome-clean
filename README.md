@@ -1041,7 +1041,7 @@ Additional custom options:
 * unhide text amp-page
 * redirect to amp-page when paywall(selector)
 * load text from json when paywall|article(selector)
-* load text from Google webcache when paywall|article(selector)
+* load text from archive.is or Google webcache when paywall|article(selector)
 * add external link to archive-site when paywall|article(selector)
 * remove/unhide elements in dom (optional for dev; check examples)
 

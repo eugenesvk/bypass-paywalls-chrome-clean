@@ -18,11 +18,12 @@
     "block_regex": "\\.acadienouvelle\\.com\\/script\\.js",
     "domain": "acadienouvelle.com"
   },
-  "Airmail.news": {
+  "Airmail.news (refresh)": {
     "add_ext_link": "div.paywall-card|div.article-text",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
-    "domain": "airmail.news"
+    "domain": "airmail.news",
+    "ld_archive_is": "div.paywall-card|div.article-text|div[data-article-target='body']"
   },
   "Artsprofessional.co.uk": {
     "allow_cookies": 1,
@@ -386,7 +387,7 @@
     "domain": "limerickpost.ie"
   },
   "Limesonline.com": {
-    "add_ext_link": "iframe#__limio_frame|div.sommario",
+    "add_ext_link": "div#account-pw-container|div.story__content",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "limesonline.com"
@@ -690,7 +691,8 @@
     "add_ext_link": "aside.article-paywall|section.article-content",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
-    "domain": "suedkurier.de"
+    "domain": "suedkurier.de",
+    "ld_archive_is": "aside.article-paywall|main>article"
   },
   "Supchina.com": {
     "allow_cookies": 1,
@@ -750,9 +752,9 @@
   },
   "Thedispatch.com": {
     "add_ext_link": "article:not(.newsletter) section.paywall-section|div.content",
-    "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "thedispatch.com",
+    "ld_archive_is": "article:not(.newsletter) section.paywall-section|main>article",
     "ld_json_url": "article.newsletter section.paywall-section|div.content|1"
   },
   "Thedriftmag.com": {
@@ -794,7 +796,8 @@
     "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
-    "domain": "thestage.co.uk"
+    "domain": "thestage.co.uk",
+    "ld_archive_is": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle2Col-']"
   },
   "Tijorifinance.com": {
     "allow_cookies": 1,

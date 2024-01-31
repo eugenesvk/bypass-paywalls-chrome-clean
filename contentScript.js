@@ -161,6 +161,21 @@ if (bg2csData.ld_json_url && dompurify_loaded) {
   }
 }
 
+// custom/updated sites: load text from archive.is
+if (bg2csData.ld_archive_is && dompurify_loaded) {
+  if (bg2csData.ld_archive_is.includes('|')) {
+    window.setTimeout(function () {
+      let url = window.location.href;
+      let ld_archive_is_split = bg2csData.ld_archive_is.split('|');
+      let paywall_sel = ld_archive_is_split[0];
+      let article_sel = ld_archive_is_split[1];
+      let article_src_sel = ld_archive_is_split[2] || article_sel; // optional
+      let article_link_sel = ld_archive_is_split[3] || article_sel; // optional
+      getArchive(url, paywall_sel, '', article_sel, '', article_src_sel, article_link_sel);
+    }, 1000);
+  }
+}
+
 // custom/updated sites: load text from Google webcache
 if (bg2csData.ld_google_webcache && dompurify_loaded) {
   if (bg2csData.ld_google_webcache.includes('|')) {
@@ -169,12 +184,7 @@ if (bg2csData.ld_google_webcache && dompurify_loaded) {
       let ld_google_webcache_split = bg2csData.ld_google_webcache.split('|');
       let paywall_sel = ld_google_webcache_split[0];
       let article_sel = ld_google_webcache_split[1];
-      let paywall = document.querySelectorAll(paywall_sel);
-      if (paywall.length) {
-        removeDOMElement(...paywall);
-        let url_cache = 'https://webcache.googleusercontent.com/search?q=cache:' + url.split('?')[0];
-        replaceDomElementExt(url_cache, true, false, article_sel);
-      }
+      getGoogleWebcache(url, paywall_sel, '', article_sel);
     }, 1000);
   }
 }
