@@ -3628,6 +3628,13 @@ else if (matchDomain('businessoffashion.com')) {
   }
 }
 
+else if (matchDomain(['businesstimes.com.sg', 'straitstimes.com'])) {
+  let url = window.location.href;
+  getArchive(url, 'div[class*=eas-paywall], div#nocx_paywall_area', '', 'main#content');
+  let ads = document.querySelectorAll('div.ads, div[id^="dfp-ad-"], div.cx_paywall_placeholder');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain(ca_gcm_domains)) {
   let paywall = document.querySelector('div._block_1dgevo');
   if (paywall) {

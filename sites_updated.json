@@ -129,6 +129,18 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.2.2"
   },
+  "SPH Media": {
+    "domain": "###_sg_sph_media",
+    "group": [
+      "businesstimes.com.sg",
+      "straitstimes.com"
+    ],
+    "allow_cookies": 1,
+    "add_ext_link": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
+    "add_ext_link_type": "archive.is",
+    "ld_archive_is": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
+    "upd_version": "3.5.3.4"
+  },
   "Stratfor": {
     "domain": "stratfor.com",
     "allow_cookies": 1,

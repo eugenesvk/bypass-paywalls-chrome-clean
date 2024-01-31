@@ -230,6 +230,7 @@ Grouped in options:\
 [The Intercept](https://theintercept.com) -
 [The Daily Beast](https://www.thedailybeast.com) -
 [The Daily Wire](https://www.dailywire.com) -
+[The Diplomat](https://thediplomat.com) -
 [The Impression](https://theimpression.com) -
 [The Juggernaut](https://www.thejuggernaut.com) -
 [The Nation](https://www.thenation.com) -
@@ -904,15 +905,10 @@ Grouped in options:\
 [InvestSmart](https://www.investsmart.com.au) -
 [Intelligent Investor](https://www.intelligentinvestor.com.au)
 
-##### East Asia
+##### China, Hong Kong & Taiwan
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -
-[Mainichi Shimbun](https://mainichi.jp) -
-[Nikkei Asian Review](https://asia.nikkei.com) -
 [South China Morning Post](https://www.scmp.com) -
-[Southern Weekly](https://www.infzm.com) -
-[Tech in Asia](https://www.techinasia.com) -
-[The Diplomat](https://thediplomat.com) -
-[The Japan Times](https://www.japantimes.co.jp)
+[Southern Weekly](https://www.infzm.com)
 
 ##### India
 [Bar and Bench](https://www.barandbench.com) -
@@ -947,6 +943,18 @@ Grouped in options:\
 [Haaretz.co.il](https://www.haaretz.co.il) -
 [Haaretz.com](https://www.haaretz.com) -
 [The Marker](https://www.themarker.com)
+
+##### Japan
+[Mainichi Shimbun](https://mainichi.jp) -
+[Nikkei Asian Review](https://asia.nikkei.com) -
+[The Japan Times](https://www.japantimes.co.jp)
+
+##### Singapore
+[Tech in Asia](https://www.techinasia.com)\
+Grouped in options:\
+*SPH Media* sites like\
+[The Business Times](https://www.businesstimes.com.sg) -
+[The Straits Times](https://www.straitstimes.com)
 
 #### Latin America
 
