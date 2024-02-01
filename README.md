@@ -233,6 +233,7 @@ Grouped in options:\
 [The Diplomat](https://thediplomat.com) -
 [The Impression](https://theimpression.com) -
 [The Juggernaut](https://www.thejuggernaut.com) -
+[The Lamp Magazine](https://thelampmagazine.com) -
 [The Nation](https://www.thenation.com) -
 [The New Atlantis](https://www.thenewatlantis.com) -
 [The New Republic](https://newrepublic.com) -

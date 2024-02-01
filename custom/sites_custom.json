@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, politiken.dk, rp-online.de, sueddeutsche.de, theinformation.com",
+    "cs_code": "bild.de, gp.se, group_haaretz, handelsblatt.com, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -163,6 +163,13 @@
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
     "domain": "dn.no"
+  },
+  "Dn.se": {
+    "add_ext_link": "div.esi-paywall|div.article__content",
+    "add_ext_link_type": "archive.is",
+    "allow_cookies": 1,
+    "domain": "dn.se",
+    "ld_archive_is": "div.esi-paywall|div.article__content|article>div[style='display:block;']"
   },
   "Edweek.org": {
     "allow_cookies": 1,

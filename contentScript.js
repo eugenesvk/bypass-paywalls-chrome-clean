@@ -2585,14 +2585,8 @@ else if (matchDomain('telegraaf.nl')) {
     let div_elem = document.createElement('div');
     let par_style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
     let scripts = document.querySelectorAll('script:not([src]):not([type])');
-    let window_script;
-    for (let script of scripts) {
-      if (script.text.length > 2500 && script.text.includes('window.telegraaf.articleBodyBlocks')) {
-        window_script = script;
-        break;
-      }
-    }
-    if (window_script) {
+    let window_script = document.querySelector('script#scr-tlg-body');
+    if (window_script && window_script.text.includes('window.telegraaf.articleBodyBlocks')) {
       removeDOMElement(paywall);
       let window_text = window_script.text.split('window.telegraaf.articleBodyBlocks')[1].split('window.telegraaf.')[0].replace(/(^\s?=\s?"|";$|\\")/gm, '').replace(/\\\\u003c/gm, '<');
       let parser = new DOMParser();
@@ -5170,6 +5164,22 @@ else if (matchDomain(['thejuggernaut.com', 'jgnt.co'])) {
         console.log(err);
       }
     }
+  }
+}
+
+else if (matchDomain('thelampmagazine.com')) {
+  let paywall = document.querySelector('div.paywall-gradient');
+  if (paywall) {
+    paywall.removeAttribute('class');
+    let banner = document.querySelector('section.p-8');
+    removeDOMElement(banner);
+  }
+  let login = document.querySelectorAll('a.js-login-modal-trigger');
+  for (let elem of login) {
+    elem.removeAttribute('class');
+    let url_search = '/search?q=' + elem.innerText.replace(/\s/g, '+');
+    elem.href = url_search;
+    elem.onclick = x => window.location.href = url_search;
   }
 }
 

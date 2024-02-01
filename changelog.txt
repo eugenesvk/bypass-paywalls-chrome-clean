@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add BusinessTimes.com.sg & StraitsTimes.com (SPH Media)
+Add The Lamp Magazine
 Fix Augsburger-allgemeine.de (Googlebot)
 Fix Tribune Publishing Company (js)
 Update custom sites (ld_archive_is)

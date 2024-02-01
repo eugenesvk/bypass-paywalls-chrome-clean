@@ -157,6 +157,12 @@
     "block_regex": "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)",
     "upd_version": "3.5.1.7"
   },
+  "The Lamp Magazine": {
+    "domain": "thelampmagazine.com",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.paywall-gradient\", \"rm_attrib\":\"class\", \"elems\":[{\"cond\":\"section.p-8\", \"rm_elem\":1}]}]",
+    "upd_version": "3.5.3.5"
+  },
   "The New York Times": {
     "domain": "nytimes.com",
     "allow_cookies": 1,
