@@ -53,6 +53,8 @@ window.setTimeout(function () {
       else if (hostname.endsWith('.com.au')) {
         if (document.querySelector('li > a[href*=".sevenwestmedia.com.au"]'))
           group = 'thewest.com.au';
+        else (document.querySelector('head > link[rel="dns-prefetch"][href="//static.ew.mmg.navigacloud.com"]'))
+          group = '###_au_mmg';
       }
     } else if (hostname.endsWith('.cl')) {
       if (document.querySelector('head > meta[property="og:image"][content*="/impresa.soy-chile.cl/"]'))

@@ -904,7 +904,8 @@ Grouped in options:\
 [Western Advocate](https://www.westernadvocate.com.au)\
 *InvestSmart* sites like\
 [InvestSmart](https://www.investsmart.com.au) -
-[Intelligent Investor](https://www.intelligentinvestor.com.au)
+[Intelligent Investor](https://www.intelligentinvestor.com.au)\
+*[McPherson Media Group](https://www.mmg.com.au/portfolio)* sites (opt-in to custom sites)
 
 ##### China, Hong Kong & Taiwan
 [CommonWealth Magazine Taiwan](https://www.cw.com.tw)* -

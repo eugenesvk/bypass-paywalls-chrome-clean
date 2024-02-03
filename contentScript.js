@@ -591,11 +591,24 @@ else {
         }
         let header_advert = document.querySelector('div.headerAdvertisement');
         hideDOMElement(header_advert);
+      } else if (document.querySelector('head > link[rel="dns-prefetch"][href="//static.ew.mmg.navigacloud.com"]')) { // McPherson Media Group
+        let paywall = document.querySelector('div#content-Load-message');
+        if (paywall) {
+          removeDOMElement(paywall);
+          let lockable = document.querySelectorAll('div[id^="lockable-"]');
+          for (let elem of lockable) {
+            elem.removeAttribute('style');
+            elem.removeAttribute('id');
+          }
+          let gradient = document.querySelector('div.gradienttext');
+          if (gradient)
+            gradient.removeAttribute('class');
+        }
       } else
         csDone = true;
     }
   } else
-      csDone = true;
+    csDone = true;
 }
 
 } else if (window.location.hostname.match(/\.(de|at|ch)$/) || matchDomain(['diepresse.com', 'faz.net', 'tt.com', 'wochenblatt.com'])) {//germany/austria/switzerland - ch

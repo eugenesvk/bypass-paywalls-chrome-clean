@@ -1557,6 +1557,10 @@ var defaultSites = {
     ],
     block_regex: /(\.amplitude\.com\/|js\.matheranalytics\.com|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
+  "McPherson Media Group (opt-in to custom sites)": {
+    domain: "###_au_mmg",
+    allow_cookies: 1
+  },
   "Media Group Westfalen (opt-in to custom sites for unlisted)": {
     domain: "###_de_mgw",
     group: [
