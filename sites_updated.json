@@ -18,6 +18,14 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Dn.se": {
+    "domain": "dn.se",
+    "allow_cookies": 1,
+    "add_ext_link": "div.esi-paywall|div.article__content",
+    "add_ext_link_type": "archive.is",
+    "ld_archive_is": "div.esi-paywall|div.article__premium-content|article>div[style='display:block;']",
+    "upd_version": "3.5.3.7"
+  },
   "Die Zeit": {
     "domain": "zeit.de",
     "allow_cookies": 1,

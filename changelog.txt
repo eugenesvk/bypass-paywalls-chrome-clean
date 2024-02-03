@@ -4,6 +4,8 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add BusinessTimes.com.sg & StraitsTimes.com (SPH Media)
+Add Dagsavisen.no
+Add Dn.se (fetch from archive.is)
 Add McPherson Media Group (au; opt-in to custom sites)
 Add The Lamp Magazine
 Fix Augsburger-allgemeine.de (Googlebot)
@@ -508,7 +510,7 @@ Fix The Globe and Mail (title/comments)
 Update custom sites/popup (remove Google Search Tool)
 
 * v3.1.8.0 (2023-05-14)
-Add Dagens Nyheter (link to archive.is)
+Add Dn.se (link to archive.is)
 Add Monocle (UK)
 Add Stylist.co.uk
 Fix Advance Local (no amp)
@@ -1068,7 +1070,7 @@ Add Artforum
 Add Initium Media
 Add L'Avenir (Belgium)
 Add The Banker
-Remove Dagens Nyheter (fix obsolete)
+Remove Dn.se (fix obsolete)
 Remove Valor Economico (fix obsolete)
 Fix Business-standard.com
 Fix El Mercurio
@@ -1696,7 +1698,7 @@ Fix The Diplomat (magazine)
 Bugfix Le Dauphine (plus some French sites)
 
 * v2.1.6.0 (2021-04-11)
-Add Dagens Industri (Sweden)
+Add Di.se
 Add La Nouvelle Republique du Centre-Ouest (France)
 Add VeloNews
 Fix Business-standard.com (mobile to desktop)

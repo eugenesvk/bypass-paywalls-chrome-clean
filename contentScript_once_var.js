@@ -21,6 +21,19 @@ if (matchDomain(de_madsack_domains) || document.querySelector('head > link[href*
 
 }
 
+if (matchDomain('dagsavisen.no')) {
+  function dagsavisen_main() {
+    for (let n = 0; n < 10; n++) {
+      window.setTimeout(function () {
+        if (window.Fusion) {
+         window.Fusion.globalContent.content_restrictions.content_code = 0;
+        }
+      }, n * 50);
+    }
+  }
+  insert_script(dagsavisen_main);
+}
+
 else if (matchDomain(['journaldemontreal.com', 'journaldequebec.com'])) {
   for (let n = 0; n < 10; n++) {
     window.setTimeout(function () {

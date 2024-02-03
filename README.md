@@ -767,6 +767,7 @@ Grouped in options:\
 [Libelle.be](https://www.libelle.be)
 
 ##### Norway
+[Dagsavisen](https://www.dagsavisen.no)\
 Grouped in options:\
 *NHST Media Group* sites like\
 [Europower](https://www.europower.no) -
@@ -838,6 +839,7 @@ Grouped in options:\
 ##### Sweden
 [Dagens ETC](https://www.etc.se) -
 [Dagens Industri](https://www.di.se) -
+[Dagens Nyheter](https://www.dn.se) -
 [NyTeknik](https://www.nyteknik.se)
 
 Grouped in options:\

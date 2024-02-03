@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, gp.se, group_haaretz, handelsblatt.com, politiken.dk, theinformation.com",
+    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -78,6 +78,11 @@
     "allow_cookies": 1,
     "domain": "bt.no",
     "useragent": "facebookbot"
+  },
+  "Btc-echo.de": {
+    "allow_cookies": 1,
+    "domain": "btc-echo.de",
+    "ld_json_url": "div.btc-echo-plus-paywall|div.entry-content|1"
   },
   "Businessinsider.de": {
     "add_ext_link": "div.piano-article__paywall|div.piano-article__content",
@@ -164,14 +169,7 @@
     "allow_cookies": 1,
     "domain": "dn.no"
   },
-  "Dn.se": {
-    "add_ext_link": "div.esi-paywall|div.article__content",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "dn.se",
-    "ld_archive_is": "div.esi-paywall|div.article__content|article>div[style='display:block;']"
-  },
-  "Edweek.org": {
+  "Edweek.org (not Market Brief)": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "edweek.org"
@@ -449,6 +447,11 @@
     "cs_code": "[{\"cond\":\"body[class]\", \"rm_attrib\":\"class\"}, {\"cond\":\"div.fade\", \"rm_elem\":1}]",
     "domain": "mediapost.com",
     "ld_google_webcache": "div.modal|div#article_body"
+  },
+  "Medieninsider.com": {
+    "allow_cookies": 1,
+    "domain": "medieninsider.com",
+    "useragent": "googlebot"
   },
   "Medpagetoday.com": {
     "allow_cookies": 1,
