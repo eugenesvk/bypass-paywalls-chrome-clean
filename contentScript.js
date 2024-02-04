@@ -1618,6 +1618,101 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
   }
 }
 
+else if (matchDomain('expresso.pt')) {
+  if (!window.location.hostname.startsWith('amp.')) {
+    let article_sel = 'div.article-content';
+    let paywall = document.querySelector(article_sel + ' > div.g-premium-blocker');
+    if (paywall && dompurify_loaded) {
+      removeDOMElement(paywall);
+      let article = document.querySelector(article_sel);
+      if (article) {
+        let url = window.location.href.split(/[#\?]/)[0];
+        fetch(url)
+        .then(response => {
+          if (response.ok) {
+            response.text().then(html => {
+              if (html.match(/window\.__INITIAL_DATA__\s?=\s?/)) {
+                try {
+                  article.innerHTML = '';
+                  let json = JSON.parse(html.split(/window\.__INITIAL_DATA__\s?=\s?/)[1].split(';window.')[0].replace(/":undefined([,}])/g, "\":\"undefined\"$1")).nodes;
+                  let pars;
+                  for (let elem in json) {
+                    let item = json[elem];
+                    if (item.type === 'Layout' && item.nodes[0].type === 'MainBody') {
+                      pars = item.nodes[0].nodes[0].data.content.contents;
+                      break;
+                    }
+                  }
+                  let parser = new DOMParser();
+                  for (let par of pars) {
+                    let par_new;
+                    if (par.html) {
+                      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(par.html) + '</div>', 'text/html');
+                      par_new = doc.querySelector('div');
+                    } else if (par.type === 'PICTURE') {
+                      if (par.urlOriginal) {
+                        par_new = document.createElement('figure');
+                        let img = document.createElement('img');
+                        img.src = par.urlOriginal;
+                        img.style = 'width:100%';
+                        par_new.appendChild(img);
+                        if (par.caption) {
+                          let caption = document.createElement('p');
+                          caption.innerText = par.caption;
+                          par_new.appendChild(caption);
+                        }
+                      }
+                    } else if (par.link && par.title) {
+                      if (par.contents) {
+                        par_new = document.createElement('div');
+                        for (let elem of par.contents) {
+                          let elem_new;
+                          if (elem.html) {
+                            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(elem.html) + '</div>', 'text/html');
+                            elem_new = doc.querySelector('div');
+                          } else if (elem.urlOriginal) {
+                            elem_new = document.createElement('figure');
+                            let img = document.createElement('img');
+                            img.src = elem.urlOriginal;
+                            img.style = 'width:100%';
+                            elem_new.appendChild(img);
+                            if (elem.caption) {
+                              let caption = document.createElement('p');
+                              caption.innerText = elem.caption;
+                              elem_new.appendChild(caption);
+                            }
+                          }
+                          if (elem_new)
+                            par_new.appendChild(elem_new);
+                        }
+                      } else {
+                        par_new = document.createElement('p');
+                        let art_link = document.createElement('a');
+                        art_link.innerText = par.title;
+                        art_link.href = par.link;
+                        par_new.appendChild(art_link);
+                      }
+                    }
+                    if (par_new)
+                      article.appendChild(par_new);
+                    else
+                      console.log(par);
+                  }
+                } catch (err) {
+                  console.log(err);
+                }
+              }
+            });
+          }
+        }).catch(function (err) {
+          false;
+        });
+      }
+    }
+  } else
+    ampToHtml();
+}
+
 else if (matchDomain(['lavanguardia.com', 'mundodeportivo.com'])) {
   let ads = document.querySelectorAll('span.content-ad, span.hidden-ad, span.ad-unit, div.ad-div');
   hideDOMElement(...ads);

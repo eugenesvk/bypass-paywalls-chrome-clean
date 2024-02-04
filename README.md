@@ -785,6 +785,7 @@ Grouped in options:\
 
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
+[Expresso](https://expresso.pt) -
 [Record](https://www.record.pt) -
 [Sábado](https://www.sabado.pt)
 
