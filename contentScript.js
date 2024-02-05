@@ -20,8 +20,8 @@ var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'm
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
 var de_vrm_custom_domains = ['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de'];
-var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'elperiodico.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es'];
-var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
+var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'elperiodico.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es', 'superdeporte.es'];
+var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elcorreogallego.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
 var fr_be_groupe_rossel = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];
@@ -1602,7 +1602,7 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
     let truncated = document.querySelector('div.article-body--truncated');
     if (truncated)
       truncated.classList.remove('article-body--truncated');
-    amp_unhide_access_hide('="NOT access"], [amp-access="FALSE"', '="access"');
+    amp_unhide_access_hide('="NOT access"], [amp-access="FALSE"', '="access"', 'amp-ad, amp-embed, span.ad-signature');
   } else if (['amp.elperiodico.com', 'amp.epe.es'].includes(window.location.hostname)) {
     amp_unhide_access_hide('="loggedIn"', '="NOT loggedIn"', 'amp-ad, amp-embed, amp-next-page');
     let amp_images = document.querySelectorAll('div > amp-img[src]');
@@ -1613,7 +1613,10 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
       amp_image.parentNode.replaceChild(elem, amp_image);
     }
   } else {
-    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, div.sidebar--sticky__space, div[data-bbnx-id*="cxense"], div.container-ad');
+    let paywall = document.querySelector('div.ft-helper-closenews');
+    if (paywall)
+      paywall.removeAttribute('class');
+    let ads = document.querySelectorAll('div.commercial-up-full__wrapper, aside.ft-ad, div[class^="_mo_recs"]');
     hideDOMElement(...ads);
   }
 }
@@ -1647,7 +1650,7 @@ else if (matchDomain('expresso.pt')) {
                   for (let par of pars) {
                     let par_new;
                     if (par.html) {
-                      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(par.html) + '</div>', 'text/html');
+                      let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(par.html, dompurify_options) + '</div>', 'text/html');
                       par_new = doc.querySelector('div');
                     } else if (par.type === 'PICTURE') {
                       if (par.urlOriginal) {
@@ -1668,7 +1671,7 @@ else if (matchDomain('expresso.pt')) {
                         for (let elem of par.contents) {
                           let elem_new;
                           if (elem.html) {
-                            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(elem.html) + '</div>', 'text/html');
+                            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(elem.html, dompurify_options) + '</div>', 'text/html');
                             elem_new = doc.querySelector('div');
                           } else if (elem.urlOriginal) {
                             elem_new = document.createElement('figure');

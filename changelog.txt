@@ -3,6 +3,8 @@ Changelog Bypass Paywalls Clean - Firefox
 Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases
 
 Post-release
+Add Superdeporte.es (Grupo Prensa Iberica)
+Fix Grupo Prensa Iberica (css)
 
 * v3.5.4.0 (2024-02-04)
 Add BusinessTimes.com.sg & StraitsTimes.com (SPH Media)

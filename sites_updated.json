@@ -26,13 +26,6 @@
     "ld_archive_is": "div.esi-paywall|div.article__premium-content|article>div[style='display:block;']",
     "upd_version": "3.5.3.7"
   },
-  "Die Zeit": {
-    "domain": "zeit.de",
-    "allow_cookies": 1,
-    "add_ext_link": "aside#paywall|article",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.5.1.2"
-  },
   "Funke Mediengruppe": {
     "domain": "###_de_funke_medien",
     "group": [
@@ -53,6 +46,26 @@
     "block_regex": "\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/",
     "upd_version": "3.5.2.1"
   },
+  "Grupo Prensa Ibérica": {
+    "domain": "###_es_epiberica",
+    "group": [
+      "diariodemallorca.es",
+      "eldia.es",
+      "elperiodico.com",
+      "epe.es",
+      "farodevigo.es",
+      "informacion.es",
+      "laprovincia.es",
+      "levante-emv.com",
+      "lne.es",
+      "mallorcazeitung.es",
+      "superdeporte.es"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.piano\\.io\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "cs_code": "[{\"cond\":\"div.ft-helper-closenews\", \"rm_attrib\":\"class\"}]",
+    "upd_version": "3.5.4.1"
+  },
   "Haaretz Group": {
     "domain": "###_il_haaretz_group",
     "group": [
@@ -65,40 +78,6 @@
     "useragent": "semrushbot",
     "cs_dompurify": 1,
     "upd_version": "3.5.2.3"
-  },
-  "Hearst Communications magazines": {
-    "domain": "###_usa_hearst_comm_mag",
-    "group": [
-      "bicycling.com",
-      "cosmopolitan.com",
-      "countryliving.com",
-      "delish.com",
-      "elle.com",
-      "elledecor.com",
-      "esquire.com",
-      "goodhousekeeping.com",
-      "harpersbazaar.com",
-      "housebeautiful.com",
-      "menshealth.com",
-      "oprahdaily.com",
-      "popularmechanics.com",
-      "prevention.com",
-      "roadandtrack.com",
-      "runnersworld.com",
-      "townandcountrymag.com",
-      "womenshealthmag.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.com\\/_assets\\/jam\\/|\\.ensighten\\.com\\/.+\\/Bootstrap\\.js)",
-    "upd_version": "3.5.1.5"
-  },
-  "Het Laatste Nieuws": {
-    "domain": "hln.be",
-    "allow_cookies": 1,
-    "add_ext_link": "div#remaining-paid-content|div.article__body",
-    "add_ext_link_type": "archive.is",
-    "block_regex": "temptation\\.hln\\.be\\/temptation\\.js",
-    "upd_version": "3.5.1.5"
   },
   "Landwirtschaftsverlag": {
     "domain": "###_de_lv",
@@ -115,20 +94,6 @@
       }
     ],
     "upd_version": "3.5.2.4"
-  },
-  "Mediahuis Nederland Regional": {
-    "domain": "###_nl_mediahuis_region",
-    "group": [
-      "gooieneemlander.nl",
-      "haarlemsdagblad.nl",
-      "ijmuidercourant.nl",
-      "leidschdagblad.nl",
-      "noordhollandsdagblad.nl"
-    ],
-    "allow_cookies": 1,
-    "add_ext_link": "div[data-auth-root='paywall']|article",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.5.1.4"
   },
   "Newsweek.pl": {
     "domain": "newsweek.pl",
@@ -148,22 +113,6 @@
     "add_ext_link_type": "archive.is",
     "ld_archive_is": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
     "upd_version": "3.5.3.4"
-  },
-  "Stratfor": {
-    "domain": "stratfor.com",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "upd_version": "3.5.1.8"
-  },
-  "The (New Orleans) Advocate": {
-    "domain": "###_usa_theadvocate",
-    "group": [
-      "nola.com",
-      "theadvocate.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.{domain}\\/(script||.+\\/tncms\\/api\\/access\\..+)\\.js|js\\.matheranalytics\\.com\\/)",
-    "upd_version": "3.5.1.7"
   },
   "The Lamp Magazine": {
     "domain": "thelampmagazine.com",
@@ -195,12 +144,5 @@
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/(script|.+\\/loader-wp\\/static\\/loader\\.min)\\.js)",
     "upd_version": "3.5.3.2"
-  },
-  "WirtschaftsWoche": {
-    "domain": "wiwo.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div.o-paywall|article",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.5.1.3"
   }
 }

@@ -988,7 +988,8 @@ var defaultSites = {
       "laprovincia.es",
       "levante-emv.com",
       "lne.es",
-      "mallorcazeitung.es"
+      "mallorcazeitung.es",
+      "superdeporte.es"
     ],
     allow_cookies: 1,
     block_regex: /(\.piano\.io\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
@@ -3000,6 +3001,7 @@ var custom_flex_not = {
   "###_ca_postmedia": ["canada.com", "canoe.com", "driving.ca"],
   "###_de_dfv_medien": ["dfv.de"],
   "###_de_madsack": ["madsack.de", "madsack-medien-campus.de"],
+  "###_es_epiberica": ["sport.es", "stilo.es"],
   "###_wp_leaky_paywall": ["epsilontheory.com", "heisenbergreport.com", "investmentnews.com", "thewirechina.com"],
   "###_uk_axate.io": ["thecricketer.com", "thinkofx.net"],
   "###_uk_haymarket": ["gpbusiness.co.uk", "scmagazineuk.com", "thecorporatetreasurer.com"],

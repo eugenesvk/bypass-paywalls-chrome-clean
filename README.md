@@ -815,7 +815,8 @@ Grouped in options:\
 [La Nueva España](https://www.lne.es) -
 [La Provincia](https://www.laprovincia.es) -
 [Levante-EMV](https://www.levante-emv.com) -
-[Mallorca Zeitung](https://www.mallorcazeitung.es)\
+[Mallorca Zeitung](https://www.mallorcazeitung.es) -
+[Superdeporte](https://www.superdeporte.es)\
 *Grupo Unidad Editorial* sites like\
 [El Mundo](https://www.elmundo.es) -
 [Expansión](https://www.expansion.com) -
