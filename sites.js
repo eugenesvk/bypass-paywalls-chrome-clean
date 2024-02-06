@@ -1714,7 +1714,7 @@ var defaultSites = {
   "National Geographic USA": {
     domain: "nationalgeographic.com",
     allow_cookies: 1,
-    block_regex: /\.blueconic\.net\//,
+    block_regex: /cdn\.registerdisney\.go\.com\//,
     random_ip: "eu"
   },
   "National Review (disable adblocker)": {

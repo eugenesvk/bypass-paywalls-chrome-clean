@@ -828,6 +828,7 @@
     "*://*.epochbase.eu/*",
     "*://*.flip-pay.com/*",
     "*://*.gitlab.com/magnolia1234/*",
+    "*://*.go.com/*",
     "*://*.hadrianpaywall.com/*",
     "*://*.kinja-static.com/*",
     "*://*.masthead.me/*",
@@ -846,5 +847,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.4.1"
+  "version": "3.5.4.2"
 }

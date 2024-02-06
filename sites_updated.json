@@ -95,6 +95,13 @@
     ],
     "upd_version": "3.5.2.4"
   },
+  "National Geographic USA": {
+    "domain": "nationalgeographic.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.registerdisney\\.go\\.com\\/",
+    "random_ip": "eu",
+    "upd_version": "3.5.4.2"
+  },
   "Newsweek.pl": {
     "domain": "newsweek.pl",
     "allow_cookies": 1,
