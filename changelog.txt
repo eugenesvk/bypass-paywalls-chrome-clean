@@ -7,6 +7,7 @@ Add Superdeporte.es (Grupo Prensa Iberica)
 Fix El Espanol (Cronica Global)
 Fix Grupo Prensa Iberica (css)
 Fix National Geographic USA (js-regwall)
+Fix Vogue Business (member-json)
 
 * v3.5.4.0 (2024-02-04)
 Add BusinessTimes.com.sg & StraitsTimes.com (SPH Media)

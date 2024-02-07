@@ -5672,6 +5672,28 @@ else if (matchDomain('vikatan.com')) {
   }, 500);
 }
 
+else if (matchDomain('voguebusiness.com')) {
+  let article = document.querySelector('div.body__inner-container');
+  if (article) {
+    let pars = article.querySelectorAll('p');
+    if (pars.length < 5) {
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        let json = JSON.parse(json_script.text);
+        if (json) {
+          let json_text = json.articleBody.replace(/\n/g, '\n\n');
+          if (json_text) {
+            csDoneOnce = true;
+            article.innerText = json_text;
+            let url = window.location.href;
+            article.firstChild.before(archiveLink(url));
+          }
+        }
+      }
+    }
+  }
+}
+
 else if (matchDomain('washingtonpost.com')) {
   let leaderboard = document.querySelector('#leaderboard-wrapper');
   let ads = document.querySelectorAll('div[data-qa$="-ad"]');

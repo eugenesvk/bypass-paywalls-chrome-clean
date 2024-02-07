@@ -151,5 +151,12 @@
     "allow_cookies": 1,
     "block_regex": "(\\.{domain}\\/(script|.+\\/loader-wp\\/static\\/loader\\.min)\\.js)",
     "upd_version": "3.5.3.2"
+  },
+  "Vogue Business (member-text only)": {
+    "domain": "voguebusiness.com",
+    "block_regex": "\\.voguebusiness\\.com\\/journey\\/compiler\\/build-.+\\.js",
+    "ld_json": "aside[class^='PaywallInlineBarrierWrapper']|div.body__inner-container",
+    "remove_cookies_select_drop": ["userId"],
+    "upd_version": "3.5.4.4"
   }
 }

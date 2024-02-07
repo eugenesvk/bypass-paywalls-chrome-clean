@@ -2717,10 +2717,10 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Vogue Business": {
-    allow_cookies: 1,
+  "Vogue Business (member-text only)": {
     domain: "voguebusiness.com",
-    useragent: "facebookbot"
+    block_regex: /\.voguebusiness\.com\/journey\/compiler\/build-.+\.js/,
+    remove_cookies_select_drop: ["userId"]
   },
   "Volksstimme": {
     domain: "volksstimme.de",
