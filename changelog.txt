@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Superdeporte.es (Grupo Prensa Iberica)
+Fix El Espanol (Cronica Global)
 Fix Grupo Prensa Iberica (css)
 Fix National Geographic USA (js-regwall)
 

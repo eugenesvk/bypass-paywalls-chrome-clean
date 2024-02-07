@@ -692,7 +692,7 @@ var defaultSites = {
     domain: "exame.com",
     allow_cookies: 1
   },
-  "Expresso.pt": {
+  "Expresso.pt (not Tribuna)": {
     domain: "expresso.pt",
     allow_cookies: 1,
     cs_dompurify: 1
@@ -737,7 +737,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.forbes\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
-  "Foreign Affairs": {
+  "Foreign Affairs (not reader)": {
     domain: "foreignaffairs.com",
     allow_cookies: 1,
     block_regex: /\.foreignaffairs\.com\/modules\/custom\/fa_paywall_js\/js\/paywall\.js/
@@ -1335,7 +1335,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.loeildelaphotographie\.com\/wp-content\/.+\/hague-child\/js\/script-.+\.js/
   },
-  "L'Opinion": {
+  "L'Opinion (not Le Journal)": {
     domain: "lopinion.fr",
     allow_cookies: 1,
     useragent: "googlebot"

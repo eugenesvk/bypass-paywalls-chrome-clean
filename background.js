@@ -25,7 +25,6 @@ var restrictions = {
   'bloombergadria.com': /^((?!\.bloombergadria\.com\/video\/).)*$/,
   'dailywire.com': /^((?!\.dailywire\.com\/(episode|show|videos|watch)).)*$/,
   'economictimes.com': /\.economictimes\.com($|\/($|(__assets|prime)(\/.+)?|.+\.cms))/,
-  'elespanol.com': /^((?!\/cronicaglobal\.elespanol\.com\/).)*$/,
   'espn.com': /^((?!espn\.com\/watch).)*$/,
   'esquire.com': /^((?!\/classic\.esquire\.com\/).)*$/,
   'expresso.pt': /^((?!\/tribuna\.expresso\.pt\/).)*$/,
