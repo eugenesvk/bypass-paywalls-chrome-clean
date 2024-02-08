@@ -26,6 +26,12 @@
     "ld_archive_is": "div.esi-paywall|div.article__premium-content|article>div[style='display:block;']",
     "upd_version": "3.5.3.7"
   },
+  "FewCents": {
+    "domain": "fewcents.co",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.fewcents\\.co\\/.+\\/paywall.*\\.js",
+    "upd_version": "3.5.4.5"
+  },
   "Funke Mediengruppe": {
     "domain": "###_de_funke_medien",
     "group": [
@@ -120,6 +126,12 @@
     "add_ext_link_type": "archive.is",
     "ld_archive_is": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
     "upd_version": "3.5.3.4"
+  },
+  "The Indian Express": {
+    "domain": "indianexpress.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\/indianexpress\\/js\\/evolok\\/|\\.fewcents\\.co\\/.+\\/paywall.*\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
+    "upd_version": "3.5.4.5"
   },
   "The Lamp Magazine": {
     "domain": "thelampmagazine.com",

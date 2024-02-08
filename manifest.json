@@ -214,6 +214,7 @@
     "*://*.dn.se/*",
     "*://*.doorbraak.be/*",
     "*://*.dvhn.nl/*",
+    "*://*.dwell.com/*",
     "*://*.eastbaytimes.com/*",
     "*://*.eastwest.eu/*",
     "*://*.echo-online.de/*",
@@ -847,5 +848,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.4.4"
+  "version": "3.5.4.5"
 }

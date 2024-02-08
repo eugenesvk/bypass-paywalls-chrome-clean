@@ -3856,6 +3856,80 @@ else if (matchDomain('discovermagazine.com')) {
   }, 1000);
 }
 
+else if (matchDomain('dwell.com')) {
+  if (window.location.pathname.startsWith('/article/')) {
+    let paywall = document.querySelector('div#mainPanel div[class^="FCR_"]');
+    if (!window.location.search.startsWith('?rel=plus')) {
+      if (paywall) {
+        removeDOMElement(paywall);
+        window.location.href = window.location.pathname + '?rel=plus';
+      }
+    } else {
+      let article = document.querySelector('div > section[class]');
+      if (paywall && article && dompurify_loaded) {
+        removeDOMElement(paywall);
+        article.classList.remove('_2S7l9_l2eDI5b8DSR29ijf');
+        let scripts = document.querySelectorAll('script:not([src]):not([type])');
+        let json_script;
+        for (let script of scripts) {
+          if (script.text.match(/window.INITIAL_STATE\s?=\s?/)) {
+            json_script = script;
+            break;
+          }
+        }
+        if (json_script) {
+          let split1 = json_script.text.split(/window.INITIAL_STATE\s?=\s?/)[1];
+          let state = (split1.split('};')[0] + '}').split('</script>')[0];
+          if (state) {
+            try {
+              let json = JSON.parse(state);
+              if (json) {
+                let items = json.articles.items;
+                let id = Object.keys(items)[0];
+                let photos = json.photos ? json.photos.items : '';
+                let json_text = items[id].attributes.body.replace(/(<br>|<span style=".+;">|<\/span>)/g, '');
+                function find_img_url(match, p1, p2, offset, string) {
+                  let contributorId;
+                  let format;
+                  if (photos && photos[p1]) {
+                    contributorId = photos[p1].attributes.userId;
+                    format = photos[p1].attributes.format;
+                  }
+                  let result = '<p>missing photo: ' + p1 + '</p>';
+                  if (contributorId)
+                    result = '<figure><img src="https://images2.dwell.com/photos/' + contributorId + '/' + p1 + '/original.' + format + '?auto=format&q=35&w=1280"><figcaption>' + p2 + '</figcaption></figure>';
+                  return result;
+                }
+                json_text = json_text.replace(/<dwell-photo photoId="(\d+)"\scaption="([^"]+)"[^<]+photoUserId="\d*"\/>/g, find_img_url);
+                let parser = new DOMParser();
+                let doc = parser.parseFromString('<section class="' + article.className + '">' + DOMPurify.sanitize(json_text, dompurify_options) + '</section>', 'text/html');
+                let article_new = doc.querySelector('section');
+                article.parentNode.replaceChild(article_new, article);
+              }
+            } catch (err) {
+              console.log(err);
+            }
+          }
+        }
+      }
+      let photo_links = document.querySelectorAll('div > a[href^="' + window.location.pathname.replace(/\/\d{8,}/, '') + '"]');
+      for (let elem of photo_links)
+        elem.href += '?rel=plus';
+      let close_button = document.querySelector('header > div > span > svg');
+      if (!document.querySelector('a#bpc_close') && close_button) {
+        let elem = document.createElement('a');
+        elem.href = window.location.pathname.split('?')[0].replace(/\/\d{8,}/, '');
+        elem.id = 'bpc_close';
+        elem.innerText = 'close';
+        elem.style.color = 'white';
+        close_button.parentNode.parentNode.appendChild(elem);
+      }
+    }
+  }
+  let ads = document.querySelectorAll('div.EYrS5iukqzJMkNAcFQ0ho');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('economictimes.com')) {
   if (window.location.pathname.includes('/amp_')) {
     let paywall = document.querySelector('.paywall_wrap');
@@ -4164,16 +4238,6 @@ else if (matchDomain('indianexpress.com')) {
   if (window.location.pathname.endsWith('/lite/'))
     amp_unhide_access_hide('="metering.result=\'ALLOW_ACCESS\'"', '', 'div.amp-ad, amp-embed');
   else {
-    let paywall = document.querySelector('ev-engagement');
-    if (paywall) {
-      removeDOMElement(paywall);
-      let meter_content = document.querySelector('div.ev-meter-content[style]');
-      if (meter_content)
-        meter_content.removeAttribute('style');
-      let intro = document.querySelector('p.first_intro_para');
-      if (intro)
-        intro.removeAttribute('class');
-    }
     let ads = document.querySelectorAll('div[class^="adsbox"], div.adboxtop, div.add-first, div.osv-ad-class, div.ie-int-campign-ad');
     hideDOMElement(...ads);
   }

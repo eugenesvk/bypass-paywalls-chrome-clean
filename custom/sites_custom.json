@@ -557,6 +557,11 @@
     "cs_code": "[{\"cond\":\"div.id-TBeepSlot\", \"rm_elem\":1}]",
     "domain": "ovb-online.de"
   },
+  "Overwaar.de": {
+    "allow_cookies": 1,
+    "domain": "overwaar.de",
+    "ld_json_url": "div#paywall-wrapper|div.custom-content-wrapper div.fl-col-content"
+  },
   "Pebmed.com.br": {
     "allow_cookies": 1,
     "block_regex": "\\/pebmed\\.com\\.br\\/wp-content\\/.+\\/paywall\\/dist\\/js\\/app\\.js",
