@@ -2696,14 +2696,14 @@ else if (matchDomain('telegraaf.nl')) {
   if (refresh) {
     refreshCurrentTab();
   }
-  let paywall = document.querySelector('div.MeteringNotification__backdrop, data-hydrate[data-name="PaywallHandler"]');
-  let article_body = document.querySelector('div.DetailBodyBlocks, section.TextArticlePage__imageWrapper, section > div.DetailArticleImage');
-  if (paywall && article_body && dompurify_loaded) {
+  let premium = document.querySelector('div[class^="Article__premium"] > p');
+  let paywall = document.querySelector('data-hydrate[data-name="PaywallHandler"]');
+  let article = document.querySelector('section > div.DetailArticleImage');
+  if (premium && paywall && article && dompurify_loaded) {
     let div_main = document.createElement('div');
     div_main.style = 'margin: 20px 0px;';
     let div_elem = document.createElement('div');
     let par_style = 'font-weight: normal; font-size: 16px; line-height: 1.5;';
-    let scripts = document.querySelectorAll('script:not([src]):not([type])');
     let window_script = document.querySelector('script#scr-tlg-body');
     if (window_script && window_script.text.includes('window.telegraaf.articleBodyBlocks')) {
       removeDOMElement(paywall);
@@ -2720,34 +2720,8 @@ else if (matchDomain('telegraaf.nl')) {
       let media = article_new.querySelectorAll('div.NewsletterForm, div.DetailArticleVideo');
       removeDOMElement(...media);
       div_main.appendChild(article_new);
-    } else {
-      let json_script = getArticleJsonScript();
-      if (json_script) {
-        removeDOMElement(paywall);
-        try {
-          let json = JSON.parse(json_script.text);
-          if (json) {
-            let json_text = json.articleBody;
-            if (json_text) {
-              let intro = document.querySelector('span[id^="articleIntro"], p.Article__intro > span:not([class])');
-              if (intro)
-                json_text = json_text.replace(intro.innerText + '\n\n', '');
-              let text_array = json_text.split('\\n');
-              for (let p_text of text_array) {
-                let p_div = document.createElement('p');
-                p_div.innerText = p_text;
-                p_div.style = par_style;
-                div_elem.appendChild(p_div);
-              };
-              div_main.appendChild(div_elem);
-            }
-          }
-        } catch (err) {
-          console.log(err);
-        }
-      }
     }
-    article_body.after(div_main);
+    article.after(div_main);
   }
   let banners = document.querySelectorAll('.ArticleBodyBlocks__inlineArticleSpotXBanner, .WebpushOptin');
   removeDOMElement(...banners);
