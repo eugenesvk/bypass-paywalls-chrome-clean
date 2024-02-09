@@ -2400,7 +2400,7 @@ var defaultSites = {
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
     block_js_inline: /\.theglobeandmail\.com\/.+\/article-.+\?rel=premium/,
-    block_regex: /smartwall\.theglobeandmail\.com\//
+    block_regex: /(smartwall\.theglobeandmail\.com\/|\.sophi\.io\/|\.zephr\.com\/zephr-browser\/)/
   },
   "The Hill": {
     domain: "thehill.com",
@@ -2910,6 +2910,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /\.qiota\.com\/data/,
     excluded_domains: ["qiota.com"]
+  },
+  "Sophi.io": {
+    domain: "sophi.io",
+    allow_cookies: 1,
+    block_regex_general: /\.sophi\.io\//,
+    excluded_domains: ["sophi.io"]
   },
   "Steady": {
     domain: "steadyhq.com",

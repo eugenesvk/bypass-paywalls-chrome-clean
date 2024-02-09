@@ -813,6 +813,7 @@
     "*://*.pico.tools/*",
     "*://*.poool.fr/*",
     "*://*.qiota.com/*",
+    "*://*.sophi.io/*",
     "*://*.steadyhq.com/*",
     "*://*.tinypass.com/*",
     "*://*.weborama.fr/*",
@@ -848,5 +849,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.4.5"
+  "version": "3.5.4.6"
 }

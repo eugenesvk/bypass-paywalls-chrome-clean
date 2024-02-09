@@ -10,6 +10,7 @@ Fix Grupo Prensa Iberica (css)
 Fix National Geographic USA (js-regwall)
 Fix The Indian Express (js)
 Fix Vogue Business (member-json)
+Update block general paywall script (Sophi.io)
 Update block general paywall script (update FewCents)
 
 * v3.5.4.0 (2024-02-04)
