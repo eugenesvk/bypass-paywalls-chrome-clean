@@ -18,6 +18,12 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
+  "Daily Mail UK": {
+    "domain": "dailymail.co.uk",
+    "allow_cookies": 1,
+    "block_regex": "\\/zephr\\/feature",
+    "upd_version": "3.5.4.6"
+  },
   "Dn.se": {
     "domain": "dn.se",
     "allow_cookies": 1,

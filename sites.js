@@ -489,6 +489,11 @@ var defaultSites = {
     domain: "dagsavisen.no",
     allow_cookies: 1
   },
+  "Daily Mail UK": {
+    domain: "dailymail.co.uk",
+    allow_cookies: 1,
+    block_regex: /\/zephr\/feature/
+  },
   "De Limburger (fetch from archive.is)": {
     domain: "limburger.nl",
     allow_cookies: 1,
