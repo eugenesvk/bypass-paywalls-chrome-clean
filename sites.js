@@ -2728,10 +2728,11 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Vogue Business (member-text only)": {
+  "Vogue Business (fetch from archive.is)": {
     domain: "voguebusiness.com",
     block_regex: /\.voguebusiness\.com\/journey\/compiler\/build-.+\.js/,
-    remove_cookies_select_drop: ["userId"]
+    remove_cookies_select_drop: ["userId"],
+    cs_dompurify: 1
   },
   "Volksstimme": {
     domain: "volksstimme.de",

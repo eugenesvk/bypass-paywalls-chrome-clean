@@ -10,7 +10,7 @@ Fix El Espanol (Cronica Global)
 Fix Grupo Prensa Iberica (css)
 Fix National Geographic USA (js-regwall)
 Fix The Indian Express (js)
-Fix Vogue Business (member-json)
+Fix Vogue Business (fetch from archive.is)
 Update block general paywall script (Sophi.io)
 Update block general paywall script (update FewCents)
 

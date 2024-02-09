@@ -5737,23 +5737,15 @@ else if (matchDomain('vikatan.com')) {
 }
 
 else if (matchDomain('voguebusiness.com')) {
-  let article = document.querySelector('div.body__inner-container');
+  let article_sel = 'div[data-testid="ArticlePageChunks"]';
+  let article = document.querySelector(article_sel);
   if (article) {
     let pars = article.querySelectorAll('p');
     if (pars.length < 5) {
-      let json_script = getArticleJsonScript();
-      if (json_script) {
-        let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text = json.articleBody.replace(/\n/g, '\n\n');
-          if (json_text) {
-            csDoneOnce = true;
-            article.innerText = json_text;
-            let url = window.location.href;
-            article.firstChild.before(archiveLink(url));
-          }
-        }
-      }
+      let url = window.location.href;
+      let url_archive = 'https://' + archiveRandomDomain() + '/' + url.split(/[#\?]/)[0];
+      csDoneOnce = true;
+      replaceDomElementExt(url_archive, true, false, article_sel);
     }
   }
 }
