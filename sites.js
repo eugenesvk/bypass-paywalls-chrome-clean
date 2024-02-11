@@ -2222,8 +2222,7 @@ var defaultSites = {
   },
   "Swarajyamag": {
     domain: "swarajyamag.com",
-    allow_cookies: 1,
-    remove_cookies: 1
+    allow_cookies: 1
   },
   "Tampa Bay Times": {
     domain: "tampabay.com",

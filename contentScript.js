@@ -4917,15 +4917,14 @@ else if (matchDomain('study.com')) {
 }
 
 else if (matchDomain('swarajyamag.com')) {
-  let paywall = document.querySelector('div#story-notification');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let non_subscriber_text = document.querySelector('div#non-subscriber-text');
-    if (non_subscriber_text)
-      non_subscriber_text.removeAttribute('id');
-    let subscriber_text = document.querySelectorAll('div.subscriber-text');
-    for (let elem of subscriber_text)
-      elem.removeAttribute('class');
+  if (!window.location.pathname.startsWith('/amp/')) {
+    let paywall = pageContains('h2', /Please Sign In To Continue Reading/);
+    let amphtml = document.querySelector('head > link[rel="amphtml"]');
+    if (paywall.length) {
+      removeDOMElement(...paywall);
+      if (amphtml)
+        amp_redirect_not_loop(amphtml);
+    }
   }
 }
 
