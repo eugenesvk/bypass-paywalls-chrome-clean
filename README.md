@@ -598,6 +598,7 @@ Grouped in options:\
 [Bild](https://www.bild.de) -
 [Börsen-Zeitung](https://www.boersen-zeitung.de) -
 [Cicero](https://www.cicero.de) -
+[Der Aktionär](https://www.deraktionaer.de) -
 [Der Freitag](https://www.freitag.de) -
 [Der Spiegel](https://www.spiegel.de) -
 [Der Tagesspiegel](https://www.tagesspiegel.de) -

@@ -200,6 +200,7 @@
     "*://*.democratandchronicle.com/*",
     "*://*.demorgen.be/*",
     "*://*.denverpost.com/*",
+    "*://*.deraktionaer.de/*",
     "*://*.destentor.nl/*",
     "*://*.detroitnews.com/*",
     "*://*.df.cl/*",
@@ -851,5 +852,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.4.7"
+  "version": "3.5.4.8"
 }

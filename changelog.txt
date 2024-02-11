@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add DailyMail.co.uk
+Add DerAktionaer.de (fetch from archive.is)
 Add Dwell (json)
 Add Superdeporte.es (Grupo Prensa Iberica)
 Add Ynet.co.il

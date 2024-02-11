@@ -24,6 +24,12 @@
     "block_regex": "\\/zephr\\/feature",
     "upd_version": "3.5.4.6"
   },
+  "Der Aktionär": {
+    "domain": "deraktionaer.de",
+    "allow_cookies": 1,
+    "ld_archive_is": "div#paywall-container|div#article-body",
+    "upd_version": "3.5.4.8"
+  },
   "Dn.se": {
     "domain": "dn.se",
     "allow_cookies": 1,

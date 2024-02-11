@@ -828,6 +828,11 @@ else if (matchDomain('cicero.de')) {
   removeDOMElement(...urban_ad_sign);
 }
 
+else if (matchDomain('deraktionaer.de')) {
+  let url = window.location.href;
+  getArchive(url, 'div#paywall-container', '', 'div#article-body');
+}
+
 else if (matchDomain('diepresse.com')) {
   let paywall = document.querySelector('div.paywall');
   if (paywall && dompurify_loaded) {
