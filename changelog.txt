@@ -6,6 +6,7 @@ Post-release
 Add DailyMail.co.uk
 Add Dwell (json)
 Add Superdeporte.es (Grupo Prensa Iberica)
+Add Ynet.co.il
 Fix El Espanol (Cronica Global)
 Fix Grupo Prensa Iberica (css)
 Fix National Geographic USA (js-regwall)

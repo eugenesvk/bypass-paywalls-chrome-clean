@@ -121,6 +121,13 @@
     "add_ext_link_type": "archive.is",
     "upd_version": "3.5.2.2"
   },
+  "Sophi.io": {
+    "domain": "sophi.io",
+    "allow_cookies": 1,
+    "block_regex_general": "\\.sophi\\.io\\/",
+    "excluded_domains": ["sophi.io"],
+    "upd_version": "3.5.4.6"
+  },
   "SPH Media": {
     "domain": "###_sg_sph_media",
     "group": [
@@ -176,5 +183,11 @@
     "ld_json": "aside[class^='PaywallInlineBarrierWrapper']|div.body__inner-container",
     "remove_cookies_select_drop": ["userId"],
     "upd_version": "3.5.4.4"
+  },
+  "Ynet": {
+    "domain": "ynet.co.il",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "upd_version": "3.5.4.7"
   }
 }

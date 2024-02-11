@@ -944,7 +944,8 @@ Grouped in options:\
 
 ##### Israel
 [Globes](https://www.globes.co.il) -
-[The Jerusalem Post](https://www.jpost.com)
+[The Jerusalem Post](https://www.jpost.com) -
+[Ynet](https://www.ynet.co.il)
 
 Grouped in options:\
 *Haaretz Group* sites like\
