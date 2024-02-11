@@ -9,6 +9,7 @@ Add Superdeporte.es (Grupo Prensa Iberica)
 Add Ynet.co.il
 Fix El Espanol (Cronica Global)
 Fix Grupo Prensa Iberica (css)
+Fix MIT Sloan Management Review (old articles)
 Fix National Geographic USA (js-regwall)
 Fix Swarajyamag
 Fix Telegraaf.nl (premium only)

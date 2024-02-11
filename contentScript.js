@@ -4783,7 +4783,16 @@ else if (matchDomain('slideshare.net')) {
 
 else if (matchDomain('sloanreview.mit.edu')) {
   let url = window.location.href;
-  getGoogleWebcache(url, 'body.is-paywall', {rm_class: 'is-paywall'}, 'div#article-content');
+  let article_sel = 'div.article-content';
+  func_post = function () {
+    let pars = document.querySelectorAll(article_sel + ' > p');
+    if (pars.length < 5) {
+      let article = document.querySelector(article_sel);
+      if (article)
+        article.firstChild.before(archiveLink(url));
+    }
+  }
+  getGoogleWebcache(url, 'body.is-paywall', {rm_class: 'is-paywall'}, article_sel);
 }
 
 else if (matchDomain('sofrep.com')) {
