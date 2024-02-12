@@ -64,6 +64,13 @@
     "cs_code": "[{\"cond\":\"div.ft-helper-closenews\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.5.4.1"
   },
+  "Kurier.at": {
+    "domain": "kurier.at",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "cs_code": "[{\"cond\":\"div#cfs-paywall-container\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]}]",
+    "upd_version": "3.5.5.2"
+  },
   "National Geographic USA": {
     "domain": "nationalgeographic.com",
     "allow_cookies": 1,

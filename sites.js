@@ -1317,10 +1317,10 @@ var defaultSites = {
   "Krautreporter.de": {
     domain: "krautreporter.de"
   },
-  "Kurier.at (do not block TinyPass-script externally)": {
+  "Kurier.at": {
     domain: "kurier.at",
     allow_cookies: 1,
-    block_regex: /cdn\.cxense\.com\//
+    block_regex: /\.tinypass\.com\//
   },
   "L'Écho": {
     domain: "lecho.be",
@@ -2902,7 +2902,7 @@ var defaultSites = {
     domain: "piano.io",
     allow_cookies: 1,
     block_regex_general: /\.piano\.io\/xbuilder\/experience\/execute/,
-    excluded_domains: ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "kurier.at", "nacion.com", "onet.pl"]
+    excluded_domains: ["piano.io", "asia.nikkei.com", "businessinsider.com.pl", "hbr.org", "japantimes.co.jp", "nacion.com", "onet.pl"]
   },
   "Pico.tools": {
     domain: "pico.tools",

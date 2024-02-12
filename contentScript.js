@@ -1141,17 +1141,17 @@ else if (matchDomain(['ksta.de', 'rundschau-online.de'])) {
 }
 
 else if (matchDomain('kurier.at')) {
-  let paywall = document.querySelector('div.plusContent');
+  let paywall = document.querySelector('div#cfs-paywall-container');
   if (paywall) {
-    paywall.classList.remove('plusContent');
-    window.setTimeout(function () {
-      let elem_hidden = paywall.querySelectorAll('.ng-star-inserted[style="display: none;"]');
-      for (let elem of elem_hidden)
-        elem.removeAttribute('style');
-    }, 2000);
+    removeDOMElement(paywall);
+    let div_hidden = document.querySelector('div.paywall');
+    if (div_hidden) {
+      div_hidden.classList.remove('paywall');
+      div_hidden.removeAttribute('style');
+    }
   }
-  let banners = document.querySelectorAll('div#view-offer, app-paywall, adfullbanner, outbrain');
-  removeDOMElement(...banners);
+  let banners = document.querySelectorAll('div[data-outbrain], div.OUTBRAIN');
+  hideDOMElement(...banners);
 }
 
 else if (matchDomain('motorradonline.de')) {
