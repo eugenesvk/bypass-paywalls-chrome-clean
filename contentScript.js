@@ -3142,12 +3142,20 @@ else if (matchDomain('thetimes.co.uk')) {
   let url = window.location.href;
   if (window.location.hostname !== 'epaper.thetimes.co.uk') {
     func_post = function () {
-      let headings = document.querySelectorAll('div > div[role="heading"]');
-      for (let elem of headings)
-        elem.parentNode.style['margin-top'] = '50px';
-      let image_boxes = document.querySelectorAll('div[id*="."][style]');
-      for (let elem of image_boxes)
-        elem.style['margin-bottom'] = '50px';
+      let figure = document.querySelector('figure > div[style] > div[style]');
+      if (figure) {
+        figure.removeAttribute('style');
+        figure.parentNode.removeAttribute('style');
+      }
+      let style_new = 'display: block; margin-left: auto; margin-right: auto; width: 90%;';
+      let inline_images = document.querySelectorAll('img[style][src^="https"]');
+      for (let elem of inline_images) {
+        elem.style = style_new;
+        elem.parentNode.removeAttribute('style');
+      }
+      let headers = document.querySelectorAll('article:not([id]) div[style*="text-align"]');
+      for (let elem of headers)
+        elem.style = style_new + ' text-align: center;';
       for (let n = 0; n < 5; n++) {
         window.setTimeout(function () {
           let page_scroll = document.querySelectorAll('html, body');

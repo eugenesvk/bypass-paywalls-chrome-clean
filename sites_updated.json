@@ -44,26 +44,6 @@
     "block_regex_general": "\\.fewcents\\.co\\/.+\\/paywall.*\\.js",
     "upd_version": "3.5.4.5"
   },
-  "Funke Mediengruppe": {
-    "domain": "###_de_funke_medien",
-    "group": [
-      "ikz-online.de",
-      "nrz.de",
-      "waz.de",
-      "wp.de",
-      "wr.de"
-    ],
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "block_regex": "\\.tinypass\\.com\\/",
-    "upd_version": "3.5.2.2"
-  },
-  "Grupo Abril": {
-    "domain": "abril.com.br",
-    "allow_cookies": 1,
-    "block_regex": "\\.abril\\.com\\.br\\/.+\\/abril-paywall\\/",
-    "upd_version": "3.5.2.1"
-  },
   "Grupo Prensa Ibérica": {
     "domain": "###_es_epiberica",
     "group": [
@@ -84,48 +64,12 @@
     "cs_code": "[{\"cond\":\"div.ft-helper-closenews\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.5.4.1"
   },
-  "Haaretz Group": {
-    "domain": "###_il_haaretz_group",
-    "group": [
-      "haaretz.co.il",
-      "haaretz.com",
-      "themarker.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.co(m|\\.il)\\/.+\\/magazine\\/page-.+\\.js",
-    "useragent": "semrushbot",
-    "cs_dompurify": 1,
-    "upd_version": "3.5.2.3"
-  },
-  "Landwirtschaftsverlag": {
-    "domain": "###_de_lv",
-    "group": [
-      "profi.de",
-      "topagrar.com",
-      "wochenblatt.com"
-    ],
-    "allow_cookies": 1,
-    "exception": [{
-        "domain": "topagrar.com",
-        "allow_cookies": 1,
-        "block_js_inline": "\\.topagrar\\.com\\/.+\\/news\\/"
-      }
-    ],
-    "upd_version": "3.5.2.4"
-  },
   "National Geographic USA": {
     "domain": "nationalgeographic.com",
     "allow_cookies": 1,
     "block_regex": "cdn\\.registerdisney\\.go\\.com\\/",
     "random_ip": "eu",
     "upd_version": "3.5.4.2"
-  },
-  "Newsweek.pl": {
-    "domain": "newsweek.pl",
-    "allow_cookies": 1,
-    "add_ext_link": "div#contentPremiumPlaceholder|div#article-content-body",
-    "add_ext_link_type": "archive.is",
-    "upd_version": "3.5.2.2"
   },
   "Sophi.io": {
     "domain": "sophi.io",
