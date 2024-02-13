@@ -855,7 +855,13 @@ Grouped in options:\
 [Handelszeitung](https://www.handelszeitung.ch) -
 [Schweizer Monat](https://schweizermonat.ch) -
 [The Market](https://themarket.ch)\
-[Neue Zürcher Zeitung](https://www.nzz.ch) (+ regional/CH Media; opt-in to custom sites)
+[Neue Zürcher Zeitung](https://www.nzz.ch)
+
+Grouped in options:\
+*[CH Media](https://chmedia.ch/marken)* sites like (opt-in to custom sites for unlisted)\
+[Aargauer Zeitung](https://www.aargauerzeitung.ch) -
+[Luzerner Zeitung](https://www.luzernerzeitung.ch) -
+[St. Galler Tagblatt](https://www.tagblatt.ch)
 
 Grouped in options:\
 *[Groupe ESH Médias](https://www.eshmedias.ch)* sites like\

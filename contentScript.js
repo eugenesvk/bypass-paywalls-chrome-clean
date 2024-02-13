@@ -14,6 +14,7 @@ var be_mediahuis_domains = ['hbvl.be', 'nieuwsblad.be', 'standaard.be'];
 var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdaujourdhui.be', 'flair.be', 'knack.be', 'kw.be', 'levif.be', 'libelle.be'];
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
+var ch_media_domains = ['aargauerzeitung.ch', 'luzernerzeitung.ch', 'tagblatt.ch'];
 var de_funke_medien_domains = ['ikz-online.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
@@ -1457,7 +1458,7 @@ else if (matchDomain(de_vrm_domains) || matchDomain(de_vrm_custom_domains)) {
   hideDOMElement(...ads);
 }
 
-else if (document.querySelector('script[src^="https://assets.static-chmedia.ch/"]')) {// nzz.ch regional/CH Media
+else if (matchDomain(ch_media_domains) || document.querySelector('head > link[href*="/assets.static-chmedia.ch/"]')) {
   let infobox_body = document.querySelector('div.infobox__body');
   if (infobox_body)
     infobox_body.removeAttribute('class');

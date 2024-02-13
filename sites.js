@@ -346,6 +346,16 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.qiota\.com\//
   },
+  "CH Media (opt-in to custom sites for unlisted)": {
+    domain: "###_ch_media",
+    group: [
+      "aargauerzeitung.ch",
+      "luzernerzeitung.ch",
+      "tagblatt.ch"
+    ],
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Challenges": {
     domain: "challenges.fr",
     allow_cookies: 1,
@@ -1757,10 +1767,10 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
-  "Neue Zürcher Zeitung (+ regional/CH Media; opt-in to custom sites)": {
+  "Neue Zürcher Zeitung (not epaper)": {
     domain: "nzz.ch",
     allow_cookies: 1,
-    block_regex: /(\.piano\.io\/|(ens\.nzz\.ch|\.ensighten\.com)\/.+\/Bootstrap\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+    block_regex: /ens\.nzz\.ch\/.+\/Bootstrap\.js/,
     useragent: "googlebot"
   },
   "New Left Review": {
@@ -3019,6 +3029,7 @@ expandSiteRules(defaultSites);
 
 // grouped domains (background)
 var au_news_corp_domains = grouped_sites['###_au_news_corp'];
+var ch_media_domains = grouped_sites['###_ch_media'];
 var de_madsack_domains = grouped_sites['###_de_madsack'];
 var es_grupo_vocento_domains = grouped_sites['###_es_grupo_vocento'];
 

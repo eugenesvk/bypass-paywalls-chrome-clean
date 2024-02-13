@@ -35,6 +35,7 @@ var restrictions = {
   'livemint.com': /^((?!\/epaper\.livemint\.com\/).)*$/,
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
   'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
+  'nzz.ch': /^((?!\/epaper\.nzz\.ch\/).)*$/,
   'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
@@ -50,6 +51,9 @@ var restrictions = {
 
 for (let domain of au_news_corp_domains)
   restrictions[domain] = new RegExp('^((?!todayspaper\\.' + domain.replace(/\./g, '\\.') + '\\/).)*$');
+for (let domain of ch_media_domains)
+  restrictions[domain] = new RegExp('^((?!epaper\\.' + domain.replace(/\./g, '\\.') + '\\/).)*$');
+
 if (typeof browser !== 'object') {
   for (let domain of [])
     restrictions[domain] = new RegExp('((\\/|\\.)' + domain.replace(/\./g, '\\.') + '\\/$|' + restrictions[domain].toString().replace(/(^\/|\/$)/g, '') + ')');

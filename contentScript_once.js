@@ -73,7 +73,7 @@ window.setTimeout(function () {
       else if (matchDomain(['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de']))
         group = '###_de_vrm';
       else if (document.querySelector('head > link[href*="/assets.static-chmedia.ch/"]'))
-        group = 'nzz.ch';
+        group = '###_ch_media';
       else if (document.querySelector('head > link[href*=".tamedia.ch/"]'))
         group = '###_ch_tamedia';// custom
     } else if (hostname.match(/\.(es|cat)$/) || matchDomain(['diariocordoba.com', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info'])) {

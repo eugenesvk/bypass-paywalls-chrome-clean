@@ -54,6 +54,7 @@
     "webRequestBlocking",
     "*://*.360dx.com/*",
     "*://*.60millions-mag.com/*",
+    "*://*.aargauerzeitung.ch/*",
     "*://*.abc.es/*",
     "*://*.abqjournal.com/*",
     "*://*.abril.com.br/*",
@@ -462,6 +463,7 @@
     "*://*.losandes.com.ar/*",
     "*://*.lrb.co.uk/*",
     "*://*.lunion.fr/*",
+    "*://*.luzernerzeitung.ch/*",
     "*://*.lvz.de/*",
     "*://*.macrobusiness.com.au/*",
     "*://*.madison.com/*",
@@ -664,6 +666,7 @@
     "*://*.svz.de/*",
     "*://*.swarajyamag.com/*",
     "*://*.syracuse.com/*",
+    "*://*.tagblatt.ch/*",
     "*://*.tagesspiegel.de/*",
     "*://*.tampabay.com/*",
     "*://*.techinasia.com/*",
@@ -852,5 +855,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.5.2"
+  "version": "3.5.5.3"
 }
