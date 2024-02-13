@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add CH Media (opt-in to custom sites for unlisted)
+Fix Groupe ESH Medias (iframely)
 Fix Kurier.at (js & css)
 Fix Nw.de (amp-redirect)
 Fix TheTimes.co.uk (mobile images)
