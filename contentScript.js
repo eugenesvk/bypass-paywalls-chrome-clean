@@ -4401,7 +4401,7 @@ else if (matchDomain('jpost.com')) {
 }
 
 else if (matchDomain(['latimes.com', 'sandiegouniontribune.com'])) {
-  let ads = document.querySelectorAll('div.enhancement, div.google-dfp-ad-wrapper, div.revcontent');
+  let ads = document.querySelectorAll('div.google-dfp-ad-wrapper, div.revcontent');
   hideDOMElement(...ads);
 }
 

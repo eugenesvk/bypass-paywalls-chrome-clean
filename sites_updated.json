@@ -71,12 +71,26 @@
     "cs_code": "[{\"cond\":\"div#cfs-paywall-container\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]}]",
     "upd_version": "3.5.5.2"
   },
+  "Los Angeles Times": {
+    "domain": "latimes.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.californiatimes\\.com\\/meteringjs",
+    "cs_block": 1,
+    "upd_version": "3.5.5.4"
+  },
   "National Geographic USA": {
     "domain": "nationalgeographic.com",
     "allow_cookies": 1,
     "block_regex": "cdn\\.registerdisney\\.go\\.com\\/",
     "random_ip": "eu",
     "upd_version": "3.5.4.2"
+  },
+  "San Diego Union Tribune": {
+    "domain": "sandiegouniontribune.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.californiatimes\\.com\\/meteringjs",
+    "cs_block": 1,
+    "upd_version": "3.5.5.4"
   },
   "Sophi.io": {
     "domain": "sophi.io",
