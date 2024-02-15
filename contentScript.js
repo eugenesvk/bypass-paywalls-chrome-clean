@@ -1598,17 +1598,22 @@ else if (matchDomain('elpais.com')) {
 }
 
 else if (matchDomain(es_grupo_vocento_domains)) {
-  let paywall_sel = '.voc-paywall, .container-wall-exclusive, .cierre-suscripcion:not([style*="display: none;"])';
+  let paywall_sel = 'div.voc-paywall, div.container-wall-exclusive__content-login';
   let paywall = document.querySelector(paywall_sel);
   if (!window.location.pathname.endsWith('_amp.html')) {
     if (!matchDomain(['eldiariomontanes.es'])) {
       amp_redirect(paywall_sel, '', window.location.pathname.replace('.html', '_amp.html'));
+    } else {
+      if (paywall) {
+        let url = window.location.href;
+        paywall.before(archiveLink(url));
+        removeDOMElement(paywall);
+      }
     }
-    let banners = document.querySelectorAll('.voc-advertising, div.ev-em-modal, span.mega-superior, .v-adv');
+    let banners = document.querySelectorAll('div.voc-advertising, div.ev-em-modal, span.mega-superior, div.v-adv');
     hideDOMElement(...banners);
   } else {
-    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed, .v-adv');
-    removeDOMElement(paywall);
+    amp_unhide_access_hide('="result=\'ALLOW_ACCESS\'"', '="result!=\'ALLOW_ACCESS\'"', 'amp-ad, amp-embed, div.v-adv');
     let body_top = document.querySelector('body#top');
     if (body_top)
       body_top.removeAttribute('id');

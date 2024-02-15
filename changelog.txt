@@ -6,6 +6,7 @@ Post-release
 Add CH Media (opt-in to custom sites for unlisted)
 Fix Advance Local (json)
 Fix Groupe ESH Medias (iframely)
+Fix Grupo Vocento (limit amp-redirect)
 Fix Kurier.at (js & css)
 Fix Los Angeles Times (images)
 Fix Nw.de (amp-redirect)

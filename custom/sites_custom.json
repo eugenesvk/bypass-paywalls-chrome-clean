@@ -25,6 +25,11 @@
     "domain": "airmail.news",
     "ld_archive_is": "div.paywall-card|div.article-text|div[data-article-target='body']"
   },
+  "Aoc.media": {
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr",
+    "domain": "aoc.media"
+  },
   "Artsprofessional.co.uk": {
     "allow_cookies": 1,
     "block_regex": "\\.artsprofessional\\.co\\.uk\\/.+\\/js\\/content_paywall\\.js",
@@ -239,6 +244,11 @@
     "allow_cookies": 1,
     "domain": "flz.de",
     "useragent": "googlebot"
+  },
+  "Fokus.se": {
+    "allow_cookies": 1,
+    "block_regex": "\\.fokus\\.se\\/app\\/.+\\/sesamy-fpg\\.js",
+    "domain": "fokus.se"
   },
   "Frieze.com": {
     "allow_cookies": 1,
