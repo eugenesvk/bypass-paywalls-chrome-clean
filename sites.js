@@ -6,7 +6,6 @@ var defaultSites = {
   },
   "Advance Local": {
     domain: "###_usa_adv_local",
-    allow_cookies: 1,
     group: [
       "al.com",
       "cleveland.com",
@@ -18,7 +17,10 @@ var defaultSites = {
       "pennlive.com",
       "silive.com",
       "syracuse.com"
-    ]
+    ],
+    allow_cookies: 1,
+    block_regex: /\.sophi\.io\//,
+    cs_dompurify: 1
   },
   "Adweek": {
     domain: "adweek.com",
@@ -541,7 +543,8 @@ var defaultSites = {
     domain: "###_de_dfv_medien",
     group: [],
     allow_cookies: 1,
-    useragent: "googlebot"
+    useragent: "googlebot",
+    cs_code: "[{\"cond\":\"div.Ad\", \"rm_elem\":1}]"
   },
   "Diario Financiero": {
     domain: "df.cl",

@@ -3501,12 +3501,62 @@ else
 } else {//other (like com/org & not at/be/br/ch/cl/de/dk/fi/fr/es/ie/nl/no/pe/pt/se/uk))
 
 if (matchDomain(usa_adv_local_domains)) {
-  let url = window.location.href;
-  if (url.includes('?outputType=amp')) {
-    let amp_ads = document.querySelectorAll('.amp-ad-container, amp-embed');
-    hideDOMElement(...amp_ads);
+  if (window.location.search.startsWith('?outputType=amp')) {
+    let ads = document.querySelectorAll('.amp-ad-container, amp-embed');
+    hideDOMElement(...ads);
   } else {
-    amp_redirect('div.paywall', '', window.location.pathname + '?outputType=amp');
+    let paywall_sel = 'div.paywall';
+    let paywall = document.querySelector(paywall_sel);
+    let article = document.querySelector('div.entry-content');
+    if (paywall && article && dompurify_loaded) {
+      let fusion_script = document.querySelector('script#fusion-metadata');
+      if (fusion_script && fusion_script.text.includes('Fusion.globalContent=')) {
+        paywall.classList.remove('paywall');
+        try {
+          let json = JSON.parse(fusion_script.text.split('Fusion.globalContent=')[1].split('};')[0] + '}');
+          if (json) {
+            article.innerHTML = '';
+            let parser = new DOMParser();
+            let pars = json.content_elements;
+            for (let par of pars) {
+              let par_new;
+              if (['header', 'text'].includes(par.type)) {
+                if (par.content) {
+                  let doc = parser.parseFromString('<p class="article__paragraph">' + DOMPurify.sanitize(par.content) + '</p>', 'text/html');
+                  par_new = doc.querySelector('p');
+                }
+              } else if (par.image_type) {
+                if (par.url) {
+                  par_new = document.createElement('figure');
+                  par_new.className = 'article__image';
+                  par_new.style = 'width: 75%; margin-left: auto; margin-right: auto;';
+                  let img = document.createElement('img');
+                  img.src = par.url;
+                  if (par.alt_text)
+                    img.alt = par.alt_text;
+                  par_new.appendChild(img);
+                  let caption = document.createElement('figcaption');
+                  caption.className = 'article__image-caption';
+                  let cap_par = document.createElement('p');
+                  cap_par.innerText = par.caption;
+                  if (par.credits && par.credits.by && par.credits.by[0] && par.credits.by[0].byline)
+                    cap_par.innerText += ' - ' + par.credits.by[0].byline;
+                  caption.appendChild(cap_par);
+                  par_new.appendChild(caption);
+                }
+              } else if (!['raw_html'].includes(par.type)) {
+                console.log(par);
+              }
+              if (par_new)
+                article.appendChild(par_new);
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      } else
+        amp_redirect(paywall_sel, '', window.location.pathname + '?outputType=amp');
+    }
     let ads = document.querySelectorAll('div.ad');
     hideDOMElement(...ads);
   }

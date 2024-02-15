@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add CH Media (opt-in to custom sites for unlisted)
+Fix Advance Local (json)
 Fix Groupe ESH Medias (iframely)
 Fix Kurier.at (js & css)
 Fix Los Angeles Times (images)
