@@ -350,8 +350,11 @@ Grouped in options:\
 [Milwaukee Journal Sentinel](https://www.jsonline.com) -
 [The Arizona Republic](https://www.azcentral.com) -
 [The Cincinnati Enquirer](https://www.cincinnati.com) -
+[The Columbus Dispatch](https://www.dispatch.com) -
 [The Courier-Journal](https://www.courier-journal.com) -
+[The Des Moines Register](https://www.desmoinesregister.com) -
 [The Detroit News](https://www.detroitnews.com) -
+[The Florida Times-Union](https://www.jacksonville.com) -
 [The Indianapolis Star](https://www.indystar.com) -
 [The News-Press](https://www.news-press.com) -
 [The Oklahoman](https://www.oklahoman.com) -

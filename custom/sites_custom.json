@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, politiken.dk, theinformation.com",
+    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -432,11 +432,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com",
     "domain": "lyrik.fr"
-  },
-  "Mailplus.co.uk": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "mailplus.co.uk"
   },
   "Makorrishon.co.il": {
     "allow_cookies": 1,

@@ -116,7 +116,7 @@ window.setTimeout(function () {
         group = '###_uk_incisive_media';
       else if (document.querySelector('script[src="https://cdn.blueconic.net/bridgetowermedia.js"], header.site-header > div.btm-header'))
         group = '###_usa_bridge_tower';
-      else if (document.querySelector('img[srcset^="https://www.gannett-cdn.com/"], head > link[href*=".gannett-cdn.com/"]'))
+      else if (document.querySelector('head > link[href*=".gannettdigital.com/"], head > link[href*=".gannett-cdn.com/"]'))
         group = '###_usa_gannett';
       else if (document.querySelector('script[src*="/treg.hearstnp.com/"]'))
         group = '###_usa_hearst_comm';
