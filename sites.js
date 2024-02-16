@@ -1931,6 +1931,7 @@ var defaultSites = {
     group: [
       "billboard.com",
       "rollingstone.com",
+      "sourcingjournal.com",
       "sportico.com",
       "variety.com",
       "wwd.com"

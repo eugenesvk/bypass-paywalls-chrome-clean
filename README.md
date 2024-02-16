@@ -275,8 +275,7 @@ Grouped in options:\
 [Road & Track](https://www.roadandtrack.com) -
 [Runner's World](https://www.runnersworld.com) -
 [Town & Country](https://www.townandcountrymag.com) -
-[Women's Health](https://www.womenshealthmag.com)
-
+[Women's Health](https://www.womenshealthmag.com)\
 *Outside magazines* sites like\
 [Backpacker](https://www.backpacker.com) -
 [Beta](https://www.betamtb.com) -
@@ -294,10 +293,10 @@ Grouped in options:\
 *Penske Media Corporation* sites like\
 [Billboard](https://www.billboard.com) -
 [Rolling Stone](https://www.rollingstone.com) -
+[Sourcing Journal](https://sourcingjournal.com) -
 [Sportico](https://www.sportico.com) -
 [Variety](https://variety.com) -
-[WWD](https://wwd.com)
-
+[WWD](https://wwd.com)\
 *The Epoch Times* sites like (opt-in to custom sites for cz|de|fr|jp|ro sites)\
 [Epoch.org.il](https://epoch.org.il) -
 [The Epoch Times](https://www.theepochtimes.com)

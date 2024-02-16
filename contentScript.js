@@ -3468,6 +3468,11 @@ else if (matchDomain('ladiaria.com.uy')) {
   }
 }
 
+else if (matchDomain('lanacion.com.ar')) {
+  let ads = document.querySelectorAll('div.mod-banner');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('latercera.com')) {
   let subscr_banner = document.querySelector('.empty');
   removeDOMElement(subscr_banner);
@@ -6009,6 +6014,11 @@ else if (document.querySelector('script[src*=".axate.io/"]')) {
   let premium = document.querySelector('.premium, div[class*="-premium"]');
   if (premium)
     premium.removeAttribute('class');
+}
+
+else if (document.querySelector('head > meta[property][content^="https://cdn.forumcomm.com/"]')) {
+  let ads = document.querySelectorAll('div.GoogleDfpAd-Content');
+  hideDOMElement(...ads);
 }
 
 else if (document.querySelector('head > link[href*="/leaky-paywall"], script[src*="/leaky-paywall"], div[id^="issuem-leaky-paywall-"]')) {
