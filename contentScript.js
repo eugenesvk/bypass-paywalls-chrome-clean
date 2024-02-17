@@ -3258,28 +3258,40 @@ else if (matchDomain('cambiocolombia.com')) {
 }
 
 else if (matchDomain('cartacapital.com.br')) {
-  let paywall = document.querySelector('aside.paywall');
-  if (paywall) {
-    removeDOMElement(paywall);
-    let json_script = getArticleJsonScript();
-    if (json_script) {
-      try {
-        let json = JSON.parse(json_script.text);
-        if (json) {
-          let json_text = json[1].articleBody.replace(/\s{2,}/g, '\r\n\r\n');
-          let content = document.querySelector('section.s-content__text');
-          if (json_text && content) {
-            content.innerHTML = '';
-            let article_new = document.createElement('p');
-            article_new.innerText = json_text;
-            content.appendChild(article_new);
+  if (!window.location.pathname.endsWith('/amp/')) {
+    let paywall = document.querySelector('aside.paywall');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let json_script = getArticleJsonScript();
+      if (json_script) {
+        try {
+          let json = JSON.parse(json_script.text);
+          if (json) {
+            let json_text = json[1].articleBody.replace(/\s{2,}/g, '\r\n\r\n');
+            let content = document.querySelector('section.s-content__text');
+            if (json_text && content) {
+              content.innerHTML = '';
+              let article_new = document.createElement('p');
+              article_new.innerText = json_text;
+              content.appendChild(article_new);
+            }
           }
+        } catch (err) {
+          console.log(err);
         }
-      } catch (err) {
-        console.log(err);
+      }
+    } else {
+      let content_soft = document.querySelector('div.contentSoft');
+      if (content_soft) {
+        content_soft.removeAttribute('class');
+        let freemium = document.querySelectorAll('div[class^="s-freemium"], div.maggazine-add');
+        removeDOMElement(...freemium);
       }
     }
-  }
+    let ads = document.querySelectorAll('div.div_ros_topo');
+    hideDOMElement(...ads);
+  } else
+    ampToHtml();
 }
 
 else if (matchDomain('crusoe.com.br')) {
@@ -3508,7 +3520,7 @@ else if (window.location.hostname.endsWith('.cl') && document.querySelector('hea
 else
   csDone = true;
 
-} else {//other (like com/org & not at/be/br/ch/cl/de/dk/fi/fr/es/ie/nl/no/pe/pt/se/uk))
+} else {//other (like com/org & not ar/at/au/be/br/cat/ch/cl/de/dk/fi/fr/es/ie/nl/pe/pt/se/uk/uy))
 
 if (matchDomain(usa_adv_local_domains)) {
   if (window.location.search.startsWith('?outputType=amp')) {

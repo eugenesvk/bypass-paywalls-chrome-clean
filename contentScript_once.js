@@ -84,6 +84,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.fi')) {
       if (document.querySelector('head > link[href^="https://assets.almatalent.fi"]'))
         group = '###_fi_alma_talent';// no fix
+      else if (document.querySelector('head[prefix*=".kalevamedia.fi/"]'))
+        group = '###_fi_kaleva';// no fix
     } else if (hostname.endsWith('.fr')) {
       if (document.querySelector('head > meta[name="google-play-app"][content^="app-id=com.centrefrance"]'))
         group = '###_fr_gcf';

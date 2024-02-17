@@ -730,6 +730,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
   },
+  "T3n.de": {
+    "allow_cookies": 1,
+    "domain": "t3n.de",
+    "ld_json": "div.c-pro-wall__wrapper|div.pro-blur>p"
+  },
   "Tamedia.ch (refresh)": {
     "add_ext_link": "div#piano-premium|p[class^='ArticleParagraph_root_']",
     "add_ext_link_type": "google_search_tool",
@@ -822,6 +827,11 @@
     "allow_cookies": 1,
     "block_regex": "\\/thenationalpulse\\.com\\/wp-content\\/.+\\/assets\\/js\\/national-pulse\\.js",
     "domain": "thenationalpulse.com"
+  },
+  "Theqt.online": {
+    "allow_cookies": 1,
+    "domain": "theqt.online",
+    "ld_json_url": "section.elementor-section|div.post_center_side_text"
   },
   "Thestage.co.uk": {
     "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
