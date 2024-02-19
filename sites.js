@@ -1,4 +1,19 @@
 var defaultSites = {
+  "* BPC settings": {
+    domain: "###"
+  },
+  "Show options on update": {
+    domain: "#options_on_update"
+  },
+  "Enable new sites by default": {
+    domain: "#options_enable_new_sites"
+  },
+  "Check for update rules at startup": {
+    domain: "#options_optin_update_rules"
+  },
+  "* Default sites": {
+    domain: "###"
+  },
   "60 Millions de consommateurs": {
     domain: "60millions-mag.com",
     allow_cookies: 1,
@@ -115,7 +130,7 @@ var defaultSites = {
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js)/,
     useragent: "googlebot"
   },
-  "Australia News Corp (when blocked disable Googlebot in BPC-settings)": {
+  "Australia News Corp (when blocked disable Googlebot below)": {
     domain: "###_au_news_corp",
     group: [
       "adelaidenow.com.au",
@@ -153,6 +168,9 @@ var defaultSites = {
         block_regex: /cdn\.ampproject\.org\/v\d\/amp-subscriptions-.+\.js/
       }
     ]
+  },
+  "Australia News Corp - no Googlebot (blocked; only disabled when amp-fix)": {
+    domain: "#options_disable_gb_au_news_corp"
   },
   "Australian Community Media (daily)": {
     domain: "###_au_comm_media",
@@ -1100,7 +1118,6 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /\.co(m|\.il)\/.+\/magazine\/page-.+\.js/,
-    useragent: "semrushbot",
     cs_dompurify: 1
   },
   "Haas Mediengruppe (opt-in to custom sites)": {
@@ -2969,20 +2986,8 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex_general: /(\.zephr\.com\/zephr-browser\/|\/zephr\/feature)/
   },
-  "* BPC settings": {
+  "* Custom (new) sites": {
     domain: "###"
-  },
-  "Show options on update": {
-    domain: "#options_on_update"
-  },
-  "Enable new sites by default": {
-    domain: "#options_enable_new_sites"
-  },
-  "Check for update rules at startup": {
-    domain: "#options_optin_update_rules"
-  },
-  "Australia News Corp - no Googlebot (blocked; only disabled when amp-fix)": {
-    domain: "#options_disable_gb_au_news_corp"
   },
 }
 

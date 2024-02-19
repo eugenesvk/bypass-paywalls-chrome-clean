@@ -1,7 +1,7 @@
 var ext_api = (typeof browser === 'object') ? browser : chrome;
 
 // Saves options to ext_api.storage
-function save_options() {
+function save_options(event) {
   var inputEls = document.querySelectorAll('#bypass_sites input');
   var sites = {};
 
@@ -16,11 +16,15 @@ function save_options() {
     sites: sites
   }, function() {
     // Update status to let user know options were saved.
-    var status = document.getElementById('status');
-    status.textContent = 'Options saved.';
-    setTimeout(function () {
-      status.textContent = '';
-    }, 800);
+	if (event) {
+	  var status_label = document.querySelectorAll('[id^="status"]');
+	  for (let status of status_label) {
+	    status.textContent = 'Options saved.';
+	    setTimeout(function () {
+	      status.textContent = '';
+	    }, 800);
+	  }
+	}
   });
 }
 
@@ -61,24 +65,18 @@ function renderOptions() {
       },
       "default": {
         sites: defaultSites,
-        title: '* Default sites',
         default_sites: true
       },
       "custom": {
         sites: sites_custom,
-        title: '* Custom (new) sites',
         default_sites: false
       }
     };
-    var first = true;
     for (let site_type in site_types) {
-      if (!first)
-        labelEl.appendChild(document.createElement('hr'));
-      else
-        first = false;
       labelEl = document.createElement('label');
       labelEl.setAttribute('style', ' font-weight: bold;');
-      labelEl.appendChild(document.createTextNode(site_types[site_type].title));
+      if (site_types[site_type].title)
+        labelEl.appendChild(document.createTextNode(site_types[site_type].title));
       sitesEl.appendChild(labelEl);
       let sites_arr = site_types[site_type].sites;
       for (let key in sites_arr) {
@@ -105,7 +103,7 @@ function renderOptions() {
     labelEl.appendChild(document.createElement('hr'));
     labelEl = document.createElement('label');
     labelEl.setAttribute('style', ' font-weight: bold;');
-    labelEl.appendChild(document.createTextNode('* Excluded Sites (ignored when checked in list)'));
+    labelEl.appendChild(document.createTextNode('* Excluded Sites (domain(s) ignored when checked in list)'));
     sitesEl.appendChild(labelEl);
     labelEl = document.createElement('label');
     labelEl.appendChild(document.createTextNode(sites_excluded.join()));
@@ -157,6 +155,7 @@ function compareKey(firstStr, secondStr) {
 
 document.addEventListener('DOMContentLoaded', renderOptions);
 document.getElementById('save').addEventListener('click', save_options);
+document.getElementById('save_top').addEventListener('click', save_options);
 document.getElementById('select-all').addEventListener('click', selectAll);
 document.getElementById('select-none').addEventListener('click', selectNone);
 document.getElementById("button-close").addEventListener('click', closeButton);

@@ -788,6 +788,7 @@
   },
   "Thedispatch.com": {
     "add_ext_link": "article:not(.newsletter) section.paywall-section|div.content",
+    "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "thedispatch.com",
     "ld_archive_is": "article:not(.newsletter) section.paywall-section|main>article",

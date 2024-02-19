@@ -73,6 +73,18 @@
     "cs_code": "[{\"cond\":\"div.ft-helper-closenews\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.5.4.1"
   },
+  "Haaretz Group": {
+    "domain": "###_il_haaretz_group",
+    "group": [
+      "haaretz.co.il",
+      "haaretz.com",
+      "themarker.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.co(m|\\.il)\\/.+\\/magazine\\/page-.+\\.js",
+    "cs_dompurify": 1,
+    "upd_version": "3.5.6.2"
+  },
   "Kurier.at": {
     "domain": "kurier.at",
     "allow_cookies": 1,
