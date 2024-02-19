@@ -1,11 +1,4 @@
 {
-  "Augsburger Allgemeine": {
-    "domain": "augsburger-allgemeine.de",
-    "allow_cookies": 1,
-    "block_regex": "(\\.tinypass\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "useragent": "googlebot",
-    "upd_version": "3.5.3.1"
-  },
   "Barron's": {
     "domain": "barrons.com",
     "allow_cookies": 1,
@@ -24,6 +17,24 @@
     "cs_code": "[{\"cond\":\"div.contentSoft\", \"rm_attrib\":\"class\"}]",
     "upd_version": "3.5.5.7"
   },
+  "Condé Nast magazines": {
+    "domain": "###_usa_conde_nast",
+    "group": [
+      "architecturaldigest.com",
+      "bonappetit.com",
+      "cntraveler.com",
+      "epicurious.com",
+      "gq.com",
+      "newyorker.com",
+      "vanityfair.com",
+      "vogue.co.uk",
+      "vogue.com",
+      "wired.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.{domain}\\/journey\\/compiler\\/build-.+\\.js",
+    "upd_version": "3.5.6.1"
+  },
   "Daily Mail UK": {
     "domain": "dailymail.co.uk",
     "allow_cookies": 1,
@@ -35,14 +46,6 @@
     "allow_cookies": 1,
     "ld_archive_is": "div#paywall-container|div#article-body",
     "upd_version": "3.5.4.8"
-  },
-  "Dn.se": {
-    "domain": "dn.se",
-    "allow_cookies": 1,
-    "add_ext_link": "div.esi-paywall|div.article__content",
-    "add_ext_link_type": "archive.is",
-    "ld_archive_is": "div.esi-paywall|div.article__premium-content|article>div[style='display:block;']",
-    "upd_version": "3.5.3.7"
   },
   "FewCents": {
     "domain": "fewcents.co",
@@ -105,29 +108,11 @@
     "excluded_domains": ["sophi.io"],
     "upd_version": "3.5.4.6"
   },
-  "SPH Media": {
-    "domain": "###_sg_sph_media",
-    "group": [
-      "businesstimes.com.sg",
-      "straitstimes.com"
-    ],
-    "allow_cookies": 1,
-    "add_ext_link": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
-    "add_ext_link_type": "archive.is",
-    "ld_archive_is": "div[class*=eas-paywall],div#nocx_paywall_area|main#content",
-    "upd_version": "3.5.3.4"
-  },
   "The Indian Express": {
     "domain": "indianexpress.com",
     "allow_cookies": 1,
     "block_regex": "(\\/indianexpress\\/js\\/evolok\\/|\\.fewcents\\.co\\/.+\\/paywall.*\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
     "upd_version": "3.5.4.5"
-  },
-  "The Lamp Magazine": {
-    "domain": "thelampmagazine.com",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.paywall-gradient\", \"rm_attrib\":\"class\", \"elems\":[{\"cond\":\"section.p-8\", \"rm_elem\":1}]}]",
-    "upd_version": "3.5.3.5"
   },
   "The New York Times": {
     "domain": "nytimes.com",
@@ -135,24 +120,6 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
-  },
-  "Tribune Publishing Company": {
-    "domain": "###_usa_tribune",
-    "group": [
-      "baltimoresun.com",
-      "capitalgazette.com",
-      "chicagotribune.com",
-      "courant.com",
-      "dailypress.com",
-      "mcall.com",
-      "nydailynews.com",
-      "orlandosentinel.com",
-      "pilotonline.com",
-      "sun-sentinel.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "(\\.{domain}\\/(script|.+\\/loader-wp\\/static\\/loader\\.min)\\.js)",
-    "upd_version": "3.5.3.2"
   },
   "Vogue Business (member-text only)": {
     "domain": "voguebusiness.com",

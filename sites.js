@@ -408,13 +408,12 @@ var defaultSites = {
       "gq.com",
       "newyorker.com",
       "vanityfair.com",
+      "vogue.co.uk",
       "vogue.com",
       "wired.com"
     ],
     allow_cookies: 1,
-    remove_cookies: 1,
-    block_regex: "(\\.{domain}\\/journey\\/compiler\\/build-.+\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    useragent: "googlebot"
+    block_regex: "\\.{domain}\\/journey\\/compiler\\/build-.+\\.js"
   },
   "Connaissance des Arts": {
     domain: "connaissancedesarts.com",

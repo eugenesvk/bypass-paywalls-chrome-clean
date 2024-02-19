@@ -250,6 +250,7 @@ Grouped in options:\
 *Condé Nast magazines* sites like\
 [Architectural Digest](https://www.architecturaldigest.com) -
 [Bon Appétit](https://www.bonappetit.com) -
+[British Vogue](https://www.vogue.co.uk) -
 [Condé Nast Traveler](https://www.cntraveler.com) -
 [Epicurious](https://www.epicurious.com) -
 [GC](https://www.gq.com) -
