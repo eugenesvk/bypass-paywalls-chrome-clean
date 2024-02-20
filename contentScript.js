@@ -371,6 +371,13 @@ if (matchDomain('crikey.com.au')) {
   hideDOMElement(...ads);
 }
 
+else if (matchDomain('forbes.com.au')) {
+  if (dompurify_loaded)
+    getJsonUrl('div[class*="_gate"]', '', 'div.article-page__content-body');
+  let fade = document.querySelector('div[style*="background-image: linear-gradient"]');
+  removeDOMElement(fade);
+}
+
 else if (matchDomain('macrobusiness.com.au')) {
   let paywall = pageContains('div > p', 'The full text of this article is available');
   if (paywall[0] && dompurify_loaded) {

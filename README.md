@@ -875,6 +875,7 @@ Grouped in options:\
 ##### Australia/New Zealand
 
 [Crikey](https://www.crikey.com.au) -
+[Forbes Australia](https://www.forbes.com.au) -
 [Inkl](https://www.inkl.com) -
 [MacroBusiness](https://www.macrobusiness.com.au) -
 [New Zealand Herald](https://www.nzherald.co.nz) -

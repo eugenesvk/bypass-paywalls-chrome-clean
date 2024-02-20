@@ -53,6 +53,12 @@
     "block_regex_general": "\\.fewcents\\.co\\/.+\\/paywall.*\\.js",
     "upd_version": "3.5.4.5"
   },
+  "Forbes Australia": {
+    "domain": "forbes.com.au",
+    "remove_cookies_select_drop": ["blaize_session"],
+    "ld_json_url": "div[class*='_gate']|div.article-page__content-body",
+    "upd_version": "3.5.6.3"
+  },
   "Grupo Prensa Ibérica": {
     "domain": "###_es_epiberica",
     "group": [

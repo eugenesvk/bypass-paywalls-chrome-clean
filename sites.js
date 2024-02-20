@@ -783,6 +783,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.forbes\.com\/zephr\/feature|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },
+  "Forbes Australia": {
+    domain: "forbes.com.au",
+    remove_cookies_select_drop: ["blaize_session"],
+    cs_dompurify: 1
+  },
   "Foreign Affairs (not reader)": {
     domain: "foreignaffairs.com",
     allow_cookies: 1,
