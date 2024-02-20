@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
+    "cs_code": "bild.de, dn.se, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -29,6 +29,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.poool\\.fr",
     "domain": "aoc.media"
+  },
+  "Arkansasonline.com": {
+    "add_ext_link": "div.bee-page-container|div.article__body",
+    "add_ext_link_type": "google_search_tool",
+    "domain": "arkansasonline.com"
   },
   "Artsprofessional.co.uk": {
     "allow_cookies": 1,
@@ -254,12 +259,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "frieze.com"
-  },
-  "Gazetaprawna.pl": {
-    "allow_cookies": 1,
-    "amp_redirect": "div.displayMode_simplePaywall",
-    "domain": "gazetaprawna.pl",
-    "ld_json": "div.simplePaywall|article"
   },
   "Gazette.com": {
     "allow_cookies": 1,
@@ -655,6 +654,9 @@
     "allow_cookies": 1,
     "block_regex": "\\.schwaebische-post\\.de\\/sub\\/js\\/pc-offer-west\\.js",
     "domain": "schwaebische-post.de"
+  },
+  "Screendaily.com": {
+    "domain": "screendaily.com"
   },
   "Shrm.org": {
     "allow_cookies": 1,

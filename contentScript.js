@@ -3613,11 +3613,6 @@ else if (matchDomain('americanbanker.com') || matchDomain(usa_arizent_custom_dom
   }
 }
 
-else if (matchDomain('arkansasonline.com')) {
-  let url = window.location.href;
-  getGoogleWebcache(url, 'div.bee-page-container', '', 'div.article__body');
-}
-
 else if (matchDomain('artnet.com')) {
   if (window.location.pathname.endsWith('/amp-page')) {
     amp_unhide_subscr_section();

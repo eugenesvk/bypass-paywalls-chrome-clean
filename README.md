@@ -304,7 +304,6 @@ Grouped in options:\
 
 ##### Local USA news
 [Albuquerque Journal](https://www.abqjournal.com) -
-[Arkansas Democrat-Gazette](https://www.arkansasonline.com) -
 [Fox News](https://www.foxnews.com) -
 [Honolulu Star-Advertiser](https://www.staradvertiser.com) -
 [Los Angeles Times](https://www.latimes.com) -
