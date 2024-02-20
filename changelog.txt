@@ -6,6 +6,7 @@ Post-release
 Add Forbes.com.au
 Add Vogue.co.uk (Conde Nast)
 Fix Haaretz Group (disable bot)
+Fix Humanite.fr (json)
 
 * v3.5.6.0 (2024-02-18)
 Add 3 more Gannett sites

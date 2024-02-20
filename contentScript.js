@@ -1923,18 +1923,30 @@ else if (matchDomain(fr_groupe_nice_matin_domains)) {
 }
 
 else if (matchDomain('humanite.fr')) {
-  if (window.location.search.startsWith('?amp')) {
-    let qiota_script = document.querySelector('amp-script[src^="https://www.qiota.com/"]');
-    if (qiota_script) {
-      let amphtml_fill_content = qiota_script.querySelector('div.i-amphtml-fill-content');
-      if (amphtml_fill_content)
-        amphtml_fill_content.removeAttribute('class');
-      let i_amphtml_sizer = qiota_script.querySelector('i-amphtml-sizer');
-      removeDOMElement(i_amphtml_sizer);
+  let paywall = document.querySelector('div.single__categories svg');
+  if (paywall && dompurify_loaded) {
+    let json_script = document.querySelector('script[id="module-sage-index.js-js-extra"]');
+    if (json_script) {
+      csDoneOnce = true;
+      if (json_script.text.match(/js_vars\s?=\s?/)) {
+        try {
+          let json = JSON.parse(json_script.text.split(/js_vars\s?=\s?/)[1].split('};')[0] + '}');
+          let json_text = json.post.post_content.split('<!-- /wp:huma/featured-media -->')[1];
+          let article = document.querySelector('div.rich-text > div.gs-row');
+          if (article) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div>' + DOMPurify.sanitize(json_text, dompurify_options) + '</div>', 'text/html');
+            let article_new = doc.querySelector('div');
+            if (article_new) {
+              article.innerHTML = '';
+              article.appendChild(article_new);
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+      }
     }
-  } else {
-    let banner = document.querySelector('div.qiota');
-    removeDOMElement(banner);
   }
 }
 

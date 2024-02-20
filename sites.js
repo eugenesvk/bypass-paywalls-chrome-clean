@@ -1371,7 +1371,8 @@ var defaultSites = {
   "L'Humanité": {
     domain: "humanite.fr",
     allow_cookies: 1,
-    block_regex: /\.qiota\.com\//
+    block_regex: /\.qiota\.com\//,
+    cs_dompurify: 1
   },
   "L'Informé": {
     domain: "linforme.com",
