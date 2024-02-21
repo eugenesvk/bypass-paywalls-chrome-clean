@@ -335,6 +335,11 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "heraldscotland.com"
   },
+  "Hsj.co.uk": {
+    "allow_cookies": 1,
+    "domain": "hsj.co.uk",
+    "useragent": "googlebot"
+  },
   "Huisartsvandaag.nl": {
     "allow_cookies": 1,
     "domain": "huisartsvandaag.nl",
@@ -382,6 +387,11 @@
   "Kapital.no": {
     "allow_cookies": 1,
     "domain": "kapital.no",
+    "useragent": "googlebot"
+  },
+  "Keymilitary.com": {
+    "allow_cookies": 1,
+    "domain": "keymilitary.com",
     "useragent": "googlebot"
   },
   "Lagaceta.com.ar": {
@@ -857,6 +867,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.toolkits\\.com\\/app\\/js\\/api\\.min\\.js",
     "domain": "toolkits.com"
+  },
+  "Tvnewscheck.com": {
+    "allow_cookies": 1,
+    "domain": "tvnewscheck.com",
+    "ld_json_url": "div.singlepage div.mp_login_form|div.post-details"
   },
   "Utilityweek.co.uk": {
     "allow_cookies": 1,

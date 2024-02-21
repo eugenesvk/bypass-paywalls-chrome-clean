@@ -8,6 +8,7 @@ Add Vogue.co.uk (Conde Nast)
 Remove Arkansas Democrat-Gazette (fix obsolete)
 Fix Haaretz Group (disable bot)
 Fix Humanite.fr (json)
+Fix The Quint (json)
 
 * v3.5.6.0 (2024-02-18)
 Add 3 more Gannett sites

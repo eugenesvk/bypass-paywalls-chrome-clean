@@ -5505,16 +5505,31 @@ else if (matchDomain('thepointmag.com')) {
 }
 
 else if (matchDomain('thequint.com')) {
-  let paywall = document.querySelector('div.zsqcu');
+  let paywall = document.querySelector('div#paywall-widget');
   if (paywall) {
     removeDOMElement(paywall);
+    let json_script = getArticleJsonScript();
+    if (json_script) {
+      let json = JSON.parse(json_script.text);
+      if (json) {
+        let json_text = breakText(parseHtmlEntities(json.articleBody));
+        let article = document.querySelector('div.story-element');
+        if (json_text && article) {
+          let article_new = document.createElement('p');
+          article_new.innerText = json_text;
+          article.innerHTML = '';
+          article.appendChild(article_new);
+        }
+      }
+    } else
+      refreshCurrentTab();
     let body_hidden = document.querySelector('div#story-body-wrapper');
     if (body_hidden)
       body_hidden.removeAttribute('class');
     function thequint_unhide(node) {
-      node.removeAttribute('class');
+      node.removeAttribute('style');
     }
-    waitDOMAttribute('div#story-body-wrapper', 'DIV', 'class', thequint_unhide, true);
+    waitDOMAttribute('div#story-body-wrapper', 'DIV', 'style', thequint_unhide, true);
   }
 }
 
