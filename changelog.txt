@@ -6,6 +6,7 @@ Post-release
 Add Forbes.com.au
 Add Vogue.co.uk (Conde Nast)
 Remove Arkansas Democrat-Gazette (fix obsolete)
+Fix Epoch.org.il (css)
 Fix Haaretz Group (disable bot)
 Fix Humanite.fr (json)
 Fix The Quint (json)

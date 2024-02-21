@@ -126,6 +126,24 @@
     "excluded_domains": ["sophi.io"],
     "upd_version": "3.5.4.6"
   },
+  "The Epoch Times": {
+    "domain": "###_usa_epochtimes",
+    "group": [
+      "epoch.org.il",
+      "theepochtimes.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "subs\\.(theepochtimes\\.com|epochbase\\.(com|eu))\\/rules\\/get",
+    "cs_block": 1,
+    "exception": [{
+        "domain": "epoch.org.il",
+        "allow_cookies": 1,
+        "block_js_inline": "\\/epoch\\.org\\.il\\/.+\\/\\d{5,}\\/",
+        "ld_json_url": "div.faded|div.paywall"
+      }
+    ],
+    "upd_version": "3.5.6.5"
+  },
   "The Indian Express": {
     "domain": "indianexpress.com",
     "allow_cookies": 1,

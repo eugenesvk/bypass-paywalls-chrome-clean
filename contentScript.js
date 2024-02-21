@@ -4102,7 +4102,7 @@ else if (matchDomain('enotes.com')) {
 
 else if (matchDomain('epoch.org.il')) {
   if (dompurify_loaded)
-    getJsonUrl('div.register-login-box', '', 'div.m-article > div.paywall');
+    getJsonUrl('div.register-login-box', '', 'div.paywall');
 }
 
 else if (matchDomain('espn.com')) {

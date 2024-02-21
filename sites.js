@@ -2426,11 +2426,10 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /subs\.(theepochtimes\.com|epochbase\.(com|eu))\/rules\/get/,
-    cs_block: 1,
     exception: [{
         domain: "epoch.org.il",
         allow_cookies: 1,
-        block_js_inline: /\/epoch\.org\.il\//,
+        block_js_inline: /\/epoch\.org\.il\/.+\/\d{5,}\//,
         cs_dompurify: 1
       }
     ]
