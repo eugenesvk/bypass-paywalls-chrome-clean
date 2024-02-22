@@ -2632,11 +2632,6 @@ else if (matchDomain('doorbraak.be')) {
   }
 }
 
-else if (matchDomain('ewmagazine.nl')) {
-  let url = window.location.href;
-  getArchive(url, 'div.paywall', '', 'article[id]');
-}
-
 else if (matchDomain('fd.nl')) {
   let paywall = document.querySelectorAll('section.upsell, div.upsell-modal-background');
   if (paywall.length) {

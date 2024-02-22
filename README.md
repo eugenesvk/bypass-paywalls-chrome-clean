@@ -721,7 +721,6 @@ Grouped in options:\
 [De Limburger](https://www.limburger.nl) -
 [De Tijd](https://www.tijd.be) -
 [Doorbraak](https://doorbraak.be) -
-[EWmagazine.nl](https://www.ewmagazine.nl) -
 [Financieele Dagblad](https://fd.nl) -
 [Follow the Money](https://www.ftm.nl) -
 [Groene Amsterdammer](https://www.groene.nl) -
