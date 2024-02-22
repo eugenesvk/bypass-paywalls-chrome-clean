@@ -112,6 +112,13 @@
     "random_ip": "eu",
     "upd_version": "3.5.4.2"
   },
+  "Polityka.pl": {
+    "domain": "polityka.pl",
+    "allow_cookies": 1,
+    "useragent": "googlebot",
+    "cs_code": "[{\"cond\":\"div.cg-article-salebox\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.cg_article_meat>[style]\", \"rm_attrib\":\"style\"}, {\"cond\":\"article.article_status-cut\", \"rm_class\":\"article_status-cut\"}]}]",
+    "upd_version": "3.5.6.6"
+  },
   "San Diego Union Tribune": {
     "domain": "sandiegouniontribune.com",
     "allow_cookies": 1,

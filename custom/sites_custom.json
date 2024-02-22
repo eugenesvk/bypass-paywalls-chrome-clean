@@ -725,6 +725,14 @@
     "block_regex": "\\.qiota\\.com",
     "domain": "strategies.fr"
   },
+  "Stratford-herald.com": {
+    "allow_cookies": 1,
+    "amp_redirect": "div#article_panel_paywall",
+    "amp_unhide": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "cs_code": "[{\"cond\":\"div.PremNotice\", \"rm_elem\":1}]",
+    "domain": "stratford-herald.com"
+  },
   "Stripes.com": {
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",

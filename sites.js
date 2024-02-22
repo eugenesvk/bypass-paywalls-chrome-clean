@@ -1980,6 +1980,11 @@ var defaultSites = {
     domain: "politicaexterior.com",
     allow_cookies: 1
   },
+  "Polityka.pl": {
+    domain: "polityka.pl",
+    allow_cookies: 1,
+    useragent: "googlebot"
+  },
   "Popular Science": {
     domain: "popsci.com",
     allow_cookies: 1,

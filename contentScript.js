@@ -239,6 +239,7 @@ if (bg2csData.amp_unhide) {
     if (amp_page_hide) {
       amp_unhide_subscr_section();
       amp_unhide_access_hide();
+      amp_images_replace();
       amp_iframes_replace();
     }
   }, 100);
@@ -1639,7 +1640,7 @@ else if (matchDomain(es_epiberica_domains) || matchDomain(es_epiberica_custom_do
     for (let amp_image of amp_images) {
       let elem = document.createElement('img');
       elem.src = amp_image.getAttribute('src');
-      elem.style = 'margin: 0px 50px;';
+      elem.style = 'width: 75%; margin: 0px 50px;';
       amp_image.parentNode.replaceChild(elem, amp_image);
     }
   } else {
@@ -3472,14 +3473,7 @@ else if (matchDomain('globo.com')) {
       amp_redirect('div.paywall');
     } else {
       amp_unhide_subscr_section('amp-ad, amp-embed');
-      let amp_images = document.querySelectorAll('figure > amp-img[src^="https://"]');
-      for (let amp_image of amp_images) {
-        let elem = document.createElement('img');
-        elem.src = amp_image.getAttribute('src');
-        elem.alt = amp_image.getAttribute('alt');
-        elem.style = mobile ? 'width: 320px;' : 'margin: 0px 250px; display:block;';
-        amp_image.parentNode.replaceChild(elem, amp_image);
-      }
+      amp_images_replace();
     }
   } else if (window.location.pathname.includes('/amp/'))
     ampToHtml();
@@ -3683,14 +3677,9 @@ else if (matchDomain('barrons.com')) {
     hideDOMElement(...ads);
   } else {
     amp_unhide_subscr_section('.wsj-ad, amp-ad');
+    amp_images_replace();
     let login = document.querySelector('div.login-section-container');
     removeDOMElement(login);
-    let amp_images = document.querySelectorAll('div.article__body amp-img');
-    for (let amp_img of amp_images) {
-      let img_new = document.createElement('img');
-      img_new.src = amp_img.getAttribute('src');
-      amp_img.parentNode.replaceChild(img_new, amp_img);
-    }
   }
 }
 
@@ -4767,6 +4756,19 @@ else if (matchDomain('outlookindia.com')) {
         }
       }
     }
+  }
+}
+
+else if (matchDomain('polityka.pl')) {
+  let paywall = document.querySelector('div.cg-article-salebox');
+  if (paywall) {
+    removeDOMElement(paywall);
+    let elem_hidden = document.querySelectorAll('div.cg_article_meat > [style]');
+    for (let elem of elem_hidden)
+      elem.removeAttribute('style');
+    let fade = document.querySelector('article.article_status-cut');
+    if (fade)
+      fade.classList.remove('article_status-cut');
   }
 }
 
@@ -6315,6 +6317,19 @@ function replaceTextFail(url, article, proxy, text_fail) {
     else
       article.appendChild(text_fail_div);
   }
+}
+
+function amp_images_replace() {
+  window.setTimeout(function () {
+    let amp_images = document.querySelectorAll('figure amp-img[src^="http"]');
+    for (let amp_image of amp_images) {
+      let elem = document.createElement('img');
+      elem.src = amp_image.getAttribute('src');
+      elem.alt = amp_image.getAttribute('alt');
+      elem.style = 'width: 100%;';
+      amp_image.parentNode.replaceChild(elem, amp_image);
+    }
+  }, 1000);
 }
 
 function amp_iframes_replace(weblink = false, source = '') {

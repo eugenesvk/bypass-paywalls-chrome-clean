@@ -571,6 +571,7 @@
     "*://*.piqd.de/*",
     "*://*.plasticsnews.com/*",
     "*://*.politicaexterior.com/*",
+    "*://*.polityka.pl/*",
     "*://*.popsci.com/*",
     "*://*.popularmechanics.com/*",
     "*://*.post-gazette.com/*",
@@ -860,5 +861,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.6.5"
+  "version": "3.5.6.6"
 }
