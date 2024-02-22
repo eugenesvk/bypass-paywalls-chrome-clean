@@ -25,7 +25,6 @@ var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'elperiodico.com'
 var es_epiberica_custom_domains = ['diaridegirona.cat', 'diariocordoba.com', 'diariodeibiza.es', 'elcorreogallego.es', 'elperiodicodearagon.com', 'elperiodicoextremadura.com', 'elperiodicomediterraneo.com', 'emporda.info', 'laopinioncoruna.es', 'laopiniondemalaga.es', 'laopiniondemurcia.es', 'laopiniondezamora.es', 'regio7.cat'];
 var es_grupo_vocento_domains = ['abc.es', 'diariosur.es', 'diariovasco.com', 'elcomercio.es', 'elcorreo.com', 'eldiariomontanes.es', 'elnortedecastilla.es', 'hoy.es', 'ideal.es', 'larioja.com', 'lasprovincias.es', 'laverdad.es', 'lavozdigital.es'];
 var es_unidad_domains = ['elmundo.es', 'expansion.com', 'marca.com'];
-var fr_be_groupe_rossel = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];
 var fr_groupe_la_depeche_domains = ['centrepresseaveyron.fr', 'journaldemillau.fr', 'ladepeche.fr', 'lindependant.fr', 'midilibre.fr', 'nrpyrenees.fr', 'petitbleu.fr', 'rugbyrama.fr'];
 var fr_groupe_nice_matin_domains = ['monacomatin.mc', 'nicematin.com', 'varmatin.com'];
 var it_ilmessaggero_domains = ['corriereadriatico.it', 'ilgazzettino.it', 'ilmattino.it', 'ilmessaggero.it', 'quotidianodipuglia.it'];
@@ -1771,7 +1770,7 @@ else if (matchDomain('politicaexterior.com')) {
 else
   csDone = true;
 
-} else if ((window.location.hostname.endsWith('.fr') && !matchDomain(['lemagit.fr'])) || matchDomain(['connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'legrandcontinent.eu', 'lesinrocks.com', 'lesoir.be', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com', 'sudinfo.be'].concat(fr_groupe_nice_matin_domains))) {//france
+} else if ((window.location.hostname.endsWith('.fr') && !matchDomain(['lemagit.fr'])) || matchDomain(['connaissancedesarts.com', 'journaldunet.com', 'la-croix.com', 'legrandcontinent.eu', 'lesinrocks.com', 'loeildelaphotographie.com', 'marianne.net', 'nouvelobs.com', 'parismatch.com', 'science-et-vie.com'].concat(fr_groupe_nice_matin_domains))) {//france
 
 if (matchDomain('alternatives-economiques.fr')) {
   window.setTimeout(function () {
@@ -1844,33 +1843,6 @@ else if (matchDomain('elle.fr')) {
   }
   let ads = document.querySelectorAll('div[class*="--placeholder"]');
   hideDOMElement(...ads);
-}
-
-else if (matchDomain(fr_be_groupe_rossel)) {
-  let url = window.location.href;
-  let clear_ads = function () {
-    let ads = document.querySelectorAll('div[id^="article_"], r-pub, div#rossel-leader-top');
-    hideDOMElement(...ads);
-  }
-  func_post = function () {
-    let videos = document.querySelectorAll('r-embed');
-    for (let video of videos) {
-      let source = video.querySelector('div[data-src]');
-      if (source) {
-        let iframe = document.createElement('iframe');
-        iframe.src = source.getAttribute('data-src');
-        iframe.height = '400px';
-        iframe.width = '100%';
-        let header = document.querySelector('article > header[style]');
-        if (header)
-          iframe.style = header.getAttribute('style');
-        video.parentNode.replaceChild(iframe, video);
-      }
-    }
-    clear_ads();
-  }
-  getArchive(url, 'r-panel.r-paywall--header, r-panel.r-panel--paywall', '', 'article, r-main');
-  clear_ads();
 }
 
 else if (matchDomain(fr_groupe_la_depeche_domains)) {

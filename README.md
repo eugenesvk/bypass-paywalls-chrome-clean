@@ -568,18 +568,6 @@ Grouped in options:\
 [Monaco-Matin](https://www.monacomatin.mc) -
 [Nice-Matin](https://www.nicematin.com) -
 [Var-Matin](https://www.varmatin.com)\
-*Groupe Rossel* sites like\
-[L'Aisne nouvelle](https://www.aisnenouvelle.fr) -
-[L'Ardennais](https://www.lardennais.fr) -
-[L'Est-Éclair](https://www.lest-eclair.fr) -
-[L'Union](https://www.lunion.fr) -
-[La Voix du Nord](https://www.lavoixdunord.fr) -
-[Le Courrier picard](https://www.courrier-picard.fr) -
-[Le Soir](https://www.lesoir.be) -
-[Libération Champagne](https://www.liberation-champagne.fr) -
-[Nord Littoral](https://www.nordlittoral.fr) -
-[Paris Normandie](https://www.paris-normandie.fr) -
-[SudInfo](https://www.sudinfo.be)\
 *Groupe Sud Ouest* sites like\
 [Charente libre](https://www.charentelibre.fr) -
 [La République des Pyrénées](https://www.larepubliquedespyrenees.fr) -

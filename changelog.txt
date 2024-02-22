@@ -8,6 +8,7 @@ Add Polityka.pl
 Add Vogue.co.uk (Conde Nast)
 Remove Arkansas Democrat-Gazette (fix obsolete)
 Remove EWmagazine.nl (fix obsolete)
+Remove Groupe Rossel (fix obsolete)
 Fix Epoch.org.il (css)
 Fix Haaretz Group (disable bot)
 Fix Humanite.fr (json)
