@@ -1032,6 +1032,7 @@ var defaultSites = {
     domain: "###_es_grupo_vocento",
     group: [
       "abc.es",
+      "canarias7.es",
       "diariosur.es",
       "diariovasco.com",
       "elcomercio.es",

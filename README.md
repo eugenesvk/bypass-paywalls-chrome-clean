@@ -816,6 +816,7 @@ Grouped in options:\
 [Marca](https://www.marca.com)\
 *Grupo Vocento* sites like\
 [ABC](https://www.abc.es) -
+[Canarias7](https://www.canarias7.es) -
 [El Comercio](https://www.elcomercio.es) -
 [El Correo](https://www.elcorreo.com) -
 [El Diario Montañés](https://www.eldiariomontanes.es) -

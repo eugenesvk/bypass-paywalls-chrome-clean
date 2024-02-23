@@ -1191,8 +1191,8 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   }
 
   // random IP for sites in use_random_ip
-  let domain_random;
-  if (domain_random = matchUrlDomain(use_random_ip, details.url)) {
+  let domain_random = matchUrlDomain(use_random_ip, details.url);
+  if (domain_random && !googlebotEnabled) {
     let randomIP_val;
     if (random_ip[domain_random] === 'eu')
       randomIP_val = randomIP(185, 185);
