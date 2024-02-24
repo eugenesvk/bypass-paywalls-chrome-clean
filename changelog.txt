@@ -15,6 +15,7 @@ Fix Epoch.org.il (css)
 Fix Haaretz Group (disable bot)
 Fix Humanite.fr (json)
 Fix The Quint (json)
+Fix Times of India (amp-redirect)
 
 * v3.5.6.0 (2024-02-18)
 Add 3 more Gannett sites

@@ -36,9 +36,8 @@ var restrictions = {
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
   'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'nzz.ch': /^((?!\/epaper\.nzz\.ch\/).)*$/,
-  'science.org': /^((?!\.science\.org\/doi\/).)*$/,
-  'timesofindia.com': /\.timesofindia\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,
+  'science.org': /^((?!\.science\.org\/doi\/).)*$/,
   'seekingalpha.com': /\/seekingalpha\.com($|\/($|(amp\/)?(article|news)\/|samw\/))/,
   'statista.com': /^((?!\.statista\.com\/study\/).)*$/,
   'study.com': /\/study\.com\/.+\/lesson\//,
@@ -46,6 +45,7 @@ var restrictions = {
   'techinasia.com': /\.techinasia\.com\/.+/,
   'thetimes.co.uk': /^((?!epaper\.thetimes\.co\.uk).)*$/,
   'timeshighereducation.com': /\.timeshighereducation\.com\/((books|features|news|people)\/|.+((\w)+(\-)+){3,}.+|sites\/default\/files\/)/,
+  'timesofindia.indiatimes.com': /\/timesofindia\.indiatimes\.com($|\/($|toi-plus(\/.+)?|.+\.cms))/,
   'uol.com.br': /^((?!(conta|email|piaui\.folha)\.uol\.com\.br).)*$/,
 }
 

@@ -5643,7 +5643,7 @@ else if (matchDomain(timesofindia_domains)) {
         overflow.removeAttribute('style');
     }
     if (!window.location.pathname.includes('/amp_')) {
-      amp_redirect('div[id^="story-blocker"]', '', url.replace('/timesofindia.indiatimes.com/', '/m.timesofindia.com/').replace('/articleshow/', '/amp_articleshow/'));
+      amp_redirect('div[id^="story-blocker"]', '', url.replace('/articleshow/', '/amp_articleshow/'));
     } else {
       let amp_images = document.querySelectorAll('div.inline-image > div.inline-imgecontent > amp-img[src]');
       for (let amp_image of amp_images) {
@@ -5655,7 +5655,7 @@ else if (matchDomain(timesofindia_domains)) {
           alt: amp_image.getAttribute('alt')
         });
         amp_image.parentNode.replaceChild(elem, amp_image);
-      }
+	  }
     }
   }
 }

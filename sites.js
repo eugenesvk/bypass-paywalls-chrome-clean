@@ -1086,7 +1086,7 @@ var defaultSites = {
       "lanuovasardegna.it"
     ]
   },
-  "Haaretz Group": {
+  "Haaretz Group (fetch from archive.is)": {
     domain: "###_il_haaretz_group",
     group: [
       "haaretz.co.il",
@@ -2663,7 +2663,7 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     exception: [{
-        domain: "timesofindia.com",
+        domain: "timesofindia.indiatimes.com",
         allow_cookies: 1,
         useragent: "googlebot"
       }
