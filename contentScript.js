@@ -33,7 +33,6 @@ var it_quotidiano_domains = ['ilgiorno.it', 'ilrestodelcarlino.it', 'iltelegrafo
 var medium_custom_domains = ['betterprogramming.pub', 'towardsdatascience.com'];
 var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.nl', 'gelderlander.nl', 'pzc.nl', 'tubantia.nl'];
 var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 'margriet.nl', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
-var nl_mediahuis_region_domains = ['gooieneemlander.nl', 'haarlemsdagblad.nl', 'ijmuidercourant.nl', 'leidschdagblad.nl', 'noordhollandsdagblad.nl'];
 var no_nhst_media_domains = ['europower.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
 var timesofindia_domains = ['epaper.indiatimes.com', 'timesofindia.com', 'timesofindia.indiatimes.com'];
@@ -2674,21 +2673,6 @@ else if (matchDomain(nl_dpg_media_domains)) {
   let banners = document.querySelectorAll('div[data-temptation-position^="PAGE_"], div[class^="ad--"]');
   let paywall = document.querySelectorAll('[data-temptation-position^="ARTICLE_"]');
   removeDOMElement(...banners, ...paywall);
-}
-
-else if (matchDomain(nl_mediahuis_region_domains)) {
-  func_post = function () {
-    let lazy_images = document.querySelectorAll('img[loading="lazy"][style]');
-    for (let elem of lazy_images)
-      elem.removeAttribute('style');
-  }
-  window.setTimeout(function () {
-    let close_button = document.querySelector('button[data-testid="button-close"]');
-    if (close_button)
-      close_button.click();
-    let url = window.location.href;
-    getArchive(url, 'div[data-auth-root="paywall"]', '', 'div[data-mht-block="article-detail__article-main"]');
-  }, 500);
 }
 
 else if (matchDomain('nrc.nl')) {

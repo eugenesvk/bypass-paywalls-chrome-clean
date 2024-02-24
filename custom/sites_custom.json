@@ -394,6 +394,11 @@
     "domain": "keymilitary.com",
     "useragent": "googlebot"
   },
+  "Kristeligt-dagblad.dk": {
+    "allow_cookies": 1,
+    "domain": "kristeligt-dagblad.dk",
+    "useragent": "googlebot"
+  },
   "Lagaceta.com.ar": {
     "allow_cookies": 1,
     "block_regex": "\\.lagaceta\\.com\\.ar\\/ajax\\/getInfo",
