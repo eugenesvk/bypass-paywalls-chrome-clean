@@ -3120,6 +3120,11 @@ else if (matchDomain('theneweuropean.co.uk')) {
   removeDOMElement(...banners);
 }
 
+else if (matchDomain('thestage.co.uk')) {
+  let url = window.location.href;
+  getArchive(url, 'div#ao-MeteringDNAllow', '', 'div[id^="aos-FeatureArticle2Col-"]');
+}
+
 else if (matchDomain('thetimes.co.uk')) {
   let url = window.location.href;
   if (window.location.hostname !== 'epaper.thetimes.co.uk') {

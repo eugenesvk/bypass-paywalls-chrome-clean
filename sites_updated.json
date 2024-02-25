@@ -44,6 +44,8 @@
   "Der Aktionär": {
     "domain": "deraktionaer.de",
     "allow_cookies": 1,
+    "add_ext_link": "div#paywall-container|div#article-body",
+    "add_ext_link_type": "archive.is",
     "ld_archive_is": "div#paywall-container|div#article-body",
     "upd_version": "3.5.4.8"
   },
@@ -186,6 +188,24 @@
     "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
     "useragent": "googlebot",
     "upd_version": "3.1.4.0"
+  },
+  "The Stage Media (UK)": {
+    "domain": "uk_thestage_media",
+    "allow_cookies": 1,
+    "group": [
+      "thebookseller.com",
+      "thestage.co.uk"
+    ],
+    "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
+    "add_ext_link_type": "archive.is",
+    "ld_archive_is": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle2Col-']",
+    "exception": [{
+        "domain": "thebookseller.com",
+        "allow_cookies": 1,
+        "useragent": "googlebot"
+      }
+    ],
+    "upd_version": "3.5.6.8"
   },
   "Vogue Business (member-text only)": {
     "domain": "voguebusiness.com",

@@ -678,6 +678,7 @@
     "*://*.theaustralian.com.au/*",
     "*://*.thebaffler.com/*",
     "*://*.thebanker.com/*",
+    "*://*.thebookseller.com/*",
     "*://*.thebulletin.org/*",
     "*://*.thechronicle.com.au/*",
     "*://*.thecourier.com.au/*",
@@ -710,6 +711,7 @@
     "*://*.thesaturdaypaper.com.au/*",
     "*://*.thespec.com/*",
     "*://*.thespectator.com/*",
+    "*://*.thestage.co.uk/*",
     "*://*.thestar.com/*",
     "*://*.thestate.com/*",
     "*://*.thetimes.co.uk/*",
@@ -840,5 +842,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.6.7"
+  "version": "3.5.6.8"
 }

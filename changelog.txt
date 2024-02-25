@@ -6,6 +6,7 @@ Post-release
 Add Canarias7.es (Grupo Vocento)
 Add Forbes.com.au
 Add Polityka.pl
+Add The Stage Media (UK)
 Add Vogue.co.uk (Conde Nast)
 Remove Arkansas Democrat-Gazette (fix obsolete)
 Remove EWmagazine.nl (fix obsolete)

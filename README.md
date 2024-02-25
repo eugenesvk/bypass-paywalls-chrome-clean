@@ -494,7 +494,10 @@ Grouped in options:\
 *[Incisive Media](https://www.incisivemedia.com/brands)* sites (opt-in to custom sites)\
 *National World Publishing* sites like (opt-in to custom sites for unlisted)\
 [The Scotsman](https://www.scotsman.com) -
-[Yorkshire Post](https://www.yorkshirepost.co.uk)
+[Yorkshire Post](https://www.yorkshirepost.co.uk)\
+*The Stage Media* sites like:\
+[The Bookseller](https://www.thebookseller.com) -
+[The Stage](https://www.thestage.co.uk)
 
 ##### Denmark
 [Berlingske](https://www.berlingske.dk)

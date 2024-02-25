@@ -2575,6 +2575,21 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "The Stage Media (UK)": {
+    "domain": "uk_thestage_media",
+    "allow_cookies": 1,
+    "group": [
+      "thebookseller.com",
+      "thestage.co.uk"
+    ],
+    cs_dompurify: 1,
+    exception: [{
+        domain: "thebookseller.com",
+        allow_cookies: 1,
+        useragent: "googlebot"
+      }
+    ]
+  },
   "The Telegraph": {
     domain: "telegraph.co.uk",
     allow_cookies: 1,
