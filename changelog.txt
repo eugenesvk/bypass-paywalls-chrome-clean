@@ -9,6 +9,7 @@ Add Polityka.pl
 Add Vogue.co.uk (Conde Nast)
 Remove Arkansas Democrat-Gazette (fix obsolete)
 Remove EWmagazine.nl (fix obsolete)
+Remove Funke Mediengruppe (fix obsolete)
 Remove Groupe Rossel (fix obsolete)
 Remove Mediahuis Nederland Regional (fix obsolete)
 Fix Epoch.org.il (css)

@@ -814,19 +814,6 @@ var defaultSites = {
     block_js_inline: /\.freiepresse\.de\/.+-artikel/,
     cs_dompurify: 1
   },
-  "Funke Mediengruppe": {
-    domain: "###_de_funke_medien",
-    group: [
-      "ikz-online.de",
-      "nrz.de",
-      "waz.de",
-      "wp.de",
-      "wr.de"
-    ],
-    allow_cookies: 1,
-    useragent: "googlebot",
-    block_regex: /\.tinypass\.com\//
-  },
   "Gannett Group (local USA Today)": {
     domain: "###_usa_gannett",
     group: [
@@ -3042,7 +3029,7 @@ function init_custom_flex_domains() {
 init_custom_flex_domains();
 
 // sites with no fix (background)
-var de_funke_medien_nofix_domains = ['braunschweiger-zeitung.de', 'harzkurier.de', 'morgenpost.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de'];
+var de_funke_medien_nofix_domains = ['braunschweiger-zeitung.de', 'harzkurier.de', 'ikz-online.de', 'morgenpost.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_rp_aachen_medien_nofix_domains = ['aachener-nachrichten.de', 'aachener-zeitung.de', 'ga.de', 'rp-online.de', 'saarbruecker-zeitung.de', 'volksfreund.de'];
 var de_westfalen_medien_nofix_domains = ['muensterschezeitung.de', 'westfalen-blatt.de', 'wn.de'];
 var fr_be_groupe_rossel_nofix_domains = ['aisnenouvelle.fr', 'courrier-picard.fr', 'lardennais.fr', 'lavoixdunord.fr', 'lesoir.be', 'lest-eclair.fr', 'liberation-champagne.fr', 'lunion.fr', 'nordlittoral.fr', 'paris-normandie.fr', 'sudinfo.be'];

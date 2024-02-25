@@ -15,7 +15,6 @@ var be_roularta_domains = ['artsenkrant.com', 'beleggersbelangen.nl', 'femmesdau
 var ca_gcm_domains = ['lesoleil.com'].concat(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'ledroitfranco.com', 'lenouvelliste.ca', 'lequotidien.com']);
 var ca_torstar_domains = ['niagarafallsreview.ca', 'stcatharinesstandard.ca', 'thepeterboroughexaminer.com', 'therecord.com', 'thespec.com', 'thestar.com', 'wellandtribune.ca'];
 var ch_media_domains = ['aargauerzeitung.ch', 'luzernerzeitung.ch', 'tagblatt.ch'];
-var de_funke_medien_domains = ['ikz-online.de', 'nrz.de', 'otz.de', 'thueringer-allgemeine.de', 'tlz.de', 'waz.de', 'wp.de', 'wr.de'];
 var de_lv_domains = ['profi.de', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
@@ -1435,12 +1434,6 @@ else if (matchDomain(de_lv_domains)) {
     }
   }
   let ads = document.querySelectorAll('div.adZone');
-  hideDOMElement(...ads);
-}
-
-else if (matchDomain(de_funke_medien_domains)) {
-  sessionStorage.setItem('deobfuscate', 'true');
-  let ads = document.querySelectorAll('div.ad');
   hideDOMElement(...ads);
 }
 

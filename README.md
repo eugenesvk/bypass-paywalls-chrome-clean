@@ -622,12 +622,6 @@ Grouped in options:\
 
 Grouped in options:\
 *[Deutscher Fachverlag Mediengruppe](https://www.dfv.de)* (opt-in to custom sites)\
-*Funke Mediengruppe* sites like\
-[Iserlohner Kreisanzeiger und Zeitung](https://www.ikz-online.de) -
-[Neue Ruhr Zeitung](https://www.nrz.de) -
-[Westdeutsche Allgemeine Zeitung](https://www.waz.de) -
-[Westfalenpost](https://www.wp.de) -
-[Westfälische Rundschau](https://www.wr.de)\
 *[Haas Mediengruppe](https://www.haas-mediengruppe.de/marken)* sites like (opt-in to custom sites for unlisted)\
 [Mannheimer Morgen](https://www.mannheimer-morgen.de)\
 *Landwirtschaftsverlag* sites like\
