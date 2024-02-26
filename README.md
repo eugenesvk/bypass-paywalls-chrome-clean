@@ -952,7 +952,6 @@ Grouped in options:\
 [Tech in Asia](https://www.techinasia.com)\
 Grouped in options:\
 *SPH Media* sites like\
-[The Business Times](https://www.businesstimes.com.sg) -
 [The Straits Times](https://www.straitstimes.com)
 
 #### Latin America

@@ -35,51 +35,23 @@
     "block_regex": "\\.{domain}\\/journey\\/compiler\\/build-.+\\.js",
     "upd_version": "3.5.6.1"
   },
-  "Daily Mail UK": {
-    "domain": "dailymail.co.uk",
-    "allow_cookies": 1,
-    "block_regex": "\\/zephr\\/feature",
-    "upd_version": "3.5.4.6"
-  },
-  "Der Aktionär": {
-    "domain": "deraktionaer.de",
-    "allow_cookies": 1,
-    "add_ext_link": "div#paywall-container|div#article-body",
-    "add_ext_link_type": "archive.is",
-    "ld_archive_is": "div#paywall-container|div#article-body",
-    "upd_version": "3.5.4.8"
-  },
-  "FewCents": {
-    "domain": "fewcents.co",
-    "allow_cookies": 1,
-    "block_regex_general": "\\.fewcents\\.co\\/.+\\/paywall.*\\.js",
-    "upd_version": "3.5.4.5"
-  },
   "Forbes Australia": {
     "domain": "forbes.com.au",
     "remove_cookies_select_drop": ["blaize_session"],
     "ld_json_url": "div[class*='_gate']|div.article-page__content-body",
     "upd_version": "3.5.6.3"
   },
-  "Grupo Prensa Ibérica": {
-    "domain": "###_es_epiberica",
-    "group": [
-      "diariodemallorca.es",
-      "eldia.es",
-      "elperiodico.com",
-      "epe.es",
-      "farodevigo.es",
-      "informacion.es",
-      "laprovincia.es",
-      "levante-emv.com",
-      "lne.es",
-      "mallorcazeitung.es",
-      "superdeporte.es"
-    ],
+  "Funke Mediengruppe (removed)": {
+    "domain": "###_de_funke_medien",
+    "group": [],
     "allow_cookies": 1,
-    "block_regex": "(\\.piano\\.io\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "cs_code": "[{\"cond\":\"div.ft-helper-closenews\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.5.4.1"
+    "upd_version": "3.5.6.8"
+  },
+  "Groupe Rossel (removed)": {
+    "domain": "###_fr_be_groupe_rossel",
+    "group": [],
+    "allow_cookies": 1,
+    "upd_version": "3.5.6.6"
   },
   "Grupo Vocento": {
     "domain": "###_es_grupo_vocento",
@@ -130,12 +102,11 @@
     "cs_block": 1,
     "upd_version": "3.5.5.4"
   },
-  "National Geographic USA": {
-    "domain": "nationalgeographic.com",
+  "Mediahuis Nederland Regional (removed)": {
+    "domain": "###_nl_mediahuis_region",
+    "group": [],
     "allow_cookies": 1,
-    "block_regex": "cdn\\.registerdisney\\.go\\.com\\/",
-    "random_ip": "eu",
-    "upd_version": "3.5.4.2"
+    "upd_version": "3.5.6.8"
   },
   "Polityka.pl": {
     "domain": "polityka.pl",
@@ -151,12 +122,16 @@
     "cs_block": 1,
     "upd_version": "3.5.5.4"
   },
-  "Sophi.io": {
-    "domain": "sophi.io",
+  "SPH Media": {
+    "domain": "###_sg_sph_media",
+    "group": [
+      "straitstimes.com"
+    ],
     "allow_cookies": 1,
-    "block_regex_general": "\\.sophi\\.io\\/",
-    "excluded_domains": ["sophi.io"],
-    "upd_version": "3.5.4.6"
+    "add_ext_link": "div#nocx_paywall_area|main#content",
+    "add_ext_link_type": "archive.is",
+    "ld_archive_is": "div#nocx_paywall_area|main#content",
+    "upd_version": "3.5.7.1"
   },
   "The Epoch Times": {
     "domain": "###_usa_epochtimes",
@@ -175,12 +150,6 @@
       }
     ],
     "upd_version": "3.5.6.5"
-  },
-  "The Indian Express": {
-    "domain": "indianexpress.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\/indianexpress\\/js\\/evolok\\/|\\.fewcents\\.co\\/.+\\/paywall.*\\.js|cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js)",
-    "upd_version": "3.5.4.5"
   },
   "The New York Times": {
     "domain": "nytimes.com",
@@ -206,18 +175,5 @@
       }
     ],
     "upd_version": "3.5.6.8"
-  },
-  "Vogue Business (member-text only)": {
-    "domain": "voguebusiness.com",
-    "block_regex": "\\.voguebusiness\\.com\\/journey\\/compiler\\/build-.+\\.js",
-    "ld_json": "aside[class^='PaywallInlineBarrierWrapper']|div.body__inner-container",
-    "remove_cookies_select_drop": ["userId"],
-    "upd_version": "3.5.4.4"
-  },
-  "Ynet": {
-    "domain": "ynet.co.il",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "upd_version": "3.5.4.7"
   }
 }

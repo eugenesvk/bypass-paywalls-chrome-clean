@@ -393,8 +393,13 @@ function set_rules(sites, sites_updated, sites_custom) {
       if (site_default) {
         rule = defaultSites[site_default];
         let site_updated = Object.keys(sites_updated).find(updated_key => compareKey(updated_key, site));
-        if (site_updated)
+        if (site_updated) {
           rule = sites_updated[site_updated];
+          if (rule.nofix) {
+            enabledSites.splice(enabledSites.indexOf(site_domain), 1);
+            nofix_sites.push(site_domain);
+          }
+        }
       } else if (sites_updated.hasOwnProperty(site)) { // updated (new) sites
         rule = sites_updated[site];
       } else if (sites_custom.hasOwnProperty(site)) { // custom (new) sites

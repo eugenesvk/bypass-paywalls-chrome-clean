@@ -34,6 +34,7 @@ var nl_dpg_adr_domains = ['ad.nl', 'bd.nl', 'bndestem.nl', 'destentor.nl', 'ed.n
 var nl_dpg_media_domains = ['demorgen.be', 'flair.nl', 'humo.be', 'libelle.nl', 'margriet.nl', 'parool.nl', 'trouw.nl', 'volkskrant.nl'];
 var no_nhst_media_domains = ['europower.no', 'fiskeribladet.no', 'intrafish.com', 'intrafish.no', 'rechargenews.com', 'tradewindsnews.com', 'upstreamonline.com'];
 var pe_grupo_elcomercio_domains = ['diariocorreo.pe', 'elcomercio.pe', 'gestion.pe'];
+var sg_sph_media_domains = ['straitstimes.com'];
 var timesofindia_domains = ['epaper.indiatimes.com', 'timesofindia.com', 'timesofindia.indiatimes.com'];
 var uk_incisive_media_domains = ['businessgreen.com', 'internationalinvestment.net', 'investmentweek.co.uk', 'professionaladviser.com', 'professionalpensions.com'];
 var uk_nat_world_domains = ['scotsman.com', 'yorkshirepost.co.uk'];
@@ -3765,13 +3766,6 @@ else if (matchDomain('businessoffashion.com')) {
   }
 }
 
-else if (matchDomain(['businesstimes.com.sg', 'straitstimes.com'])) {
-  let url = window.location.href;
-  getArchive(url, 'div[class*=eas-paywall], div#nocx_paywall_area', '', 'main#content');
-  let ads = document.querySelectorAll('div.ads, div[id^="dfp-ad-"], div.cx_paywall_placeholder');
-  hideDOMElement(...ads);
-}
-
 else if (matchDomain(ca_gcm_domains)) {
   let paywall = document.querySelector('div._block_1dgevo');
   if (paywall) {
@@ -4830,6 +4824,13 @@ else if (matchDomain('seekingalpha.com')) {
     let paywall = document.querySelector('[class*="paywall-container"]');
     removeDOMElement(paywall);
   }
+}
+
+else if (matchDomain(sg_sph_media_domains)) {
+  let url = window.location.href;
+  getArchive(url, 'div#nocx_paywall_area', '', 'main#content');
+  let ads = document.querySelectorAll('div.ads, div[id^="dfp-ad-"], div.cx_paywall_placeholder');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('slate.com')) {
