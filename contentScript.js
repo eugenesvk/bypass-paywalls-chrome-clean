@@ -4737,7 +4737,20 @@ else if (matchDomain('polityka.pl')) {
 
 else if (matchDomain('project-syndicate.org')) {
   let url = window.location.href;
-  getArchive(url, 'div.paywall--base', '', 'div[data-page-area="article-body"]');
+  let paywall_sel = 'div.paywall--base';
+  let paywall = document.querySelector(paywall_sel);
+  if (paywall) {
+    let article_sel = 'div[data-page-area="article-body"]';
+    let article = document.querySelector(article_sel);
+    if (article)
+      getArchive(url, paywall_sel, '', article_sel);
+    else {
+      removeDOMElement(paywall);
+      let split_top = document.querySelector('div.split-top');
+      if (split_top)
+        split_top.after(archiveLink(url));
+    }
+  }
 }
 
 else if (matchDomain('puck.news')) {
