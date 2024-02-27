@@ -1011,7 +1011,8 @@ var defaultSites = {
     group: [
       "elmundo.es",
       "expansion.com",
-      "marca.com"],
+      "marca.com"
+    ],
     allow_cookies: 1,
     block_regex: /(\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-(access|subscriptions)-.+\.js)/
   },
@@ -1073,7 +1074,7 @@ var defaultSites = {
       "lanuovasardegna.it"
     ]
   },
-  "Haaretz Group (fetch from archive.is)": {
+  "Haaretz Group": {
     domain: "###_il_haaretz_group",
     group: [
       "haaretz.co.il",
@@ -1082,7 +1083,8 @@ var defaultSites = {
     ],
     allow_cookies: 1,
     block_regex: /\.co(m|\.il)\/.+\/magazine\/page-.+\.js/,
-    cs_dompurify: 1
+    cs_dompurify: 1,
+    useragent_custom: "Mozilla/5.0 (Java) outbrain"
   },
   "Haas Mediengruppe (opt-in to custom sites)": {
     domain: "###_de_haas_medien",

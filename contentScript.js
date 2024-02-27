@@ -1573,16 +1573,14 @@ else if (matchDomain('elespanol.com')) {
 }
 
 else if (matchDomain(es_unidad_domains)) {
-  let premium = document.querySelector('.ue-c-article__premium');
-  let url = window.location.href;
   if (!window.location.hostname.match(/^amp(-[a-z]{2})?\./)) {
-    if (premium) {
-      removeDOMElement(premium);
-      window.location.href = url.replace('/www.', '/amp.');
-    }
+    let url = window.location.href;
+    amp_redirect('div.ue-c-article__premium', '', url.replace('/www.', '/amp.'));
+    let ads = document.querySelectorAll('div[id^="taboola-"]');
+    hideDOMElement(...ads);
   } else {
     amp_unhide_access_hide('="authorized=true"', '="authorized!=true"');
-    amp_unhide_subscr_section('.advertising, amp-embed, amp-ad');
+    amp_unhide_subscr_section('amp-ad, amp-embed, div.advertising, div.ue-c-ad');
   }
 }
 
@@ -2175,6 +2173,8 @@ else if (matchDomain('nouvelobs.com')) {
   let fade = document.querySelector('div.paywall--gradient-top');
   if (fade)
     fade.classList.remove('paywall--gradient-top');
+  let ads = document.querySelectorAll('section.slice--ad');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('science-et-vie.com')) {
@@ -4149,9 +4149,14 @@ else if (matchDomain('ftm.eu')) {
 }
 
 else if (matchDomain(['haaretz.co.il', 'haaretz.com', 'themarker.com'])) {
+  let url = window.location.href;
+  let body_wrapper_sel = 'section[data-testid="article-body-wrapper"]';
+  let paywall_sel = 'div[data-test="paywallMidpage"], ' + body_wrapper_sel + ' a[href^="https://promotion."]';
+  let article_sel = 'div[data-test="articleBody"], ' + body_wrapper_sel;
+  let article_link_sel = 'article header, main.article-page p, ' + article_sel;
   if (window.location.pathname.includes('/.')) {
     func_post = function () {
-      let article_link = document.querySelector('article header');
+      let article_link = document.querySelector(article_link_sel);
       if (article_link) {
         let article_new = document.querySelector(article_sel);
         let paywall = article_new.querySelector(paywall_sel);
@@ -4161,12 +4166,27 @@ else if (matchDomain(['haaretz.co.il', 'haaretz.com', 'themarker.com'])) {
         }
       }
     }
-    let url = window.location.href;
-    let paywall_sel = 'div[data-test="paywallMidpage"]';
-    let article_sel = 'div[data-test="articleBody"]';
-    getArchive(url, paywall_sel, '', article_sel);
-  } else
-    csDoneOnce = true;
+    window.setTimeout(function () {
+      getArchive(url, paywall_sel, '', article_sel, '', article_sel, article_link_sel);
+    }, 1000);
+  } else if (window.location.pathname.includes('/ty-article-live/')) {
+    let paywall = document.querySelector(paywall_sel);
+    if (paywall) {
+      removeDOMElement(paywall);
+      let article = document.querySelector(article_sel);
+      if (article) {
+        article.before(archiveLink_renew(url));
+        article.before(archiveLink(url));
+      }
+    }
+  } else if (window.location.pathname === '/') {
+    let overlays = document.querySelectorAll('div > div > svg[data-test="IconAlefLogoTransparent"]');
+    for (let elem of overlays)
+      removeDOMElement(elem.parentNode.parentNode);
+    let inert_links = document.querySelectorAll('article[inert]');
+    for (let elem of inert_links)
+      elem.removeAttribute('inert');
+  }
 }
 
 else if (matchDomain('hbr.org')) {
@@ -6221,8 +6241,11 @@ function replaceDomElementExtSrc(url, url_src, html, proxy, base64, selector, te
             if (arch_dom) {
               if (arch_dom.firstChild)
                 arch_dom = arch_dom.firstChild;
-              arch_dom.before(archiveLink_renew(window.location.href));
-              arch_dom.before(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
+              let arch_div = document.createElement('div');
+              arch_div.appendChild(archiveLink_renew(window.location.href));
+              arch_div.appendChild(archiveLink(window.location.href, 'BPC > Try when layout issues (no need to report issue for external site):\r\n'));
+              arch_div.style = 'margin: 0px 0px 50px;';
+              arch_dom.before(arch_div);
             }
             let targets = article_new.querySelectorAll('a[target="_blank"][href^="' + window.location.origin + '"]');
             for (let elem of targets)

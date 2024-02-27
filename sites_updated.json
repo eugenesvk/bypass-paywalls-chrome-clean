@@ -86,7 +86,8 @@
     "allow_cookies": 1,
     "block_regex": "\\.co(m|\\.il)\\/.+\\/magazine\\/page-.+\\.js",
     "cs_dompurify": 1,
-    "upd_version": "3.5.6.2"
+    "useragent_custom": "Mozilla/5.0 (Java) outbrain",
+    "upd_version": "3.5.7.2"
   },
   "Kurier.at": {
     "domain": "kurier.at",
