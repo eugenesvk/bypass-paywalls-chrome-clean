@@ -1961,11 +1961,6 @@ else if (matchDomain('lecourrierdesstrateges.fr')) {
   }, 500);
 }
 
-else if (matchDomain('lefigaro.fr')) {
-  let url = window.location.href;
-  getArchive(url, 'div#fig-premium-paywall', '', 'div[data-component="fig-content-body"]');
-}
-
 else if (matchDomain('legrandcontinent.eu')) {
   let paywall = document.querySelector('body.paywall, body.pw, body.softwall');
   if (paywall)
