@@ -4,6 +4,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Remove BusinessTimes.com.sg (fix obsolete)
+Remove Dn.se (fix obsolete)
 Fix Haaretz Group (Outbrain bot)
 Fix Project Syndicate (no article)
 Maintenance updated sites (removed)

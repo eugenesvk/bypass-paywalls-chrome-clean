@@ -826,7 +826,6 @@ Grouped in options:\
 ##### Sweden
 [Dagens ETC](https://www.etc.se) -
 [Dagens Industri](https://www.di.se) -
-[Dagens Nyheter](https://www.dn.se) -
 [NyTeknik](https://www.nyteknik.se)
 
 Grouped in options:\

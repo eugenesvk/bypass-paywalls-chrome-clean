@@ -1483,15 +1483,7 @@ else
 
 } else if (window.location.hostname.match(/\.(dk|fi|se)$/)) {//denmark/finland/sweden
 
-if (matchDomain('dn.se')) {
-  let url = window.location.href;
-  getArchive(url, 'div.esi-paywall', '', 'div.article__premium-content', '', 'article > div[style="display:block;"]');
-  let locked = document.querySelector('div.article__content--locked');
-  if (locked)
-    locked.classList.remove('article__content--locked');
-}
-
-else if (matchDomain('etc.se')) {
+if (matchDomain('etc.se')) {
   let paywall = document.querySelector('div.paywalled');
   if (paywall) {
     paywall.removeAttribute('class');
