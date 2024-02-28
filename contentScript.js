@@ -5626,7 +5626,7 @@ else if (matchDomain('timeshighereducation.com')) {
 
 else if (matchDomain(timesofindia_domains)) {
   if (matchDomain('epaper.indiatimes.com')) {
-    let blocker = document.querySelector('section.epaper-blocker');
+    let blocker = document.querySelector('div.epaperBlockerWrap');
     removeDOMElement(blocker);
     if (window.location.pathname.startsWith('/english-news-paper-today-toi-print-edition/')) {
       let paywall = document.querySelector('section#blocker');
