@@ -102,11 +102,13 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.se')) {
       if (document.querySelector('footer > div > div > a[href="https://www.nwtmedia.se/"]'))
         group = '###_se_nwt_media';
-    } else if (hostname.endsWith('.co.uk')) {
+    } else if (hostname.match(/\.(co\.uk|scot)$/)) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';
       else if (matchDomain(['investmentweek.co.uk']))
         group = '###_uk_incisive_media';
+      else if (document.querySelector('footer li > a[href^="https://www.newsquest.co.uk/"]'))
+        group = '###_uk_newsquest';
     } else if (hostname.match(/\.(ca|com|net|news|org)$/)) {
       if (matchDomain(['latribune.ca', 'lavoixdelest.ca', 'ledroit.com', 'lenouvelliste.ca', 'lequotidien.com']))
         group = '###_ca_gcm';
@@ -116,6 +118,8 @@ window.setTimeout(function () {
         group = '###_uk_axate.io';
       else if (matchDomain(['businessgreen.com', 'internationalinvestment.net', 'professionaladviser.com', 'professionalpensions.com']))
         group = '###_uk_incisive_media';
+      else if (document.querySelector('footer li > a[href^="https://www.newsquest.co.uk/"]'))
+        group = '###_uk_newsquest';
       else if (document.querySelector('script[src="https://cdn.blueconic.net/bridgetowermedia.js"], header.site-header > div.btm-header'))
         group = '###_usa_bridge_tower';
       else if (document.querySelector('head > link[href*=".gannettdigital.com/"], head > link[href*=".gannett-cdn.com/"]'))

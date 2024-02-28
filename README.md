@@ -495,6 +495,7 @@ Grouped in options:\
 *National World Publishing* sites like (opt-in to custom sites for unlisted)\
 [The Scotsman](https://www.scotsman.com) -
 [Yorkshire Post](https://www.yorkshirepost.co.uk)\
+*[Newsquest Media Group](https://www.newsquest.co.uk/news-brands)* sites (opt-in to custom sites)\
 *The Stage Media* sites like:\
 [The Bookseller](https://www.thebookseller.com) -
 [The Stage](https://www.thestage.co.uk)

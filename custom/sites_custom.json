@@ -330,11 +330,6 @@
     "block_js_inline": "\\.heraldo\\.es\\/noticias",
     "domain": "heraldo.es"
   },
-  "Heraldscotland.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "heraldscotland.com"
-  },
   "Hsj.co.uk": {
     "allow_cookies": 1,
     "domain": "hsj.co.uk",
@@ -843,11 +838,6 @@
   },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"
-  },
-  "Thenational.scot": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "thenational.scot"
   },
   "Thenationalpulse.com": {
     "allow_cookies": 1,
