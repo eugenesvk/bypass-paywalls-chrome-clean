@@ -999,6 +999,8 @@ else if (matchDomain('freiepresse.de')) {
     }
     getGoogleWebcache(url, 'div.article-teaser', '', 'article');
   }
+  let ads = document.querySelectorAll('div.rgt-content');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('freitag.de')) {

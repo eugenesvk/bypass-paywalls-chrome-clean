@@ -66,9 +66,9 @@ var remove_cookies = [];
 var remove_cookies_select_hold, remove_cookies_select_drop;
 
 // Set User-Agent
-var use_google_bot, use_bing_bot, use_facebook_bot, use_semrush_bot, use_useragent_custom, use_useragent_custom_obj;
+var use_google_bot, use_bing_bot, use_facebook_bot, use_useragent_custom, use_useragent_custom_obj;
 // Set Referer
-var use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_referer_custom_obj;
+var use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_referer_custom_obj;
 // Set random IP-address
 var random_ip = {};
 var use_random_ip = [];
@@ -117,10 +117,8 @@ function initSetRules() {
   use_google_bot = [];
   use_bing_bot = [];
   use_facebook_bot = [];
-  use_semrush_bot = [];
   use_useragent_custom = [];
   use_useragent_custom_obj = {};
-  use_drudgereport_referer = [];
   use_facebook_referer = [];
   use_google_referer = [];
   use_twitter_referer = [];
@@ -156,8 +154,6 @@ const userAgentDesktopB = "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bin
 const userAgentMobileB = "Chrome/115.0.5790.171 Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)";
 
 const userAgentDesktopF = 'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)';
-
-const userAgentDesktopS = "Mozilla/5.0 (compatible; SemrushBot; +http://www.semrush.com/bot.html)";
 
 var enabledSites = [];
 var disabledSites = [];
@@ -210,6 +206,7 @@ function check_sites_updated(sites_updated_json, optin_update = false) {
 var ext_path = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/';
 var sites_updated_json = 'sites_updated.json';
 var sites_updated_json_online = ext_path + sites_updated_json;
+var self_hosted = !!(manifestData.update_url || (manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url));
 
 function clear_sites_updated() {
   ext_api.storage.local.set({
@@ -286,10 +283,6 @@ function addRules(domain, rule) {
       if (!use_facebook_bot.includes(domain))
         use_facebook_bot.push(domain);
       break;
-    case 'semrushbot':
-      if (!use_semrush_bot.includes(domain))
-        use_semrush_bot.push(domain);
-      break;
     }
   } else if (rule.useragent_custom) {
     if (!use_useragent_custom.includes(domain)) {
@@ -299,10 +292,6 @@ function addRules(domain, rule) {
   }
   if (rule.referer) {
     switch (rule.referer) {
-    case 'drudgereport':
-      if (!use_drudgereport_referer.includes(domain))
-        use_drudgereport_referer.push(domain);
-      break;
     case 'facebook':
       if (!use_facebook_referer.includes(domain))
         use_facebook_referer.push(domain);
@@ -461,7 +450,7 @@ function set_rules(sites, sites_updated, sites_custom) {
   blockedJsInlineDomains = Object.keys(blockedJsInline);
   disableJavascriptInline();
   use_random_ip = Object.keys(random_ip);
-  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_semrush_bot, use_useragent_custom, use_drudgereport_referer, use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_random_ip);
+  change_headers = use_google_bot.concat(use_bing_bot, use_facebook_bot, use_useragent_custom, use_facebook_referer, use_google_referer, use_twitter_referer, use_referer_custom, use_random_ip);
 }
 
 // add grouped sites to en/disabledSites (and exclude sites)
@@ -793,7 +782,7 @@ ext_api.webRequest.onBeforeRequest.addListener(function (details) {
 );
 
 // Australia News Corp redirect subscribe to amp
-var au_news_corp_no_amp_fix = [];
+var au_news_corp_no_amp_fix = ['ntnews.com.au'];
 var au_news_corp_subscr = au_news_corp_domains.filter(domain => !au_news_corp_no_amp_fix.includes(domain)).map(domain => '*://www.' + domain + '/subscribe/*');
 ext_api.webRequest.onBeforeRequest.addListener(function (details) {
   if (!isSiteEnabled(details) || details.url.includes('/digitalprinteditions') || !(details.url.includes('dest=') && details.url.split('dest=')[1].split('&')[0])) {
@@ -1090,13 +1079,12 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
   var googlebotEnabled = matchUrlDomain(use_google_bot, details.url) && 
     !(matchUrlDomain(es_grupo_vocento_domains, details.url) && mobile) &&
     !(matchUrlDomain(['economictimes.com', 'economictimes.indiatimes.com'], details.url) && !details.url.split(/\?|#/)[0].endsWith('.cms')) &&
-    !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || !mobile || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
+    !(matchUrlDomain(au_news_corp_domains, details.url) && (details.url.includes('?amp') || (!matchUrlDomain(au_news_corp_no_amp_fix, details.url) && enabledSites.includes('#options_disable_gb_au_news_corp')))) &&
     !(matchUrlDomain('nytimes.com', details.url) && details.url.includes('.nytimes.com/live/')) &&
     !(matchUrlDomain('uol.com.br', details.url) && !matchUrlDomain('folha.uol.com.br', details.url)) &&
     !(matchUrlDomain('www.wsj.com', details.url));
   var bingbotEnabled = matchUrlDomain(use_bing_bot, details.url);
   var facebookbotEnabled = matchUrlDomain(use_facebook_bot, details.url);
-  var semrushbotEnabled = matchUrlDomain(use_semrush_bot, details.url);
   var useragent_customEnabled = matchUrlDomain(use_useragent_custom, details.url);
 
   // if referer exists, set it
@@ -1104,8 +1092,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     if (requestHeader.name === 'Referer') {
       if (googlebotEnabled || matchUrlDomain(use_google_referer, details.url)) {
         requestHeader.value = 'https://www.google.com/';
-      } else if (matchUrlDomain(use_drudgereport_referer, details.url)) {
-        requestHeader.value = 'https://www.drudgereport.com/';
       } else if (matchUrlDomain(use_facebook_referer, details.url)) {
         requestHeader.value = 'https://www.facebook.com/';
       } else if (matchUrlDomain(use_twitter_referer, details.url)) {
@@ -1116,7 +1102,7 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       setReferer = true;
     }
     if (requestHeader.name === 'User-Agent') {
-      useUserAgentMobile = requestHeader.value.toLowerCase().includes("mobile") && !matchUrlDomain(['telerama.fr', 'theatlantic.com'], details.url);
+      useUserAgentMobile = (requestHeader.value.toLowerCase().includes("mobile") || matchUrlDomain(au_news_corp_domains, details.url)) && !matchUrlDomain(['telerama.fr', 'theatlantic.com'], details.url);
     }
     return requestHeader;
   });
@@ -1127,11 +1113,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
       requestHeaders.push({
         name: 'Referer',
         value: 'https://www.google.com/'
-      });
-    } else if (matchUrlDomain(use_drudgereport_referer, details.url)) {
-      requestHeaders.push({
-        name: 'Referer',
-        value: 'https://www.drudgereport.com/'
       });
     } else if (matchUrlDomain(use_facebook_referer, details.url)) {
       requestHeaders.push({
@@ -1176,14 +1157,6 @@ if (matchUrlDomain(change_headers, details.url) && !ignore_types.includes(detail
     requestHeaders.push({
       "name": "User-Agent",
       "value": userAgentDesktopF
-    })
-  }
-
-  // override User-Agent to use Semrushbot
-  else if (semrushbotEnabled) {
-    requestHeaders.push({
-      "name": "User-Agent",
-      "value": userAgentDesktopS
     })
   }
 
@@ -1401,6 +1374,8 @@ function site_switch() {
       let defaultSite_title = isDefaultSite ? Object.keys(defaultSites).find(key => defaultSites[key].domain === isDefaultSite) : '';
       let isCustomSite = matchUrlDomain(customSites_domains, currentUrl);
       let customSite_title = isCustomSite ? Object.keys(customSites).find(key => customSites[key].domain === isCustomSite || (customSites[key].group && customSites[key].group.split(',').includes(isCustomSite))) : '';
+      if (isCustomSite && customSite_title && customSites[customSite_title].domain !== isCustomSite)
+        isCustomSite = customSites[customSite_title].domain;
       let isCustomFlexSite = matchUrlDomain(custom_flex_domains, currentUrl);
       let isCustomFlexGroupSite = isCustomFlexSite ? Object.keys(custom_flex).find(key => custom_flex[key].includes(isCustomFlexSite)) : '';
       let customFlexSite_title = isCustomFlexGroupSite ? Object.keys(defaultSites).find(key => defaultSites[key].domain === isCustomFlexGroupSite) : '';
