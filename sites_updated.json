@@ -89,6 +89,12 @@
     "useragent_custom": "Mozilla/5.0 (Java) outbrain",
     "upd_version": "3.5.7.2"
   },
+  "Il Sole 24 Ore": {
+    "domain": "ilsole24ore.com",
+    "allow_cookies": 1,
+    "block_regex": "(\\.ilsole24ore\\.com\\/zephr\\/feature|\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js)",
+    "upd_version": "3.5.7.7"
+  },
   "Kurier.at": {
     "domain": "kurier.at",
     "allow_cookies": 1,

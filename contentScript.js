@@ -2223,7 +2223,7 @@ else if (matchDomain('lamontagne.fr') || document.querySelector('head > meta[nam
 else
   csDone = true;
 
-} else if (window.location.hostname.endsWith('.it') || matchDomain(['eastwest.eu', 'italian.tech', 'limesonline.com', 'quotidiano.net', 'tuttosport.com'])) {//italy
+} else if (window.location.hostname.endsWith('.it') || matchDomain(['eastwest.eu', 'ilsole24ore.com', 'italian.tech', 'limesonline.com', 'quotidiano.net', 'tuttosport.com'])) {//italy
 
 if (matchDomain('corriere.it')) {
   if (window.location.pathname.endsWith('_amp.html')) {
@@ -2355,6 +2355,11 @@ else if (matchDomain('ilmanifesto.it')) {
       refreshCurrentTab();
     }
   }, 1000);
+}
+
+else if (matchDomain('ilsole24ore.com')) {
+  let ads = document.querySelectorAll('div.background-adv, div.abox, div.ob-smartfeed-wrapper');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain(['iltirreno.it', 'lanuovasardegna.it']) || matchDomain(['gazzettadimodena.it', 'gazzettadireggio.it', 'lanuovaferrara.it'])) {

@@ -669,6 +669,7 @@ Grouped in options:\
 [Il Fatto Quotidiano](https://www.ilfattoquotidiano.it) -
 [Il Foglio](https://www.ilfoglio.it) -
 [Il Manifesto](https://ilmanifesto.it) -
+[Il Sole 24 Ore](https://www.ilsole24ore.com) -
 [Internazionale](https://www.internazionale.it) -
 [Italia Oggi](https://www.italiaoggi.it) -
 [La Gazzetta dello Sport](https://www.gazzetta.it) -
