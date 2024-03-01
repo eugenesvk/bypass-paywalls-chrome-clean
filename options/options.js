@@ -42,10 +42,12 @@ function renderOptions() {
       return !val.nofix
     });
     var sites_updated_domains_new = Object.values(sites_updated).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
+    var sites_updated_perm_domains_new = Object.values(sites_updated).filter(x => x.block_host_perm_add).map(x => x.block_host_perm_add.split(',').filter(x => x).map(x => x.trim())).flat();
     var sites_custom = items.sites_custom;
     var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').map(x => x.trim()) : x.domain).flat();
+    var sites_custom_perm_domains_new = Object.values(sites_custom).filter(x => x.block_host_perm_add).map(x => x.block_host_perm_add.split(',').filter(x => x).map(x => x.trim())).flat();
 
-    var perm_origins = sites_custom_domains_new.concat(sites_updated_domains_new).filter(x => !x.includes('###')).map(x => '*://*.' + x + '/*');
+    var perm_origins = sites_custom_domains_new.concat(sites_updated_domains_new, sites_custom_perm_domains_new, sites_updated_perm_domains_new).filter(x => !x.includes('###')).map(x => '*://*.' + x + '/*');
     var perm_custom = document.getElementById('perm-custom');
     ext_api.permissions.contains({
       origins: perm_origins
@@ -53,7 +55,7 @@ function renderOptions() {
       if (result) {
         perm_custom.innerText = '';
       } else {
-        perm_custom.textContent = ">> check permissions for custom/updated sites";
+        perm_custom.textContent = ">> check host (domain) permissions for custom/updated sites";
       }
     });
 

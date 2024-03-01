@@ -152,6 +152,11 @@
   "Connexionfrance.com": {
     "domain": "connexionfrance.com"
   },
+  "Craftscouncil.org.uk": {
+    "allow_cookies": 1,
+    "block_regex": "\\/steadyhq\\.com",
+    "domain": "craftscouncil.org.uk"
+  },
   "Dailyherald.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
@@ -204,11 +209,6 @@
     "allow_cookies": 1,
     "domain": "endpts.com",
     "ld_json_url": "div.epn_limit|div.epn_content"
-  },
-  "Energy-storage.news": {
-    "allow_cookies": 1,
-    "domain": "energy-storage.news",
-    "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
   },
   "Engineersireland.ie": {
     "allow_cookies": 1,
@@ -304,6 +304,12 @@
     "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
     "domain": "group_nation_media",
     "group": "monitor.co.ug,nation.africa,thecitizen.co.tz"
+  },
+  "Group_uk_solar_media": {
+    "allow_cookies": 1,
+    "domain": "group_uk_solar_media",
+    "group": "energy-storage.news,pv-tech.org",
+    "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
   },
   "Group_van_magazine": {
     "allow_cookies": 1,
@@ -626,11 +632,6 @@
     "allow_cookies": 1,
     "domain": "pv-digest.de",
     "useragent": "googlebot"
-  },
-  "Pv-tech.org": {
-    "allow_cookies": 1,
-    "domain": "pv-tech.org",
-    "ld_json_url": "div.wkwp-paywall|div.wpwp-non-paywall"
   },
   "Quickmath.com": {
     "domain": "quickmath.com"

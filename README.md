@@ -1038,11 +1038,12 @@ By default sites' cookies/local storage are blocked/removed (for example to bypa
 
 Additional custom options:
 * allow/remove cookies (no options selected: cookies are blocked)
-* set useragent to Googlebot, Bingbot or Facebookbot
-* set referer (to Facebook, Google or Twitter; ignored when Googlebot is set)
+* set useragent to Googlebot, Bingbot, Facebookbot or custom
+* set referer (to Facebook, Google, Twitter or custom; ignored when Googlebot is set)
 * set random ip-address
 * disable Javascript for (sub)domain(s), external domains (when host permission) and/or inline scripts
 * block regular expression (to block specific script and/or xhr)
+* block_host_perm_add: add additinal host permission(s) for blocked content
 * unhide text amp-page
 * redirect to amp-page when paywall(selector)
 * load text from json when paywall|article(selector)

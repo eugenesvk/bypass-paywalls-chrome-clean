@@ -166,7 +166,7 @@ function add_options() {
         if (elem.checked)
           sites_custom[title][elem.dataset.key] = parseInt(elem.dataset.value);
       } else if (elem.value) {
-        if (elem.dataset.key === 'group')
+        if (['block_host_perm_add', 'group'].includes(elem.dataset.key))
           elem.value = elem.value.replace(/,{2,}/g, ',').replace(/(\s|www\.|,$)/g, '');
         sites_custom[title][elem.dataset.key] = elem.value;
       }
@@ -281,6 +281,7 @@ function edit_options() {
     document.querySelector('input[data-key="block_js_ext"]').checked = (edit_site.block_js_ext > 0 || edit_site.block_javascript_ext > 0);
     document.querySelector('input[data-key="block_js_inline"]').value = edit_site.block_js_inline || '';
     document.querySelector('input[data-key="block_regex"]').value = edit_site.block_regex || '';
+    document.querySelector('input[data-key="block_host_perm_add"]').value = edit_site.block_host_perm_add || '';
     document.querySelector('input[data-key="amp_unhide"]').checked = (edit_site.amp_unhide > 0);
     document.querySelector('input[data-key="amp_redirect"]').value = edit_site.amp_redirect || '';
     document.querySelector('input[data-key="ld_json"]').value = edit_site.ld_json || '';
@@ -329,10 +330,12 @@ function renderOptions() {
   }, function (items) {
     var sites_custom = sortJson(items.sites_custom);
     var sites_custom_domains_new = Object.values(sites_custom).filter(x => x.domain && !defaultSites_domains.includes(x.domain)).map(x => x.group ? x.group.split(',').filter(x => x).map(x => x.trim()) : x.domain).flat();
+    var sites_custom_perm_domains_new = Object.values(sites_custom).filter(x => x.block_host_perm_add).map(x => x.block_host_perm_add.split(',').filter(x => x).map(x => x.trim())).flat();
     var sites_updated = filterObject(items.sites_updated, function (val, key) {
       return !val.nofix
     });
     var sites_updated_domains_new = Object.values(sites_updated).filter(x => (x.domain && !defaultSites_domains.includes(x.domain) || x.group)).map(x => x.group ? x.group.filter(y => !defaultSites_domains.includes(y)) : x.domain).flat();
+    var sites_updated_perm_domains_new = Object.values(sites_updated).filter(x => x.block_host_perm_add).map(x => x.block_host_perm_add.split(',').filter(x => x).map(x => x.trim())).flat();
     var sitesEl = document.getElementById('bypass_sites');
     sitesEl.innerHTML = '';
     var labelEl = document.createElement('label');
@@ -362,6 +365,7 @@ function renderOptions() {
       'block_js_ext': 1,
       'block_js_inline': 0,
       'block_regex': 0,
+      'block_host_perm_add': 0,
       'amp_unhide': 1,
       'amp_redirect': 0,
       'ld_json': 0,
@@ -408,6 +412,7 @@ function renderOptions() {
             group: 'example1.com,example2.com',
             block_js_inline: '\\.example\\.com\\/article\\/',
             block_regex: '\\.example\\.com\\/js\\/',
+            block_host_perm_add: 'example1.com,example2.com',
             amp_redirect: 'div.paywall',
             ld_json: 'div.paywall|div.article',
             ld_json_next: 'div.paywall|div.article',
@@ -476,11 +481,11 @@ function renderOptions() {
     if (sites_updated_domains_new.length > 0) {
       labelEl = document.createElement('p');
       labelEl.appendChild(document.createElement('label'));
-      labelEl.appendChild(document.createTextNode('Updated sites: ' + sites_updated_domains_new.join()));
+      labelEl.appendChild(document.createTextNode('Updated sites: ' + sites_updated_domains_new.concat(sites_updated_perm_domains_new).join(', ')));
       custom_sitesEl.appendChild(labelEl);
     }
     
-    perm_origins = sites_custom_domains_new.concat(sites_updated_domains_new).filter(x => !x.includes('###')).map(x => '*://*.' + x + '/*');
+    perm_origins = sites_custom_domains_new.concat(sites_updated_domains_new, sites_custom_perm_domains_new, sites_updated_perm_domains_new).filter(x => !x.includes('###')).map(x => '*://*.' + x + '/*');
     var perm_custom = document.getElementById('perm-custom');
     ext_api.permissions.contains({
       origins: perm_origins

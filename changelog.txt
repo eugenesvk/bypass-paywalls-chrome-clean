@@ -13,6 +13,7 @@ Fix Medscape (js)
 Fix Project Syndicate (no article)
 Fix Times of India (epaper)
 Maintenance updated sites (removed)
+Update custom sites (block_host_perm_add)
 
 * v3.5.7.0 (2024-02-25)
 Add Canarias7.es (Grupo Vocento)
