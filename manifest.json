@@ -829,6 +829,7 @@
     "*://*.nhst.tech/*",
     "*://*.nyt.com/*",
     "*://*.pasedigital.cl/*",
+    "*://*.wbmdstatic.com/*",
     "*://*.wgchrrammzv.com/*",
     "*://*.wyleex.com/*",
     "*://archive.fo/*",
@@ -839,5 +840,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.7.5"
+  "version": "3.5.7.6"
 }

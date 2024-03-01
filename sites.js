@@ -1633,7 +1633,7 @@ var defaultSites = {
   "Medscape (regwall)": {
     domain: "medscape.com",
     allow_cookies: 1,
-    block_regex: /\.medscapestatic\.com\/.+\/medscape-library\.js/
+    block_regex: /(\.medscapestatic\.com\/.+\/medscape-library|\.wbmdstatic\.com\/.+\/chunk-vendors\..+)\.js/
   },
   "Mexico News Daily": {
     domain: "mexiconewsdaily.com",
