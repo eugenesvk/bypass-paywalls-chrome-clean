@@ -575,7 +575,7 @@ var defaultSites = {
       "modernretail.co"
     ],
     allow_cookies: 1,
-    block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /\.tinypass\.com\//
   },
   "Discover Magazine": {
     domain: "discovermagazine.com"
