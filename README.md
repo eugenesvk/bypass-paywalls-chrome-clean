@@ -452,6 +452,7 @@ Grouped in options:\
 
 ##### United Kingdom/Ireland
 [Autocar](https://www.autocar.co.uk) -
+[Autosport](https://www.autosport.com)* -
 [Belfast Telegraph](https://www.belfasttelegraph.co.uk) -
 [Business Post](https://www.businesspost.ie) -
 [Citywire](https://www.citywire.com) -

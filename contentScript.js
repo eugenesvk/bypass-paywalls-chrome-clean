@@ -2778,7 +2778,7 @@ else if (matchDomain('vn.nl')) {
 else
   csDone = true;
 
-} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk', 'vogue.co.uk'])) || matchDomain(['apollo-magazine.com', 'citywire.com', 'fnlondon.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
+} else if ((window.location.hostname.match(/\.(ie|uk)$/) && !matchDomain(['investmentweek.co.uk', 'vogue.co.uk'])) || matchDomain(['apollo-magazine.com', 'autosport.com', 'citywire.com', 'fnlondon.com', 'ft.com', 'granta.com', 'scotsman.com', 'tes.com', 'unherd.com'])) {//united kingdom/ireland
 
 if (matchDomain('apollo-magazine.com')) {
   let banner = document.querySelector('#subscribe-ribbon');
@@ -2788,6 +2788,14 @@ if (matchDomain('apollo-magazine.com')) {
 else if (matchDomain('autocar.co.uk')) {
   let url = window.location.href;
   getGoogleWebcache(url, 'div.ms-block, div.register-block', '', 'div.content-wrapper');
+}
+
+else if (matchDomain('autosport.com')) {
+  let paywall = document.querySelector('div.ms-piano_article-banner');
+  if (paywall) {
+    removeDOMElement(paywall);
+    header_nofix(document.querySelector('div.ms-article-content > p'));
+  }
 }
 
 else if (matchDomain(['belfasttelegraph.co.uk', 'independent.ie'])) {
