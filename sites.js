@@ -1786,7 +1786,13 @@ var defaultSites = {
       "upstreamonline.com"
     ],
     allow_cookies: 1,
-    block_regex: /subscription-static-global\.nhst\.tech\//
+    block_regex: /subscription-static-global\.nhst\.tech\//,
+    exception: [{
+        domain: "upstreamonline.com",
+        allow_cookies: 1,
+        cs_dompurify: 1
+      }
+    ]
   },
   "Nikkei Asian Review (do not block Piano.io-script externally)": {
     domain: "asia.nikkei.com",

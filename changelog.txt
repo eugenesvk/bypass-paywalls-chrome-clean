@@ -14,6 +14,7 @@ Fix Medscape (js)
 Fix Project Syndicate (no article)
 Fix Telegraaf.nl (timing)
 Fix Times of India (epaper)
+Fix Upstream - NHST (json)
 Maintenance updated sites (removed)
 Update custom sites (block_host_perm_add)
 
