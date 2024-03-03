@@ -562,8 +562,13 @@ var defaultSites = {
     allow_cookies: 1,
     cs_dompurify: 1
   },
-  "Digiday": {
-    domain: "digiday.com",
+  "Digiday Media": {
+    domain: "###_usa_digiday",
+    group: [
+      "digiday.com",
+      "glossy.co",
+      "modernretail.co"
+    ],
     allow_cookies: 1,
     block_regex: /(cdn\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
   },

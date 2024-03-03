@@ -299,6 +299,7 @@
     "*://*.glassdoor.com/*",
     "*://*.globes.co.il/*",
     "*://*.globo.com/*",
+    "*://*.glossy.co/*",
     "*://*.goldcoastbulletin.com.au/*",
     "*://*.goodhousekeeping.com/*",
     "*://*.gq.com/*",
@@ -477,6 +478,7 @@
     "*://*.mlive.com/*",
     "*://*.moda.it/*",
     "*://*.modernhealthcare.com/*",
+    "*://*.modernretail.co/*",
     "*://*.monacomatin.mc/*",
     "*://*.monocle.com/*",
     "*://*.motorradonline.de/*",
@@ -841,5 +843,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.7.7"
+  "version": "3.5.7.8"
 }

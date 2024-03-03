@@ -3888,13 +3888,9 @@ else if (matchDomain('defector.com')) {
   }
 }
 
-else if (matchDomain('digiday.com')) {
-  if (window.location.pathname.endsWith('/amp/')) {
-    amp_unhide_access_hide('="NOT p.showPageviewExpired AND NOT p.showPayWall"', '', 'amp-ad, .advertisement, .ad-wrapper');
-  } else {
-    let ads = document.querySelectorAll('div[class^="ad_"]');
-    hideDOMElement(...ads);
-  }
+else if (matchDomain(['digiday.com', 'glossy.co', 'modernretail.co'])) {
+  let ads = document.querySelectorAll('div[class^="ad_"]');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('discovermagazine.com')) {
