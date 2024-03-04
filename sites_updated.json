@@ -11,12 +11,6 @@
     "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
     "upd_version": "3.2.7.1"
   },
-  "CartaCapital": {
-    "domain": "cartacapital.com.br",
-    "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div.contentSoft\", \"rm_attrib\":\"class\"}]",
-    "upd_version": "3.5.5.7"
-  },
   "Condé Nast magazines": {
     "domain": "###_usa_conde_nast",
     "group": [
@@ -95,20 +89,6 @@
     "block_regex": "(\\.ilsole24ore\\.com\\/zephr\\/feature|\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js)",
     "upd_version": "3.5.7.7"
   },
-  "Kurier.at": {
-    "domain": "kurier.at",
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com\\/",
-    "cs_code": "[{\"cond\":\"div#cfs-paywall-container\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.paywall\", \"rm_attrib\":\"class|style\"}]}]",
-    "upd_version": "3.5.5.2"
-  },
-  "Los Angeles Times": {
-    "domain": "latimes.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.californiatimes\\.com\\/meteringjs",
-    "cs_block": 1,
-    "upd_version": "3.5.5.4"
-  },
   "Mediahuis Nederland Regional (removed)": {
     "domain": "###_nl_mediahuis_region",
     "group": [],
@@ -127,13 +107,6 @@
     "useragent": "googlebot",
     "cs_code": "[{\"cond\":\"div.cg-article-salebox\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.cg_article_meat>[style]\", \"rm_attrib\":\"style\"}, {\"cond\":\"article.article_status-cut\", \"rm_class\":\"article_status-cut\"}]}]",
     "upd_version": "3.5.6.6"
-  },
-  "San Diego Union Tribune": {
-    "domain": "sandiegouniontribune.com",
-    "allow_cookies": 1,
-    "block_regex": "\\.californiatimes\\.com\\/meteringjs",
-    "cs_block": 1,
-    "upd_version": "3.5.5.4"
   },
   "SPH Media": {
     "domain": "###_sg_sph_media",

@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
+    "cs_code": "bild.de, dn.se, faithfullymagazine.com, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -165,7 +165,7 @@
   "Dealstreetasia.com": {
     "allow_cookies": 1,
     "domain": "dealstreetasia.com",
-    "ld_json_next": "div.subscribe-now|article"
+    "ld_json_next": "div.subscribe-now,div.overlay|article"
   },
   "Deutsche-wirtschafts-nachrichten.de": {
     "add_ext_link": "div#article-teaser-blocks|div.teaser_extra",
@@ -219,11 +219,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.eviemagazine\\.com\\/api\\/trpc\\/post\\.paywall",
     "domain": "eviemagazine.com"
-  },
-  "Faithfullymagazine.com": {
-    "allow_cookies": 1,
-    "domain": "faithfullymagazine.com",
-    "ld_json": "div.pmpro_content_message|div.content-inner"
   },
   "Farmersjournal.ie": {
     "amp_redirect": "div#memberplusModal.in",
@@ -442,6 +437,11 @@
     "allow_cookies": 1,
     "domain": "lsa-conso.fr",
     "useragent": "googlebot"
+  },
+  "Luxurydaily.com": {
+    "allow_cookies": 1,
+    "domain": "luxurydaily.com",
+    "ld_json_url": "div.call-to-action|div.body|||meta[name='id']"
   },
   "Lyrik.fr": {
     "allow_cookies": 1,

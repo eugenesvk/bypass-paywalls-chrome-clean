@@ -826,12 +826,14 @@ else if (matchDomain('bild.de')) {
 }
 
 else if (matchDomain('boersen-zeitung.de')) {
-  let url = window.location.href;
-  let paywall = document.querySelector('storefront-element[child-id="paywall"]');
-  if (paywall) {
-    removeDOMElement(paywall);
-    replaceDomElementExt(url, false, false, 'article');
-  }
+  window.setTimeout(function () {
+    let paywall = document.querySelector('storefront-section#paywall');
+    if (paywall) {
+      removeDOMElement(paywall);
+      let url = window.location.href;
+      replaceDomElementExt(url, false, false, 'article');
+    }
+  }, 1000);
 }
 
 else if (matchDomain('cicero.de')) {
@@ -2668,8 +2670,8 @@ else if (matchDomain(nl_dpg_adr_domains.concat(['hln.be']))) {
 }
 
 else if (matchDomain(nl_dpg_media_domains)) {
-  let banners = document.querySelectorAll('div[data-temptation-position^="PAGE_"], div[class^="ad--"]');
-  let paywall = document.querySelectorAll('[data-temptation-position^="ARTICLE_"]');
+  let banners = document.querySelectorAll('div[data-temptation-position^="PAGE_"], div[class^="ad--"], div[class^="_3iyhos"]');
+  let paywall = document.querySelectorAll('aside[data-temptation-position^="ARTICLE_"]');
   removeDOMElement(...banners, ...paywall);
 }
 
