@@ -32,6 +32,7 @@ var restrictions = {
   'ft.com': /^((?!\/cn\.ft\.com\/).)*$/,
   'hilltimes.com': /^((?!\.hilltimes\.com\/slideshow\/).)*$/,
   'hindustantimes.com': /^((?!\/epaper\.hindustantimes\.com\/).)*$/,
+  'ilsole24ore.com': /^((?!\/ntplus.+\.ilsole24ore\.com\/).)*$/,
   'livemint.com': /^((?!\/epaper\.livemint\.com\/).)*$/,
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
   'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
@@ -539,7 +540,7 @@ ext_api.storage.local.get({
     } else {
       ext_api.management.getSelf(function (result) {
         if ((result.installType === 'development' || (result.installType !== 'development' && !enabledSites.includes('#options_on_update')))) {
-          let new_groups = ['###_de_motor_presse', '###_il_haaretz_group', '###_usa_digiday'];
+          let new_groups = ['###_usa_digiday'];
           let open_options = new_groups.some(group => !enabledSites.includes(group) && grouped_sites[group].some(domain => enabledSites.includes(domain) && !customSites_domains.includes(domain)));
           if (open_options)
             ext_api.runtime.openOptionsPage();
@@ -1651,7 +1652,7 @@ function compareKey(firstStr, secondStr) {
 
 function isSiteEnabled(details) {
   var enabledSite = matchUrlDomain(enabledSites, details.url);
-  if (!ext_name.startsWith('Bypass Paywalls Clean'))
+  if (!ext_name.startsWith('Bypass Paywalls Clean') || !(self_hosted || /0$/.test(ext_version)))
     enabledSite = '';
   if (enabledSite in restrictions) {
     return restrictions[enabledSite].test(details.url);

@@ -1192,7 +1192,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /(\.(cedscdn|cedsdigital)\.it\/.+\/PaywallMeter\.js|cdn\.ampproject\.org\/v\d\/amp-(access|consent|subscriptions)-.+\.(m)?js)/
   },
-  "Il Sole 24 Ore": {
+  "Il Sole 24 Ore (24+ only)": {
     domain: "ilsole24ore.com",
     allow_cookies: 1,
     block_regex: /(\.ilsole24ore\.com\/zephr\/feature|\.cloudfront\.net\/embed\/widget\/subx.+\.js)/

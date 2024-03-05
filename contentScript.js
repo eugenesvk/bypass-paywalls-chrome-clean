@@ -2370,6 +2370,11 @@ else if (matchDomain('ilmanifesto.it')) {
 }
 
 else if (matchDomain('ilsole24ore.com')) {
+  let paywall = document.querySelector('div.lock');
+  if (paywall) {
+    removeDOMElement(paywall);
+    header_nofix(document.querySelector('div.paywalltext'));
+  }
   let ads = document.querySelectorAll('div.background-adv, div.abox, div.ob-smartfeed-wrapper');
   hideDOMElement(...ads);
 }

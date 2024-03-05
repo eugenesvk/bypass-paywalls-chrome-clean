@@ -50,11 +50,6 @@
     "domain": "athensreviewofbooks.com",
     "ld_json": "div.freeUser|div.itemBody"
   },
-  "Bauernzeitung.ch": {
-    "allow_cookies": 1,
-    "domain": "bauernzeitung.ch",
-    "useragent": "googlebot"
-  },
   "Bisnisindonesia.id": {
     "allow_cookies": 1,
     "domain": "bisnisindonesia.id",
@@ -288,6 +283,13 @@
     "domain": "gramophone.co.uk",
     "useragent": "googlebot"
   },
+  "Group_ch_agrarmedien": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"[class*='advert']\", \"rm_elem\":1}]",
+    "domain": "group_ch_agrarmedien",
+    "group": "bauernzeitung.ch,diegruene.ch",
+    "useragent": "googlebot"
+  },
   "Group_de_ozg": {
     "allow_cookies": 1,
     "domain": "group_de_ozg",
@@ -342,6 +344,12 @@
     "allow_cookies": 1,
     "block_js_inline": "\\.heraldo\\.es\\/noticias",
     "domain": "heraldo.es"
+  },
+  "Hochparterre.ch": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.pageWrapper\", \"rm_class\":\"pageWrapper\"}]",
+    "domain": "hochparterre.ch",
+    "ld_google_webcache": "div.paywall|div.article__content"
   },
   "Hsj.co.uk": {
     "allow_cookies": 1,

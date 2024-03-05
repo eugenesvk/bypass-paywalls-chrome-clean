@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Remove Puck.news (fix obsolete)
 Fix Boersen-zeitung.de (timing)
+Fix Il Sole 24 Ore (24+ only)
 
 * v3.5.8.0 (2024-03-03)
 Add Autosport (free articles only)
