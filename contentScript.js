@@ -4792,19 +4792,6 @@ else if (matchDomain('project-syndicate.org')) {
   }
 }
 
-else if (matchDomain('puck.news')) {
-  if (dompurify_loaded)
-    getJsonUrl('div[class*="paywall"]', '', 'div.entry-content', {art_append: true});
-  let modal = document.querySelector('div#paywall-modal');
-  removeDOMElement(modal);
-  let overlay = document.querySelector('body.paywall-active');
-  if (overlay)
-    overlay.classList.remove('paywall-active');
-  let article_style = document.querySelector('article[style]');
-  if (article_style)
-    article_style.removeAttribute('style');
-}
-
 else if (matchDomain('quora.com')) {
   let overlays = document.querySelectorAll('div[class*="_overlay"]');
   removeDOMElement(...overlays);
@@ -6542,7 +6529,7 @@ function googleWebcacheLink(url, text_fail = 'BPC > Try for full article text:\r
   return externalLink(['webcache.googleusercontent.com'], 'https://{domain}/search?q=cache:{url}', url, text_fail);
 }
 
-function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test url & copy html (tab) code to [https://codebeautify.org/htmlviewer]:\r\n') {
+function googleSearchToolLink(url, text_fail = 'BPC > Full article text (test url & copy html (tab) code to [https://codebeautify.org/htmlviewer]):\r\n') {
   return externalLink(['search.google.com'], 'https://search.google.com/test/rich-results?url={url}', encodeURIComponent(url), text_fail);
 }
 

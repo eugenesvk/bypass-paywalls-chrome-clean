@@ -70,6 +70,12 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "blick.ch"
   },
+  "Bm-online.de": {
+    "add_ext_link": "div.plenigo-teaser|div.entry-content",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "bm-online.de"
+  },
   "Bostonmagazine.com": {
     "allow_cookies": 1,
     "domain": "bostonmagazine.com",
@@ -105,6 +111,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.piano\\.io",
     "domain": "businessinsider.de"
+  },
+  "Businesslive.co.za": {
+    "add_ext_link": "div#comment-shield|div.article-info-container",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "businesslive.co.za"
   },
   "Businessnews.com.au": {
     "allow_cookies": 1,
@@ -751,6 +763,12 @@
     "block_regex": "\\.tinypass\\.com",
     "domain": "supchina.com"
   },
+  "Swp.de": {
+    "add_ext_link": "div.swpPayWall|section.paywall",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "swp.de"
+  },
   "T3n.de": {
     "allow_cookies": 1,
     "domain": "t3n.de",
@@ -879,6 +897,12 @@
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",
     "domain": "washingtontimes.com"
+  },
+  "Wissenschaft.de": {
+    "add_ext_link": "div.plenigo-teaser|div.entry-content",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "domain": "wissenschaft.de"
   },
   "Wuv.de": {
     "allow_cookies": 1,

@@ -19,20 +19,19 @@ Weekly updates are released for fixes and new sites.
 
 ### Installation
 You can install the add-on from [GitLab releases](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/releases)\
-Download the [latest release by xpi-file](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
-Or go to Tools > Add-ons (about:addons) > Extensions > Settings/Cogwheel - Install Add-on from File\
-You can add/pin the add-on icon to the toolbar with the toolbar extensions menu (jigsaw puzzle shaped icon).\
-Custom xpi-file has host permissions for all sites.\
-Minumum browser requirement: Firefox 86+.
+Download the [latest release by xpi-file (regular version)](https://gitlab.com/magnolia1234/bpc-uploads/-/raw/master/bypass_paywalls_clean-latest.xpi), go to downloads and install the add-on (or drag it from your file-manager anywhere on a page/tab in Firefox).\
+You can also go to Tools > Add-ons (about:addons) > Extensions > Settings/Cogwheel - Install Add-on from File\
 
-PS although add-on was removed from [Mozilla's add-on store (AMO)](https://addons.mozilla.org) (because of DMCA Takedown Notice) the add-on is still signed and checked for security by Mozilla ('minor' delays can in reality be a few days or up to a week though):
-> Please be aware of a recent change to AMO’s review process: All extension submissions with a significantly large number of users are now subject to human review by the add-ons review team before approval. This may, occasionally, result in minor delays publishing new versions of your extension on AMO. We’ve made this change to provide Firefox users with even greater security assurances for some of AMO’s most popular extensions.
+By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). Or just request host permissions for the custom sites you've added yourself (or click *clear cookies* (BPC-icon) to ask for host permission for current site).\
+You can also install the custom add-on version (with host permissions for all sites).
+
+For easier access to the add-on options/settings you can add/pin the add-on icon to the toolbar with the toolbar extensions menu (jigsaw puzzle shaped icon).\
+Minimum browser requirement: Firefox 86+.
+
+PS although the add-on was removed from [Mozilla's add-on store (AMO)](https://addons.mozilla.org) (because of DMCA Takedown Notice) it's still signed and manually checked for security by Mozilla (hence the delay in signing).
 
 If you want to permanently install the latest [master ZIP-file from GitLab](https://gitlab.com/magnolia1234/bypass-paywalls-firefox-clean/-/archive/master/bypass-paywalls-firefox-clean-master.zip) (with post-release fixes) use a Firefox browser which allows using unsigned add-ons like Firefox Developer Portable (go to about:config and set xpinstall.signatures.required to false) or LibreWolf (for both no automatic updates of add-on).\
 Or load a temporary add-on in regular Firefox (go to about:debugging#/runtime/this-firefox & load manifest.json from unpacked (master-zip) folder).
-
-By default BPC has limited host permissions, but you can opt-in to enable custom sites (and also clear cookies/block general paywall-scripts for unlisted sites). You can also just request host permissions for the custom sites you've added yourself (or click *clear cookies* (BPC-icon) to ask for host permission for current site).\
-You can also install the custom add-on version (with host permissions for all sites).
 
 ### Update
 Add-on will automatically update or you can do a manual check for updates (in about:addons).\
@@ -213,7 +212,6 @@ Grouped in options:\
 [Newsweek](https://www.newsweek.com) -
 [Outdoor Life](https://www.outdoorlife.com) -
 [Project Syndicate](https://www.project-syndicate.org) -
-[Puck.news](https://puck.news) -
 [Slate](https://slate.com) -
 [SofRep](https://sofrep.com) -
 [Stereogum](https://www.stereogum.com) -
