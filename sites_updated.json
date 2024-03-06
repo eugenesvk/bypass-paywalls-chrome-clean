@@ -35,11 +35,24 @@
     "ld_json_url": "div[class*='_gate']|div.article-page__content-body",
     "upd_version": "3.5.6.3"
   },
-  "Funke Mediengruppe (removed)": {
+  "Funke Mediengruppe": {
     "domain": "###_de_funke_medien",
-    "group": [],
+    "group": [
+      "abendblatt.de",
+      "braunschweiger-zeitung.de",
+      "morgenpost.de",
+      "nrz.de",
+      "otz.de",
+      "thueringer-allgemeine.de",
+      "tlz.de",
+      "waz.de",
+      "wp.de",
+      "wr.de"
+    ],
     "allow_cookies": 1,
-    "upd_version": "3.5.6.8"
+    "block_regex": "\\.piano\\.io",
+    "ld_archive_is": "div#paywall-container|article",
+    "upd_version": "3.5.8.3"
   },
   "Groupe Rossel (removed)": {
     "domain": "###_fr_be_groupe_rossel",
