@@ -133,6 +133,7 @@ Global Polymer Group:
 [Digiday](https://digiday.com) -
 [Glossy](https://www.glossy.co) -
 [ModernRetail](https://www.modernretail.co)\
+*[Industry Dive](https://www.industrydive.com/publications)* sites (opt-in to custom sites)\
 *[Inside Retail](https://octomedia.com.au/our-brands/inside-retail)* sites (opt-in to custom sites)\
 *[PEI Media](https://www.pei.group/brands)* sites (opt-in to custom sites)
 

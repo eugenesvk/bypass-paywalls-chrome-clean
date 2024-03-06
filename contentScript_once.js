@@ -143,6 +143,8 @@ window.setTimeout(function () {
           group = '###_usa_forum_comm';
         else if (document.querySelector('li > a[href^="https://www.bnpmedia.com/"]'))
           group = '###_usa_bnp_media';
+        else if (matchDomain(['cfo.com', 'pharmavoice.com', 'proformative.com', 'socialmediatoday.com']) || (hostname.endsWith('dive.com') && document.querySelector('script[src^="/static/js/dist/contentGate.bundle.js"], div.baseline-footer > a[href="http://www.industrydive.com"]')))
+          group = '###_usa_industrydive';
         else if (matchDomain(['centralmaine.com', 'pressherald.com', 'sunjournal.com']))
           group = '###_usa_maine_trust';
         else if (document.querySelector('head > meta[name="peim_article_access_type"]'))

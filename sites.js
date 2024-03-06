@@ -1217,6 +1217,12 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
   },
+  "Industry Dive (opt-in to custom sites)": {
+    domain: "###_usa_industrydive",
+    group: [],
+    allow_cookies: 1,
+    block_regex: "\\.{domain}\\/static\\/js\\/dist\\/contentGate\\.bundle\\.js"
+  },
   "iNews (UK)": {
     domain: "inews.co.uk",
     allow_cookies: 1,
