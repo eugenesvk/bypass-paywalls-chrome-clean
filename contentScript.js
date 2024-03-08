@@ -816,7 +816,7 @@ else if (matchDomain(['beobachter.ch', 'handelszeitung.ch'])) {
 
 else if (matchDomain('berliner-zeitung.de')) {
   window.setTimeout(function () {
-    let ads = document.querySelectorAll('[class^="traffective_"], [class^="article_billboard-"], [class^="outbrain_container"]');
+    let ads = document.querySelectorAll('div[class^="traffective_"], div[class^="article_billboard-"], div[class*="_ad_"], div[class^="outbrain_"]');
     hideDOMElement(...ads);
   }, 1000);
 }
@@ -5563,8 +5563,10 @@ else if (matchDomain('thequint.com')) {
     } else
       refreshCurrentTab();
     let body_hidden = document.querySelector('div#story-body-wrapper');
-    if (body_hidden)
+    if (body_hidden) {
       body_hidden.removeAttribute('class');
+      body_hidden.removeAttribute('style');
+    }
     function thequint_unhide(node) {
       node.removeAttribute('style');
     }
