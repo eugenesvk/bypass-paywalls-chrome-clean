@@ -19,6 +19,7 @@ var de_funke_medien_domains = ['abendblatt.de', 'braunschweiger-zeitung.de', 'mo
 var de_lv_domains = ['profi.de', 'wochenblatt.com'];
 var de_madsack_domains = ['haz.de', 'kn-online.de', 'ln-online.de', 'lvz.de', 'maz-online.de', 'neuepresse.de', 'ostsee-zeitung.de', 'rnd.de'];
 var de_mhs_custom_domains = ['cannstatter-zeitung.de', 'esslinger-zeitung.de', 'frankenpost.de', 'insuedthueringen.de', 'krzbb.de', 'kurier.de', 'np-coburg.de'];
+var de_motor_presse_domains = ['aerokurier.de', 'auto-motor-und-sport.de', 'flugrevue.de', 'motorradonline.de', 'womenshealth.de'];
 var de_vrm_domains = ['allgemeine-zeitung.de', 'echo-online.de', 'wiesbadener-kurier.de'];
 var de_vrm_custom_domains = ['buerstaedter-zeitung.de', 'hochheimer-zeitung.de', 'lampertheimer-zeitung.de', 'lauterbacher-anzeiger.de', 'main-spitze.de', 'mittelhessen.de', 'oberhessische-zeitung.de', 'wormser-zeitung.de'];
 var es_epiberica_domains = ['diariodemallorca.es', 'eldia.es', 'elperiodico.com', 'epe.es', 'farodevigo.es', 'informacion.es', 'laprovincia.es', 'levante-emv.com', 'lne.es', 'mallorcazeitung.es', 'superdeporte.es'];
@@ -1417,7 +1418,7 @@ else if (matchDomain('vol.at')) {
 else if (matchDomain('welt.de')) {
   let url = window.location.href;
   getArchive(url, 'div.contains_walled_content', '', 'article');
-  let ads = document.querySelectorAll('div[data-component="Outbrain"], div[data-component="OEmbedComponent"], div[class*="c-ad"]');
+  let ads = document.querySelectorAll('div[data-component="Outbrain"], div[class*="c-ad"]');
   hideDOMElement(...ads);
 }
 
@@ -1468,6 +1469,11 @@ else if (matchDomain(de_madsack_domains) || document.querySelector('head > link[
   } else {
     ampToHtml();
   }
+}
+
+else if (matchDomain(de_motor_presse_domains)) {
+  let ads = document.querySelectorAll('div#ads-container, div.va-sponsored, div.mps_markAd');
+  hideDOMElement(...ads);
 }
 
 else if (matchDomain('ruhrnachrichten.de') || document.querySelector('a.mgw-logo[href^="https://mgw.de"]')) {

@@ -35,6 +35,8 @@ window.setTimeout(function () {
   if (hostname) {
     if (document.querySelector('script[src*=".medium.com/"]') || matchDomain(['plainenglish.io']))
       group = 'medium.com';
+    else if (document.querySelector('head > meta[property="og:image"][content*="beehiiv"]'))
+      group = '###_beehiiv';// no fix
     else if (document.querySelector('head > link[href*="/leaky-paywall"], script[src*="/leaky-paywall"], div[id^="issuem-leaky-paywall-"]'))
       group = '###_wp_leaky_paywall';
     else if (document.querySelector('script[src*="/substackcdn.com/"], link[rel="stylesheet"][href*="/substackcdn.com/"]'))
@@ -102,6 +104,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.se')) {
       if (document.querySelector('footer > div > div > a[href="https://www.nwtmedia.se/"]'))
         group = '###_se_nwt_media';
+      else if (document.querySelector('head > link[href^="https://cdn.gotamedia.se/"]'))
+        group = '###_se_gota_media';// no fix
     } else if (hostname.match(/\.(co\.uk|scot)$/)) {
       if (document.querySelector('footer > div a[href^="https://www.nationalworldplc.com"]'))
         group = '###_uk_nat_world';

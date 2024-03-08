@@ -10,6 +10,7 @@ Fix Boersen-zeitung.de (timing)
 Fix ElMundo.es (colegios - no amp-fix)
 Fix Hearst newspapers (anti-adblocker)
 Fix Il Sole 24 Ore (24+ only)
+Fix Motor Presse Stuttgart (xhr)
 Fix The Quint (css)
 
 * v3.5.8.0 (2024-03-03)

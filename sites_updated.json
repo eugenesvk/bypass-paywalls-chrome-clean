@@ -129,6 +129,19 @@
     "block_regex": "(\\.medscapestatic\\.com\\/.+\\/medscape-library|\\.wbmdstatic\\.com\\/.+\\/chunk-vendors\\..+)\\.js",
     "upd_version": "3.5.7.6"
   },
+  "Motor Presse Stuttgart": {
+    "domain": "###_de_motor_presse",
+    "group": [
+      "aerokurier.de",
+      "auto-motor-und-sport.de",
+      "flugrevue.de",
+      "motorradonline.de",
+      "womenshealth.de"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "\\.{domain}\\/thenewsbar\\/config",
+    "upd_version": "3.5.8.6"
+  },
   "Polityka.pl": {
     "domain": "polityka.pl",
     "allow_cookies": 1,
