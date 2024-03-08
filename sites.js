@@ -1125,7 +1125,7 @@ var defaultSites = {
     remove_cookies: 1,
     cs_code: [{"cond":"div#modal-register-popup, div.gating-banner", "rm_elem":1}, {"cond":"div[data-gated]", "rm_attrib":"data-gated"}]
   },
-  "Hearst Communications (newspapers)": {
+  "Hearst Communications (newspapers; opt-in to custom sites for unlisted)": {
     domain: "###_usa_hearst_comm",
     group: [
       "ctpost.com",

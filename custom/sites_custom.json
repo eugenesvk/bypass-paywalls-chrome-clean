@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, faithfullymagazine.com, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, mailplus.co.uk, politiken.dk, theinformation.com",
+    "cs_code": "bild.de, dn.se, faithfullymagazine.com, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, lyrik.fr, mailplus.co.uk, politiken.dk, theinformation.com",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -133,6 +133,11 @@
     "allow_cookies": 1,
     "block_regex": "\\.catholicherald\\.co\\.uk\\/c\\/assets\\/pigeon\\.js",
     "domain": "catholicherald.co.uk"
+  },
+  "Causette.fr": {
+    "allow_cookies": 1,
+    "domain": "causette.fr",
+    "ld_json_url": "div.ihc-locker-wrap|div.entry-content"
   },
   "Chicago.suntimes.com": {
     "allow_cookies": 1,
@@ -314,6 +319,13 @@
     "domain": "group_nation_media",
     "group": "monitor.co.ug,nation.africa,thecitizen.co.tz"
   },
+  "Group_uk_dcthomson": {
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
+    "cs_code": "[{\"cond\":\"div[rel='advert']\", \"rm_elem\":1}]",
+    "domain": "group_uk_dcthomson",
+    "group": "energyvoice.com,pressandjournal.co.uk,thecourier.co.uk"
+  },
   "Group_uk_solar_media": {
     "allow_cookies": 1,
     "domain": "group_uk_solar_media",
@@ -462,11 +474,6 @@
     "allow_cookies": 1,
     "domain": "luxurydaily.com",
     "ld_json_url": "div.call-to-action|div.body|||meta[name='id']"
-  },
-  "Lyrik.fr": {
-    "allow_cookies": 1,
-    "block_regex": "\\.qiota\\.com",
-    "domain": "lyrik.fr"
   },
   "Makorrishon.co.il": {
     "allow_cookies": 1,
@@ -635,11 +642,6 @@
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
     "domain": "portfolio.hu",
-    "useragent": "googlebot"
-  },
-  "Pressandjournal.co.uk": {
-    "allow_cookies": 1,
-    "domain": "pressandjournal.co.uk",
     "useragent": "googlebot"
   },
   "Publishersweekly.com": {
@@ -816,11 +818,6 @@
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\".locked-content\",\"rm_attrib\":\"class\"}]",
     "domain": "thecaterer.com",
-    "useragent": "googlebot"
-  },
-  "Thecourier.co.uk": {
-    "allow_cookies": 1,
-    "domain": "thecourier.co.uk",
     "useragent": "googlebot"
   },
   "Thedailymash.co.uk": {

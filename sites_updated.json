@@ -96,6 +96,21 @@
     "useragent_custom": "Mozilla/5.0 (Java) outbrain",
     "upd_version": "3.5.7.2"
   },
+  "Hearst Communications (newspapers)": {
+    "domain": "###_usa_hearst_comm",
+    "group": [
+      "ctpost.com",
+      "expressnews.com",
+      "houstonchronicle.com",
+      "nhregister.com",
+      "sfchronicle.com",
+      "timesunion.com"
+    ],
+    "allow_cookies": 1,
+    "block_regex": "(\\.{domain}\\/script\\.js|\\.ensighten\\.com\\/|js\\.matheranalytics\\.com\\/)",
+    "cs_code": "[{\"cond\":\"div#modals\", \"rm_elem\":1}, {\"cond\":\"body[style]\", \"rm_attrib\":\"style\"}]",
+    "upd_version": "3.5.8.5"
+  },
   "Il Sole 24 Ore": {
     "domain": "ilsole24ore.com",
     "allow_cookies": 1,

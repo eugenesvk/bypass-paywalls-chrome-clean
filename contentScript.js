@@ -4327,12 +4327,6 @@ else if (matchDomain('historyextra.com')) {
   removeDOMElement(ad_banner);
 }
 
-else if (matchDomain(usa_hearst_comm_domains)) {
-  let wrapper = document.querySelector('.belowMastheadWrapper');
-  let ads = document.querySelectorAll('div.adModule');
-  hideDOMElement(wrapper, ...ads);
-}
-
 else if (matchDomain('inc42.com')) {
   if (window.location.pathname.endsWith('/amp/')) {
     amp_unhide_access_hide('="status"', '="NOT status"', 'amp-ad, amp-embed, div.wru-widget');
@@ -6068,6 +6062,19 @@ else if (matchDomain('zerohedge.com')) {
 else if (matchDomain(usa_gannett_domains) || document.querySelector('head > link[href*=".gannettdigital.com/"], head > link[href*=".gannett-cdn.com/"]')) {
   if (window.location.pathname.endsWith('/restricted/') && window.location.search.startsWith('?return='))
     window.location.href = decodeURIComponent(window.location.href.split('?return=')[1]);
+}
+
+else if (matchDomain(usa_hearst_comm_domains) || document.querySelector('script[src*="/treg.hearstnp.com/"]')) {
+  let overlay = document.querySelector('div > div#modalOuter');
+  if (overlay) {
+    hideDOMElement(overlay.parentNode);
+    let noscroll = document.querySelector('body[style]');
+    if (noscroll)
+      noscroll.removeAttribute('style');
+  }
+  let ads = pageContains('div > div > p', 'Article continues below this ad');
+  for (let elem of ads)
+    hideDOMElement(elem.parentNode.parentNode);
 }
 
 else if ((domain = matchDomain(usa_lee_ent_domains)) || matchDomain(ca_torstar_domains.concat(['abqjournal.com'])) || document.querySelector('script[src*=".townnews.com/"][src*="/tncms/"]')) {
