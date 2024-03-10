@@ -2415,8 +2415,8 @@ var defaultSites = {
   },
   "The Globe and Mail": {
     domain: "theglobeandmail.com",
-    block_js_inline: /\.theglobeandmail\.com\/.+\/article-.+\?rel=premium/,
-    block_regex: /(smartwall\.theglobeandmail\.com\/|\.sophi\.io\/|\.zephr\.com\/zephr-browser\/)/
+    allow_cookies: 1,
+    block_regex: /(\.sophi\.io\/|\.zephr\.com\/zephr-browser\/)/
   },
   "The Hill": {
     domain: "thehill.com",
