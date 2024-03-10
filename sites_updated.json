@@ -167,6 +167,15 @@
     "ld_archive_is": "div#nocx_paywall_area|main#content",
     "upd_version": "3.5.7.1"
   },
+  "Südkurier": {
+    "domain": "suedkurier.de",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "add_ext_link": "aside.article-paywall|section.article-content",
+    "add_ext_link_type": "archive.is",
+    "ld_archive_is": "aside.article-paywall|main>article",
+    "upd_version": "3.5.8.9"
+  },
   "The Epoch Times": {
     "domain": "###_usa_epochtimes",
     "group": [

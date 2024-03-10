@@ -613,6 +613,7 @@ Grouped in options:\
 [Schwäbische Zeitung](https://www.schwaebische.de) -
 [Springer Medizin](https://www.springermedizin.de) -
 [Süddeutsche Zeitung](https://www.sueddeutsche.de) -
+[Südkurier](https://www.suedkurier.de) -
 [Tiroler Tageszeitung](https://www.tt.com) -
 [Volksstimme](https://www.volksstimme.de) -
 [Vorarlberg Nachrichten](https://www.vn.at) -

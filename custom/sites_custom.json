@@ -763,13 +763,6 @@
     "block_regex": "js\\.pelcro\\.com",
     "domain": "stripes.com"
   },
-  "Suedkurier.de": {
-    "add_ext_link": "aside.article-paywall|section.article-content",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "suedkurier.de",
-    "ld_archive_is": "aside.article-paywall|main>article"
-  },
   "Supchina.com": {
     "allow_cookies": 1,
     "block_regex": "\\.tinypass\\.com",

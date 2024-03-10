@@ -1327,6 +1327,11 @@ else if (matchDomain('sueddeutsche.de')) {
   clear_ads();
 }
 
+else if (matchDomain('suedkurier.de')) {
+  let url = window.location.href;
+  getArchive(url, 'aside.article-paywall', '', 'main > article');
+}
+
 else if (matchDomain('tagesspiegel.de')) {
   let url = window.location.href;
   if (matchDomain('www.tagesspiegel.de')) {
