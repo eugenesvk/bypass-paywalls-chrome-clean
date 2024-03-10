@@ -319,6 +319,7 @@ Grouped in options:\
 [The New Orleans Advocate/The Times-Picayune](https://www.nola.com) -
 [The New York Post](https://nypost.com) -
 [The New York Sun](https://www.nysun.com) -
+[The Salt Lake Tribune](https://www.sltrib.com) -
 [The Seattle Times](https://www.seattletimes.com) -
 [The Philadelphia Inquirer](https://www.inquirer.com)
 

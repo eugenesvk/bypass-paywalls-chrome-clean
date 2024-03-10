@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Funke Mediengruppe (fetch from archive.is)
 Add Industry Dive (opt-in to custom sites)
+Add The Salt Lake Tribune
 Remove Puck.news (fix obsolete)
 Fix Boersen-zeitung.de (timing)
 Fix ElMundo.es (colegios - no amp-fix)

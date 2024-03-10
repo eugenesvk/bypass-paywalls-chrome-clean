@@ -4938,6 +4938,11 @@ else if (matchDomain('slideshare.net')) {
     limit_overlay.classList.remove('limit-overlay');
 }
 
+else if (matchDomain('sltrib.com')) {
+  let ads = document.querySelectorAll('.ad, div.stickyAd, div[class^="sltrib_medrec"]');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('sloanreview.mit.edu')) {
   let url = window.location.href;
   let article_sel = 'div.article-content';

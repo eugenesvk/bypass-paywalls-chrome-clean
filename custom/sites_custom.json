@@ -443,6 +443,13 @@
     "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
     "domain": "lasvegasadvisor.com"
   },
+  "Lavozdegalicia.es": {
+    "add_ext_link": "div#paywall_box|article p",
+    "add_ext_link_type": "google_search_tool",
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"body.blocked\", \"rm_class\":\"blocked\"}, {\"cond\":\"hr.pw-separator\", \"rm_class\":\"pw-separator\"}]",
+    "domain": "lavozdegalicia.es"
+  },
   "Legalbites.in": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div#subscription_paid_message\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.hide.paywall-content\", \"rm_attrib\": \"class\"}, {\"cond\": \"div.restricted_message>div.story\", \"rm_elem\":1}]}]",
@@ -701,11 +708,6 @@
     "allow_cookies": 1,
     "block_regex": "js\\.pelcro\\.com",
     "domain": "siliconrepublic.com"
-  },
-  "Sltrib.com": {
-    "allow_cookies": 1,
-    "block_regex": "\\.tinypass\\.com",
-    "domain": "sltrib.com"
   },
   "Solarserver.de": {
     "allow_cookies": 1,

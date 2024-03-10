@@ -2566,6 +2566,11 @@ var defaultSites = {
     domain: "thequint.com",
     allow_cookies: 1
   },
+  "The Salt Lake Tribune": {
+    domain: "sltrib.com",
+    allow_cookies: 1,
+    block_regex: /\.tinypass\.com\//,
+  },
   "The Saturday Paper": {
     domain: "thesaturdaypaper.com.au",
     block_regex: /\.thesaturdaypaper\.com\.au\/sites\/all\/modules\/custom\/node_meter\/pw\.js/

@@ -621,6 +621,7 @@
     "*://*.slate.com/*",
     "*://*.slideshare.net/*",
     "*://*.sloanreview.mit.edu/*",
+    "*://*.sltrib.com/*",
     "*://*.smh.com.au/*",
     "*://*.sn.at/*",
     "*://*.sofrep.com/*",
@@ -853,5 +854,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.8.7"
+  "version": "3.5.8.8"
 }
