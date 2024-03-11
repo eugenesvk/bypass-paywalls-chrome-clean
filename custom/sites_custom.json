@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "bild.de, dn.se, faithfullymagazine.com, gazetaprawna.pl, gp.se, group_haaretz, handelsblatt.com, lyrik.fr, mailplus.co.uk, politiken.dk, theinformation.com",
+    "cs_code": "dn.se, faithfullymagazine.com, gazetaprawna.pl, lyrik.fr, mailplus.co.uk",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -318,6 +318,11 @@
     "cs_code": "[{\"cond\":\"div.modal\",\"rm_elem\":1,\"elems\":[{\"cond\":\".nmgp\",\"rm_class\":\"nmgp\"}]}]",
     "domain": "group_nation_media",
     "group": "monitor.co.ug,nation.africa,thecitizen.co.tz"
+  },
+  "Group_no_lydogbilde": {
+    "cs_code": "[{\"cond\":\"div.paywallbox\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.thecontent\", \"rm_class\":\"thecontent\"}, {\"cond\":\"div#MoreLink_fade-out-div\", \"rm_elem\":1}, {\"cond\":\"div#MoreLink_content-container[style]\", \"rm_attrib\":\"style\"}]}]",
+    "domain": "group_no_lydogbilde",
+    "group": "lydogbillede.dk,lydogbilde.no"
   },
   "Group_uk_dcthomson": {
     "allow_cookies": 1,
@@ -855,6 +860,11 @@
     "domain": "theloadstar.com",
     "ld_json_url": "div#register_wrapper,div[id$=\"_req_container\"]|article|1|1"
   },
+  "Themandarin.com.au": {
+    "allow_cookies": 1,
+    "domain": "themandarin.com.au",
+    "ld_json_url": "div[data-enterprise-agreement-paywall='true']|div.paywall-mandy"
+  },
   "Themonthly.com.au": {
     "domain": "themonthly.com.au"
   },
@@ -913,5 +923,10 @@
     "allow_cookies": 1,
     "block_regex": "\\/zeitzeichen\\.net\\/sites\\/default\\/files\\/js\\/js_.+\\.js",
     "domain": "zeitzeichen.net"
+  },
+  "Zvw.de": {
+    "allow_cookies": 1,
+    "cs_code": "[{\"cond\":\"div.paywall\", \"rm_class\":\"paywall\", \"elems\":[{\"cond\":\"div.nfy-products-teaser\", \"rm_elem\":1}]}, {\"cond\":\"div.nfy-banner\", \"rm_elem\":1}]",
+    "domain": "zvw.de"
   }
 }

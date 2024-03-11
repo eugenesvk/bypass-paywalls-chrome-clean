@@ -1,39 +1,9 @@
 {
-  "Barron's": {
-    "domain": "barrons.com",
+  "Courrier international": {
+    "domain": "courrierinternational.com",
     "allow_cookies": 1,
-    "block_regex": "(cdn\\.cxense\\.com\\/|cdn\\.ampproject\\.org\\/v\\d\\/amp-subscriptions-.+\\.js)",
-    "upd_version": "3.5.1.7"
-  },
-  "Bloomberg": {
-    "domain": "bloomberg.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.cm\\.bloomberg\\.com\\/|assets\\.bwbx\\.io\\/s\\d\\/javelin\\/.+\\/transporter\\/)",
-    "upd_version": "3.2.7.1"
-  },
-  "Condé Nast magazines": {
-    "domain": "###_usa_conde_nast",
-    "group": [
-      "architecturaldigest.com",
-      "bonappetit.com",
-      "cntraveler.com",
-      "epicurious.com",
-      "gq.com",
-      "newyorker.com",
-      "vanityfair.com",
-      "vogue.co.uk",
-      "vogue.com",
-      "wired.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "\\.{domain}\\/journey\\/compiler\\/build-.+\\.js",
-    "upd_version": "3.5.6.1"
-  },
-  "Forbes Australia": {
-    "domain": "forbes.com.au",
-    "remove_cookies_select_drop": ["blaize_session"],
-    "ld_json_url": "div[class*='_gate']|div.article-page__content-body",
-    "upd_version": "3.5.6.3"
+    "useragent": "googlebot",
+    "upd_version": "3.5.9.1"
   },
   "Funke Mediengruppe": {
     "domain": "###_de_funke_medien",
@@ -53,35 +23,6 @@
     "block_regex": "\\.piano\\.io",
     "ld_archive_is": "div#paywall-container|article",
     "upd_version": "3.5.8.3"
-  },
-  "Groupe Rossel (removed)": {
-    "domain": "###_fr_be_groupe_rossel",
-    "group": [],
-    "allow_cookies": 1,
-    "upd_version": "3.5.6.6"
-  },
-  "Grupo Vocento": {
-    "domain": "###_es_grupo_vocento",
-    "group": [
-      "abc.es",
-      "canarias7.es",
-      "diariosur.es",
-      "diariovasco.com",
-      "elcomercio.es",
-      "elcorreo.com",
-      "eldiariomontanes.es",
-      "elnortedecastilla.es",
-      "hoy.es",
-      "ideal.es",
-      "larioja.com",
-      "lasprovincias.es",
-      "laverdad.es",
-      "lavozdigital.es"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
-    "useragent": "googlebot",
-    "upd_version": "3.5.6.7"
   },
   "Haaretz Group": {
     "domain": "###_il_haaretz_group",
@@ -117,12 +58,6 @@
     "block_regex": "(\\.ilsole24ore\\.com\\/zephr\\/feature|\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js)",
     "upd_version": "3.5.7.7"
   },
-  "Mediahuis Nederland Regional (removed)": {
-    "domain": "###_nl_mediahuis_region",
-    "group": [],
-    "allow_cookies": 1,
-    "upd_version": "3.5.6.8"
-  },
   "Medscape (regwall)": {
     "domain": "medscape.com",
     "allow_cookies": 1,
@@ -141,13 +76,6 @@
     "allow_cookies": 1,
     "block_regex": "\\.{domain}\\/thenewsbar\\/config",
     "upd_version": "3.5.8.6"
-  },
-  "Polityka.pl": {
-    "domain": "polityka.pl",
-    "allow_cookies": 1,
-    "useragent": "googlebot",
-    "cs_code": "[{\"cond\":\"div.cg-article-salebox\", \"rm_elem\":1, \"elems\":[{\"cond\":\"div.cg_article_meat>[style]\", \"rm_attrib\":\"style\"}, {\"cond\":\"article.article_status-cut\", \"rm_class\":\"article_status-cut\"}]}]",
-    "upd_version": "3.5.6.6"
   },
   "Puck.news (removed)": {
     "domain": "puck.news",
@@ -175,48 +103,5 @@
     "add_ext_link_type": "archive.is",
     "ld_archive_is": "aside.article-paywall|main>article",
     "upd_version": "3.5.8.9"
-  },
-  "The Epoch Times": {
-    "domain": "###_usa_epochtimes",
-    "group": [
-      "epoch.org.il",
-      "theepochtimes.com"
-    ],
-    "allow_cookies": 1,
-    "block_regex": "subs\\.(theepochtimes\\.com|epochbase\\.(com|eu))\\/rules\\/get",
-    "cs_block": 1,
-    "exception": [{
-        "domain": "epoch.org.il",
-        "allow_cookies": 1,
-        "block_js_inline": "\\/epoch\\.org\\.il\\/.+\\/\\d{5,}\\/",
-        "ld_json_url": "div.faded|div.paywall"
-      }
-    ],
-    "upd_version": "3.5.6.5"
-  },
-  "The New York Times": {
-    "domain": "nytimes.com",
-    "allow_cookies": 1,
-    "block_regex": "(\\.nytimes\\.com\\/meter\\.js|mwcm\\.nyt\\.com\\/.+\\.js|cooking\\.nytimes\\.com\\/api\\/.+\\/access)",
-    "useragent": "googlebot",
-    "upd_version": "3.1.4.0"
-  },
-  "The Stage Media (UK)": {
-    "domain": "uk_thestage_media",
-    "allow_cookies": 1,
-    "group": [
-      "thebookseller.com",
-      "thestage.co.uk"
-    ],
-    "add_ext_link": "div#ao-MeteringDNAllow|div[class*='-Teaser']",
-    "add_ext_link_type": "archive.is",
-    "ld_archive_is": "div#ao-MeteringDNAllow|div[id^='aos-FeatureArticle2Col-']",
-    "exception": [{
-        "domain": "thebookseller.com",
-        "allow_cookies": 1,
-        "useragent": "googlebot"
-      }
-    ],
-    "upd_version": "3.5.6.8"
   }
 }

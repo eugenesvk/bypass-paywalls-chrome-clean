@@ -344,6 +344,8 @@ window.addEventListener('message', function (event) {
 var overlay = document.querySelector('body.didomi-popup-open');
 if (overlay)
   overlay.classList.remove('didomi-popup-open');
+var ads = document.querySelectorAll('div.OUTBRAIN');
+hideDOMElement(...ads);
 
 if (!(csDone || csDoneOnce)) {
 
@@ -1185,7 +1187,7 @@ else if (matchDomain('kurier.at')) {
       div_hidden.removeAttribute('style');
     }
   }
-  let banners = document.querySelectorAll('div[data-outbrain], div.OUTBRAIN');
+  let banners = document.querySelectorAll('div[data-outbrain]');
   hideDOMElement(...banners);
 }
 
@@ -1488,8 +1490,6 @@ else if (matchDomain('ruhrnachrichten.de') || document.querySelector('a.mgw-logo
     article_id = pathname.split('-p-')[1].split('/')[0];
   if (dompurify_loaded)
     getJsonUrl('body.is_plus_article', {rm_class: 'is_plus_article'}, 'article', {art_append: 1, art_hold: 1, art_class: 'article__content'}, article_id);
-  let ads = document.querySelector('div.OUTBRAIN');
-  hideDOMElement(ads);
   if (!matchDomain('ruhrnachrichten.de')) {
     window.setTimeout(function () {
       let push = document.querySelector('div.cleverpush-bell');
@@ -3274,7 +3274,7 @@ else if (matchDomain(uk_nat_world_domains) || document.querySelector('footer > d
     });
     amp_image.parentNode.replaceChild(elem, amp_image);
   }
-  let ads = document.querySelectorAll('div[class^="MarkupAds__Container-"], div[class*="_AdContainer-"], div[class^="Dailymotion__Wrapper-"], div.OUTBRAIN');
+  let ads = document.querySelectorAll('div[class^="MarkupAds__Container-"], div[class*="_AdContainer-"], div[class^="Dailymotion__Wrapper-"]');
   hideDOMElement(...ads);
 }
 

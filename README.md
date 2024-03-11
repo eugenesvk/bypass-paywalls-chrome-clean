@@ -515,6 +515,7 @@ Grouped in options:\
 [Ciel & espace](https://www.cieletespace.fr) -
 [Connaissance des Arts](https://www.connaissancedesarts.com) -
 [Cosmopolitan](https://www.cosmopolitan.fr) -
+[Courrier international](https://www.courrierinternational.com) -
 [Elle](https://www.elle.fr) -
 [Esprit](https://esprit.presse.fr) -
 [L'Écho](https://lecho.be) -
