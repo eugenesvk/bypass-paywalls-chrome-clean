@@ -1498,7 +1498,7 @@ ext_api.runtime.onMessage.addListener(function (message, sender) {
     let custom_domain = message.data.domain;
     let group = message.data.group;
     if (group) {
-      let nofix_groups = ['###_beehiiv', '###_fi_alma_talent', '###_fi_kaleva', '###_it_citynews', '###_nl_vmnmedia', '###_se_gota_media', '###_substack_custom', '###_uk_delinian'];
+      let nofix_groups = ['###_beehiiv', '###_fi_alma_talent', '###_fi_kaleva', '###_ghost', '###_it_citynews', '###_nl_vmnmedia', '###_se_gota_media', '###_substack_custom', '###_uk_delinian'];
       if (!custom_flex_domains.includes(custom_domain)) {
         if (!nofix_groups.includes(group)) {
           if (custom_flex[group])

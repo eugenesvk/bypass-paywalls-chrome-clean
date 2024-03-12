@@ -782,6 +782,7 @@ Grouped in options:\
 ##### Portugal
 [Correio da Manhã](https://www.cmjornal.pt) -
 [Expresso](https://expresso.pt) -
+[Observador](https://observador.pt) -
 [Record](https://www.record.pt) -
 [Sábado](https://www.sabado.pt)
 
@@ -894,7 +895,7 @@ Grouped in options:\
 [The Australian Financial Review](https://www.afr.com) -
 [The Sydney Morning Herald](https://www.smh.com.au) -
 [WAtoday](https://www.watoday.com.au)\
-*Australian Community Media (daily)* sites like (opt-in to custom sites for unlisted)\
+*Australian Community Media* sites like (opt-in to custom sites for unlisted)\
 [Bendigo Advertiser](https://www.bendigoadvertiser.com.au) -
 [Central Western Daily](https://www.centralwesterndaily.com.au) -
 [Daily Liberal](https://www.dailyliberal.com.au) -

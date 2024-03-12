@@ -656,6 +656,12 @@
     "domain": "portfolio.hu",
     "useragent": "googlebot"
   },
+  "Pourleco.com": {
+    "allow_cookies": 1,
+    "block_regex": "\\.poool\\.fr",
+    "cs_code": "[{\"cond\":\"div[data-pleco-poool^='paywall']\", \"rm_elem\":1, \"elems\":[ {\"cond\":\"div[data-pleco-transition='fade']\", \"rm_elem\":1}, {\"cond\":\"div[class*='article-'][style]\", \"rm_attrib\":\"style\"}]}]",
+    "domain": "pourleco.com"
+  },
   "Publishersweekly.com": {
     "allow_cookies": 1,
     "block_regex": "\\.omeda\\.com",

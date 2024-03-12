@@ -532,6 +532,7 @@
     "*://*.nytimes.com/*",
     "*://*.nzherald.co.nz/*",
     "*://*.nzz.ch/*",
+    "*://*.observador.pt/*",
     "*://*.ocbj.com/*",
     "*://*.ocregister.com/*",
     "*://*.oklahoman.com/*",
@@ -856,5 +857,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.9.1"
+  "version": "3.5.9.2"
 }

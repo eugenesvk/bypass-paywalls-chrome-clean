@@ -77,6 +77,12 @@
     "block_regex": "\\.{domain}\\/thenewsbar\\/config",
     "upd_version": "3.5.8.6"
   },
+  "Observador.pt": {
+    "domain": "observador.pt",
+    "allow_cookies": 1,
+    "block_js_inline": "\\/observador\\.pt\\/(\\d{4}|especiais|opiniao)\\/",
+    "upd_version": "3.5.9.2"
+  },
   "Puck.news (removed)": {
     "domain": "puck.news",
     "allow_cookies": 1,
