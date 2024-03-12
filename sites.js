@@ -206,7 +206,7 @@ var defaultSites = {
   "Autosport (free articles only)": {
     domain: "autosport.com",
     allow_cookies: 1,
-    block_regex: /\.autosport\.com\//
+    block_regex: /\.tinypass\.com\//
   },
   "Axios": {
     domain: "axios.com",

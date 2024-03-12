@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Courrier international
 Add Observador.pt
+Fix Autosport (js)
 Fix Fast Company (premium)
 
 * v3.5.9.0 (2024-03-10)

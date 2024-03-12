@@ -1,4 +1,10 @@
 {
+  "Autosport (free articles only)": {
+    "domain": "autosport.com",
+    "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com\\/",
+    "upd_version": "3.5.9.3"
+  },
   "Courrier international": {
     "domain": "courrierinternational.com",
     "allow_cookies": 1,
