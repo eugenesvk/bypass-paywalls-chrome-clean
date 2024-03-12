@@ -734,7 +734,8 @@ var defaultSites = {
   "Fast Company": {
     domain: "fastcompany.com",
     allow_cookies: 1,
-    block_regex: /(\.tinypass\.com\/|\.fastcompany\.com\/script\.js)/
+    block_regex: /(\.tinypass\.com\/|\.fastcompany\.com\/script\.js)/,
+    cs_dompurify: 1
   },
   "Field & Stream": {
     domain: "fieldandstream.com",
