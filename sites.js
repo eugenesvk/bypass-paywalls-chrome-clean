@@ -479,7 +479,7 @@ var defaultSites = {
     block_regex: /(js\.pelcro\.com\/|\.com\/.+\/js\/js_.+\.js)/,
     exception: [{
         domain: "european-rubber-journal.com",
-        allow_cookies: 1,
+        allow_cookies: 1
       }
     ]
   },
@@ -1685,7 +1685,7 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\/mexiconewsdaily\.com\/wp-content\/plugins\/leaky-paywall\/js\/leaky-paywall-cookie\.js/
   },
-  "Mid-Day": {
+  "Mid-Day (not epaper)": {
     domain: "mid-day.com",
     allow_cookies: 1,
     block_regex: /cdn\.ampproject\.org\/v\d\/amp-access-.+\.js/
@@ -2323,7 +2323,13 @@ var defaultSites = {
   "The Atlanta Journal-Constitution (+ Cox First Media/opt-in to custom sites)": {
     domain: "ajc.com",
     allow_cookies: 1,
-    block_regex: /(\.com\/prod\/ajc\/loader\.min\.js|\.tinypass\.com\/|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/
+    block_regex: /(\.wgchrrammzv\.com\/prod\/ajc\/loader\.min\.js|cdn\.ampproject\.org\/v\d\/amp-access-.+\.js)/,
+    exception: [{
+        domain: "ajc.com",
+        allow_cookies: 1,
+        block_regex: /(\.tinypass\.com\/|\.sophi\.io\/)/
+      }
+    ]
   },
   "The Atlantic": {
     domain: "theatlantic.com",
@@ -2822,7 +2828,7 @@ var defaultSites = {
   "Winnipeg Free Press": {
     domain: "winnipegfreepress.com",
     allow_cookies: 1,
-    block_regex: /(account\.winnipegfreepress\.com\/api\/v\d\/auth\/identify|cdn\.cxense\.com\/)/
+    block_regex: /(\.winnipegfreepress\.com\/(api\/v\d\/auth\/identify|.+\/gdpr\.js)|cdn\.cxense\.com\/)/
   },
   "WirtschaftsWoche (fetch from archive.is)": {
     domain: "wiwo.de",

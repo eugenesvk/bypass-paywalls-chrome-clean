@@ -70,6 +70,13 @@
     "block_regex": "(\\.medscapestatic\\.com\\/.+\\/medscape-library|\\.wbmdstatic\\.com\\/.+\\/chunk-vendors\\..+)\\.js",
     "upd_version": "3.5.7.6"
   },
+  "Mid-Day": {
+    "domain": "mid-day.com",
+    "allow_cookies": 1,
+    "block_regex": "cdn\\.ampproject\\.org\\/v\\d\\/amp-access-.+\\.js",
+    "amp_redirect": "div.modal.fade",
+    "upd_version": "3.5.9.4"
+  },
   "Motor Presse Stuttgart": {
     "domain": "###_de_motor_presse",
     "group": [

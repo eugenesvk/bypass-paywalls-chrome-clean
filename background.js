@@ -35,6 +35,7 @@ var restrictions = {
   'ilsole24ore.com': /^((?!\/ntplus.+\.ilsole24ore\.com\/).)*$/,
   'livemint.com': /^((?!\/epaper\.livemint\.com\/).)*$/,
   'lopinion.fr': /^((?!\.lopinion\.fr\/lejournal).)*$/,
+  'mid-day.com': /^((?!\/epaper\.mid-day\.com\/).)*$/,
   'nytimes.com': /^((?!\/(help|myaccount|timesmachine)\.nytimes\.com\/).)*$/,
   'nzz.ch': /^((?!\/epaper\.nzz\.ch\/).)*$/,
   'quora.com': /^((?!quora\.com\/search\?q=).)*$/,

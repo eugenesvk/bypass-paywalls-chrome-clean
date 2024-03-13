@@ -801,6 +801,11 @@
     "domain": "taxscan.in",
     "ld_json": "div.pmpro_content_message|div.the-content>p"
   },
+  "Teachingprofessor.com": {
+    "allow_cookies": 1,
+    "domain": "teachingprofessor.com",
+    "ld_json_url": "div#post-paywall|div.elementor-widget-theme-post-content>div"
+  },
   "Tetu.com": {
     "allow_cookies": 1,
     "block_regex": "\\.qiota\\.com",
