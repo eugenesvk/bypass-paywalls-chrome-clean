@@ -529,6 +529,7 @@ ext_api.storage.local.get({
       // reset ungrouped sites
       let ungrouped_sites = {
         'The Athletic': 'theathletic.com',
+        'The Stage Media (UK)': '###_uk_thestage_media',
         'The Week (regwall)': 'theweek.com'
       };
       for (let key in ungrouped_sites) {

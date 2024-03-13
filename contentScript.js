@@ -5142,37 +5142,31 @@ else if (matchDomain('swarajyamag.com')) {
 }
 
 else if (matchDomain('techinasia.com')) {
-  window.setTimeout(function () {
-    let paywall = document.querySelector('div.paywall-content');
-    if (paywall && dompurify_loaded) {
-      paywall.classList.remove('paywall-content');
-      let par_missing = paywall.querySelectorAll('div[id^="attachment_"], a.flourish-credit');
-      let attach_xhr = Array.from(par_missing).some(x => !x.hasChildNodes());
-      if (attach_xhr) {
-        let url = window.location.href;
-        let url_xhr = url.replace('.com/', '.com/wp-json/techinasia/2.0/posts/').replace('/visual-story/', '/');
-        fetch(url_xhr)
-        .then(response => {
-          if (response.ok) {
-            response.json().then(json => {
-              let json_text = json.posts[0].content;
-              json_text = json_text.replace(/width\=\"(\d){3,}\"/g, 'width="100%"').replace(/height\=\"(\d){3,}\"/g, 'height="100%"');
-              let content = document.querySelector('div.content');
-              if (json_text && content) {
-                let parser = new DOMParser();
-                let doc = parser.parseFromString('<div class="jsx-1794864983 content">' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
-                let content_new = doc.querySelector('div.content');
-                content.parentNode.replaceChild(content_new, content);
-              }
-            });
+  let paywall = document.querySelector('div.paywall-content');
+  if (paywall && dompurify_loaded) {
+    paywall.classList.remove('paywall-content');
+    let url = window.location.href;
+    let url_xhr = url.replace('.com/', '.com/wp-json/techinasia/2.0/posts/').replace('/visual-story/', '/');
+    fetch(url_xhr)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(json => {
+          let json_text = json.posts[0].content;
+          json_text = json_text.replace(/width\=\"(\d){3,}\"/g, 'width="100%"').replace(/height\=\"(\d){3,}\"/g, 'height="100%"');
+          let content = document.querySelector('div.content');
+          if (json_text && content) {
+            let parser = new DOMParser();
+            let doc = parser.parseFromString('<div class="jsx-1794864983 content">' + DOMPurify.sanitize(json_text) + '</div>', 'text/html');
+            let content_new = doc.querySelector('div.content');
+            content.parentNode.replaceChild(content_new, content);
           }
         });
       }
-    }
-    let splash_subscribe = document.querySelector('div.splash-subscribe');
-    let paywall_hard = document.querySelector('div.paywall-hard');
-    removeDOMElement(splash_subscribe, paywall_hard);
-  }, 3000);
+    });
+  }
+  let splash_subscribe = document.querySelector('div.splash-subscribe');
+  let paywall_hard = document.querySelector('div.paywall-hard');
+  removeDOMElement(splash_subscribe, paywall_hard);
 }
 
 else if (matchDomain(['techtarget.com', 'computerweekly.com', 'lemagit.fr'])) {

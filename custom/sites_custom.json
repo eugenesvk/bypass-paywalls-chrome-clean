@@ -1,6 +1,6 @@
 {
   "###_remove_sites": {
-    "cs_code": "dn.se, faithfullymagazine.com, gazetaprawna.pl, lyrik.fr, mailplus.co.uk",
+    "cs_code": "dn.se, faithfullymagazine.com, gazetaprawna.pl, lyrik.fr, mailplus.co.uk, portfolio.hu",
     "domain": "###"
   },
   "Abajournal.com": {
@@ -18,7 +18,7 @@
     "block_regex": "\\.acadienouvelle\\.com\\/script\\.js",
     "domain": "acadienouvelle.com"
   },
-  "Airmail.news (refresh)": {
+  "Airmail.news": {
     "add_ext_link": "div.paywall-card|div.article-text",
     "add_ext_link_type": "archive.is",
     "allow_cookies": 1,
@@ -644,16 +644,9 @@
   "Physicsworld.com": {
     "domain": "physicsworld.com"
   },
-  "Piratewires.com (refresh)": {
+  "Piratewires.com": {
     "allow_cookies": 1,
-    "cs_code": "[{\"cond\":\"div[class*='article_articleRestricted_']\", \"rm_attrib\":\"class\"}, {\"cond\":\"div[class^='fixedOverlay']\", \"rm_elem\":1}]",
-    "domain": "piratewires.com"
-  },
-  "Portfolio.hu": {
-    "add_ext_link": "section.paywall|article",
-    "add_ext_link_type": "archive.is",
-    "allow_cookies": 1,
-    "domain": "portfolio.hu",
+    "domain": "piratewires.com",
     "useragent": "googlebot"
   },
   "Pourleco.com": {
@@ -790,10 +783,11 @@
     "domain": "t3n.de",
     "ld_json": "div.c-pro-wall__wrapper|div.pro-blur>p"
   },
-  "Tamedia.ch (refresh)": {
+  "Tamedia.ch": {
     "add_ext_link": "div#piano-premium|p[class^='ArticleParagraph_root_']",
     "add_ext_link_type": "google_search_tool",
     "allow_cookies": 1,
+    "block_regex": "\\.tinypass\\.com",
     "domain": "###_ch_tamedia"
   },
   "Taxscan.in": {

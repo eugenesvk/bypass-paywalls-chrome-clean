@@ -8,6 +8,8 @@ Add Observador.pt
 Fix Autosport (js)
 Fix Fast Company (premium)
 Fix Mid-Day (amp-redirect)
+Fix Tech in Asia (json)
+Update options (search)
 
 * v3.5.9.0 (2024-03-10)
 Add Funke Mediengruppe (fetch from archive.is)
