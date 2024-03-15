@@ -93,6 +93,8 @@ window.setTimeout(function () {
     } else if (hostname.endsWith('.fr')) {
       if (document.querySelector('head > meta[name="google-play-app"][content^="app-id=com.centrefrance"]'))
         group = '###_fr_gcf';
+      else if (matchDomain(['cahiers-techniques-batiment.fr', 'lsa-conso.fr']))
+        group = '###_fr_groupe_infopro';
     } else if (hostname.endsWith('.it')) {
       if (document.querySelector('head > link[href^="//citynews.stgy.ovh/"]'))
         group = '###_it_citynews';// no fix
@@ -143,6 +145,8 @@ window.setTimeout(function () {
       else if (hostname.match(/\.com$/)) {
         if (matchDomain(['journalauto.com', 'journaldupneu.com', 'j2rauto.com']))
           group = '###_fr_synerj';
+        else if (matchDomain(['argusdelassurance.com', 'lagazettedescommunes.com']))
+          group = '###_fr_groupe_infopro';
         else if (!matchDomain('institutionalinvestor.com') && (matchDomain('thedeal.com') || document.querySelector('footer.Page-footer a.Link[href="https://www.delinian.com/privacy-policy"]')))
           group = '###_uk_delinian';// no fix
         else if (document.querySelector('head > meta[property][content^="https://cdn.forumcomm.com/"]'))

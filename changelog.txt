@@ -4,12 +4,14 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 
 Post-release
 Add Courrier international
+Add LeMoniteur.fr (Groupe Infopro Digital)
 Add Observador.pt
 Add Pour l'Eco
 Fix Autosport (js)
 Fix Fast Company (premium)
 Fix Mid-Day (amp-redirect)
 Fix Tech in Asia (json)
+Fix Telegraaf.nl (no article/image)
 Update options (search)
 
 * v3.5.9.0 (2024-03-10)

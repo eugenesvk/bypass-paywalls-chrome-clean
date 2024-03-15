@@ -525,7 +525,6 @@ Grouped in options:\
 [L'Obs](https://www.nouvelobs.com) -
 [L'Oeil de la Photographie (fr/en)](https://loeildelaphotographie.com) -
 [L'Opinion](https://www.lopinion.fr) -
-[L'Usine Nouvelle](https://www.usinenouvelle.com) -
 [La Croix](https://www.la-croix.com) -
 [La Nouvelle République du Centre-Ouest](https://www.lanouvellerepublique.fr) -
 [La Tribune](https://www.latribune.fr) -
@@ -554,6 +553,9 @@ Grouped in options:\
 Grouped in options:\
 *Groupe Centre France* sites like (opt-in to custom sites for unlisted)\
 [La Montagne](https://www.lamontagne.fr)\
+*Groupe Infopro Digital* sites like (opt-in to custom sites for unlisted)\
+[Le Moniteur](https://www.lemoniteur.fr) -
+[L'Usine Nouvelle](https://www.usinenouvelle.com)\
 *Groupe IPM* sites like\
 [DH Les Sports+](https://www.dhnet.be) -
 [L'Avenir](https://www.lavenir.net) -

@@ -64,6 +64,12 @@
     "block_regex": "(\\.ilsole24ore\\.com\\/zephr\\/feature|\\.cloudfront\\.net\\/embed\\/widget\\/subx.+\\.js)",
     "upd_version": "3.5.7.7"
   },
+  "LeMoniteur.fr": {
+    "domain": "lemoniteur.fr",
+    "allow_cookies": 1,
+    "ld_google_webcache": "div.blocPasEncoreAbonne|div.articleContent",
+    "upd_version": "3.5.9.7"
+  },
   "Medscape (regwall)": {
     "domain": "medscape.com",
     "allow_cookies": 1,

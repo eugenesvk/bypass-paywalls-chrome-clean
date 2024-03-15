@@ -2038,6 +2038,13 @@ else if (matchDomain(['lejdd.fr', 'parismatch.com', 'public.fr'])) {
   }
 }
 
+else if (matchDomain('lemoniteur.fr')) {
+  let url = window.location.href;
+  getGoogleWebcache(url, 'div.blocPasEncoreAbonne', '', 'div.articleContent');
+  let ads = document.querySelectorAll('div[data-ad-id], div.ad2hsBox');
+  hideDOMElement(...ads);
+}
+
 else if (matchDomain('leparisien.fr')) {
   if (window.location.pathname.startsWith('/amp/'))
     ampToHtml();
@@ -2752,7 +2759,7 @@ else if (matchDomain('telegraaf.nl')) {
   }
   let premium = document.querySelector('div[class^="Article__premium"] > p');
   let paywall = document.querySelector('data-hydrate[data-name="PaywallHandler"]');
-  let article = document.querySelector('section > div.DetailArticleImage');
+  let article = document.querySelector('section > div.DetailArticleImage') || document.querySelector('section > p.Article__intro');
   if (paywall && window.location.pathname.startsWith('/video/'))
     removeDOMElement(paywall);
   if (premium && paywall && article && dompurify_loaded) {

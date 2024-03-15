@@ -383,6 +383,11 @@
     "domain": "ilglobo.com",
     "useragent": "googlebot"
   },
+  "Insidemortgagefinance.com": {
+    "allow_cookies": 1,
+    "domain": "insidemortgagefinance.com",
+    "ld_google_webcache": "div.article-preview|div.main-body"
+  },
   "Institutionalinvestor.com": {
     "allow_cookies": 1,
     "cs_code": "[{\"cond\":\"div[style*='background-image: linear-gradient']\", \"rm_elem\":1}]",
@@ -438,11 +443,6 @@
     "domain": "lagaceta.com.ar",
     "useragent": "facebookbot"
   },
-  "Lagazettedescommunes.com": {
-    "allow_cookies": 1,
-    "domain": "lagazettedescommunes.com",
-    "useragent": "googlebot"
-  },
   "Lasvegasadvisor.com": {
     "allow_cookies": 1,
     "block_regex": "\\.lasvegasadvisor\\.com\\/(opt\\/.+|js\\/access\\.min)\\.js",
@@ -475,11 +475,6 @@
   "Lindipendente.online": {
     "allow_cookies": 1,
     "domain": "lindipendente.online",
-    "useragent": "googlebot"
-  },
-  "Lsa-conso.fr": {
-    "allow_cookies": 1,
-    "domain": "lsa-conso.fr",
     "useragent": "googlebot"
   },
   "Luxurydaily.com": {
@@ -648,6 +643,11 @@
     "allow_cookies": 1,
     "domain": "piratewires.com",
     "useragent": "googlebot"
+  },
+  "Policinginsight.com": {
+    "allow_cookies": 1,
+    "domain": "policinginsight.com",
+    "ld_json_url": "div#pi-content-gating|article|1|1"
   },
   "Publishersweekly.com": {
     "allow_cookies": 1,
