@@ -542,6 +542,7 @@ Grouped in options:\
 [Marianne](https://www.marianne.net) -
 [Paris Match](https://www.parismatch.com) -
 [Philosophie Magazine](https://www.philomag.com) -
+[Pour l'Éco](https://www.pourleco.com) -
 [Pour la Science](https://www.pourlascience.fr) -
 [Public](https://www.public.fr) -
 [Revue Conflits](https://www.revueconflits.com) -

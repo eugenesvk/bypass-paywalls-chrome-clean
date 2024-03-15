@@ -567,6 +567,7 @@
     "*://*.popularmechanics.com/*",
     "*://*.post-gazette.com/*",
     "*://*.pourlascience.fr/*",
+    "*://*.pourleco.com/*",
     "*://*.precisionmedicineonline.com/*",
     "*://*.pressenterprise.com/*",
     "*://*.prevention.com/*",
@@ -857,5 +858,5 @@
     "*://archive.vn/*",
     "*://webcache.googleusercontent.com/*"
   ],
-  "version": "3.5.9.5"
+  "version": "3.5.9.6"
 }

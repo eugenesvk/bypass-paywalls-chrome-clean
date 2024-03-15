@@ -5,6 +5,7 @@ Updates (install signed xpi-file): https://gitlab.com/magnolia1234/bypass-paywal
 Post-release
 Add Courrier international
 Add Observador.pt
+Add Pour l'Eco
 Fix Autosport (js)
 Fix Fast Company (premium)
 Fix Mid-Day (amp-redirect)

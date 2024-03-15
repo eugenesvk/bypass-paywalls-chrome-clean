@@ -1989,6 +1989,11 @@ var defaultSites = {
     allow_cookies: 1,
     block_regex: /\.tinypass\.com\//
   },
+  "Pour l'Éco": {
+    allow_cookies: 1,
+    domain: "pourleco.com",
+    block_regex: /\.poool\.fr\//
+  },
   "Pour la Science.fr": {
     domain: "pourlascience.fr",
     allow_cookies: 1,

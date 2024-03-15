@@ -96,6 +96,13 @@
     "block_js_inline": "\\/observador\\.pt\\/(\\d{4}|especiais|opiniao)\\/",
     "upd_version": "3.5.9.2"
   },
+  "Pour l'Éco": {
+    "allow_cookies": 1,
+    "domain": "pourleco.com",
+    "block_regex": "\\.poool\\.fr",
+    "cs_code": "[{\"cond\":\"div[data-pleco-poool^='paywall']\", \"rm_elem\":1, \"elems\":[ {\"cond\":\"div[data-pleco-transition='fade']\", \"rm_elem\":1}, {\"cond\":\"div[class*='article-'][style]\", \"rm_attrib\":\"style\"}]}]",
+    "upd_version": "3.5.9.6"
+  },
   "Puck.news (removed)": {
     "domain": "puck.news",
     "allow_cookies": 1,
