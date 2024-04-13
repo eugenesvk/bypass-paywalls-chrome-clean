@@ -4,7 +4,7 @@ var manifestData = ext_api.runtime.getManifest();
 var url_loc = manifestData.key ? 'chrome' : 'firefox';
 var ext_url = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean';
 var ext_name = manifestData.name;
-var self_hosted = !!(manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url);
+var self_hosted = false;
 var version_str = 'v' + manifestData.version;
 var version_span = document.querySelector('span#version');
 if (version_span)
@@ -73,22 +73,7 @@ function check_version_update(ext_version_new, popup) {
       if (response.ok) {
         response.json().then(json => {
           var version_new = json['version'];
-          if (self_hosted) {
-            let json_upd_version_new = manifestData.browser_specific_settings.gecko.update_url;
-            fetch(json_upd_version_new)
-            .then(response => {
-              if (response.ok) {
-                response.json().then(upd_json => {
-                  let ext_id = manifestData.browser_specific_settings.gecko.id;
-                  let upd_version_new = upd_json.addons[ext_id].updates[0].version;
-                  show_update(version_new, upd_version_new);
-                })
-              }
-            }).catch(function (err) {
-              false;
-            });
-          } else
-            show_update(version_new);
+          show_update(version_new);
         })
       } else {
         show_update(ext_version_new);

@@ -208,7 +208,7 @@ function check_sites_updated(sites_updated_json, optin_update = false) {
 var ext_path = 'https://gitlab.com/magnolia1234/bypass-paywalls-' + url_loc + '-clean/-/raw/master/';
 var sites_updated_json = 'sites_updated.json';
 var sites_updated_json_online = ext_path + sites_updated_json;
-var self_hosted = !!(manifestData.update_url || (manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url));
+var self_hosted = false;
 
 function clear_sites_updated() {
   ext_api.storage.local.set({
@@ -1326,22 +1326,7 @@ function check_update() {
     if (response.ok) {
       response.json().then(json => {
         let json_ext_version_new = json['version'];
-        if (manifestData.browser_specific_settings && manifestData.browser_specific_settings.gecko.update_url) {
-          let json_upd_version_new = manifestData.browser_specific_settings.gecko.update_url;
-          fetch(json_upd_version_new)
-          .then(response => {
-            if (response.ok) {
-              response.json().then(upd_json => {
-                let ext_id = manifestData.browser_specific_settings.gecko.id;
-                let json_ext_upd_version_new = upd_json.addons[ext_id].updates[0].version;
-                setExtVersionNew(json_ext_version_new, json_ext_upd_version_new);
-              })
-            }
-          }).catch(function (err) {
-            false;
-          });
-        } else
-          setExtVersionNew(json_ext_version_new);
+        setExtVersionNew(json_ext_version_new);
       })
     }
   }).catch(function (err) {
